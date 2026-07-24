@@ -1,0 +1,178 @@
+{
+ "bundle": "s5_cold_atom_lab",
+ "purpose": "Cold Atom Lab / atom-interferometry data sourced for ChatGPT thread S5: per-channel (MZI / COM / butterfly) acceleration-gradient Gamma values and the campaign-level data behind them.",
+ "created_utc": "2026-07-24T22:22:35Z",
+ "headline_finding": {
+  "question": "Are per-channel, per-campaign Gamma values with uncertainties publicly downloadable?",
+  "answer": "NO for Gamma itself. Each channel has exactly ONE published Gamma (or bound), from a global fit over all interferometer times. What IS published per-campaign is the per-interferometer-time differential phase |Delta phi| (Figure 4) and per-2T magnetic field curvature (Figure 5), each with asymmetric lower/upper bounds.",
+  "gamma_values_as_published": {
+   "MZI_mF2": "|Gamma| = (39.46 +/- 0.02) s^-2 — global phase-relation fit over all interferometer times. Source Data sheet \"Figure 4\", fit block \"Fit to diff MZI, mf=2\": A=39.46, Std=0.02.",
+   "COM": "Gamma = 36.76 +/- 1.07 s^-2 — non-interferometric classical COM time-of-flight, from omega_COM,z′ = 2*pi*(0.965 +/- 0.014) Hz. Stored only as omega in sheet \"Supplementary Figure 2\" subplot-c fit block.",
+   "MZI_mF0": "upper bound only: |Gamma| <= 0.31 (+0.03 / -0.31) s^-2. Sheet \"Figure 4\", block \"Upper bound fit diff MZI, mf=0\": A=0.31, Std=0.03, lower bound 0.",
+   "butterfly_mF2": "NO Gamma published. Delta phi^BFI = 0.22 (+0.1 / -0.22) rad, consistent with zero; converted in the paper to a curvature bound |gamma_0^max| <= 1.73e4 m^-1 s^2."
+  },
+  "two_campaign_blocker": "The paper states the differential centre-of-mass campaign was repeated after ~1 year and that \"The results of both campaigns are in excellent agreement with each other\", but NO numbers are given for the second COM campaign and the Source Data contains only ONE COM campaign. A two-campaign COM comparison is therefore NOT possible from published data.",
+  "per_campaign_counts": {
+   "diff_MZI_mF2": "9 interferometer times (2T = 2.3,4.3,6.3,8.3,10.3,12.3,16.3,20.3,24.3 ms)",
+   "diff_MZI_mF0": "6 (2T = 2.3,6.3,12.3,20.3,30.3,40.3 ms)",
+   "diff_butterfly_mF2": "3 (2T = 4.5,12.5,20.5 ms)",
+   "B_curvature_per_2T": "9 (Figure 5)"
+  },
+  "caveat_from_paper": "The paper excludes the 2T = 24.3 ms campaign from quantitative analysis because the MZI-II visibility drops below 0.15."
+ },
+ "sources": [
+  {
+   "doi": "10.1038/s41467-026-75230-2",
+   "title": "Magnetometry with a space-based differential atom interferometer",
+   "journal": "Nature Communications 17, 6089 (2026)",
+   "published": "2026-07-11",
+   "article_url": "https://www.nature.com/articles/s41467-026-75230-2",
+   "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0)",
+   "attribution": "Meister, M., Müller, G., Boegel, P., Roura, A., et al. Nat Commun 17, 6089 (2026). CC BY 4.0.",
+   "redistributed_here": true,
+   "not_mirrored": [
+    {
+     "file": "41467_2026_75230_MOESM2_ESM.pdf",
+     "what": "Transparent Peer Review File (489,855 B)",
+     "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-026-75230-2/MediaObjects/41467_2026_75230_MOESM2_ESM.pdf",
+     "why_not_mirrored": "Peer-review reports are not unambiguously covered by the article CC BY 4.0 grant, and are not needed for the Gamma comparison. Fetch directly from the URL above (verified HTTP 200)."
+    }
+   ]
+  },
+  {
+   "doi": "10.60555/6cnc-re60",
+   "title": "Cold Atom Lab - Consortium for Ultracold Atoms in Space",
+   "accession": "PSI-32",
+   "version_live": 4,
+   "version_requested_by_S5": 3,
+   "landing_page": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-32",
+   "api": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-32",
+   "access": "OPEN — no registration, no login. public=true, restricted=false on the investigation and on all 2253 files. Metadata, file listing and presigned S3 download URLs are all served unauthenticated.",
+   "license": "CC0-1.0 (Creative Commons Zero v1.0 Universal), https://spdx.org/licenses/CC0-1.0.html",
+   "size": "2253 files, 290.56 GB enumerated (investigation totalFileSize field reports 326,782,385,724 bytes)",
+   "contents": "Level-1 raw absorption-imaging data: 1807 .zip run bundles + 445 .csv per-shot image-fit tables + 1 pdf. Run directories 2018-2023. Contains the raw runs behind the paper: 79 DiffMZI files (16.13 GB) at T=1,2,3,4,5,6,8,10,12,15,20 ms and 12 Diff_butterfly files (2.38 GB) at T=1,3,5 ms.",
+   "contains_gamma": false,
+   "note": "PSI holds RAW per-shot images and cloud-fit tables, NOT Gamma or differential phases. Recovering per-campaign Gamma from PSI requires re-running the papers full ellipse-fit + phase-unwrap pipeline on ~18 GB of raw runs.",
+   "redistributed_here": "manifest + metadata + one 2194 B sample file only; the 290 GB bulk is not mirrored"
+  }
+ ],
+ "download_recipe_psi": {
+  "list_files": "POST https://psi.nasa.gov/geode-py/ws/files/v2  body {\"studyId\":\"PSI-32\",\"version\":4,\"folder\":\"\",\"fileType\":\"study\"}",
+  "get_download_url": "GET https://psi.nasa.gov/geode-py/ws/studies/PSI-32/download?file=<file_name>&version=<v>&redirect=false  -> returns a presigned https://psi-curation-prod.s3.amazonaws.com/... URL as plain text",
+  "verified": "Confirmed end-to-end on 2026-07-24 with no credentials."
+ },
+ "files": [
+  {
+   "path": "nasa_psi_PSI-32/psi32_file_manifest.csv",
+   "bytes": 734915,
+   "sha256": "7bf1baeb5204e80b0053aef63940bd7565c23b81ff1ef5a3939df6529efac28c",
+   "source_doi": "10.60555/6cnc-re60",
+   "license": "CC0-1.0",
+   "contents": "Same manifest as CSV (columns: key,file_name,bytes_size,subcategory,sortingCategory,restricted,visible,updated,version)."
+  },
+  {
+   "path": "nasa_psi_PSI-32/psi32_file_manifest.json",
+   "bytes": 1084061,
+   "sha256": "39084bdc73a25f8774394a6a1cd409f09f89e48c5c9deac385205ea2f3823691",
+   "source_doi": "10.60555/6cnc-re60",
+   "license": "CC0-1.0",
+   "contents": "Complete file manifest of PSI-32 (2253 unique leaf files, 290.56 GB) harvested from POST https://psi.nasa.gov/geode-py/ws/files/v2 with {\"studyId\":\"PSI-32\",\"version\":4,\"folder\":\"\",\"fileType\":\"study\"}. Every entry has restricted=false."
+  },
+  {
+   "path": "nasa_psi_PSI-32/psi32_investigation_metadata.json",
+   "bytes": 37998,
+   "sha256": "314cb3bbbe18ae07eec24bc386349b787b3887b45599f40806b6ee2d85347f0d",
+   "source_doi": "10.60555/6cnc-re60",
+   "license": "CC0-1.0",
+   "contents": "Full unauthenticated JSON record for NASA PSI investigation PSI-32 from https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-32 (title, DOI, licence, contacts, publications, version-4 added/removed file deltas)."
+  },
+  {
+   "path": "nasa_psi_PSI-32/psi32_sample_2018-248T21-26-27_pi_ex_images.csv",
+   "bytes": 2194,
+   "sha256": "261aebd3c049626e79be2f62a03ffb5864f45544479ca8084108a1642f5aa8bc",
+   "source_doi": "10.60555/6cnc-re60",
+   "license": "CC0-1.0",
+   "contents": "One small representative PSI-32 raw file (2194 B, 9 rows) downloaded end-to-end to prove the download path works with no login. Columns are per-absorption-image cloud fit outputs (num_atoms_fit, cloud centres, FWHM, optical depth), NOT interferometer phases."
+  },
+  {
+   "path": "natcomm_s41467-026-75230-2/41467_2026_75230_MOESM1_ESM.pdf",
+   "bytes": 402679,
+   "sha256": "2f5baadb918aa976e9e05f98fe37a2c252b715bbfc5f7f8e428d747f70d0c240",
+   "source_doi": "10.1038/s41467-026-75230-2",
+   "license": "CC BY 4.0",
+   "contents": "Supplementary Information PDF (Supplementary Figures S1-S4 and captions)."
+  },
+  {
+   "path": "natcomm_s41467-026-75230-2/41467_2026_75230_MOESM3_ESM.xlsx",
+   "bytes": 89321,
+   "sha256": "e6a962cadb5db968558502ab0579a6a40f7731b33139b634f74ad1f10b9c9ece",
+   "source_doi": "10.1038/s41467-026-75230-2",
+   "license": "CC BY 4.0",
+   "contents": "Publisher Source Data workbook (8 sheets: Figure 2-5, Supplementary Figure 1-4). Authoritative machine-readable version of every plotted quantity."
+  },
+  {
+   "path": "natcomm_s41467-026-75230-2/source_data_figure_2.csv",
+   "bytes": 27668,
+   "sha256": "1be347c41bc0827e13f0178adb9024f44625624124d9f9115db596ba1c00b693",
+   "source_doi": "10.1038/s41467-026-75230-2",
+   "license": "CC BY 4.0",
+   "contents": "Verbatim CSV export of workbook sheet \"Figure 2\": mF=2 / mF=0 trajectories, in-trap transport, Bragg beam, BEC radii vs time of flight."
+  },
+  {
+   "path": "natcomm_s41467-026-75230-2/source_data_figure_3.csv",
+   "bytes": 9161,
+   "sha256": "572e9f99db8a2d2e0a7cea7f0bde6719001c482404fdf75334a1c1b757c8293e",
+   "source_doi": "10.1038/s41467-026-75230-2",
+   "license": "CC BY 4.0",
+   "contents": "Verbatim CSV export of sheet \"Figure 3\": per-shot differential-MZI correlation points (N_rel,1 vs N_rel,2) for three interferometer times, ellipse parameters, visibilities and |Delta phi| vs 2T."
+  },
+  {
+   "path": "natcomm_s41467-026-75230-2/source_data_figure_4.csv",
+   "bytes": 1896,
+   "sha256": "c2f3cc38ca9d339906ad7433276be75ec557fc03a686f3d14125dc1d68e8ce05",
+   "source_doi": "10.1038/s41467-026-75230-2",
+   "license": "CC BY 4.0",
+   "contents": "KEY SHEET. Verbatim CSV export of sheet \"Figure 4\": per-interferometer-time |Delta phi| with lower/upper bounds for all THREE channels (diff MZI mF=2, diff MZI mF=0, diff butterfly mF=2), the phase-relation fit giving A=39.46 Std=0.02, the mF=0 upper-bound fit A=0.31 Std=0.03 lower bound 0, and per-channel visibilities."
+  },
+  {
+   "path": "natcomm_s41467-026-75230-2/source_data_figure_5.csv",
+   "bytes": 432,
+   "sha256": "1a8397d1bb73d2090f997edc18e3c66390ad3ad1a97024052887032acc7abe73",
+   "source_doi": "10.1038/s41467-026-75230-2",
+   "license": "CC BY 4.0",
+   "contents": "KEY SHEET. Verbatim CSV export of sheet \"Figure 5\": magnetic field curvature per interferometer time 2T (9 rows, 2T=2.3..24.3 ms) with lower/upper bounds, plus global fit 614.05 Std 0.31."
+  },
+  {
+   "path": "natcomm_s41467-026-75230-2/source_data_supplementary_figure_1.csv",
+   "bytes": 1184,
+   "sha256": "2ea4c79a57a665e7389eabc87c974a345cfb84edf1824e8dcca90e8f52277761",
+   "source_doi": "10.1038/s41467-026-75230-2",
+   "license": "CC BY 4.0",
+   "contents": "Verbatim CSV export of sheet \"Supplementary Figure 1\": Bragg beam orientation/intensity validation, Rabi frequency vs distance."
+  },
+  {
+   "path": "natcomm_s41467-026-75230-2/source_data_supplementary_figure_2.csv",
+   "bytes": 5971,
+   "sha256": "61d9e74a6f46db284e13fe4e7a32c78aa9a6f2d66e4bb993003a0345bb612707",
+   "source_doi": "10.1038/s41467-026-75230-2",
+   "license": "CC BY 4.0",
+   "contents": "KEY SHEET. Verbatim CSV export of sheet \"Supplementary Figure 2\": classical differential centre-of-mass (COM) measurement. Columns t / Delta_x / Delta_z / Delta_xz with Std, plus fit blocks. The COM channel angular frequency lives here: subplot-c fit cell omega = 0.0060632738214283005 rad/ms with Std 8.796459430051421e-05 (subplot-b omegaz = 0.006056990636121121, Std 8.79645943005142e-05). The paper quotes the derived value as Gamma = 36.76 +/- 1.07 s^-2; Gamma is NOT stored as such in the workbook."
+  },
+  {
+   "path": "natcomm_s41467-026-75230-2/source_data_supplementary_figure_3.csv",
+   "bytes": 10592,
+   "sha256": "396e9699fb7f2f31d9dc93cd2ffeb0348cfbb8b2945b277ea236bcd4ee34f768",
+   "source_doi": "10.1038/s41467-026-75230-2",
+   "license": "CC BY 4.0",
+   "contents": "Verbatim CSV export of sheet \"Supplementary Figure 3\": per-shot correlation data for differential MZI with mF=0 atoms and for the differential butterfly geometry, with ellipse parameters."
+  },
+  {
+   "path": "natcomm_s41467-026-75230-2/source_data_supplementary_figure_4.csv",
+   "bytes": 28482,
+   "sha256": "610b296381b3bc6d01f6929038d08e5ba09ce146a8978da2ad0189c3aeeefc94",
+   "source_doi": "10.1038/s41467-026-75230-2",
+   "license": "CC BY 4.0",
+   "contents": "Verbatim CSV export of sheet \"Supplementary Figure 4\": bootstrap histograms of the differential phase for the differential MZIs."
+  }
+ ]
+}

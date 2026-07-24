@@ -1,0 +1,270 @@
+{
+ "note": "Qualification-rate diagnostic computed on ALL trials in the release, using the tercile cut points frozen in pass 2. Bounds bracket the unknown stereo removal per trial.",
+ "tercile_cutpoints_used": [
+  1.5,
+  2.5
+ ],
+ "all_trials_per_tercile": [
+  11430172,
+  6282903,
+  7849278
+ ],
+ "qualify_rate_per_tercile_optimistic_ge20_clicks": [
+  0.5772088119058926,
+  0.5811401194638848,
+  0.5792869102100856
+ ],
+ "qualify_rate_per_tercile_strict_ge22_clicks": [
+  0.5176764619115093,
+  0.5207215518049538,
+  0.518730257738355
+ ],
+ "mean_stim_duration_s_per_tercile": [
+  0.5701503215873465,
+  0.5738294900175511,
+  0.5727477576244729
+ ],
+ "per_abs_gamma_value": [
+  {
+   "abs_gamma": 0.5,
+   "n_trials": 4742207,
+   "qualify_rate_ge20": 0.5877134844598728,
+   "qualify_rate_ge22": 0.5279883396064322
+  },
+  {
+   "abs_gamma": 2.5,
+   "n_trials": 4379283,
+   "qualify_rate_ge20": 0.5858529809560149,
+   "qualify_rate_ge22": 0.5251428144744242
+  },
+  {
+   "abs_gamma": 1.5,
+   "n_trials": 4354588,
+   "qualify_rate_ge20": 0.5925773000798239,
+   "qualify_rate_ge22": 0.5324453197409261
+  },
+  {
+   "abs_gamma": 3.5,
+   "n_trials": 4320723,
+   "qualify_rate_ge20": 0.5921594603495758,
+   "qualify_rate_ge22": 0.5317681786126998
+  },
+  {
+   "abs_gamma": 1.0,
+   "n_trials": 1777340,
+   "qualify_rate_ge20": 0.5462730822465032,
+   "qualify_rate_ge22": 0.48629525020536307
+  },
+  {
+   "abs_gamma": 2.0,
+   "n_trials": 1419188,
+   "qualify_rate_ge20": 0.5513300563420773,
+   "qualify_rate_ge22": 0.49200035513265333
+  },
+  {
+   "abs_gamma": 3.0,
+   "n_trials": 1275408,
+   "qualify_rate_ge20": 0.5720004892552031,
+   "qualify_rate_ge22": 0.5110443089583883
+  },
+  {
+   "abs_gamma": 4.0,
+   "n_trials": 1168666,
+   "qualify_rate_ge20": 0.5702638735104811,
+   "qualify_rate_ge22": 0.5108243073726796
+  },
+  {
+   "abs_gamma": 5.0,
+   "n_trials": 442663,
+   "qualify_rate_ge20": 0.4645226730040686,
+   "qualify_rate_ge22": 0.3988745388704274
+  },
+  {
+   "abs_gamma": 1.666667,
+   "n_trials": 130004,
+   "qualify_rate_ge20": 0.7852681455955202,
+   "qualify_rate_ge22": 0.7386772714685702
+  },
+  {
+   "abs_gamma": 2.833333,
+   "n_trials": 125849,
+   "qualify_rate_ge20": 0.7931171483285525,
+   "qualify_rate_ge22": 0.7467123298556206
+  },
+  {
+   "abs_gamma": 0.0,
+   "n_trials": 121357,
+   "qualify_rate_ge20": 0.1754492942310703,
+   "qualify_rate_ge22": 0.16957406659690005
+  },
+  {
+   "abs_gamma": 0.4,
+   "n_trials": 111978,
+   "qualify_rate_ge20": 0.5802479058386468,
+   "qualify_rate_ge22": 0.50625122791977
+  },
+  {
+   "abs_gamma": 1.7,
+   "n_trials": 78062,
+   "qualify_rate_ge20": 0.41337654684737773,
+   "qualify_rate_ge22": 0.3227947016474085
+  },
+  {
+   "abs_gamma": 0.6,
+   "n_trials": 67830,
+   "qualify_rate_ge20": 0.49848149786230284,
+   "qualify_rate_ge22": 0.43635559486952674
+  },
+  {
+   "abs_gamma": 0.7,
+   "n_trials": 38928,
+   "qualify_rate_ge20": 0.5590577476366626,
+   "qualify_rate_ge22": 0.49902383888203866
+  },
+  {
+   "abs_gamma": 3.9,
+   "n_trials": 38625,
+   "qualify_rate_ge20": 0.589462783171521,
+   "qualify_rate_ge22": 0.5257216828478964
+  },
+  {
+   "abs_gamma": 3.6,
+   "n_trials": 37700,
+   "qualify_rate_ge20": 0.5690450928381963,
+   "qualify_rate_ge22": 0.5096021220159151
+  },
+  {
+   "abs_gamma": 1.2,
+   "n_trials": 37107,
+   "qualify_rate_ge20": 0.41550111838736625,
+   "qualify_rate_ge22": 0.36098310291858676
+  },
+  {
+   "abs_gamma": 1.6,
+   "n_trials": 36064,
+   "qualify_rate_ge20": 0.5725377107364685,
+   "qualify_rate_ge22": 0.5125332741792369
+  },
+  {
+   "abs_gamma": 0.9,
+   "n_trials": 35499,
+   "qualify_rate_ge20": 0.5922983746021014,
+   "qualify_rate_ge22": 0.5299867601904279
+  },
+  {
+   "abs_gamma": 3.8,
+   "n_trials": 35423,
+   "qualify_rate_ge20": 0.5880642520396353,
+   "qualify_rate_ge22": 0.5245461987973915
+  },
+  {
+   "abs_gamma": 2.6,
+   "n_trials": 34998,
+   "qualify_rate_ge20": 0.5734041945254015,
+   "qualify_rate_ge22": 0.5108291902394423
+  },
+  {
+   "abs_gamma": 0.8,
+   "n_trials": 34409,
+   "qualify_rate_ge20": 0.5996977534947252,
+   "qualify_rate_ge22": 0.537504722601645
+  },
+  {
+   "abs_gamma": 2.8,
+   "n_trials": 32049,
+   "qualify_rate_ge20": 0.5881618771256514,
+   "qualify_rate_ge22": 0.5267559050204375
+  },
+  {
+   "abs_gamma": 4.5,
+   "n_trials": 31045,
+   "qualify_rate_ge20": 0.5589627959413754,
+   "qualify_rate_ge22": 0.4962795941375423
+  },
+  {
+   "abs_gamma": 1.9,
+   "n_trials": 30151,
+   "qualify_rate_ge20": 0.5846903916951345,
+   "qualify_rate_ge22": 0.521408908493914
+  },
+  {
+   "abs_gamma": 3.7,
+   "n_trials": 29405,
+   "qualify_rate_ge20": 0.5858867539534093,
+   "qualify_rate_ge22": 0.5263390579833361
+  },
+  {
+   "abs_gamma": 2.9,
+   "n_trials": 29256,
+   "qualify_rate_ge20": 0.5845296691277003,
+   "qualify_rate_ge22": 0.5207478807765928
+  },
+  {
+   "abs_gamma": 1.8,
+   "n_trials": 28759,
+   "qualify_rate_ge20": 0.5892764004311694,
+   "qualify_rate_ge22": 0.5281477102819987
+  },
+  {
+   "abs_gamma": 1.433333,
+   "n_trials": 27464,
+   "qualify_rate_ge20": 0.6782333236236527,
+   "qualify_rate_ge22": 0.6217593941159336
+  },
+  {
+   "abs_gamma": 2.466667,
+   "n_trials": 27325,
+   "qualify_rate_ge20": 0.6710704483074108,
+   "qualify_rate_ge22": 0.6138700823421775
+  },
+  {
+   "abs_gamma": 2.7,
+   "n_trials": 26664,
+   "qualify_rate_ge20": 0.6021977197719772,
+   "qualify_rate_ge22": 0.5422667266726673
+  },
+  {
+   "abs_gamma": 2.333333,
+   "n_trials": 20438,
+   "qualify_rate_ge20": 0.6419414815539681,
+   "qualify_rate_ge22": 0.5811233975927195
+  },
+  {
+   "abs_gamma": 3.666667,
+   "n_trials": 20284,
+   "qualify_rate_ge20": 0.6371031354762374,
+   "qualify_rate_ge22": 0.5770065075921909
+  },
+  {
+   "abs_gamma": 1.1,
+   "n_trials": 16416,
+   "qualify_rate_ge20": 0.5865009746588694,
+   "qualify_rate_ge22": 0.5230872319688109
+  },
+  {
+   "abs_gamma": 2.25,
+   "n_trials": 16226,
+   "qualify_rate_ge20": 0.9696166646123505,
+   "qualify_rate_ge22": 0.9634537162578578
+  },
+  {
+   "abs_gamma": 2.166667,
+   "n_trials": 14818,
+   "qualify_rate_ge20": 0.526251855850992,
+   "qualify_rate_ge22": 0.4501957079227966
+  },
+  {
+   "abs_gamma": 0.3,
+   "n_trials": 14682,
+   "qualify_rate_ge20": 0.6302956000544885,
+   "qualify_rate_ge22": 0.5653861871679607
+  },
+  {
+   "abs_gamma": 0.25,
+   "n_trials": 14376,
+   "qualify_rate_ge20": 0.601349471341124,
+   "qualify_rate_ge22": 0.5178074568725654
+  }
+ ],
+ "wall_seconds": 2.6781539916992188
+}

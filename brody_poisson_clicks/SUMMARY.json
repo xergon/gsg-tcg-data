@@ -1,0 +1,19 @@
+{
+  "n_rats_parsed": 515,
+  "n_rats_failed": 0,
+  "n_trials_total": 25562353,
+  "min_trials_per_rat": 9170,
+  "max_trials_per_rat": 286535,
+  "median_trials_per_rat": 32585,
+  "parquet_bytes": 2131341109,
+  "parquet_sha256": "86b51a3e5747fd44ce2e02fd4178faf2acea4e393a9b50b1d3ec7b9c9520bd99",
+  "parquet_filename": "brody_poisson_clicks_trials.parquet",
+  "parse_date_utc": "2026-07-24T17:07:12Z",
+  "source": {
+    "zenodo_record": "13352119",
+    "zip_md5": "9bac21f991137ead56a0bc83ae62c49c",
+    "zip_bytes": 8104686746,
+    "license": "CC-BY-4.0"
+  },
+  "wall_seconds": 521.2
+}

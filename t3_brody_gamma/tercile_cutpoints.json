@@ -1,0 +1,129 @@
+{
+ "definition": "global terciles of |gamma| over the qualifying trials of qualifying rats",
+ "cut1_abs_gamma_q33": 1.5,
+ "cut2_abs_gamma_q67": 2.5,
+ "assignment_rule": "T_low: |g| <= cut1 ; T_mid: cut1 < |g| <= cut2 ; T_high: |g| > cut2",
+ "tercile_trial_counts": [
+  5973677,
+  3300938,
+  4104207
+ ],
+ "tercile_fractions": [
+  0.4465024648657408,
+  0.24672859837734593,
+  0.3067689367569133
+ ],
+ "abs_gamma_min": 0.0,
+ "abs_gamma_max": 10.0,
+ "abs_gamma_mean": 2.100711151451081,
+ "abs_gamma_median": 2.0,
+ "n_unique_abs_gamma_6dp": 222,
+ "top20_abs_gamma_values_by_count": [
+  [
+   0.5,
+   2530561
+  ],
+  [
+   1.5,
+   2344798
+  ],
+  [
+   2.5,
+   2325552
+  ],
+  [
+   3.5,
+   2323407
+  ],
+  [
+   1.0,
+   865609
+  ],
+  [
+   2.0,
+   699590
+  ],
+  [
+   3.0,
+   652883
+  ],
+  [
+   4.0,
+   598284
+  ],
+  [
+   5.0,
+   176572
+  ],
+  [
+   1.666667,
+   96034
+  ],
+  [
+   2.833333,
+   93975
+  ],
+  [
+   0.4,
+   56689
+  ],
+  [
+   0.6,
+   30083
+  ],
+  [
+   1.7,
+   25479
+  ],
+  [
+   3.9,
+   20591
+  ],
+  [
+   0.0,
+   20579
+  ],
+  [
+   0.7,
+   19753
+  ],
+  [
+   3.6,
+   19695
+  ],
+  [
+   0.9,
+   19158
+  ],
+  [
+   1.6,
+   18960
+  ]
+ ],
+ "per_tercile_abs_gamma_range": [
+  [
+   0.0,
+   1.5
+  ],
+  [
+   1.5333333015441895,
+   2.5
+  ],
+  [
+   2.5333333015441895,
+   10.0
+  ]
+ ],
+ "per_tercile_abs_gamma_mean": [
+  0.9715106683917011,
+  2.3416354562382207,
+  3.550492500502252
+ ],
+ "per_tercile_abs_gamma_median": [
+  1.0,
+  2.5,
+  3.5
+ ],
+ "n_qualifying_rats": 514,
+ "n_qualifying_trials": 13378822
+}

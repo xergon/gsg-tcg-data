@@ -1,0 +1,1712 @@
+{
+  "category_matches": {
+    "phi_000_045": true,
+    "phi_045_090": true,
+    "phi_090_135": true,
+    "phi_135_180": true,
+    "phi_180_225": true,
+    "phi_225_270": true,
+    "phi_270_315": true,
+    "phi_315_360": true
+  },
+  "claim_boundary": "Prospective only for the exact V150 continuous front-sheet observable. Conservative DTE cross-weighting test using shared THINGS visibilities; not galaxy-blind, not an independent telescope-family replication, and no population, causal-mechanism, gravity, dark-sector, TCG, TEC, SPEC, promotion, paper, send, contact, or discovery claim.",
+  "common_beam_arcsec": 13.4,
+  "common_beam_kpc": 0.38329369628519916,
+  "created_utc": "2026-07-24T06:12:00Z",
+  "crossing_pair_matches": {
+    "phi_000_045": true,
+    "phi_045_090": true,
+    "phi_090_135": true,
+    "phi_135_180": false,
+    "phi_180_225": true,
+    "phi_225_270": true,
+    "phi_270_315": true,
+    "phi_315_360": true
+  },
+  "discriminator_executed": "SOURCE_ORDER_SELECTED_13P4_ARCSEC_COMMON_BEAM_NATURAL_AND_ROBUST_EIGHT_SECTOR_V150_PROFILE_EXTRACTION",
+  "gates": {
+    "P149_P1_all_eight_categories_match": true,
+    "P149_P2_all_non_NO_FRONT_crossing_pairs_match": false,
+    "P149_P3_no_ambiguous_censored_state": true,
+    "P149_P4_no_later_nonfirst_noneligible_or_retuned_crossing": true
+  },
+  "joint_pass": false,
+  "kill_condition": "Kill exact V150 if any sector lacks a valid first-pair interpolation, maximum absolute shift exceeds 1.0 beam, fewer than six sectors or the median fail the 0.25-beam concentration gate, Spearman rho is below 0.90, or absolute median signed shift exceeds 0.15 beam. No tolerance, pair, sector, source, or geometry retune after outcome access.",
+  "measurement_state_disposition": "FROZEN_FIRST_CROSSING_STATE_AND_RING_TABLES_EXTRACTED_FOR_V150",
+  "natural_crossing_pairs": {
+    "phi_000_045": [
+      17,
+      18
+    ],
+    "phi_045_090": [
+      17,
+      18
+    ],
+    "phi_090_135": [
+      13,
+      14
+    ],
+    "phi_135_180": [
+      14,
+      15
+    ],
+    "phi_180_225": [
+      17,
+      18
+    ],
+    "phi_225_270": [
+      16,
+      17
+    ],
+    "phi_270_315": [
+      16,
+      17
+    ],
+    "phi_315_360": [
+      16,
+      17
+    ]
+  },
+  "natural_state_vector": [
+    "RESOLVED_FRONT",
+    "RESOLVED_FRONT",
+    "RESOLVED_FRONT",
+    "RESOLVED_FRONT",
+    "RESOLVED_FRONT",
+    "RESOLVED_FRONT",
+    "RESOLVED_FRONT",
+    "RESOLVED_FRONT"
+  ],
+  "next_execution_checkpoint": "Execute the frozen V150 continuous first-crossing interpolation and all four gates once.",
+  "non_NO_FRONT_sectors": [
+    "phi_000_045",
+    "phi_045_090",
+    "phi_090_135",
+    "phi_135_180",
+    "phi_180_225",
+    "phi_225_270",
+    "phi_270_315",
+    "phi_315_360"
+  ],
+  "output_label": "EMIT_VALUES",
+  "output_or_observed_block": "V150_MEASUREMENT_STATE_READY_FOR_FROZEN_CONTINUOUS_FRONT_GATES",
+  "parent_disposition": "V150_RETROSPECTIVE_FIRST_DISCRIMINATOR_PASSES__FRESH_TARGET_REQUIRED",
+  "profiles": {
+    "natural": {
+      "phi_000_045": {
+        "eligible_ring_count": 23,
+        "phi_center_deg": 22.5,
+        "score": {
+          "c_slope_q_per_kpc": -0.6657429435901411,
+          "crossing_ring_pair": [
+            17,
+            18
+          ],
+          "selected_rows": [
+            {
+              "co_annular_snr": 12.436961490290983,
+              "co_pixel_count": 432,
+              "co_sigma_mean_k_kms": 0.1663616719312134,
+              "eligible": true,
+              "f_sigma": 0.6075783883080719,
+              "hi_pixel_count": 758,
+              "mean_i_co21_k_kms": 2.0690337072689235,
+              "mean_i_hi_k_kms": 450.537481689242,
+              "q_mol_to_hi": 1.548279631410956,
+              "r_center_kpc": 5.557758596135388,
+              "r_inner_kpc": 5.366111747992788,
+              "r_outer_kpc": 5.749405444277987,
+              "ring_index": 15,
+              "sector": "phi_000_045",
+              "sigma_hi_he_faceon_msun_pc2": 7.5004180127389635,
+              "sigma_mol_he_faceon_msun_pc2": 11.612744436191576
+            },
+            {
+              "co_annular_snr": 12.26579236360203,
+              "co_pixel_count": 451,
+              "co_sigma_mean_k_kms": 0.15548842694431325,
+              "eligible": true,
+              "f_sigma": 0.5397661625881045,
+              "hi_pixel_count": 817,
+              "mean_i_co21_k_kms": 1.9071887598420496,
+              "mean_i_hi_k_kms": 548.2508711187818,
+              "q_mol_to_hi": 1.172808513218966,
+              "r_center_kpc": 5.941052292420586,
+              "r_inner_kpc": 5.749405444277987,
+              "r_outer_kpc": 6.1326991405631865,
+              "ring_index": 16,
+              "sector": "phi_000_045",
+              "sigma_hi_he_faceon_msun_pc2": 9.127122329137235,
+              "sigma_mol_he_faceon_msun_pc2": 10.704366768803066
+            },
+            {
+              "co_annular_snr": 15.116925928277432,
+              "co_pixel_count": 495,
+              "co_sigma_mean_k_kms": 0.14912276742738245,
+              "eligible": true,
+              "f_sigma": 0.5067224611514128,
+              "hi_pixel_count": 869,
+              "mean_i_co21_k_kms": 2.254277829419483,
+              "mean_i_hi_k_kms": 739.846096212345,
+              "q_mol_to_hi": 1.0272563034883138,
+              "r_center_kpc": 6.324345988705787,
+              "r_inner_kpc": 6.1326991405631865,
+              "r_outer_kpc": 6.515992836848386,
+              "ring_index": 17,
+              "sector": "phi_000_045",
+              "sigma_hi_he_faceon_msun_pc2": 12.316744360268794,
+              "sigma_mol_he_faceon_msun_pc2": 12.652453282540257
+            },
+            {
+              "co_annular_snr": 10.847039931685195,
+              "co_pixel_count": 511,
+              "co_sigma_mean_k_kms": 0.13871983112502628,
+              "eligible": true,
+              "f_sigma": 0.4356917825506087,
+              "hi_pixel_count": 914,
+              "mean_i_co21_k_kms": 1.5046995475297869,
+              "mean_i_hi_k_kms": 657.0517216902055,
+              "q_mol_to_hi": 0.7720812298638602,
+              "r_center_kpc": 6.707639684990985,
+              "r_inner_kpc": 6.515992836848386,
+              "r_outer_kpc": 6.899286533133585,
+              "ring_index": 18,
+              "sector": "phi_000_045",
+              "sigma_hi_he_faceon_msun_pc2": 10.93840749983497,
+              "sigma_mol_he_faceon_msun_pc2": 8.445339115224655
+            }
+          ]
+        }
+      },
+      "phi_045_090": {
+        "eligible_ring_count": 24,
+        "phi_center_deg": 67.5,
+        "score": {
+          "c_slope_q_per_kpc": -0.8904081907603825,
+          "crossing_ring_pair": [
+            17,
+            18
+          ],
+          "selected_rows": [
+            {
+              "co_annular_snr": 25.733554260090585,
+              "co_pixel_count": 428,
+              "co_sigma_mean_k_kms": 0.17876386956152052,
+              "eligible": true,
+              "f_sigma": 0.6850970331709074,
+              "hi_pixel_count": 764,
+              "mean_i_co21_k_kms": 4.600229737105144,
+              "mean_i_hi_k_kms": 712.8808495658483,
+              "q_mol_to_hi": 2.1755813864488944,
+              "r_center_kpc": 5.557758596135388,
+              "r_inner_kpc": 5.366111747992788,
+              "r_outer_kpc": 5.749405444277987,
+              "ring_index": 15,
+              "sector": "phi_045_090",
+              "sigma_hi_he_faceon_msun_pc2": 11.867834713712828,
+              "sigma_mol_he_faceon_msun_pc2": 25.819440300605674
+            },
+            {
+              "co_annular_snr": 23.222259893351122,
+              "co_pixel_count": 460,
+              "co_sigma_mean_k_kms": 0.17282533852549473,
+              "eligible": true,
+              "f_sigma": 0.6210638074908079,
+              "hi_pixel_count": 817,
+              "mean_i_co21_k_kms": 4.013394927395427,
+              "mean_i_hi_k_kms": 825.5711819283204,
+              "q_mol_to_hi": 1.6389667172679534,
+              "r_center_kpc": 5.941052292420586,
+              "r_inner_kpc": 5.749405444277987,
+              "r_outer_kpc": 6.1326991405631865,
+              "ring_index": 16,
+              "sector": "phi_045_090",
+              "sigma_hi_he_faceon_msun_pc2": 13.743870855132066,
+              "sigma_mol_he_faceon_msun_pc2": 22.5257468979905
+            },
+            {
+              "co_annular_snr": 21.230816082585985,
+              "co_pixel_count": 485,
+              "co_sigma_mean_k_kms": 0.1642301123994271,
+              "eligible": true,
+              "f_sigma": 0.5680473291828501,
+              "hi_pixel_count": 867,
+              "mean_i_co21_k_kms": 3.4867393115746608,
+              "mean_i_hi_k_kms": 893.8895935183176,
+              "q_mol_to_hi": 1.3150684497638174,
+              "r_center_kpc": 6.324345988705787,
+              "r_inner_kpc": 6.1326991405631865,
+              "r_outer_kpc": 6.515992836848386,
+              "ring_index": 17,
+              "sector": "phi_045_090",
+              "sigma_hi_he_faceon_msun_pc2": 14.88121606106272,
+              "sigma_mol_he_faceon_msun_pc2": 19.569817736022173
+            },
+            {
+              "co_annular_snr": 15.608894876950176,
+              "co_pixel_count": 518,
+              "co_sigma_mean_k_kms": 0.15064564455945284,
+              "eligible": true,
+              "f_sigma": 0.49335807717589325,
+              "hi_pixel_count": 916,
+              "mean_i_co21_k_kms": 2.3514120295989005,
+              "mean_i_hi_k_kms": 814.1049170546712,
+              "q_mol_to_hi": 0.9737806031246543,
+              "r_center_kpc": 6.707639684990985,
+              "r_inner_kpc": 6.515992836848386,
+              "r_outer_kpc": 6.899286533133585,
+              "ring_index": 18,
+              "sector": "phi_045_090",
+              "sigma_hi_he_faceon_msun_pc2": 13.552983785593035,
+              "sigma_mol_he_faceon_msun_pc2": 13.197632724873447
+            }
+          ]
+        }
+      },
+      "phi_090_135": {
+        "eligible_ring_count": 21,
+        "phi_center_deg": 112.5,
+        "score": {
+          "c_slope_q_per_kpc": -1.9528151361095183,
+          "crossing_ring_pair": [
+            13,
+            14
+          ],
+          "selected_rows": [
+            {
+              "co_annular_snr": 10.96763356066462,
+              "co_pixel_count": 313,
+              "co_sigma_mean_k_kms": 0.18503211277713444,
+              "eligible": true,
+              "f_sigma": 0.6569863494945097,
+              "hi_pixel_count": 550,
+              "mean_i_co21_k_kms": 2.0293644098951806,
+              "mean_i_hi_k_kms": 357.2134959333868,
+              "q_mol_to_hi": 1.9153358722789195,
+              "r_center_kpc": 4.024583810994591,
+              "r_inner_kpc": 3.8329369628519916,
+              "r_outer_kpc": 4.2162306591371905,
+              "ring_index": 11,
+              "sector": "phi_090_135",
+              "sigma_hi_he_faceon_msun_pc2": 5.9467872223342395,
+              "sigma_mol_he_faceon_msun_pc2": 11.390094891746683
+            },
+            {
+              "co_annular_snr": 11.079597445914331,
+              "co_pixel_count": 339,
+              "co_sigma_mean_k_kms": 0.16482836008929755,
+              "eligible": true,
+              "f_sigma": 0.6822975954065377,
+              "hi_pixel_count": 603,
+              "mean_i_co21_k_kms": 1.826231877459629,
+              "mean_i_hi_k_kms": 286.6918466819548,
+              "q_mol_to_hi": 2.1475997208129973,
+              "r_center_kpc": 4.407877507279791,
+              "r_inner_kpc": 4.2162306591371905,
+              "r_outer_kpc": 4.59952435542239,
+              "ring_index": 12,
+              "sector": "phi_090_135",
+              "sigma_hi_he_faceon_msun_pc2": 4.772763151461626,
+              "sigma_mol_he_faceon_msun_pc2": 10.249984811585549
+            },
+            {
+              "co_annular_snr": 10.554222807320514,
+              "co_pixel_count": 370,
+              "co_sigma_mean_k_kms": 0.1566149596038999,
+              "eligible": true,
+              "f_sigma": 0.6222860518559795,
+              "hi_pixel_count": 656,
+              "mean_i_co21_k_kms": 1.6529491786190613,
+              "mean_i_hi_k_kms": 338.2557739734092,
+              "q_mol_to_hi": 1.6475061482736268,
+              "r_center_kpc": 4.791171203564989,
+              "r_inner_kpc": 4.59952435542239,
+              "r_outer_kpc": 4.982818051707589,
+              "ring_index": 13,
+              "sector": "phi_090_135",
+              "sigma_hi_he_faceon_msun_pc2": 5.631184536546625,
+              "sigma_mol_he_faceon_msun_pc2": 9.277411146023939
+            },
+            {
+              "co_annular_snr": 7.609701341783167,
+              "co_pixel_count": 392,
+              "co_sigma_mean_k_kms": 0.14321045166888152,
+              "eligible": true,
+              "f_sigma": 0.4734082810642704,
+              "hi_pixel_count": 715,
+              "mean_i_co21_k_kms": 1.0897887662220611,
+              "mean_i_hi_k_kms": 408.68929590006013,
+              "q_mol_to_hi": 0.8990044165925248,
+              "r_center_kpc": 5.1744648998501885,
+              "r_inner_kpc": 4.982818051707589,
+              "r_outer_kpc": 5.366111747992788,
+              "ring_index": 14,
+              "sector": "phi_090_135",
+              "sigma_hi_he_faceon_msun_pc2": 6.803741489141479,
+              "sigma_mol_he_faceon_msun_pc2": 6.116593648091992
+            }
+          ]
+        }
+      },
+      "phi_135_180": {
+        "eligible_ring_count": 19,
+        "phi_center_deg": 157.5,
+        "score": {
+          "c_slope_q_per_kpc": -1.2284494572172953,
+          "crossing_ring_pair": [
+            14,
+            15
+          ],
+          "selected_rows": [
+            {
+              "co_annular_snr": 42.74490358755831,
+              "co_pixel_count": 336,
+              "co_sigma_mean_k_kms": 0.2123226986003128,
+              "eligible": true,
+              "f_sigma": 0.7858353590251401,
+              "hi_pixel_count": 602,
+              "mean_i_co21_k_kms": 9.075713281120573,
+              "mean_i_hi_k_kms": 833.8918555840775,
+              "q_mol_to_hi": 3.6693048649304645,
+              "r_center_kpc": 4.407877507279791,
+              "r_inner_kpc": 4.2162306591371905,
+              "r_outer_kpc": 4.59952435542239,
+              "ring_index": 12,
+              "sector": "phi_135_180",
+              "sigma_hi_he_faceon_msun_pc2": 13.882391029595174,
+              "sigma_mol_he_faceon_msun_pc2": 50.93872494176061
+            },
+            {
+              "co_annular_snr": 25.435233661657506,
+              "co_pixel_count": 377,
+              "co_sigma_mean_k_kms": 0.187568979611284,
+              "eligible": true,
+              "f_sigma": 0.7022478474571107,
+              "hi_pixel_count": 658,
+              "mean_i_co21_k_kms": 4.770860824091681,
+              "mean_i_hi_k_kms": 681.9837117996124,
+              "q_mol_to_hi": 2.3584979704083127,
+              "r_center_kpc": 4.791171203564989,
+              "r_inner_kpc": 4.59952435542239,
+              "r_outer_kpc": 4.982818051707589,
+              "ring_index": 13,
+              "sector": "phi_135_180",
+              "sigma_hi_he_faceon_msun_pc2": 11.353468078166628,
+              "sigma_mol_he_faceon_msun_pc2": 26.77713141945156
+            },
+            {
+              "co_annular_snr": 11.945934666033985,
+              "co_pixel_count": 397,
+              "co_sigma_mean_k_kms": 0.1574590950816282,
+              "eligible": true,
+              "f_sigma": 0.5137081773801883,
+              "hi_pixel_count": 711,
+              "mean_i_co21_k_kms": 1.8809960624179636,
+              "mean_i_hi_k_kms": 600.3176823487936,
+              "q_mol_to_hi": 1.0563783997285325,
+              "r_center_kpc": 5.1744648998501885,
+              "r_inner_kpc": 4.982818051707589,
+              "r_outer_kpc": 5.366111747992788,
+              "ring_index": 14,
+              "sector": "phi_135_180",
+              "sigma_hi_he_faceon_msun_pc2": 9.993915580946688,
+              "sigma_mol_he_faceon_msun_pc2": 10.55735654842251
+            },
+            {
+              "co_annular_snr": 6.465933604481512,
+              "co_pixel_count": 425,
+              "co_sigma_mean_k_kms": 0.1262657625632258,
+              "eligible": true,
+              "f_sigma": 0.36929267683649947,
+              "hi_pixel_count": 762,
+              "mean_i_co21_k_kms": 0.8164260372530453,
+              "mean_i_hi_k_kms": 470.0962495653353,
+              "q_mol_to_hi": 0.5855214665721685,
+              "r_center_kpc": 5.557758596135388,
+              "r_inner_kpc": 5.366111747992788,
+              "r_outer_kpc": 5.749405444277987,
+              "ring_index": 15,
+              "sector": "phi_135_180",
+              "sigma_hi_he_faceon_msun_pc2": 7.8260267375331765,
+              "sigma_mol_he_faceon_msun_pc2": 4.582306652793429
+            }
+          ]
+        }
+      },
+      "phi_180_225": {
+        "eligible_ring_count": 21,
+        "phi_center_deg": 202.5,
+        "score": {
+          "c_slope_q_per_kpc": -0.7145459626307255,
+          "crossing_ring_pair": [
+            17,
+            18
+          ],
+          "selected_rows": [
+            {
+              "co_annular_snr": 27.372585812305793,
+              "co_pixel_count": 431,
+              "co_sigma_mean_k_kms": 0.1731080070717685,
+              "eligible": true,
+              "f_sigma": 0.6605648131480953,
+              "hi_pixel_count": 756,
+              "mean_i_co21_k_kms": 4.738413778369221,
+              "mean_i_hi_k_kms": 820.8941649689751,
+              "q_mol_to_hi": 1.9460705275564116,
+              "r_center_kpc": 5.557758596135388,
+              "r_inner_kpc": 5.366111747992788,
+              "r_outer_kpc": 5.749405444277987,
+              "ring_index": 15,
+              "sector": "phi_180_225",
+              "sigma_hi_he_faceon_msun_pc2": 13.66600922613678,
+              "sigma_mol_he_faceon_msun_pc2": 26.59501778429879
+            },
+            {
+              "co_annular_snr": 23.21103071014399,
+              "co_pixel_count": 456,
+              "co_sigma_mean_k_kms": 0.16126629067796944,
+              "eligible": true,
+              "f_sigma": 0.6256452313462175,
+              "hi_pixel_count": 821,
+              "mean_i_co21_k_kms": 3.743156825437356,
+              "mean_i_hi_k_kms": 755.1026867752224,
+              "q_mol_to_hi": 1.6712628867961294,
+              "r_center_kpc": 5.941052292420586,
+              "r_inner_kpc": 5.749405444277987,
+              "r_outer_kpc": 6.1326991405631865,
+              "ring_index": 16,
+              "sector": "phi_180_225",
+              "sigma_hi_he_faceon_msun_pc2": 12.570731678353281,
+              "sigma_mol_he_faceon_msun_pc2": 21.00899731390426
+            },
+            {
+              "co_annular_snr": 15.039892439476489,
+              "co_pixel_count": 490,
+              "co_sigma_mean_k_kms": 0.14044259555957084,
+              "eligible": true,
+              "f_sigma": 0.5131932395450433,
+              "hi_pixel_count": 867,
+              "mean_i_co21_k_kms": 2.112241531136844,
+              "mean_i_hi_k_kms": 675.5103589807462,
+              "q_mol_to_hi": 1.0542031895067079,
+              "r_center_kpc": 6.324345988705787,
+              "r_inner_kpc": 6.1326991405631865,
+              "r_outer_kpc": 6.515992836848386,
+              "ring_index": 17,
+              "sector": "phi_180_225",
+              "sigma_hi_he_faceon_msun_pc2": 11.245701568034342,
+              "sigma_mol_he_faceon_msun_pc2": 11.855254461262389
+            },
+            {
+              "co_annular_snr": 11.592257724260767,
+              "co_pixel_count": 511,
+              "co_sigma_mean_k_kms": 0.12080571956915473,
+              "eligible": true,
+              "f_sigma": 0.43830392879797964,
+              "hi_pixel_count": 918,
+              "mean_i_co21_k_kms": 1.400411035810414,
+              "mean_i_hi_k_kms": 605.0542402697204,
+              "q_mol_to_hi": 0.7803222263243118,
+              "r_center_kpc": 6.707639684990985,
+              "r_inner_kpc": 6.515992836848386,
+              "r_outer_kpc": 6.899286533133585,
+              "ring_index": 18,
+              "sector": "phi_180_225",
+              "sigma_hi_he_faceon_msun_pc2": 10.072768430692506,
+              "sigma_mol_he_faceon_msun_pc2": 7.86000508708722
+            }
+          ]
+        }
+      },
+      "phi_225_270": {
+        "eligible_ring_count": 26,
+        "phi_center_deg": 247.5,
+        "score": {
+          "c_slope_q_per_kpc": -0.3786770402800057,
+          "crossing_ring_pair": [
+            16,
+            17
+          ],
+          "selected_rows": [
+            {
+              "co_annular_snr": 20.740963508478334,
+              "co_pixel_count": 397,
+              "co_sigma_mean_k_kms": 0.18890731324167437,
+              "eligible": true,
+              "f_sigma": 0.6883752228639379,
+              "hi_pixel_count": 703,
+              "mean_i_co21_k_kms": 3.918119690430254,
+              "mean_i_hi_k_kms": 597.9945296313554,
+              "q_mol_to_hi": 2.208987453405794,
+              "r_center_kpc": 5.1744648998501885,
+              "r_inner_kpc": 4.982818051707589,
+              "r_outer_kpc": 5.366111747992788,
+              "ring_index": 14,
+              "sector": "phi_225_270",
+              "sigma_hi_he_faceon_msun_pc2": 9.955240404748505,
+              "sigma_mol_he_faceon_msun_pc2": 21.991001149727865
+            },
+            {
+              "co_annular_snr": 15.884732646543155,
+              "co_pixel_count": 426,
+              "co_sigma_mean_k_kms": 0.1711754474540215,
+              "eligible": true,
+              "f_sigma": 0.6274324299066297,
+              "hi_pixel_count": 763,
+              "mean_i_co21_k_kms": 2.7190762184595276,
+              "mean_i_hi_k_kms": 544.3424833500545,
+              "q_mol_to_hi": 1.6840768769793544,
+              "r_center_kpc": 5.557758596135388,
+              "r_inner_kpc": 5.366111747992788,
+              "r_outer_kpc": 5.749405444277987,
+              "ring_index": 15,
+              "sector": "phi_225_270",
+              "sigma_hi_he_faceon_msun_pc2": 9.062056617153809,
+              "sigma_mol_he_faceon_msun_pc2": 15.26120000682648
+            },
+            {
+              "co_annular_snr": 12.685281260775195,
+              "co_pixel_count": 460,
+              "co_sigma_mean_k_kms": 0.14609143051041923,
+              "eligible": true,
+              "f_sigma": 0.5268388729108524,
+              "hi_pixel_count": 815,
+              "mean_i_co21_k_kms": 1.8532108858136627,
+              "mean_i_hi_k_kms": 561.1369275767775,
+              "q_mol_to_hi": 1.1134449614488122,
+              "r_center_kpc": 5.941052292420586,
+              "r_inner_kpc": 5.749405444277987,
+              "r_outer_kpc": 6.1326991405631865,
+              "ring_index": 16,
+              "sector": "phi_225_270",
+              "sigma_hi_he_faceon_msun_pc2": 9.341645679355157,
+              "sigma_mol_he_faceon_msun_pc2": 10.401408313318065
+            },
+            {
+              "co_annular_snr": 12.180084758863805,
+              "co_pixel_count": 485,
+              "co_sigma_mean_k_kms": 0.13886237372030788,
+              "eligible": true,
+              "f_sigma": 0.49194747905587705,
+              "hi_pixel_count": 869,
+              "mean_i_co21_k_kms": 1.6913554817303718,
+              "mean_i_hi_k_kms": 588.8945406829541,
+              "q_mol_to_hi": 0.9683004389815492,
+              "r_center_kpc": 6.324345988705787,
+              "r_inner_kpc": 6.1326991405631865,
+              "r_outer_kpc": 6.515992836848386,
+              "ring_index": 17,
+              "sector": "phi_225_270",
+              "sigma_hi_he_faceon_msun_pc2": 9.803746414130002,
+              "sigma_mol_he_faceon_msun_pc2": 9.492971956465869
+            }
+          ]
+        }
+      },
+      "phi_270_315": {
+        "eligible_ring_count": 24,
+        "phi_center_deg": 292.5,
+        "score": {
+          "c_slope_q_per_kpc": -0.958002259640051,
+          "crossing_ring_pair": [
+            16,
+            17
+          ],
+          "selected_rows": [
+            {
+              "co_annular_snr": 15.577589070060998,
+              "co_pixel_count": 397,
+              "co_sigma_mean_k_kms": 0.1757303807859419,
+              "eligible": true,
+              "f_sigma": 0.6602365935814696,
+              "hi_pixel_count": 706,
+              "mean_i_co21_k_kms": 2.7374556590087455,
+              "mean_i_hi_k_kms": 474.93794161705273,
+              "q_mol_to_hi": 1.943224553053165,
+              "r_center_kpc": 5.1744648998501885,
+              "r_inner_kpc": 4.982818051707589,
+              "r_outer_kpc": 5.366111747992788,
+              "ring_index": 14,
+              "sector": "phi_270_315",
+              "sigma_hi_he_faceon_msun_pc2": 7.906629829956649,
+              "sigma_mol_he_faceon_msun_pc2": 15.364357217474332
+            },
+            {
+              "co_annular_snr": 13.960237071078526,
+              "co_pixel_count": 428,
+              "co_sigma_mean_k_kms": 0.16584711846569075,
+              "eligible": true,
+              "f_sigma": 0.617628206544676,
+              "hi_pixel_count": 762,
+              "mean_i_co21_k_kms": 2.315265091336288,
+              "mean_i_hi_k_kms": 483.250388415345,
+              "q_mol_to_hi": 1.61525566769307,
+              "r_center_kpc": 5.557758596135388,
+              "r_inner_kpc": 5.366111747992788,
+              "r_outer_kpc": 5.749405444277987,
+              "ring_index": 15,
+              "sector": "phi_270_315",
+              "sigma_hi_he_faceon_msun_pc2": 8.045013046070174,
+              "sigma_mol_he_faceon_msun_pc2": 12.994752919329539
+            },
+            {
+              "co_annular_snr": 12.092737170481303,
+              "co_pixel_count": 461,
+              "co_sigma_mean_k_kms": 0.14768386688939522,
+              "eligible": true,
+              "f_sigma": 0.5524511915441724,
+              "hi_pixel_count": 818,
+              "mean_i_co21_k_kms": 1.7859021866138025,
+              "mean_i_hi_k_kms": 487.77206150315914,
+              "q_mol_to_hi": 1.2343931680888354,
+              "r_center_kpc": 5.941052292420586,
+              "r_inner_kpc": 5.749405444277987,
+              "r_outer_kpc": 6.1326991405631865,
+              "ring_index": 16,
+              "sector": "phi_270_315",
+              "sigma_hi_he_faceon_msun_pc2": 8.120288555109733,
+              "sigma_mol_he_faceon_msun_pc2": 10.023628715337415
+            },
+            {
+              "co_annular_snr": 9.501849902863341,
+              "co_pixel_count": 491,
+              "co_sigma_mean_k_kms": 0.14232386196978367,
+              "eligible": true,
+              "f_sigma": 0.46443785437245116,
+              "hi_pixel_count": 872,
+              "mean_i_co21_k_kms": 1.3523399740327247,
+              "mean_i_hi_k_kms": 525.7519716741614,
+              "q_mol_to_hi": 0.8671969409418261,
+              "r_center_kpc": 6.324345988705787,
+              "r_inner_kpc": 6.1326991405631865,
+              "r_outer_kpc": 6.515992836848386,
+              "ring_index": 17,
+              "sector": "phi_270_315",
+              "sigma_hi_he_faceon_msun_pc2": 8.752567142233541,
+              "sigma_mol_he_faceon_msun_pc2": 7.590199451132868
+            }
+          ]
+        }
+      },
+      "phi_315_360": {
+        "eligible_ring_count": 24,
+        "phi_center_deg": 337.5,
+        "score": {
+          "c_slope_q_per_kpc": -1.3751586656006247,
+          "crossing_ring_pair": [
+            16,
+            17
+          ],
+          "selected_rows": [
+            {
+              "co_annular_snr": 10.311412017688134,
+              "co_pixel_count": 398,
+              "co_sigma_mean_k_kms": 0.17085354048013862,
+              "eligible": true,
+              "f_sigma": 0.5436533744017179,
+              "hi_pixel_count": 705,
+              "mean_i_co21_k_kms": 1.7617412505714676,
+              "mean_i_hi_k_kms": 498.5717196716568,
+              "q_mol_to_hi": 1.1913167401840088,
+              "r_center_kpc": 5.1744648998501885,
+              "r_inner_kpc": 4.982818051707589,
+              "r_outer_kpc": 5.366111747992788,
+              "ring_index": 14,
+              "sector": "phi_315_360",
+              "sigma_hi_he_faceon_msun_pc2": 8.300078148540928,
+              "sigma_mol_he_faceon_msun_pc2": 9.8880220431923
+            },
+            {
+              "co_annular_snr": 8.98739197933412,
+              "co_pixel_count": 430,
+              "co_sigma_mean_k_kms": 0.1597281026403035,
+              "eligible": true,
+              "f_sigma": 0.5193387094950703,
+              "hi_pixel_count": 765,
+              "mean_i_co21_k_kms": 1.4355390685437206,
+              "mean_i_hi_k_kms": 447.93627259737826,
+              "q_mol_to_hi": 1.0804670976302468,
+              "r_center_kpc": 5.557758596135388,
+              "r_inner_kpc": 5.366111747992788,
+              "r_outer_kpc": 5.749405444277987,
+              "ring_index": 15,
+              "sector": "phi_315_360",
+              "sigma_hi_he_faceon_msun_pc2": 7.457113834240064,
+              "sigma_mol_he_faceon_msun_pc2": 8.057166141179724
+            },
+            {
+              "co_annular_snr": 12.425816061283713,
+              "co_pixel_count": 459,
+              "co_sigma_mean_k_kms": 0.16180407971143376,
+              "eligible": true,
+              "f_sigma": 0.58026607759975,
+              "hi_pixel_count": 810,
+              "mean_i_co21_k_kms": 2.010547732459564,
+              "mean_i_hi_k_kms": 490.31371019611186,
+              "q_mol_to_hi": 1.3824617135577135,
+              "r_center_kpc": 5.941052292420586,
+              "r_inner_kpc": 5.749405444277987,
+              "r_outer_kpc": 6.1326991405631865,
+              "ring_index": 16,
+              "sector": "phi_315_360",
+              "sigma_hi_he_faceon_msun_pc2": 8.162601189271047,
+              "sigma_mol_he_faceon_msun_pc2": 11.284483627207882
+            },
+            {
+              "co_annular_snr": 8.458242602698359,
+              "co_pixel_count": 489,
+              "co_sigma_mean_k_kms": 0.1401098574168365,
+              "eligible": true,
+              "f_sigma": 0.46102454676415405,
+              "hi_pixel_count": 874,
+              "mean_i_co21_k_kms": 1.1850831650610791,
+              "mean_i_hi_k_kms": 467.09640763749917,
+              "q_mol_to_hi": 0.8553720656410264,
+              "r_center_kpc": 6.324345988705787,
+              "r_inner_kpc": 6.1326991405631865,
+              "r_outer_kpc": 6.515992836848386,
+              "ring_index": 17,
+              "sector": "phi_315_360",
+              "sigma_hi_he_faceon_msun_pc2": 7.7760862345886705,
+              "sigma_mol_he_faceon_msun_pc2": 6.651446945082863
+            }
+          ]
+        }
+      }
+    },
+    "robust": {
+      "phi_000_045": {
+        "eligible_ring_count": 23,
+        "phi_center_deg": 22.5,
+        "score": {
+          "c_slope_q_per_kpc": -0.7360913342607124,
+          "crossing_ring_pair": [
+            17,
+            18
+          ],
+          "selected_rows": [
+            {
+              "co_annular_snr": 12.436961490290983,
+              "co_pixel_count": 432,
+              "co_sigma_mean_k_kms": 0.1663616719312134,
+              "eligible": true,
+              "f_sigma": 0.6042918314024888,
+              "hi_pixel_count": 758,
+              "mean_i_co21_k_kms": 2.0690337072689235,
+              "mean_i_hi_k_kms": 456.7816189711596,
+              "q_mol_to_hi": 1.5271148774720782,
+              "r_center_kpc": 5.557758596135388,
+              "r_inner_kpc": 5.366111747992788,
+              "r_outer_kpc": 5.749405444277987,
+              "ring_index": 15,
+              "sector": "phi_000_045",
+              "sigma_hi_he_faceon_msun_pc2": 7.604368608742012,
+              "sigma_mol_he_faceon_msun_pc2": 11.612744436191576
+            },
+            {
+              "co_annular_snr": 12.26579236360203,
+              "co_pixel_count": 451,
+              "co_sigma_mean_k_kms": 0.15548842694431325,
+              "eligible": true,
+              "f_sigma": 0.5406842039632611,
+              "hi_pixel_count": 817,
+              "mean_i_co21_k_kms": 1.9071887598420496,
+              "mean_i_hi_k_kms": 546.2282275517755,
+              "q_mol_to_hi": 1.1771513382048235,
+              "r_center_kpc": 5.941052292420586,
+              "r_inner_kpc": 5.749405444277987,
+              "r_outer_kpc": 6.1326991405631865,
+              "ring_index": 16,
+              "sector": "phi_000_045",
+              "sigma_hi_he_faceon_msun_pc2": 9.093449942576978,
+              "sigma_mol_he_faceon_msun_pc2": 10.704366768803066
+            },
+            {
+              "co_annular_snr": 15.116925928277432,
+              "co_pixel_count": 495,
+              "co_sigma_mean_k_kms": 0.14912276742738245,
+              "eligible": true,
+              "f_sigma": 0.5097000482014445,
+              "hi_pixel_count": 869,
+              "mean_i_co21_k_kms": 2.254277829419483,
+              "mean_i_hi_k_kms": 731.0841650187136,
+              "q_mol_to_hi": 1.0395678121764527,
+              "r_center_kpc": 6.324345988705787,
+              "r_inner_kpc": 6.1326991405631865,
+              "r_outer_kpc": 6.515992836848386,
+              "ring_index": 17,
+              "sector": "phi_000_045",
+              "sigma_hi_he_faceon_msun_pc2": 12.170878257620267,
+              "sigma_mol_he_faceon_msun_pc2": 12.652453282540257
+            },
+            {
+              "co_annular_snr": 10.847039931685195,
+              "co_pixel_count": 511,
+              "co_sigma_mean_k_kms": 0.13871983112502628,
+              "eligible": true,
+              "f_sigma": 0.43098685486243027,
+              "hi_pixel_count": 914,
+              "mean_i_co21_k_kms": 1.5046995475297869,
+              "mean_i_hi_k_kms": 669.7624990503009,
+              "q_mol_to_hi": 0.7574286438641606,
+              "r_center_kpc": 6.707639684990985,
+              "r_inner_kpc": 6.515992836848386,
+              "r_outer_kpc": 6.899286533133585,
+              "ring_index": 18,
+              "sector": "phi_000_045",
+              "sigma_hi_he_faceon_msun_pc2": 11.150012854199987,
+              "sigma_mol_he_faceon_msun_pc2": 8.445339115224655
+            }
+          ]
+        }
+      },
+      "phi_045_090": {
+        "eligible_ring_count": 24,
+        "phi_center_deg": 67.5,
+        "score": {
+          "c_slope_q_per_kpc": -0.8807180006744285,
+          "crossing_ring_pair": [
+            17,
+            18
+          ],
+          "selected_rows": [
+            {
+              "co_annular_snr": 25.733554260090585,
+              "co_pixel_count": 428,
+              "co_sigma_mean_k_kms": 0.17876386956152052,
+              "eligible": true,
+              "f_sigma": 0.6768944569893272,
+              "hi_pixel_count": 764,
+              "mean_i_co21_k_kms": 4.600229737105144,
+              "mean_i_hi_k_kms": 740.3136099929598,
+              "q_mol_to_hi": 2.094963926282651,
+              "r_center_kpc": 5.557758596135388,
+              "r_inner_kpc": 5.366111747992788,
+              "r_outer_kpc": 5.749405444277987,
+              "ring_index": 15,
+              "sector": "phi_045_090",
+              "sigma_hi_he_faceon_msun_pc2": 12.324527394808294,
+              "sigma_mol_he_faceon_msun_pc2": 25.819440300605674
+            },
+            {
+              "co_annular_snr": 23.222259893351122,
+              "co_pixel_count": 460,
+              "co_sigma_mean_k_kms": 0.17282533852549473,
+              "eligible": true,
+              "f_sigma": 0.6128406065896936,
+              "hi_pixel_count": 817,
+              "mean_i_co21_k_kms": 4.013394927395427,
+              "mean_i_hi_k_kms": 854.8047485567838,
+              "q_mol_to_hi": 1.582915504623217,
+              "r_center_kpc": 5.941052292420586,
+              "r_inner_kpc": 5.749405444277987,
+              "r_outer_kpc": 6.1326991405631865,
+              "ring_index": 16,
+              "sector": "phi_045_090",
+              "sigma_hi_he_faceon_msun_pc2": 14.230542838325617,
+              "sigma_mol_he_faceon_msun_pc2": 22.5257468979905
+            },
+            {
+              "co_annular_snr": 21.230816082585985,
+              "co_pixel_count": 485,
+              "co_sigma_mean_k_kms": 0.1642301123994271,
+              "eligible": true,
+              "f_sigma": 0.5617280199684953,
+              "hi_pixel_count": 867,
+              "mean_i_co21_k_kms": 3.4867393115746608,
+              "mean_i_hi_k_kms": 917.1700363238468,
+              "q_mol_to_hi": 1.2816881880701478,
+              "r_center_kpc": 6.324345988705787,
+              "r_inner_kpc": 6.1326991405631865,
+              "r_outer_kpc": 6.515992836848386,
+              "ring_index": 17,
+              "sector": "phi_045_090",
+              "sigma_hi_he_faceon_msun_pc2": 15.268782156359471,
+              "sigma_mol_he_faceon_msun_pc2": 19.569817736022173
+            },
+            {
+              "co_annular_snr": 15.608894876950176,
+              "co_pixel_count": 518,
+              "co_sigma_mean_k_kms": 0.15064564455945284,
+              "eligible": true,
+              "f_sigma": 0.48562701195712965,
+              "hi_pixel_count": 916,
+              "mean_i_co21_k_kms": 2.3514120295989005,
+              "mean_i_hi_k_kms": 839.6858132907361,
+              "q_mol_to_hi": 0.9441145302067362,
+              "r_center_kpc": 6.707639684990985,
+              "r_inner_kpc": 6.515992836848386,
+              "r_outer_kpc": 6.899286533133585,
+              "ring_index": 18,
+              "sector": "phi_045_090",
+              "sigma_hi_he_faceon_msun_pc2": 13.978847165908476,
+              "sigma_mol_he_faceon_msun_pc2": 13.197632724873447
+            }
+          ]
+        }
+      },
+      "phi_090_135": {
+        "eligible_ring_count": 21,
+        "phi_center_deg": 112.5,
+        "score": {
+          "c_slope_q_per_kpc": -1.7440197388984942,
+          "crossing_ring_pair": [
+            13,
+            14
+          ],
+          "selected_rows": [
+            {
+              "co_annular_snr": 10.96763356066462,
+              "co_pixel_count": 313,
+              "co_sigma_mean_k_kms": 0.18503211277713444,
+              "eligible": true,
+              "f_sigma": 0.6354729066340973,
+              "hi_pixel_count": 550,
+              "mean_i_co21_k_kms": 2.0293644098951806,
+              "mean_i_hi_k_kms": 392.46919523727615,
+              "q_mol_to_hi": 1.7432803163309079,
+              "r_center_kpc": 4.024583810994591,
+              "r_inner_kpc": 3.8329369628519916,
+              "r_outer_kpc": 4.2162306591371905,
+              "ring_index": 11,
+              "sector": "phi_090_135",
+              "sigma_hi_he_faceon_msun_pc2": 6.533713932891459,
+              "sigma_mol_he_faceon_msun_pc2": 11.390094891746683
+            },
+            {
+              "co_annular_snr": 11.079597445914331,
+              "co_pixel_count": 339,
+              "co_sigma_mean_k_kms": 0.16482836008929755,
+              "eligible": true,
+              "f_sigma": 0.6546280896545434,
+              "hi_pixel_count": 603,
+              "mean_i_co21_k_kms": 1.826231877459629,
+              "mean_i_hi_k_kms": 324.8336836202086,
+              "q_mol_to_hi": 1.8954294487926218,
+              "r_center_kpc": 4.407877507279791,
+              "r_inner_kpc": 4.2162306591371905,
+              "r_outer_kpc": 4.59952435542239,
+              "ring_index": 12,
+              "sector": "phi_090_135",
+              "sigma_hi_he_faceon_msun_pc2": 5.407737448689917,
+              "sigma_mol_he_faceon_msun_pc2": 10.249984811585549
+            },
+            {
+              "co_annular_snr": 10.554222807320514,
+              "co_pixel_count": 370,
+              "co_sigma_mean_k_kms": 0.1566149596038999,
+              "eligible": true,
+              "f_sigma": 0.6023168964311153,
+              "hi_pixel_count": 656,
+              "mean_i_co21_k_kms": 1.6529491786190613,
+              "mean_i_hi_k_kms": 367.9462285471443,
+              "q_mol_to_hi": 1.5145649664916807,
+              "r_center_kpc": 4.791171203564989,
+              "r_inner_kpc": 4.59952435542239,
+              "r_outer_kpc": 4.982818051707589,
+              "ring_index": 13,
+              "sector": "phi_090_135",
+              "sigma_hi_he_faceon_msun_pc2": 6.125462658438494,
+              "sigma_mol_he_faceon_msun_pc2": 9.277411146023939
+            },
+            {
+              "co_annular_snr": 7.609701341783167,
+              "co_pixel_count": 392,
+              "co_sigma_mean_k_kms": 0.14321045166888152,
+              "eligible": true,
+              "f_sigma": 0.4583155373482694,
+              "hi_pixel_count": 715,
+              "mean_i_co21_k_kms": 1.0897887662220611,
+              "mean_i_hi_k_kms": 434.247059863989,
+              "q_mol_to_hi": 0.8460931943749286,
+              "r_center_kpc": 5.1744648998501885,
+              "r_inner_kpc": 4.982818051707589,
+              "r_outer_kpc": 5.366111747992788,
+              "ring_index": 14,
+              "sector": "phi_090_135",
+              "sigma_hi_he_faceon_msun_pc2": 7.229219770064184,
+              "sigma_mol_he_faceon_msun_pc2": 6.116593648091992
+            }
+          ]
+        }
+      },
+      "phi_135_180": {
+        "eligible_ring_count": 19,
+        "phi_center_deg": 157.5,
+        "score": {
+          "c_slope_q_per_kpc": -3.429515922011387,
+          "crossing_ring_pair": [
+            13,
+            14
+          ],
+          "selected_rows": [
+            {
+              "co_annular_snr": 50.45252813123734,
+              "co_pixel_count": 308,
+              "co_sigma_mean_k_kms": 0.22421677072179855,
+              "eligible": true,
+              "f_sigma": 0.8283674131169866,
+              "hi_pixel_count": 556,
+              "mean_i_co21_k_kms": 11.312302932336733,
+              "mean_i_hi_k_kms": 790.2063778047642,
+              "q_mol_to_hi": 4.826399392800686,
+              "r_center_kpc": 4.024583810994591,
+              "r_inner_kpc": 3.8329369628519916,
+              "r_outer_kpc": 4.2162306591371905,
+              "ring_index": 11,
+              "sector": "phi_135_180",
+              "sigma_hi_he_faceon_msun_pc2": 13.155127799014345,
+              "sigma_mol_he_faceon_msun_pc2": 63.49190082137825
+            },
+            {
+              "co_annular_snr": 42.74490358755831,
+              "co_pixel_count": 336,
+              "co_sigma_mean_k_kms": 0.2123226986003128,
+              "eligible": true,
+              "f_sigma": 0.7824392016607815,
+              "hi_pixel_count": 602,
+              "mean_i_co21_k_kms": 9.075713281120573,
+              "mean_i_hi_k_kms": 850.7923405459231,
+              "q_mol_to_hi": 3.5964163012529955,
+              "r_center_kpc": 4.407877507279791,
+              "r_inner_kpc": 4.2162306591371905,
+              "r_outer_kpc": 4.59952435542239,
+              "ring_index": 12,
+              "sector": "phi_135_180",
+              "sigma_hi_he_faceon_msun_pc2": 14.163745427361539,
+              "sigma_mol_he_faceon_msun_pc2": 50.93872494176061
+            },
+            {
+              "co_annular_snr": 25.435233661657506,
+              "co_pixel_count": 377,
+              "co_sigma_mean_k_kms": 0.187568979611284,
+              "eligible": true,
+              "f_sigma": 0.6980187963111413,
+              "hi_pixel_count": 658,
+              "mean_i_co21_k_kms": 4.770860824091681,
+              "mean_i_hi_k_kms": 695.8606902055885,
+              "q_mol_to_hi": 2.3114643818372658,
+              "r_center_kpc": 4.791171203564989,
+              "r_inner_kpc": 4.59952435542239,
+              "r_outer_kpc": 4.982818051707589,
+              "ring_index": 13,
+              "sector": "phi_135_180",
+              "sigma_hi_he_faceon_msun_pc2": 11.584488011088355,
+              "sigma_mol_he_faceon_msun_pc2": 26.77713141945156
+            },
+            {
+              "co_annular_snr": 11.945934666033985,
+              "co_pixel_count": 397,
+              "co_sigma_mean_k_kms": 0.1574590950816282,
+              "eligible": true,
+              "f_sigma": 0.4992369742628453,
+              "hi_pixel_count": 711,
+              "mean_i_co21_k_kms": 1.8809960624179636,
+              "mean_i_hi_k_kms": 636.1011204815248,
+              "q_mol_to_hi": 0.9969525476205775,
+              "r_center_kpc": 5.1744648998501885,
+              "r_inner_kpc": 4.982818051707589,
+              "r_outer_kpc": 5.366111747992788,
+              "ring_index": 14,
+              "sector": "phi_135_180",
+              "sigma_hi_he_faceon_msun_pc2": 10.58962793527105,
+              "sigma_mol_he_faceon_msun_pc2": 10.55735654842251
+            }
+          ]
+        }
+      },
+      "phi_180_225": {
+        "eligible_ring_count": 21,
+        "phi_center_deg": 202.5,
+        "score": {
+          "c_slope_q_per_kpc": -0.7398429361583228,
+          "crossing_ring_pair": [
+            17,
+            18
+          ],
+          "selected_rows": [
+            {
+              "co_annular_snr": 27.372585812305793,
+              "co_pixel_count": 431,
+              "co_sigma_mean_k_kms": 0.1731080070717685,
+              "eligible": true,
+              "f_sigma": 0.6543380632350442,
+              "hi_pixel_count": 756,
+              "mean_i_co21_k_kms": 4.738413778369221,
+              "mean_i_hi_k_kms": 843.9080292307876,
+              "q_mol_to_hi": 1.893000049004478,
+              "r_center_kpc": 5.557758596135388,
+              "r_inner_kpc": 5.366111747992788,
+              "r_outer_kpc": 5.749405444277987,
+              "ring_index": 15,
+              "sector": "phi_180_225",
+              "sigma_hi_he_faceon_msun_pc2": 14.049137398747039,
+              "sigma_mol_he_faceon_msun_pc2": 26.59501778429879
+            },
+            {
+              "co_annular_snr": 23.21103071014399,
+              "co_pixel_count": 456,
+              "co_sigma_mean_k_kms": 0.16126629067796944,
+              "eligible": true,
+              "f_sigma": 0.6216326958294247,
+              "hi_pixel_count": 821,
+              "mean_i_co21_k_kms": 3.743156825437356,
+              "mean_i_hi_k_kms": 768.1225879135172,
+              "q_mol_to_hi": 1.642934495072494,
+              "r_center_kpc": 5.941052292420586,
+              "r_inner_kpc": 5.749405444277987,
+              "r_outer_kpc": 6.1326991405631865,
+              "ring_index": 16,
+              "sector": "phi_180_225",
+              "sigma_hi_he_faceon_msun_pc2": 12.787483236193932,
+              "sigma_mol_he_faceon_msun_pc2": 21.00899731390426
+            },
+            {
+              "co_annular_snr": 15.039892439476489,
+              "co_pixel_count": 490,
+              "co_sigma_mean_k_kms": 0.14044259555957084,
+              "eligible": true,
+              "f_sigma": 0.5113421606791662,
+              "hi_pixel_count": 867,
+              "mean_i_co21_k_kms": 2.112241531136844,
+              "mean_i_hi_k_kms": 680.5336545506783,
+              "q_mol_to_hi": 1.0464216871868062,
+              "r_center_kpc": 6.324345988705787,
+              "r_inner_kpc": 6.1326991405631865,
+              "r_outer_kpc": 6.515992836848386,
+              "ring_index": 17,
+              "sector": "phi_180_225",
+              "sigma_hi_he_faceon_msun_pc2": 11.329327943435485,
+              "sigma_mol_he_faceon_msun_pc2": 11.855254461262389
+            },
+            {
+              "co_annular_snr": 11.592257724260767,
+              "co_pixel_count": 511,
+              "co_sigma_mean_k_kms": 0.12080571956915473,
+              "eligible": true,
+              "f_sigma": 0.43273500887790173,
+              "hi_pixel_count": 918,
+              "mean_i_co21_k_kms": 1.400411035810414,
+              "mean_i_hi_k_kms": 618.9167499957958,
+              "q_mol_to_hi": 0.7628445535161885,
+              "r_center_kpc": 6.707639684990985,
+              "r_inner_kpc": 6.515992836848386,
+              "r_outer_kpc": 6.899286533133585,
+              "ring_index": 18,
+              "sector": "phi_180_225",
+              "sigma_hi_he_faceon_msun_pc2": 10.303547493205535,
+              "sigma_mol_he_faceon_msun_pc2": 7.86000508708722
+            }
+          ]
+        }
+      },
+      "phi_225_270": {
+        "eligible_ring_count": 26,
+        "phi_center_deg": 247.5,
+        "score": {
+          "c_slope_q_per_kpc": -0.26167722895080825,
+          "crossing_ring_pair": [
+            16,
+            17
+          ],
+          "selected_rows": [
+            {
+              "co_annular_snr": 20.740963508478334,
+              "co_pixel_count": 397,
+              "co_sigma_mean_k_kms": 0.18890731324167437,
+              "eligible": true,
+              "f_sigma": 0.6739265387947887,
+              "hi_pixel_count": 703,
+              "mean_i_co21_k_kms": 3.918119690430254,
+              "mean_i_hi_k_kms": 639.1361096295122,
+              "q_mol_to_hi": 2.066793587873927,
+              "r_center_kpc": 5.1744648998501885,
+              "r_inner_kpc": 4.982818051707589,
+              "r_outer_kpc": 5.366111747992788,
+              "ring_index": 14,
+              "sector": "phi_225_270",
+              "sigma_hi_he_faceon_msun_pc2": 10.640153558996477,
+              "sigma_mol_he_faceon_msun_pc2": 21.991001149727865
+            },
+            {
+              "co_annular_snr": 15.884732646543155,
+              "co_pixel_count": 426,
+              "co_sigma_mean_k_kms": 0.1711754474540215,
+              "eligible": true,
+              "f_sigma": 0.6069899706679284,
+              "hi_pixel_count": 763,
+              "mean_i_co21_k_kms": 2.7190762184595276,
+              "mean_i_hi_k_kms": 593.5485676311106,
+              "q_mol_to_hi": 1.5444643275376964,
+              "r_center_kpc": 5.557758596135388,
+              "r_inner_kpc": 5.366111747992788,
+              "r_outer_kpc": 5.749405444277987,
+              "ring_index": 15,
+              "sector": "phi_225_270",
+              "sigma_hi_he_faceon_msun_pc2": 9.881225312051756,
+              "sigma_mol_he_faceon_msun_pc2": 15.26120000682648
+            },
+            {
+              "co_annular_snr": 12.685281260775195,
+              "co_pixel_count": 460,
+              "co_sigma_mean_k_kms": 0.14609143051041923,
+              "eligible": true,
+              "f_sigma": 0.5036696200629645,
+              "hi_pixel_count": 815,
+              "mean_i_co21_k_kms": 1.8532108858136627,
+              "mean_i_hi_k_kms": 615.6908604688454,
+              "q_mol_to_hi": 1.0147870056369712,
+              "r_center_kpc": 5.941052292420586,
+              "r_inner_kpc": 5.749405444277987,
+              "r_outer_kpc": 6.1326991405631865,
+              "ring_index": 16,
+              "sector": "phi_225_270",
+              "sigma_hi_he_faceon_msun_pc2": 10.249843815046892,
+              "sigma_mol_he_faceon_msun_pc2": 10.401408313318065
+            },
+            {
+              "co_annular_snr": 12.180084758863805,
+              "co_pixel_count": 485,
+              "co_sigma_mean_k_kms": 0.13886237372030788,
+              "eligible": true,
+              "f_sigma": 0.47766707422397947,
+              "hi_pixel_count": 869,
+              "mean_i_co21_k_kms": 1.6913554817303718,
+              "mean_i_hi_k_kms": 623.5478033650954,
+              "q_mol_to_hi": 0.9144877733187473,
+              "r_center_kpc": 6.324345988705787,
+              "r_inner_kpc": 6.1326991405631865,
+              "r_outer_kpc": 6.515992836848386,
+              "ring_index": 17,
+              "sector": "phi_225_270",
+              "sigma_hi_he_faceon_msun_pc2": 10.380643933614481,
+              "sigma_mol_he_faceon_msun_pc2": 9.492971956465869
+            }
+          ]
+        }
+      },
+      "phi_270_315": {
+        "eligible_ring_count": 24,
+        "phi_center_deg": 292.5,
+        "score": {
+          "c_slope_q_per_kpc": -0.8931500141434446,
+          "crossing_ring_pair": [
+            16,
+            17
+          ],
+          "selected_rows": [
+            {
+              "co_annular_snr": 15.577589070060998,
+              "co_pixel_count": 397,
+              "co_sigma_mean_k_kms": 0.1757303807859419,
+              "eligible": true,
+              "f_sigma": 0.6534919765067976,
+              "hi_pixel_count": 706,
+              "mean_i_co21_k_kms": 2.7374556590087455,
+              "mean_i_hi_k_kms": 489.3649837934874,
+              "q_mol_to_hi": 1.8859360597738577,
+              "r_center_kpc": 5.1744648998501885,
+              "r_inner_kpc": 4.982818051707589,
+              "r_outer_kpc": 5.366111747992788,
+              "ring_index": 14,
+              "sector": "phi_270_315",
+              "sigma_hi_he_faceon_msun_pc2": 8.146807065832693,
+              "sigma_mol_he_faceon_msun_pc2": 15.364357217474332
+            },
+            {
+              "co_annular_snr": 13.960237071078526,
+              "co_pixel_count": 428,
+              "co_sigma_mean_k_kms": 0.16584711846569075,
+              "eligible": true,
+              "f_sigma": 0.6097137447441824,
+              "hi_pixel_count": 762,
+              "mean_i_co21_k_kms": 2.315265091336288,
+              "mean_i_hi_k_kms": 499.6555973398915,
+              "q_mol_to_hi": 1.5622219243783988,
+              "r_center_kpc": 5.557758596135388,
+              "r_inner_kpc": 5.366111747992788,
+              "r_outer_kpc": 5.749405444277987,
+              "ring_index": 15,
+              "sector": "phi_270_315",
+              "sigma_hi_he_faceon_msun_pc2": 8.318122231257313,
+              "sigma_mol_he_faceon_msun_pc2": 12.994752919329539
+            },
+            {
+              "co_annular_snr": 12.092737170481303,
+              "co_pixel_count": 461,
+              "co_sigma_mean_k_kms": 0.14768386688939522,
+              "eligible": true,
+              "f_sigma": 0.5411165491423459,
+              "hi_pixel_count": 818,
+              "mean_i_co21_k_kms": 1.7859021866138025,
+              "mean_i_hi_k_kms": 510.6014102645533,
+              "q_mol_to_hi": 1.1792025799383221,
+              "r_center_kpc": 5.941052292420586,
+              "r_inner_kpc": 5.749405444277987,
+              "r_outer_kpc": 6.1326991405631865,
+              "ring_index": 16,
+              "sector": "phi_270_315",
+              "sigma_hi_he_faceon_msun_pc2": 8.500344966902716,
+              "sigma_mol_he_faceon_msun_pc2": 10.023628715337415
+            },
+            {
+              "co_annular_snr": 9.501849902863341,
+              "co_pixel_count": 491,
+              "co_sigma_mean_k_kms": 0.14232386196978367,
+              "eligible": true,
+              "f_sigma": 0.4555938253396401,
+              "hi_pixel_count": 872,
+              "mean_i_co21_k_kms": 1.3523399740327247,
+              "mean_i_hi_k_kms": 544.8084816862248,
+              "q_mol_to_hi": 0.8368638096801023,
+              "r_center_kpc": 6.324345988705787,
+              "r_inner_kpc": 6.1326991405631865,
+              "r_outer_kpc": 6.515992836848386,
+              "ring_index": 17,
+              "sector": "phi_270_315",
+              "sigma_hi_he_faceon_msun_pc2": 9.06981442301141,
+              "sigma_mol_he_faceon_msun_pc2": 7.590199451132868
+            }
+          ]
+        }
+      },
+      "phi_315_360": {
+        "eligible_ring_count": 24,
+        "phi_center_deg": 337.5,
+        "score": {
+          "c_slope_q_per_kpc": -1.2627107577488956,
+          "crossing_ring_pair": [
+            16,
+            17
+          ],
+          "selected_rows": [
+            {
+              "co_annular_snr": 10.311412017688134,
+              "co_pixel_count": 398,
+              "co_sigma_mean_k_kms": 0.17085354048013862,
+              "eligible": true,
+              "f_sigma": 0.534352453298455,
+              "hi_pixel_count": 705,
+              "mean_i_co21_k_kms": 1.7617412505714676,
+              "mean_i_hi_k_kms": 517.5882355218812,
+              "q_mol_to_hi": 1.1475470172313529,
+              "r_center_kpc": 5.1744648998501885,
+              "r_inner_kpc": 4.982818051707589,
+              "r_outer_kpc": 5.366111747992788,
+              "ring_index": 14,
+              "sector": "phi_315_360",
+              "sigma_hi_he_faceon_msun_pc2": 8.616659618051024,
+              "sigma_mol_he_faceon_msun_pc2": 9.8880220431923
+            },
+            {
+              "co_annular_snr": 8.98739197933412,
+              "co_pixel_count": 430,
+              "co_sigma_mean_k_kms": 0.1597281026403035,
+              "eligible": true,
+              "f_sigma": 0.5004878393591974,
+              "hi_pixel_count": 765,
+              "mean_i_co21_k_kms": 1.4355390685437206,
+              "mean_i_hi_k_kms": 483.03690616638426,
+              "q_mol_to_hi": 1.0019532631941195,
+              "r_center_kpc": 5.557758596135388,
+              "r_inner_kpc": 5.366111747992788,
+              "r_outer_kpc": 5.749405444277987,
+              "ring_index": 15,
+              "sector": "phi_315_360",
+              "sigma_hi_he_faceon_msun_pc2": 8.041459055180223,
+              "sigma_mol_he_faceon_msun_pc2": 8.057166141179724
+            },
+            {
+              "co_annular_snr": 12.425816061283713,
+              "co_pixel_count": 459,
+              "co_sigma_mean_k_kms": 0.16180407971143376,
+              "eligible": true,
+              "f_sigma": 0.5584782138288239,
+              "hi_pixel_count": 810,
+              "mean_i_co21_k_kms": 2.010547732459564,
+              "mean_i_hi_k_kms": 535.8867903789923,
+              "q_mol_to_hi": 1.2648938995103276,
+              "r_center_kpc": 5.941052292420586,
+              "r_inner_kpc": 5.749405444277987,
+              "r_outer_kpc": 6.1326991405631865,
+              "ring_index": 16,
+              "sector": "phi_315_360",
+              "sigma_hi_he_faceon_msun_pc2": 8.92128868008328,
+              "sigma_mol_he_faceon_msun_pc2": 11.284483627207882
+            },
+            {
+              "co_annular_snr": 8.458242602698359,
+              "co_pixel_count": 489,
+              "co_sigma_mean_k_kms": 0.1401098574168365,
+              "eligible": true,
+              "f_sigma": 0.4384876802543979,
+              "hi_pixel_count": 874,
+              "mean_i_co21_k_kms": 1.1850831650610791,
+              "mean_i_hi_k_kms": 511.63881415107664,
+              "q_mol_to_hi": 0.7809048258336673,
+              "r_center_kpc": 6.324345988705787,
+              "r_inner_kpc": 6.1326991405631865,
+              "r_outer_kpc": 6.515992836848386,
+              "ring_index": 17,
+              "sector": "phi_315_360",
+              "sigma_hi_he_faceon_msun_pc2": 8.517615367509102,
+              "sigma_mol_he_faceon_msun_pc2": 6.651446945082863
+            }
+          ]
+        }
+      }
+    }
+  },
+  "protocol_sha256": "8116078cb6d70ce7a51358a93c2cf60833bca22206d29017d74be6e825995f04",
+  "ring_values_sha256": {
+    "natural": "c3b4ffaf521a4fcafec0be0de412c5ebe34cb1545ab44049d5aeca69e063c378",
+    "robust": "b4d5382e2beaf7a3960055c1da81138ff96e0da1f1a4cfee8c18e3651159a8c9"
+  },
+  "robust_crossing_pairs": {
+    "phi_000_045": [
+      17,
+      18
+    ],
+    "phi_045_090": [
+      17,
+      18
+    ],
+    "phi_090_135": [
+      13,
+      14
+    ],
+    "phi_135_180": [
+      13,
+      14
+    ],
+    "phi_180_225": [
+      17,
+      18
+    ],
+    "phi_225_270": [
+      16,
+      17
+    ],
+    "phi_270_315": [
+      16,
+      17
+    ],
+    "phi_315_360": [
+      16,
+      17
+    ]
+  },
+  "robust_state_vector": [
+    "RESOLVED_FRONT",
+    "RESOLVED_FRONT",
+    "RESOLVED_FRONT",
+    "RESOLVED_FRONT",
+    "RESOLVED_FRONT",
+    "RESOLVED_FRONT",
+    "RESOLVED_FRONT",
+    "RESOLVED_FRONT"
+  ],
+  "sector_states": {
+    "natural": {
+      "phi_000_045": {
+        "crossing_ring_pair": [
+          17,
+          18
+        ],
+        "source": "first unchanged four-row resolved crossing",
+        "state": "RESOLVED_FRONT"
+      },
+      "phi_045_090": {
+        "crossing_ring_pair": [
+          17,
+          18
+        ],
+        "source": "first unchanged four-row resolved crossing",
+        "state": "RESOLVED_FRONT"
+      },
+      "phi_090_135": {
+        "crossing_ring_pair": [
+          13,
+          14
+        ],
+        "source": "first unchanged four-row resolved crossing",
+        "state": "RESOLVED_FRONT"
+      },
+      "phi_135_180": {
+        "crossing_ring_pair": [
+          14,
+          15
+        ],
+        "source": "first unchanged four-row resolved crossing",
+        "state": "RESOLVED_FRONT"
+      },
+      "phi_180_225": {
+        "crossing_ring_pair": [
+          17,
+          18
+        ],
+        "source": "first unchanged four-row resolved crossing",
+        "state": "RESOLVED_FRONT"
+      },
+      "phi_225_270": {
+        "crossing_ring_pair": [
+          16,
+          17
+        ],
+        "source": "first unchanged four-row resolved crossing",
+        "state": "RESOLVED_FRONT"
+      },
+      "phi_270_315": {
+        "crossing_ring_pair": [
+          16,
+          17
+        ],
+        "source": "first unchanged four-row resolved crossing",
+        "state": "RESOLVED_FRONT"
+      },
+      "phi_315_360": {
+        "crossing_ring_pair": [
+          16,
+          17
+        ],
+        "source": "first unchanged four-row resolved crossing",
+        "state": "RESOLVED_FRONT"
+      }
+    },
+    "robust": {
+      "phi_000_045": {
+        "crossing_ring_pair": [
+          17,
+          18
+        ],
+        "source": "first unchanged four-row resolved crossing",
+        "state": "RESOLVED_FRONT"
+      },
+      "phi_045_090": {
+        "crossing_ring_pair": [
+          17,
+          18
+        ],
+        "source": "first unchanged four-row resolved crossing",
+        "state": "RESOLVED_FRONT"
+      },
+      "phi_090_135": {
+        "crossing_ring_pair": [
+          13,
+          14
+        ],
+        "source": "first unchanged four-row resolved crossing",
+        "state": "RESOLVED_FRONT"
+      },
+      "phi_135_180": {
+        "crossing_ring_pair": [
+          13,
+          14
+        ],
+        "source": "first unchanged four-row resolved crossing",
+        "state": "RESOLVED_FRONT"
+      },
+      "phi_180_225": {
+        "crossing_ring_pair": [
+          17,
+          18
+        ],
+        "source": "first unchanged four-row resolved crossing",
+        "state": "RESOLVED_FRONT"
+      },
+      "phi_225_270": {
+        "crossing_ring_pair": [
+          16,
+          17
+        ],
+        "source": "first unchanged four-row resolved crossing",
+        "state": "RESOLVED_FRONT"
+      },
+      "phi_270_315": {
+        "crossing_ring_pair": [
+          16,
+          17
+        ],
+        "source": "first unchanged four-row resolved crossing",
+        "state": "RESOLVED_FRONT"
+      },
+      "phi_315_360": {
+        "crossing_ring_pair": [
+          16,
+          17
+        ],
+        "source": "first unchanged four-row resolved crossing",
+        "state": "RESOLVED_FRONT"
+      }
+    }
+  },
+  "smoothing": {
+    "co": {
+      "convolution_fwhm_arcsec": [
+        0.2937877213844591,
+        0.2937877213844591,
+        0.0
+      ],
+      "pixel_arcsec": 2.0000016,
+      "source_beam_arcsec": [
+        13.396779044784001,
+        13.396779044784001,
+        0.0
+      ],
+      "uncertainty_operator": "squared-kernel independent-variance propagation"
+    },
+    "natural": {
+      "convolution_fwhm_arcsec": [
+        11.960225133332566,
+        12.170851431251636,
+        6.6
+      ],
+      "kelvin_per_jy_beam": 17879.185560176134,
+      "pixel_arcsec": 1.50000003648,
+      "source_beam_arcsec": [
+        6.0426,
+        5.60628,
+        6.6
+      ]
+    },
+    "robust": {
+      "convolution_fwhm_arcsec": [
+        12.45920642859729,
+        12.618079529246913,
+        1.15
+      ],
+      "kelvin_per_jy_beam": 27225.300711967597,
+      "pixel_arcsec": 1.50000003648,
+      "source_beam_arcsec": [
+        4.93236,
+        4.51044,
+        1.15
+      ]
+    }
+  },
+  "source_metadata_sha256": "6178483d593c18368c81da822a2c5f6b58d894cb7351de3c97610debde26dddc",
+  "source_sha256": {
+    "NGC_6946_NA_MOM0_THINGS.FITS": "cdf3731514960e428edd0a700a4844319cd4322d64fd4cbfad476ceabdb17652",
+    "NGC_6946_RO_MOM0_THINGS.FITS": "6d14eadba12e4871f48afc3b20cbd9485f8a2687fa26593ea2ff73af29f948d4",
+    "ngc6946_heracles_emom0.fits.gz": "80fe57e3904da7d8b6394bda771bef9e095a9a97e4ced8aa91e15e31aaf7585c",
+    "ngc6946_heracles_mom0.fits.gz": "c94e1907d231748a6cb5487f310f9f5431f9552f38d888a86f2728d20aa707fc"
+  },
+  "state_counts": {
+    "natural": {
+      "AMBIGUOUS_CENSORED_FRONT": 0,
+      "LEFT_CENSORED_FRONT": 0,
+      "NO_FRONT": 0,
+      "RESOLVED_FRONT": 8
+    },
+    "robust": {
+      "AMBIGUOUS_CENSORED_FRONT": 0,
+      "LEFT_CENSORED_FRONT": 0,
+      "NO_FRONT": 0,
+      "RESOLVED_FRONT": 8
+    }
+  },
+  "target": "NGC6946",
+  "theory_id": "STAGE_E2_CONTINUOUS_FRONT_SHEET_TRANSPORT_V150",
+  "theory_lineage_status": "ACTIVE",
+  "thread_status": "ACTIVE"
+}

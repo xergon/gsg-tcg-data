@@ -1,0 +1,62 @@
+{
+  "created_utc": "2026-07-24T06:38:00Z",
+  "output_label": "EMIT_VALUES",
+  "theory_id": "STAGE_E2_CONTINUOUS_FRONT_SHEET_TRANSPORT_V150",
+  "target": "NGC6946",
+  "bold_leap": "The transferable conversion object is a continuous azimuthal q=1 front sheet whose radius field remains beam-local, ordered, and unbiased across natural and robust H I visibility weighting.",
+  "selection_freeze": "TARGET_SELECTION_FREEZE.json",
+  "source_metadata_freeze": "SOURCE_METADATA_FREEZE.json",
+  "mechanism": "Visibility weighting perturbs the sampled molecular-to-atomic ratio q inside one synthesized support element, but a persistent physical conversion isocontour preserves the linearly interpolated first-crossing radius r_star(phi) without multi-beam displacement, destroyed azimuthal order, or coherent signed radial drift.",
+  "domain_native_variables": {
+    "I_CO21": "HERACLES CO(2-1) integrated brightness, K km s^-1",
+    "sigma_I_CO21": "HERACLES integrated-brightness uncertainty, K km s^-1",
+    "I_HI_NA": "THINGS natural-weighted H I integrated brightness, K km s^-1",
+    "I_HI_RO": "THINGS robust-weighted H I integrated brightness, K km s^-1",
+    "Sigma_mol_He": "face-on molecular-plus-helium surface density, solar masses pc^-2",
+    "Sigma_HI_He": "face-on atomic-plus-helium surface density, solar masses pc^-2",
+    "q_j": "Sigma_mol_He/Sigma_HI_He in common-beam ring j, dimensionless",
+    "r_left_kpc": "center radius of the first eligible q>1 ring",
+    "r_right_kpc": "center radius of its adjacent eligible q<1 ring",
+    "r_star_kpc": "linear q=1 crossing radius r_left+(q_left-1)/(q_left-q_right)*(r_right-r_left)",
+    "delta_phi": "(r_star_robust-r_star_natural)/common_beam_kpc",
+    "rho_front": "Spearman correlation of the eight natural and robust r_star fields"
+  },
+  "geometry": {
+    "authority": "Walter et al. 2008 THINGS table 1 local frozen extraction",
+    "center_ra_deg": 308.7175,
+    "center_dec_deg": 60.153888888888886,
+    "position_angle_deg": 243.0,
+    "inclination_deg": 33.0,
+    "distance_mpc": 5.9
+  },
+  "solver_conventions": {
+    "common_beam_arcsec": 13.4,
+    "common_beam_kpc": 0.38329369628519916,
+    "common_beam_operator": "Convert each THINGS map from Jy beam^-1 m s^-1 to K km s^-1 at its own clean beam, then normalized-convolve CO, CO uncertainty, and both H I maps to the frozen circular beam.",
+    "co_uncertainty": "Propagate independent CO variance with the squared convolution kernel and identical finite-support normalization.",
+    "annulus_width": "one 13.4-arcsec circular common-beam FWHM",
+    "sectors": "eight fixed deprojected 45-degree sectors phi=[0,45),...,[315,360), measured from the frozen position angle",
+    "molecular_conversion": "Sigma_mol_He = I_CO21 * 4.35 / 0.65 * cos(inclination)",
+    "atomic_conversion": "Sigma_HI_He = I_HI * (1.36*1.823e18/1.249e20) * cos(inclination)",
+    "eligibility": "finite positive convolved CO with annular mean SNR at least 3 and finite positive normalized-convolved H I brightness",
+    "first_crossing": "Use the smallest ring index j with four consecutive eligible rows ending at j, q[j-1]>1, q[j]<1, and negative adjacent q slope; if absent, permit only one eligible strict crossing ending at ring 2 or 3; otherwise no valid V150 interpolation.",
+    "interpolation": "Linear interpolation in q between the two frozen first-pair ring centers.",
+    "weighting_primary": "THINGS natural",
+    "weighting_adversary": "THINGS robust",
+    "sector_order": "phi_000_045 through phi_315_360",
+    "no_retuning": "No target, source, center, geometry, beam, annulus, sector, conversion, eligibility, q threshold, pair, smoothing, interpolation, deletion, or tolerance may change after this protocol hash."
+  },
+  "risky_predictions": [
+    "P150-P1: all eight sectors have valid natural and robust first-pair q=1 interpolations.",
+    "P150-P2: maximum absolute natural-versus-robust normalized front-radius shift is at most one common-beam FWHM.",
+    "P150-P3: at least six of eight sectors and the median absolute shift are within 0.25 common-beam FWHM.",
+    "P150-P4: natural-versus-robust front-radius Spearman rho is at least 0.90 and absolute median signed shift is at most 0.15 beam."
+  ],
+  "orthodox_competitor": "Weighting-dependent masking, line-of-sight structure, shared visibility noise, and CO support need not preserve a continuous front sheet and may yield missing crossings, multi-beam shifts, lost ordering, or coherent signed bias.",
+  "fresh_kill_condition": "Kill exact V150 if any sector lacks a valid first-pair interpolation, maximum absolute shift exceeds 1.0 beam, fewer than six sectors or the median fail the 0.25-beam concentration gate, Spearman rho is below 0.90, or absolute median signed shift exceeds 0.15 beam. No tolerance, pair, sector, source, or geometry retune after outcome access.",
+  "known_values_boundary": "Earlier NGC6946 lanes opened direct Leroy radial gas-source values, radial sign/order statistics, and other galaxy-level observables. No common-beam HERACLES-plus-THINGS natural/robust eight-sector V150 profiles or continuous front radii were computed or inspected before this protocol.",
+  "claim_boundary": "Prospective only for the exact V150 continuous front-sheet observable. Conservative DTE cross-weighting test using shared THINGS visibilities; not galaxy-blind, not an independent telescope-family replication, and no population, causal-mechanism, gravity, dark-sector, TCG, TEC, SPEC, promotion, paper, send, contact, or discovery claim.",
+  "next_execution_checkpoint": "Hash this protocol, selection, source metadata, measurement solver, V150 solver, and independent verifier; compile without opening values; then execute once and kill exact V150 on any failed gate.",
+  "thread_status": "ACTIVE",
+  "theory_lineage_status": "ACTIVE"
+}

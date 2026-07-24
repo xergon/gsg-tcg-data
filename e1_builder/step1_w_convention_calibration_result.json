@@ -1,0 +1,85 @@
+{
+  "conventions": {
+    "LINEAR": {
+      "galaxy_set_identical": true,
+      "max_abs_diff__A_eff": 4.995413824815387e-07,
+      "max_abs_diff__R95": 4.89387183222334e-07,
+      "max_abs_diff__R_IPR": 4.970880680410517e-07,
+      "max_abs_diff__T_RAR_resid": 0.019960856369334146,
+      "max_abs_diff__X_A": 4.971234787154444e-07,
+      "max_abs_diff__logSBeff": 4.943022329229052e-07,
+      "max_abs_diff__logVflat": 4.881935580236529e-07,
+      "max_abs_diff__n_rows_strictW": 1.0,
+      "n_common_with_delivered": 74,
+      "n_galaxies": 74,
+      "per_radius_rows_total": 1968,
+      "strictW_rows_total": 1329,
+      "target_F571-8": {
+        "T_RAR_delivered": 0.097314,
+        "T_RAR_rebuilt": 0.07735314363066585,
+        "X_A_delivered": 0.377001,
+        "X_A_rebuilt": 0.37700119077993477,
+        "n_rows_strictW_delivered": 10,
+        "n_rows_strictW_rebuilt": 11
+      },
+      "target_NGC2403": {
+        "T_RAR_delivered": 0.059234,
+        "T_RAR_rebuilt": 0.059234432412657224,
+        "X_A_delivered": 0.531583,
+        "X_A_rebuilt": 0.5315825091868089,
+        "n_rows_strictW_delivered": 67,
+        "n_rows_strictW_rebuilt": 67
+      },
+      "target_NGC3198": {
+        "T_RAR_delivered": -0.006937,
+        "T_RAR_rebuilt": -0.006936558383552513,
+        "X_A_delivered": 0.916247,
+        "X_A_rebuilt": 0.9162469170306561,
+        "n_rows_strictW_delivered": 40,
+        "n_rows_strictW_rebuilt": 40
+      }
+    },
+    "LOGLOG": {
+      "galaxy_set_identical": true,
+      "max_abs_diff__A_eff": 4.995413824815387e-07,
+      "max_abs_diff__R95": 4.89387183222334e-07,
+      "max_abs_diff__R_IPR": 4.970880680410517e-07,
+      "max_abs_diff__T_RAR_resid": 4.911515270322742e-07,
+      "max_abs_diff__X_A": 4.971234787154444e-07,
+      "max_abs_diff__logSBeff": 4.943022329229052e-07,
+      "max_abs_diff__logVflat": 4.881935580236529e-07,
+      "max_abs_diff__n_rows_strictW": 0.0,
+      "n_common_with_delivered": 74,
+      "n_galaxies": 74,
+      "per_radius_rows_total": 1968,
+      "strictW_rows_total": 1328,
+      "target_F571-8": {
+        "T_RAR_delivered": 0.097314,
+        "T_RAR_rebuilt": 0.09731385284566901,
+        "X_A_delivered": 0.377001,
+        "X_A_rebuilt": 0.37700119077993477,
+        "n_rows_strictW_delivered": 10,
+        "n_rows_strictW_rebuilt": 10
+      },
+      "target_NGC2403": {
+        "T_RAR_delivered": 0.059234,
+        "T_RAR_rebuilt": 0.059234432412657224,
+        "X_A_delivered": 0.531583,
+        "X_A_rebuilt": 0.5315825091868089,
+        "n_rows_strictW_delivered": 67,
+        "n_rows_strictW_rebuilt": 67
+      },
+      "target_NGC3198": {
+        "T_RAR_delivered": -0.006937,
+        "T_RAR_rebuilt": -0.006936558383552513,
+        "X_A_delivered": 0.916247,
+        "X_A_rebuilt": 0.9162469170306561,
+        "n_rows_strictW_delivered": 40,
+        "n_rows_strictW_rebuilt": 40
+      }
+    }
+  },
+  "delivered_file": "/Users/resorb/Documents/Claude Sessions/Transaction Calculus/data/sparc_derived_tables_2026_07_22/C_Triangle_E1_74gal_design_matrix.csv",
+  "delivered_rows": 74,
+  "utc": "2026-07-22T14:21:14+00:00"
+}

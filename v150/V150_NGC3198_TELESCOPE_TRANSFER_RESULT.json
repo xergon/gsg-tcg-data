@@ -1,0 +1,65 @@
+{
+  "claim_boundary": "Conservative DTE test of one galaxy and one independent H I telescope-family transfer. Not a population result, mechanism proof, gravity, dark-sector, TCG, TEC, SPEC, promotion, paper, send, contact, or discovery claim.",
+  "created_utc": "2026-07-24T07:28:00Z",
+  "credit": "Prospective only for transfer to unopened WSRT HALOGAS pixels. The NGC3198 VLA baseline and prior V149 sector states were known; this is not galaxy-blind.",
+  "exact_v150_disposition": "V150_SURVIVES_FIRST_VLA_WSRT_TELESCOPE_TRANSFER_NGC3198",
+  "front_radii_kpc": {
+    "natural": {
+      "phi_000_045": 1.9777092293974143,
+      "phi_045_090": 3.154794436497518,
+      "phi_090_135": 2.9425168953257366,
+      "phi_135_180": 1.8531780494314425,
+      "phi_180_225": 1.7940630205056887,
+      "phi_225_270": 3.057124186174101,
+      "phi_270_315": 3.0308825096885395,
+      "phi_315_360": 1.8910434045922544
+    },
+    "wsrt": {
+      "phi_000_045": 1.8691244523443606,
+      "phi_045_090": 3.120869739817109,
+      "phi_090_135": 2.941308378696621,
+      "phi_135_180": 1.857333982992028,
+      "phi_180_225": 1.8064082482397372,
+      "phi_225_270": 3.101314142092958,
+      "phi_270_315": 3.0622306009718923,
+      "phi_315_360": 1.884786772552072
+    }
+  },
+  "gates": {
+    "P150_P1_all_eight_valid_interpolations": true,
+    "P150_P2_max_abs_shift_at_most_one_beam": true,
+    "P150_P3_concentrated_within_quarter_beam": true,
+    "P150_P4_order_and_signed_bias": true
+  },
+  "input_sha256": {
+    "measurement_result": "447d05535a04896679021881bdc965519017dd2e2b3fef846890e0e9ebe09b43",
+    "natural_table": "242b7abaaefbb0829e1333d1d3fa97e220e0d6b0ae1592ce9dd17c91c3e591ce",
+    "protocol_freeze": "b9235fc86b644c84096d9ef16c042f5976476f0d3cc3f7afcca67960202b801f",
+    "wsrt_table": "d8ac494640f3f6207013855c196917fa5addf301e0525ff088a2d8de66c40ae2"
+  },
+  "joint_pass": true,
+  "kill_condition": "Kill exact V150 if any sector lacks a valid first-pair interpolation, maximum absolute shift exceeds 1.0 beam, fewer than six sectors or the median fail the 0.25-beam concentration gate, Spearman rho is below 0.90, or absolute median signed shift exceeds 0.15 beam. No tolerance, pair, sector, source, or geometry retune after outcome access.",
+  "metrics": {
+    "max_abs_shift_beam": 0.08587231807465791,
+    "median_abs_shift_beam": 0.01727703776822495,
+    "median_signed_shift_beam": 0.0011654558360153265,
+    "spearman_rho_front": 0.9761904761904763,
+    "valid_interpolations": 8,
+    "within_quarter_beam_count": 8
+  },
+  "normalized_shifts_by_sector": {
+    "phi_000_045": -0.08587231807465791,
+    "phi_045_090": -0.02682873624636193,
+    "phi_090_135": -0.0009557336414037279,
+    "phi_135_180": 0.0032866453134343812,
+    "phi_180_225": 0.009763001329038443,
+    "phi_225_270": 0.034946831898132094,
+    "phi_270_315": 0.024791074207411463,
+    "phi_315_360": -0.004947944925725055
+  },
+  "output_label": "EMIT_VALUES",
+  "target": "NGC3198",
+  "theory_id": "STAGE_E2_CONTINUOUS_FRONT_SHEET_TRANSPORT_V150",
+  "theory_lineage_status": "ACTIVE",
+  "thread_status": "ACTIVE"
+}

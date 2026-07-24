@@ -1,0 +1,65 @@
+{
+  "claim_boundary": "Conservative DTE test of a second galaxy and a second independent H I telescope-family transfer. Not a population result, mechanism proof, gravity, dark-sector, TCG, TEC, SPEC, promotion, paper, send, contact, or discovery claim.",
+  "created_utc": "2026-07-24T07:53:00Z",
+  "credit": "Prospective only for the exact V150 VLA-to-WSRT observable: neither common-beam sector table nor any V150 metric existed before freeze. Unrelated earlier NGC2403 outcomes were known, so this is not galaxy-blind.",
+  "exact_v150_disposition": "KILL_EXACT_V150_ON_VLA_WSRT_TELESCOPE_TRANSFER_NGC2403__THEORY_EVOLUTION_REQUIRED",
+  "front_radii_kpc": {
+    "natural": {
+      "phi_000_045": 0.7362092188121953,
+      "phi_045_090": 0.988955850118472,
+      "phi_090_135": 1.2140035532699163,
+      "phi_135_180": 0.7646924950141394,
+      "phi_180_225": 1.492843314565357,
+      "phi_225_270": 0.21116095611164387,
+      "phi_270_315": 0.8778780860616304,
+      "phi_315_360": 0.956247768337094
+    },
+    "wsrt": {
+      "phi_000_045": 0.708251035246774,
+      "phi_045_090": 0.9152113639482817,
+      "phi_090_135": 0.8298327793690922,
+      "phi_135_180": 0.6763710081517466,
+      "phi_180_225": 0.8732050872749771,
+      "phi_225_270": null,
+      "phi_270_315": 0.8047020127764168,
+      "phi_315_360": 0.8757708371796227
+    }
+  },
+  "gates": {
+    "P150_P1_all_eight_valid_interpolations": false,
+    "P150_P2_max_abs_shift_at_most_one_beam": false,
+    "P150_P3_concentrated_within_quarter_beam": false,
+    "P150_P4_order_and_signed_bias": false
+  },
+  "input_sha256": {
+    "measurement_result": "9c84314122b12806d6b81527475483277a2aecdb08a79b8f6b0e213a5cb1ae29",
+    "natural_table": "0a47e9fbd49881e338c4c40959cbff6ec494896fabedb3a59d9eab4082ac1671",
+    "protocol_freeze": "5b5c7f06b5af9d36aae2a60b763a7d8a21fdbd3d46ac75f3e2155276c150b579",
+    "wsrt_table": "ebf03daf1a756de28600b357a2f7d0b8989e97d019e77058173437ff6655f849"
+  },
+  "joint_pass": false,
+  "kill_condition": "Kill exact V150 if any sector lacks a valid first-pair interpolation, maximum absolute shift exceeds 1.0 beam, fewer than six sectors or the median fail the 0.25-beam concentration gate, Spearman rho is below 0.90, or absolute median signed shift exceeds 0.15 beam. No tolerance, pair, sector, source, or geometry retune after outcome access.",
+  "metrics": {
+    "max_abs_shift_beam": 2.6276636286049437,
+    "median_abs_shift_beam": 0.34127382015947244,
+    "median_signed_shift_beam": -0.34127382015947244,
+    "spearman_rho_front": null,
+    "valid_interpolations": 7,
+    "within_quarter_beam_count": 1
+  },
+  "normalized_shifts_by_sector": {
+    "phi_000_045": -0.11856063561147955,
+    "phi_045_090": -0.3127239340395964,
+    "phi_090_135": -1.6291305560125524,
+    "phi_135_180": -0.3745397692254713,
+    "phi_180_225": -2.6276636286049437,
+    "phi_225_270": null,
+    "phi_270_315": -0.31031349872734176,
+    "phi_315_360": -0.34127382015947244
+  },
+  "output_label": "EMIT_VALUES",
+  "target": "NGC2403",
+  "theory_id": "STAGE_E2_CONTINUOUS_FRONT_SHEET_TRANSPORT_V150",
+  "theory_lineage_status": "ACTIVE",
+  "thread_status": "ACTIVE"
+}

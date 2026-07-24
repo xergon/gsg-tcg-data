@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-07-24T05:51:00Z",
+  "execution_status": "NOT_STARTED",
+  "continuous_front_radii_opened": false,
+  "sha256": {
+    "V149_TO_V150_THEORY_EVOLUTION_FREEZE.json": "bff8a97a1e9fa45a3bab6e0a3c309518ade9dae4df2d7712f7206658610da4b3",
+    "run_v150_continuous_front_sheet.py": "e9ad24953c2086e0e394d51e74392a2617694540cd2cf85d51df171e0e39a4fd",
+    "V149_NGC3521_TRANSFER_RESULT.json": "6011cb5bc8c97aeff0304e2f679b17a16217ebe7af9f2c26d81a361a4d6b7b45",
+    "V149_NGC3521_NATURAL_OCTANT_RING_VALUES.csv": "8290c7b6dd7cedf48965a7bae0740ecc328bc3cc90c81e085d49957d82dd7f40",
+    "V149_NGC3521_ROBUST_OCTANT_RING_VALUES.csv": "ee810be9b3d57b035615692bf64e306d6dcb8275f564a1c405a04a2f2a0aeea2",
+    "INDEPENDENT_V149_NGC3521_VERIFICATION.json": "b70a70b329006515adbdcc8356f61901cc6da98491f0c237d4fa5c7582ebb30c"
+  },
+  "solver_compile_check": "PASS_WITH_PYTHONPYCACHEPREFIX_TMP",
+  "execution_rule": "Execute the frozen continuous first-crossing interpolation and all four V150 gates once. No threshold, pair, sector, or tolerance changes.",
+  "fresh_kill_condition": "Kill exact V150 if any sector lacks a valid first-pair interpolation, max absolute shift exceeds 1.0 beam, fewer than six sectors or the median fail the 0.25-beam concentration gate, Spearman rho is below 0.90, or absolute median signed shift exceeds 0.15 beam.",
+  "thread_status": "ACTIVE",
+  "theory_lineage_status": "ACTIVE"
+}

@@ -1,0 +1,47 @@
+{
+  "created_utc": "2026-07-24T05:50:00Z",
+  "output_label": "THEORY_EVOLUTION",
+  "parent_theory_id": "STAGE_E2_CENSORED_FRONT_STATE_TRANSPORT_V149",
+  "successor_theory_id": "STAGE_E2_CONTINUOUS_FRONT_SHEET_TRANSPORT_V150",
+  "failed_claim_or_route": "Exact first crossing-ring pair identity across natural and robust THINGS weighting.",
+  "failure_signature": {
+    "target": "NGC3521",
+    "category_matches": 8,
+    "crossing_pair_matches": 7,
+    "failed_sector": "phi_180_225",
+    "natural_pair": [8, 9],
+    "robust_pair": [9, 10],
+    "failed_gate": "P149_P2_all_non_NO_FRONT_crossing_pairs_match"
+  },
+  "failed_assumption": "A physical front must remain in the same discrete common-beam ring pair under visibility reweighting.",
+  "retained_insight": "All eight sectors remain resolved fronts and seven of eight first crossing pairs are exactly invariant despite the weighting intervention.",
+  "bold_leap": "The physical object is a continuous azimuthal q=1 front sheet; a discrete ring-pair phase slip is allowed only when the interpolated sheet remains beam-local, ordered, and unbiased as a whole.",
+  "mechanism": "Natural-versus-robust weighting perturbs the sampled q profile inside one synthesized support element, moving a threshold bracket without moving the underlying molecular-to-atomic isocontour coherently. The invariant is the continuous first-crossing radius field r_star(phi), not the integer ring pair.",
+  "domain_native_variables": {
+    "r_left_kpc": "center radius of the first eligible q>1 ring",
+    "r_right_kpc": "center radius of its adjacent eligible q<1 ring",
+    "q_left": "molecular-to-atomic surface-density ratio above unity",
+    "q_right": "adjacent molecular-to-atomic ratio below unity",
+    "r_star_kpc": "linear q=1 crossing radius r_left+(q_left-1)/(q_left-q_right)*(r_right-r_left)",
+    "delta_phi": "(r_star_robust-r_star_natural)/common_beam_kpc",
+    "rho_front": "Spearman correlation of the eight natural and robust r_star fields"
+  },
+  "solver_conventions": {
+    "crossing_source": "Use each weighting's already frozen first V149 crossing pair; do not search for a friendlier crossing.",
+    "interpolation": "Linear interpolation in q between the two reported ring centers.",
+    "common_beam_kpc": 0.7366259070778288,
+    "sector_order": "phi_000_045 through phi_315_360",
+    "no_retuning": "No pair substitution, smoothing, sector deletion, q threshold change, geometry change, or tolerance change after this freeze."
+  },
+  "changed_risky_predictions": [
+    "P150-P1: all eight matched non-NO_FRONT sectors have a valid first-pair q=1 interpolation.",
+    "P150-P2: max absolute normalized front-radius shift is at most one common-beam FWHM.",
+    "P150-P3: at least six of eight sectors and the median absolute shift are within 0.25 common-beam FWHM.",
+    "P150-P4: natural-versus-robust front-radius Spearman rho is at least 0.90 and absolute median signed shift is at most 0.15 beam."
+  ],
+  "orthodox_competitor": "Weighting-dependent masking and line-of-sight structure need not preserve a continuous front sheet; they may produce multi-beam shifts, destroy azimuthal ordering, or create a coherent signed radial bias.",
+  "fresh_kill_condition": "Kill exact V150 if any sector lacks a valid first-pair interpolation, max absolute shift exceeds 1.0 beam, fewer than six sectors or the median fail the 0.25-beam concentration gate, Spearman rho is below 0.90, or absolute median signed shift exceeds 0.15 beam. No tolerance or pair may be changed after outcome access.",
+  "credit": "Retrospective same-pulse first discriminator only. V150 requires a new prospective galaxy for external credit.",
+  "thread_status": "ACTIVE",
+  "theory_lineage_status": "ACTIVE"
+}

@@ -1,0 +1,244 @@
+{
+  "T_Inc_provenance_consistency": {
+    "max_abs_dInc": 5.0,
+    "max_abs_dT": 0.0,
+    "n_compared": 9
+  },
+  "ambiguous_names": [
+    {
+      "coord_match": "UGC04305",
+      "dataset": "B_Oh2015_LITTLETHINGS_26",
+      "name_match": NaN,
+      "note": "coordinate-only match",
+      "sep_arcsec": 13.16,
+      "target": "DDO_50"
+    },
+    {
+      "coord_match": "UGC05918",
+      "dataset": "B_Oh2015_LITTLETHINGS_26",
+      "name_match": NaN,
+      "note": "coordinate-only match",
+      "sep_arcsec": 16.18,
+      "target": "DDO_87"
+    },
+    {
+      "coord_match": "UGC07559",
+      "dataset": "B_Oh2015_LITTLETHINGS_26",
+      "name_match": NaN,
+      "note": "coordinate-only match",
+      "sep_arcsec": 19.04,
+      "target": "DDO_126"
+    },
+    {
+      "coord_match": "D564-8",
+      "dataset": "B_Oh2015_LITTLETHINGS_26",
+      "name_match": NaN,
+      "note": "coordinate-only match",
+      "sep_arcsec": 6.62,
+      "target": "F564-V3"
+    },
+    {
+      "coord_match": "UGCA444",
+      "dataset": "B_Oh2015_LITTLETHINGS_26",
+      "name_match": NaN,
+      "note": "coordinate-only match",
+      "sep_arcsec": 29.8,
+      "target": "WLM"
+    },
+    {
+      "coord_match": "UGCA281",
+      "dataset": "B_Oh2015_LITTLETHINGS_26",
+      "name_match": NaN,
+      "note": "coordinate-only match",
+      "sep_arcsec": 26.98,
+      "target": "HARO_29"
+    },
+    {
+      "coord_match": "UGC07559",
+      "dataset": "B_Iorio2017_LITTLETHINGS_18entries",
+      "name_match": NaN,
+      "note": "coordinate-only match",
+      "sep_arcsec": 0.0,
+      "target": "DDO126"
+    },
+    {
+      "coord_match": "UGC04305",
+      "dataset": "B_Iorio2017_LITTLETHINGS_18entries",
+      "name_match": NaN,
+      "note": "coordinate-only match",
+      "sep_arcsec": 0.0,
+      "target": "DDO50"
+    },
+    {
+      "coord_match": "UGC05918",
+      "dataset": "B_Iorio2017_LITTLETHINGS_18entries",
+      "name_match": NaN,
+      "note": "coordinate-only match",
+      "sep_arcsec": 0.0,
+      "target": "DDO87"
+    },
+    {
+      "coord_match": "UGC04305",
+      "dataset": "C_Walter2008_THINGS_34",
+      "name_match": NaN,
+      "note": "coordinate-only match",
+      "sep_arcsec": 1.09,
+      "target": "Ho II"
+    }
+  ],
+  "buildable_columns": [
+    "Galaxy",
+    "Survey",
+    "SourceRef",
+    "overlap_E1",
+    "T",
+    "Inc"
+  ],
+  "cols": 14,
+  "e1_74_excluded": 9,
+  "e1_74_overlap_list": [
+    "NGC2403",
+    "NGC2841",
+    "NGC2903",
+    "NGC2976",
+    "NGC3198",
+    "NGC3521",
+    "NGC5055",
+    "NGC6946",
+    "NGC7331"
+  ],
+  "exclusions_total_rows_in_ledger": 61,
+  "galaxies_in": {
+    "LITTLE_THINGS": 0,
+    "THINGS": 17
+  },
+  "header": [
+    "Galaxy",
+    "Survey",
+    "SourceRef",
+    "overlap_E1",
+    "T_RAR_resid",
+    "X_A",
+    "logVflat",
+    "logSBeff",
+    "T",
+    "Inc",
+    "n_rows_strictW",
+    "A_eff",
+    "R_IPR",
+    "R95"
+  ],
+  "input_hashes": {
+    "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/phase23_external_heldout_sources_2026_07_22/B_little_things_oh2015/oh2015_table1_galaxy_properties.csv": {
+      "bytes": 2824,
+      "sha256": "a2e72262244334582e449b979562a5f098347b39de4a77a5facdaccdb47c0b94"
+    },
+    "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/phase23_external_heldout_sources_2026_07_22/C_things_littlethings/things_deblok2008_fit_headers.csv": {
+      "bytes": 23486,
+      "sha256": "16d295bf5bd7c91ef69fc7a947c351f0af712cffe21b144248ca66c690e31724"
+    },
+    "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/phase23_external_heldout_sources_2026_07_22/C_things_littlethings/things_deblok2008_massmodels_tidy.csv": {
+      "bytes": 1571518,
+      "sha256": "7ae67c1f2cc186c26977e9e8a09d3dff5853694d901ec2056fcbd23b55d8ed44"
+    },
+    "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/phase23_external_heldout_sources_2026_07_22/C_things_littlethings/walter2008_table1_things_sample.csv": {
+      "bytes": 3756,
+      "sha256": "bd37f4c952cef3d3fa8d0ac9b36a8c29f0e05164f1b3489a50405c92ad1ac239"
+    },
+    "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/phase23_external_heldout_sources_2026_07_22/_crossmatch/ambiguous_or_unmatched_names.csv": {
+      "bytes": 777,
+      "sha256": "37d445cf209e97f48e421e69331219841a097017454ca6e82627c77cb5e04651"
+    },
+    "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/phase23_external_heldout_sources_2026_07_22/_crossmatch/crossmatch_vs_SPARC_and_StageE1_74.csv": {
+      "bytes": 14319,
+      "sha256": "e477c83a0999b839e58b316998c0d5926d4bbd0d1d84cf62762b709a2136b251"
+    },
+    "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/phase23_external_heldout_sources_2026_07_22/_crossmatch/reference_stageE1_74_cohort.csv": {
+      "bytes": 710,
+      "sha256": "73f3e735b765111df2e46e497090281304f6f5bfb73414282fa2a533b04d1bdf"
+    }
+  },
+  "n_valid_rows_complete_on_all_14_columns": 0,
+  "non_e1_candidate_list": [
+    "DDO154",
+    "IC2574",
+    "NGC2366",
+    "NGC3031",
+    "NGC3621",
+    "NGC4736",
+    "NGC7793",
+    "NGC925"
+  ],
+  "non_e1_retained_as_candidates": 8,
+  "obstructions": {
+    "O1_no_36um_surface_brightness_profile": {
+      "detail": "Stage-E1 source_metrics() builds the source map as s = 0.5*SBdisk + 0.7*SBbul from the SPARC 3.6um surface-brightness profile columns. de Blok+2008's ROTMAS files carry exactly eight columns (Radius|vgas|vdisk|vbulge|vobs|err vobs|Vu|Vt) and no surface brightness of any kind; Walter+2008 Table 1 carries integrated B-band Bmag and logD25 only. No 3.6um radial profile exists anywhere in the staged external product, so R95, A_eff, R_IPR and X_A have no input.",
+      "kills": [
+        "X_A",
+        "A_eff",
+        "R_IPR",
+        "R95"
+      ]
+    },
+    "O2_stellar_velocity_carries_undeclared_per_galaxy_Upsilon_star": {
+      "detail": "Stage-E1 g_bar = (Vgas*|Vgas| + 0.5*Vdisk^2 + 0.7*Vbul^2)/R requires Vdisk/Vbul normalised to Upsilon_star = 1, which is the SPARC convention. de Blok's own README states verbatim of column 3: 'Rotation velocity of the main disk component (km/s). This includes any M/L* scaling.' The staged ISO.fix headers all record par_MD = 1.0 with err_MD = 0.0 - MD is a multiplier ON de Blok's adopted Upsilon_star, not Upsilon_star itself, and the adopted value is recorded nowhere in the staged bytes. It is also not guaranteed to be a single scalar per galaxy (de Blok's .grad / .nocol variants exist precisely because a colour-gradient Upsilon_star was used for some galaxies). Applying E1's 0.5 to an already-scaled Vdisk would double-count; un-scaling is impossible without the missing value. So E1-comparable g_bar, and therefore delta_RAR, the strict-W window and n_rows_strictW, cannot be formed.",
+      "kills": [
+        "T_RAR_resid",
+        "n_rows_strictW"
+      ]
+    },
+    "O3_no_Vflat_and_Vmax_Vlast_substitution_forbidden": {
+      "detail": "logVflat = log10(Vflat) where Vflat is SPARC's fitted flat-part rotation velocity. No de Blok or Walter product publishes Vflat. C-Triangle's binding constraint forbids substituting V_max or V_last in the primary file, which is the only thing the external rotation curves could supply. Column left null by instruction.",
+      "kills": [
+        "logVflat"
+      ]
+    },
+    "O4_no_36um_effective_surface_brightness": {
+      "detail": "logSBeff = log10(SBeff), SPARC's 3.6um effective surface brightness in Lsun/pc^2 inside Reff. The external product carries no 3.6um photometry. Walter+2008 Table 1 has B-band Bmag and logD25, from which a B-band surface brightness could be formed - a different band and a different definition, not the frozen quantity, and therefore not comparable to the in-cohort rows.",
+      "kills": [
+        "logSBeff"
+      ]
+    }
+  },
+  "per_column_nulls": {
+    "A_eff": 17,
+    "Galaxy": 0,
+    "Inc": 0,
+    "R95": 17,
+    "R_IPR": 17,
+    "SourceRef": 0,
+    "Survey": 0,
+    "T": 0,
+    "T_RAR_resid": 17,
+    "X_A": 17,
+    "logSBeff": 17,
+    "logVflat": 17,
+    "n_rows_strictW": 17,
+    "overlap_E1": 0
+  },
+  "product": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/c_triangle_ext_cmk1_2026_07_22/C_Triangle_EXT_THINGS_LITTLETHINGS_E1heldout_design_matrix.csv",
+  "product_bytes": 2204,
+  "product_sha256": "bac181aabc97220bb1fab4ee5bc02d4530b89052419c3a58c83e0827d215f2ba",
+  "rows": 17,
+  "sparc_coverage_separate_fact": {
+    "deblok17_in_sparc": 13,
+    "deblok17_in_sparc_list": [
+      "DDO154",
+      "IC2574",
+      "NGC2366",
+      "NGC2403",
+      "NGC2841",
+      "NGC2903",
+      "NGC2976",
+      "NGC3198",
+      "NGC3521",
+      "NGC5055",
+      "NGC6946",
+      "NGC7331",
+      "NGC7793"
+    ],
+    "note": "SPARC independently carries a full Rotmod decomposition for all 13 of these. No SPARC row entered the product: every populated cell in the product comes from de Blok+2008 ROTMAS or Walter+2008 VizieR J/AJ/136/2563."
+  },
+  "status": "BUILT",
+  "utc_true_date_u": "2026-07-22T14:24:24Z"
+}

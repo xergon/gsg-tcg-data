@@ -1,0 +1,87 @@
+{
+  "delivery": "i1_brouwer2021_fig3",
+  "figure": "Fig. 3 - Lensing rotation curves (KiDS-1000 GGL, 4 stellar-mass bins)",
+  "source_doi": "10.1051/0004-6361/202040108",
+  "source_paper": "Brouwer et al. 2021, A&A 650, A113 (KiDS-1000: The radial acceleration relation)",
+  "source_archive": "brouwer2021_rar.tar",
+  "source_archive_sha256": "73adc2d4e848fa0a6a43187f7b5447e749b92eaec4a795b9902b0beaf8a78733",
+  "extraction": "verbatim tar members, byte-identical, no derived product",
+  "mass_bin_limits_log10_Mstar_h70m2_Msun": [
+    8.5,
+    10.3,
+    10.6,
+    10.8,
+    11.0
+  ],
+  "esd_columns": [
+    "Radius(Mpc)",
+    "ESD_t(h70*M_sun/pc^2)",
+    "ESD_x(h70*M_sun/pc^2)",
+    "error(h70*M_sun/pc^2)",
+    "bias(1+K)",
+    "variance(e_s)",
+    "wk2",
+    "w2k2"
+  ],
+  "cov_columns": [
+    "logmstar_GL_min[m]",
+    "logmstar_GL_min[n]",
+    "Radius[i](Mpc/h70)",
+    "Radius[j](Mpc/h70)",
+    "covariance(h70*M_sun/pc^2)^2",
+    "correlation",
+    "bias(1+K[m,i])(1+K[n,j])"
+  ],
+  "covariance_structure": {
+    "format": "long/triplet listing, 7 columns",
+    "matrix_dimension": "60 x 60 (4 mass bins x 15 radial bins)",
+    "entries_present": 3600,
+    "full_or_triangular": "FULL square - all 3600 = 60^2 (m,i,n,j) entries present; a lower triangle would have 1830",
+    "symmetry_check_max_abs_C_minus_CT": 0.0,
+    "diagonal_check": "sqrt(diag) reproduces the per-file error column for all 4 bins, max relative difference 4.0e-05"
+  },
+  "license_attribution": "Published data archive accompanying Brouwer et al. 2021 (A&A 650, A113), distributed with the paper. Cite the paper (DOI 10.1051/0004-6361/202040108) when using these data.",
+  "files": {
+    "Fig-3_Lensing-rotation-curves_Massbin-1.txt": {
+      "sha256": "cd8171d248a5c660701c2fcfb5f39eea01ae57b5b9ec2bae233e5aef77e7d78e",
+      "bytes": 1760,
+      "header_lines": 1,
+      "data_rows": 15,
+      "columns": 8,
+      "gist_raw_url": "https://gist.githubusercontent.com/xergon/83cae6e94855dc6ac04f31ee3d68635a/raw/b1f79be8c24ed4dee5532b5fc71bb03b395a2922/Fig-3_Lensing-rotation-curves_Massbin-1.txt"
+    },
+    "Fig-3_Lensing-rotation-curves_Massbin-2.txt": {
+      "sha256": "279d82e4faee34041221b617f0ce9cfc97966c431616c94608b0983e60421ae7",
+      "bytes": 1762,
+      "header_lines": 1,
+      "data_rows": 15,
+      "columns": 8,
+      "gist_raw_url": "https://gist.githubusercontent.com/xergon/83cae6e94855dc6ac04f31ee3d68635a/raw/b55e77bcd32a75405401020501a1d7bb4b404175/Fig-3_Lensing-rotation-curves_Massbin-2.txt"
+    },
+    "Fig-3_Lensing-rotation-curves_Massbin-3.txt": {
+      "sha256": "88eca49e85504c1eb6ce11e09edcdda37c0903dd678f2207ed4bca4fa31f7a22",
+      "bytes": 1760,
+      "header_lines": 1,
+      "data_rows": 15,
+      "columns": 8,
+      "gist_raw_url": "https://gist.githubusercontent.com/xergon/83cae6e94855dc6ac04f31ee3d68635a/raw/340168d52b7b9faf7a7bcba210a731c46e6ffe07/Fig-3_Lensing-rotation-curves_Massbin-3.txt"
+    },
+    "Fig-3_Lensing-rotation-curves_Massbin-4.txt": {
+      "sha256": "05853565ae193347adff22f8aec58c50f80b2e22866fb9c532137c6f198a79e1",
+      "bytes": 1765,
+      "header_lines": 1,
+      "data_rows": 15,
+      "columns": 8,
+      "gist_raw_url": "https://gist.githubusercontent.com/xergon/83cae6e94855dc6ac04f31ee3d68635a/raw/03b6777e44cf669f0984e8d0d0af593f08d1bfa0/Fig-3_Lensing-rotation-curves_Massbin-4.txt"
+    },
+    "Fig-3_Lensing-rotation-curves_Massbins_covmatrix.txt": {
+      "sha256": "e2568b34578a4752c4cdc25c23cd38c896ac1c5e0477cce3fe8d7b32e4954445",
+      "bytes": 631774,
+      "header_lines": 1,
+      "data_rows": 3600,
+      "columns": 7,
+      "gist_raw_url": "https://gist.githubusercontent.com/xergon/83cae6e94855dc6ac04f31ee3d68635a/raw/e4aaa3ddf03f74af1d5d56c725a2879a33895b44/Fig-3_Lensing-rotation-curves_Massbins_covmatrix.txt"
+    }
+  },
+  "gist_html_url": "https://gist.github.com/xergon/83cae6e94855dc6ac04f31ee3d68635a"
+}

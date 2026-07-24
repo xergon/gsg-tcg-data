@@ -1,0 +1,308 @@
+{
+  "caveat": "THIS FILE DID NOT PREVIOUSLY EXIST. i2 requested the filename 'phase120_locked_beta_aeff.json' assuming Cat held such a file; a find across /Users/resorb/Documents returns no file of that name, and the only textual occurrence of the name on disk is inside i2's own thread mirror. Cat assembled this file on 2026-07-25 from frozen lane artifacts. Every value carries source_file + source_sha256 + the verbatim field name. Nothing was rounded, re-derived, or guessed.",
+  "assembled_by": "Cat (Claude Opus 5) for ChatGPT thread i2",
+  "assembled_utc": "2026-07-25",
+  "subject": "The exact stored SPARC participation-area (A_eff / IPR) beta coefficient that i2 called 'the rounded -0.30'",
+
+  "READ_THIS_FIRST": [
+    "1. There is NO artifact on disk that literally rounds a stored value and labels it '-0.30'. i2's '≈−0.30' is i2's own approximation, written in i2's heartbeat message. Cat therefore matched it to the programme's headline stored value rather than to a literal string.",
+    "2. TWO on-disk candidates are plausible. Cat SELECTED one and lists the other in full. i2 can overrule with one line.",
+    "3. A UNIT/DEFINITION TRAP: i2 wrote beta_A^kin = d(Delta_RAR^kin)/d(log10 A_eff). The stored regressor is X_A = log10(R_IPR), NOT log10(A_eff). Because R_IPR = sqrt(A_eff/pi), log10 A_eff = 2*log10 R_IPR + log10(pi), so a slope per log10 A_eff is HALF the stored slope per X_A. Cat has NOT applied this factor. See definition_trap below and decide explicitly.",
+    "4. PROGRAMME STATUS: the participation-area flagship was KILLED under its own specification on 2026-07-20/21 and ratified by Sol. The coefficient below is retained DESCRIPTIVELY ONLY. See programme_status."
+  ],
+
+  "selected_value": {
+    "beta": -0.3147082903566279,
+    "label": "Stage E1 independent reconstruction, Model C: T_RAR ~ X_A + logVflat + logSBeff + T + Inc, stellar-only, strict-W, N = 74 galaxies",
+    "regressor": "X_A",
+    "outcome": "T_RAR",
+    "sign": "NEGATIVE (sign-REVERSED against the original GSG source-gate prediction beta > 0)",
+    "n_galaxies": 74,
+    "uncertainty_and_significance": {
+      "robust_se_HC3": 0.07062982723439891,
+      "p_value_HC3_z_two_sided_normal": 8.360351249424284e-06,
+      "partial_r_controlled": -0.5551527932796285,
+      "permutation_p": 0.0001999600079984003,
+      "jackknife_negative_fraction": 1.0,
+      "jackknife_min_beta": -0.35349891734135397,
+      "jackknife_max_beta": -0.29188780085441063,
+      "bic": -141.35371234985587,
+      "bic_delta_vs_controls": -22.961280143931063,
+      "loo_rmse": 0.08654205301670244,
+      "loo_rmse_baseline": 0.10037449860376528,
+      "loo_rmse_delta_dex": 0.013832445587062842,
+      "vif_note": "max_vif=4.874 (logVflat)"
+    },
+    "source_file": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_e1_independent_reconstruction_2026_06_27/STAGE_E1_INDEPENDENT_RECONSTRUCTION_RESULTS.json",
+    "source_sha256": "57794707a95f4d45658159ee006b57bd31adca7b2bdc9f9cca95626a2444a19e",
+    "verbatim_field_path": "key_models.C_T_RAR_X_A_full_controls.beta (and .robust_se, .p_value, .partial_r, .permutation_p, .jackknife_*, .bic, .loo_*)",
+    "verbatim_model_name": "C_T_RAR_X_A_full_controls",
+    "artifact_verdict_field": "verdict = \"PASS_RECONSTRUCTION\"",
+
+    "why_this_one": [
+      "It is the value the programme's own top-level ledgers carry as THE SPARC participation-area result: LEAD_READINESS_LEDGER.json branch A1 field 'result_numbers' = 'beta_C=-0.3147, p=8.36e-06, N=74 (stellar-only strict-W, sign-REVERSED)'; SCAN_GRAVEYARD_LEDGER.json carries the same string.",
+      "It is the value that was put into i2's OWN lane brief for exactly this pincer: implementation_lanes/sparc_rar_aeff_ipr/i2_kinematics_lensing_transfer_smoketest_2026_07_03/CHATGPT_PRO_EXTENDED_PROMPT_PINCER_2026_07_03.md states verbatim 'beta_C = -0.3147082903566279 with HC3 p = 8.36e-06'. i2's '≈−0.30' is a loose recall of that number.",
+      "It is one of the three programme-designated blindness LEAK TOKENS ('-0.3147', '-0.2649', '-0.0014') named in card2_gamma_participation_realML_2026_07_21/PREREG.md — i.e. the programme treats -0.3147 as the headline participation-area coefficient that must not leak to a blind executor.",
+      "It was independently reproduced by a cleanroom re-implementation to ~13 significant figures (see independent_reproductions)."
+    ],
+    "confidence": "HIGH that this is the programme headline coefficient; MEDIUM that it is what i2 meant by 'the rounded -0.30', because -0.3147 conventionally rounds to -0.31. If i2 meant the value that literally rounds to -0.30, use alternate_candidate_A below."
+  },
+
+  "independent_reproductions_of_selected_value": [
+    {
+      "beta": -0.31470829035662806,
+      "hc3_se": 0.0706298272343773,
+      "hc3_z": -4.45574203816616,
+      "hc3_z_p_two_sided_normal": 8.360351249371099e-06,
+      "hc3_t_p_two_sided_df68": 3.201439640755259e-05,
+      "partial_r_controlled": -0.5551527932796286,
+      "model_terms": ["intercept", "X_A", "logVflat", "logSBeff", "T", "Inc"],
+      "y": "T_RAR",
+      "n": 74,
+      "df_resid": 68,
+      "r2": 0.35711629787108623,
+      "residual_std_df": 0.08157425121830536,
+      "agreement_with_selected": "abs_delta = 1.6653345369377348e-16 (artifact's own 'checks' block, tolerance 5e-13, pass=true)",
+      "source_file": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/stage_e1_cleanroom_ols_replication_no_product_no_claim_2026_07_03_0340/stage_e1_cleanroom_ols_replication_result_2026_07_03_0340.json",
+      "source_sha256": "46b491c730536e3b0fd3c6bfb988d64e0499bdbf6af0ae666f153a514b39d309",
+      "verbatim_field_path": "x_a_result.beta / x_a_result.hc3_se / x_a_result.hc3_z_p_two_sided_normal",
+      "note": "Independent cleanroom OLS re-implementation. NOTE the HC3 SE differs from the E1 artifact at the 13th digit (0.0706298272343773 vs 0.07062982723439891); the artifact's own tolerance check passes."
+    },
+    {
+      "beta": -0.31470829035662784,
+      "hc3_p": 8.360351249424941e-06,
+      "freedman_lane_permutation_p": 4.999750012499375e-05,
+      "bootstrap_negative_fraction": 1.0,
+      "jackknife_negative_fraction": 1.0,
+      "label": "hostile null audit hardening (row E1-05)",
+      "source_file": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/stage_e1_evidence_ledger_stage_e2_blocker_map_no_product_no_claim_2026_07_03_0252/sparc_stage_e1_evidence_ledger_stage_e2_blocker_map_2026_07_03_0252.json",
+      "source_sha256": "e9358dc1eac5fc0f35dedbce36fbada6b4aaa67da59489b609ee76abfe6d34be",
+      "verbatim_field_path": "row_id E1-05 -> evidence_value",
+      "verbatim_string": "beta=-0.31470829035662784; HC3_p=8.360351249424941e-06; FL_perm_p=4.999750012499375e-05; bootstrap_neg_frac=1.0; jackknife_neg_frac=1.0"
+    },
+    {
+      "beta": -0.3147082903566276,
+      "label": "Model D, X_A_perp (residual of X_A ~ logVflat + logSBeff)",
+      "robust_se": 0.07062982723440075,
+      "p_value": 8.36035124942901e-06,
+      "source_file": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_e1_independent_reconstruction_2026_06_27/STAGE_E1_INDEPENDENT_RECONSTRUCTION_RESULTS.json",
+      "source_sha256": "57794707a95f4d45658159ee006b57bd31adca7b2bdc9f9cca95626a2444a19e",
+      "verbatim_field_path": "key_models.D_T_RAR_X_A_perp_mass_sb_full_controls.beta",
+      "WARNING": "Model D is NOT independent evidence — it is algebraically the same FWL coefficient. The programme retired it: LEAD_READINESS_LEDGER.json branch A1 hostile_checklist = 'FWL/algebraic-toothlessness flagged (Model D retired; Model E=FWL reporting only)'. Do not cite D as confirmation of C."
+    }
+  ],
+
+  "definition_trap": {
+    "severity": "HIGH — factor-of-2 risk in i2's transfer test",
+    "i2_stated_quantity": "beta_A^kin = d(Delta_RAR^kin) / d(log10 A_eff)",
+    "actually_stored_quantity": "d(T_RAR) / d(X_A), where X_A = log10(R_IPR)",
+    "frozen_definition_chain_verbatim": [
+      "s(R) = 0.5 * SBdisk(R) + 0.7 * SBbul(R)",
+      "IPR = integral(s^2 dA) / (integral(s dA)^2)   [trapezoid over tabulated radii, area weight 2*pi*R]",
+      "A_eff = 1 / IPR",
+      "R_IPR = sqrt(A_eff / pi)",
+      "X_A = log10(R_IPR)"
+    ],
+    "definition_source_file": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/fp120_activation_diagnostic_2026_06_26/F_P120_FREEZE.md",
+    "definition_source_sha256": "27316539c07285268e73a811ae0c24e211d42dd1c50cce774840e40b39a9f9a4",
+    "corroborating_definition": "PHASE120_STAGE_E1_INDEPENDENT_RECONSTRUCTION_WORKER_HANDOFF.md: 'compute R95, A_eff, R_IPR, and X_A = log10(R_IPR / kpc)'; aeff_ipr_scout_results.md: 'Primary result (predictor X_A = log10 R_IPR vs residual T_i^RAR)'.",
+    "conflicting_label_found": "The i2 lane brief Cat itself wrote on 2026-07-03 (CHATGPT_PRO_EXTENDED_PROMPT_PINCER_2026_07_03.md) says 'the stellar-only participation-area residual for X_A = log A_eff'. That label is INCONSISTENT with the three frozen definition sources above. i2 may therefore have been carrying a mislabelled regressor for three weeks.",
+    "implied_conversion_NOT_APPLIED": "If i2 genuinely wants the slope per log10 A_eff, it is beta_selected / 2 = -0.15735414517831395 (exact halving of -0.3147082903566279). Cat has NOT written this as the stored value anywhere and does NOT assert it: it is a derived quantity, offered only so i2 can choose deliberately. The SAME halving would apply to the alternate candidate.",
+    "resolution": "i2 must state which regressor its lensing arm will use. NOT RESOLVED BY CAT."
+  },
+
+  "alternate_candidate_A": {
+    "beta": -0.30224809603614133,
+    "label": "Phase120 Stage C strict-W / Stage D1 hostile-null primary: T_RAR ~ X_A + logVflat + logSBeff + Hubble_T + Inc, model_role 'C+X_A', N = 74",
+    "why_it_could_be_the_right_one": "It is the ONLY on-disk beta that literally rounds to -0.30. The scout write-up describes it in words as 'partial slope -0.30'. It sits inside a block explicitly named 'frozen_values' in a decision card.",
+    "why_Cat_did_not_select_it": "No top-level ledger, no thread brief, and no blindness leak-token list carries -0.3022 as the headline number; all of them carry -0.3147. i2 was never given -0.3022.",
+    "uncertainty_and_significance": {
+      "HC3_SE": 0.06578818823798031,
+      "t_statistic": -4.594260826013292,
+      "two_sided_p": 1.9362359582068557e-05,
+      "partial_p": 7.256930466713781e-07,
+      "partial_r": -0.5389965313275785,
+      "freedman_lane_permutation_p": 9.999000099990002e-05,
+      "one_sided_p_positive": 0.999990318820209,
+      "jackknife_min": -0.3382469399827808,
+      "jackknife_max": -0.2837945717102453,
+      "nested_delta_BIC_vs_controls": -21.09414910397068,
+      "LOO_CV_delta_RMSE_by_galaxy": 0.013030347613514764,
+      "VIF_XA": 19.424717579183305
+    },
+    "sources": [
+      {
+        "source_file": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/stage_d_axis_interpretation_park_2026_07_17/decision_card.json",
+        "source_sha256": "f6c46691b6a6cec42c778a877e73990e6a7f7ddc2e39e4b8bc7c67bfc88f8c54",
+        "verbatim_field_path": "frozen_values.beta_xa_t_rar",
+        "value": -0.30224809603614133
+      },
+      {
+        "source_file": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_d1_hostile_nulls_2026_06_26/stage_d_regression_table.json",
+        "source_sha256": "1cf7694cec9426f0a61ce020c8619ce34d4a66f00decf2b0052dc1082d6de034",
+        "verbatim_field_path": "record[0].beta_XA and record[0].coefficient_primary (model_role 'C+X_A', outcome 'T_RAR', predictors 'X_A+logVflat+logSBeff+Hubble_T+Inc')",
+        "value": -0.30224809603614133
+      },
+      {
+        "source_file": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_c_strictW_2026_06_26/stage_c_regression_table_strictW.json",
+        "source_sha256": "62af1ee40cbe04a088b2b7ce0095be747f226aff29da424e04907a0d702ac0d2",
+        "verbatim_field_path": "model 'T_RAR_x_X_A' -> rows[0].coefficient",
+        "value": -0.30224809603614083,
+        "FLOAT_DISAGREEMENT": "This artifact stores -0.30224809603614083 while the Stage-D1 table and the decision card store -0.30224809603614133. Difference 5.0e-16 (last-2-digit float noise, ~1.7e-15 relative). REPORTED, NOT SILENTLY PICKED. The same 1-ulp-class split appears in the HC3 SE: 0.06578818823798008 (Stage C) vs 0.06578818823798031 (Stage D1)."
+      }
+    ],
+    "companion_value_same_frozen_block": {
+      "beta_xa_t_gsg": -0.3043120035399416,
+      "verbatim_field_path": "frozen_values.beta_xa_t_gsg (same decision_card.json)",
+      "note": "This is the T_GSG mirror, not T_RAR. Also rounds to -0.30. Do NOT use it for a RAR-residual transfer test."
+    }
+  },
+
+  "rejected_candidates": [
+    {
+      "beta": -0.050145945674501716,
+      "se": 0.04247932111678188,
+      "p": 0.24169499615961648,
+      "label": "BIVARIATE (uncontrolled) OLS slope of T_RAR on X_A, N = 74",
+      "extra": "spearman_rho = -0.16525731210662717 (p = 0.15940061742500433); perm_p_onesided_beta_gt0 = 0.8786; jackknife range [-0.07224871882232957, -0.034484229832236]; dBIC = -21.05406614980774; cv_rmse_improvement_dex = 0.01295493385683559; VERDICT = 'INCONCLUSIVE'",
+      "source_file": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/aeff_ipr_scout_results.json",
+      "source_sha256": "8e1cd003755bdcfe17c1d87b3f15485e4667902345ee5f9482dfee6de8ebfd4d",
+      "verbatim_field_path": "result.beta_A / result.beta_se / result.ols_p",
+      "why_rejected": "Uncontrolled. The whole effect is a suppression effect that only appears after removing {logVflat, logSBeff, T, Inc}. Not the quantity i2 needs."
+    },
+    {
+      "beta": -0.0515,
+      "p": 0.340,
+      "label": "'The bivariate result was already beta = -0.0515, p = 0.340' — T2/Sol ruling prose",
+      "source_file": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/thread8_harvest_2026_07_21/SOL_RATIFICATION_REPLY.md",
+      "source_sha256": "fa58c371da59ce940753033da72821e126855927ec8a0c846b534a74e05263f2",
+      "why_rejected": "Bivariate, and a DIFFERENT bivariate from the scout's -0.0501 above (different sample/specification). NO FULL-PRECISION ARTIFACT EXISTS ON DISK for it — see not_found."
+    },
+    {
+      "beta": 0.0019,
+      "p": 0.977,
+      "label": "FIXED BARYONIC MASS specification: beta_Aeff at fixed M_b — the null that killed the flagship",
+      "companion": "complete-control beta = -0.0014, p = 0.905",
+      "source_file": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/thread8_harvest_2026_07_21/SOL_RATIFICATION_REPLY.md",
+      "source_sha256": "fa58c371da59ce940753033da72821e126855927ec8a0c846b534a74e05263f2",
+      "corroborating_card": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/flagship_specification_ruling_2026_07_21/SPECIFICATION_RULING_CARD.md (sha256 209ed819347519a2e9ca443a44a552a535aca22aa0072aff88d1c1c72f1e2f56)",
+      "why_rejected": "This is the NULL under the theory's own specification, not the slope i2 wants to transfer. It is nonetheless the value that killed the mechanism claim — see programme_status. NO FULL-PRECISION ARTIFACT ON DISK.",
+      "DO_NOT_CONFUSE": "stage_d_regression_table.json record[73] contains beta_proxy = 0.0019075630499859554 with two_sided_p = 0.5684363702394344 for predictor 'Rmax_over_Rd'. That is a COINCIDENTAL digit match to a completely different quantity. It is NOT the fixed-M_b beta."
+    },
+    {
+      "beta": -0.2649,
+      "p": 0.0033,
+      "label": "'The original coefficient' as quoted by T2 in the specification ruling",
+      "source_file": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/thread8_harvest_2026_07_21/SOL_RATIFICATION_REPLY.md",
+      "source_sha256": "fa58c371da59ce940753033da72821e126855927ec8a0c846b534a74e05263f2",
+      "why_rejected": "T2 thread-internal control structure, distinct from both Stage C/D and Stage E1. NO FULL-PRECISION ARTIFACT ON DISK. It is nevertheless one of the three programme leak tokens, so it is a real programme number, not a typo."
+    },
+    {
+      "beta": -0.257223163655896,
+      "p": 0.00025649689922127957,
+      "label": "C+X_A+P (X_A together with the logRd proxy), attenuation_pct_abs_beta_XA = 14.896680234128423",
+      "source_file": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_d1_hostile_nulls_2026_06_26/stage_d_regression_table.json",
+      "source_sha256": "1cf7694cec9426f0a61ce020c8619ce34d4a66f00decf2b0052dc1082d6de034",
+      "why_rejected": "Proxy-contaminated specification, not the locked one. Listed because it is directly relevant to i2's 'degraded-SPARC proxy calibration' request."
+    },
+    {
+      "beta": -0.30270863582821556,
+      "label": "T_RAR_x_X_A_F_P120 (X_A with F_P120 co-regressor), HC3_SE 0.07106870534850229, partial_p 8.432540162548981e-07",
+      "source_file": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_c_strictW_2026_06_26/stage_c_regression_table_strictW.json",
+      "source_sha256": "62af1ee40cbe04a088b2b7ce0095be747f226aff29da424e04907a0d702ac0d2",
+      "why_rejected": "Also rounds to -0.30 but adds F_P120 as a co-regressor. Not the locked single-axis specification."
+    },
+    {
+      "beta": -0.3009,
+      "beta_with_logD_control": -0.2910,
+      "label": "distance-covariance hostile check: adding logD as a covariate moves -0.3009 -> -0.2910 (r = -0.527, p = 1.4e-6)",
+      "source_file": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_c_d1_d2_hostile_review_packet_2026_06_26/CAT_HOSTILE_REVIEW_VERDICT.md",
+      "why_rejected": "A robustness diagnostic, quoted at 4 dp in prose only. Included because it is the strongest orthodox-artifact check on the selected axis: 'Distance does NOT explain the signal.'"
+    },
+    {
+      "gamma_family": "Round-6 Card-2 participation surface-density gamma (real M/L): all cells labelled KILLED_IN_THAT_ARM, e.g. gamma = 0.033382928858416275 (flat Upsilon, no_logMbar, a0 = 1.1141506e-10, ci95 [-0.01851672080616831, 0.0908812669584136], n_gal = 101, n_rings = 2278)",
+      "source_file": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/card2_gamma_participation_realML_2026_07_21/result_v2.json",
+      "why_rejected": "Different estimand (a surface-density gamma over rings, N = 101 galaxies), and every arm is killed. Not a beta on X_A."
+    }
+  ],
+
+  "sample_and_provenance": {
+    "n_galaxies": 74,
+    "per_radius_rows": 1968,
+    "strict_w_rows": 1328,
+    "parent_galaxies": 77,
+    "parent_per_radius_rows": 2058,
+    "raw_mass_model_galaxies": 175,
+    "raw_mass_model_rows": 3391,
+    "source_file": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_e1_independent_reconstruction_2026_06_27/STAGE_E1_INDEPENDENT_RECONSTRUCTION_RESULTS.json",
+    "source_sha256": "57794707a95f4d45658159ee006b57bd31adca7b2bdc9f9cca95626a2444a19e",
+    "verbatim_field_path": "summary.* and (for strict_w_rows / per_radius_rows) pass_conditions",
+    "galaxy_cuts_verbatim": "f_gas = 1.33*MHI / (1.33*MHI + 0.5*L[3.6]) < 0.5 ; Q <= 2 ; Inc >= 30 deg ; Vflat > 0 ; stellar-dominated, stellar-only source map (gas retained in dynamical g_bar)",
+    "per_radius_table": {
+      "path": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_e1_independent_reconstruction_2026_06_27/stage_e1_per_radius_table.csv",
+      "sha256": "6eea832b7f346f1b3e51ecc5c588ae0b4e61d382f350c0edfbde1265906c99ee"
+    },
+    "galaxy_level_table": {
+      "path": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_e1_independent_reconstruction_2026_06_27/stage_e1_galaxy_level_table.csv",
+      "sha256": "dc5eecec4c911220ea0282dda6ea3c82a339ec47078e55fca31ef93f7c0ee01c",
+      "sha_provenance": "recorded as input_table_sha256 inside the cleanroom replication artifact"
+    },
+    "sparc_input_hashes_verified_by_E1": {
+      "MassModels_Lelli2016c.mrt": "9108994b12cc401b94a1768beca61c53ec354779385c9c9cc571049f3043244c",
+      "RAR.mrt": "24aa7059dab7fa44787f7c11191052489899819370f6508621674769f3b72833",
+      "RARbins.mrt": "d543cab7b720a4f14152ccc8158f7823072ce65a9c5b403d7c401b3f039a79d7",
+      "Rotmod_LTG.zip": "0a80cc90714828cc28b7dd57923576714d209f2490328c087c4a4ad607faf588",
+      "SPARC_Lelli2016c.mrt": "5aa0501f6b0d881fa579030e315e7b5b6ef561a5bd3a07472f9929c7e5728243"
+    }
+  },
+
+  "programme_status": {
+    "severity": "i2 must know this before running the transfer test",
+    "label_verbatim": "KILLED_UNDER_OWN_SPECIFICATION_SAME_DATA_TIER",
+    "ruling_date": "T2 ruled 2026-07-20; ratified by Sol 2026-07-21, NOT MODIFIED",
+    "ruling_verbatim": "The participation-area effect, as defined by the source-support theory, must be tested at fixed baryonic mass.",
+    "scope_split_verbatim": "This kills the claim, not the numerical fact",
+    "retained_label_verbatim": "XA_CONDITIONAL_RESIDUAL_ASSOCIATION_SAME_DATA_DESCRIPTIVE_ONLY",
+    "state_edit_directive": "Sol directed replacing 'COMPACTNESS_ANOMALY_SAME_DATA_ROBUST' with 'XA_CONDITIONAL_RESIDUAL_ASSOCIATION_SAME_DATA_DESCRIPTIVE_ONLY' wherever it appears.",
+    "consequence_for_i2": "The coefficient in selected_value is retained DESCRIPTIVELY ONLY. It is a multivariable conditional residual association at fixed V_flat / SB_eff / T / Inc — it is NOT established as a test of the theory's own participation-area variable, because chi_B = A_eff/(pi r_M^2) = a0*A_eff/(pi*G*M_b) puts M_b in the denominator, so the effect is defined at FIXED BARYONIC MASS and vanishes there (beta = +0.0019, p = 0.977).",
+    "also_frozen": ["PARTICIPATION_AREA_SPECIFICATION_FIXED_BARYONIC_MASS", "NO_RETREAT_TO_FIXED_DYNAMICAL_SCALE", "PARTICIPATION_AREA_FLAGSHIP_KILLED_UNDER_OWN_SPECIFICATION", "FLAGSHIP_NOT_A_SOURCE_AREA_MECHANISM_RESULT"],
+    "source_files": [
+      {"path": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/flagship_specification_ruling_2026_07_21/SPECIFICATION_RULING_CARD.md", "sha256": "209ed819347519a2e9ca443a44a552a535aca22aa0072aff88d1c1c72f1e2f56"},
+      {"path": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/thread8_harvest_2026_07_21/SOL_RATIFICATION_REPLY.md", "sha256": "fa58c371da59ce940753033da72821e126855927ec8a0c846b534a74e05263f2"}
+    ]
+  },
+
+  "interpretation_freeze_verbatim": "At fixed mass + surface brightness, more spatially-extended (large R_IPR) stellar-dominated galaxies sit BELOW the RAR (g_obs < g_RAR); compact ones sit above. The GSG source-gate predicted the reverse (compact = less boost = below RAR). Source: aeff_ipr_scout_results.md.",
+
+  "not_found": [
+    "NOT FOUND: any file named phase120_locked_beta_aeff.json (or phase120_beta_aeff.json) anywhere under /Users/resorb/Documents.",
+    "NOT FOUND: full stored precision for beta = -0.2649 (p = 0.0033). Exists only as 4-decimal prose in SOL_RATIFICATION_REPLY.md and as a leak token in card2 PREREG.md. No numeric artifact.",
+    "NOT FOUND: full stored precision for the fixed-baryonic-mass beta = +0.0019 (p = 0.977) and the complete-control beta = -0.0014 (p = 0.905). T2 computed these inside its own thread; only 4-decimal prose reached disk.",
+    "NOT FOUND: full stored precision for the bivariate beta = -0.0515 (p = 0.340) quoted by T2. The on-disk scout bivariate is a DIFFERENT number: -0.050145945674501716 (p = 0.24169499615961648).",
+    "NOT FOUND: any artifact that states a slope per log10(A_eff) rather than per X_A = log10(R_IPR). The factor-2 conversion in definition_trap is arithmetic, not a stored value.",
+    "NOT FOUND: any artifact labelling a stored coefficient as '-0.30'. The string '-0.30' appears only as prose rounding in aeff_ipr_scout_results.md ('partial slope -0.30')."
+  ],
+
+  "artifacts_consulted": [
+    "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_e1_independent_reconstruction_2026_06_27/STAGE_E1_INDEPENDENT_RECONSTRUCTION_RESULTS.json",
+    "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/stage_e1_cleanroom_ols_replication_no_product_no_claim_2026_07_03_0340/stage_e1_cleanroom_ols_replication_result_2026_07_03_0340.json",
+    "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/stage_e1_evidence_ledger_stage_e2_blocker_map_no_product_no_claim_2026_07_03_0252/sparc_stage_e1_evidence_ledger_stage_e2_blocker_map_2026_07_03_0252.json",
+    "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_c_strictW_2026_06_26/stage_c_regression_table_strictW.json",
+    "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_c_strictW_2026_06_26/STAGE_C_F_P120_DIAGNOSTIC_STRICTW.json",
+    "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_d1_hostile_nulls_2026_06_26/stage_d_regression_table.json",
+    "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/stage_d_axis_interpretation_park_2026_07_17/decision_card.json",
+    "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/aeff_ipr_scout_results.json",
+    "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/aeff_ipr_scout_results.md",
+    "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/fp120_activation_diagnostic_2026_06_26/F_P120_FREEZE.md",
+    "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/PHASE120_STAGE_E1_INDEPENDENT_RECONSTRUCTION_WORKER_HANDOFF.md",
+    "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_c_d1_d2_hostile_review_packet_2026_06_26/CAT_HOSTILE_REVIEW_VERDICT.md",
+    "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/i2_kinematics_lensing_transfer_smoketest_2026_07_03/CHATGPT_PRO_EXTENDED_PROMPT_PINCER_2026_07_03.md",
+    "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/flagship_specification_ruling_2026_07_21/SPECIFICATION_RULING_CARD.md",
+    "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/thread8_harvest_2026_07_21/SOL_RATIFICATION_REPLY.md",
+    "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/card2_gamma_participation_realML_2026_07_21/PREREG.md",
+    "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/card2_gamma_participation_realML_2026_07_21/result_v2.json",
+    "/Users/resorb/Documents/My Papers/Research Program Management/LEAD_READINESS_LEDGER.json  (sha256 7f6405e841bb1ef8fb86debdd4ff24e1fd766bebad955e538af21ceebb10407c)",
+    "/Users/resorb/Documents/My Papers/Research Program Management/SCAN_GRAVEYARD_LEDGER.json  (sha256 bc4d34625300fe27d684fbf276be79cdb95909437397e8ab6683fe15d519e8a1)",
+    "/Users/resorb/Documents/My Papers/Research Program Management/PARALLEL_LANE_STATE.json"
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "arena": "chess world-model reality (universal, model-independent)",
+  "source": "Lichess standard DB (public CC0), streamed sample",
+  "n_games": 30000,
+  "n_parsed": 35054,
+  "N_anchored_positions": 1233924,
+  "K_distinct_move_tokens": 1792,
+  "horizons": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    8,
+    12,
+    16,
+    24,
+    32
+  ],
+  "H_inf_marginal_move_entropy_nats": 6.23377,
+  "H_R_by_horizon_nats": {
+    "1": 4.722156,
+    "2": 4.608615,
+    "3": 5.280286,
+    "4": 5.173736,
+    "6": 5.392966,
+    "8": 5.540123,
+    "12": 5.748795,
+    "16": 5.912528,
+    "24": 6.141153,
+    "32": 6.291832
+  },
+  "H_R_monotone_increasing": false,
+  "I_MI_by_horizon_nats": {
+    "1": 1.564395,
+    "2": 1.727712,
+    "3": 1.103294,
+    "4": 1.254394,
+    "6": 1.110608,
+    "8": 1.029946,
+    "12": 0.935549,
+    "16": 0.865925,
+    "24": 0.76455,
+    "32": 0.685867
+  },
+  "S_by_horizon_full": {
+    "1": 1.0,
+    "2": 1.104396,
+    "3": 0.705253,
+    "4": 0.80184,
+    "6": 0.709928,
+    "8": 0.658367,
+    "12": 0.598026,
+    "16": 0.553521,
+    "24": 0.488719,
+    "32": 0.438423
+  },
+  "parity_note": "even h = same side to move as M_t (own-move persistence); odd h = opponent. Primary fit uses same-side envelope.",
+  "even_horizons": [
+    2,
+    4,
+    6,
+    8,
+    12,
+    16,
+    24,
+    32
+  ],
+  "S_sameside_anchored_at_2": {
+    "2": 1.0,
+    "4": 0.726044,
+    "6": 0.64282,
+    "8": 0.596133,
+    "12": 0.541496,
+    "16": 0.501198,
+    "24": 0.442521,
+    "32": 0.39698
+  },
+  "fit_primary_sameside": {
+    "S_inf": 0.45158831277658695,
+    "h0_plies": 3.9592818942969226,
+    "sse": 0.010226758533588454,
+    "note": "h0 = same-side de-sharpening e-fold length in plies"
+  },
+  "fit_secondary_fullseries": {
+    "S_inf": 0.4675311272802522,
+    "h0_plies": 6.669569835921283,
+    "sse": 0.05946094470484242,
+    "note": "parity-contaminated; reference only"
+  },
+  "bootstrap_primary_sameside": {
+    "n_boot_valid": 120,
+    "h0_plies_median": 3.7401801231696297,
+    "h0_plies_CI68": [
+      3.7244932912859827,
+      3.7596153673075356
+    ],
+    "S_inf_median": 0.5528022223648588,
+    "S_inf_CI68": [
+      0.5519132707715929,
+      0.5534666005801944
+    ]
+  }
+}

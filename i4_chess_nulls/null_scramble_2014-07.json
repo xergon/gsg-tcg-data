@@ -1,0 +1,91 @@
+{
+  "arena": "chess world-model reality \u2014 NULL CONTROL",
+  "mode": "scramble",
+  "source": "Lichess standard DB (public CC0), streamed sample",
+  "control_rng_seed": 20260630,
+  "n_games": 30000,
+  "n_parsed": 34806,
+  "N_anchored_positions": 1274769,
+  "K_distinct_move_tokens": 1792,
+  "horizons": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    8,
+    12,
+    16,
+    24,
+    32
+  ],
+  "keystone_band_plies": [
+    2.0,
+    8.0
+  ],
+  "H_inf_marginal_move_entropy_nats": 6.684514,
+  "H_R_by_horizon_nats": {
+    "1": 6.271762,
+    "2": 6.271314,
+    "3": 6.271167,
+    "4": 6.271932,
+    "6": 6.271753,
+    "8": 6.271581,
+    "12": 6.271086,
+    "16": 6.271204,
+    "24": 6.272319,
+    "32": 6.27238
+  },
+  "I_MI_by_horizon_nats": {
+    "1": 0.412703,
+    "2": 0.413181,
+    "3": 0.413274,
+    "4": 0.412551,
+    "6": 0.4125,
+    "8": 0.412547,
+    "12": 0.412951,
+    "16": 0.412783,
+    "24": 0.412429,
+    "32": 0.413016
+  },
+  "S_by_horizon_full": {
+    "1": 1.0,
+    "2": 1.001157,
+    "3": 1.001382,
+    "4": 0.999632,
+    "6": 0.999507,
+    "8": 0.999621,
+    "12": 1.0006,
+    "16": 1.000194,
+    "24": 0.999335,
+    "32": 1.000756
+  },
+  "S_sameside_anchored_at_2": {
+    "2": 1.0,
+    "4": 0.998476,
+    "6": 0.998352,
+    "8": 0.998466,
+    "12": 0.999444,
+    "16": 0.999038,
+    "24": 0.99818,
+    "32": 0.9996
+  },
+  "fit_primary_sameside": {
+    "S_inf": 0.8672772040831882,
+    "h0_plies": 2547.6750488696634,
+    "sse": 7.428159566004018e-06
+  },
+  "bootstrap_primary_sameside": {
+    "n_boot_valid": 120,
+    "h0_plies_median": 5495.167985749276,
+    "h0_plies_CI68": [
+      2375.9528068406153,
+      9987.746713925753
+    ]
+  },
+  "PREREG_VERDICT": {
+    "control_behaves_as_null": true,
+    "control_reproduces_keystone_band": false,
+    "interpretation": "KEYSTONE SURVIVES this control"
+  }
+}

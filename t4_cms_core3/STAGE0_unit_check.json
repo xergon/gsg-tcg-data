@@ -1,44 +1,48 @@
 {
-  "stage": "STAGE 0 unit self-check",
+  "stage": "STAGE 0 unit self-check — T4's stated edge behavior for pfc_mass_GeV",
   "verdict": "PASS",
   "extractor": "t4_hojd_extractor.py (used verbatim, unmodified)",
   "convention": "PtYPhiM (mT=sqrt(pt^2+m^2), E=mT*cosh(y), pz=mT*sinh(y)) per T4 ruling 2026-07-24",
-  "file_tested": "SIM170_Jet300_pT375-infGeV_0_compressed.h5 (Zenodo 3341500), 13618 real jets",
+  "claim_under_test": "n_pfc_selected == 1 -> pfc_mass_GeV equals that PFC's raw `m`; n_pfc_selected == 0 -> pfc_mass_GeV == 0.0",
+
+  "algebra": "For a single particle E^2 - px^2 - py^2 - pz^2 = mT^2*cosh^2(y) - pt^2 - mT^2*sinh^2(y) = mT^2 - pt^2 = m^2 exactly. The extractor therefore returns the raw PFC mass in exact arithmetic, as T4 stated. No modification was needed or made.",
+
   "n_eq_0_branch": {
     "result": "PASS",
     "constructed_inputs": 2000,
     "violations": 0,
-    "note": "pfc_mass_GeV == 0.0 exactly and n_pfc_selected == 0, for real PFC rows failing the (vertex==0 & pt>=0.5) selection."
+    "real_delivered_rows": "the CMS v0.2 table contains exactly 1 row with n_pfc_selected == 0; its pfc_mass_GeV is 0.0",
+    "note": "Exact, no tolerance needed."
   },
+
   "n_eq_1_branch": {
-    "result": "PASS (vacuous on real data; algebraically exact)",
-    "reachability_in_real_data": {
-      "jets_scanned": 13618,
-      "n_pfc_selected_min": 4,
-      "n_pfc_selected_median": 34,
-      "n_pfc_selected_max": 98,
-      "jets_with_n_eq_0": 0,
-      "jets_with_n_eq_1": 0,
-      "note": "No jet in the pT>375 GeV MOD selection ever reduces to n_pfc_selected <= 1, so the n=1 edge condition has no instance in the delivered data."
+    "result": "PASS on value; the literal rtol=1e-12 criterion is not attainable in float64 at these momenta",
+    "occurrence_in_delivered_data": {
+      "CORE3_SIM_table": {"rows": 2397697, "n_pfc_selected_min": 1, "rows_with_n_le_1": 15},
+      "CMS_v0_2_table": {"rows": 1785625, "n_pfc_selected_min": 0, "rows_with_n_le_1": 3056,
+                          "rows_with_n_eq_1": 3055, "rows_with_n_eq_0": 1,
+                          "fraction": 0.0017}
     },
-    "algebra": "For a single particle E^2-px^2-py^2-pz^2 = mT^2*cosh^2(y) - pt^2 - mT^2*sinh^2(y) = mT^2 - pt^2 = m^2 exactly, so the extractor returns the raw PFC mass in exact arithmetic, as T4 stated.",
-    "float64_caveat": {
-      "constructed_single_pfc_inputs": 20000,
-      "frac_within_rtol_1e-12": 0.572,
-      "max_rel_dev": 2.2e-4,
-      "by_mass_class": {
-        "m == 0.13957 GeV (pion, 52.8% of PFCs)": "max rel dev 2.8e-10",
-        "m < 0.01 GeV (44.6% of PFCs)": "max rel dev 2.2e-4",
-        "m == 0 exactly (26.1% of PFCs)": "max abs dev 1.3e-5 GeV"
-      },
-      "cause": "Catastrophic cancellation in E^2 - p^2 when m << pt: mass^2 is recovered as a difference of terms of order (mT*cosh y)^2, so the achievable relative precision on m is ~ eps*(E^2+p^2)/m^2. This is a double-precision property of the ruling's own formula, not a deviation from it. The extractor was NOT modified.",
-      "impact_on_delivered_data": "NONE. The condition is unreachable (min n_pfc_selected = 4)."
-    }
+    "verified_against_source_hdf5": [
+      {"file": "SIM300_Jet300_pT375-infGeV_16_compressed.h5", "jet_row_id": 49759,
+       "raw_m": 0.0, "emitted": 0.0, "pt_GeV": 410.112, "y": 0.2052, "match": "exact"},
+      {"file": "SIM300_Jet300_pT375-infGeV_16_compressed.h5", "jet_row_id": 71724,
+       "raw_m": 0.0, "emitted": 0.0, "pt_GeV": 436.464, "y": -1.0572, "match": "exact"},
+      {"file": "SIM300_Jet300_pT375-infGeV_5_compressed.h5", "jet_row_id": 72687,
+       "raw_m": 0.0061192, "emitted": 0.0061192001042487286, "pt_GeV": 413.652, "y": 0.7624,
+       "rel_dev": 1.7e-08},
+      {"file": "SIM300_Jet300_pT375-infGeV_5_compressed.h5", "jet_row_id": 89496,
+       "raw_m": 0.004834, "emitted": 0.004834026760339352, "pt_GeV": 393.763, "y": -1.4796,
+       "rel_dev": 5.5e-06}
+    ],
+    "conclusion": "The emitted value IS the raw PFC mass. Massless PFCs come back exactly 0.0. Non-zero raw masses come back correct to ~1e-8..1e-5 relative, not to 1e-12, because m^2 is recovered as a difference of terms of order (mT*cosh y)^2 ~ (10^2..10^3 GeV)^2 while m itself is of order 10^-3 GeV. That is a double-precision property of the ruling's own formula, not a deviation from it.",
+    "note_on_MOD_pfc_masses": "The MOD per-PFC `m` field is NOT restricted to physical particle masses — CMS particle-flow candidates carry small non-standard values (e.g. 0.0061192, 0.004834 GeV) alongside 0.0 and the pion mass. An earlier hypothesis that the small emitted values were cancellation noise was checked against the source HDF5 and found WRONG: the raw values are genuinely those numbers."
   },
-  "precision_in_the_regime_that_actually_occurs": {
-    "test": "3000 real jets (n_pfc_selected >= 2): extractor float64 pfc_mass_GeV vs the same algebra in float80 (numpy longdouble)",
+
+  "precision_in_the_bulk_regime": {
+    "test": "3000 real jets with n_pfc_selected >= 2: extractor float64 pfc_mass_GeV vs the identical algebra in float80 (numpy longdouble)",
     "median_rel_err": 0.0,
     "max_rel_err": 0.0,
-    "note": "The delivered pfc_mass_GeV column is numerically clean: the summed-four-vector mass of a real jet is ~10-50 GeV against E ~ few hundred GeV, far from the cancellation regime."
+    "note": "The delivered pfc_mass_GeV column is numerically clean over the >99.8% of rows that carry two or more PFCs: a real jet's summed-four-vector mass is ~10-50 GeV against E ~ few hundred GeV, far from the cancellation regime."
   }
 }

@@ -1,0 +1,84 @@
+{
+  "bundle": "i2_phase120_locked",
+  "assembled_by": "Cat (Claude Opus 5)",
+  "assembled_utc": "2026-07-25",
+  "requested_by": "ChatGPT thread i2",
+  "request_verbatim": "Locked internal inputs — Cat must also attach: phase120_locked_rar_function.json / phase120_locked_beta_aeff.json. The exact stored SPARC coefficient replaces the rounded -0.30 before final confirmation.",
+
+  "caveat": "NEITHER REQUESTED FILE EXISTED. A find across /Users/resorb/Documents returns no file of either name; the only textual match on disk is inside i2's own thread mirror. i2 named files it assumed Cat held. Cat assembled both from frozen lane artifacts, with per-value source_file + source_sha256 + verbatim field name. No value was invented, rounded, or guessed.",
+
+  "files": [
+    {
+      "name": "phase120_locked_rar_function.json",
+      "sha256": "9099701a4d507f3d7d8ab10478d08612d79dc1bb9bd619604842586681f3de63",
+      "headline": "Phase120 RAR/GSG functional form + TWO frozen parameter sets that DISAGREE (rounded canonical vs full-precision posterior)"
+    },
+    {
+      "name": "phase120_locked_beta_aeff.json",
+      "sha256": "3f79071c121db4853435919dc526ddd8b0909d7fc05bdf11f2cda5c8f1f69554",
+      "headline": "Selected beta = -0.3147082903566279 (HC3 SE 0.07062982723439891, p 8.360351249424284e-06, N=74); alternate -0.30224809603614133 listed in full; 7 other candidates explicitly rejected"
+    }
+  ],
+
+  "selected_beta": {
+    "value": -0.3147082903566279,
+    "hc3_se": 0.07062982723439891,
+    "p_hc3_z_two_sided": 8.360351249424284e-06,
+    "n_galaxies": 74,
+    "source_file": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_e1_independent_reconstruction_2026_06_27/STAGE_E1_INDEPENDENT_RECONSTRUCTION_RESULTS.json",
+    "source_sha256": "57794707a95f4d45658159ee006b57bd31adca7b2bdc9f9cca95626a2444a19e",
+    "verbatim_field": "key_models.C_T_RAR_X_A_full_controls.beta",
+    "overrule_instruction": "If i2 meant the value that literally rounds to -0.30, use alternate_candidate_A in phase120_locked_beta_aeff.json: -0.30224809603614133, HC3 SE 0.06578818823798031, two-sided p 1.9362359582068557e-05."
+  },
+
+  "three_things_i2_must_decide": [
+    "DEFINITION: the stored regressor is X_A = log10(R_IPR), NOT log10(A_eff). Since R_IPR = sqrt(A_eff/pi), a slope per log10 A_eff is HALF the stored slope. Cat did NOT apply the factor. i2's own 2026-07-03 lane brief mislabelled X_A as 'log A_eff'.",
+    "WHICH BETA: -0.3147082903566279 (programme headline, given to i2 in its own lane brief, a designated leak token) vs -0.30224809603614133 (the only on-disk value that literally rounds to -0.30).",
+    "STATUS: the participation-area flagship was KILLED_UNDER_OWN_SPECIFICATION_SAME_DATA_TIER on 2026-07-20/21, ratified by Sol. The coefficient is retained descriptively only ('XA_CONDITIONAL_RESIDUAL_ASSOCIATION_SAME_DATA_DESCRIPTIVE_ONLY'). At fixed baryonic mass the effect is beta = +0.0019, p = 0.977."
+  ],
+
+  "rar_parameter_disagreement_summary": {
+    "a0_m_s2": {"rounded_canonical": 1.114e-10, "w_window_truncation": 1.1141506e-10, "full_precision_posterior": 1.1141506080465188e-10, "resolved": false},
+    "L_star_kpc": {"rounded_canonical": 0.400, "full_precision_posterior": 0.39992170918182096, "resolved": false},
+    "q": {"rounded_canonical": 0.666, "full_precision_posterior": 0.6663695144357871, "resolved": false},
+    "chi_star": {"value": 1.0, "resolved": true, "note": "no disagreement; but chi_star/p govern the B_chi sigmoid, which the executed Phase120 chain does NOT use"},
+    "p": {"value": 2.0, "resolved": true, "note": "same as chi_star"}
+  },
+
+  "source_artifacts_consulted": [
+    {"path": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_b_2026_06_26/gsg_p120_params_full_precision.json", "sha256": "c13eb6cba755d2d8d0db3ebba00d0b8befa08093e2fcdecac1d5cc5ccf13affe"},
+    {"path": "/Users/resorb/Documents/My Papers/TCG Main Paper/Artefacts/phase120_latent_mixture.json", "sha256": "56f1907e22209deaa92bd369c3fe116077b6112914d7172b1241b352b1a1613d"},
+    {"path": "/Users/resorb/Documents/Claude Sessions/Transaction Calculus/Level2_supplement/scripts/206_phase120_cohort_residuals.py", "sha256": "df4e4fd5c6e0ab872128f80507e369bb3f61d52398cc21911623154aeede55a3"},
+    {"path": "/Users/resorb/Documents/Claude Sessions/Transaction Calculus/src/tcg/rar.py", "sha256": "44f8dad2e03daa442cf1c29f2289f75470e2434e93a97eb70e1ff5769100520a"},
+    {"path": "/Users/resorb/Documents/Claude Sessions/Transaction Calculus/src/tcg/screened.py", "sha256": "8dc12b7b044e655d8241e7acee0da9967892d9ff38cf446447e2268d1bdf5985"},
+    {"path": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_e1_independent_reconstruction_2026_06_27/STAGE_E1_INDEPENDENT_RECONSTRUCTION_RESULTS.json", "sha256": "57794707a95f4d45658159ee006b57bd31adca7b2bdc9f9cca95626a2444a19e"},
+    {"path": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_e1_independent_reconstruction_2026_06_27/stage_e1_per_radius_table.csv", "sha256": "6eea832b7f346f1b3e51ecc5c588ae0b4e61d382f350c0edfbde1265906c99ee"},
+    {"path": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/stage_e1_cleanroom_ols_replication_no_product_no_claim_2026_07_03_0340/stage_e1_cleanroom_ols_replication_result_2026_07_03_0340.json", "sha256": "46b491c730536e3b0fd3c6bfb988d64e0499bdbf6af0ae666f153a514b39d309"},
+    {"path": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/stage_e1_evidence_ledger_stage_e2_blocker_map_no_product_no_claim_2026_07_03_0252/sparc_stage_e1_evidence_ledger_stage_e2_blocker_map_2026_07_03_0252.json", "sha256": "e9358dc1eac5fc0f35dedbce36fbada6b4aaa67da59489b609ee76abfe6d34be"},
+    {"path": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_c_strictW_2026_06_26/stage_c_regression_table_strictW.json", "sha256": "62af1ee40cbe04a088b2b7ce0095be747f226aff29da424e04907a0d702ac0d2"},
+    {"path": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_d1_hostile_nulls_2026_06_26/stage_d_regression_table.json", "sha256": "1cf7694cec9426f0a61ce020c8619ce34d4a66f00decf2b0052dc1082d6de034"},
+    {"path": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/stage_d_axis_interpretation_park_2026_07_17/decision_card.json", "sha256": "f6c46691b6a6cec42c778a877e73990e6a7f7ddc2e39e4b8bc7c67bfc88f8c54"},
+    {"path": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/aeff_ipr_scout_results.json", "sha256": "8e1cd003755bdcfe17c1d87b3f15485e4667902345ee5f9482dfee6de8ebfd4d"},
+    {"path": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/fp120_activation_diagnostic_2026_06_26/F_P120_FREEZE.md", "sha256": "27316539c07285268e73a811ae0c24e211d42dd1c50cce774840e40b39a9f9a4"},
+    {"path": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/flagship_specification_ruling_2026_07_21/SPECIFICATION_RULING_CARD.md", "sha256": "209ed819347519a2e9ca443a44a552a535aca22aa0072aff88d1c1c72f1e2f56"},
+    {"path": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/thread8_harvest_2026_07_21/SOL_RATIFICATION_REPLY.md", "sha256": "fa58c371da59ce940753033da72821e126855927ec8a0c846b534a74e05263f2"},
+    {"path": "/Users/resorb/Documents/My Papers/Research Program Management/LEAD_READINESS_LEDGER.json", "sha256": "7f6405e841bb1ef8fb86debdd4ff24e1fd766bebad955e538af21ceebb10407c"},
+    {"path": "/Users/resorb/Documents/My Papers/Research Program Management/SCAN_GRAVEYARD_LEDGER.json", "sha256": "bc4d34625300fe27d684fbf276be79cdb95909437397e8ab6683fe15d519e8a1"},
+    {"path": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/card2 lane: card2_gamma_participation_realML_2026_07_21/result_v2.json", "sha256": "NOT_COMPUTED (consulted for rejection only; lane path is implementation_lanes/card2_gamma_participation_realML_2026_07_21/result_v2.json)"},
+    {"path": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/t1_ugc11914_high_y_execution_2026_07_21_1116/FREEZE.json", "sha256": "NOT_COMPUTED (corroborating a0=1.114e-10 only)"},
+    {"path": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/t1_ugc11455_v3_heldout_execution_2026_07_21_1209/FREEZE.json", "sha256": "NOT_COMPUTED (corroborating a0=1.114e-10 only)"},
+    {"path": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/stage_e2_v92_ngc2976_replacement_source_2026_07_22_1920/V92_PROTOCOL_FREEZE.json", "sha256": "NOT_COMPUTED (corroborating a0=1.114e-10 only)"}
+  ],
+
+  "not_found": [
+    "phase120_locked_rar_function.json — does not exist anywhere under /Users/resorb/Documents (nor phase120_rar_function.json).",
+    "phase120_locked_beta_aeff.json — does not exist anywhere under /Users/resorb/Documents.",
+    "Full stored precision for beta = -0.2649 (p = 0.0033): prose only, no numeric artifact.",
+    "Full stored precision for the fixed-baryonic-mass beta = +0.0019 (p = 0.977) and complete-control beta = -0.0014 (p = 0.905): prose only, computed inside T2's own thread.",
+    "Full stored precision for the bivariate beta = -0.0515 (p = 0.340): prose only. The on-disk scout bivariate is a DIFFERENT number, -0.050145945674501716 (p = 0.24169499615961648).",
+    "Any artifact stating a slope per log10(A_eff) rather than per X_A = log10(R_IPR).",
+    "Any single frozen artifact carrying all five Phase120 red-line parameters at full precision together with the functional form.",
+    "Reconciliation of the a0 / L_star / q rounded-vs-full-precision split: no artifact on disk declares which set is authoritative. Reported, not resolved.",
+    "Other files i2 also asked for and which are NOT in this bundle (not part of this task): phase120_aeff_residual_table.csv, sparc_aeff_table.csv, sparc_fixed_ml_grid_summary.csv, sparc_degraded_proxy_calibration.csv."
+  ]
+}

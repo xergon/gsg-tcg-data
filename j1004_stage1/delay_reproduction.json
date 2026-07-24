@@ -1,0 +1,179 @@
+{
+  "step": 3,
+  "description": "Constant-delay (eps=0) reproduction of Munoz+2022 Table 2 Joint-BIC delays; in_paper_fit==1 rows only; three independent estimators; statistic is the mean HELD-OUT predictive residual (5-fold).",
+  "sign_convention": "u = t_image - Delta ; image C leads, so Delta > 0 for A, B, D",
+  "drw_hyperparameters_fitted_on_image_C_alone": {
+    "process": "damped random walk / Ornstein-Uhlenbeck",
+    "fitted_on": "image C alone, in_paper_fit==1 (n=918) -- independent of any trial delay",
+    "sigma_mag": 0.2757773524165751,
+    "tau_days": 537.6063023698849,
+    "jitter_mag": 0.03850718497435364,
+    "nll": -2000.9037511812826,
+    "fit_seconds": 17.847552061080933
+  },
+  "frozen_parameters": {
+    "max_interp_gap_days": 45.0,
+    "t0_mjd": 55641.5875,
+    "dispersion_decorrelation_delta_days": 6.0,
+    "diffsmooth_interp_width_days": 6.0,
+    "diffsmooth_microlensing_width_days": 200.0,
+    "microlensing_poly_order": 3,
+    "n_folds": 5,
+    "min_image_points_for_admissible_delay": 150
+  },
+  "pairs": {
+    "DC": {
+      "image": "D",
+      "published_joint_BIC": 2458.47,
+      "published_joint_BIC_err": 1.02,
+      "published_joint_AIC": 2456.99,
+      "coarse_grid_days": [
+        2208.47,
+        2708.47,
+        1.0
+      ],
+      "fine_grid_days": [
+        2428.47,
+        2484.47,
+        0.05
+      ],
+      "estimators": {
+        "dispersion_spectrum": {
+          "best_delta_coarse_days": 2453.47,
+          "best_delta_days": 2454.120000000093,
+          "stat_min": 0.00800517257717689,
+          "sigma_curvature_days": 1.8207115732001535,
+          "n_image_points_used": 221,
+          "minus_published_BIC_days": -4.349999999906686,
+          "minus_published_AIC_days": -2.8699999999066677
+        },
+        "difference_smoothing": {
+          "best_delta_coarse_days": 2459.47,
+          "best_delta_days": 2460.0200000001146,
+          "stat_min": 1.2756574371444114,
+          "sigma_curvature_days": 1.5321541577176703,
+          "n_image_points_used": 227,
+          "minus_published_BIC_days": 1.5500000001147782,
+          "minus_published_AIC_days": 3.0300000001147964
+        },
+        "latent_process": {
+          "best_delta_coarse_days": 2453.47,
+          "best_delta_days": 2454.120000000093,
+          "stat_min": 1.0522349437293936,
+          "sigma_curvature_days": 2.3867323396695785,
+          "n_image_points_used": 221,
+          "minus_published_BIC_days": -4.349999999906686,
+          "minus_published_AIC_days": -2.8699999999066677
+        }
+      }
+    },
+    "AC": {
+      "image": "A",
+      "published_joint_BIC": 825.23,
+      "published_joint_BIC_err": 0.46,
+      "published_joint_AIC": 825.99,
+      "coarse_grid_days": [
+        575.23,
+        1075.23,
+        1.0
+      ],
+      "fine_grid_days": [
+        797.23,
+        858.23,
+        0.05
+      ],
+      "estimators": {
+        "dispersion_spectrum": {
+          "best_delta_coarse_days": 822.23,
+          "best_delta_days": 821.9799999999775,
+          "stat_min": 0.007615275275435481,
+          "sigma_curvature_days": 0.8954206952545553,
+          "n_image_points_used": 466,
+          "minus_published_BIC_days": -3.25000000002251,
+          "minus_published_AIC_days": -4.010000000022501
+        },
+        "difference_smoothing": {
+          "best_delta_coarse_days": 833.23,
+          "best_delta_days": 833.6799999999669,
+          "stat_min": 2.7545379749138945,
+          "sigma_curvature_days": 1.4096220357762075,
+          "n_image_points_used": 446,
+          "minus_published_BIC_days": 8.449999999966849,
+          "minus_published_AIC_days": 7.689999999966858
+        },
+        "latent_process": {
+          "best_delta_coarse_days": 822.23,
+          "best_delta_days": 821.0799999999783,
+          "stat_min": 2.140698826055601,
+          "sigma_curvature_days": 1.605395268795455,
+          "n_image_points_used": 471,
+          "minus_published_BIC_days": -4.1500000000216914,
+          "minus_published_AIC_days": -4.910000000021682
+        }
+      }
+    },
+    "BC": {
+      "image": "B",
+      "published_joint_BIC": 782.2,
+      "published_joint_BIC_err": 0.43,
+      "published_joint_AIC": 781.92,
+      "coarse_grid_days": [
+        532.2,
+        1032.2,
+        1.0
+      ],
+      "fine_grid_days": [
+        757.2,
+        809.2,
+        0.05
+      ],
+      "estimators": {
+        "dispersion_spectrum": {
+          "best_delta_coarse_days": 782.2,
+          "best_delta_days": 782.7999999999768,
+          "stat_min": 0.009707842396314819,
+          "sigma_curvature_days": 0.6517052765007616,
+          "n_image_points_used": 567,
+          "minus_published_BIC_days": 0.5999999999767169,
+          "minus_published_AIC_days": 0.8799999999768033
+        },
+        "difference_smoothing": {
+          "best_delta_coarse_days": 784.2,
+          "best_delta_days": 783.8499999999758,
+          "stat_min": 3.2869146276732786,
+          "sigma_curvature_days": 0.7227609248572483,
+          "n_image_points_used": 562,
+          "minus_published_BIC_days": 1.649999999975762,
+          "minus_published_AIC_days": 1.9299999999758484
+        },
+        "latent_process": {
+          "best_delta_coarse_days": 782.2,
+          "best_delta_days": 782.3999999999771,
+          "stat_min": 3.231735863877055,
+          "sigma_curvature_days": 0.9268190905823808,
+          "n_image_points_used": 568,
+          "minus_published_BIC_days": 0.19999999997708073,
+          "minus_published_AIC_days": 0.47999999997716714
+        }
+      }
+    }
+  },
+  "internal_closure_check_AB": {
+    "dispersion_spectrum": {
+      "delta_AC_minus_delta_BC_days": 39.180000000000746,
+      "published_joint_BIC_delta_AB_days": 43.01,
+      "difference_days": -3.8299999999992522
+    },
+    "difference_smoothing": {
+      "delta_AC_minus_delta_BC_days": 49.82999999999106,
+      "published_joint_BIC_delta_AB_days": 43.01,
+      "difference_days": 6.819999999991062
+    },
+    "latent_process": {
+      "delta_AC_minus_delta_BC_days": 38.6800000000012,
+      "published_joint_BIC_delta_AB_days": 43.01,
+      "difference_days": -4.3299999999987975
+    }
+  },
+  "wall_seconds": 23.492344856262207
+}

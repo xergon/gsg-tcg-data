@@ -1,0 +1,150 @@
+{
+  "rule_id": "J1004_DUPLICATE_MJD_53663P501_MERGE_IN_FLUX",
+  "duplicate_mjd": 53663.501,
+  "n_duplicate_rows_found": 8,
+  "n_rows_before": 4072,
+  "n_rows_after": 4068,
+  "n_rows_after_expected": 4068,
+  "row_count_matches_expected": true,
+  "flux_convention": "f = 10^(-0.4 m); sigma_f = 0.4*ln(10)*f*sigma_m; inverse-variance combine in flux; back to mag",
+  "inflation_rule": "chi2_reduced > 1.0 -> sigma *= sqrt(chi2_reduced)  [PDG-style scale factor]",
+  "any_inflation_triggered": true,
+  "merges": [
+    {
+      "image": "A",
+      "mjd": 53663.501,
+      "n_merged": 2,
+      "input_mag": [
+        19.486,
+        19.555
+      ],
+      "input_magerr": [
+        0.034,
+        0.012
+      ],
+      "input_flux_rel": [
+        1.6054618868009706e-08,
+        1.506607066186742e-08
+      ],
+      "input_fluxerr_rel": [
+        5.027529146768493e-10,
+        1.6651636663685214e-10
+      ],
+      "merged_flux_rel": 1.5163793735698185e-08,
+      "merged_fluxerr_rel_before_inflation": 1.5807173873469736e-10,
+      "chi2": 3.4840238493293154,
+      "dof": 1,
+      "chi2_reduced": 3.4840238493293154,
+      "inflation_triggered": true,
+      "inflation_scale_factor": 1.8665540038609425,
+      "merged_fluxerr_rel_final": 2.950494368325102e-10,
+      "merged_mag": 19.547980329154193,
+      "merged_magerr": 0.02112570649179985,
+      "naive_weighted_mag_no_inflation": 19.547980329154193,
+      "mag_difference_input": 0.06899999999999906,
+      "in_paper_fit": 1
+    },
+    {
+      "image": "B",
+      "mjd": 53663.501,
+      "n_merged": 2,
+      "input_mag": [
+        19.919,
+        19.905
+      ],
+      "input_magerr": [
+        0.04,
+        0.014
+      ],
+      "input_flux_rel": [
+        1.0774571314563644e-08,
+        1.0914403364487549e-08
+      ],
+      "input_fluxerr_rel": [
+        3.9694987667704817e-10,
+        1.4073551792156131e-10
+      ],
+      "merged_flux_rel": 1.0898789153033472e-08,
+      "merged_fluxerr_rel_before_inflation": 1.3264544387991848e-10,
+      "chi2": 0.11023496015681492,
+      "dof": 1,
+      "chi2_reduced": 0.11023496015681492,
+      "inflation_triggered": false,
+      "inflation_scale_factor": 1.0,
+      "merged_fluxerr_rel_final": 1.3264544387991848e-10,
+      "merged_mag": 19.90655437289304,
+      "merged_magerr": 0.013214124871528087,
+      "naive_weighted_mag_no_inflation": 19.90655437289304,
+      "mag_difference_input": 0.013999999999999346,
+      "in_paper_fit": 1
+    },
+    {
+      "image": "C",
+      "mjd": 53663.501,
+      "n_merged": 2,
+      "input_mag": [
+        20.023,
+        19.954
+      ],
+      "input_magerr": [
+        0.051,
+        0.029
+      ],
+      "input_flux_rel": [
+        9.790390174480516e-09,
+        1.043277881459965e-08
+      ],
+      "input_fluxerr_rel": [
+        4.5988141199522596e-10,
+        2.786593873332145e-10
+      ],
+      "merged_flux_rel": 1.0260260948883462e-08,
+      "merged_fluxerr_rel_before_inflation": 2.3832190861307287e-10,
+      "chi2": 1.4271991329459004,
+      "dof": 1,
+      "chi2_reduced": 1.4271991329459004,
+      "inflation_triggered": true,
+      "inflation_scale_factor": 1.1946543989564096,
+      "merged_fluxerr_rel_final": 2.8471231649229495e-10,
+      "merged_mag": 19.972103984215725,
+      "merged_magerr": 0.030128129440009893,
+      "naive_weighted_mag_no_inflation": 19.972103984215725,
+      "mag_difference_input": 0.06899999999999906,
+      "in_paper_fit": 1
+    },
+    {
+      "image": "D",
+      "mjd": 53663.501,
+      "n_merged": 2,
+      "input_mag": [
+        20.52,
+        20.421
+      ],
+      "input_magerr": [
+        0.107,
+        0.038
+      ],
+      "input_flux_rel": [
+        6.1944107507678115e-09,
+        6.78578350950407e-09
+      ],
+      "input_fluxerr_rel": [
+        6.104631561768808e-10,
+        2.3749762808968717e-10
+      ],
+      "merged_flux_rel": 6.7080422943019025e-09,
+      "merged_fluxerr_rel_before_inflation": 2.213372259851311e-10,
+      "chi2": 0.8150684578382235,
+      "dof": 1,
+      "chi2_reduced": 0.8150684578382235,
+      "inflation_triggered": false,
+      "inflation_scale_factor": 1.0,
+      "merged_fluxerr_rel_final": 2.213372259851311e-10,
+      "merged_mag": 20.433510519561114,
+      "merged_magerr": 0.03582473532060486,
+      "naive_weighted_mag_no_inflation": 20.433510519561114,
+      "mag_difference_input": 0.0990000000000002,
+      "in_paper_fit": 0
+    }
+  ]
+}

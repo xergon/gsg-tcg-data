@@ -1,0 +1,282 @@
+{
+  "procedure": "J1004_PITD0_STAGE_1",
+  "specified_by": "ChatGPT research thread T8 (frozen procedure)",
+  "executed_by": "Cat (compute arm). Steps 7-8 NOT executed: no M0/M1/M2/M3 fits, no null farm, no verdict.",
+  "utc": "2026-07-24T22:08:25Z",
+  "input_files": {
+    "j1004_lightcurves_long.csv": {
+      "sha256": "6c476e4b829da9de61bfe91675aae1f07b546d1e8d34c4ed3e2e439cff38407e",
+      "bytes": 268819
+    },
+    "fohlmeister2007_table1.dat": {
+      "sha256": "3f3ef6b4be0b913522b434ad9d2733b2c1b231110c432ce8e68dc33bf3e9c999",
+      "bytes": 37663
+    },
+    "table1.dat": {
+      "sha256": "e07ef401f7e9b502dea476cd528ba578d114c80975240ad5f6c3b0e811023a0c",
+      "bytes": 62098
+    },
+    "ReadMe.txt": {
+      "sha256": "a5ca99e7b16d84df243c253cccf3673324d477fb52f39c59664bfefb353c5920",
+      "bytes": 5280
+    },
+    "merged_lightcurves.csv (step-2 output, intermediate)": {
+      "sha256": "5202dda3b4aa39f766171c852c9f65d283c7a27149ac938332fcc60f3faf744d",
+      "bytes": 262736
+    }
+  },
+  "bundle_files": {
+    "README.md": {
+      "sha256": "690bdaf83d754f25a698e340a2f17cd05ce42cfe12a7cefbadfac61cc38c0f88",
+      "bytes": 1990
+    },
+    "RESULTS.md": {
+      "sha256": "6be5069297bfff6b6dcba5be50aa387d4586ccaa27c2ebc0db8336be6e69bdbb",
+      "bytes": 30757
+    },
+    "delay_reproduction.json": {
+      "sha256": "69804efb368b53c7add122434c0242737723655c3488bca3ae2085f325c2d94a",
+      "bytes": 6167
+    },
+    "delay_reproduction_scan.png": {
+      "sha256": "5c70fb3fb09eec1f91bd173c2f7d85fab51d477e45756c97a0735d7741f6d021",
+      "bytes": 113109
+    },
+    "duplicate_merge.json": {
+      "sha256": "d4812c8ad942460f8ccf0bd545b847d1e392477ba46994aa35c1e34b702c333a",
+      "bytes": 4375
+    },
+    "eps_wide_diagnostic.json": {
+      "sha256": "da9bb6a4dcc282f5b03f4889d971b6e67180d73f16cd4f657aa4263485d48759",
+      "bytes": 69560
+    },
+    "estimator_outputs.json": {
+      "sha256": "c9f613bb105a073e40a48f029a102175b3394a8bdebe1b61574adbcdff49175a",
+      "bytes": 100181
+    },
+    "feature_windows.json": {
+      "sha256": "4326002da871d2c9ba9fc26a2c95ddd43076e7a01aaac01fd8c69eaac8dd5fc1",
+      "bytes": 17769
+    },
+    "affine_maps/affine_map_AC_all_minus_reserve_chained_frozen.csv.gz": {
+      "sha256": "e34508f9b8a4761f4d40bc4af36f386f74dbf46a1a8400b8c52e120b7cda9120",
+      "bytes": 302927
+    },
+    "affine_maps/affine_map_AC_all_minus_reserve_strict_frozen.csv.gz": {
+      "sha256": "759326628163049e7a48fd909f7b2a60ea76e674aee66df68841b149309a5b0a",
+      "bytes": 300893
+    },
+    "affine_maps/affine_map_AC_exploration_only_chained_frozen.csv.gz": {
+      "sha256": "fd47928432f5249863e377dd05cf748207cf820e6ec14c20bdf35faff9ff88ca",
+      "bytes": 302380
+    },
+    "affine_maps/affine_map_AC_exploration_only_strict_frozen.csv.gz": {
+      "sha256": "2621e802994bad3a5c28d8fa4a8b6dcdf22fbe2d82e8a7303488c0ac7da5b1cf",
+      "bytes": 300819
+    },
+    "affine_maps/affine_map_BC_all_minus_reserve_chained_frozen.csv.gz": {
+      "sha256": "30dc5bbf0ea9e54d87d763a1659b4038091989fcc5f6cf13a6a106d5a87c5e0b",
+      "bytes": 305215
+    },
+    "affine_maps/affine_map_BC_all_minus_reserve_strict_frozen.csv.gz": {
+      "sha256": "7298c87b470fc47693d008cf907a097f73a448d1fd83bc20813a90275b5408c4",
+      "bytes": 306108
+    },
+    "affine_maps/affine_map_BC_exploration_only_chained_frozen.csv.gz": {
+      "sha256": "7d5a59ddedf86a608e19e9e0f2ad85a5da8d741468ab330ba3453edb18e8154b",
+      "bytes": 306560
+    },
+    "affine_maps/affine_map_BC_exploration_only_strict_frozen.csv.gz": {
+      "sha256": "279decd48c98f2f30b3656760c5def34923a0afa91e12381713e24f39bbf9544",
+      "bytes": 306481
+    },
+    "affine_maps/affine_map_DC_all_minus_reserve_chained_frozen.csv.gz": {
+      "sha256": "636312fe71be752b7f0fb8c8b6f524e9a6fd972fcdcbb86d7f0c2e3812781c2e",
+      "bytes": 286566
+    },
+    "affine_maps/affine_map_DC_all_minus_reserve_strict_frozen.csv.gz": {
+      "sha256": "816b4394a1135a6fd9c940e15c70b5567ee5514c8bfd4bc1806e6e680debaff8",
+      "bytes": 288580
+    },
+    "affine_maps/affine_map_DC_exploration_only_chained_frozen.csv.gz": {
+      "sha256": "f4da66493fe783f08eebccd155b168b93d7a4e5e7eab0dacd4e554b0f3685a5a",
+      "bytes": 286063
+    },
+    "affine_maps/affine_map_DC_exploration_only_strict_frozen.csv.gz": {
+      "sha256": "aaeb587f03b72a1660651e26b9b2885128390b6c41400e9d06fd968f64a01f45",
+      "bytes": 288585
+    },
+    "affine_maps/affine_maps_all_minus_reserve_chained_frozen.png": {
+      "sha256": "5dbd6ce8807a4070ed5d4a6d37c4682db02c0dc52ece801f4c630b4246208adb",
+      "bytes": 267332
+    },
+    "affine_maps/affine_maps_all_minus_reserve_chained_moving.png": {
+      "sha256": "bb9df5ce798015ef8f524734a46c110228d00aab5792bba6dc3a209a51e7c236",
+      "bytes": 237536
+    },
+    "affine_maps/affine_maps_all_minus_reserve_strict_frozen.png": {
+      "sha256": "c97a9c12189d7bf1da073701007ef1ee74a16f85ef5526dcf85c6a8cb4d680a4",
+      "bytes": 284350
+    },
+    "affine_maps/affine_maps_all_minus_reserve_strict_moving.png": {
+      "sha256": "10a8cd4df9ed91dd62e46fba67eebf97547734cd0719010df192a4cad65f6bf9",
+      "bytes": 258961
+    },
+    "affine_maps/affine_maps_exploration_only_chained_frozen.png": {
+      "sha256": "89b785e5ad78a002afe95552e3f2935078f20a96268b22d7812f6dfd90a4424c",
+      "bytes": 286873
+    },
+    "affine_maps/affine_maps_exploration_only_chained_moving.png": {
+      "sha256": "df4faf2e8c2161a8bfad82259d5cca80dcf37b1955bdc960380ad3ffefb5f0d7",
+      "bytes": 286994
+    },
+    "affine_maps/affine_maps_exploration_only_strict_frozen.png": {
+      "sha256": "1fd72b06241c808e8b691c6e638caf2599174d6d62be2db226ea437e7825a5a4",
+      "bytes": 286949
+    },
+    "affine_maps/affine_maps_exploration_only_strict_moving.png": {
+      "sha256": "0b13ad844acc888f102e9252f848e4f273a4386d2885c1c6fbe2d77693aab80d",
+      "bytes": 275355
+    }
+  },
+  "published_delays_used": {
+    "source": "Munoz+2022 ApJ 937 34, Table 2 (src/tab2.tex), Joint BIC row",
+    "joint_BIC": {
+      "BC": [
+        782.2,
+        0.43
+      ],
+      "AC": [
+        825.23,
+        0.46
+      ],
+      "DC": [
+        2458.47,
+        1.02
+      ],
+      "AB": [
+        43.01,
+        0.27
+      ],
+      "DA": [
+        1633.23,
+        0.97
+      ],
+      "DB": [
+        1676.26,
+        0.97
+      ]
+    },
+    "joint_AIC": {
+      "BC": [
+        781.92,
+        0.44
+      ],
+      "AC": [
+        825.99,
+        0.42
+      ],
+      "DC": [
+        2456.99,
+        1.11
+      ],
+      "AB": [
+        44.04,
+        0.23
+      ],
+      "DA": [
+        1630.99,
+        1.14
+      ],
+      "DB": [
+        1675.06,
+        1.14
+      ]
+    }
+  },
+  "run_parameters": {
+    "affine_map": "u = t - Delta_i - eps_i * (t - T0)",
+    "t0_mjd": 55641.5875,
+    "delta_grid": {
+      "centre": "published Joint-BIC delay per pair",
+      "half_width_days": 15.0,
+      "step_days": 0.25,
+      "n_nodes": {
+        "DC": 121,
+        "AC": 121,
+        "BC": 121
+      }
+    },
+    "eps_grid": {
+      "range": [
+        -0.005,
+        0.005
+      ],
+      "step": 0.0001,
+      "n_nodes": 101
+    },
+    "frozen_max_interpolation_gap_days": 45.0,
+    "frozen_correlation_length_days_for_CHAINED": 30.0,
+    "dispersion_decorrelation_length_days": 6.0,
+    "difference_smoothing_interp_width_days": 6.0,
+    "difference_smoothing_microlensing_width_days": 200.0,
+    "microlensing_polynomial_order": 3,
+    "held_out_scheme": "5-fold, fold = (time rank of image-i epoch) mod 5; all nuisance parameters fitted on the 4/5 training points, statistic accumulated on the withheld 1/5 (image i predicted from image C)",
+    "step3_min_image_points_for_admissible_delay": 150,
+    "latent_process": {
+      "kernel": "damped random walk / Ornstein-Uhlenbeck",
+      "process": "damped random walk / Ornstein-Uhlenbeck",
+      "fitted_on": "image C alone, in_paper_fit==1 (n=918) -- independent of any trial delay",
+      "sigma_mag": 0.2757773524165751,
+      "tau_days": 537.6063023698849,
+      "jitter_mag": 0.03850718497435364,
+      "nll": -2000.9037511812826,
+      "fit_seconds": 17.847552061080933
+    },
+    "kappa_scan": {
+      "range_per_day": [
+        -3e-06,
+        3e-06
+      ],
+      "n_nodes": 24001
+    },
+    "closure_ratio_sampling": {
+      "n_samples": 400000,
+      "seed": 20260725,
+      "method": "profile likelihood exp(-dchi2/2) per pair, independent draws"
+    },
+    "row_sets": {
+      "exploration_only": "image-i epochs whose reference source time falls in an ODD-ranked window",
+      "all_minus_reserve": "all image-i epochs except those falling in an EVEN-ranked reserve window",
+      "reserve_status": "even-ranked windows NEVER entered any fit in this bundle"
+    },
+    "configs_run": [
+      "exploration_only__strict__frozen",
+      "exploration_only__strict__moving",
+      "exploration_only__chained__frozen",
+      "exploration_only__chained__moving",
+      "all_minus_reserve__strict__frozen",
+      "all_minus_reserve__strict__moving",
+      "all_minus_reserve__chained__frozen",
+      "all_minus_reserve__chained__moving"
+    ],
+    "primary_config": "exploration_only__strict__frozen",
+    "pointset_definitions": {
+      "frozen": "image-i epochs eroded so that the ENTIRE source-time excursion the point can make anywhere on the (Delta,eps) grid stays inside one covered interval. The point set is therefore IDENTICAL at every grid node and a mean statistic cannot be biased by points entering or leaving. PRIMARY.",
+      "moving": "coverage re-evaluated at each node. More points, but N varies across the map (measured 64-120 for D/C), so map contrast is partly a changing-sample effect. Reported for completeness only."
+    }
+  },
+  "execution_hygiene": {
+    "issue": "first step-3 run reached ~1285% CPU in a single process and drove the 14-core machine to load average ~160 (numpy/BLAS thread oversubscription).",
+    "fix": "all BLAS/OpenMP pools pinned to 1 thread before numpy import; parallelism moved to a bounded process pool of 6 workers over grid nodes; grids checkpointed to disk.",
+    "measured_effect": "DRW hyperparameter fit 36.3 s unpinned -> 18.4 s pinned (2.0x faster at ~1/13 the CPU); full step 3 ~250 s unpinned -> 23.5 s pinned; peak load average fell from ~160 to ~25.",
+    "workers": 6
+  },
+  "step_results_pointers": {
+    "step1": "SUMMARY.json input_files + RESULTS.md STEP 1",
+    "step2": "duplicate_merge.json",
+    "step3": "delay_reproduction.json",
+    "step4": "feature_windows.json",
+    "step5_6": "estimator_outputs.json + affine_maps/"
+  }
+}

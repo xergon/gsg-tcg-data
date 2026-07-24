@@ -1,0 +1,609 @@
+{
+  "step": 4,
+  "defined_on": "image C alone, FULL merged curve (n=1017 epochs); no A/B/D data and no trial delay entered this step",
+  "t8_criteria": {
+    "duration_days": [
+      30.0,
+      250.0
+    ],
+    "peak_to_trough_amplitude_mag_min": 0.08,
+    "min_C_observations": 8,
+    "shape": ">=2 significant slope reversals OR one sharp monotonic excursion",
+    "max_internal_gap_days": 45.0
+  },
+  "cat_judgement_calls": {
+    "candidate_enumeration": "T8 specified the qualifying criteria but not how candidates are enumerated. Cat froze: per-season Gaussian smoothing (width 10 d) to define slopes, zig-zag turning points confirmed by a 0.04 mag retracement, Type-A windows spanning 4 consecutive turning points (2 internal reversals) and Type-B windows spanning 1 confirmed monotonic leg.",
+    "sharpness_definition": "'sharp' monotonic excursion := amplitude/duration >= 8.00e-04 mag/day (i.e. >=0.08 mag in <=100 d equivalent rate). T8 did not define it.",
+    "deduplication": "candidates overlapping an already-accepted window by >50% of the shorter window are dropped; ties broken chronologically, never by amplitude.",
+    "window_basis": "windows enumerated on the FULL C curve rather than in_paper_fit==1 only. The 99 excluded C epochs are the LATEST (MJD 57665-58290); because ranking is chronological they can only append at the end of the rank list, so the odd/even split of every earlier window is unaffected by this choice."
+  },
+  "n_candidates_before_dedup": 51,
+  "n_windows_frozen": 34,
+  "n_exploration_odd_ranked": 17,
+  "n_confirmation_reserve_even_ranked": 17,
+  "RESERVE_STATUS": "UNTOUCHED IN STAGE 1 -- even-ranked windows are excluded from every step-5 and step-6 fit; they are listed here only so T8 can see what is being held.",
+  "exploration_windows": [
+    {
+      "mjd_start": 52996.844,
+      "mjd_end": 53195.152,
+      "mid_mjd": 53095.998,
+      "duration_days": 198.30800000000454,
+      "amplitude_mag": 0.5489999999999995,
+      "n_C_obs": 107,
+      "max_internal_gap_days": 25.262000000002445,
+      "kind": "multi_reversal",
+      "n_slope_reversals": 2,
+      "rank_by_C_epoch": 1,
+      "set": "exploration",
+      "testable_pairs_under_published_delays": [
+        "BC",
+        "AC",
+        "DC"
+      ]
+    },
+    {
+      "mjd_start": 53398.518,
+      "mjd_end": 53462.336,
+      "mid_mjd": 53430.426999999996,
+      "duration_days": 63.81800000000658,
+      "amplitude_mag": 0.19399999999999906,
+      "n_C_obs": 15,
+      "max_internal_gap_days": 20.124000000003434,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 3,
+      "set": "exploration",
+      "testable_pairs_under_published_delays": [
+        "BC",
+        "AC",
+        "DC"
+      ]
+    },
+    {
+      "mjd_start": 53516.18,
+      "mjd_end": 53549.151,
+      "mid_mjd": 53532.6655,
+      "duration_days": 32.97099999999773,
+      "amplitude_mag": 0.31099999999999994,
+      "n_C_obs": 14,
+      "max_internal_gap_days": 6.010000000002037,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 5,
+      "set": "exploration",
+      "testable_pairs_under_published_delays": [
+        "BC",
+        "AC",
+        "DC"
+      ]
+    },
+    {
+      "mjd_start": 53694.362,
+      "mjd_end": 53742.492,
+      "mid_mjd": 53718.426999999996,
+      "duration_days": 48.12999999999738,
+      "amplitude_mag": 0.26500000000000057,
+      "n_C_obs": 28,
+      "max_internal_gap_days": 7.198000000003958,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 7,
+      "set": "exploration",
+      "testable_pairs_under_published_delays": [
+        "BC",
+        "AC",
+        "DC"
+      ]
+    },
+    {
+      "mjd_start": 54018.506,
+      "mjd_end": 54110.521,
+      "mid_mjd": 54064.5135,
+      "duration_days": 92.01499999999942,
+      "amplitude_mag": 0.33500000000000085,
+      "n_C_obs": 43,
+      "max_internal_gap_days": 9.994999999995343,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 9,
+      "set": "exploration",
+      "testable_pairs_under_published_delays": [
+        "BC",
+        "AC",
+        "DC"
+      ]
+    },
+    {
+      "mjd_start": 54233.237,
+      "mjd_end": 54278.167,
+      "mid_mjd": 54255.702000000005,
+      "duration_days": 44.93000000000029,
+      "amplitude_mag": 0.36599999999999966,
+      "n_C_obs": 25,
+      "max_internal_gap_days": 5.003000000004249,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 11,
+      "set": "exploration",
+      "testable_pairs_under_published_delays": [
+        "BC",
+        "AC",
+        "DC"
+      ]
+    },
+    {
+      "mjd_start": 54557.288,
+      "mjd_end": 54592.153,
+      "mid_mjd": 54574.720499999996,
+      "duration_days": 34.86499999999796,
+      "amplitude_mag": 0.375,
+      "n_C_obs": 20,
+      "max_internal_gap_days": 7.131999999997788,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 13,
+      "set": "exploration",
+      "testable_pairs_under_published_delays": [
+        "BC",
+        "AC",
+        "DC"
+      ]
+    },
+    {
+      "mjd_start": 54769.406,
+      "mjd_end": 54822.413,
+      "mid_mjd": 54795.9095,
+      "duration_days": 53.00699999999779,
+      "amplitude_mag": 0.3319999999999972,
+      "n_C_obs": 17,
+      "max_internal_gap_days": 13.998999999996158,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 15,
+      "set": "exploration",
+      "testable_pairs_under_published_delays": [
+        "BC",
+        "AC",
+        "DC"
+      ]
+    },
+    {
+      "mjd_start": 55134.499,
+      "mjd_end": 55191.515,
+      "mid_mjd": 55163.007,
+      "duration_days": 57.015999999995984,
+      "amplitude_mag": 0.31099999999999994,
+      "n_C_obs": 12,
+      "max_internal_gap_days": 16.0679999999993,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 17,
+      "set": "exploration",
+      "testable_pairs_under_published_delays": [
+        "BC",
+        "AC",
+        "DC"
+      ]
+    },
+    {
+      "mjd_start": 55508.494,
+      "mjd_end": 55688.215,
+      "mid_mjd": 55598.3545,
+      "duration_days": 179.72099999999773,
+      "amplitude_mag": 0.5430000000000028,
+      "n_C_obs": 27,
+      "max_internal_gap_days": 22.17800000000716,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 19,
+      "set": "exploration",
+      "testable_pairs_under_published_delays": [
+        "BC",
+        "AC",
+        "DC"
+      ]
+    },
+    {
+      "mjd_start": 55887.482,
+      "mjd_end": 56014.338,
+      "mid_mjd": 55950.91,
+      "duration_days": 126.85599999999977,
+      "amplitude_mag": 0.37400000000000233,
+      "n_C_obs": 23,
+      "max_internal_gap_days": 34.02400000000489,
+      "kind": "multi_reversal",
+      "n_slope_reversals": 2,
+      "rank_by_C_epoch": 21,
+      "set": "exploration",
+      "testable_pairs_under_published_delays": [
+        "BC",
+        "AC"
+      ]
+    },
+    {
+      "mjd_start": 56331.313,
+      "mjd_end": 56442.177,
+      "mid_mjd": 56386.745,
+      "duration_days": 110.8640000000014,
+      "amplitude_mag": 0.2890000000000015,
+      "n_C_obs": 33,
+      "max_internal_gap_days": 14.026000000005297,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 23,
+      "set": "exploration",
+      "testable_pairs_under_published_delays": [
+        "BC",
+        "AC"
+      ]
+    },
+    {
+      "mjd_start": 56640.299,
+      "mjd_end": 56691.333,
+      "mid_mjd": 56665.816,
+      "duration_days": 51.03399999999965,
+      "amplitude_mag": 0.14199999999999946,
+      "n_C_obs": 30,
+      "max_internal_gap_days": 6.153999999994994,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 25,
+      "set": "exploration",
+      "testable_pairs_under_published_delays": [
+        "BC",
+        "AC"
+      ]
+    },
+    {
+      "mjd_start": 57304.503,
+      "mjd_end": 57390.453,
+      "mid_mjd": 57347.478,
+      "duration_days": 85.95000000000437,
+      "amplitude_mag": 0.18499999999999872,
+      "n_C_obs": 13,
+      "max_internal_gap_days": 20.025000000001455,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 27,
+      "set": "exploration",
+      "testable_pairs_under_published_delays": [
+        "BC",
+        "AC"
+      ]
+    },
+    {
+      "mjd_start": 57462.174,
+      "mjd_end": 57556.164,
+      "mid_mjd": 57509.168999999994,
+      "duration_days": 93.98999999999796,
+      "amplitude_mag": 0.25400000000000134,
+      "n_C_obs": 29,
+      "max_internal_gap_days": 22.95799999999872,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 29,
+      "set": "exploration",
+      "testable_pairs_under_published_delays": []
+    },
+    {
+      "mjd_start": 57759.441,
+      "mjd_end": 57808.489,
+      "mid_mjd": 57783.965,
+      "duration_days": 49.0480000000025,
+      "amplitude_mag": 0.125,
+      "n_C_obs": 16,
+      "max_internal_gap_days": 12.019999999996799,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 31,
+      "set": "exploration",
+      "testable_pairs_under_published_delays": []
+    },
+    {
+      "mjd_start": 57884.153,
+      "mjd_end": 57921.15,
+      "mid_mjd": 57902.6515,
+      "duration_days": 36.99700000000303,
+      "amplitude_mag": 0.14000000000000057,
+      "n_C_obs": 9,
+      "max_internal_gap_days": 15.00499999999738,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 33,
+      "set": "exploration",
+      "testable_pairs_under_published_delays": []
+    }
+  ],
+  "confirmation_reserve_windows": [
+    {
+      "mjd_start": 53313.51,
+      "mjd_end": 53398.518,
+      "mid_mjd": 53356.013999999996,
+      "duration_days": 85.00799999999435,
+      "amplitude_mag": 0.3890000000000029,
+      "n_C_obs": 20,
+      "max_internal_gap_days": 17.95900000000256,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 2,
+      "set": "confirmation_reserve",
+      "testable_pairs_under_published_delays": [
+        "BC",
+        "AC",
+        "DC"
+      ]
+    },
+    {
+      "mjd_start": 53462.336,
+      "mjd_end": 53516.18,
+      "mid_mjd": 53489.258,
+      "duration_days": 53.84399999999732,
+      "amplitude_mag": 0.40500000000000114,
+      "n_C_obs": 31,
+      "max_internal_gap_days": 7.047999999995227,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 4,
+      "set": "confirmation_reserve",
+      "testable_pairs_under_published_delays": [
+        "BC",
+        "AC",
+        "DC"
+      ]
+    },
+    {
+      "mjd_start": 53654.527,
+      "mjd_end": 53694.362,
+      "mid_mjd": 53674.4445,
+      "duration_days": 39.83499999999913,
+      "amplitude_mag": 0.42900000000000205,
+      "n_C_obs": 31,
+      "max_internal_gap_days": 8.000999999996566,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 6,
+      "set": "confirmation_reserve",
+      "testable_pairs_under_published_delays": [
+        "BC",
+        "AC",
+        "DC"
+      ]
+    },
+    {
+      "mjd_start": 53770.292,
+      "mjd_end": 53907.182,
+      "mid_mjd": 53838.737,
+      "duration_days": 136.88999999999942,
+      "amplitude_mag": 0.3420000000000023,
+      "n_C_obs": 55,
+      "max_internal_gap_days": 19.940999999998894,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 8,
+      "set": "confirmation_reserve",
+      "testable_pairs_under_published_delays": [
+        "BC",
+        "AC",
+        "DC"
+      ]
+    },
+    {
+      "mjd_start": 54110.521,
+      "mjd_end": 54233.237,
+      "mid_mjd": 54171.879,
+      "duration_days": 122.71600000000035,
+      "amplitude_mag": 0.3990000000000009,
+      "n_C_obs": 37,
+      "max_internal_gap_days": 14.11200000000099,
+      "kind": "multi_reversal",
+      "n_slope_reversals": 2,
+      "rank_by_C_epoch": 10,
+      "set": "confirmation_reserve",
+      "testable_pairs_under_published_delays": [
+        "BC",
+        "AC",
+        "DC"
+      ]
+    },
+    {
+      "mjd_start": 54393.463,
+      "mjd_end": 54557.288,
+      "mid_mjd": 54475.3755,
+      "duration_days": 163.8249999999971,
+      "amplitude_mag": 0.8969999999999985,
+      "n_C_obs": 55,
+      "max_internal_gap_days": 14.023000000001048,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 12,
+      "set": "confirmation_reserve",
+      "testable_pairs_under_published_delays": [
+        "BC",
+        "AC",
+        "DC"
+      ]
+    },
+    {
+      "mjd_start": 54592.153,
+      "mjd_end": 54629.149,
+      "mid_mjd": 54610.651,
+      "duration_days": 36.995999999999185,
+      "amplitude_mag": 0.3960000000000008,
+      "n_C_obs": 17,
+      "max_internal_gap_days": 7.991000000001804,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 14,
+      "set": "confirmation_reserve",
+      "testable_pairs_under_published_delays": [
+        "BC",
+        "AC",
+        "DC"
+      ]
+    },
+    {
+      "mjd_start": 54822.413,
+      "mjd_end": 55006.173,
+      "mid_mjd": 54914.293000000005,
+      "duration_days": 183.76000000000204,
+      "amplitude_mag": 0.5179999999999971,
+      "n_C_obs": 50,
+      "max_internal_gap_days": 17.005000000004657,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 16,
+      "set": "confirmation_reserve",
+      "testable_pairs_under_published_delays": [
+        "BC",
+        "AC",
+        "DC"
+      ]
+    },
+    {
+      "mjd_start": 55191.515,
+      "mjd_end": 55338.165,
+      "mid_mjd": 55264.84,
+      "duration_days": 146.65000000000146,
+      "amplitude_mag": 0.3009999999999984,
+      "n_C_obs": 25,
+      "max_internal_gap_days": 28.838000000003376,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 18,
+      "set": "confirmation_reserve",
+      "testable_pairs_under_published_delays": [
+        "BC",
+        "AC",
+        "DC"
+      ]
+    },
+    {
+      "mjd_start": 55688.215,
+      "mjd_end": 55732.19,
+      "mid_mjd": 55710.2025,
+      "duration_days": 43.97500000000582,
+      "amplitude_mag": 0.20200000000000173,
+      "n_C_obs": 9,
+      "max_internal_gap_days": 17.956000000005588,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 20,
+      "set": "confirmation_reserve",
+      "testable_pairs_under_published_delays": [
+        "BC",
+        "AC",
+        "DC"
+      ]
+    },
+    {
+      "mjd_start": 56014.338,
+      "mjd_end": 56086.156,
+      "mid_mjd": 56050.247,
+      "duration_days": 71.8179999999993,
+      "amplitude_mag": 0.28500000000000014,
+      "n_C_obs": 20,
+      "max_internal_gap_days": 10.99500000000262,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 22,
+      "set": "confirmation_reserve",
+      "testable_pairs_under_published_delays": [
+        "BC",
+        "AC"
+      ]
+    },
+    {
+      "mjd_start": 56590.431,
+      "mjd_end": 56640.299,
+      "mid_mjd": 56615.365,
+      "duration_days": 49.86800000000221,
+      "amplitude_mag": 0.2079999999999984,
+      "n_C_obs": 17,
+      "max_internal_gap_days": 8.970000000001164,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 24,
+      "set": "confirmation_reserve",
+      "testable_pairs_under_published_delays": [
+        "BC",
+        "AC"
+      ]
+    },
+    {
+      "mjd_start": 56691.333,
+      "mjd_end": 56838.146,
+      "mid_mjd": 56764.739499999996,
+      "duration_days": 146.81300000000192,
+      "amplitude_mag": 0.5730000000000004,
+      "n_C_obs": 73,
+      "max_internal_gap_days": 7.972000000001572,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 26,
+      "set": "confirmation_reserve",
+      "testable_pairs_under_published_delays": [
+        "BC",
+        "AC"
+      ]
+    },
+    {
+      "mjd_start": 57390.453,
+      "mjd_end": 57462.174,
+      "mid_mjd": 57426.313500000004,
+      "duration_days": 71.72099999999773,
+      "amplitude_mag": 0.42799999999999727,
+      "n_C_obs": 20,
+      "max_internal_gap_days": 14.108000000000175,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 28,
+      "set": "confirmation_reserve",
+      "testable_pairs_under_published_delays": [
+        "BC",
+        "AC"
+      ]
+    },
+    {
+      "mjd_start": 57715.472,
+      "mjd_end": 57759.441,
+      "mid_mjd": 57737.4565,
+      "duration_days": 43.96899999999732,
+      "amplitude_mag": 0.26000000000000156,
+      "n_C_obs": 11,
+      "max_internal_gap_days": 11.027999999998428,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 30,
+      "set": "confirmation_reserve",
+      "testable_pairs_under_published_delays": []
+    },
+    {
+      "mjd_start": 57808.489,
+      "mjd_end": 57884.153,
+      "mid_mjd": 57846.320999999996,
+      "duration_days": 75.66399999999703,
+      "amplitude_mag": 0.129999999999999,
+      "n_C_obs": 25,
+      "max_internal_gap_days": 12.1620000000039,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 32,
+      "set": "confirmation_reserve",
+      "testable_pairs_under_published_delays": []
+    },
+    {
+      "mjd_start": 58070.49,
+      "mjd_end": 58290.152,
+      "mid_mjd": 58180.320999999996,
+      "duration_days": 219.6620000000039,
+      "amplitude_mag": 0.6140000000000008,
+      "n_C_obs": 25,
+      "max_internal_gap_days": 34.00200000000041,
+      "kind": "monotonic_sharp",
+      "n_slope_reversals": 0,
+      "rank_by_C_epoch": 34,
+      "set": "confirmation_reserve",
+      "testable_pairs_under_published_delays": []
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "target": "SDSS J1004+4112 (cluster-lensed quasar, z_src=1.734, lens z=0.68)",
+  "delivered_for": "ChatGPT thread T8 \u2014 delay-drift-with-source-epoch discovery test",
+  "primary_source": {
+    "ref": "Munoz et al. 2022, ApJ 937, 34",
+    "doi": "10.3847/1538-4357/ac8877",
+    "arxiv": "2206.08597",
+    "vizier": "J/ApJ/937/34",
+    "license": "CC-BY-4.0 (IOP); CDS/VizieR attribution"
+  },
+  "epochs": 1017,
+  "total_magnitudes": 4072,
+  "per_image_all": {
+    "A": 1018,
+    "B": 1018,
+    "C": 1018,
+    "D": 1018
+  },
+  "per_image_in_paper_fit": {
+    "A": 1018,
+    "B": 1018,
+    "C": 919,
+    "D": 518
+  },
+  "paper_fitted_subset_total": 3473,
+  "note_on_counts": "Table holds 4072 magnitudes across 1018 epochs (all 4 images at every epoch). The paper fitted 3473 = 4072 - 99 (image C at JD-2450000>7600) - 500 (image D at JD-2450000<4600). Those trims are delay-fitting conveniences, NOT quality cuts \u2014 the full 4072 are delivered.",
+  "mjd_min": 52993.023,
+  "mjd_max": 58290.152,
+  "span_days": 5297.129000000001,
+  "span_years": 14.502748802190283,
+  "band": "SDSS r (single band)",
+  "instrument": "FLWO 1.2m Keplercam (single instrument, difference imaging, one calibration)",
+  "caveats": [
+    "No telescope-to-telescope split available in the Munoz curve \u2014 natural disjoint-interval axis is the ~15 observing seasons (14 seasonal gaps >60 d, largest 332 d).",
+    "Image E is not present in any public light curve (A-D only).",
+    "Independent multi-telescope cross-check: Fohlmeister+2007 (VizieR J/ApJ/662/62, 426 epochs; FLWO 262, Wise 83, MDM 56, Palomar 13, APO 9, WIYN 3) included as fohlmeister2007_table1.dat.",
+    "Fohlmeister+2008 has no VizieR catalogue; its 107 epochs were recovered from arXiv:0710.1634 LaTeX source."
+  ],
+  "published_longest_delay": "Dt_DC = 2458.47 +/- 1.02 d (Munoz Table 2, Joint BIC variant)",
+  "files_sha256": {
+    "ReadMe.txt": "a5ca99e7b16d84df243c253cccf3673324d477fb52f39c59664bfefb353c5920",
+    "ReadMe_Fohlmeister2007.txt": "760275f2887c902ea300b2bd3d78ca1f3c5c14ae98a82ec1f7bd6e4862b2818b",
+    "fohlmeister2007_table1.dat": "3f3ef6b4be0b913522b434ad9d2733b2c1b231110c432ce8e68dc33bf3e9c999",
+    "fohlmeister2008_table1.csv": "79c22542c55064133493b0f2a17cb17744fcc2990f39042d50c81e99287c999b",
+    "j1004_lightcurves_long.csv": "6c476e4b829da9de61bfe91675aae1f07b546d1e8d34c4ed3e2e439cff38407e",
+    "parse_check.py": "0c26642a911e8a094e4dbcb7ba1e5f83afcdf395765e0d6b415b256b06c3ea5f",
+    "table1.dat": "e07ef401f7e9b502dea476cd528ba578d114c80975240ad5f6c3b0e811023a0c"
+  },
+  "parse_check": "parse_check.py reproduces every count above"
+}

@@ -1,0 +1,206 @@
+{
+  "caveat": "THIS FILE DID NOT PREVIOUSLY EXIST. i2 requested the filename 'phase120_locked_rar_function.json' assuming Cat held such a file; a find across /Users/resorb/Documents returns no file of that name, and the only textual occurrence of the name on disk is inside i2's own thread mirror. Cat assembled this file on 2026-07-25 from frozen lane artifacts. Every value below carries source_file + source_sha256 + the verbatim field name it was read from. Nothing here was rounded, reconstructed from memory, or inferred.",
+  "assembled_by": "Cat (Claude Opus 5) for ChatGPT thread i2",
+  "assembled_utc": "2026-07-25",
+  "subject": "Phase120 LOCKED RAR / GSG gradient-gate function and its constants",
+
+  "functional_form": {
+    "provenance_note": "Quoted verbatim from the frozen artifact fields, not reconstructed. The 'RAR function' in this programme is the McGaugh+2016 nu-function at the Phase120 a0; the Phase120 GSG prediction additionally multiplies the MOND-minus-Newton boost by a gradient-keyed (Vainshtein-style) gate G_L.",
+    "g_RAR": {
+      "verbatim_field": "nu_formula",
+      "value": "nu(Y)=1/(1-exp(-sqrt(Y))) via g_RAR=g_bar/(1-exp(-sqrt(g_bar/A0_P120))) with small-Y Taylor branch.",
+      "source_file": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_b_2026_06_26/gsg_p120_params_full_precision.json",
+      "source_sha256": "c13eb6cba755d2d8d0db3ebba00d0b8befa08093e2fcdecac1d5cc5ccf13affe"
+    },
+    "g_RAR_reference_implementation": {
+      "verbatim_docstring": "McGaugh+ 2016 fitting function: g = g_b / (1 - exp(-sqrt(g_b/a0))).",
+      "function_name": "rar_mcgaugh",
+      "small_x_branch": "for x = sqrt(g_bar/a0) <= 1e-3 the code returns sqrt(a0*g_bar) exactly (Taylor limit), not the ratio form",
+      "source_file": "/Users/resorb/Documents/Claude Sessions/Transaction Calculus/src/tcg/rar.py",
+      "source_sha256": "44f8dad2e03daa442cf1c29f2289f75470e2434e93a97eb70e1ff5769100520a"
+    },
+    "G_L_gate": {
+      "verbatim_field": "G_L_formula",
+      "value": "G_L=1-exp(-(L_b/L_star)^q)",
+      "source_file": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_b_2026_06_26/gsg_p120_params_full_precision.json",
+      "source_sha256": "c13eb6cba755d2d8d0db3ebba00d0b8befa08093e2fcdecac1d5cc5ccf13affe",
+      "reference_implementation": {
+        "function_name": "screening_vainshtein",
+        "verbatim_docstring": "Gradient-keyed (Vainshtein-style) screening: S(L_b) = 1 - exp(-(L_b / L_star)^q) where L_b = |g_b| / |grad g_b| is the local gradient scale.",
+        "source_file": "/Users/resorb/Documents/Claude Sessions/Transaction Calculus/src/tcg/screened.py",
+        "source_sha256": "8dc12b7b044e655d8241e7acee0da9967892d9ff38cf446447e2268d1bdf5985"
+      }
+    },
+    "g_GSG_P120": {
+      "verbatim_field": "g_GSG_P120_formula",
+      "value": "g_GSG_P120 = g_bar + G_L_total * (g_RAR - g_bar)",
+      "source_file": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_b_2026_06_26/gsg_p120_params_full_precision.json",
+      "source_sha256": "c13eb6cba755d2d8d0db3ebba00d0b8befa08093e2fcdecac1d5cc5ccf13affe"
+    },
+    "L_b_convention": {
+      "verbatim_field": "Lb_convention",
+      "value": "total baryonic log-gradient: L_b = R / max(abs(d ln g_bar / d ln R), 1e-3), matching 206_phase120_cohort_residuals.py",
+      "source_file": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_b_2026_06_26/gsg_p120_params_full_precision.json",
+      "source_sha256": "c13eb6cba755d2d8d0db3ebba00d0b8befa08093e2fcdecac1d5cc5ccf13affe",
+      "warning": "TWO gradient-scale conventions exist on disk in this programme and differ on exactly one SPARC row. The one above is the frozen Phase120 convention. Do not substitute the linear-gradient form L_b = g_bar/abs(dg_bar/dR), which appears only inside the W-window definition (see w_window below)."
+    },
+    "F_P120_activation_fraction": {
+      "verbatim_field": "F_P120_formula",
+      "value": "F_P120=(g_GSG_P120-g_bar)/(g_RAR-g_bar)",
+      "denominator_policy_verbatim_field": "F_P120_denominator_policy",
+      "denominator_policy": "No epsilon, no clipping, no forced [0,1]; valid only on frozen W rows with finite g_bar/g_RAR/g_GSG and denom > 0.",
+      "source_file": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_b_2026_06_26/gsg_p120_params_full_precision.json",
+      "source_sha256": "c13eb6cba755d2d8d0db3ebba00d0b8befa08093e2fcdecac1d5cc5ccf13affe"
+    },
+    "B_chi_status": {
+      "verbatim_field": "Bchi_source",
+      "value": "No component-specific Bchi exists in the verified recovered Phase120 cohort implementation; recovered implementation uses total G_L gate multiplying g_RAR - g_bar.",
+      "source_file": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_b_2026_06_26/gsg_p120_params_full_precision.json",
+      "source_sha256": "c13eb6cba755d2d8d0db3ebba00d0b8befa08093e2fcdecac1d5cc5ccf13affe",
+      "note": "chi_star and p (below) parameterise the B_chi source gate, which is NOT part of the executed Phase120 residual chain."
+    }
+  },
+
+  "parameters": {
+    "_read_me": "TWO PARAMETER SETS EXIST AND ARE BOTH FROZEN. They are NOT the same numbers. Set A is the rounded 'red-lines' / formula-script set; Set B is the full-precision posterior set demanded by the Stage-B worker handoff and recorded in gsg_p120_params_full_precision.json. Cat did NOT choose between them. See parameter_disagreements below.",
+
+    "set_A_rounded_canonical": {
+      "a0_m_s2": 1.114e-10,
+      "L_star_kpc": 0.400,
+      "q": 0.666,
+      "chi_star": 1,
+      "p": 2,
+      "verbatim_fields": {
+        "a0_m_s2": "A0_LEGACY = \"1.114e-10\" (gsg_p120_params_full_precision.json); A0_P120 = 1.114e-10 (206_phase120_cohort_residuals.py line 56); a0_m_s2 = 1.114e-10 (t1/stage_e2 FREEZE.json files)",
+        "L_star_kpc": "L_STAR_P120 = 0.400  # kpc (206_phase120_cohort_residuals.py line 57)",
+        "q": "Q_P120 = 0.666 (206_phase120_cohort_residuals.py line 58)",
+        "chi_star_and_p": "\"Phase 120 canonical (a0 = 1.114e-10, L_* = 0.40 kpc, q = 0.666, chi_* = 1, p = 2)\" (D03_path_assignment_and_residuals.py line 26); \"phase120_chi_star\": 1.0 (same file line 271)"
+      },
+      "source_files": [
+        {
+          "path": "/Users/resorb/Documents/Claude Sessions/Transaction Calculus/Level2_supplement/scripts/206_phase120_cohort_residuals.py",
+          "sha256": "df4e4fd5c6e0ab872128f80507e369bb3f61d52398cc21911623154aeede55a3",
+          "role": "formula_source_hash recorded inside gsg_p120_params_full_precision.json as the recovered Phase120 authority"
+        },
+        {
+          "path": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/t1_ugc11914_high_y_execution_2026_07_21_1116/FREEZE.json",
+          "sha256": "SEE summary_of_corroborating_freezes",
+          "verbatim_field": "a0_m_s2 = 1.114e-10"
+        }
+      ],
+      "provenance_note": "This is the set quoted in the programme red-lines string 'Phase120 LOCKED (a0=1.114e-10, L*=0.4kpc, q=0.666, chi*=1, p=2)' in CAT_HEARTBEAT_STATE.json, and the set actually hard-coded in the formula-authority script. All 2026-07 execution FREEZE.json files across the t1_* and stage_e2_v9x_* lanes use a0 = 1.114e-10."
+    },
+
+    "set_B_full_precision_posterior": {
+      "a0_m_s2": 1.1141506080465188e-10,
+      "L_star_kpc": 0.39992170918182096,
+      "q": 0.6663695144357871,
+      "chi_star": 1.0,
+      "p": 2.0,
+      "upsilon_disk": 0.5,
+      "upsilon_bulge": 0.7,
+      "kpc_m": 3.0856775814913673e19,
+      "verbatim_fields": {
+        "a0_m_s2": "A0_P120 = \"1.1141506080465188e-10\"",
+        "L_star_kpc": "L_STAR_P120_kpc = \"0.39992170918182096\"",
+        "q": "Q_P120 = \"0.6663695144357871\"",
+        "chi_star": "CHI_STAR_P120 = \"1.0\"",
+        "p": "P_P120 = \"2.0\"",
+        "upsilon_disk": "UPSILON_D_P120 = \"0.5\"",
+        "upsilon_bulge": "UPSILON_B_P120 = \"0.7\"",
+        "kpc_m": "KPC_M = \"3.0856775814913673e19\""
+      },
+      "source_file": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_b_2026_06_26/gsg_p120_params_full_precision.json",
+      "source_sha256": "c13eb6cba755d2d8d0db3ebba00d0b8befa08093e2fcdecac1d5cc5ccf13affe",
+      "note_all_values_stored_as_JSON_STRINGS_in_source": true,
+      "upstream_origin": {
+        "provenance_note": "a0, L_star and q in Set B are the linear posteriors of the Phase120 latent-mixture MCMC refit (163 galaxies, 3269 radii, 48 walkers, 115200 samples). This is where the extra digits come from; they are NOT a re-rounding of Set A.",
+        "source_file": "/Users/resorb/Documents/My Papers/TCG Main Paper/Artefacts/phase120_latent_mixture.json",
+        "source_sha256": "56f1907e22209deaa92bd369c3fe116077b6112914d7172b1241b352b1a1613d",
+        "verbatim_fields": {
+          "a0_msec2": 1.1141506080465188e-10,
+          "L_star_kpc": 0.39992170918182096,
+          "q": 0.6663695144357871
+        },
+        "marginal_uncertainties_dex": {
+          "log10_a0_median": -9.953056098370123,
+          "log10_a0_lower_1sigma": 0.005799939207534521,
+          "log10_a0_upper_1sigma": 0.006148115147464495,
+          "log10_L_star_m_median": 19.091325525054508,
+          "log10_L_star_m_lower_1sigma": 0.07597644577226959,
+          "log10_L_star_m_upper_1sigma": 0.06427440579011545,
+          "q_lower_1sigma": 0.06483775490993748,
+          "q_upper_1sigma": 0.06826894919515192
+        }
+      },
+      "chi_star_and_p_meaning": {
+        "provenance_note": "chi_star and p do NOT enter G_L. They parameterise the B_chi source-gate sigmoid, whose fiducial point is chi_* = 1, p = 2.",
+        "verbatim_code": "def B_chi_sigmoid(chi_B, chi_star, p): return cb_p / (chi_star ** p + cb_p)  # cb_p = chi_B ** p",
+        "verbatim_comment": "fiducial point is chi_* = 1, p = 2.",
+        "source_file": "/Users/resorb/Documents/Claude Sessions/Transaction Calculus/Level2_supplement/scripts/187_chi_star_p_viability_map.py",
+        "warning": "B_chi is NOT part of the executed Phase120 residual chain (see functional_form.B_chi_status). Carrying chi_star/p in a 'locked RAR function' file is therefore descriptive of the theory, not of the code that produced any Phase120 number."
+      }
+    }
+  },
+
+  "w_window": {
+    "provenance_note": "The frozen selection window on which every Phase120 / Stage-C / Stage-E1 number was computed. Quoted verbatim.",
+    "verbatim_field": "W_window_formula",
+    "value": "0.03 <= g_bar/1.1141506e-10 <= 1; linear-gradient L_b=g_bar/abs(dg_bar/dR); G_L>=0.8; g_obs>0.",
+    "verbatim_field_source": "W_window_source",
+    "source_note": "Frozen Cat scout W_i rows from aeff_ipr_scout_results.json / cat_aeff_ipr_scout.py; counts matched exactly.",
+    "source_file": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_b_2026_06_26/gsg_p120_params_full_precision.json",
+    "source_sha256": "c13eb6cba755d2d8d0db3ebba00d0b8befa08093e2fcdecac1d5cc5ccf13affe",
+    "third_a0_truncation_flag": "Note the W-window string uses a THIRD truncation of a0: 1.1141506e-10 (7 significant figures), neither 1.114e-10 nor 1.1141506080465188e-10. Reported, not reconciled."
+  },
+
+  "component_policies": {
+    "signed_gas_policy": "Vgas*abs(Vgas)",
+    "stellar_component_policy": "Y_disk*abs(Vdisk)*Vdisk and Y_bulge*abs(Vbul)*Vbul; SPARC stellar velocities are nonnegative in this sample.",
+    "acceleration_unit": "m/s^2",
+    "velocity_unit": "km/s",
+    "source_file": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/sparc_rar_aeff_ipr/phase120_stage_b_2026_06_26/gsg_p120_params_full_precision.json",
+    "source_sha256": "c13eb6cba755d2d8d0db3ebba00d0b8befa08093e2fcdecac1d5cc5ccf13affe"
+  },
+
+  "parameter_disagreements": [
+    {
+      "parameter": "a0",
+      "values_found": ["1.114e-10", "1.1141506e-10", "1.1141506080465188e-10"],
+      "where": "1.114e-10 in the red-lines string, in 206_phase120_cohort_residuals.py (A0_P120, the declared formula authority), and in every 2026-07 t1_*/stage_e2_* FREEZE.json; 1.1141506e-10 in the W_window_formula string and in card2 result_v2.json; 1.1141506080465188e-10 in gsg_p120_params_full_precision.json (A0_P120) and phase120_latent_mixture.json (linear_posteriors.a0_msec2), and mandated as a Required Constant by PHASE120_RECOMPUTE_STAGE_B_WORKER_HANDOFF.md.",
+      "resolution": "NOT RESOLVED BY CAT. Reported as-is. The two differ by 1.35e-4 relative."
+    },
+    {
+      "parameter": "L_star",
+      "values_found": ["0.400 kpc", "0.39992170918182096 kpc"],
+      "where": "0.400 in the red-lines string and in 206_phase120_cohort_residuals.py (L_STAR_P120); 0.39992170918182096 in gsg_p120_params_full_precision.json and phase120_latent_mixture.json.",
+      "resolution": "NOT RESOLVED BY CAT. Relative difference 1.96e-4."
+    },
+    {
+      "parameter": "q",
+      "values_found": ["0.666", "0.6663695144357871"],
+      "where": "0.666 in the red-lines string and in 206_phase120_cohort_residuals.py (Q_P120); 0.6663695144357871 in gsg_p120_params_full_precision.json and phase120_latent_mixture.json.",
+      "resolution": "NOT RESOLVED BY CAT. Relative difference 5.55e-4."
+    },
+    {
+      "parameter": "chi_star, p",
+      "values_found": ["chi_star = 1, p = 2 (consistent everywhere)"],
+      "where": "Red-lines string; D03_path_assignment_and_residuals.py; PHASE120_RECOMPUTE_STAGE_A/B_WORKER_HANDOFF.md; gsg_p120_params_full_precision.json.",
+      "resolution": "NO DISAGREEMENT. But see chi_star_and_p_meaning: these govern B_chi, which the executed Phase120 chain does not use."
+    }
+  ],
+
+  "corroborating_freezes_for_a0_1p114e-10": [
+    "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/t1_ugc11914_high_y_execution_2026_07_21_1116/FREEZE.json  (field: a0_m_s2)",
+    "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/t1_ugc11455_v3_heldout_execution_2026_07_21_1209/FREEZE.json  (field: a0_m_s2)",
+    "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/stage_e2_v92_ngc2976_replacement_source_2026_07_22_1920/V92_PROTOCOL_FREEZE.json  (field: domain_native_variables.a0 = 'fixed acceleration scale, 1.114e-10 m s^-2')",
+    "/Users/resorb/Documents/My Papers/Research Program Management/LEAD_READINESS_LEDGER.json",
+    "/Users/resorb/Documents/My Papers/Research Program Management/PARALLEL_LANE_STATE.json",
+    "/Users/resorb/Documents/My Papers/Research Program Management/SCAN_GRAVEYARD_LEDGER.json"
+  ],
+
+  "not_found": [
+    "No file named phase120_locked_rar_function.json or phase120_rar_function.json exists anywhere under /Users/resorb/Documents.",
+    "No single frozen artifact carries all five red-line parameters (a0, L*, q, chi*, p) at full precision together with the functional form. This file is the first assembly of that set."
+  ]
+}

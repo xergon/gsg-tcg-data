@@ -1,0 +1,263 @@
+[2026-07-24T21:04:27Z][2014-07] START extract HMAX=96 MIN_PLIES=100 MAX_GAMES=120000
+[2026-07-24T21:05:02Z][2014-07] scanned=100000 kept=15013 short=84987 malformed=0 elapsed=34.1s
+[2026-07-24T21:05:37Z][2014-07] scanned=200000 kept=30246 short=169754 malformed=0 elapsed=69.5s
+[2026-07-24T21:06:12Z][2014-07] scanned=300000 kept=45590 short=254410 malformed=0 elapsed=104.2s
+[2026-07-24T21:06:25Z][2016-01] START extract HMAX=96 MIN_PLIES=100 MAX_GAMES=120000
+[2026-07-24T21:06:46Z][2014-07] scanned=400000 kept=60498 short=339502 malformed=0 elapsed=138.5s
+[2026-07-24T21:06:58Z][2016-01] scanned=100000 kept=14081 short=85919 malformed=0 elapsed=32.5s
+[2026-07-24T21:07:21Z][2014-07] scanned=500000 kept=75815 short=424185 malformed=0 elapsed=173.7s
+[2026-07-24T21:07:30Z][2016-01] scanned=200000 kept=28360 short=171640 malformed=0 elapsed=65.1s
+[2026-07-24T21:07:56Z][2014-07] scanned=600000 kept=91030 short=508970 malformed=0 elapsed=208.3s
+[2026-07-24T21:08:04Z][2016-01] scanned=300000 kept=43028 short=256972 malformed=0 elapsed=98.7s
+[2026-07-24T21:08:30Z][2014-07] scanned=700000 kept=106084 short=593916 malformed=0 elapsed=242.8s
+[2026-07-24T21:08:37Z][2016-01] scanned=400000 kept=57849 short=342151 malformed=0 elapsed=132.5s
+[2026-07-24T21:09:02Z][2014-07] STREAM DONE scanned=792977 kept=120000 short=672977 malformed=0 elapsed=275.0s
+[2026-07-24T21:09:03Z][2014-07] WROTE out/tokens_2014-07.npz  {"period": "2014-07", "HMAX": 96, "MIN_PLIES": 100, "n_games_kept": 120000, "n_games_scanned": 792977, "n_rejected_short": 672977, "n_rejected_malformed": 0, "total_plies": 14498360, "mean_game_plies": 120.81966666666666, "extract_wall_s": 275.2}
+[2026-07-24T21:09:10Z][2016-01] scanned=500000 kept=72093 short=427907 malformed=0 elapsed=165.2s
+[2026-07-24T21:09:43Z][2016-01] scanned=600000 kept=86628 short=513372 malformed=0 elapsed=197.8s
+[2026-07-24T21:10:15Z][2016-01] scanned=700000 kept=101075 short=598925 malformed=0 elapsed=230.1s
+[2026-07-24T21:10:47Z][2016-01] scanned=800000 kept=115283 short=684717 malformed=0 elapsed=262.0s
+[2026-07-24T21:10:58Z][2016-01] STREAM DONE scanned=832018 kept=120000 short=712018 malformed=0 elapsed=272.6s
+[2026-07-24T21:10:58Z][2016-01] WROTE out/tokens_2016-01.npz  {"period": "2016-01", "HMAX": 96, "MIN_PLIES": 100, "n_games_kept": 120000, "n_games_scanned": 832018, "n_rejected_short": 712018, "n_rejected_malformed": 0, "total_plies": 14407248, "mean_game_plies": 120.0604, "extract_wall_s": 272.8}
+[2026-07-24T21:12:19Z][2016-01/matched] loaded ng_all=120000 using ng=30000 total_plies=3604325
+[2026-07-24T21:12:19Z][2014-07/matched] loaded ng_all=120000 using ng=30000 total_plies=3622668
+[2026-07-24T21:12:19Z][2014-07/matched] panel rows N=742668 (mean 24.8 anchors/game)
+[2026-07-24T21:12:19Z][2016-01/matched] panel rows N=724325 (mean 24.1 anchors/game)
+[2026-07-24T21:12:23Z][2014-07/matched] observable fromto: alphabet K=1792 over 3622668 plies
+[2026-07-24T21:12:23Z][2016-01/matched] observable fromto: alphabet K=1792 over 3604325 plies
+[2026-07-24T21:12:24Z][2014-07/matched]   done REAL / fromto  (4.1s)
+[2026-07-24T21:12:24Z][2016-01/matched]   done REAL / fromto  (4.1s)
+[2026-07-24T21:12:24Z][2014-07/matched]   done WITHIN_GAME_SCRAMBLE / fromto  (4.5s)
+[2026-07-24T21:12:24Z][2016-01/matched]   done WITHIN_GAME_SCRAMBLE / fromto  (4.5s)
+[2026-07-24T21:12:24Z][2016-01/matched]   done EXACT_TARGET_MARGINAL_PERMUTATION / fromto  (5.1s)
+[2026-07-24T21:12:25Z][2014-07/matched]   done EXACT_TARGET_MARGINAL_PERMUTATION / fromto  (5.1s)
+[2026-07-24T21:12:25Z][2016-01/matched]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / fromto  (5.5s)
+[2026-07-24T21:12:25Z][2014-07/matched]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / fromto  (5.5s)
+[2026-07-24T21:12:25Z][2016-01/matched] observable san_canon: alphabet K=774 over 3604325 plies
+[2026-07-24T21:12:25Z][2014-07/matched] observable san_canon: alphabet K=774 over 3622668 plies
+[2026-07-24T21:12:25Z][2016-01/matched]   done REAL / san_canon  (5.9s)
+[2026-07-24T21:12:25Z][2014-07/matched]   done REAL / san_canon  (5.9s)
+[2026-07-24T21:12:26Z][2016-01/matched]   done WITHIN_GAME_SCRAMBLE / san_canon  (6.1s)
+[2026-07-24T21:12:26Z][2014-07/matched]   done WITHIN_GAME_SCRAMBLE / san_canon  (6.1s)
+[2026-07-24T21:12:26Z][2016-01/matched]   done EXACT_TARGET_MARGINAL_PERMUTATION / san_canon  (6.5s)
+[2026-07-24T21:12:26Z][2014-07/matched]   done EXACT_TARGET_MARGINAL_PERMUTATION / san_canon  (6.5s)
+[2026-07-24T21:12:26Z][2016-01/matched]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / san_canon  (6.7s)
+[2026-07-24T21:12:26Z][2014-07/matched]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / san_canon  (6.8s)
+[2026-07-24T21:12:26Z][2016-01/matched] observable san_matkey: alphabet K=53159 over 3604325 plies
+[2026-07-24T21:12:26Z][2014-07/matched] observable san_matkey: alphabet K=53705 over 3622668 plies
+[2026-07-24T21:12:27Z][2016-01/matched]   done REAL / san_matkey  (7.8s)
+[2026-07-24T21:12:27Z][2014-07/matched]   done REAL / san_matkey  (7.8s)
+[2026-07-24T21:12:28Z][2016-01/matched]   done WITHIN_GAME_SCRAMBLE / san_matkey  (8.8s)
+[2026-07-24T21:12:28Z][2014-07/matched]   done WITHIN_GAME_SCRAMBLE / san_matkey  (8.9s)
+[2026-07-24T21:12:29Z][2016-01/matched]   done EXACT_TARGET_MARGINAL_PERMUTATION / san_matkey  (9.8s)
+[2026-07-24T21:12:29Z][2014-07/matched]   done EXACT_TARGET_MARGINAL_PERMUTATION / san_matkey  (9.9s)
+[2026-07-24T21:12:30Z][2016-01/matched]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / san_matkey  (10.8s)
+[2026-07-24T21:12:30Z][2014-07/matched]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / san_matkey  (10.9s)
+[2026-07-24T21:12:31Z][2016-01/matched] observable san_statekey: alphabet K=3310025 over 3604325 plies
+[2026-07-24T21:12:31Z][2014-07/matched] observable san_statekey: alphabet K=3332339 over 3622668 plies
+[2026-07-24T21:12:32Z][2016-01/matched]   done REAL / san_statekey  (12.9s)
+[2026-07-24T21:12:33Z][2014-07/matched]   done REAL / san_statekey  (13.2s)
+[2026-07-24T21:12:34Z][2016-01/matched]   done WITHIN_GAME_SCRAMBLE / san_statekey  (14.8s)
+[2026-07-24T21:12:34Z][2014-07/matched]   done WITHIN_GAME_SCRAMBLE / san_statekey  (15.0s)
+[2026-07-24T21:12:36Z][2016-01/matched]   done EXACT_TARGET_MARGINAL_PERMUTATION / san_statekey  (16.7s)
+[2026-07-24T21:12:36Z][2014-07/matched]   done EXACT_TARGET_MARGINAL_PERMUTATION / san_statekey  (17.0s)
+[2026-07-24T21:12:38Z][2016-01/matched]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / san_statekey  (18.5s)
+[2026-07-24T21:12:38Z][2014-07/matched]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / san_statekey  (18.8s)
+[2026-07-24T21:12:44Z][2016-01/matched]   boot fromto 10/60 (25.0s)
+[2026-07-24T21:12:45Z][2014-07/matched]   boot fromto 10/60 (25.4s)
+[2026-07-24T21:12:51Z][2016-01/matched]   boot fromto 20/60 (31.6s)
+[2026-07-24T21:12:52Z][2014-07/matched]   boot fromto 20/60 (32.3s)
+[2026-07-24T21:12:58Z][2016-01/matched]   boot fromto 30/60 (38.4s)
+[2026-07-24T21:12:59Z][2014-07/matched]   boot fromto 30/60 (39.4s)
+[2026-07-24T21:13:05Z][2016-01/matched]   boot fromto 40/60 (45.2s)
+[2026-07-24T21:13:06Z][2014-07/matched]   boot fromto 40/60 (46.3s)
+[2026-07-24T21:13:11Z][2016-01/matched]   boot fromto 50/60 (51.9s)
+[2026-07-24T21:13:13Z][2014-07/matched]   boot fromto 50/60 (53.3s)
+[2026-07-24T21:13:18Z][2016-01/matched]   boot fromto 60/60 (59.1s)
+[2026-07-24T21:13:20Z][2014-07/matched]   boot fromto 60/60 (60.5s)
+[2026-07-24T21:13:23Z][2016-01/matched]   boot san_canon 10/60 (63.1s)
+[2026-07-24T21:13:24Z][2014-07/matched]   boot san_canon 10/60 (64.7s)
+[2026-07-24T21:13:27Z][2016-01/matched]   boot san_canon 20/60 (67.3s)
+[2026-07-24T21:13:28Z][2014-07/matched]   boot san_canon 20/60 (68.9s)
+[2026-07-24T21:13:31Z][2016-01/matched]   boot san_canon 30/60 (71.3s)
+[2026-07-24T21:13:32Z][2014-07/matched]   boot san_canon 30/60 (73.0s)
+[2026-07-24T21:13:35Z][2016-01/matched]   boot san_canon 40/60 (75.3s)
+[2026-07-24T21:13:37Z][2014-07/matched]   boot san_canon 40/60 (77.2s)
+[2026-07-24T21:13:39Z][2016-01/matched]   boot san_canon 50/60 (79.4s)
+[2026-07-24T21:13:41Z][2014-07/matched]   boot san_canon 50/60 (81.5s)
+[2026-07-24T21:13:43Z][2016-01/matched]   boot san_canon 60/60 (83.5s)
+[2026-07-24T21:13:43Z][2016-01/matched] EMIT DONE wall=83.5s
+[2026-07-24T21:13:45Z][2014-07/matched]   boot san_canon 60/60 (85.4s)
+[2026-07-24T21:13:45Z][2014-07/matched] EMIT DONE wall=85.4s
+[2026-07-24T21:14:02Z][2014-07/power] loaded ng_all=120000 using ng=120000 total_plies=14498360
+[2026-07-24T21:14:02Z][2016-01/power] loaded ng_all=120000 using ng=120000 total_plies=14407248
+[2026-07-24T21:14:02Z][2014-07/power] panel rows N=2978360 (mean 24.8 anchors/game)
+[2026-07-24T21:14:02Z][2016-01/power] panel rows N=2887248 (mean 24.1 anchors/game)
+[2026-07-24T21:14:30Z][2016-01/power] observable fromto: alphabet K=1792 over 14407248 plies
+[2026-07-24T21:14:30Z][2014-07/power] observable fromto: alphabet K=1792 over 14498360 plies
+[2026-07-24T21:14:31Z][2016-01/power]   done REAL / fromto  (28.9s)
+[2026-07-24T21:14:31Z][2014-07/power]   done REAL / fromto  (29.0s)
+[2026-07-24T21:14:32Z][2016-01/power]   done WITHIN_GAME_SCRAMBLE / fromto  (30.0s)
+[2026-07-24T21:14:32Z][2014-07/power]   done WITHIN_GAME_SCRAMBLE / fromto  (30.1s)
+[2026-07-24T21:14:34Z][2016-01/power]   done EXACT_TARGET_MARGINAL_PERMUTATION / fromto  (31.9s)
+[2026-07-24T21:14:34Z][2014-07/power]   done EXACT_TARGET_MARGINAL_PERMUTATION / fromto  (32.1s)
+[2026-07-24T21:14:35Z][2016-01/power]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / fromto  (33.0s)
+[2026-07-24T21:14:35Z][2014-07/power]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / fromto  (33.3s)
+[2026-07-24T21:14:36Z][2016-01/power] observable san_canon: alphabet K=781 over 14407248 plies
+[2026-07-24T21:14:36Z][2014-07/power] observable san_canon: alphabet K=783 over 14498360 plies
+[2026-07-24T21:14:37Z][2016-01/power]   done REAL / san_canon  (34.7s)
+[2026-07-24T21:14:37Z][2014-07/power]   done REAL / san_canon  (34.9s)
+[2026-07-24T21:14:37Z][2016-01/power]   done WITHIN_GAME_SCRAMBLE / san_canon  (35.4s)
+[2026-07-24T21:14:38Z][2014-07/power]   done WITHIN_GAME_SCRAMBLE / san_canon  (35.7s)
+[2026-07-24T21:14:39Z][2016-01/power]   done EXACT_TARGET_MARGINAL_PERMUTATION / san_canon  (37.2s)
+[2026-07-24T21:14:39Z][2014-07/power]   done EXACT_TARGET_MARGINAL_PERMUTATION / san_canon  (37.5s)
+[2026-07-24T21:14:40Z][2016-01/power]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / san_canon  (37.9s)
+[2026-07-24T21:14:40Z][2014-07/power]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / san_canon  (38.2s)
+[2026-07-24T21:14:41Z][2016-01/power] observable san_matkey: alphabet K=84323 over 14407248 plies
+[2026-07-24T21:14:41Z][2014-07/power] observable san_matkey: alphabet K=86309 over 14498360 plies
+[2026-07-24T21:14:44Z][2016-01/power]   done REAL / san_matkey  (42.0s)
+[2026-07-24T21:14:44Z][2014-07/power]   done REAL / san_matkey  (42.4s)
+[2026-07-24T21:14:48Z][2016-01/power]   done WITHIN_GAME_SCRAMBLE / san_matkey  (46.0s)
+[2026-07-24T21:14:48Z][2014-07/power]   done WITHIN_GAME_SCRAMBLE / san_matkey  (46.6s)
+[2026-07-24T21:14:52Z][2016-01/power]   done EXACT_TARGET_MARGINAL_PERMUTATION / san_matkey  (50.3s)
+[2026-07-24T21:14:53Z][2014-07/power]   done EXACT_TARGET_MARGINAL_PERMUTATION / san_matkey  (51.0s)
+[2026-07-24T21:14:56Z][2016-01/power]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / san_matkey  (54.3s)
+[2026-07-24T21:14:57Z][2014-07/power]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / san_matkey  (55.2s)
+[2026-07-24T21:14:58Z][2016-01/power] observable san_statekey: alphabet K=13007250 over 14407248 plies
+[2026-07-24T21:14:59Z][2014-07/power] observable san_statekey: alphabet K=13119973 over 14498360 plies
+[2026-07-24T21:15:05Z][2016-01/power]   done REAL / san_statekey  (63.1s)
+[2026-07-24T21:15:06Z][2014-07/power]   done REAL / san_statekey  (64.3s)
+[2026-07-24T21:15:12Z][2016-01/power]   done WITHIN_GAME_SCRAMBLE / san_statekey  (70.5s)
+[2026-07-24T21:15:14Z][2014-07/power]   done WITHIN_GAME_SCRAMBLE / san_statekey  (72.0s)
+[2026-07-24T21:15:20Z][2016-01/power]   done EXACT_TARGET_MARGINAL_PERMUTATION / san_statekey  (78.5s)
+[2026-07-24T21:15:22Z][2014-07/power]   done EXACT_TARGET_MARGINAL_PERMUTATION / san_statekey  (80.3s)
+[2026-07-24T21:15:28Z][2016-01/power]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / san_statekey  (86.0s)
+[2026-07-24T21:15:30Z][2014-07/power]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / san_statekey  (88.0s)
+[2026-07-24T21:15:48Z][2014-07/matched] loaded ng_all=120000 using ng=30000 total_plies=3622668
+[2026-07-24T21:15:48Z][2014-07/matched] panel rows N=742668 (mean 24.8 anchors/game)
+[2026-07-24T21:15:48Z][2016-01/matched] loaded ng_all=120000 using ng=30000 total_plies=3604325
+[2026-07-24T21:15:48Z][2016-01/matched] panel rows N=724325 (mean 24.1 anchors/game)
+[2026-07-24T21:15:52Z][2014-07/matched] observable fromto: alphabet K=1792 over 3622668 plies
+[2026-07-24T21:15:52Z][2016-01/matched] observable fromto: alphabet K=1792 over 3604325 plies
+[2026-07-24T21:15:53Z][2014-07/matched]   done REAL / fromto  (4.9s)
+[2026-07-24T21:15:53Z][2016-01/matched]   done REAL / fromto  (4.9s)
+[2026-07-24T21:15:54Z][2014-07/matched]   done WITHIN_GAME_SCRAMBLE / fromto  (5.9s)
+[2026-07-24T21:15:54Z][2016-01/matched]   done WITHIN_GAME_SCRAMBLE / fromto  (5.9s)
+[2026-07-24T21:15:54Z][2014-07/matched]   done EXACT_TARGET_MARGINAL_PERMUTATION / fromto  (6.5s)
+[2026-07-24T21:15:54Z][2016-01/matched]   done EXACT_TARGET_MARGINAL_PERMUTATION / fromto  (6.4s)
+[2026-07-24T21:15:55Z][2014-07/matched]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / fromto  (7.4s)
+[2026-07-24T21:15:55Z][2016-01/matched]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / fromto  (7.4s)
+[2026-07-24T21:15:55Z][2014-07/matched] observable san_canon: alphabet K=774 over 3622668 plies
+[2026-07-24T21:15:55Z][2016-01/matched] observable san_canon: alphabet K=774 over 3604325 plies
+[2026-07-24T21:15:56Z][2014-07/matched]   done REAL / san_canon  (8.1s)
+[2026-07-24T21:15:56Z][2016-01/matched]   done REAL / san_canon  (8.1s)
+[2026-07-24T21:15:56Z][2014-07/matched]   done WITHIN_GAME_SCRAMBLE / san_canon  (8.7s)
+[2026-07-24T21:15:56Z][2016-01/matched]   done WITHIN_GAME_SCRAMBLE / san_canon  (8.6s)
+[2026-07-24T21:15:57Z][2016-01/matched]   done EXACT_TARGET_MARGINAL_PERMUTATION / san_canon  (9.0s)
+[2026-07-24T21:15:57Z][2014-07/matched]   done EXACT_TARGET_MARGINAL_PERMUTATION / san_canon  (9.1s)
+[2026-07-24T21:15:57Z][2016-01/matched]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / san_canon  (9.6s)
+[2026-07-24T21:15:57Z][2014-07/matched]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / san_canon  (9.7s)
+[2026-07-24T21:15:57Z][2016-01/matched] observable san_matkey: alphabet K=53159 over 3604325 plies
+[2026-07-24T21:15:57Z][2014-07/matched] observable san_matkey: alphabet K=53705 over 3622668 plies
+[2026-07-24T21:15:59Z][2016-01/matched]   done REAL / san_matkey  (11.5s)
+[2026-07-24T21:15:59Z][2014-07/matched]   done REAL / san_matkey  (11.7s)
+[2026-07-24T21:16:01Z][2016-01/matched]   done WITHIN_GAME_SCRAMBLE / san_matkey  (13.7s)
+[2026-07-24T21:16:01Z][2014-07/matched]   done WITHIN_GAME_SCRAMBLE / san_matkey  (13.9s)
+[2026-07-24T21:16:02Z][2016-01/matched]   done EXACT_TARGET_MARGINAL_PERMUTATION / san_matkey  (14.8s)
+[2026-07-24T21:16:03Z][2014-07/matched]   done EXACT_TARGET_MARGINAL_PERMUTATION / san_matkey  (15.0s)
+[2026-07-24T21:16:05Z][2016-01/matched]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / san_matkey  (16.9s)
+[2026-07-24T21:16:05Z][2014-07/matched]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / san_matkey  (17.1s)
+[2026-07-24T21:16:05Z][2016-01/matched] observable san_statekey: alphabet K=3310025 over 3604325 plies
+[2026-07-24T21:16:05Z][2014-07/matched] observable san_statekey: alphabet K=3332339 over 3622668 plies
+[2026-07-24T21:16:09Z][2016-01/matched]   done REAL / san_statekey  (20.9s)
+[2026-07-24T21:16:09Z][2014-07/matched]   done REAL / san_statekey  (21.2s)
+[2026-07-24T21:16:12Z][2016-01/matched]   done WITHIN_GAME_SCRAMBLE / san_statekey  (24.6s)
+[2026-07-24T21:16:13Z][2014-07/matched]   done WITHIN_GAME_SCRAMBLE / san_statekey  (25.1s)
+[2026-07-24T21:16:14Z][2016-01/matched]   done EXACT_TARGET_MARGINAL_PERMUTATION / san_statekey  (26.6s)
+[2026-07-24T21:16:15Z][2014-07/matched]   done EXACT_TARGET_MARGINAL_PERMUTATION / san_statekey  (27.1s)
+[2026-07-24T21:16:18Z][2016-01/matched]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / san_statekey  (30.2s)
+[2026-07-24T21:16:18Z][2014-07/matched]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / san_statekey  (30.8s)
+[2026-07-24T21:16:24Z][2016-01/matched]   boot fromto 10/60 (36.8s)
+[2026-07-24T21:16:25Z][2014-07/matched]   boot fromto 10/60 (37.6s)
+[2026-07-24T21:16:31Z][2016-01/matched]   boot fromto 20/60 (43.7s)
+[2026-07-24T21:16:32Z][2014-07/matched]   boot fromto 20/60 (44.7s)
+[2026-07-24T21:16:38Z][2016-01/matched]   boot fromto 30/60 (50.3s)
+[2026-07-24T21:16:39Z][2014-07/matched]   boot fromto 30/60 (51.5s)
+[2026-07-24T21:16:45Z][2016-01/matched]   boot fromto 40/60 (57.0s)
+[2026-07-24T21:16:46Z][2014-07/matched]   boot fromto 40/60 (58.4s)
+[2026-07-24T21:16:51Z][2016-01/matched]   boot fromto 50/60 (63.7s)
+[2026-07-24T21:16:53Z][2014-07/matched]   boot fromto 50/60 (65.3s)
+[2026-07-24T21:16:58Z][2016-01/matched]   boot fromto 60/60 (70.4s)
+[2026-07-24T21:17:00Z][2014-07/matched]   boot fromto 60/60 (72.1s)
+[2026-07-24T21:17:02Z][2016-01/matched]   boot san_canon 10/60 (74.5s)
+[2026-07-24T21:17:04Z][2014-07/matched]   boot san_canon 10/60 (76.2s)
+[2026-07-24T21:17:06Z][2016-01/matched]   boot san_canon 20/60 (78.6s)
+[2026-07-24T21:17:08Z][2014-07/matched]   boot san_canon 20/60 (80.5s)
+[2026-07-24T21:17:11Z][2016-01/matched]   boot san_canon 30/60 (82.9s)
+[2026-07-24T21:17:12Z][2014-07/matched]   boot san_canon 30/60 (84.9s)
+[2026-07-24T21:17:15Z][2016-01/matched]   boot san_canon 40/60 (87.0s)
+[2026-07-24T21:17:17Z][2014-07/matched]   boot san_canon 40/60 (89.1s)
+[2026-07-24T21:17:19Z][2016-01/matched]   boot san_canon 50/60 (91.1s)
+[2026-07-24T21:17:21Z][2014-07/matched]   boot san_canon 50/60 (93.3s)
+[2026-07-24T21:17:23Z][2016-01/matched]   boot san_canon 60/60 (95.4s)
+[2026-07-24T21:17:23Z][2016-01/matched] EMIT DONE wall=95.4s
+[2026-07-24T21:17:25Z][2014-07/matched]   boot san_canon 60/60 (97.4s)
+[2026-07-24T21:17:25Z][2014-07/matched] EMIT DONE wall=97.4s
+[2026-07-24T21:18:24Z][2014-07/power] loaded ng_all=120000 using ng=120000 total_plies=14498360
+[2026-07-24T21:18:24Z][2016-01/power] loaded ng_all=120000 using ng=120000 total_plies=14407248
+[2026-07-24T21:18:24Z][2014-07/power] panel rows N=2978360 (mean 24.8 anchors/game)
+[2026-07-24T21:18:24Z][2016-01/power] panel rows N=2887248 (mean 24.1 anchors/game)
+[2026-07-24T21:18:51Z][2016-01/power] observable fromto: alphabet K=1792 over 14407248 plies
+[2026-07-24T21:18:51Z][2014-07/power] observable fromto: alphabet K=1792 over 14498360 plies
+[2026-07-24T21:18:54Z][2016-01/power]   done REAL / fromto  (29.5s)
+[2026-07-24T21:18:54Z][2014-07/power]   done REAL / fromto  (29.7s)
+[2026-07-24T21:18:57Z][2016-01/power]   done WITHIN_GAME_SCRAMBLE / fromto  (32.2s)
+[2026-07-24T21:18:57Z][2014-07/power]   done WITHIN_GAME_SCRAMBLE / fromto  (32.4s)
+[2026-07-24T21:18:58Z][2016-01/power]   done EXACT_TARGET_MARGINAL_PERMUTATION / fromto  (34.0s)
+[2026-07-24T21:18:59Z][2014-07/power]   done EXACT_TARGET_MARGINAL_PERMUTATION / fromto  (34.3s)
+[2026-07-24T21:19:01Z][2016-01/power]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / fromto  (36.8s)
+[2026-07-24T21:19:01Z][2014-07/power]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / fromto  (37.0s)
+[2026-07-24T21:19:02Z][2016-01/power] observable san_canon: alphabet K=781 over 14407248 plies
+[2026-07-24T21:19:02Z][2014-07/power] observable san_canon: alphabet K=783 over 14498360 plies
+[2026-07-24T21:19:04Z][2016-01/power]   done REAL / san_canon  (39.8s)
+[2026-07-24T21:19:04Z][2014-07/power]   done REAL / san_canon  (40.2s)
+[2026-07-24T21:19:06Z][2016-01/power]   done WITHIN_GAME_SCRAMBLE / san_canon  (41.9s)
+[2026-07-24T21:19:07Z][2014-07/power]   done WITHIN_GAME_SCRAMBLE / san_canon  (42.3s)
+[2026-07-24T21:19:08Z][2016-01/power]   done EXACT_TARGET_MARGINAL_PERMUTATION / san_canon  (43.6s)
+[2026-07-24T21:19:08Z][2014-07/power]   done EXACT_TARGET_MARGINAL_PERMUTATION / san_canon  (44.0s)
+[2026-07-24T21:19:10Z][2016-01/power]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / san_canon  (45.7s)
+[2026-07-24T21:19:10Z][2014-07/power]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / san_canon  (46.1s)
+[2026-07-24T21:19:11Z][2016-01/power] observable san_matkey: alphabet K=84323 over 14407248 plies
+[2026-07-24T21:19:11Z][2014-07/power] observable san_matkey: alphabet K=86309 over 14498360 plies
+[2026-07-24T21:19:18Z][2016-01/power]   done REAL / san_matkey  (53.8s)
+[2026-07-24T21:19:19Z][2014-07/power]   done REAL / san_matkey  (54.4s)
+[2026-07-24T21:19:27Z][2016-01/power]   done WITHIN_GAME_SCRAMBLE / san_matkey  (62.8s)
+[2026-07-24T21:19:28Z][2014-07/power]   done WITHIN_GAME_SCRAMBLE / san_matkey  (63.7s)
+[2026-07-24T21:19:31Z][2016-01/power]   done EXACT_TARGET_MARGINAL_PERMUTATION / san_matkey  (67.2s)
+[2026-07-24T21:19:32Z][2014-07/power]   done EXACT_TARGET_MARGINAL_PERMUTATION / san_matkey  (68.1s)
+[2026-07-24T21:19:40Z][2016-01/power]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / san_matkey  (76.1s)
+[2026-07-24T21:19:42Z][2014-07/power]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / san_matkey  (77.3s)
+[2026-07-24T21:19:42Z][2016-01/power] observable san_statekey: alphabet K=13007250 over 14407248 plies
+[2026-07-24T21:19:43Z][2014-07/power] observable san_statekey: alphabet K=13119973 over 14498360 plies
+[2026-07-24T21:19:57Z][2016-01/power]   done REAL / san_statekey  (92.5s)
+[2026-07-24T21:19:59Z][2014-07/power]   done REAL / san_statekey  (94.4s)
+[2026-07-24T21:20:12Z][2016-01/power]   done WITHIN_GAME_SCRAMBLE / san_statekey  (107.9s)
+[2026-07-24T21:20:14Z][2014-07/power]   done WITHIN_GAME_SCRAMBLE / san_statekey  (110.1s)
+[2026-07-24T21:20:20Z][2016-01/power]   done EXACT_TARGET_MARGINAL_PERMUTATION / san_statekey  (115.9s)
+[2026-07-24T21:20:23Z][2014-07/power]   done EXACT_TARGET_MARGINAL_PERMUTATION / san_statekey  (118.5s)
+[2026-07-24T21:20:36Z][2016-01/power]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / san_statekey  (131.4s)
+[2026-07-24T21:20:39Z][2014-07/power]   done PARITY_PRESERVING_WITHIN_GAME_SCRAMBLE / san_statekey  (134.3s)
+[2026-07-24T21:20:55Z][2016-01/power]   boot fromto 10/30 (151.0s)
+[2026-07-24T21:20:59Z][2014-07/power]   boot fromto 10/30 (154.8s)
+[2026-07-24T21:21:15Z][2016-01/power]   boot fromto 20/30 (171.0s)
+[2026-07-24T21:21:20Z][2014-07/power]   boot fromto 20/30 (175.5s)
+[2026-07-24T21:21:35Z][2016-01/power]   boot fromto 30/30 (190.7s)
+[2026-07-24T21:21:40Z][2014-07/power]   boot fromto 30/30 (195.9s)
+[2026-07-24T21:21:50Z][2016-01/power]   boot san_canon 10/30 (205.8s)
+[2026-07-24T21:21:56Z][2014-07/power]   boot san_canon 10/30 (211.5s)
+[2026-07-24T21:22:05Z][2016-01/power]   boot san_canon 20/30 (221.1s)
+[2026-07-24T21:22:12Z][2014-07/power]   boot san_canon 20/30 (227.3s)
+[2026-07-24T21:22:20Z][2016-01/power]   boot san_canon 30/30 (236.0s)
+[2026-07-24T21:22:20Z][2016-01/power] EMIT DONE wall=236.0s
+[2026-07-24T21:22:27Z][2014-07/power]   boot san_canon 30/30 (242.2s)
+[2026-07-24T21:22:27Z][2014-07/power] EMIT DONE wall=242.3s

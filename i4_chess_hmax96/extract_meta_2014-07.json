@@ -1,0 +1,12 @@
+{
+  "period": "2014-07",
+  "HMAX": 96,
+  "MIN_PLIES": 100,
+  "n_games_kept": 120000,
+  "n_games_scanned": 792977,
+  "n_rejected_short": 672977,
+  "n_rejected_malformed": 0,
+  "total_plies": 14498360,
+  "mean_game_plies": 120.81966666666666,
+  "extract_wall_s": 275.2
+}

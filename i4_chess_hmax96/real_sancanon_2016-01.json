@@ -1,0 +1,548 @@
+{
+  "run_tag": "matched",
+  "period": "2016-01",
+  "HMAX": 96,
+  "horizons_computed": [
+    8,
+    12,
+    16,
+    20,
+    24,
+    28,
+    32,
+    36,
+    40,
+    44,
+    48,
+    52,
+    56,
+    60,
+    64,
+    68,
+    72,
+    76,
+    80,
+    84,
+    88,
+    92,
+    96
+  ],
+  "horizons_requested_by_i4": [
+    8,
+    12,
+    16,
+    24,
+    32,
+    40,
+    48,
+    64,
+    80,
+    96
+  ],
+  "n_games": 30000,
+  "n_games_available": 120000,
+  "N_anchored_positions": 724325,
+  "MIN_PLIES": 100,
+  "bias_correction_in_force": "Miller-Madow  H_MM = H_plugin + (K_observed-1)/(2N)  (inherited verbatim from chess_reality_h0.py 2026-06-29)",
+  "estimator_source": "implementation_lanes/temporal_unsharpness/chess_reality_h0_2026_06_29/chess_reality_h0.py",
+  "control_rng_seed": 20260630,
+  "bootstrap_rng_seed": 20260629,
+  "n_boot": 60,
+  "T_definition_by_cat": "T(h) = I_MM(condition,h) - I_MM(EXACT_TARGET_MARGINAL_PERMUTATION,h), unclamped Miller-Madow MI, nats. Cat's stated definition, not i4's.",
+  "condition": "REAL",
+  "observable": "san_canon",
+  "observable_note": "SAN content on a colour-canonical board: (piece, destination mirrored into the mover's frame, capture, promotion, castling)",
+  "alphabet_K_total": 774,
+  "estimates_by_horizon": {
+    "8": {
+      "I_plugin": 0.441302,
+      "I_MM": 0.366216,
+      "I_MM_clamped_june29": 0.366216,
+      "H_anchor_MM": 4.880225,
+      "H_target_MM": 5.347727,
+      "H_joint_MM": 9.861736,
+      "H_R_cond_MM": 4.981511,
+      "K_anchor_obs": 741,
+      "K_target_obs": 745,
+      "K_joint_obs": 110258,
+      "I_MM_own_targetperm_floor": 0.091585
+    },
+    "12": {
+      "I_plugin": 0.38664,
+      "I_MM": 0.307069,
+      "I_MM_clamped_june29": 0.307069,
+      "H_anchor_MM": 4.880225,
+      "H_target_MM": 5.507935,
+      "H_joint_MM": 10.081091,
+      "H_R_cond_MM": 5.200866,
+      "K_anchor_obs": 741,
+      "K_target_obs": 749,
+      "K_joint_obs": 116760,
+      "I_MM_own_targetperm_floor": 0.096377
+    },
+    "16": {
+      "I_plugin": 0.355327,
+      "I_MM": 0.272729,
+      "I_MM_clamped_june29": 0.272729,
+      "H_anchor_MM": 4.880225,
+      "H_target_MM": 5.64586,
+      "H_joint_MM": 10.253355,
+      "H_R_cond_MM": 5.373131,
+      "K_anchor_obs": 741,
+      "K_target_obs": 754,
+      "K_joint_obs": 121150,
+      "I_MM_own_targetperm_floor": 0.099255
+    },
+    "20": {
+      "I_plugin": 0.333447,
+      "I_MM": 0.248546,
+      "I_MM_clamped_june29": 0.248546,
+      "H_anchor_MM": 4.880225,
+      "H_target_MM": 5.754952,
+      "H_joint_MM": 10.386631,
+      "H_R_cond_MM": 5.506406,
+      "K_anchor_obs": 741,
+      "K_target_obs": 755,
+      "K_joint_obs": 124487,
+      "I_MM_own_targetperm_floor": 0.103091
+    },
+    "24": {
+      "I_plugin": 0.316699,
+      "I_MM": 0.230041,
+      "I_MM_clamped_june29": 0.230041,
+      "H_anchor_MM": 4.880225,
+      "H_target_MM": 5.836659,
+      "H_joint_MM": 10.486843,
+      "H_R_cond_MM": 5.606619,
+      "K_anchor_obs": 741,
+      "K_target_obs": 756,
+      "K_joint_obs": 127034,
+      "I_MM_own_targetperm_floor": 0.105028
+    },
+    "28": {
+      "I_plugin": 0.303771,
+      "I_MM": 0.215891,
+      "I_MM_clamped_june29": 0.215891,
+      "H_anchor_MM": 4.880225,
+      "H_target_MM": 5.896665,
+      "H_joint_MM": 10.560999,
+      "H_R_cond_MM": 5.680774,
+      "K_anchor_obs": 741,
+      "K_target_obs": 758,
+      "K_joint_obs": 128806,
+      "I_MM_own_targetperm_floor": 0.107658
+    },
+    "32": {
+      "I_plugin": 0.29317,
+      "I_MM": 0.204397,
+      "I_MM_clamped_june29": 0.204397,
+      "H_anchor_MM": 4.880225,
+      "H_target_MM": 5.938807,
+      "H_joint_MM": 10.614635,
+      "H_R_cond_MM": 5.73441,
+      "K_anchor_obs": 741,
+      "K_target_obs": 757,
+      "K_joint_obs": 130099,
+      "I_MM_own_targetperm_floor": 0.111164
+    },
+    "36": {
+      "I_plugin": 0.284203,
+      "I_MM": 0.195119,
+      "I_MM_clamped_june29": 0.195119,
+      "H_anchor_MM": 4.880225,
+      "H_target_MM": 5.966314,
+      "H_joint_MM": 10.651419,
+      "H_R_cond_MM": 5.771194,
+      "K_anchor_obs": 741,
+      "K_target_obs": 760,
+      "K_joint_obs": 130551,
+      "I_MM_own_targetperm_floor": 0.112441
+    },
+    "40": {
+      "I_plugin": 0.277119,
+      "I_MM": 0.187799,
+      "I_MM_clamped_june29": 0.187799,
+      "H_anchor_MM": 4.880225,
+      "H_target_MM": 5.984007,
+      "H_joint_MM": 10.676432,
+      "H_R_cond_MM": 5.796208,
+      "K_anchor_obs": 741,
+      "K_target_obs": 761,
+      "K_joint_obs": 130894,
+      "I_MM_own_targetperm_floor": 0.112475
+    },
+    "44": {
+      "I_plugin": 0.269376,
+      "I_MM": 0.179983,
+      "I_MM_clamped_june29": 0.179983,
+      "H_anchor_MM": 4.880225,
+      "H_target_MM": 5.991717,
+      "H_joint_MM": 10.691958,
+      "H_R_cond_MM": 5.811734,
+      "K_anchor_obs": 741,
+      "K_target_obs": 761,
+      "K_joint_obs": 131000,
+      "I_MM_own_targetperm_floor": 0.113547
+    },
+    "48": {
+      "I_plugin": 0.261104,
+      "I_MM": 0.171904,
+      "I_MM_clamped_june29": 0.171904,
+      "H_anchor_MM": 4.880225,
+      "H_target_MM": 5.990048,
+      "H_joint_MM": 10.698369,
+      "H_R_cond_MM": 5.818145,
+      "K_anchor_obs": 741,
+      "K_target_obs": 760,
+      "K_joint_obs": 130720,
+      "I_MM_own_targetperm_floor": 0.114197
+    },
+    "52": {
+      "I_plugin": 0.255018,
+      "I_MM": 0.165955,
+      "I_MM_clamped_june29": 0.165955,
+      "H_anchor_MM": 4.880225,
+      "H_target_MM": 5.982921,
+      "H_joint_MM": 10.697191,
+      "H_R_cond_MM": 5.816966,
+      "K_anchor_obs": 741,
+      "K_target_obs": 760,
+      "K_joint_obs": 130521,
+      "I_MM_own_targetperm_floor": 0.113016
+    },
+    "56": {
+      "I_plugin": 0.248038,
+      "I_MM": 0.159219,
+      "I_MM_clamped_june29": 0.159219,
+      "H_anchor_MM": 4.880225,
+      "H_target_MM": 5.970588,
+      "H_joint_MM": 10.691594,
+      "H_R_cond_MM": 5.811369,
+      "K_anchor_obs": 741,
+      "K_target_obs": 762,
+      "K_joint_obs": 130169,
+      "I_MM_own_targetperm_floor": 0.113748
+    },
+    "60": {
+      "I_plugin": 0.241117,
+      "I_MM": 0.152832,
+      "I_MM_clamped_june29": 0.152832,
+      "H_anchor_MM": 4.880225,
+      "H_target_MM": 5.954716,
+      "H_joint_MM": 10.682108,
+      "H_R_cond_MM": 5.801883,
+      "K_anchor_obs": 741,
+      "K_target_obs": 763,
+      "K_joint_obs": 129396,
+      "I_MM_own_targetperm_floor": 0.112392
+    },
+    "64": {
+      "I_plugin": 0.234764,
+      "I_MM": 0.146978,
+      "I_MM_clamped_june29": 0.146978,
+      "H_anchor_MM": 4.880225,
+      "H_target_MM": 5.936195,
+      "H_joint_MM": 10.669442,
+      "H_R_cond_MM": 5.789217,
+      "K_anchor_obs": 741,
+      "K_target_obs": 765,
+      "K_joint_obs": 128676,
+      "I_MM_own_targetperm_floor": 0.112417
+    },
+    "68": {
+      "I_plugin": 0.230459,
+      "I_MM": 0.143249,
+      "I_MM_clamped_june29": 0.143249,
+      "H_anchor_MM": 4.880225,
+      "H_target_MM": 5.917045,
+      "H_joint_MM": 10.654021,
+      "H_R_cond_MM": 5.773796,
+      "K_anchor_obs": 741,
+      "K_target_obs": 766,
+      "K_joint_obs": 127843,
+      "I_MM_own_targetperm_floor": 0.112118
+    },
+    "72": {
+      "I_plugin": 0.224784,
+      "I_MM": 0.137977,
+      "I_MM_clamped_june29": 0.137977,
+      "H_anchor_MM": 4.880225,
+      "H_target_MM": 5.898727,
+      "H_joint_MM": 10.640974,
+      "H_R_cond_MM": 5.76075,
+      "K_anchor_obs": 741,
+      "K_target_obs": 766,
+      "K_joint_obs": 127259,
+      "I_MM_own_targetperm_floor": 0.111074
+    },
+    "76": {
+      "I_plugin": 0.22023,
+      "I_MM": 0.134207,
+      "I_MM_clamped_june29": 0.134207,
+      "H_anchor_MM": 4.880225,
+      "H_target_MM": 5.879634,
+      "H_joint_MM": 10.625652,
+      "H_R_cond_MM": 5.745427,
+      "K_anchor_obs": 741,
+      "K_target_obs": 766,
+      "K_joint_obs": 126122,
+      "I_MM_own_targetperm_floor": 0.110763
+    },
+    "80": {
+      "I_plugin": 0.216078,
+      "I_MM": 0.1307,
+      "I_MM_clamped_june29": 0.1307,
+      "H_anchor_MM": 4.880225,
+      "H_target_MM": 5.859388,
+      "H_joint_MM": 10.608912,
+      "H_R_cond_MM": 5.728688,
+      "K_anchor_obs": 741,
+      "K_target_obs": 766,
+      "K_joint_obs": 125189,
+      "I_MM_own_targetperm_floor": 0.110041
+    },
+    "84": {
+      "I_plugin": 0.211884,
+      "I_MM": 0.127486,
+      "I_MM_clamped_june29": 0.127486,
+      "H_anchor_MM": 4.880225,
+      "H_target_MM": 5.837949,
+      "H_joint_MM": 10.590688,
+      "H_R_cond_MM": 5.710463,
+      "K_anchor_obs": 741,
+      "K_target_obs": 765,
+      "K_joint_obs": 123768,
+      "I_MM_own_targetperm_floor": 0.109047
+    },
+    "88": {
+      "I_plugin": 0.207433,
+      "I_MM": 0.123838,
+      "I_MM_clamped_june29": 0.123838,
+      "H_anchor_MM": 4.880225,
+      "H_target_MM": 5.81743,
+      "H_joint_MM": 10.573817,
+      "H_R_cond_MM": 5.693592,
+      "K_anchor_obs": 741,
+      "K_target_obs": 764,
+      "K_joint_obs": 122604,
+      "I_MM_own_targetperm_floor": 0.107414
+    },
+    "92": {
+      "I_plugin": 0.203705,
+      "I_MM": 0.121063,
+      "I_MM_clamped_june29": 0.121063,
+      "H_anchor_MM": 4.880225,
+      "H_target_MM": 5.800453,
+      "H_joint_MM": 10.559615,
+      "H_R_cond_MM": 5.679391,
+      "K_anchor_obs": 741,
+      "K_target_obs": 763,
+      "K_joint_obs": 121223,
+      "I_MM_own_targetperm_floor": 0.106435
+    },
+    "96": {
+      "I_plugin": 0.202535,
+      "I_MM": 0.119709,
+      "I_MM_clamped_june29": 0.119709,
+      "H_anchor_MM": 4.880225,
+      "H_target_MM": 5.804722,
+      "H_joint_MM": 10.565238,
+      "H_R_cond_MM": 5.685013,
+      "K_anchor_obs": 741,
+      "K_target_obs": 765,
+      "K_joint_obs": 121491,
+      "I_MM_own_targetperm_floor": 0.107091
+    }
+  },
+  "T_by_horizon_nats": {
+    "8": 0.274521,
+    "12": 0.210858,
+    "16": 0.173201,
+    "20": 0.146299,
+    "24": 0.124099,
+    "28": 0.107035,
+    "32": 0.094469,
+    "36": 0.083628,
+    "40": 0.075003,
+    "44": 0.067261,
+    "48": 0.058589,
+    "52": 0.051316,
+    "56": 0.045235,
+    "60": 0.039692,
+    "64": 0.033586,
+    "68": 0.031438,
+    "72": 0.026769,
+    "76": 0.022926,
+    "80": 0.020912,
+    "84": 0.01822,
+    "88": 0.015939,
+    "92": 0.014699,
+    "96": 0.013154
+  },
+  "T_ratio_h_over_h_plus_8": {
+    "8": 1.584985,
+    "12": 1.441283,
+    "16": 1.395671,
+    "20": 1.366827,
+    "24": 1.313648,
+    "28": 1.279904,
+    "32": 1.259524,
+    "36": 1.243333,
+    "40": 1.280163,
+    "44": 1.310712,
+    "48": 1.295218,
+    "52": 1.292852,
+    "56": 1.346845,
+    "60": 1.262568,
+    "64": 1.254675,
+    "68": 1.371292,
+    "72": 1.280064,
+    "76": 1.258257,
+    "80": 1.311998,
+    "84": 1.239539,
+    "88": 1.211716
+  },
+  "T_vs_OWN_floor_by_horizon_nats": {
+    "8": 0.274631,
+    "12": 0.210692,
+    "16": 0.173474,
+    "20": 0.145455,
+    "24": 0.125013,
+    "28": 0.108233,
+    "32": 0.093233,
+    "36": 0.082678,
+    "40": 0.075324,
+    "44": 0.066436,
+    "48": 0.057706,
+    "52": 0.052939,
+    "56": 0.045471,
+    "60": 0.040441,
+    "64": 0.034561,
+    "68": 0.031131,
+    "72": 0.026903,
+    "76": 0.023445,
+    "80": 0.020659,
+    "84": 0.018439,
+    "88": 0.016424,
+    "92": 0.014627,
+    "96": 0.012618
+  },
+  "T_vs_OWN_floor_ratio_h_over_h_plus_8": {
+    "8": 1.583128,
+    "12": 1.448504,
+    "16": 1.387644,
+    "20": 1.343909,
+    "24": 1.340873,
+    "28": 1.309087,
+    "32": 1.237747,
+    "36": 1.244476,
+    "40": 1.305306,
+    "44": 1.254947,
+    "48": 1.269076,
+    "52": 1.309063,
+    "56": 1.315665,
+    "60": 1.299044,
+    "64": 1.284655,
+    "68": 1.327852,
+    "72": 1.302245,
+    "76": 1.271442,
+    "80": 1.257845,
+    "84": 1.260603,
+    "88": 1.301668
+  },
+  "T_floor_note": "T_by_horizon_nats uses the REAL panel's EXACT_TARGET_MARGINAL_PERMUTATION floor for every condition (i4's literal condition list). T_vs_OWN_floor uses each condition's own permutation floor, which is the correct comparison for the scrambles because scrambling changes the anchor marginal and therefore the estimator bias floor. For REAL the two are identical.",
+  "T_bootstrap_over_games": {
+    "8": {
+      "mean": 0.375407,
+      "sd": 0.003176
+    },
+    "12": {
+      "mean": 0.317903,
+      "sd": 0.003466
+    },
+    "16": {
+      "mean": 0.283576,
+      "sd": 0.002965
+    },
+    "20": {
+      "mean": 0.258958,
+      "sd": 0.003018
+    },
+    "24": {
+      "mean": 0.239469,
+      "sd": 0.002697
+    },
+    "28": {
+      "mean": 0.22443,
+      "sd": 0.00279
+    },
+    "32": {
+      "mean": 0.212082,
+      "sd": 0.002568
+    },
+    "36": {
+      "mean": 0.201655,
+      "sd": 0.00264
+    },
+    "40": {
+      "mean": 0.193474,
+      "sd": 0.002516
+    },
+    "44": {
+      "mean": 0.18496,
+      "sd": 0.00259
+    },
+    "48": {
+      "mean": 0.176367,
+      "sd": 0.002207
+    },
+    "52": {
+      "mean": 0.170061,
+      "sd": 0.002443
+    },
+    "56": {
+      "mean": 0.163132,
+      "sd": 0.002216
+    },
+    "60": {
+      "mean": 0.156297,
+      "sd": 0.002354
+    },
+    "64": {
+      "mean": 0.150395,
+      "sd": 0.002472
+    },
+    "68": {
+      "mean": 0.146341,
+      "sd": 0.002168
+    },
+    "72": {
+      "mean": 0.14121,
+      "sd": 0.00222
+    },
+    "76": {
+      "mean": 0.13705,
+      "sd": 0.002157
+    },
+    "80": {
+      "mean": 0.133424,
+      "sd": 0.00205
+    },
+    "84": {
+      "mean": 0.129714,
+      "sd": 0.002019
+    },
+    "88": {
+      "mean": 0.126206,
+      "sd": 0.002132
+    },
+    "92": {
+      "mean": 0.123114,
+      "sd": 0.002075
+    },
+    "96": {
+      "mean": 0.122377,
+      "sd": 0.001953
+    }
+  }
+}

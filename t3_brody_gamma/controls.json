@@ -1,0 +1,316 @@
+{
+ "definitions": {
+  "choice_shuffle": "C permuted uniformly at random within rat over all qualifying trials (5 independent seeds).",
+  "trial_mismatch": "D_n of trial i paired with C of the NEXT qualifying trial of the same rat in trial_idx order (cyclic shift by 1 within rat).",
+  "note": "For a control the held-out cross-entropy does not fall with n, so E(1)-E(20) is <= 0 and T3's q(n) normalisation has no positive denominator; H is then reported as undefined (null), with the sign and size of E(1)-E(20) given so the absence of any reduction is visible."
+ },
+ "target_for_comparison": {
+  "H_pooled_allgamma": 2.731773836594871,
+  "H_pooled_lowgamma": 4.9163045123741185,
+  "H_pooled_midgamma": 1.5463951509209584,
+  "H_pooled_highgamma": 1.2003278043223014
+ },
+ "runs": {
+  "ctrl_choice_shuffle_s0": {
+   "lowgamma": {
+    "H_pooled": NaN,
+    "E1_bits": 0.9990348047829348,
+    "E20_bits": 1.0013810941915524,
+    "E1_minus_E20_bits": -0.0023462894086175856,
+    "H_rat_median_where_defined": 5.459020201542176,
+    "n_rats_with_finite_H": 5,
+    "frac_rats_with_finite_H": 0.009727626459143969,
+    "H_supplementary_altmin_anchor": NaN
+   },
+   "midgamma": {
+    "H_pooled": NaN,
+    "E1_bits": 0.9993036004425496,
+    "E20_bits": 1.0021917987558009,
+    "E1_minus_E20_bits": -0.0028881983132512667,
+    "H_rat_median_where_defined": 6.701878184202012,
+    "n_rats_with_finite_H": 15,
+    "frac_rats_with_finite_H": 0.029644268774703556,
+    "H_supplementary_altmin_anchor": NaN
+   },
+   "highgamma": {
+    "H_pooled": NaN,
+    "E1_bits": 0.9992162065654284,
+    "E20_bits": 1.0007160201964362,
+    "E1_minus_E20_bits": -0.001499813631007818,
+    "H_rat_median_where_defined": 7.310834604352257,
+    "n_rats_with_finite_H": 42,
+    "frac_rats_with_finite_H": 0.08171206225680934,
+    "H_supplementary_altmin_anchor": NaN
+   },
+   "allgamma": {
+    "H_pooled": NaN,
+    "E1_bits": 0.9989497580823412,
+    "E20_bits": 1.000026050722746,
+    "E1_minus_E20_bits": -0.0010762926404048745,
+    "H_rat_median_where_defined": 1.7523030138770137,
+    "n_rats_with_finite_H": 10,
+    "frac_rats_with_finite_H": 0.019455252918287938,
+    "H_supplementary_altmin_anchor": NaN
+   }
+  },
+  "ctrl_choice_shuffle_s1": {
+   "lowgamma": {
+    "H_pooled": NaN,
+    "E1_bits": 0.9991103828914215,
+    "E20_bits": 1.0013824923682226,
+    "E1_minus_E20_bits": -0.0022721094768011207,
+    "H_rat_median_where_defined": 1.8111996780163326,
+    "n_rats_with_finite_H": 9,
+    "frac_rats_with_finite_H": 0.017509727626459144,
+    "H_supplementary_altmin_anchor": NaN
+   },
+   "midgamma": {
+    "H_pooled": NaN,
+    "E1_bits": 0.9993529810179914,
+    "E20_bits": 1.0022973956012244,
+    "E1_minus_E20_bits": -0.0029444145832330237,
+    "H_rat_median_where_defined": 14.83257397850619,
+    "n_rats_with_finite_H": 17,
+    "frac_rats_with_finite_H": 0.03359683794466403,
+    "H_supplementary_altmin_anchor": NaN
+   },
+   "highgamma": {
+    "H_pooled": NaN,
+    "E1_bits": 0.9990836453887644,
+    "E20_bits": 1.0005351483033744,
+    "E1_minus_E20_bits": -0.0014515029146100478,
+    "H_rat_median_where_defined": 10.313366861816027,
+    "n_rats_with_finite_H": 44,
+    "frac_rats_with_finite_H": 0.08560311284046693,
+    "H_supplementary_altmin_anchor": NaN
+   },
+   "allgamma": {
+    "H_pooled": NaN,
+    "E1_bits": 0.9989518235651167,
+    "E20_bits": 0.9999940974661427,
+    "E1_minus_E20_bits": -0.0010422739010259585,
+    "H_rat_median_where_defined": 1.9963902857244191,
+    "n_rats_with_finite_H": 7,
+    "frac_rats_with_finite_H": 0.013618677042801557,
+    "H_supplementary_altmin_anchor": NaN
+   }
+  },
+  "ctrl_choice_shuffle_s2": {
+   "lowgamma": {
+    "H_pooled": NaN,
+    "E1_bits": 0.9991071047379197,
+    "E20_bits": 1.0013917452692385,
+    "E1_minus_E20_bits": -0.0022846405313187157,
+    "H_rat_median_where_defined": 18.387043613410043,
+    "n_rats_with_finite_H": 7,
+    "frac_rats_with_finite_H": 0.013618677042801557,
+    "H_supplementary_altmin_anchor": NaN
+   },
+   "midgamma": {
+    "H_pooled": NaN,
+    "E1_bits": 0.9992270132502465,
+    "E20_bits": 1.0021780200603043,
+    "E1_minus_E20_bits": -0.002951006810057777,
+    "H_rat_median_where_defined": 7.979773556480126,
+    "n_rats_with_finite_H": 21,
+    "frac_rats_with_finite_H": 0.041501976284584984,
+    "H_supplementary_altmin_anchor": NaN
+   },
+   "highgamma": {
+    "H_pooled": NaN,
+    "E1_bits": 0.9992118001723388,
+    "E20_bits": 1.0007424756463723,
+    "E1_minus_E20_bits": -0.001530675474033516,
+    "H_rat_median_where_defined": 11.759606152147544,
+    "n_rats_with_finite_H": 35,
+    "frac_rats_with_finite_H": 0.06809338521400778,
+    "H_supplementary_altmin_anchor": NaN
+   },
+   "allgamma": {
+    "H_pooled": NaN,
+    "E1_bits": 0.9989488421740486,
+    "E20_bits": 1.0000024521332234,
+    "E1_minus_E20_bits": -0.001053609959174806,
+    "H_rat_median_where_defined": 4.55811993473324,
+    "n_rats_with_finite_H": 3,
+    "frac_rats_with_finite_H": 0.005836575875486381,
+    "H_supplementary_altmin_anchor": NaN
+   }
+  },
+  "ctrl_choice_shuffle_s3": {
+   "lowgamma": {
+    "H_pooled": NaN,
+    "E1_bits": 0.9991072381790127,
+    "E20_bits": 1.0015457551979978,
+    "E1_minus_E20_bits": -0.00243851701898512,
+    "H_rat_median_where_defined": 1.485735811131929,
+    "n_rats_with_finite_H": 6,
+    "frac_rats_with_finite_H": 0.011673151750972763,
+    "H_supplementary_altmin_anchor": NaN
+   },
+   "midgamma": {
+    "H_pooled": NaN,
+    "E1_bits": 0.9993065000586896,
+    "E20_bits": 1.0022298499454019,
+    "E1_minus_E20_bits": -0.0029233498867122787,
+    "H_rat_median_where_defined": 2.663624303720777,
+    "n_rats_with_finite_H": 22,
+    "frac_rats_with_finite_H": 0.043478260869565216,
+    "H_supplementary_altmin_anchor": NaN
+   },
+   "highgamma": {
+    "H_pooled": NaN,
+    "E1_bits": 0.9991306028725245,
+    "E20_bits": 1.0005859840211595,
+    "E1_minus_E20_bits": -0.001455381148634971,
+    "H_rat_median_where_defined": 5.931212539205479,
+    "n_rats_with_finite_H": 43,
+    "frac_rats_with_finite_H": 0.08365758754863813,
+    "H_supplementary_altmin_anchor": NaN
+   },
+   "allgamma": {
+    "H_pooled": NaN,
+    "E1_bits": 0.9989515821417502,
+    "E20_bits": 1.0000164109054837,
+    "E1_minus_E20_bits": -0.001064828763733483,
+    "H_rat_median_where_defined": 16.4762690267318,
+    "n_rats_with_finite_H": 5,
+    "frac_rats_with_finite_H": 0.009727626459143969,
+    "H_supplementary_altmin_anchor": NaN
+   }
+  },
+  "ctrl_choice_shuffle_s4": {
+   "lowgamma": {
+    "H_pooled": NaN,
+    "E1_bits": 0.9991021868034642,
+    "E20_bits": 1.0015466184147912,
+    "E1_minus_E20_bits": -0.0024444316113270137,
+    "H_rat_median_where_defined": 2.7474087344282534,
+    "n_rats_with_finite_H": 5,
+    "frac_rats_with_finite_H": 0.009727626459143969,
+    "H_supplementary_altmin_anchor": NaN
+   },
+   "midgamma": {
+    "H_pooled": NaN,
+    "E1_bits": 0.99930470665335,
+    "E20_bits": 1.0021768804405882,
+    "E1_minus_E20_bits": -0.0028721737872381414,
+    "H_rat_median_where_defined": 2.520774685988927,
+    "n_rats_with_finite_H": 17,
+    "frac_rats_with_finite_H": 0.03359683794466403,
+    "H_supplementary_altmin_anchor": NaN
+   },
+   "highgamma": {
+    "H_pooled": NaN,
+    "E1_bits": 0.9991953095651583,
+    "E20_bits": 1.0006938118964503,
+    "E1_minus_E20_bits": -0.0014985023312920065,
+    "H_rat_median_where_defined": 7.3196203607168435,
+    "n_rats_with_finite_H": 41,
+    "frac_rats_with_finite_H": 0.07976653696498054,
+    "H_supplementary_altmin_anchor": NaN
+   },
+   "allgamma": {
+    "H_pooled": NaN,
+    "E1_bits": 0.998956445480445,
+    "E20_bits": 1.000067348050411,
+    "E1_minus_E20_bits": -0.0011109025699659325,
+    "H_rat_median_where_defined": 2.369358763992129,
+    "n_rats_with_finite_H": 8,
+    "frac_rats_with_finite_H": 0.01556420233463035,
+    "H_supplementary_altmin_anchor": NaN
+   }
+  },
+  "ctrl_trial_mismatch": {
+   "lowgamma": {
+    "H_pooled": NaN,
+    "E1_bits": 0.9988336369504093,
+    "E20_bits": 0.9995595860096187,
+    "E1_minus_E20_bits": -0.0007259490592094187,
+    "H_rat_median_where_defined": 3.7198684611243866,
+    "n_rats_with_finite_H": 125,
+    "frac_rats_with_finite_H": 0.24319066147859922,
+    "H_supplementary_altmin_anchor": 1.2151839217932658
+   },
+   "midgamma": {
+    "H_pooled": NaN,
+    "E1_bits": 0.9984423610082647,
+    "E20_bits": 1.0007406721938898,
+    "E1_minus_E20_bits": -0.0022983111856251792,
+    "H_rat_median_where_defined": 1.381112011133419,
+    "n_rats_with_finite_H": 51,
+    "frac_rats_with_finite_H": 0.1007905138339921,
+    "H_supplementary_altmin_anchor": NaN
+   },
+   "highgamma": {
+    "H_pooled": NaN,
+    "E1_bits": 0.9981544528306375,
+    "E20_bits": 0.999525140675311,
+    "E1_minus_E20_bits": -0.0013706878446734239,
+    "H_rat_median_where_defined": 2.1481620883622607,
+    "n_rats_with_finite_H": 51,
+    "frac_rats_with_finite_H": 0.09922178988326848,
+    "H_supplementary_altmin_anchor": NaN
+   },
+   "allgamma": {
+    "H_pooled": NaN,
+    "E1_bits": 0.9983804748064697,
+    "E20_bits": 0.9985340432832187,
+    "E1_minus_E20_bits": -0.00015356847674896645,
+    "H_rat_median_where_defined": 2.99397285862523,
+    "n_rats_with_finite_H": 131,
+    "frac_rats_with_finite_H": 0.25486381322957197,
+    "H_supplementary_altmin_anchor": 1.4367105356235537
+   }
+  }
+ },
+ "controls_with_a_defined_pooled_horizon": [],
+ "any_control_within_factor_three_of_target": false,
+ "controls_within_factor_three": [],
+ "entropy_reduction_comparison_bits": {
+  "target_E1_minus_E20": {
+   "lowgamma": 0.11681124749547078,
+   "midgamma": 0.13467631808313663,
+   "highgamma": 0.06290607790882008,
+   "allgamma": 0.15339292027014595
+  },
+  "controls_E1_minus_E20": {
+   "ctrl_choice_shuffle_s0": {
+    "lowgamma": -0.0023462894086175856,
+    "midgamma": -0.0028881983132512667,
+    "highgamma": -0.001499813631007818,
+    "allgamma": -0.0010762926404048745
+   },
+   "ctrl_choice_shuffle_s1": {
+    "lowgamma": -0.0022721094768011207,
+    "midgamma": -0.0029444145832330237,
+    "highgamma": -0.0014515029146100478,
+    "allgamma": -0.0010422739010259585
+   },
+   "ctrl_choice_shuffle_s2": {
+    "lowgamma": -0.0022846405313187157,
+    "midgamma": -0.002951006810057777,
+    "highgamma": -0.001530675474033516,
+    "allgamma": -0.001053609959174806
+   },
+   "ctrl_choice_shuffle_s3": {
+    "lowgamma": -0.00243851701898512,
+    "midgamma": -0.0029233498867122787,
+    "highgamma": -0.001455381148634971,
+    "allgamma": -0.001064828763733483
+   },
+   "ctrl_choice_shuffle_s4": {
+    "lowgamma": -0.0024444316113270137,
+    "midgamma": -0.0028721737872381414,
+    "highgamma": -0.0014985023312920065,
+    "allgamma": -0.0011109025699659325
+   },
+   "ctrl_trial_mismatch": {
+    "lowgamma": -0.0007259490592094187,
+    "midgamma": -0.0022983111856251792,
+    "highgamma": -0.0013706878446734239,
+    "allgamma": -0.00015356847674896645
+   }
+  }
+ }
+}

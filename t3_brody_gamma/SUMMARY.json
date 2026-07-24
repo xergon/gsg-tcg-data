@@ -1,0 +1,74 @@
+{
+ "job": "T3 gamma-stratified held-out entropy reduction (Brody Poisson clicks)",
+ "produced_by": "Cat (compute arm). No verdict -- kill/survive is T3's call.",
+ "utc": "2026-07-24T22:41:57Z",
+ "input": {
+  "file": "brody_poisson_clicks_trials.parquet",
+  "sha256_expected": "86b51a3e5747fd44ce2e02fd4178faf2acea4e393a9b50b1d3ec7b9c9520bd99",
+  "sha256_verified": "86b51a3e5747fd44ce2e02fd4178faf2acea4e393a9b50b1d3ec7b9c9520bd99",
+  "bytes": 2131341109,
+  "source": "Zenodo 13352119, CC-BY-4.0"
+ },
+ "run_params": {
+  "seed": 20260724,
+  "n_bootstrap": 2000,
+  "min_trials_per_rat": 200,
+  "n_max_clicks": 20,
+  "stereo_tolerance_s": 1e-07,
+  "fold_rule": "odd/even trial_idx, symmetric 2-fold (both directions), Jeffreys (a=b=1/2) smoothing on the training half",
+  "interpolation": "linear in n on q(n) at the FIRST n where q(n)<=1/e; H_clicks = n_{1/e} - 1",
+  "entropy_units": "bits"
+ },
+ "seeds": {
+  "master": 20260724,
+  "bootstrap": 20260724,
+  "joint_bootstrap": 20260731,
+  "choice_shuffle": [
+   20260724,
+   20261724,
+   20262724,
+   20263724,
+   20264724
+  ]
+ },
+ "peak_load_1min": "7.93",
+ "wall_time": "304s pipeline (pass1 271s, pass2 26s) + 155s diagnostics; ~30 min data transfer",
+ "pass1_wall_seconds": 270.80518102645874,
+ "pass2_wall_seconds": 26.399508953094482,
+ "outputs_sha256": {
+  "gamma_horizon_results.json": "408c339f2594fd316515ac9a465e30e882e8125fbcd11c6f76984b871928f556",
+  "per_rat_horizons.csv": "54019be591de0a4bc6ccdffe798c03fe76ea1718c372519899cfe63ea0c09f00",
+  "q_curves.csv": "119004ee68adcb8c0d3cefe6fdee1ff7f2d5939afb79c9e0a87c8b574c611635",
+  "controls.json": "df4c2b989e987cd90b870e6c0d46498fd2ad8d4f82d6854f05b04b2c73dd4308",
+  "RESULTS.md": "e2b8849102d13b268b4ab7026131a58b1962b7b1ce467b2254a9bce075c966c4",
+  "tercile_cutpoints.json": "066af1f2fc8add676a52a97073aff2e90b8e807bc92aca8741e1f15ad08c35c8",
+  "qualification_diagnostic.json": "aa312e4173d5227b439232053bc662a739bb917995a2eb75472a5f5c2c4d03f5",
+  "gamma_resolved_sensitivity.json": "41a7bd092ff874fca42c06813f3a4bef305da4ba7d056cd3313bcd5fd66e9243",
+  "pass1_extract.py": "136b44f4f9b30217348590cc65019bbcef640c4d3317980f3b124183435bbd2b",
+  "pass2_horizons.py": "0ed13df251cebfd84b30f4dd27c6de20a126512ccbfa6083fca0cc8bc5b28bf3",
+  "pass3_finalize.py": "2835dfec8508f8b5fa4f15707bdc3a2cb5c34f821e6a127f0b49e61a04f436a8",
+  "pass4_qualdiag.py": "3b96e682cc61056f5766d8a82e5675b68bb8a4fc2300c3c2a8f8912b9e7dbb0c",
+  "pass5_gamma_resolved.py": "5cceed1ba9dbe3e729995567e01cf3b824fb586bdc3dd876bfb14d9547971caf",
+  "selftest_pass1.py": "e1009204a42c44e6318d16593a9eee40c85a2e35dafb89fbd7bf5c1156bb3dff",
+  "selftest_pass2.py": "d8ad2b1efd26cd778af758c4a5d8ba1b99b5241beb38769439e1973ee5916d6f",
+  "run_all.sh": "d50101e5d7ecfad97595f8253dbcf66d99df5ebfdb9865afe8786a25f6969d74"
+ },
+ "output_bytes": {
+  "gamma_horizon_results.json": 20883,
+  "per_rat_horizons.csv": 37314,
+  "q_curves.csv": 3954,
+  "controls.json": 10789,
+  "RESULTS.md": 10793,
+  "tercile_cutpoints.json": 1485,
+  "qualification_diagnostic.json": 6330,
+  "gamma_resolved_sensitivity.json": 3261,
+  "pass1_extract.py": 7612,
+  "pass2_horizons.py": 16186,
+  "pass3_finalize.py": 26416,
+  "pass4_qualdiag.py": 3801,
+  "pass5_gamma_resolved.py": 4984,
+  "selftest_pass1.py": 2898,
+  "selftest_pass2.py": 3246,
+  "run_all.sh": 1560
+ }
+}

@@ -1,0 +1,170 @@
+{
+ "dataset": "T4 HOJD CMS 2011A \u2014 CMS real-data leg, v0.2 (pfc_mass_GeV corrected)",
+ "supersedes": "t4-cms2011a-v0.1",
+ "correction": "pfc_mass_GeV rebuilt under the PtYPhiM convention per T4 ruling of 2026-07-24; the 32 other columns are unchanged and were independently re-verified exact vs v0.1.",
+ "convention": "PtYPhiM",
+ "convention_note": "The MOD per-particle field is rapidity y, matching EnergyFlow hadronic coordinates. Four-vectors: mT=sqrt(pt^2+m^2), E=mT*cosh(y), px=pt*cos(phi), py=pt*sin(phi), pz=mT*sinh(y). Edge behavior: n_pfc_selected==1 -> raw PFC mass; ==0 -> 0.0.",
+ "extractor": "t4_hojd_extractor.py (T4 canonical, used verbatim and unmodified)",
+ "n_rows": 1785625,
+ "n_columns": 33,
+ "parquet_filename": "T4_HOJD_CMS2011_v0_2_features_CMS.parquet",
+ "parquet_sha256": "4ba8c1d7b165e98c0dc249037cb720c8842f8022c34dd3153443d72fdbaaf340",
+ "parquet_bytes": 301714769,
+ "v0_1_parquet_sha256": "6cfedf43c74de2b7ea7719abf43e9ea5fb5ce7a72eafe6e588ffce32f4a47125",
+ "pfc_mass_changed_rows": 1780236,
+ "pfc_mass_unchanged_rows": 5389,
+ "pfc_mass_changed_frac": 0.996982009100455,
+ "pfc_mass_median_rel_change": 0.000404197589303834,
+ "pfc_mass_p99_rel_change": 0.004419668733232865,
+ "pfc_mass_max_rel_change": 2.7148351242013415,
+ "non_mass_columns_reverified": {
+  "result": "ALL PASS \u2014 0 mismatches in every checked column",
+  "n_recomputed_columns_checked": 27,
+  "n_metadata_columns_carried_over": 5,
+  "tolerances": {
+   "integer_and_id": "exact",
+   "raw_jets_f_derived": "rtol=0, atol=0 (bit-exact)",
+   "corr_jet_pt_GeV": "rtol<=1e-14",
+   "pfc_pt_sum_GeV and e2/e3/D2 family": "rtol<=1e-10"
+  },
+  "per_column": {
+   "fn": {
+    "rule": "exact",
+    "mismatches": 0
+   },
+   "rn": {
+    "rule": "exact",
+    "mismatches": 0
+   },
+   "lbn": {
+    "rule": "exact",
+    "mismatches": 0
+   },
+   "evn": {
+    "rule": "exact",
+    "mismatches": 0
+   },
+   "npv": {
+    "rule": "exact",
+    "mismatches": 0
+   },
+   "quality": {
+    "rule": "exact",
+    "mismatches": 0
+   },
+   "n_pfc_selected": {
+    "rule": "exact",
+    "mismatches": 0
+   },
+   "jet_pt_GeV": {
+    "rule": "rtol=0.0,atol=0.0",
+    "mismatches": 0,
+    "max_rel_dev": 0.0
+   },
+   "jet_eta": {
+    "rule": "rtol=0.0,atol=0.0",
+    "mismatches": 0,
+    "max_rel_dev": 0.0
+   },
+   "jet_y": {
+    "rule": "rtol=0.0,atol=0.0",
+    "mismatches": 0,
+    "max_rel_dev": 0.0
+   },
+   "jet_phi": {
+    "rule": "rtol=0.0,atol=0.0",
+    "mismatches": 0,
+    "max_rel_dev": 0.0
+   },
+   "jet_m_GeV": {
+    "rule": "rtol=0.0,atol=0.0",
+    "mismatches": 0,
+    "max_rel_dev": 0.0
+   },
+   "jec": {
+    "rule": "rtol=0.0,atol=0.0",
+    "mismatches": 0,
+    "max_rel_dev": 0.0
+   },
+   "jet_area": {
+    "rule": "rtol=0.0,atol=0.0",
+    "mismatches": 0,
+    "max_rel_dev": 0.0
+   },
+   "jet_max_nef": {
+    "rule": "rtol=0.0,atol=0.0",
+    "mismatches": 0,
+    "max_rel_dev": 0.0
+   },
+   "weight_nb": {
+    "rule": "rtol=0.0,atol=0.0",
+    "mismatches": 0,
+    "max_rel_dev": 0.0
+   },
+   "corr_jet_pt_GeV": {
+    "rule": "rtol=1e-14,atol=1e-12",
+    "mismatches": 0,
+    "max_rel_dev": 0.0
+   },
+   "pfc_pt_sum_GeV": {
+    "rule": "rtol=1e-10,atol=1e-12",
+    "mismatches": 0,
+    "max_rel_dev": 0.0
+   },
+   "e2_beta_0p5": {
+    "rule": "rtol=1e-10,atol=1e-12",
+    "mismatches": 0,
+    "max_rel_dev": 8.685605774141629e-14
+   },
+   "e3_beta_0p5": {
+    "rule": "rtol=1e-10,atol=1e-12",
+    "mismatches": 0,
+    "max_rel_dev": 1.571994765373254e-13
+   },
+   "D2_beta_0p5": {
+    "rule": "rtol=1e-10,atol=1e-12",
+    "mismatches": 0,
+    "max_rel_dev": 1.0339137036957147e-13
+   },
+   "e2_beta_1p0": {
+    "rule": "rtol=1e-10,atol=1e-12",
+    "mismatches": 0,
+    "max_rel_dev": 2.9669055492230475e-14
+   },
+   "e3_beta_1p0": {
+    "rule": "rtol=1e-10,atol=1e-12",
+    "mismatches": 0,
+    "max_rel_dev": 7.413809654632897e-14
+   },
+   "D2_beta_1p0": {
+    "rule": "rtol=1e-10,atol=1e-12",
+    "mismatches": 0,
+    "max_rel_dev": 6.959031292095721e-14
+   },
+   "e2_beta_2p0": {
+    "rule": "rtol=1e-10,atol=1e-12",
+    "mismatches": 0,
+    "max_rel_dev": 5.913922097091544e-14
+   },
+   "e3_beta_2p0": {
+    "rule": "rtol=1e-10,atol=1e-12",
+    "mismatches": 0,
+    "max_rel_dev": 1.4811653264722563e-13
+   },
+   "D2_beta_2p0": {
+    "rule": "rtol=1e-10,atol=1e-12",
+    "mismatches": 0,
+    "max_rel_dev": 1.4820273958110449e-13
+   }
+  }
+ },
+ "method": "All 18 source MOD HDF5 containers were re-streamed from Zenodo 3340205, each verified against the Zenodo-published MD5 AND against the source_file_sha256 recorded in v0.1, then every jet recomputed and matched 1:1 to v0.1 on jet_row_id. v0.2 is emitted from the v0.1 table with only the pfc_mass_GeV column replaced, so the other 32 columns are byte-identical to v0.1 by construction.",
+ "source": {
+  "zenodo_record": "3340205",
+  "doi": "10.5281/zenodo.3340205",
+  "title": "CMS 2011A Open Data | Jet Primary Dataset | pT > 375 GeV | MOD HDF5",
+  "n_containers": 18
+ },
+ "license": "CC-BY-4.0",
+ "date_utc": "2026-07-24T20:53:48Z"
+}

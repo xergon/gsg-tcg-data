@@ -1,0 +1,256 @@
+{
+ "dataset": "T4 HOJD CMS 2011A CORE3 v1 \u2014 SIM (detector-level Pythia6 QCD) leg",
+ "convention": "PtYPhiM",
+ "convention_note": "Per ChatGPT thread T4's ruling of 2026-07-24: PtYPhiM is canonical \u2014 the MOD field is rapidity y (not pseudorapidity), matching EnergyFlow's hadronic coordinate convention. Four-vectors are built as mT=sqrt(pt^2+m^2), E=mT*cosh(y), px=pt*cos(phi), py=pt*sin(phi), pz=mT*sinh(y). Edge behavior: n_pfc_selected==1 -> raw PFC mass; n_pfc_selected==0 -> 0.0.",
+ "extractor": "t4_hojd_extractor.py (T4 canonical, used verbatim and unmodified)",
+ "pfc_selection": "vertex == 0 AND pt >= 0.5 GeV; no JEC applied to individual PFCs",
+ "weight": "weight_nb = raw MOD jets_f['weight'] in nanobarns; no EnergyFlow k-factor",
+ "n_files": 25,
+ "n_jets": 2397697,
+ "n_jets_by_subdataset": {
+  "QCD170to300": 13618,
+  "QCD300to470": 2384079
+ },
+ "parquet_filename": "T4_HOJD_CMS2011A_CORE3_v1_features_SIM.parquet",
+ "parquet_sha256": "29fa96584cf64c1d35d1eb91bdd9b805f3fedfcc49cc591564b8ad0628fcbb4e",
+ "parquet_bytes": 486903835,
+ "columns": [
+  "sample",
+  "source_subdataset",
+  "source_filename",
+  "source_file_sha256",
+  "jet_row_id",
+  "fn",
+  "rn",
+  "lbn",
+  "evn",
+  "corr_jet_pt_GeV",
+  "jet_pt_GeV",
+  "jet_eta",
+  "jet_y",
+  "jet_phi",
+  "jet_m_GeV",
+  "jec",
+  "jet_area",
+  "jet_max_nef",
+  "npv",
+  "quality",
+  "weight_nb",
+  "n_pfc_selected",
+  "pfc_pt_sum_GeV",
+  "pfc_mass_GeV",
+  "e2_beta_0p5",
+  "e3_beta_0p5",
+  "D2_beta_0p5",
+  "e2_beta_1p0",
+  "e3_beta_1p0",
+  "D2_beta_1p0",
+  "e2_beta_2p0",
+  "e3_beta_2p0",
+  "D2_beta_2p0",
+  "pthat_min_GeV",
+  "pthat_max_GeV"
+ ],
+ "n_columns": 35,
+ "source": {
+  "records": [
+   {
+    "doi": "10.5281/zenodo.3341498",
+    "zenodo_record": "3341498",
+    "title": "CMS 2011A Simulation | Pythia 6 QCD 300-470 | pT > 375 GeV | MOD HDF5",
+    "subdataset": "QCD300to470",
+    "pthat_min_GeV": 300.0,
+    "pthat_max_GeV": 470.0
+   },
+   {
+    "doi": "10.5281/zenodo.3341500",
+    "zenodo_record": "3341500",
+    "title": "CMS 2011A Simulation | Pythia 6 QCD 170-300 | pT > 375 GeV | MOD HDF5",
+    "subdataset": "QCD170to300",
+    "pthat_min_GeV": 170.0,
+    "pthat_max_GeV": 300.0
+   }
+  ],
+  "files_used": "SIM* (detector-level) files only. The GEN* files in the same records carry no `pfcs` dataset and no jec/jet_area/jet_max_nef/npv/quality columns, so the frozen 33-column HOJD schema is not computable from them.",
+  "integrity": "every raw .h5 verified against the Zenodo-published MD5 before parsing"
+ },
+ "license": "CC-BY-4.0",
+ "date_utc": "2026-07-24T20:42:00Z",
+ "per_file": [
+  {
+   "part": "SIM170_Jet300_pT375-infGeV_0_compressed.parquet",
+   "n_jets": 13618,
+   "source_filename": "SIM170_Jet300_pT375-infGeV_0_compressed.h5",
+   "source_subdataset": "QCD170to300",
+   "source_file_sha256": "dfd906b47da5322ae87f503bd58d3abf70c82561de2e19ae0f9d7423ed4e4f4a"
+  },
+  {
+   "part": "SIM300_Jet300_pT375-infGeV_0_compressed.parquet",
+   "n_jets": 100000,
+   "source_filename": "SIM300_Jet300_pT375-infGeV_0_compressed.h5",
+   "source_subdataset": "QCD300to470",
+   "source_file_sha256": "3f8e12a79de1620bcc2049414a444f13b2b3aa5810427b6cc5a5c57406e5db34"
+  },
+  {
+   "part": "SIM300_Jet300_pT375-infGeV_10_compressed.parquet",
+   "n_jets": 100000,
+   "source_filename": "SIM300_Jet300_pT375-infGeV_10_compressed.h5",
+   "source_subdataset": "QCD300to470",
+   "source_file_sha256": "c2d18096415cf4b26275e1f0f624baf07e78d5c9ec9d5b2c1d3d306f6f7354a7"
+  },
+  {
+   "part": "SIM300_Jet300_pT375-infGeV_11_compressed.parquet",
+   "n_jets": 100000,
+   "source_filename": "SIM300_Jet300_pT375-infGeV_11_compressed.h5",
+   "source_subdataset": "QCD300to470",
+   "source_file_sha256": "b4feff06d4aa008f05135c9196e1e3c7b70b978fd536f9fab9de28aa52af1eed"
+  },
+  {
+   "part": "SIM300_Jet300_pT375-infGeV_12_compressed.parquet",
+   "n_jets": 100000,
+   "source_filename": "SIM300_Jet300_pT375-infGeV_12_compressed.h5",
+   "source_subdataset": "QCD300to470",
+   "source_file_sha256": "1052c8475f94f65a60a252f6e4366dea9ede5d459de4457a570b21fe2a7ab533"
+  },
+  {
+   "part": "SIM300_Jet300_pT375-infGeV_13_compressed.parquet",
+   "n_jets": 100000,
+   "source_filename": "SIM300_Jet300_pT375-infGeV_13_compressed.h5",
+   "source_subdataset": "QCD300to470",
+   "source_file_sha256": "6be31cb56e0e2c9fd92ff0717f8b105cbb5101c5a99a89368c52a30d28a753c2"
+  },
+  {
+   "part": "SIM300_Jet300_pT375-infGeV_14_compressed.parquet",
+   "n_jets": 100000,
+   "source_filename": "SIM300_Jet300_pT375-infGeV_14_compressed.h5",
+   "source_subdataset": "QCD300to470",
+   "source_file_sha256": "1544273b159d05c3534df32e6f12a01711ee2d479ed9ae84c038eb613f65bf7e"
+  },
+  {
+   "part": "SIM300_Jet300_pT375-infGeV_15_compressed.parquet",
+   "n_jets": 100000,
+   "source_filename": "SIM300_Jet300_pT375-infGeV_15_compressed.h5",
+   "source_subdataset": "QCD300to470",
+   "source_file_sha256": "a2874e07f8eca8f484bb832a2941a09783783d6f0e71509c102d250bca3f9ad1"
+  },
+  {
+   "part": "SIM300_Jet300_pT375-infGeV_16_compressed.parquet",
+   "n_jets": 100000,
+   "source_filename": "SIM300_Jet300_pT375-infGeV_16_compressed.h5",
+   "source_subdataset": "QCD300to470",
+   "source_file_sha256": "5df2e3e4e3f8a6497f6a1829f2ab73103af8e2d727fe159aac5e287493d55271"
+  },
+  {
+   "part": "SIM300_Jet300_pT375-infGeV_17_compressed.parquet",
+   "n_jets": 100000,
+   "source_filename": "SIM300_Jet300_pT375-infGeV_17_compressed.h5",
+   "source_subdataset": "QCD300to470",
+   "source_file_sha256": "48dd2b90259b6d0f7dbfaf6c6f9d38618332f4ec5790b351281d8676d4a5b438"
+  },
+  {
+   "part": "SIM300_Jet300_pT375-infGeV_18_compressed.parquet",
+   "n_jets": 100000,
+   "source_filename": "SIM300_Jet300_pT375-infGeV_18_compressed.h5",
+   "source_subdataset": "QCD300to470",
+   "source_file_sha256": "ef770bcd0299faa4387c2d511d9d05d6dbc2b7c7fb1900bf77e843d6466ec9cf"
+  },
+  {
+   "part": "SIM300_Jet300_pT375-infGeV_19_compressed.parquet",
+   "n_jets": 100000,
+   "source_filename": "SIM300_Jet300_pT375-infGeV_19_compressed.h5",
+   "source_subdataset": "QCD300to470",
+   "source_file_sha256": "ad4831da1a7ec03ccd27c799b0353cdf627b612d10ce22a8f32d4daf937a5f06"
+  },
+  {
+   "part": "SIM300_Jet300_pT375-infGeV_1_compressed.parquet",
+   "n_jets": 100000,
+   "source_filename": "SIM300_Jet300_pT375-infGeV_1_compressed.h5",
+   "source_subdataset": "QCD300to470",
+   "source_file_sha256": "d69d4ff64a62ed945839173b7eb8d3cf587531b06120567eae7f9493527a7231"
+  },
+  {
+   "part": "SIM300_Jet300_pT375-infGeV_20_compressed.parquet",
+   "n_jets": 100000,
+   "source_filename": "SIM300_Jet300_pT375-infGeV_20_compressed.h5",
+   "source_subdataset": "QCD300to470",
+   "source_file_sha256": "e7286777fec40fa466d5543430b4b6251b53d38ec579035e5d75c217c410f8ca"
+  },
+  {
+   "part": "SIM300_Jet300_pT375-infGeV_21_compressed.parquet",
+   "n_jets": 100000,
+   "source_filename": "SIM300_Jet300_pT375-infGeV_21_compressed.h5",
+   "source_subdataset": "QCD300to470",
+   "source_file_sha256": "da898df3c7ebfd4089e04f5b3478ede2b36e03d0e4fc504ef0ff2b00ad0e74cb"
+  },
+  {
+   "part": "SIM300_Jet300_pT375-infGeV_22_compressed.parquet",
+   "n_jets": 100000,
+   "source_filename": "SIM300_Jet300_pT375-infGeV_22_compressed.h5",
+   "source_subdataset": "QCD300to470",
+   "source_file_sha256": "17b08f727f5c43bc7600fcdc3e6f994c3a4c8738ad5b375bb8f898b837253de3"
+  },
+  {
+   "part": "SIM300_Jet300_pT375-infGeV_23_compressed.parquet",
+   "n_jets": 84079,
+   "source_filename": "SIM300_Jet300_pT375-infGeV_23_compressed.h5",
+   "source_subdataset": "QCD300to470",
+   "source_file_sha256": "e5ac49407e5774e1da03b88adb7795581db8a6565b1d85bd63e35cfaba82b6b6"
+  },
+  {
+   "part": "SIM300_Jet300_pT375-infGeV_2_compressed.parquet",
+   "n_jets": 100000,
+   "source_filename": "SIM300_Jet300_pT375-infGeV_2_compressed.h5",
+   "source_subdataset": "QCD300to470",
+   "source_file_sha256": "f3417a1d62a478eec2921f242049cda63ae1f9cbd35e5a75c40cef890fc186e8"
+  },
+  {
+   "part": "SIM300_Jet300_pT375-infGeV_3_compressed.parquet",
+   "n_jets": 100000,
+   "source_filename": "SIM300_Jet300_pT375-infGeV_3_compressed.h5",
+   "source_subdataset": "QCD300to470",
+   "source_file_sha256": "7cbccbe7c0f90a50b83a6d04dee664d2a388d3d2023dccbc4d1c39f3f4c71c22"
+  },
+  {
+   "part": "SIM300_Jet300_pT375-infGeV_4_compressed.parquet",
+   "n_jets": 100000,
+   "source_filename": "SIM300_Jet300_pT375-infGeV_4_compressed.h5",
+   "source_subdataset": "QCD300to470",
+   "source_file_sha256": "89a42cec5ae9d1bb5c9a53bccbde1b9b3ac79779e4207167c3b2630fed064371"
+  },
+  {
+   "part": "SIM300_Jet300_pT375-infGeV_5_compressed.parquet",
+   "n_jets": 100000,
+   "source_filename": "SIM300_Jet300_pT375-infGeV_5_compressed.h5",
+   "source_subdataset": "QCD300to470",
+   "source_file_sha256": "aa0fd2d1683fcdfb54e2d414f43a47c53129eaade6135c1e3a1fdafff27a4ee4"
+  },
+  {
+   "part": "SIM300_Jet300_pT375-infGeV_6_compressed.parquet",
+   "n_jets": 100000,
+   "source_filename": "SIM300_Jet300_pT375-infGeV_6_compressed.h5",
+   "source_subdataset": "QCD300to470",
+   "source_file_sha256": "a5a53b1d97df03138fdb9fcaa30af9721d39ac14211d06c67b577dbdb96a3c20"
+  },
+  {
+   "part": "SIM300_Jet300_pT375-infGeV_7_compressed.parquet",
+   "n_jets": 100000,
+   "source_filename": "SIM300_Jet300_pT375-infGeV_7_compressed.h5",
+   "source_subdataset": "QCD300to470",
+   "source_file_sha256": "4521487b1b7ef344b8cd810ca68257a2a9f44bfa352ea37b305b8c5b01ae4423"
+  },
+  {
+   "part": "SIM300_Jet300_pT375-infGeV_8_compressed.parquet",
+   "n_jets": 100000,
+   "source_filename": "SIM300_Jet300_pT375-infGeV_8_compressed.h5",
+   "source_subdataset": "QCD300to470",
+   "source_file_sha256": "da7060f94ce162d40e2664c1e38f3b3080482c76b84a697ceea46a4860fd90dd"
+  },
+  {
+   "part": "SIM300_Jet300_pT375-infGeV_9_compressed.parquet",
+   "n_jets": 100000,
+   "source_filename": "SIM300_Jet300_pT375-infGeV_9_compressed.h5",
+   "source_subdataset": "QCD300to470",
+   "source_file_sha256": "a5d197a098da4077dfdb6a7d774858bf8271842d18539000e9279557cdd22c0f"
+  }
+ ]
+}

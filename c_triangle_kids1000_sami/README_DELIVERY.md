@@ -9,7 +9,7 @@ Fetched 2026-07-25 (UTC, `date -u`).
 
 ---
 
-## 1. 🔴 `N_qualified` — THE KILL DOES NOT FIRE
+## 1. 🔴 `N_qualified` — THE KILL DOES NOT FIRE. **N_qualified = 2075**, margin 2.1×.
 
 Falsifier: `N_qualified < 1,000 ⇒ PIVOT`.
 
@@ -25,17 +25,39 @@ luck.
 | L3 | + `PA_GASKIN_ERR ≤ 5°` | 2033 |
 | L4 | + finite `PA_STELKIN` | 1808 |
 | L5 | gas **and** stellar PA both present | 1808 |
-| L6 | + finite `LAMBDAR_RE` (the spin-parameter proxy) | 1155 |
+| L6 | + finite `LAMBDAR_RE` (the spin-*magnitude* proxy — see below, **not** needed for parity) | 1155 |
 | L7 | **STRICT**: `PA_GASKIN_ERR ≤ 10°` + `LAMBDAR_RE` + `WARNMULT=WARNFILL=WARNZ=0` | **1120** |
 
 By GAMA field: **G09 657, G12 702, G15 741**.
 
-⚠ **The margin is thin where it counts.** If the signed spin-parity label needs `LAMBDAR_RE` (the SAMI
-spin-parameter proxy, van de Sande et al. 2017), N drops to **1155**, and with the quality flags applied
-**1120** — a 1.12× margin over the kill. `LAMBDAR_RE` is the binding constraint, not the footprint and not
-the PA: it is finite for only **1930 of 3068** SAMI DR3 galaxies survey-wide. If the label can be built from
-`PA_GASKIN` alone (present for 2099/2100) the margin is 2.1×. **The row should say which it needs before
-anyone spends a byte on imaging.**
+### 🔴 The operative rung is L2 = 2075, not L7 — `PA_GASKIN` is ALREADY a signed label
+
+`PA_GASKIN` spans **0.5° → 360.0°**, with **50.13% of values above 180°** and a flat octant histogram. It is
+measured with **`fit_kinematic_pa`** (Krajnović et al. 2006, Appendix C), applied to the 1-component gas
+kinematic maps — a routine that returns the PA of the **receding** half of the velocity field over the full
+circle. **⇒ The rotation sense is encoded in the PA itself. `PA_GASKIN` *is* the externally supplied signed
+spin-parity label C-Triangle asked for, with no extra ingredient.**
+
+`PA_STELKIN` behaves identically (1.0° → 359.5°, 49.88% above 180°).
+
+**So `N_qualified` = 2099 (finite `PA_GASKIN`) or 2075 (`err ≤ 10°`) — a 2.1× margin, not 1.12×.**
+`LAMBDAR_RE` (N = 1155) constrains spin **magnitude**, not parity; it is finite for only 1930 of 3426 cubes
+and it is **not** the binding cut unless the estimator specifically needs fast/slow-rotator classification.
+**If the row confirms it needs parity only, the footprint question is closed with a 2× margin.**
+
+`PA_GASKIN_ERR` is excellent: median **0.167°**, p90 1.25°, p95 3.9°, p99 11.3°.
+
+⚠ **`PA_STELKIN_ERR` saturates.** Median 3.17°, but p90 = p95 = p99 = **29.9167°** — 336 rows sit exactly on
+that cap, i.e. those stellar PAs are unconstrained, not merely noisy. SAMI themselves fall back to the *gas*
+PA whenever the stellar PA error exceeds 20°. **Do not treat `PA_STELKIN` as an independent label of equal
+quality.**
+
+⭐ **A free internal sign control the row did not ask for.** Joining the two PA tables on `CUBEID`
+(identical key sets, 2815 galaxies with both finite): median |PA_gas − PA_stel| = **19.0°**, 46% within 15°
+— and **9.0% exceed 150°, i.e. gas–star counter-rotators** (7.8% with both errors < 10°). For roughly one
+galaxy in eleven the spin-parity label **flips between tracers**. `Γ_B` must flip sign with it. That is a
+built-in, zero-cost falsification test on the estimator itself, and it is far sharper than a random-sign
+null because the flip is physically real and externally labelled.
 
 Other counts, for completeness:
 * SAMI DR3 unique galaxies with `ISBEST` cube and `WARNSTAR=0`: **2996** (2100 GAMA + 896 cluster).

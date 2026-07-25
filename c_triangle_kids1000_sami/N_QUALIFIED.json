@@ -2,7 +2,7 @@
   "row": "C-Triangle",
   "generated_utc": "2026-07-25T12:06:56Z",
   "falsifier": "N_qualified < 1000 => PIVOT",
-  "verdict": "KILL DOES NOT FIRE - every rung of the ladder is >= 1000; the tightest (L7) is 1120, a 1.12x margin",
+  "verdict": "KILL DOES NOT FIRE. Decisive point: PA_GASKIN spans 0.5-360.0 deg (fit_kinematic_pa, Krajnovic+2006 App.C) and therefore ALREADY CARRIES THE ROTATION SENSE -- it IS a signed spin-parity label on its own. N_qualified = 2099 (finite PA_GASKIN) / 2075 (err <= 10 deg), a 2.1x margin. LAMBDAR_RE (N=1155) is only needed for spin MAGNITUDE, not parity, and is NOT the binding cut.",
   "footprint_overlap": {
     "sami_dr3_unique_galaxies_WARNSTAR0_ISBEST": 2996,
     "sami_dr3_GAMA_region": 2100,
@@ -26,7 +26,8 @@
     "L4_plus_finite_PA_STELKIN": 1808,
     "L5_gas_and_stellar_PA_both": 1808,
     "L6_plus_finite_LAMBDAR_RE_spin_proxy": 1155,
-    "L7_STRICT_PAgas_e10_and_LAMBDAR_RE_and_no_warn": 1120
+    "L7_STRICT_PAgas_e10_and_LAMBDAR_RE_and_no_warn": 1120,
+    "NOTE": "L6/L7 are NOT the operative rungs unless the estimator needs spin MAGNITUDE. For a signed parity label the operative rung is L2 = 2075."
   },
   "lens_redshifts": {
     "n": 2100,
@@ -45,5 +46,53 @@
     "effective_area_deg2_after_masking": 777.4,
     "gross_tile_area_deg2": 1006
   },
-  "caveat": "Footprint membership is tile-level. It does NOT account for the KiDS 9-band MASK column; ~23% of the gross tile area is masked (777.4 of 1006 deg2). Per-aperture usable source counts must be recomputed from the delivered per-aperture source extract using MASK."
+  "caveat": "Footprint membership is tile-level. It does NOT account for the KiDS 9-band MASK column; ~23% of the gross tile area is masked (777.4 of 1006 deg2). Per-aperture usable source counts must be recomputed from the delivered per-aperture source extract using MASK.",
+  "signed_spin_parity_label": {
+    "column": "sami_dr3.samiDR3gaskinPA.PA_GASKIN",
+    "documented_convention": "Gas kinematic position angle. Anticlockwise, North=0 degrees",
+    "measured_range_deg": [
+      0.5,
+      360.0
+    ],
+    "fraction_above_180deg": 0.5013,
+    "method": "fit_kinematic_pa, Krajnovic et al. 2006 Appendix C, applied to the 1-component gas kinematic maps (Croom et al. 2021 sec. 6)",
+    "interpretation": "0-360 deg, pointing to the RECEDING side of the velocity field => the sign of rotation is encoded in the PA itself",
+    "PA_GASKIN_ERR_percentiles_deg": {
+      "p50": 0.167,
+      "p90": 1.25,
+      "p95": 3.9,
+      "p99": 11.333
+    },
+    "stellar_counterpart": {
+      "column": "sami_dr3.samiDR3Stelkin.PA_STELKIN",
+      "measured_range_deg": [
+        1.0,
+        359.5
+      ],
+      "fraction_above_180deg": 0.4988,
+      "n_finite": 2815,
+      "PA_STELKIN_ERR_percentiles_deg": {
+        "p50": 3.167,
+        "p90": 29.917,
+        "p95": 29.917,
+        "p99": 29.917
+      },
+      "caveat": "PA_STELKIN_ERR SATURATES at 29.9167 deg - 336 rows sit exactly on that cap, so those stellar PAs are unconstrained. SAMI themselves fall back to the gas PA whenever the stellar PA error exceeds 20 deg (Croom+2021 fig. 21)."
+    },
+    "gas_vs_stellar_offset": {
+      "joined_on": "CUBEID",
+      "n": 2815,
+      "median_deg": 19.0,
+      "frac_within_15deg": 0.4615,
+      "frac_within_30deg": 0.5652,
+      "frac_above_150deg": 0.0902,
+      "both_errors_below_10deg": {
+        "n": 2048,
+        "median_deg": 10.5,
+        "frac_within_15deg": 0.5669,
+        "frac_above_150deg": 0.0776
+      },
+      "note": "~8-9 percent of the sample are gas-star COUNTER-ROTATORS. That is a free internal sign control: the spin-parity label flips between tracers for 1 galaxy in 11, and Gamma_B must flip with it."
+    }
+  }
 }

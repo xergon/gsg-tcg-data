@@ -167,3 +167,90 @@ Each map is 17,642,880 B. `create_c12_mock.py` builds a mock KiDS catalogue of t
 position of every KiDS galaxy — i.e. it generates the **arbitrary-input control** for this systematic
 directly. `KiDS_Patches.dat` (85,738 B) is the patch definition used for the bootstrap that produced the
 7.5 × 10⁻⁸ prior.
+
+---
+
+## 4. What "DR4.1" actually is, and what the `MASK` column already had done to it
+
+From `https://kids.strw.leidenuniv.nl/DR4/release-description-KiDS-ESO-DR4.1.pdf` (1,466,895 B), quoted in
+substance:
+
+> DR4.1 fixes a bug in the production of the DR4.0 catalogues which produced **erroneous `MASK` values for
+> the VIKING NIR photometry**. On **196 of the 1006 tiles**, up to **~5 % of sources** were affected. DR4.1
+> ships new multi-band catalogues and updated masks for those tiles. **The ugri images and single-band
+> catalogues are byte-identical to DR4.0.** With the corrected masks the total unmasked area with valid
+> 9-band photometry rises by **0.5 %** relative to DR4.
+
+⇒ **The thing DR4.1 fixes is exactly the `MASK` column.** If any downstream step reaches for a DR4.0
+product, masking is wrong for up to 5 % of sources on 196 tiles. Everything delivered and manifested here
+is DR4.1.
+
+**Checked for this row specifically: 0 of the 2,100 SAMI GAMA lenses sits on a bug-affected tile.** The 139
+re-released KiDS-N tiles span RA 157.0–171.5, 187.5–210.0, 220.6/221.6, 225.0–237.7 at
+dec ∈ {−3.5, −2.5, −1.5, +1.5, +2.5}. Only RA 220.6 and 221.6 fall inside the G15 RA window and both sit at
+dec −3.5, outside G15's declination range. **The mask bug does not touch this lens sample at all.**
+
+### `MASK` bit meanings (Table 8 of the release description), bit 0 upward
+```
+0  THELI manual mask (very conservative)
+1  THELI automatic large star halo mask (faint)
+2  THELI automatic large star halo mask (bright), or bright star mask
+3  Manual mask around globular clusters, Fornax dwarf, ISS passage
+4  THELI void mask, or asteroids, or weight = 0
+5..9   VIKING Z / Y / J / H / Ks band image masked
+10..13 Astro-WISE u / g / r / i band halo+stellar PULECENELLA mask, or weight = 0
+14 Object outside the RA/DEC cut for its tile
+15 not used (reserved as the sign bit of a 2-byte FITS integer)
+```
+
+### 🔴 A bitmask selection has **already been applied** to the gold catalogue — do not re-cut on `MASK == 0`
+Across 62,735 real rows read from the head of the file, `MASK` takes **only four values**:
+
+```
+MASK =    0   56,074 rows   89.38 %   (no bits)
+MASK =    2    3,262 rows    5.20 %   (bit 1  — THELI automatic large star halo mask, faint)
+MASK = 4098    1,993 rows    3.18 %   (bits 1 and 12)
+MASK = 4096    1,406 rows    2.24 %   (bit 12 — Astro-WISE r-band halo+stellar PULECENELLA mask)
+```
+
+**Only bits 1 and 12 ever survive; every one of the other fourteen bits is absent from all 62,735 rows.**
+That is the signature of a bitmask selection having already been applied at build time, retaining exactly
+the two bits KiDS tolerates for lensing. (The constant is not stated in the DR4.1 release description and
+is not asserted here — the empirical bit pattern is.)
+
+**⇒ Re-cutting the gold catalogue on `MASK == 0` would discard 10.62 % of the sources, and not at random:
+bit 1 is the faint star-halo mask and bit 12 the r-band stellar-halo mask, so the loss is concentrated
+around bright stars — exactly where a local-aperture estimator is already most exposed to a spatially
+coherent additive.** Use the catalogue as delivered. `fitclass` is `0` for 62,616 rows and `−9` for 119
+(0.19 %); the `−9` rows all carry `weight ≈ 15.44–15.56`, i.e. they are not zero-weighted.
+
+Other selections already applied on disk, verified on the same sample:
+* `Z_B` strictly within **(0.1, 1.2]** — fraction inside = 1.000
+* `weight > 0` — fraction = 1.000
+* `|e| ≤ 1` — fraction = 1.000
+* `fitclass ∈ {0, −9}`, `SG_FLAG ∈ {0, 1}`
+
+### One open item the row should settle before publishing
+KiDS's own analysis code (`Cat_to_Obs_K1000_P1/Calc_2pt_Stats/create_tomocats.py`) reads
+`autocal_e1_<blind>` / `autocal_e2_<blind>` from the internal catalogue, with plain `e1_<blind>` commented
+out. The public DR4.1 file ships a single unblinded `e1`/`e2` pair and the header does not say which of the
+two it corresponds to. The fiducial KiDS-1000 figures are all labelled `KAll.autocal.BlindC...`, so `e1`/`e2`
+are **most likely** the autocal ellipticities with the blinding removed — but that is an inference, not a
+documented statement, and it is flagged rather than asserted. **It does not change the c-subtraction
+procedure either way**; it would only matter if the row compares its own recovered `c` against Giblin's
+published value at the 10 % level.
+
+### Confirmation that the c-recipe here is the one KiDS actually ran
+`create_tomocats.py` computes, per tomographic bin, `c1 = weighted mean of e1`, `c2 = weighted mean of e2`,
+then `e1_corr = e1 − c1`. Its `Bootstrap_Error_csq` returns `std((bt_e1 − c1)² + (bt_e2 − c2)²)` over
+`nboot` resamples — **which is exactly the `δε̄²` quantity whose largest per-bin value gives the
+σ = 7.5 × 10⁻⁸ prior.** The 2.739 × 10⁻⁴ figure in §0 is therefore not a paraphrase of the paper; it is the
+square root of the number their own published code produces.
+
+Also worth knowing: their code passes `e1`/`e2` straight into TreeCorr as `g1`/`g2` with
+`ra_col='ALPHA_J2000'`, `dec_col='DELTA_J2000'`, `w_col='weight'` and **no sign flip anywhere**. For a
+parity-odd estimator that is the load-bearing convention statement — ⚠ but note that the *photometric*
+angles in the same catalogue use the opposite handedness (`THETA_J2000` is documented "**West of North**"
+and `PAgaap` "North of West"), whereas SAMI's `PA_GASKIN` is "Anticlockwise, North = 0" i.e. **East of
+North**. **Do not cross-wire a photometric PA from the KiDS catalogue with a SAMI kinematic PA without
+fixing the handedness first — that is a silent sign flip straight into a parity-odd statistic.**

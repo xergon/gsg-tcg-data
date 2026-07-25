@@ -1,0 +1,4172 @@
+ESO Phase 3 Data Release Description
+Data Collection
+Release Number
+Data Provider
+Date
+
+KiDS
+4.1
+Konrad Kuijken
+26.03.2020
+
+Abstract
+This data release constitutes the fourth public release by the Kilo-Degree Survey (KiDS). KiDS is
+an ESO public survey carried out with the VLT Survey Telescope and OmegaCAM camera, that
+will image 1350 square degrees in four filters (u, g, r, i), in single epochs per filter. KiDS was designed as a weak lensing shear tomography survey, and its core science drivers are mapping of
+the large-scale matter distribution in the universe and constraining the equation-of-state of Dark
+Energy. Additional science cases are manifold and range from galaxy evolution to Milky Way
+structure, and from detection of white dwarfs to high-redshift quasars.
+This data release more than doubles the sky area covered by the first three releases combined,
+and for the first time includes photometry from the partner VIKING ESO public imaging survey
+on VISTA. For each of 1006 square-degree survey tiles the data release includes calibrated
+stacked images in u,g,r and i filters, their corresponding weights and masks, and single-band
+source lists extracted from the stacks. Furthermore, a multi-band ugriZYJHKs source catalogue is
+provided that encompasses the combined 1006 square degree area of this data release, with PSFhomogenised and aperture-matched photometry and photometric redshift estimates.
+The VST data included in KiDS-ESO-DR4 were taken under ESO programme IDs: 177.A-3016(A),
+177.A-3016(B), 177.A-3016(C), 177.A-3016(D), 177.A-3016(E), 177.A-3016(F), 177.A-3016(G),
+177.A-3016(H), 177.A-3016(I), 177.A-3016(J), 177.A-3016(K), 177.A-3016(L), 177.A-3016(M),
+177.A-3016(N), 177.A-3016(O), 177.A-3016(P), 177.A-3016(Q), 177.A-3016(S), 177.A-3017(A),
+177.A-3018(A), 60.A-9038(A), and 094.B-0512(A). The VISTA data in this data release are taken
+from VIKING DR3 (q.v.), released Sept. 1, 2017.
+This data release DR4.1 fixes a bug in the production of the DR4.0 catalogues. For a small
+fraction of sources, it resulted in erroneous MASK values for the NIR photometry from the
+VIKING survey. On 196 of the 1006 tiles, up to ~5% of the sources were affected. DR4.1
+contains new multi-band catalogues as well as updated masks for these tiles. DR4.1 ugri
+images and single-band catalogues are identical to their DR4.0 counterparts.
+The list of affected tiles is given in Table 9 at the end of this document. None of these
+changes affect data released as part of KiDS_DR3 or KIDS_DR3.1 .
+With the corrected masks, the total unmasked area with valid 9-band photometry is increased by 0.5% with respect to DR4.
+
+Figure 1: location of the 1006 KiDS-ESO-DR4 tiles. The area covered in DR1/2/3 is shown in blue,
+while the green tiles are new additions. The target 1350 sq.deg. KiDS survey area (top: KiDS-North;
+bottom: KiDS-South) is outlined in grey.
+
+Overview of Observations
+This data release (KiDS-ESO-DR4) consists of the coadded images, weight maps, masks and
+source lists of 1006 square degree survey tiles observed with OmegaCAM on the VST in u, g, r and
+i bands before January 24, 2018. It supercedes the 440 tiles released in DR1/2/3 (de Jong et al.
+2015, A&A 582, A62; de Jong et al. 2017, A&A 604, A134). Figure 1 shows the DR4 footprint. Unlike the previous, incremental releases, for DR4 all data were reprocessed with improved astrometric and photometric calibration algorithms. The u,g,r and i images were reduced with the Astro-WISE system (McFarland et al. 2013, Exp.Astron., 35, 45).
+In addition to these single-band data products, KiDS-ESO-DR4 includes a 9-band ugriZYJHKs
+source catalogue that spans all survey tiles in the data release. It contains list-driven, apertureand PSF-matched GAaP photometry from the stacked VST images, as well as from the VISTA
+pointings taken for the near-IR VIKING survey (Edge et al. 2013, The Messenger 154, 32). The
+included sources are detected on a separate reduction of the r-band stacks with the THELI pipeline (Erben et al. 2013, MNRAS 433, 2545), optimised for the weak lensing analysis. These r-band
+detection images are also included in the data release.
+From the beginning, KiDS and VIKING were conceived together as a combined survey, covering
+the same parts of the sky. The VIKING survey started before KiDS, and was terminated in 2015
+before completing the originally planned 1500 square degree footprint. It was therefore decided
+that KiDS observations would prioritise the 1350 square degrees for which VIKING data exist. At
+the time of writing it seems likely that KiDS will also conclude observations once the 1350 square
+degree VIKING footprint has been covered. The footprint area shown in grey in Figure 1 is this
+reduced area.
+
+2
+
+Release Content
+Imaging products and single-band source lists
+The list of 1006 tiles for which imaging data products and single-band source lists are included
+in KiDS-ESO-DR4 is provided online at http://kids.strw.leidenuniv.nl/DR4/data_table.php.
+Each tile was observed in u, g, r, and i band. The final footprint of each tile is slightly larger than 1
+square degree due to the dithering scheme: 61.9x65.4 arcminutes in u; 62.3x66.8 arcminutes in g,
+r and i. Taking this into account, the total sky coverage is approximately 993 square degrees
+(1022 if the edges of the footprint, where there are fewer dither exposures, are included). Compared to previous DR the sky coverage of the released data is significantly more contiguous, as
+illustrated in Figure 1.
+The single-band source lists were extracted from the calibrated, stacked images for each tile and
+filter separately, using the Astro-WISE processing system. In addition, a second, weak lensingoptimised reduction of the r-band survey tiles using the THELI data reduction pipeline was performed, resulting in a separate r-band source list that is used for the 9-band photometry and
+(future) weak lensing analysis (these catalogues are described in the next section).
+Since the OmegaCAM CCD mosaic consists of 32 individual CCDs, the sky covered by a single exposure has gaps. In order to fill in these gaps, KiDS tiles are built up from 5 dithered observations
+in g, r and i and 4 in u. The dithers form a staircase pattern with dither steps of 25′′ in X (RA) and
+85′′ in Y (DEC), bridging the inter-CCD gaps (de Jong et al., 2015, A&A, 582, A62). The tile centres
+are based on a tiling strategy that tiles the full sky efficiently for VST/OmegaCAM. Neighbouring
+dithered stacks have an overlap in RA of 5% and in DEC of 10%.
+In Figure 2 the obtained seeing (FWHM), PSF ellipticity, and limiting magnitude (5σ AB in 2'' aperture) distributions per filter are shown, to illustrate the obtained data quality. In case of the
+filters observed in dark time (u, g, r) the FWHM distributions reflect the different observing constraints, with r-band taking the best conditions. Since i-band is the only filter observed in bright
+time, it is observed under a large range of seeing conditions. Average PSF ellipticities are always
+small: <0.1 (the average is over the absolute amount of ellipticity, regardless of the direction of
+ellipticity). The wide range of limiting magnitudes in i-band is caused by the larger range in seeing and in moon phase and thus sky brightness.
+A repeat pass of the full KiDS area in i band is underway, and will be included in a future release.
+These new data do not suffer from the poor baffling of the VST in the period up to May 2015 that
+particularly affected the i band sky background.
+For a full overview of the data quality parameters for each observation we refer to the following
+online table: http://kids.strw.leidenuniv.nl/DR4/data_table.php.
+The single-band tiles in this data release consists of 19.114 files and a total data size of 179Gb of
+catalogue data and 17Tb of pixel data (image, weight and mask).
+
+3
+
+Figure 2: Tile-by-tile raw data quality parameters for KiDS-ESO-DR4. Left: average PSF size
+(FWHM) distributions; centre: average ellipticity distributions (defined as 1-B/A, where A and B are
+the major and minor axis RMS length of the PSF); right: limiting magnitude distributions (5σ AB in
+2'' aperture). The distributions are per filter: from top to bottom u, g, r, and i, respectively.
+
+4
+
+9-band source catalogue
+The KiDS-ESO-DR4 9-band source catalogue is based on the imaging data products described
+above, as well as new ZYJHKs near-IR photometry measured on the images from the overlapping
+VIKING survey on VIRCAM@VISTA. Here we provide a general description of the catalogue data,
+while an overview of all tiles with coordinates, PSF size, limiting magnitude, etc. is provided
+online: http://kids.strw.leidenuniv.nl/DR4/data_table.php.
+The catalogue is based on the combined 1006 survey tiles, providing a total area coverage of approximately 1022 square degrees. The detection catalogue was generated from the r-band images reduced with the THELI pipeline. Those images form the basis for the weak lensing shape
+measurements, and this choice ensures that the definition of the sources in the photometric catalogue is consistent with the upcoming lensing catalogue (there was no such match between the
+DR3 photometric catalogue and the DR3.1 lensing catalogue, even though they were generated
+from the same raw data). The source coordinates and sizes were then used for forced (listdriven) 'Gaussian Aperture and PSF (GAaP)' photometry (Kuijken et al. 2015, MNRAS 454, 3500)
+on the Astro-WISE ugri VST images, and the ZYJHKs VISTA images reduced at the Cambridge Astronomical Survey Unit (CASU). The GAaP photometry for a source is effectively the integrated
+surface brightness over an elliptical Gaussian aperture function, defined on the intrinsic, seeingdeconvolved sky. It weights each part of the source consistently in each photometric band. Except
+for unresolved sources, it does not measure the total flux; instead the GAaP aperture size, shape
+and orientation it is optimised to return a high SNR flux for use in colour measurements. Error
+estimates on the GAaP fluxes are obtained by propagating the rms pixel noise through the measurement process.
+The GAaP fluxes for the VST data were measured from the stacked u,g,r and i images. For the
+VISTA data, where the gaps between detectors are larger and PSF variations across the field and
+from subexposure to subexposure greater, photometry was measured from individual summed
+jittered 'paw-print' images (see VIKING DR3 release description). Each source was typically detected 2-6 times per near-IR filter, and the 9-band catalogue reports the optimally-weighted average flux over all available subexposures containing that source.
+The initial photometric calibration of the VST images is based on nightly zeropoints from photometric standard star fields observations. These are subsequently refined at catalogue level with
+stellar-locus regression and anchoring to the Gaia G band photometry (Brown et al. 2018, A&A
+616, A1). The flux scales in the images correspond to the nightly zeropoints, with the cataloguelevel corrections reported in the image header.
+VIKING imaging is calibrated to 2MASS photometry (Skrutskie at al. 2006, AJ, 131, 1163) within
+CASU. This calibration is verified after photometry is measured by comparing individual stellar
+flux estimates per paw-print to SDSS z-band data (Alam et al. 2015, ApJS 219, 12) for the Z-band,
+colour converted SDSS z and 2MASS J data for the Y-band, and 2MASS JHK data for the JHKs
+bands respectively. Median offsets between 2MASS and VIKING photometry per observation are
+also calculated, to flag poorly calibrated observations.
+For any given source, GAaP photometry requires the same aperture to be specified across all
+bands, and this aperture must not be smaller than the seeing. The GAaP aperture radii are set to
+the rms radii measured on the r-band detection image (SExtractor parameters A_WORLD and
+B_WORLD), quadratically added to a minimum radius chosen to optimize the SNR. To accommodate occasional poor seeing in one of the 9 bands, GAaP photometry was run with two choices of
+a minimum Gaussian aperture rms radius: 0.7” and 1.0”. When the seeing is good in all bands the
+smaller setting will yield the most accurate measurements, and this photometry is used. But for a
+band where the seeing is poor, the larger aperture may yield a more accurate flux, or the smaller
+
+5
+
+aperture may not yield a flux measurement at all. The choice of aperture radius is made source by
+source.
+A detailed description of the VIKING GAaP photometry is provided in Wright et al. (ref).
+The 9-band catalogue contains a total of 100.350.873 sources, is made up of 1007 files (1006 data files and 1 metadata file), and has a total data volume of 28.5 GB.
+
+6
+
+Release Notes
+Data Reduction and Calibration
+The KiDS-ESO-DR4 pipeline is an evolution of the KiDS-ESO-DR3 pipeline (de Jong et al, 2017,
+A&A 604, A134) (DJ17) and based on the Astro-WISE optical pipeline described in McFarland et
+al. (2013, ExA 35, 45) (MF13). Below we summarize the processing steps and list KiDS-specific
+information (i.e., KiDS process configuration and departures from Astro-WISE optical pipeline).
+The main differences with the previous release are an improved astrometric calibration procedure, improved manual masking of satellite tracks, the separate r-band detection images produced with THELI that form the basis of the 9-band photometry catalogue, and the photometric
+calibration to the all-sky Gaia DR2 G band catalogue.
+Image de-trending
+De-trending of the raw data consists of the following steps.
+•
+
+•
+
+•
+
+Cross-talk correction. Electronic cross-talk occurs between CCDs #93, #94, #95 and
+#96, resulting in faint imprints of bright sources on neighbouring CCDs. A correction was
+made for cross-talk between CCDs #95 and #96, where it is strongest (up to 0.7%).
+De-biasing and overscan correction. First, for each science and calibration exposure
+the overscan is subtracted per row (using method 6, see MF13). Second, a daily overscan-subtracted bias is subtracted. This is a daily average of 10 biases with 3σ-rejection.
+Flat-fielding. Whereas in the two previous data releases a single masterflat (per CCD
+and filter) was used for all data, changes to the telescope baffles in three steps during
+2014/2015 necessitated the creation of new sets of masterflats. Table 1 lists the four different baffle configurations and the periods during which they were on the telescope.
+Config.
+
+•
+
+•
+
+Description
+
+Start date
+
+End date
+
+1
+
+Original set-up
+
+May 2011
+
+7 Jan 2014
+
+2
+
+Baffle extensions 1 (M2, chimney)
+
+8 Jan 2014
+
+6 Apr 2014
+
+3
+
+Baffle extensions 2 (M2, chimney, M1
+plug)
+
+7 Apr 2014
+
+29 Apr 2015
+
+4
+Baffle extensions 3 (chimney ridges, plug)
+30 Apr 2015
+present
+Table 1: VST baffle configurations
+For each baffling configuration a single masterflat (per CCD and filter) was used, by virtue of the stability of the intrinsic pixel sensitivities, that can be considered constant to
+~0.2% or better for g, r and i (DJ15, Verdoes Kleijn et al., 2013, ExA, 35, 103). For g, r and
+i this master flat is a combination of a master dome (for high spatial frequencies) and
+master twilight (=sky) flat-field (for low spatial frequencies). Both contributing flats are
+an average of 5 raw flat-field exposures with 3σ-rejection. In u band only the twilight
+flats are used.
+Illumination correction. Illumination correction (a.k.a. “photometric superflat”) is applied in pixel space, and only on the source fluxes (i.e., after background subtraction). A
+single illumination correction image is used to correct each masterflat (see also DJ15 and
+Verdoes Kleijn et al., 2013, ExA 35, 103). For baffling configuration 2, 3 and 4 illumination correction frames were derived from those for configuration 1, based on the difference between flatfields observed with each baffling configuration and with the original
+set-up.
+De-fringing. De-fringing is only needed for KiDS i-band. Analysis of nightly fringe frames
+showed that the pattern is constant in time. Therefore, a single fringe image was used for
+all KiDS-ESO-DR4 images observed after 2012-01-11. For each science exposure this
+
+7
+
+•
+
+•
+
+•
+
+fringe image is scaled (after background subtraction of the science exposure and fringe
+frame) and then subtracted to minimize residual fringes.
+Pixel masking. Cosmic-rays, hot and cold pixels, saturated pixels are automatically
+masked as described in MF13 during de-trending. These are included in the weight image. Additional automatic and manual masking is applied on the coadds (see below).
+Satellite track removal. Satellite tracks are detected automatically by applying the
+Hough transform (Hough, 1962) to a difference image of maximally overlapping exposures within a dither sequence after masking bright stars and bright ghosts. The pixels
+affected by satellite tracks are masked and included in the weight image. Note: satellite
+tracks or parts thereof remaining after this automated step are masked during the coaddition stage, see below.
+Background subtraction. To remove vignetting by bond wire baffling (Iwert et al. 2006,
+Proc. SPIE 6276, 62760A) in the focal plane, a row-by-row background subtraction
+method is used, before the background subtraction done by SWARP (see below). Note:
+strong vignetting is not fully removed with this method and is masked during the coaddition stage, see below.
+
+The THELI reductions of the r-band images are grouped in two-week ‘runs’ and new calibration
+frames are derived for each run. This includes illumination corrections, master flats, and biases. A
+more detailed description of the THELI processing will be given in Erben et al. (in preparation)'.
+
+Photometric calibration
+The steps taken to calibrate the photometry are as follows.
+•
+
+•
+
+KiDS-ESO-DR4 photometric calibration starts with individual zero-points per CCD based
+on secondary standard field observations. The calibration deploys a fixed aperture (6.3
+arcsec diameter) not corrected for flux losses, and uses SDSS DR8 PSF magnitudes of
+stars in the SA fields as reference. Magnitudes are expressed in AB in the instrumental
+photometric system (i.e., no colour corrections between the OmegaCAM and SDSS photometric system applied).
+Next, the photometry in the g, r, and i filters is homogenized across CCDs and dithers for
+each filter in each tile independently. For u-band this homogenization is not applied because the relatively small source density often provides insufficient information to tie
+adjacent CCDs together. This global photometric solution is derived and applied in three
+steps:
+1.
+2.
+
+3.
+
+From the overlapping sources across dithered exposures, zero-point differences
+between the dithers (e.g. due to varying atmospheric extinction) are derived.
+Zero-point differences between CCDs are calculated using all CCD overlaps between the dithered exposures. Steps 1 and 2 both apply a minimization algorithm (see Maddox et al. 1990, MNRAS, 246, 433).
+The zero-point offsets are applied to all CCDs w.r.t. an average zero-point valid
+for the night, derived from the nightly SA field observations. If no SA field observations are available for the night, default values are used instead.
+
+The above steps complete the photometric calibration of the image data and single-band
+source lists. A further homogenization of the photometry over the whole survey area is
+calculated using, and applied to, the multi-band source catalog, and is described below.
+
+8
+
+Astrometry, regridding and coadding
+A global (multi-CCD and multi-dither) astrometric calibration is calculated per filter per tile.
+SCAMP (Bertin 2006, ASP Conf. Series 351, 112) is used for this purpose, with a polynomial degree of 3 over the whole mosaic, while an initial model is supplied to constrain the focal plane
+geometry. The (unfiltered) 2MASS-PSC (Skrutskie et al. 2006, AJ, 131, 1163) is used as astrometric reference catalogue.
+SWARP is used to resample all exposures in a tile to the same pixel grid, with a pixel size of 0.2
+arcseconds. After background subtraction the exposures are coadded using a weighted mean
+stacking procedure.
+Masking residual satellite tracks and bond wire baffling features
+Spurious features remaining in the coadded images are identified by visual inspection of
+1500x1500 pixel 'thumbnails', at two levels of contrast, by a team of KiDS members. Missed or
+incompletely masked tracks that are caught at this stage are marked manually on thumbnail images, after which an automatic procedure identifies and masks the tracks in the correct subexposure(s).
+Residual background features due to the bond wire baffles are flagged manually, triggering the
+creation of masks based on standard region files.
+Individual CCDs showing electronic instability are also manually flagged and removed from the
+list of frames to be co-added.
+Finally, using the updated masks, new stacks and corresponding weight images are produced.
+Masking of bright stars
+A stand-alone program dubbed Pulecenella v1.0 (DJ15) was developed to create masks for KiDS
+coadds, and is now embedded in the pipeline. It is an automatized procedure for mask creation
+completely independent from external star catalogues. An example of a detail of a mask is shown
+in Figure 3. Pulecenella detects the following types of critical areas, all related to bright stars:
+•
+•
+•
+•
+
+saturated pixels,
+spikes caused by diffraction by the mirror supports,
+readout spikes,
+reflection halos produced by the optics components (a central core halo, and up to three
+wider reflection halos with spatially dependent offsets, depending on the brightness of
+the star.
+
+9
+
+Figure 3: Detail of a Pulecenella v1.0 mask. Left: detail of a KiDS stacked image with bright stars;
+critical areas detected by Pulecenella are over-plotted with green outlines. Right: FLAG image corresponding to the image shown on the left, with different colours indicating the pixel values resulting from the combination of different flag values.
+The masks are provided as FITS FLAG images, where each type of critical region is identified by a
+different flag value, as listed in Table 2. During source extraction for the single-band source list
+(see below) the FLAG image is used to flag sources whose isophotes overlap with the critical areas. The resulting flags are stored in the following two source parameters:
+•
+•
+
+IMAFLAGS_ISO: FLAG image flags OR'd over the isophote profile
+NIMAFLAG_ISO: number of flagged pixels entering IMAFLAGS_ISO
+
+Type of area
+
+Flag value
+
+Type of area
+
+Flag value
+
+Readout spike
+
+1
+
+Secondary halo
+
+16
+
+Saturation core
+
+2
+
+Tertiary halo
+
+32
+
+Diffraction spike
+
+4
+
+Bad pixel
+
+64
+
+Primary halo
+8
+Table 2: Critical areas in the single-band image masks and their flag values.
+
+10
+
+Parameter
+
+Value
+
+Description
+
+DETECT_THRESH
+
+1.5
+
+<sigmas> or <threshold>,<ZP> in mag.arcsec2
+
+DETECT_MINAREA
+
+3
+
+minimum number of pixels above threshold
+
+ANALYSIS_THRESH
+
+1.5
+
+<sigmas> or <threshold>,<ZP> in mag.arcsec2
+
+DEBLEND_NTHRESH
+
+32
+
+Number of de-blending sub-thresholds
+
+DEBLEND_MINCONT
+
+0.002
+
+Minimum contrast parameter for de-blending
+
+FILTER
+
+Y
+
+Apply filter for detection (Y or N)
+
+default.conv
+
+Name of the file containing the filter
+
+CLEAN
+
+Y
+
+Clean spurious detections? (Y or N)?
+
+CLEAN_PARAM
+
+1.0
+
+Cleaning efficiency
+
+BACK_SIZE
+
+256
+
+Background mesh: <size> or
+<width>,<height>
+
+BACK_FILTERSIZE
+
+3
+
+Background filter: <size> or
+<width>,<height>
+
+BACKPHOTO_TYPE
+
+LOCAL
+
+can be “GLOBAL” or “LOCAL”
+
+FILTER_NAME
+
+BACKPHOTO_THICK
+24
+thickness of the background LOCAL annulus
+Table 3: detection set-up for KiDS-ESO-DR4 single-band source lists
+Single-band source list extraction and star/galaxy separation
+The single-band source lists delivered in this data release are intended as “general purpose”
+source lists. Source list extraction and star/galaxy (hereafter S/G) separation is done with an automated procedure optimized for KiDS data: KiDS-CAT. This procedure, the backbone of which is
+formed by S-Extractor (Bertin & Arnouts, 1996, A&AS, 317, 393) performs the following steps.
+1.
+
+2.
+3.
+
+4.
+
+S-Extractor is run on the stacked image to measure the FWHM of all sources. Highconfidence star candidates are then identified (for details see La Barbera et al. 2008,
+PASP, 120, L681).
+The average PSF FWHM is calculated by applying the bi-weight location estimator to the
+FWHM distribution of the high-confidence star candidates.
+A second pass of S-Extractor is run with SEEING_FWHM set to the derived average PSF
+FHWM. During this second pass the image is background-subtracted, filtered and
+thresholded “on-the fly”. Detected sources are then de-blended, cleaned, photometered,
+and classified. A number of S-Extractor input parameters are set individually for each
+image (e.g., SEEING_FWHM and GAIN), while others have been optimized to provide the
+best compromise between completeness and spurious detections (see the Data Quality
+section below). The detection set-up used is summarized in Table 3; a full SExtractor
+config file is available at this URL:
+http://kids.strw.leidenuniv.nl/DR4/example_config.sex
+Apart from isophotal magnitudes and Kron-like elliptical aperture magnitudes, a large
+number of aperture fluxes are included in the source lists. This allows users to estimate
+aperture corrections and total source magnitudes. All parameters provided in the source
+lists are listed in the Data Format section below.
+S/G separation is performed based the CLASS_STAR (star classification) and SNR (signalto-noise ratio) parameters provided by S-Extractor and consists of the following steps:
+
+11
+
+•
+
+•
+
+In the SNR range where the high-confidence star candidates are located (the red
+dots in Figure 4) the bi-weight estimator is used to define their CLASS_STAR location, θ, and its width, σ; a lower envelope of θ − 4σ is defined.
+At SNR below that of the high-confidence star candidates, a running median
+CLASS_STAR value is computed from sources with CLASS_STAR > 0.8, which is
+shifted to match the θ − 4σ locus. The resulting curve (blue curve in Figure 4)
+defines the separation of stars and galaxies.
+
+Figure 4: High-confidence star candidates and star/galaxy separation. Left: the high-confidence
+star candidates (red dots) are used to locate the stellar locus and calculate the average FWHM of
+the image. Right: example of star/galaxy separation; at SNR >50, the high-confidence star candidates (red dots) are used to define the blue line; at lower SNR, all sources with CLASS_STAR>0.8 are
+used; sources above the blue line are classified as stars.
+The source magnitudes and fluxes in the final single-band source lists are not corrected for Galactic foreground or intergalactic extinction. The result of the S/G classification is available in the
+source lists via the 2DPHOT flag (SG2DPHOT in the multi-band catalog). Flag values are: 1 (highconfidence star candidates), 2 (objects with FWHM smaller than stars in the stellar locus, e.g.,
+some cosmic-rays and/or other unreliable sources), 4 (stars according to S/G separation), and 0
+otherwise (galaxies); flag values are summed, so 2DPHOT = 5 signifies a high-confidence star
+candidate that is also above the S/G separation line.
+9-band source catalogue
+Apart from the single-band VST data products, ESO-KiDS-DR4 also includes a matched-aperture
+photometry catalogue, containing 9 optical+near-infrared bands from a combined analysis of
+KiDS and VIKING. This catalogue is optimised for weak gravitational lensing science, and for this
+purpose an independent, high-accuracy astrometric analysis of the r-band images was performed
+using the THELI pipeline. Sources for the 9-band catalogue are detected on these 'detection images', and their positions used for list-driven photometry on the ugri KiDS and ZYJHKs VIKING
+'science' images. The THELI-reduced r-band detection images, as well as their associated weight
+and mask images, are part of DR4. Accurate galaxy shape measurements for the galaxies will be
+provided as a separate data product in a further release.
+Sources are detected on the THELI r-band detection images using SExtractor, and source aperture positions and sizes are then used to perform GAaP photometry on the KiDS (Astro-WISE)
+and VIKING (CASU) images. The detection setup is slightly different to the single-band Astro-
+
+12
+
+WISE setup in Table 3: the THELI setup uses DETECT_MINAREA=1, BACK_TYPE=MANUAL,
+BACK_VALUE=0.0,0.0 and DEBLEND_MINCONT=0.001. Note that the sources in this catalogue are
+not necessarily the same as those in the single-band r-band source lists described above. A number
+of morphological parameters are based on this SExtractor run, as well as GAaP fluxes, flux errors,
+and mask flags for each of the 9 bands. For each source the extinction in all nine filters is provided, interpolated from the extinction maps by Schlegel et al. (1998, ApJ, 500, 525), with updated
+extinction coefficients from Schlafly & Finkbeiner (2011, ApJ, 737, 103).
+To prevent sources in tile overlaps from appearing multiple times in the catalogue, the survey
+tiles have been cropped to seamlessly connect to each other. Along the edges of survey tiles the
+data are less deep, but no worse than in the areas located in the gaps between the rows of CCDs
+in the focal plane, except along the outer edges of the contiguous areas. 9-band fluxes are reported for all r-band detections.
+
+Seeing differences and aperture-matching
+The catalogue includes magnitudes from the PSF homogenization and matched-aperture photometry “GAaP” pipeline. This novel technique is designed to account for PSF differences between
+different filters, while optimizing signal-to-noise. In short, the PSF within each coadded image is
+homogenized to a Gaussian shape without significantly degrading the seeing. Aperture photometry is then performed using elliptical Gaussian aperture weight functions, which are analytically
+corrected for seeing differences. A detailed description of the pipeline can be found in Kuijken et
+al. (2015, MNRAS, 454, 3500) (K15). It is important to note that these magnitudes are designed
+for deriving accurate colours of galaxies, not for total magnitudes of galaxies. For point sources
+(stars), GAaP magnitudes approach PSF-fitting photometry. The Gaussian aperture shape (Agaper,Bgaper) and orientation is set from the Sextractor A, B and PA measurements on the r-band
+detection image: Agaper=sqrt(MINAPER**2 + (A_WORLD*3600)**2), ditto B; values are maximised at MAXAPER=2”. Photometry for two GAaP runs, with MINAPER=0.7” and 1.0”, is reported in
+the catalogue (columns FLUX_GAAP_0p7_x and FLUX_GAAP_1p0_x, etc). The larger MINAPER value ensures valid measurements for those parts of the survey where the seeing in one of the bands
+was particularly poor.
+
+Survey photometric homogenization
+Zero-point corrections have been calculated for all ugri KiDS survey tiles included in the multiband catalogue to improve the homogeneity of the photometry. These corrections are based on
+stellar locus regression (SLR). The SLR is used to calibrate the u, g and i filters to the r-band, and
+the latter is tied to Gaia DR2 using transformations derived from the overlap area between KiDS
+and SDSS.
+The majority of stars display a well-defined photometric stellar locus: a tight relation in colourcolour space with a location that varies little across the sky outside the Galactic plane. SLR is the
+method where the observed stellar locus is matched to the fiducial intrinsic locus, and offers the
+possibility to achieve colour homogeneity. SLR was applied to the GAaP photometry of unmasked
+and not flagged, high S/N (magr,GAaP < 19) point sources (0.4'' < FWHMr < 0.8''). Per source the
+GAaP magnitudes are corrected for Galactic extinction using the E(B-V) colour excess from Schlegel et al. (1998) and extinction coefficients from Schafly & Finkbeiner (2011). The stellar locus is
+parametrized using the “principal colours” s, x and w as defined by Ivezic et al. (2004, AN, 325,
+583). For each of these colours (projections that are linear combinations of the ugri filters), a
+
+13
+
+straight section of the stellar locus lies parallel to one axis (P1) and is centred at 0 on the other
+axis (P2), see Fig. 5. We add a fourth, redundant colour k as additional guard for fitting robustness. Per source the P1 and P2 are calculated in each colour and sources on the straight part of
+the stellar locus are selected using fixed limits in P1. The median P2 values in each tile are converted to zero-point offsets with respect to r (d(u-r), d(g-r), d(i-r)). Fig. 5 shows an example of a
+typical fit.
+
+Figure 5: principal colours s,w,x and k for tile KiDS_129.0_0.5. The same stars (yellow) are plotted in
+each panel, with the stars used to locate the straight sections of the locus shown in black. The inferred median P2 offsets’ formal errors and standard deviations are shown above each panel.
+Already in DR3 we concluded that u band calibration with the SLR techniques described above
+resulted in large errors, and the alternative approach of overlap photometry was used. For DR4 a
+different approach was used for the u band, a combination of SLR with a latitude-dependent correction term, obtained by fitting the extinction-corrected u band as a function of dereddened (gr) colour and galactic latitude over the SDSS region that overlaps with KiDS-N:
+u=g + 2.0(g-r)0 + 0.456 + max(0,0.66-2(g-r)0) - 0.25 |sin(b)|
+
+( 0.15<(g-r)0<0.8 )
+
+The u-band zeropoint of each KiDS tile is then adjusted until the median residual from this relation is zero.
+The SLR yields a zero-point offset / correction per survey tile for each filter. The offsets as derived for band x are listed in the catalogue headers as Dx_SLR and Dx_SLR_1 for the MINAPER=0.7 and 1.0 GAaP runs. The offsets are also listed online in the catalogue table. By definition,
+the r-band SLR offset is zero.
+
+14
+
+Figure 6. Illustration of the calibration of the r band photometry for tile KiDS_131.0_0.5 to the Gaia
+G band, using the dereddened KiDS (g-i) colours of stars with 16.5<G<19.25. The stars plotted in
+blue are used to determine the vertical location of the red box, which is centered on the relation derived from the SDSS-Gaia-KiDS overlap.
+Calibration to Gaia-DR2 G band
+With the advent of Gaia, a high-density, accurate photometric catalogue covering the whole sky
+has become available. Per tile typically 500-1000 Gaia stars were used to tie the r-band photometric zero point to the Gaia-DR2 G band calibration, using a fiducial dereddened (r-G) vs (g-i)
+colour-colour relation derived from the overlap of KiDS-North with the SDSS DR7 catalogue. The
+same offset is applied to u,g and i magnitudes as well, to preserve the SLR calibration. An example
+of this calibration is shown in Figure 6. These zeropoints are reported in the catalogue headers as
+DMAG_x and DMAG_x_1, for the MINAPER=0.7 and 1.0 GAaP runs, and are applied to the
+MAG_GAAP_0p7_x and MAG_GAAP_1p0_x magnitudes given in the catalogues. For each ugri image the zeropoint that is derived using the largest number of stars is recorded in the image header; the keyword CALMINAP records the corresponding value of MINAPER.
+Near-infrared photometry from VIKING tied to 2MASS
+VIKING photometry is calibrated to 2MASS during its processing. The GAaP fluxes in the 9-band
+catalogue use this calibration without change. All VIKING fluxes have magnitude zeropoint 30.
+More details are provided in Wright et al (2018).
+Choice of GAaP aperture and extinction corrected magnitudes
+Because the footprints of the VISTA and VST observations differ, the band-by-band seeing of the
+sources varies on scales smaller than a KiDS tile. The catalogue therefore provides a source-bysource choice between the MINAPER=0.7 and MINAPER=1.0 columns. The decision is based on
+the flux errors on the measurements of that source in all bands:
+1.
+
+Define ERROR_RATIO_x = FLUXERR_GAAP_x_1p0 / FLUXERR_GAAP_0p7_x for each
+band x.
+
+2.
+
+If MAX(ERROR_RATIO_x)*MIN(ERROR_RATIO_x) < 1, use the larger (1p0) aperture.
+
+This choice ensures that the larger aperture is only used if, for at least one band, it yields a fractional improvement in flux error that is greater than the fractional penalty in any other band.
+
+15
+
+The fluxes that correspond to this best aperture choice are recorded in the catalogues as
+FLUX_GAAP_x, MAG_GAAP_x, etc. The magnitudes are corrected for the photometric zero-point
+and galactic extinction:
+MAG_GAAP_x = DMAG_x – 2.5 log10(FLUX_GAAP_0p7_x) – EXTINCTION_x
+or
+MAG_GAAP_x = DMAG_x_1 – 2.5 log10(FLUX_GAAP_1p0_x) – EXTINCTION_x
+where the DMAG_x and DMAG_x_1 values are those reported in the header for x=u,g,r,i, and equal
+to 30 for the VISTA Z,Y,J,H,Ks bands.
+(Note that the magnitudes MAG_GAAP_0p7_x and MAG_GAAP_1p0_x are NOT corrected for extinction)
+Extinction-corrected colours
+In order to facilitate faster catalogue searches, the catalogue includes columns with source colours between adjacent bands (u-g, g-r, … , J-H, H-Ks). These colours are based on the GAaP magnitudes, which provide the most accurate colours both for galaxies and point sources. In these columns the zero-point corrections described above, as well as the per-source Galactic extinction
+corrections, are already applied.
+Photometric redshifts
+Based on the homogenized GAaP photometry, photometric redshifts have been calculated following the methods developed for CFHTLenS and described in K15. This makes use of the Bayesian
+photometric redshift code BPZ (Benítez, 2000, ApJ, 536, 571) in combination with the recalibrated templates from Capak (2004, PhD. thesis, Univ. Hawai'i). A new prior distribution
+(Raichoor A., et al., 2014, ApJ, 797, 102) has been used for DR4, which is more effective at fainter
+magnitudes than the prior used for DR3, but is biased by ca. +0.06 at bright magnitudes. We also
+switched to 68% confidence intervals for the photo-z posterior (previous releases reported
+95%). We caution all users that for accurate work, the photometric redshifts should be
+used in conjunction with external calibration data in order to quantify their error distribution (see, e.g. Hildebrandt et al. 2017, 465, 1454). The catalogue also includes the ODDS parameter, a measure of the uni-modality of the redshift PDF, and the best-fit template for each
+source (parameter T_B). The values correspond to the following types, where fractional types can
+occur because the templates are interpolated: 1=CWW-Ell, 2=CWW-Sbc, 3=CWW-Scd, 4=CWWIm, 5=KIN-SB3, 6=KIN-SB2.
+
+16
+
+Data Quality
+An overview of the intrinsic data quality of KiDS-ESO-DR4, in terms of seeing, PSF ellipticity, and
+limiting magnitudes distributions is presented in Fig. 2. In the following we focus on the quality
+of the reduced data products.
+Photometric quality
+The matter of photometric quality can be split up in two:
+1. the uniformity of the photometry within each tile
+2. the quality of the absolute photometric calibration per tile/filter
+Both the internal photometric homogeneity within a coadd and the quality of the absolute photometric scale can be assessed by comparing the KiDS-ESO-DR4 photometry to SDSS DR8 (Aihara
+et al., 2011, ApJS, 193, 29). For this, PSF magnitudes were extracted from SDSS DR8 and compared to both the aperture-corrected and GAaP magnitudes in the KiDS-ESO-DR4 multi-band catalogue. Only stars with photometric errors both in KiDS and in SDSS smaller than 0.02 mag in g, r,
+and i or 0.03 in u were used. This comparison can be made only for all tiles in the KiDS-North
+field, but since KiDS-South was calibrated in the same way as KiDS-North, we expect the conclusions to hold for all data.
+Figure 7 shows the offsets between KiDS aperture-corrected and SDSS DR8 magnitudes for 1 tile
+(KIDS_182.0_-0.5), which is a representative example. Generally, the photometry in a filter is uniform within one tile to within a few percent. In u-band the photometry may be less stable in some
+cases due to the lack of photometric homogenization within a tile.
+
+Figure 7: KiDS − SDSS magnitude offsets for (unmasked) stars in tile KiDS 182.0_-0.5 vs RA (top panel) and DEC (bottom panel), based on aperture-corrected fluxes. From top to bottom the sub-panels
+correspond to u, g, r, and i, respectively. Each dot corresponds to a star, and the red dashed lines
+indicate +0.05 and −0.05 magnitudes.
+
+17
+
+Fig. 8: Photometric calibration and PSF sizes in KiDS-North. Average magnitude offsets for KiDSESO-DR3 tiles between KiDS GAaP magnitudes and SDSS DR8 PSF magnitudes of stars are indicated
+by the colour coding, while the symbol size corresponds to the average PSF size.
+The quality of the absolute photometric scale is illustrated in Figure 8 and summarized in Table
+4. Small systematic offsets of 2 to 3 % are present in all filters. This could be due to the fact that
+nightly zero-points are determined using a fixed aperture on stars in the SA field without aperture correction. The scatter and occasional outliers in the standard calibration are due to nonphotometric conditions (during either KiDS or SA field observations) and, particularly in case of
+the u-band, use of default zero-points for nights without good SA field observations. Photometric
+inhomogeneities in SDSS, which is reliable to 1% in gri and 2% in u (Padmanabhan et al. 2008,
+ApJ, 674, 2) also contribute to the measured scatter.
+
+Filter
+
+Mean offset (mag)
+
+Standard deviation (mag)
+
+u
+
+0.008
+
+0.035
+
+g
+
+0.001
+
+0.014
+
+r
+
+-0.013
+
+0.005
+
+i
+-0.003
+0.009
+Table 4: Average magnitude offsets and their standard deviation with respect to SDSS DR8 (for
+u,g,r,i) and expected stellar locus locations (in principal colours s,w,x) for GAaP and aperturecorrected (10'') magnitudes, both before and after photometric homogenization.
+The photometric homogenization scheme significantly improves the stability of the calibration
+and annihilates the outliers completely, with the possible exceptions of isolated tiles or very
+small contiguous groups without photometric anchors. Derived using GAaP magnitudes, the homogenization clearly works best when applied to the GAaP magnitudes. Given the photometric
+stability of SDSS quoted by Padmanabhan et al. (2008, ApJ, 674, 2), the standard deviations of the
+offsets to SDSS (second to last column in Table 4) imply that the stability of the calibration in the
+u-, g- r- and i-bands is approximately 2%, 2%, 1% and 1%, respectively. Also when applied to the
+aperture-corrected magnitudes the stability of the calibration is significantly improved and outliers removed. The SLR step in the photometric homogenization procedure ensures that the stellar
+locus “principal colours” (bottom three rows in Table 4) are close to zero. Overall, the combination of GAaP magnitudes, extinction corrections and photometric homogenization produces the
+most accurate colours, both for stars and galaxies. Note that the colour columns in the multi-band
+catalogue already contain all these corrections, while the individual magnitude columns are not
+corrected for extinction and calibration variations!
+
+18
+
+Colour terms
+The photometric calibration provided in KiDS-ESO-DR4 is in AB magnitudes in the instrumental
+system. We report here the colour-terms calculated with respect to the SDSS photometric system
+for DR3.
+Aperture-corrected magnitudes taken from the multi-band catalogue, were matched to SDSS
+(DR8) PSF magnitudes of point-like sources. For each filter, the median offset to SDSS is first subtracted, rejecting tiles where this offset exceeds 0.1 mag in any of the g, r and i bands. The fit is
+made using all points from the remaining tiles. The resulting colour terms:
+uKiDS − uSDSS = (−0.050 ± 0.002)( uSDSS − gSDSS ),
+gKiDS − gSDSS = (−0.052 ± 0.002)( gSDSS − rSDSS ),
+rKiDS − rSDSS = (−0.033 ± 0.002) ( gSDSS − rSDSS ),
+iKiDS − iSDSS = (+0.012 ± 0.002)( rSDSS − iSDSS ).
+
+Known issues
+Image defects
+Scattered light and reflections
+Some of the main issues in the DR1/2/3 VST/OmegaCAM data (before the baffling improvements
+described above were made) are related to scattered light and reflections. Due to the open structure of the telescope, light from sources outside the field-of-view can affect the observations. This
+expresses itself in a number of ways:
+• Reflections: in some cases strong reflected light patterns are seen in the focal plane;
+these are caused by light from bright point sources outside the field-of-view and can occur in all filters.
+• Vignetting by CCD masks: vignetting and scattering by the masks present at the corners
+of the focal plane array, and at the gaps between the rows of CCDs; this effect is particularly strong in i-band due to the bright conditions. The effect near the CCD gaps is largely
+corrected for, but in many cases the areas in the corners of the CCD array is strongly affected.
+• Extended background artefacts: related to the reflections mentioned before, this is mostly seen in i-band and probably caused by moonlight.
+
+Improvements to the telescope baffles that were installed in 2014 and 2015 significantly improved scattered light suppression. The i-band observations, many of which were taken with the
+moon above the horizon, were particularly affected by scattered light; a second i-band pass is
+underway and these new data (which will form part of DR5) should have significantly lower and
+smoother backgrounds.
+More detailed illustrations of some of the scattered light effects are provided in the Release Notes
+accompanying KiDS-ESO-DR3.
+
+19
+
+Previous Releases
+The current release, KiDS public data release number 4 or KiDS-ESO-DR4, was preceded by data
+release numbers 1-3 (KiDS-ESO-DR1/2/3). It supersedes these earlier releases, representing a
+complete re-reduction of all KiDS tiles completed before January 24th, 2018. For a small number
+of tiles the automatic reduction failed in a way that could not easily be fixed, and in order not to
+delay DR4 these have been excluded from the delivery. They will be included in DR5. These missing tiles include five tiles (KIDS_39.6_-34.1, KIDS_338.8_-32.1, KIDS_340.0_-32.1, KIDS_340.2_31.2, KIDS_343.5_-32.1) which processed without error in DR1+2+3, but which failed to yield a
+consistent astrometric solution in the DR4 pipeline (conversely, a much larger number of tiles
+that gave problems in the earlier processing passed through the DR4 reduction without problem).
+Apart from the large increase in area, from 440 to 1006 square-degree tiles, the main enhancement of DR4 over the previous release is the inclusion of the VIKING photometry in the multiband catalogue, and the homogeneous calibration of the KiDS data to Gaia through stellar locus
+regression.
+
+20
+
+Data Format
+Files Types
+Table 5 lists the types of data products provided in this release, together with descriptions of the
+file types and naming conventions used.
+The naming convention used for all data products is the following:
+KiDS_DR4.0_R.R_D.D_F_TTT.fits,
+where R.R and D.D are the RA and DEC of the tile centre in degrees (J2000.0) with 1 decimal
+place, F is the filter (u, g, r, or i for single-band data files, “ugriZYJHKs” for multi-band catalogue
+files), and TTT is the data product type (see column 4 of Table 5). For those data products that
+were modified as part of DR4.1 the filename is changed accordingly, from KIDS_DR4.0_ to
+KIDS_DR4.1_ . This change affects the data products identified with (*) in Table 5, for the
+196 tiles listed in Table 9.
+For example: the r-band stacked image of the tile “KIDS_131.0_-0.5” is called
+KiDS_DR4.0_131.0_-0.5_r_sci.fits.
+Data product
+
+ESO product
+category name
+
+File type
+
+TTT
+
+F
+
+Calibrated, stacked images
+
+SCIENCE.IMAGE
+
+FITS image
+
+sci
+
+u,g,r,i
+
+Weight frames
+
+ANCILLARY.WEIGHTMAP FITS image
+
+wei
+
+u,g,r,i
+
+Masks
+
+ANCILLARY.MASK
+
+FITS image
+
+msk
+
+u,g,r,i
+
+Single-band source lists
+
+SCIENCE.SRCTBL
+
+Binary FITS table src
+
+u,g,r,i
+
+Multi-band catalogue data file (*) SCIENCE.MCATALOG
+
+Binary FITS table cat
+
+ugriZYJHKs
+
+THELI detection image
+
+ANCILLARY.IMAGE
+
+FITS image
+
+det_sci
+
+r
+
+THELI weight image
+
+ANCILLARY.IMAGE
+
+FITS image
+
+det_wei
+
+r
+
+Multi-band mask image (*)
+
+ANCILLARY.MASK
+
+FITS image
+
+msk
+
+ugriZYJHKs
+
+Table 5: data products and file types. (*) see Table 9 for important note.
+
+Format of coadded images
+The final calibrated, coadded images from the Astro-WISE pipeline have a uniform pixel scale of
+0.2 arcsec. The pixel units are fluxes relative to the flux corresponding to magnitude = 0, as based
+on nightly photometric calibrations. This means that the effective zero-point is equal to 0 and the
+magnitude m corresponding to a pixel value f is:
+m = −2.5 log10 f.
+Subsequent photometric zeropoint corrections were derived from the catalogues and recorded in
+the image headers using the DMAG keyword. The keywords CALSTARS and CALMINAP give the
+number of Gaia stars that were used in the calibration, and CALMINAP is the value of the GAaP
+MINAPER parameter (0.7 or 1.0) that was used for the photometry that resulted in this zeropoint.
+The r-band detection images, which result from a reduction using THELI, specifically designed for
+optimal image shape measurement and small astrometric reductions, are the basis of the multiband catalogue. They have a pixel scale that is closer to the native OmegaCAM pixel size of 0.213”.
+
+21
+
+Catalogue Columns
+Table 6 lists the columns that are present in the single-band source lists provided in KiDS-ESODR4. A large number (27) of aperture fluxes are provided to suit the needs of different users and
+allow interpolation to estimate e.g. aperture corrections. Only the columns for the smallest aperture (2 pixels, or 0.4 arcsec diameter) and the largest aperture (200 pixels, or 40 arcsec diameter) are listed in Table 6. Note: the label for the aperture of 28.5 pixels is FLUX_APER_28p5.
+Table 7 lists the columns that are present in the multi-band source catalogue provided in KiDSESO-DR4. The meaning of the bits of the corresponding MASK values is explained in Table 8.
+
+Table 6: columns provided in the KiDS-ESO-DR4 single-band source lists
+Label
+Format
+Unit
+Description
+2DPHOT
+
+J
+
+Source classification
+
+X_IMAGE
+
+E
+
+pixel
+
+Object position along x
+
+Y_IMAGE
+
+E
+
+pixel
+
+Object position along y
+
+NUMBER
+
+J
+
+Running object number
+
+CLASS_STAR
+
+E
+
+S-Extractor S/G classifier
+
+FLAGS
+
+J
+
+Extraction flags
+
+IMAFLAGS_ISO
+
+J
+
+FLAG-image flags OR'ed over the iso. profile
+
+NIMAFLAG_ISO
+
+J
+
+Number of flagged pixels entering IMAFLAGS_ISO
+
+FLUX_RADIUS
+
+E
+
+pixel
+
+Fraction-of-light radii
+
+KRON_RADIUS
+
+E
+
+pixel
+
+Kron apertures in units of A or B
+
+FWHM_IMAGE
+
+E
+
+pixel
+
+FWHM assuming a gaussian core
+
+ISOAREA_IMAGE
+
+J
+
+pixel**2
+
+ELLIPTICITY
+
+E
+
+THETA_IMAGE
+
+E
+
+deg
+
+Position angle (CCW/x)
+
+MAG_AUTO
+
+E
+
+mag
+
+Kron-like elliptical aperture magnitude
+
+MAGERR_AUTO
+
+E
+
+mag
+
+RMS error for AUTO magnitude
+
+ALPHA_J2000
+
+D
+
+deg
+
+Right ascension of barycentre (J2000)
+
+DELTA_J2000
+
+D
+
+deg
+
+Declination of barycentre (J2000)
+
+FLUX_APER_2
+
+E
+
+count
+
+Flux vector within circular aperture of 2 pixels
+
+...
+
+...
+
+...
+
+FLUX_APER_200
+
+E
+
+count
+
+Flux vector within circular aperture of 200 pixels
+
+FLUXERR_APER_2
+
+E
+
+count
+
+RMS error vector for flux within aperture of 2 pixels
+
+...
+
+...
+
+...
+
+FLUXERR_APER_200
+
+E
+
+count
+
+RMS error vector for flux within aperture of 2 pixels
+
+MAG_ISO
+
+E
+
+mag
+
+Isophotal magnitude
+
+MAGERR_ISO
+
+E
+
+mag
+
+RMS error for isophotal magnitude
+
+MAG_ISOCOR
+
+E
+
+mag
+
+Corrected isophotal magnitude
+
+MAGERR_ISOCOR
+
+E
+
+mag
+
+RMS error for corrected isophotal magnitude
+
+MAG_BEST
+
+E
+
+mag
+
+Best of MAG_AUTO and MAG_ISOCOR
+
+MAGERR_BEST
+
+E
+
+mag
+
+RMS error for MAG_BEST
+
+BACKGROUND
+
+E
+
+count
+
+Background at centroid position
+
+Isophotal area above Analysis threshold
+1 - B_IMAGE/A_IMAGE
+
+...
+
+...
+
+22
+
+Format
+
+Unit
+
+Description
+
+THRESHOLD
+
+Label
+
+E
+
+count
+
+Detection threshold above background
+
+MU_THRESHOLD
+
+E
+
+arcsec**(-2)
+
+Detection threshold above background
+
+FLUX_MAX
+
+E
+
+count
+
+MU_MAX
+
+E
+
+arcsec**(-2)
+
+Peak surface brightness above background
+
+ISOAREA_WORLD
+
+E
+
+deg**2
+
+Isophotal area above Analysis threshold
+
+XMIN_IMAGE
+
+J
+
+pixel
+
+Minimum x-coordinate among detected pixels
+
+YMIN_IMAGE
+
+J
+
+pixel
+
+Minimum y-coordinate among detected pixels
+
+XMAX_IMAGE
+
+J
+
+pixel
+
+Maximum x-coordinate among detected pixels
+
+YMAX_IMAGE
+
+J
+
+pixel
+
+Maximum y-coordinate among detected pixels
+
+X_WORLD
+
+D
+
+deg
+
+Barycentre position along world x axis
+
+Y_WORLD
+
+D
+
+deg
+
+Barycentre position along world y axis
+
+XWIN_IMAGE
+
+E
+
+pixel
+
+Windowed position estimate along x
+
+YWIN_IMAGE
+
+E
+
+pixel
+
+Windowed position estimate along y
+
+X2_IMAGE
+
+D
+
+pixel**2
+
+Variance along x
+
+Y2_IMAGE
+
+D
+
+pixel**2
+
+Variance along y
+
+XY_IMAGE
+
+D
+
+pixel**2
+
+Covariance between x and y
+
+X2_WORLD
+
+E
+
+deg**2
+
+Variance along X-WORLD (alpha)
+
+Y2_WORLD
+
+E
+
+deg**2
+
+Variance along Y-WORLD (delta)
+
+XY_WORLD
+
+E
+
+deg**2
+
+Covariance between X-WORLD and Y-WORLD
+
+CXX_IMAGE
+
+E
+
+pixel**(-2)
+
+Cxx object ellipse parameter
+
+CYY_IMAGE
+
+E
+
+pixel**(-2)
+
+Cyy object ellipse parameter
+
+CXY_IMAGE
+
+E
+
+pixel**(-2)
+
+Cxy object ellipse parameter
+
+CXX_WORLD
+
+E
+
+deg**(-2)
+
+Cxx object ellipse parameter (WORLD units)
+
+CYY_WORLD
+
+E
+
+deg**(-2)
+
+Cyy object ellipse parameter (WORLD units)
+
+CXY_WORLD
+
+E
+
+deg**(-2)
+
+Cxy object ellipse parameter (WORLD units)
+
+A_IMAGE
+
+D
+
+pixel
+
+Profile RMS along major axis
+
+B_IMAGE
+
+D
+
+pixel
+
+Profile RMS along minor axis
+
+A_WORLD
+
+E
+
+deg
+
+Profile RMS along major axis (WORLD units)
+
+B_WORLD
+
+E
+
+deg
+
+Profile RMS along minor axis (WORLD units)
+
+THETA_WORLD
+
+E
+
+deg
+
+Position angle (CCW/world-x)
+
+THETA_J2000
+
+E
+
+deg
+
+Position angle (east of north) (J2000)
+
+ELONGATION
+
+E
+
+deg
+
+A_IMAGE/B_IMAGE
+
+ERRX2_IMAGE
+
+E
+
+pixel**2
+
+Variance of position along x
+
+ERRY2_IMAGE
+
+E
+
+pixel**2
+
+Variance of position along y
+
+ERRXY_IMAGE
+
+E
+
+pixel**2
+
+Covariance of position between x and y
+
+ERRX2_WORLD
+
+E
+
+deg**2
+
+Variance of position along X-WORLD (alpha)
+
+ERRY2_WORLD
+
+E
+
+deg**2
+
+Variance of position along Y-WORLD (delta)
+
+ERRXY_WORLD
+
+E
+
+deg**2
+
+Covariance of position X-WORLD/Y-WORLD
+
+ERRCXX_IMAGE
+
+E
+
+pixel**(-2)
+
+Cxx error ellipse parameter
+
+ERRCYY_IMAGE
+
+E
+
+pixel**(-2)
+
+Cyy error ellipse parameter
+
+ERRCXY_IMAGE
+
+E
+
+pixel**(-2)
+
+Cxy error ellipse parameter
+
+ERRCXX_WORLD
+
+E
+
+deg**(-2)
+
+Cxx error ellipse parameter (WORLD units)
+
+ERRCYY_WORLD
+
+E
+
+deg**(-2)
+
+Cyy error ellipse parameter (WORLD units)
+
+ERRCXY_WORLD
+
+E
+
+deg**(-2)
+
+Cxy error ellipse parameter (WORLD units)
+
+ERRA_IMAGE
+
+E
+
+pixel
+
+Peak flux above background
+
+RMS position error along major axis
+
+23
+
+Format
+
+Unit
+
+ERRB_IMAGE
+
+Label
+
+E
+
+pixel
+
+RMS position error along minor axis
+
+Description
+
+ERRA_WORLD
+
+E
+
+deg
+
+World RMS position error along major axis
+
+ERRB_WORLD
+
+E
+
+deg
+
+World RMS position error along minor axis
+
+ERRTHETA_IMAGE
+
+E
+
+deg
+
+Error ellipse pos. angle (CCW/x)
+
+ERRTHETA_WORLD
+
+E
+
+deg
+
+Error ellipse pos. angle (CCW/world-x)
+
+ERRTHETA_J2000
+
+E
+
+deg
+
+J2000 error ellipse pos. angle (east of north)
+
+FWHM_WORLD
+
+E
+
+deg
+
+FWHM assuming a gaussian core
+
+ISO0
+
+J
+
+pixel**2
+
+Isophotal area at level 0
+
+ISO1
+
+J
+
+pixel**2
+
+Isophotal area at level 1
+
+ISO2
+
+J
+
+pixel**2
+
+Isophotal area at level 2
+
+ISO3
+
+J
+
+pixel**2
+
+Isophotal area at level 3
+
+ISO4
+
+J
+
+pixel**2
+
+Isophotal area at level 4
+
+ISO5
+
+J
+
+pixel**2
+
+Isophotal area at level 5
+
+ISO6
+
+J
+
+pixel**2
+
+Isophotal area at level 6
+
+ISO7
+
+J
+
+pixel**2
+
+Isophotal area at level 7
+
+SLID
+
+K
+
+Source list ID
+
+SID
+
+K
+
+Source ID within the source list
+
+HTM
+
+K
+
+Hierarchical Triangular Mesh (level 25)
+
+FLAG
+
+K
+
+Not used
+
+24
+
+Table 7: Columns provided in the KiDS-ESO-DR4 9-band photometry catalogue
+Label
+
+Format
+
+Unit
+
+Description
+
+General Source Parameters Derived from r-band THELI Detection Image
+ID
+
+30A
+
+ESO ID
+
+SeqNr
+
+1J
+
+Running object number within the catalogue
+
+SLID
+
+1J
+
+AstroWise Source list ID
+
+SID
+
+1J
+
+AstroWise Source ID within the source list
+
+FLUX_AUTO
+
+1E
+
+count
+
+r-band flux (counts)
+
+FLUXERR_AUTO
+
+1E
+
+count
+
+Error on FLUX_AUTO (counts)
+
+MAG_AUTO
+
+1E
+
+mag
+
+r-band magnitude (mag)
+
+MAGERR_AUTO
+
+1E
+
+mag
+
+Error on MAG_AUTO (mag)
+
+KRON_RADIUS
+
+1E
+
+pixel
+
+Scaling radius of the ellipse for magnitude measurements
+
+BackGr
+
+1E
+
+count
+
+Background counts at centroid position (counts)
+
+Level
+
+1E
+
+count
+
+Detection threshold above background (counts)
+
+MU_THRESHOLD
+
+1E
+
+mag*arcsec**(-2)
+
+Detection threshold above background (mag arcsec^-2)
+
+MaxVal
+
+1E
+
+count
+
+Peak flux above background (counts)
+
+MU_MAX
+
+1E
+
+mag*arcsec**(-2)
+
+Peak surface brightness above background (mag arcsec^-2)
+
+ISOAREA_WORLD
+
+1E
+
+deg**2
+
+Isophotal area above analysis threshold (deg^2)
+
+Xpos
+
+1E
+
+pixel
+
+Centroid x position in the THELI image (pix)
+
+Ypos
+
+1E
+
+pixel
+
+Centroid y position in the THELI image (pix)
+
+RAJ2000
+
+1D
+
+deg
+
+Centroid sky position right ascension (J2000) (deg)
+
+DECJ2000
+
+1D
+
+deg
+
+Centroid sky position declination (J2000) (deg)
+
+A_WORLD
+
+1E
+
+deg
+
+Profile RMS along major axis (deg)
+
+B_WORLD
+
+1E
+
+deg
+
+Profile RMS along minor axis (deg)
+
+THETA_J2000
+
+1E
+
+deg
+
+Position angle (West of North) (deg)
+
+THETA_WORLD
+
+1E
+
+deg
+
+Position angle (Counterclockwise from world x-axis (deg)
+
+ERRA_WORLD
+
+1E
+
+deg
+
+World RMS position error along major axis (deg)
+
+ERRB_WORLD
+
+1E
+
+deg
+
+World RMS position error along minor axis (deg)
+
+ERRTHETA_J2000
+
+1E
+
+deg
+
+Error on THETA_J2000 (deg)
+
+ERRTHETA_WORLD
+
+1E
+
+deg
+
+Error on THETA_WORLD (deg)
+
+FWHM_IMAGE
+
+1E
+
+pixel
+
+FWHM assuming a gaussian object profile (pix)
+
+FWHM_WORLD
+
+1E
+
+deg
+
+FWHM assuming a gaussian object profile (deg)
+
+Flag
+
+1I
+
+FLUX_RADIUS
+
+1E
+
+CLASS_STAR
+
+SExtractor extraction flags
+pixel
+
+1E
+
+Half-light radius (pix)
+Star-galaxy classifier
+
+GAaP photometry parameters from Astro-WISE co-added u,g,r,i images
+EXTINCTION_u
+
+1E
+
+mag
+
+Galactic extinction in the u band (mag)
+
+EXTINCTION_g
+
+1E
+
+mag
+
+Galactic extinction in the g band (mag)
+
+EXTINCTION_r
+
+1E
+
+mag
+
+Galactic extinctio in the r band (mag)
+
+EXTINCTION_i
+
+1E
+
+mag
+
+Galactic extincion in the i band (mag)
+
+Agaper_0p7
+
+1E
+
+arcsec
+
+Major axis of GAaP aperture minaper 0.7arcs (arcsec)
+
+Bgaper_0p7
+
+1E
+
+arcsec
+
+Minor axis of GAaP aperture minaper 0.7arcs (arcsec)
+
+Agaper_1p0
+
+1E
+
+arcsec
+
+Major axis of GAaP aperture minaper 1.0arcs (arcsec)
+
+Bgaper_1p0
+
+1E
+
+arcsec
+
+Minor axis of GAaP aperture minaper 1.0arcs (arcsec)
+
+PAgaap
+
+1E
+
+deg
+
+FLAG_GAAP_0p7_u
+
+1J
+
+Position angle of major axis of GAaP aperture (North of West)
+(deg)
+GAaP Flag for MAG_GAAP_u minaper 0.7arcs
+
+FLAG_GAAP_0p7_g
+
+1J
+
+GAaP Flag for MAG_GAAP_g minaper 0.7arcs
+
+25
+
+FLAG_GAAP_0p7_r
+
+1J
+
+GAaP Flag for MAG_GAAP_r minaper 0.7arcs
+
+FLAG_GAAP_0p7_i
+
+1J
+
+GAaP Flag for MAG_GAAP_i minaper 0.7arcs
+
+FLUX_GAAP_0p7_u
+
+1E
+
+count
+
+GAAP u-band flux minaper 0.7arcs (counts)
+
+FLUX_GAAP_0p7_g
+
+1E
+
+count
+
+GAAP g-band flux minaper 0.7arcs (counts)
+
+FLUX_GAAP_0p7_r
+
+1E
+
+count
+
+GAAP r-band flux minaper 0.7arcs (counts)
+
+FLUX_GAAP_0p7_i
+
+1E
+
+count
+
+GAAP i-band flux minaper 0.7arcs (counts)
+
+FLUXERR_GAAP_0p7_u
+
+1E
+
+count
+
+Error on FLUX_GAAP_u minaper 0.7arcs (counts)
+
+FLUXERR_GAAP_0p7_g
+
+1E
+
+count
+
+Error on FLUX_GAAP_g minaper 0.7arcs (counts)
+
+FLUXERR_GAAP_0p7_r
+
+1E
+
+count
+
+Error on FLUX_GAAP_r minaper 0.7arcs (counts)
+
+FLUXERR_GAAP_0p7_i
+
+1E
+
+count
+
+Error on FLUX_GAAP_i minaper 0.7arcs (counts)
+
+FLAG_GAAP_1p0_u
+
+1J
+
+GAaP Flag for MAG_GAAP_u minaper 1.0arcs
+
+FLAG_GAAP_1p0_g
+
+1J
+
+GAaP Flag for MAG_GAAP_g minaper 1.0arcs
+
+FLAG_GAAP_1p0_r
+
+1J
+
+GAaP Flag for MAG_GAAP_r minaper 1.0arcs
+
+FLAG_GAAP_1p0_i
+
+1J
+
+FLUX_GAAP_1p0_u
+
+1E
+
+count
+
+GAAP u-band flux minaper 1.0arcs (counts)
+
+FLUX_GAAP_1p0_g
+
+1E
+
+count
+
+GAAP g-band flux minaper 1.0arcs (counts)
+
+FLUX_GAAP_1p0_r
+
+1E
+
+count
+
+GAAP r-band flux minaper 1.0arcs (counts)
+
+FLUX_GAAP_1p0_i
+
+1E
+
+count
+
+GAAP i-band flux minaper 1.0arcs (counts)
+
+FLUXERR_GAAP_1p0_u
+
+1E
+
+count
+
+Error on FLUX_GAAP_u minaper 1.0arcs (counts)
+
+FLUXERR_GAAP_1p0_g
+
+1E
+
+count
+
+Error on FLUX_GAAP_g minaper 1.0arcs (counts)
+
+FLUXERR_GAAP_1p0_r
+
+1E
+
+count
+
+Error on FLUX_GAAP_r minaper 1.0arcs (counts)
+
+FLUXERR_GAAP_1p0_i
+
+1E
+
+count
+
+Error on FLUX_GAAP_i minaper 1.0arcs (counts)
+
+MAG_GAAP_0p7_u
+
+1E
+
+mag
+
+u-band GAaP magnitude min_aper=0.7arcsec
+
+MAGERR_GAAP_0p7_u
+
+1E
+
+mag
+
+u-band GAaP magnitude error min_aper=0.7arcsec
+
+MAG_GAAP_0p7_g
+
+1E
+
+mag
+
+g-band GAaP magnitude min_aper=0.7arcsec
+
+MAGERR_GAAP_0p7_g
+
+1E
+
+mag
+
+g-band GAaP magnitude error min_aper=0.7arcsec
+
+MAG_GAAP_0p7_r
+
+1E
+
+mag
+
+r-band GAaP magnitude min_aper=0.7arcsec
+
+MAGERR_GAAP_0p7_r
+
+1E
+
+mag
+
+r-band GAaP magnitude error min_aper=0.7arcsec
+
+MAG_GAAP_0p7_i
+
+1E
+
+mag
+
+i-band GAaP magnitude min_aper=0.7arcsec
+
+MAGERR_GAAP_0p7_i
+
+1E
+
+mag
+
+i-band GAaP magnitude error min_aper=0.7arcsec
+
+MAG_GAAP_1p0_u
+
+1E
+
+mag
+
+u-band GAaP magnitude min_aper=1.0arcsec
+
+MAGERR_GAAP_1p0_u
+
+1E
+
+mag
+
+u-band GAaP magnitude error min_aper=1.0arcsec
+
+MAG_GAAP_1p0_g
+
+1E
+
+mag
+
+g-band GAaP magnitude min_aper=1.0arcsec
+
+MAGERR_GAAP_1p0_g
+
+1E
+
+mag
+
+g-band GAaP magnitude error min_aper=1.0arcsec
+
+MAG_GAAP_1p0_r
+
+1E
+
+mag
+
+r-band GAaP magnitude min_aper=1.0arcsec
+
+MAGERR_GAAP_1p0_r
+
+1E
+
+mag
+
+r-band GAaP magnitude error min_aper=1.0arcsec
+
+MAG_GAAP_1p0_i
+
+1E
+
+mag
+
+i-band GAaP magnitude min_aper=1.0arcsec
+
+1E
+
+mag
+
+i-band GAaP magnitude error min_aper=1.0arcsec
+
+MAGERR_GAAP_1p0_i
+
+GAaP Flag for MAG_GAAP_i minaper 1.0arcs
+
+Suppementary Source Parameters from THELI r-band Detection Image
+MAG_ISO
+
+1E
+
+mag
+
+r-band Isophotal Magnitude (mag)
+
+MAGERR_ISO
+
+1E
+
+mag
+
+Error on MAG_ISO (mag)
+
+FLUX_ISO
+
+1E
+
+count
+
+r-band Isophotal Flux (counts)
+
+FLUXERR_ISO
+
+1E
+
+count
+
+Error on FLUX_ISO (counts)
+
+MAG_ISOCOR
+
+1E
+
+mag
+
+r-band Corrected Isophotal Magnitude (mag)
+
+MAGERR_ISOCOR
+
+1E
+
+mag
+
+Error on MAG_ISOCOR (mag)
+
+FLUX_ISOCOR
+
+1E
+
+count
+
+r-band Corrected Isophotal Flux (counts)
+
+FLUXERR_ISOCOR
+
+1E
+
+count
+
+Error on FLUX_ISOCOR (counts)
+
+NIMAFLAGS_ISO
+
+1I
+
+Number of flagged pixels over the isophotal profile
+
+26
+
+IMAFLAGS_ISO
+
+1I
+
+FLAG-image flags ORed over the isophotal profile
+
+XMIN_IMAGE
+
+1I
+
+pixel
+
+Minimum x-coordinate among detected pixels (pixel)
+
+YMIN_IMAGE
+
+1I
+
+pixel
+
+Minimum y-coordinate among detected pixels (pixel)
+
+XMAX_IMAGE
+
+1I
+
+pixel
+
+Maximum x-coordinate among detected pixels (pixel)
+
+YMAX_IMAGE
+
+1I
+
+pixel
+
+Maximum x-coordinate among detected pixels (pixel)
+
+X_WORLD
+
+1D
+
+deg
+
+Barycentre position along world x axis (deg)
+
+Y_WORLD
+
+1D
+
+deg
+
+Barycentre position along world y axis (deg)
+
+X2_WORLD
+
+1E
+
+deg**2
+
+Variance of position along X_WORLD (alpha) (deg^2)
+
+Y2_WORLD
+
+1E
+
+deg**2
+
+Variance of position along X_WORLD (delta) (deg^2)
+
+XY_WORLD
+
+1E
+
+deg**2
+
+Covariance of position X_WORLDY_WORLD (deg^2) /
+
+ERRX2_WORLD
+
+1E
+
+deg**2
+
+Error on XY_WORLD (deg^2)
+
+ERRY2_WORLD
+
+1E
+
+deg**2
+
+Error on XY_WORLD (deg^2)
+
+ERRXY_WORLD
+
+1E
+
+deg**2
+
+Error on XY_WORLD (deg^2)
+
+CXX_WORLD
+
+1E
+
+deg**(-2)
+
+SExtractor Cxx object ellipse parameter (deg^-2)
+
+CYY_WORLD
+
+1E
+
+deg**(-2)
+
+SExtractor Cyy object ellipse parameter (deg^-2)
+
+CXY_WORLD
+
+1E
+
+deg**(-2)
+
+SExtractor Cxy object ellipse parameter (deg^-2)
+
+ERRCXX_WORLD
+
+1E
+
+deg**(-2)
+
+Error on CXX_WORLD (deg^-2)
+
+ERRCYY_WORLD
+
+1E
+
+deg**(-2)
+
+Error on CYY_WORLD (deg^-2)
+
+ERRCXY_WORLD
+
+1E
+
+deg**(-2)
+
+Error on CXY_WORLD (deg^-2)
+
+A_IMAGE
+
+1D
+
+pixel
+
+Profile RMS along x-axis (pix)
+
+B_IMAGE
+
+1D
+
+pixel
+
+Profile RMS along y-axis (pix)
+
+ERRA_IMAGE
+
+1E
+
+pixel
+
+Error on A_IMAGE
+
+ERRB_IMAGE
+
+1E
+
+pixel
+
+Error on B_IMAGE
+
+S_ELLIPTICITY
+
+1E
+
+SExtractor Ellipticity (1-B_IMAGEA_IMAGE) /
+
+S_ELONGATION
+
+1E
+
+SExtractor Elongation (A_IMAGEB_IMAGE) /
+
+MAG_APER_4
+
+1E
+
+mag
+
+r-band Magnitude within a circular aperture of 4 pixels (mag)
+
+MAGERR_APER_4
+
+1E
+
+mag
+
+Error on MAG_APER_4 (mag)
+
+FLUX_APER_4
+
+1E
+
+count
+
+r-band Flux within a circular aperture of 4 pixels (counts)
+
+FLUXERR_APER_4
+
+1E
+
+count
+
+Error on FLUX_APER_4 (counts)
+
+MAG_APER_6
+
+1E
+
+mag
+
+r-band Magnitude within a circular aperture of 6 pixels (mag)
+
+MAGERR_APER_6
+
+1E
+
+mag
+
+Error on MAG_APER_6 (mag)
+
+FLUX_APER_6
+
+1E
+
+count
+
+r-band Flux within a circular aperture of 6 pixels (counts)
+
+FLUXERR_APER_6
+
+1E
+
+count
+
+Error on FLUX_APER_6 (counts)
+
+MAG_APER_8
+
+1E
+
+mag
+
+r-band Magnitude within a circular aperture of 8 pixels (mag)
+
+MAGERR_APER_8
+
+1E
+
+mag
+
+Error on MAG_APER_8 (mag)
+
+FLUX_APER_8
+
+1E
+
+count
+
+r-band Flux within a circular aperture of 8 pixels (counts)
+
+FLUXERR_APER_8
+
+1E
+
+count
+
+Error on FLUX_APER_8 (counts)
+
+MAG_APER_10
+
+1E
+
+mag
+
+r-band Magnitude within a circular aperture of 10 pixels (mag)
+
+MAGERR_APER_10
+
+1E
+
+mag
+
+Error on MAG_APER_10 (mag)
+
+FLUX_APER_10
+
+1E
+
+count
+
+r-band Flux within a circular aperture of 10 pixels (counts)
+
+FLUXERR_APER_10
+
+1E
+
+count
+
+Error on FLUX_APER_10 (counts)
+
+MAG_APER_14
+
+1E
+
+mag
+
+r-band Magnitude within a circular aperture of 14 pixels (mag)
+
+MAGERR_APER_14
+
+1E
+
+mag
+
+Error on MAG_APER_14 (mag)
+
+FLUX_APER_14
+
+1E
+
+count
+
+r-band Flux within a circular aperture of 14 pixels (counts)
+
+FLUXERR_APER_14
+
+1E
+
+count
+
+Error on FLUX_APER_14 (counts)
+
+MAG_APER_20
+
+1E
+
+mag
+
+r-band Magnitude within a circular aperture of 20 pixels (mag)
+
+MAGERR_APER_20
+
+1E
+
+mag
+
+Error on MAG_APER_20 (mag)
+
+FLUX_APER_20
+
+1E
+
+count
+
+r-band Flux within a circular aperture of 20 pixels (counts)
+
+27
+
+FLUXERR_APER_20
+
+1E
+
+count
+
+Error on FLUX_APER_20 (counts)
+
+MAG_APER_30
+
+1E
+
+mag
+
+r-band Magnitude within a circular aperture of 30 pixels (mag)
+
+MAGGERR_APER_30
+
+1E
+
+mag
+
+Error on MAG_APER_30 (mag)
+
+FLUXERR_APER_30
+
+1E
+
+count
+
+r-band Flux within a circular aperture of 30 pixels (counts)
+
+FLUX_APER_30
+
+1E
+
+count
+
+Error on FLUX_APER_30 (counts)
+
+MAG_APER_40
+
+1E
+
+mag
+
+r-band Magnitude within a circular aperture of 40 pixels (mag)
+
+MAGERR_APER_40
+
+1E
+
+mag
+
+Error on MAG_APER_40 (mag)
+
+FLUX_APER_40
+
+1E
+
+count
+
+r-band Flux within a circular aperture of 40 pixels (counts)
+
+FLUXERR_APER_40
+
+1E
+
+count
+
+Error on FLUX_APER_40 (counts)
+
+MAG_APER_60
+
+1E
+
+mag
+
+r-band Magnitude within a circular aperture of 60 pixels (mag)
+
+MAGERR_APER_60
+
+1E
+
+mag
+
+Error on MAG_APER_60 (mag)
+
+FLUX_APER_60
+
+1E
+
+count
+
+r-band Flux within a circular aperture of 60 pixels (counts)
+
+FLUXERR_APER_60
+
+1E
+
+count
+
+Error on FLUX_APER_60 (counts)
+
+MAG_APER_100
+
+1E
+
+mag
+
+r-band Magnitude within a circular aperture of 100 pixels (mag)
+
+MAGERR_APER_100
+
+1E
+
+mag
+
+Error on MAG_APER_100 (mag)
+
+FLUX_APER_100
+
+1E
+
+count
+
+r-band Flux within a circular aperture of 100 pixels (counts)
+
+FLUXERR_APER_100
+
+1E
+
+count
+
+Error on FLUX_APER_100 (counts)
+
+ISO0
+
+1I
+
+pixel**2
+
+Isophotal area at level 0 (pixel^2)
+
+ISO1
+
+1I
+
+pixel**2
+
+Isophotal area at level 1 (pixel^2)
+
+ISO2
+
+1I
+
+pixel**2
+
+Isophotal area at level 2 (pixel^2)
+
+ISO3
+
+1I
+
+pixel**2
+
+Isophotal area at level 3 (pixel^2)
+
+ISO4
+
+1I
+
+pixel**2
+
+Isophotal area at level 4 (pixel^2)
+
+ISO5
+
+1I
+
+pixel**2
+
+Isophotal area at level 5 (pixel^2)
+
+ISO6
+
+1I
+
+pixel**2
+
+Isophotal area at level 6 (pixel^2)
+
+ISO7
+
+1I
+
+pixel**2
+
+Isophotal area at level 7 (pixel^2)
+
+ALPHA_J2000
+
+1D
+
+deg
+
+DELTA_J2000
+
+1D
+
+deg
+
+SG2DPHOT
+
+1I
+
+SExtractor named Centroid sky position right ascension (J2000)
+(deg)
+SEXtractor named Centroid sky position declination (J2000)
+(deg)
+2DPhot StarGalaxy classifier (1 for high confidence star)
+
+HTM
+
+1J
+
+Hierarchical Triangular Mesh (level 25)
+
+FIELD_POS
+
+1I
+
+Reference number to field parameters
+
+THELI_NAME
+
+14A
+
+Name of the pointing in THELI convention
+
+KIDS_TILE
+
+14A
+
+Name of the pointing in AW convention
+
+GAaP photometry parametes from the VIKING Z,Y,J,H,Ks pawprints
+EXTINCTION_Z
+
+1E
+
+mag
+
+Galactic extinction in the Z band (mag)
+
+EXTINCTION_Y
+
+1E
+
+mag
+
+Galactic extinction in the Y band (mag)
+
+EXTINCTION_J
+
+1E
+
+mag
+
+Galactic extinction in the J band (mag)
+
+EXTINCTION_H
+
+1E
+
+mag
+
+Galactic extinction in the H band (mag)
+
+EXTINCTION_Ks
+
+1E
+
+mag
+
+Galactic extinction in the Ks band (mag)
+
+MAG_GAAP_0p7_Z
+
+1E
+
+mag
+
+Z magnitude
+
+MAGERR_GAAP_0p7_Z
+
+1E
+
+mag
+
+Z magnitude error
+
+FLUX_GAAP_0p7_Z
+
+1E
+
+count
+
+Z flux
+
+FLUXERR_GAAP_0p7_Z
+
+1E
+
+count
+
+Z flux error
+
+FLAG_GAAP_0p7_Z
+
+1I
+
+MAG_GAAP_1p0_Z
+
+1E
+
+mag
+
+Z magnitude
+
+MAGERR_GAAP_1p0_Z
+
+1E
+
+mag
+
+Z magnitude error
+
+FLUX_GAAP_1p0_Z
+
+1E
+
+count
+
+Z flux
+
+FLUXERR_GAAP_1p0_Z
+
+1E
+
+count
+
+Z flux error
+
+GAAP photometry Flag
+
+28
+
+FLAG_GAAP_1p0_Z
+
+1I
+
+GAAP photometry Flag
+
+MAG_GAAP_0p7_Y
+
+1E
+
+mag
+
+Y magnitude
+
+MAGERR_GAAP_0p7_Y
+
+1E
+
+mag
+
+Y magnitude error
+
+FLUX_GAAP_0p7_Y
+
+1E
+
+count
+
+Y flux
+
+FLUXERR_GAAP_0p7_Y
+
+1E
+
+count
+
+Y flux error
+
+FLAG_GAAP_0p7_Y
+
+1I
+
+MAG_GAAP_1p0_Y
+
+1E
+
+mag
+
+Y magnitude
+
+MAGERR_GAAP_1p0_Y
+
+1E
+
+mag
+
+Y magnitude error
+
+FLUX_GAAP_1p0_Y
+
+1E
+
+count
+
+Y flux
+
+FLUXERR_GAAP_1p0_Y
+
+1E
+
+count
+
+Y flux error
+
+FLAG_GAAP_1p0_Y
+
+1I
+
+MAG_GAAP_0p7_J
+
+1E
+
+mag
+
+J magnitude
+
+MAGERR_GAAP_0p7_J
+
+1E
+
+mag
+
+J magnitude error
+
+FLUX_GAAP_0p7_J
+
+1E
+
+count
+
+J flux
+
+FLUXERR_GAAP_0p7_J
+
+1E
+
+count
+
+J flux error
+
+FLAG_GAAP_0p7_J
+
+1I
+
+MAG_GAAP_1p0_J
+
+1E
+
+mag
+
+J magnitude
+
+MAGERR_GAAP_1p0_J
+
+1E
+
+mag
+
+J magnitude error
+
+FLUX_GAAP_1p0_J
+
+1E
+
+count
+
+J flux
+
+FLUXERR_GAAP_1p0_J
+
+1E
+
+count
+
+J flux error
+
+FLAG_GAAP_1p0_J
+
+1I
+
+MAG_GAAP_0p7_H
+
+1E
+
+mag
+
+H magnitude
+
+MAGERR_GAAP_0p7_H
+
+1E
+
+mag
+
+H magnitude error
+
+FLUX_GAAP_0p7_H
+
+1E
+
+count
+
+H flux
+
+FLUXERR_GAAP_0p7_H
+
+1E
+
+count
+
+H flux error
+
+FLAG_GAAP_0p7_H
+
+1I
+
+MAG_GAAP_1p0_H
+
+1E
+
+mag
+
+H magnitude
+
+MAGERR_GAAP_1p0_H
+
+1E
+
+mag
+
+H magnitude error
+
+FLUX_GAAP_1p0_H
+
+1E
+
+count
+
+H flux
+
+FLUXERR_GAAP_1p0_H
+
+1E
+
+count
+
+H flux error
+
+FLAG_GAAP_1p0_H
+
+1I
+
+MAG_GAAP_0p7_Ks
+
+1E
+
+mag
+
+Ks magnitude
+
+MAGERR_GAAP_0p7_Ks
+
+1E
+
+mag
+
+Ks magnitude error
+
+FLUX_GAAP_0p7_Ks
+
+1E
+
+count
+
+Ks flux
+
+FLUXERR_GAAP_0p7_Ks
+
+1E
+
+count
+
+Ks flux error
+
+FLAG_GAAP_0p7_Ks
+
+1I
+
+MAG_GAAP_1p0_Ks
+
+1E
+
+mag
+
+Ks magnitude
+
+MAGERR_GAAP_1p0_Ks
+
+1E
+
+mag
+
+Ks magnitude error
+
+FLUX_GAAP_1p0_Ks
+
+1E
+
+count
+
+Ks flux
+
+FLUXERR_GAAP_1p0_Ks
+
+1E
+
+count
+
+Ks flux error
+
+FLAG_GAAP_1p0_Ks
+
+1I
+
+GAAP photometry Flag
+
+GAAP photometry Flag
+
+GAAP photometry Flag
+
+GAAP photometry Flag
+
+GAAP photometry Flag
+
+GAAP photometry Flag
+
+GAAP photometry Flag
+
+GAAP photometry Flag
+Optimal aperture 9-band GaaP photometry
+
+MAG_GAAP_u
+
+1E
+
+mag
+
+u-band GAaP magnitude optimal min_aper
+
+MAGERR_GAAP_u
+
+1E
+
+mag
+
+u-band GAaP magnitude error optimal min_aper
+
+FLUX_GAAP_u
+
+1E
+
+count
+
+u-band GAaP flux optimal min_aper
+
+FLUXERR_GAAP_u
+
+1E
+
+count
+
+u-band GAaP flux error optimal min_aper
+
+FLAG_GAAP_u
+
+1I
+
+MAG_GAAP_g
+
+1E
+
+GAaP Flag for MAG_GAAP_u optimal min_aper
+mag
+
+g-band GAaP magnitude optimal min_aper
+
+29
+
+MAGERR_GAAP_g
+
+1E
+
+mag
+
+g-band GAaP magnitude error optimal min_aper
+
+FLUX_GAAP_g
+
+1E
+
+count
+
+g-band GAaP flux optimal min_aper
+
+FLUXERR_GAAP_g
+
+1E
+
+count
+
+g-band GAaP flux error optimal min_aper
+
+FLAG_GAAP_g
+
+1I
+
+MAG_GAAP_r
+
+1E
+
+mag
+
+r-band GAaP magnitude optimal min_aper
+
+MAGERR_GAAP_r
+
+1E
+
+mag
+
+r-band GAaP magnitude error optimal min_aper
+
+FLUX_GAAP_r
+
+1E
+
+count
+
+r-band GAaP flux optimal min_aper
+
+FLUXERR_GAAP_r
+
+1E
+
+count
+
+r-band GAaP flux error optimal min_aper
+
+FLAG_GAAP_r
+
+1I
+
+MAG_GAAP_i
+
+1E
+
+mag
+
+i-band GAaP magnitude optimal min_aper
+
+MAGERR_GAAP_i
+
+1E
+
+mag
+
+i-band GAaP magnitude error optimal min_aper
+
+FLUX_GAAP_i
+
+1E
+
+count
+
+i-band GAaP flux optimal min_aper
+
+FLUXERR_GAAP_i
+
+1E
+
+count
+
+i-band GAaP flux error optimal min_aper
+
+FLAG_GAAP_i
+
+1I
+
+MAG_GAAP_Z
+
+1E
+
+mag
+
+Z-band GAaP magnitude optimal min_aper
+
+MAGERR_GAAP_Z
+
+1E
+
+mag
+
+Z-band GAaP magnitude error optimal min_aper
+
+FLUX_GAAP_Z
+
+1E
+
+count
+
+Z-band GAaP flux optimal min_aper
+
+FLUXERR_GAAP_Z
+
+1E
+
+count
+
+Z-band GAaP flux error optimal min_aper
+
+FLAG_GAAP_Z
+
+1I
+
+MAG_GAAP_Y
+
+1E
+
+mag
+
+Y-band GAaP magnitude optimal min_aper
+
+MAGERR_GAAP_Y
+
+1E
+
+mag
+
+Y-band GAaP magnitude error optimal min_aper
+
+FLUX_GAAP_Y
+
+1E
+
+count
+
+Y-band GAaP flux optimal min_aper
+
+FLUXERR_GAAP_Y
+
+1E
+
+count
+
+Y-band GAaP flux error optimal min_aper
+
+FLAG_GAAP_Y
+
+1I
+
+MAG_GAAP_J
+
+1E
+
+mag
+
+J-band GAaP magnitude optimal min_aper
+
+MAGERR_GAAP_J
+
+1E
+
+mag
+
+J-band GAaP magnitude error optimal min_aper
+
+FLUX_GAAP_J
+
+1E
+
+count
+
+J-band GAaP flux optimal min_aper
+
+FLUXERR_GAAP_J
+
+1E
+
+count
+
+J-band GAaP flux error optimal min_aper
+
+FLAG_GAAP_J
+
+1I
+
+MAG_GAAP_H
+
+1E
+
+mag
+
+H-band GAaP magnitude optimal min_aper
+
+MAGERR_GAAP_H
+
+1E
+
+mag
+
+H-band GAaP magnitude error optimal min_aper
+
+FLUX_GAAP_H
+
+1E
+
+count
+
+H-band GAaP flux optimal min_aper
+
+FLUXERR_GAAP_H
+
+1E
+
+count
+
+H-band GAaP flux error optimal min_aper
+
+FLAG_GAAP_H
+
+1I
+
+MAG_GAAP_Ks
+
+1E
+
+mag
+
+Ks-band GAaP magnitude optimal min_aper
+
+MAGERR_GAAP_Ks
+
+1E
+
+mag
+
+Ks-band GAaP magnitude error optimal min_aper
+
+FLUX_GAAP_Ks
+
+1E
+
+count
+
+Ks-band GAaP flux optimal min_aper
+
+FLUXERR_GAAP_Ks
+
+1E
+
+count
+
+Ks-band GAaP flux error optimal min_aper
+
+FLAG_GAAP_Ks
+
+1I
+
+Agaper
+
+1E
+
+arcsec
+
+Major axis of GAaP aperture optimal min_aper (arcsec)
+
+Bgaper
+
+1E
+
+arcsec
+
+Minor axis of GAaP aperture optimal min_aper (arcsec)
+
+GAaP Flag for MAG_GAAP_g optimal min_aper
+
+GAaP Flag for MAG_GAAP_r optimal min_aper
+
+GAaP Flag for MAG_GAAP_i optimal min_aper
+
+GAaP Flag for MAG_GAAP_Z optimal min_aper
+
+GAaP Flag for MAG_GAAP_Y optimal min_aper
+
+GAaP Flag for MAG_GAAP_J optimal min_aper
+
+GAaP Flag for MAG_GAAP_H optimal min_aper
+
+GAaP Flag for MAG_GAAP_Ks optimal min_aper
+
+Photometric redshift estimate
+Z_B
+
+1D
+
+Z_B_MIN
+
+1D
+
+9-band BPZ redshift estimate; peak of posterior probability distribution
+Lower bound of the 68% confidence interval of Z_B
+
+Z_B_MAX
+
+1D
+
+Upper bound of the 68% confidence interval of Z_B
+
+T_B
+
+1D
+
+Spectral type corresponding to Z_B
+
+ODDS
+
+1D
+
+Empirical ODDS of Z_B
+
+30
+
+Z_ML
+
+1D
+
+9-band BPZ maximum likelihood redshift
+
+T_ML
+
+1D
+
+Spectral type corresponding to Z_ML
+
+CHI_SQUARED_BPZ
+
+1D
+
+M_0
+
+1D
+
+BPZ_FILT
+
+1J
+
+filters with good photometry (BPZ)
+
+NBPZ_FILT
+
+1J
+
+number of filters with good phot. (BPZ)
+
+BPZ_NONDETFILT
+
+1J
+
+filters with faint photometry (BPZ)
+
+NBPZ_NONDETFILT
+
+1J
+
+number of filters with faint phot. (BPZ)
+
+BPZ_FLAGFILT
+
+1J
+
+flagged filters (BPZ)
+
+NBPZ_FLAGFILT
+
+1J
+
+number of flagged filters (BPZ)
+
+MASK
+
+1J
+
+chi sqared value associated with Z_B
+mag
+
+Reference magnitude for BPZ prior
+
+9-band mask information (see table 9 for important note)
+Extinction-corrected colours
+
+COLOUR_GAAP_u_g
+
+1E
+
+mag
+
+u-g colour index
+
+COLOUR_GAAP_g_r
+
+1E
+
+mag
+
+g-r colour index
+
+COLOUR_GAAP_r_i
+
+1E
+
+mag
+
+r-i colour index
+
+COLOUR_GAAP_i_Z
+
+1E
+
+mag
+
+i-Z colour index
+
+COLOUR_GAAP_Z_Y
+
+1E
+
+mag
+
+Z-Y colour index
+
+COLOUR_GAAP_Y_J
+
+1E
+
+mag
+
+Y-J colour index
+
+COLOUR_GAAP_J_H
+
+1E
+
+mag
+
+J-H colour index
+
+COLOUR_GAAP_H_Ks
+
+1E
+
+mag
+
+H-Ks colour index
+
+Bit
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+
+Table 8. MASK values in the 9-band catalogues (see Table 9 for important note)
+Meaning
+THELI manual mask (very conservative)
+THELI automatic large star halo mask (faint)
+THELI automatic large star halo mask (bright) or bright star mask
+Manual mask of regions around globular clusters, Fornax dwarf, ISS passage
+THELI void mask, or asteroids, or weight=0
+VIKING Z band image masked (see Table 9 for important note)
+VIKING Y band image masked (see Table 9 for important note)
+VIKING J band image masked (see Table 9 for important note)
+VIKING H band image masked (see Table 9 for important note)
+VIKING Ks band image masked (see Table 9 for important note)
+Astro-WISE u band halo+stellar PULECENELLA mask or weight=0
+Astro-WISE g band halo+stellar PULECENELLA mask or weight=0
+Astro-WISE r band halo+stellar PULECENELLA mask or weight=0
+Astro-WISE i band halo+stellar PULECENELLA mask or weight=0
+Object outside the RA/DEC cut for its tile
+Not used (reserved as sign bit in FITS 2-byte integer)
+
+31
+
+Table 9. List of affected tiles for which the multiband mask image, and the MASK parameter
+in the multiband catalogue, were incorrect in DR4.0 , and have been corrected in DR4.1 .
+KIDS_0.0_-28.2
+KIDS_0.0_-29.2
+KIDS_0.0_-30.2
+KIDS_0.0_-31.2
+KIDS_0.0_-32.1
+KIDS_0.0_-33.1
+KIDS_0.0_-34.1
+KIDS_0.0_-35.1
+KIDS_13.8_-30.2
+KIDS_157.0_1.5
+KIDS_157.0_-1.5
+KIDS_157.4_2.5
+KIDS_157.4_-2.5
+KIDS_158.0_1.5
+KIDS_158.0_-1.5
+KIDS_158.4_2.5
+KIDS_158.4_-2.5
+KIDS_159.0_1.5
+KIDS_159.0_-1.5
+KIDS_159.4_2.5
+KIDS_159.4_-2.5
+KIDS_160.0_1.5
+KIDS_160.0_-1.5
+KIDS_160.4_2.5
+KIDS_161.0_1.5
+KIDS_161.0_-1.5
+KIDS_161.4_2.5
+KIDS_161.4_-2.5
+KIDS_162.0_1.5
+KIDS_163.0_1.5
+KIDS_163.0_-1.5
+KIDS_164.0_1.5
+KIDS_164.0_-1.5
+KIDS_165.0_1.5
+KIDS_165.0_-1.5
+KIDS_166.0_1.5
+KIDS_166.5_2.5
+KIDS_167.0_1.5
+KIDS_167.0_-1.5
+KIDS_167.5_2.5
+KIDS_167.5_-2.5
+KIDS_168.0_1.5
+KIDS_168.0_-1.5
+KIDS_168.5_2.5
+KIDS_168.5_-2.5
+KIDS_169.0_1.5
+KIDS_169.0_-1.5
+KIDS_169.5_2.5
+KIDS_169.5_-2.5
+
+KIDS_170.0_1.5
+KIDS_170.5_2.5
+KIDS_170.5_-2.5
+KIDS_171.0_1.5
+KIDS_171.5_-2.5
+KIDS_187.5_2.5
+KIDS_187.5_-2.5
+KIDS_188.0_1.5
+KIDS_188.5_2.5
+KIDS_189.0_1.5
+KIDS_189.5_2.5
+KIDS_190.0_1.5
+KIDS_190.5_2.5
+KIDS_191.0_1.5
+KIDS_191.5_2.5
+KIDS_192.0_1.5
+KIDS_192.5_2.5
+KIDS_193.0_1.5
+KIDS_193.5_2.5
+KIDS_194.0_1.5
+KIDS_194.5_2.5
+KIDS_195.5_2.5
+KIDS_196.0_1.5
+KIDS_196.5_2.5
+KIDS_197.0_1.5
+KIDS_197.5_2.5
+KIDS_198.0_1.5
+KIDS_198.6_2.5
+KIDS_199.0_1.5
+KIDS_199.6_2.5
+KIDS_1.1_-28.2
+KIDS_200.0_1.5
+KIDS_200.6_2.5
+KIDS_200.6_-2.5
+KIDS_201.0_1.5
+KIDS_201.6_2.5
+KIDS_201.6_-2.5
+KIDS_202.0_1.5
+KIDS_202.6_2.5
+KIDS_202.6_-2.5
+KIDS_203.0_1.5
+KIDS_203.6_2.5
+KIDS_204.0_1.5
+KIDS_204.0_-1.5
+KIDS_204.6_-2.5
+KIDS_205.0_1.5
+KIDS_205.0_-1.5
+KIDS_205.6_2.5
+KIDS_206.0_1.5
+
+KIDS_206.0_-1.5
+KIDS_206.6_-2.5
+KIDS_207.0_1.5
+KIDS_207.0_-1.5
+KIDS_208.0_1.5
+KIDS_208.0_-1.5
+KIDS_209.0_1.5
+KIDS_209.0_-1.5
+KIDS_209.6_2.5
+KIDS_210.0_1.5
+KIDS_210.0_-1.5
+KIDS_220.6_-3.5
+KIDS_221.6_-3.5
+KIDS_225.0_1.5
+KIDS_225.0_-1.5
+KIDS_225.6_2.5
+KIDS_226.0_1.5
+KIDS_226.0_-1.5
+KIDS_226.6_2.5
+KIDS_227.0_1.5
+KIDS_227.0_-1.5
+KIDS_227.6_2.5
+KIDS_228.0_1.5
+KIDS_228.0_-1.5
+KIDS_228.6_2.5
+KIDS_229.0_1.5
+KIDS_229.0_-1.5
+KIDS_22.1_-31.2
+KIDS_22.6_-33.1
+KIDS_22.8_-34.1
+KIDS_230.0_1.5
+KIDS_230.0_-1.5
+KIDS_230.6_2.5
+KIDS_231.0_1.5
+KIDS_231.0_-1.5
+KIDS_231.6_2.5
+KIDS_232.0_1.5
+KIDS_232.0_-1.5
+KIDS_232.6_2.5
+KIDS_233.0_1.5
+KIDS_233.0_-1.5
+KIDS_233.6_2.5
+KIDS_234.0_1.5
+KIDS_234.0_-1.5
+KIDS_234.7_2.5
+KIDS_235.0_1.5
+KIDS_235.0_-1.5
+KIDS_235.7_2.5
+KIDS_236.0_1.5
+
+32
+
+KIDS_236.0_-1.5
+KIDS_236.7_2.5
+KIDS_237.0_1.5
+KIDS_237.0_-1.5
+KIDS_237.7_2.5
+KIDS_24.0_-34.1
+KIDS_24.5_-31.2
+KIDS_24.7_-32.1
+KIDS_25.2_-34.1
+KIDS_28.8_-34.1
+KIDS_30.5_-28.2
+KIDS_31.6_-28.2
+KIDS_329.5_-28.2
+KIDS_329.7_-27.2
+KIDS_32.7_-28.2
+KIDS_330.8_-27.2
+KIDS_331.8_-28.2
+KIDS_332.0_-27.2
+KIDS_332.9_-28.2
+KIDS_334.0_-28.2
+KIDS_334.2_-27.2
+KIDS_335.2_-28.2
+KIDS_336.3_-28.2
+KIDS_337.4_-28.2
+KIDS_337.6_-27.2
+KIDS_338.6_-28.2
+KIDS_339.7_-28.2
+KIDS_33.9_-28.2
+KIDS_340.8_-28.2
+KIDS_343.1_-28.2
+KIDS_345.3_-28.2
+KIDS_346.5_-28.2
+KIDS_348.7_-28.2
+KIDS_349.8_-28.2
+KIDS_351.0_-28.2
+KIDS_352.1_-28.2
+KIDS_353.2_-28.2
+KIDS_354.4_-28.2
+KIDS_355.5_-28.2
+KIDS_356.6_-28.2
+KIDS_358.9_-28.2
+KIDS_36.1_-28.2
+KIDS_37.2_-28.2
+KIDS_39.5_-28.2
+KIDS_40.6_-28.2
+KIDS_41.8_-28.2
+KIDS_44.0_-28.2
+KIDS_4.5_-28.2
+KIDS_5.6_-28.2
+
+Acknowledgements
+The following acknowledgment is valid at the moment of writing this document. For an up-todate version, please visit the following webpage:
+http://kids.strw.leidenuniv.nl/DR4/acknowledgements.php
+
+Users of data from this release should cite “Kuijken et al. (2019), A&A 625, A2”. (The publication is
+available at https://doi.org/10.1051/0004-6361/201834918)
+Please use the following statement in your articles when using these data:
+
+Based on observations made with ESO Telescopes at the La Silla Paranal Observatory under programme IDs 177.A-3016, 177.A-3017, 177.A-3018 and 179.A-2004, and on data
+products produced by the KiDS consortium. The KiDS production team acknowledges support from: Deutsche Forschungsgemeinschaft, ERC, NOVA and NWO-M grants; Target; the
+University of Padova, and the University Federico II (Naples).
+
+33
+
+

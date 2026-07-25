@@ -1,0 +1,270 @@
+{
+ "group": "hi_mhongoose",
+ "title": "MHONGOOSE HI data for NGC 1566 / NGC 1672 / NGC 5068 (T9, S2, C-TripleKappa)",
+ "targets": {
+  "NGC 1566": "J0419-54 (Deep DR1)",
+  "NGC 1672": "J0445-59 (Deep DR3)",
+  "NGC 5068": "J1318-21 (Deep DR1)"
+ },
+ "sources": {
+  "single_track_release": {
+   "doi": "10.5281/zenodo.10907080",
+   "landing": "https://zenodo.org/records/10907080",
+   "depth": "5.5 h per galaxy (single track)",
+   "zenodo_published_md5_of_full_zip": "9f7f6a38ead801b69a45140000f0df50",
+   "verified": "The full 17,577,036-byte MHONGOOSE_singletrack.zip already on local disk reproduces the Zenodo md5 EXACTLY. Per-galaxy bundles here were cut from that verified archive."
+  },
+  "deep_release": {
+   "official_page": "https://mhongoose.astron.nl/Public-Data-Release.html",
+   "depth": "55 h per galaxy (full depth)",
+   "distribution": "Google Drive ONLY. mhongoose.astron.nl hosts no file archive of its own - the 'Public Data' page links straight out to Drive. There is no Zenodo/VO/ASTRON mirror of the deep releases.",
+   "drive_folders": {
+    "DR1": "https://drive.google.com/drive/folders/1RTqCZCBEXeT75ReW22pADoxyFN8YvVG2",
+    "DR2": "https://drive.google.com/drive/folders/1znmFHW71juiWP6QBY6-aE6CyAAVvZjyK",
+    "DR3": "https://drive.google.com/drive/folders/1JwZehlYk8OknwafItmcIopnhs1Fz0uTF",
+    "single_track": "https://drive.google.com/drive/folders/1KMvBhAUflzMTrPsrWgMll6tFD7Ggaakw"
+   },
+   "all_three_folder_ids_confirmed_against_official_page": true,
+   "survey_paper": "de Blok et al. 2024, A&A 688, A109"
+  }
+ },
+ "angular_weightings": {
+  "count": 6,
+  "labels": [
+   "r00_t00",
+   "r05_t00",
+   "r05_t60",
+   "r10_t00",
+   "r10_t90",
+   "r15_t00"
+  ],
+  "beam_and_noise_table": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/hi_mhongoose/docs/deblok2024_table4_standard_resolutions.csv",
+  "range": "8.2 arcsec (r00_t00, highest res) to 94.2 arcsec (r10_t90, lowest res / most column-density sensitive). This spans the survey's full released resolution range, so a resolution-selection check is fully supported by the MOMENT MAPS."
+ },
+ "delivered": {
+  "deep_moment_maps": {
+   "coverage": "ALL 6 angular weightings x ALL 3 galaxies. 47 files per galaxy (6 weightings x 8 products, minus mask.fits.gz for r00_t00 which the survey does not release). 141 files, 1,087,207,875 bytes total, every file magic-byte verified as FITS/gzip.",
+   "products_per_weighting": [
+    "mom0",
+    "mom0_pb (primary-beam corrected)",
+    "mom1",
+    "mom2",
+    "chan (channel-count map)",
+    "mask-2d",
+    "mask.fits.gz (3D, not for r00_t00)",
+    "primbeam (primary beam map)"
+   ],
+   "per_file_manifest": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/hi_mhongoose/deep_moments/manifest_deep_moments.json",
+   "bundles": {
+    "NGC1566": {
+     "url": "https://github.com/xergon/gsg-tcg-data/releases/download/mhongoose-ngc1566-v1/MHONGOOSE_deep_moments_NGC1566_J0419-54.zip",
+     "bytes": 37900187,
+     "md5": "aa731382c0f5be01df2bf628a0619c4a",
+     "files_inside": 47,
+     "uncompressed_bytes": 362632934
+    },
+    "NGC1672": {
+     "url": "https://github.com/xergon/gsg-tcg-data/releases/download/mhongoose-ngc1672-v1/MHONGOOSE_deep_moments_NGC1672_J0445-59.zip",
+     "bytes": 37958937,
+     "md5": "455c813a367d55393bacca917fa74525",
+     "files_inside": 47,
+     "uncompressed_bytes": 362595886
+    },
+    "NGC5068": {
+     "url": "https://github.com/xergon/gsg-tcg-data/releases/download/mhongoose-ngc5068-v1/MHONGOOSE_deep_moments_NGC5068_J1318-21.zip",
+     "bytes": 37348350,
+     "md5": "ed2eb43f2d95bdd8a5092c778eaa012e",
+     "files_inside": 47,
+     "uncompressed_bytes": 361979055
+    }
+   }
+  },
+  "deep_cubes_low_resolution": {
+   "coverage": "2 of 5 released cube weightings (r05_t60 and r10_t90) x ALL 3 galaxies. 6 cubes, 888,517,440 bytes, all magic-byte verified FITS and byte-for-byte the size Drive reports.",
+   "bundles": {
+    "NGC1566": {
+     "url": "https://github.com/xergon/gsg-tcg-data/releases/download/mhongoose-ngc1566-v1/MHONGOOSE_deep_cubes_lowres_NGC1566_J0419-54.zip",
+     "bytes": 278968519,
+     "md5": "52dc4794c46289d59e847fac801b751f",
+     "weightings": [
+      "r05_t60",
+      "r10_t90"
+     ],
+     "uncompressed_bytes": 301515840
+    },
+    "NGC1672": {
+     "url": "https://github.com/xergon/gsg-tcg-data/releases/download/mhongoose-ngc1672-v1/MHONGOOSE_deep_cubes_lowres_NGC1672_J0445-59.zip",
+     "bytes": 275991136,
+     "md5": "ebb754180a6414f2ed0caf54cc0cade9",
+     "weightings": [
+      "r05_t60",
+      "r10_t90"
+     ],
+     "uncompressed_bytes": 298560960
+    },
+    "NGC5068": {
+     "url": "https://github.com/xergon/gsg-tcg-data/releases/download/mhongoose-ngc5068-v1/MHONGOOSE_deep_cubes_lowres_NGC5068_J1318-21.zip",
+     "bytes": 266728726,
+     "md5": "2f832c579dbcc0e1f855b2fa1061efd2",
+     "weightings": [
+      "r05_t60",
+      "r10_t90"
+     ],
+     "uncompressed_bytes": 288440640
+    }
+   }
+  },
+  "single_track_moment_maps": {
+   "coverage": "robust 0.5 and 1.5 x ALL 3 galaxies; mom0, mom0_pb, mom1, mom2, chan. 10 files per galaxy.",
+   "bundles": {
+    "NGC1566": {
+     "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/hi_mhongoose/singletrack/MHONGOOSE_singletrack_NGC1566_J0419-54.zip",
+     "bytes": 1211680,
+     "md5": "76e95d861a8e544186602f1393f72f99",
+     "uncompressed_bytes": 76838400
+    },
+    "NGC1672": {
+     "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/hi_mhongoose/singletrack/MHONGOOSE_singletrack_NGC1672_J0445-59.zip",
+     "bytes": 1190372,
+     "md5": "9084e125f56212e3ed5b2afbd276d1b2",
+     "uncompressed_bytes": 76838400
+    },
+    "NGC5068": {
+     "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/hi_mhongoose/singletrack/MHONGOOSE_singletrack_NGC5068_J1318-21.zip",
+     "bytes": 982127,
+     "md5": "ea4381d30c4ffb2e5b6afc8b6a7bf8a3",
+     "uncompressed_bytes": 76838400
+    }
+   }
+  },
+  "documents": {
+   "deep_release_readmes": [
+    "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/hi_mhongoose/docs/DeepDataRelease1_README.pdf",
+    "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/hi_mhongoose/docs/DeepDataRelease2_README.pdf",
+    "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/hi_mhongoose/docs/DeepDataRelease3_README.pdf"
+   ],
+   "readme_plaintext": [
+    "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/hi_mhongoose/docs/DeepDataRelease1_README.txt",
+    "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/hi_mhongoose/docs/DeepDataRelease2_README.txt",
+    "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/hi_mhongoose/docs/DeepDataRelease3_README.txt"
+   ],
+   "beam_noise_table_csv": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/hi_mhongoose/docs/deblok2024_table4_standard_resolutions.csv"
+  },
+  "full_release_index": {
+   "file": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/hi_mhongoose/deep_index/MHONGOOSE_deep_release_index.json",
+   "what": "Every file in Deep DR1+DR2+DR3: 1749 entries across all 30 MHONGOOSE galaxies, with Drive id and a direct download URL each. Lets any later lane pull any product without re-crawling."
+  }
+ },
+ "deferred_not_mirrored": {
+  "what": "9 of the 15 deep HI CUBES - the three high-resolution weightings r05_t00, r10_t00 and r15_t00, for all three galaxies.",
+  "why": "42.2 GB for those 9 files alone (43.1 GB for all 15). Sizes were measured exactly, not estimated. Mirroring them would not fit this pass.",
+  "impact": "Moment maps are complete at ALL SIX weightings, so the resolution-selection control is unaffected. Only spectral/cube-level work at the three finest resolutions needs these.",
+  "how_to_get_them": "Each entry below carries a direct download URL. Large Drive files return a >100MB virus-scan HTML interstitial on the first GET - re-request with the hidden form fields (id, export, confirm, uuid) to obtain the real bytes.",
+  "files": [
+   {
+    "galaxy": "J0419-54",
+    "ngc": "NGC1566",
+    "weighting": "r05_t00",
+    "file": "comb_10tracks_J0419_54_HI_r05_t0_mg095_2.image-ics.fits",
+    "bytes": 9266578560,
+    "gigabytes": 9.27,
+    "google_drive_id": "1XkZwrWRWwz1hNBwxB-RKZ4SG_hGlUwaI",
+    "direct_download_url": "https://drive.usercontent.google.com/download?id=1XkZwrWRWwz1hNBwxB-RKZ4SG_hGlUwaI&export=download",
+    "note": "Not mirrored: too large for this pass. Downloadable directly from the URL above (follow the >100MB virus-scan confirm form)."
+   },
+   {
+    "galaxy": "J0419-54",
+    "ngc": "NGC1566",
+    "weighting": "r10_t00",
+    "file": "comb_10tracks_J0419_54_HI_r10_t0_mg095_2.image-ics.fits",
+    "bytes": 3336082560,
+    "gigabytes": 3.34,
+    "google_drive_id": "1UGkSmc_JmcGcl9Q9iu-mE68Pv2LyZV7V",
+    "direct_download_url": "https://drive.usercontent.google.com/download?id=1UGkSmc_JmcGcl9Q9iu-mE68Pv2LyZV7V&export=download",
+    "note": "Not mirrored: too large for this pass. Downloadable directly from the URL above (follow the >100MB virus-scan confirm form)."
+   },
+   {
+    "galaxy": "J0419-54",
+    "ngc": "NGC1566",
+    "weighting": "r15_t00",
+    "file": "comb_10tracks_J0419_54_HI_r15_t0_mg095_2.image-ics.fits",
+    "bytes": 1704695040,
+    "gigabytes": 1.7,
+    "google_drive_id": "1MzhGJPm4Hxvjl7LMC7fbNPJnbhlNArxy",
+    "direct_download_url": "https://drive.usercontent.google.com/download?id=1MzhGJPm4Hxvjl7LMC7fbNPJnbhlNArxy&export=download",
+    "note": "Not mirrored: too large for this pass. Downloadable directly from the URL above (follow the >100MB virus-scan confirm form)."
+   },
+   {
+    "galaxy": "J1318-21",
+    "ngc": "NGC5068",
+    "weighting": "r05_t00",
+    "file": "comb_10tracks_J1318_21_HI_r05_t0_mg095_2.image-ics.fits",
+    "bytes": 8864809920,
+    "gigabytes": 8.86,
+    "google_drive_id": "11gDcqZpQ2q2X-IlwuO3h0nIOdQOyB97K",
+    "direct_download_url": "https://drive.usercontent.google.com/download?id=11gDcqZpQ2q2X-IlwuO3h0nIOdQOyB97K&export=download",
+    "note": "Not mirrored: too large for this pass. Downloadable directly from the URL above (follow the >100MB virus-scan confirm form)."
+   },
+   {
+    "galaxy": "J1318-21",
+    "ngc": "NGC5068",
+    "weighting": "r10_t00",
+    "file": "comb_10tracks_J1318_21_HI_r10_t0_mg095_2.image-ics.fits",
+    "bytes": 3191440320,
+    "gigabytes": 3.19,
+    "google_drive_id": "1L7J38CSr7EBCzzDaLNAFO6zxuTmyt9oE",
+    "direct_download_url": "https://drive.usercontent.google.com/download?id=1L7J38CSr7EBCzzDaLNAFO6zxuTmyt9oE&export=download",
+    "note": "Not mirrored: too large for this pass. Downloadable directly from the URL above (follow the >100MB virus-scan confirm form)."
+   },
+   {
+    "galaxy": "J1318-21",
+    "ngc": "NGC5068",
+    "weighting": "r15_t00",
+    "file": "comb_10tracks_J1318_21_HI_r15_t0_mg095_2.image-ics.fits",
+    "bytes": 1630782720,
+    "gigabytes": 1.63,
+    "google_drive_id": "16jIfJ5YZS03bB2Qhm3OX3QaeK3h-rtyq",
+    "direct_download_url": "https://drive.usercontent.google.com/download?id=16jIfJ5YZS03bB2Qhm3OX3QaeK3h-rtyq&export=download",
+    "note": "Not mirrored: too large for this pass. Downloadable directly from the URL above (follow the >100MB virus-scan confirm form)."
+   },
+   {
+    "galaxy": "J0445-59",
+    "ngc": "NGC1672",
+    "weighting": "r05_t00",
+    "file": "comb_10tracks_J0445_59_HI_r05_t0_mg095_2.image-ics.fits",
+    "bytes": 9175855680,
+    "gigabytes": 9.18,
+    "google_drive_id": "1D754QWCthirSPqsN_4AwFIoEP-Dq6nJf",
+    "direct_download_url": "https://drive.usercontent.google.com/download?id=1D754QWCthirSPqsN_4AwFIoEP-Dq6nJf&export=download",
+    "note": "Not mirrored: too large for this pass. Downloadable directly from the URL above (follow the >100MB virus-scan confirm form)."
+   },
+   {
+    "galaxy": "J0445-59",
+    "ngc": "NGC1672",
+    "weighting": "r10_t00",
+    "file": "comb_10tracks_J0445_59_HI_r10_t0_mg095_2.image-ics.fits",
+    "bytes": 3303420480,
+    "gigabytes": 3.3,
+    "google_drive_id": "1kDBp4bYv-uyjnk61quZAU4JvjsdeN6UL",
+    "direct_download_url": "https://drive.usercontent.google.com/download?id=1kDBp4bYv-uyjnk61quZAU4JvjsdeN6UL&export=download",
+    "note": "Not mirrored: too large for this pass. Downloadable directly from the URL above (follow the >100MB virus-scan confirm form)."
+   },
+   {
+    "galaxy": "J0445-59",
+    "ngc": "NGC1672",
+    "weighting": "r15_t00",
+    "file": "comb_10tracks_J0445_59_HI_r15_t0_mg095_2.image-ics.fits",
+    "bytes": 1688002560,
+    "gigabytes": 1.69,
+    "google_drive_id": "1sbH_PLMIawjEUhrrvGvgN-s4ghEKt_j3",
+    "direct_download_url": "https://drive.usercontent.google.com/download?id=1sbH_PLMIawjEUhrrvGvgN-s4ghEKt_j3&export=download",
+    "note": "Not mirrored: too large for this pass. Downloadable directly from the URL above (follow the >100MB virus-scan confirm form)."
+   }
+  ]
+ },
+ "traps_encountered": [
+  "Google Drive returns HTTP 200 with a 340 KB JavaScript shell for a folder URL and a 2.4 KB HTML 'Virus scan warning' page for any file over ~100 MB. Both look like success. Every file here was gated on magic bytes (FITS must begin 'SIMPLE  =', gzip on 1f 8b); 4 mask.fits.gz files were caught and rejected on the first pass and re-fetched through the confirm form on the second.",
+  "Folder listings are not in the folder page HTML at all. The server-rendered 'embeddedfolderview' endpoint was used instead to enumerate all 1749 files without an API key.",
+  "The r00_t00 CUBES are deliberately absent from the release - the README states they are withheld for size and 'available upon request'. So there are 6 moment-map weightings but only 5 cube weightings. This is a survey decision, not a gap in this mirror."
+ ]
+}

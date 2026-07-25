@@ -1,0 +1,115 @@
+{
+  "row": "i3",
+  "title": "Chemical-phase blindness \u2014 does gravity care whether gas is labelled HI or H2?",
+  "generated_utc": "2026-07-25T10:08:47Z",
+  "arena": "VERTICO CO(2-1) + VIVA HI, Virgo cluster",
+  "dois": {
+    "vertico_data_products": "10.11570/23.0018",
+    "vertico_data_landing": "https://www.canfar.net/citation/landing?doi=23.0018",
+    "vertico_paper": "10.3847/1538-4365/ac28f5",
+    "vertico_vizier": "10.26093/cds/vizier.22570021",
+    "viva_paper": "10.1088/0004-6256/138/6/1741",
+    "viva_data": null,
+    "viva_data_note": "VIVA has NO data DOI. Public FITS atlas at http://www.astro.yale.edu/viva/momfits/ ; ~15in reprocessed products live undoi'd inside the VERTICO VOSpace."
+  },
+  "alma_project_codes": [
+    "2019.1.00763.L",
+    "2016.1.00912.S",
+    "PHANGS-ALMA archival ACA"
+  ],
+  "counts": {
+    "programme_galaxies": 51,
+    "parent_viva_survey": 53,
+    "co_detections": 49,
+    "co_nondetections": [
+      "IC3418",
+      "VCC1581"
+    ],
+    "galaxies_with_full_37_product_CO_suite": 49,
+    "galaxies_with_matched_resolution_HI": 48,
+    "galaxies_with_full_37_product_HI_suite": 44,
+    "HI_missing_entirely": [
+      "NGC4293"
+    ],
+    "HI_missing_only_PVD_files": [
+      "NGC4450",
+      "NGC4579",
+      "NGC4606"
+    ],
+    "N_valid_before_science_cuts": 48,
+    "thread_requirement_N_valid": 35,
+    "availability_kills_arena": false
+  },
+  "instrument_metadata": {
+    "co_beam_round": true,
+    "co_bmaj_arcsec": {
+      "min": 7.0945,
+      "median": 7.9225,
+      "max": 10.1859
+    },
+    "co_pixel_arcsec": 2.0,
+    "co_channel_kms": 10.6,
+    "hi_beam_round": false,
+    "hi_beams_that_are_round": 0,
+    "hi_n_checked": 48,
+    "hi_bmaj_arcsec": {
+      "min": 15.7792,
+      "median": 16.8996,
+      "max": 25.967
+    },
+    "hi_bmin_arcsec": {
+      "min": 15.148,
+      "max": 24.1077
+    },
+    "hi_pixel_arcsec": 8.0,
+    "viva_published_atlas_bmaj_arcsec": {
+      "min": 15.44,
+      "max": 44.58,
+      "n_over_20": 12,
+      "n_total": 53
+    },
+    "adopted_distance_Mpc": 16.5,
+    "alpha_CO_baked_into_Msolpc2_maps": 4.35,
+    "R21": 0.8,
+    "alpha_over_R21": 5.4375,
+    "X_CO_cm-2_per_Kkms": 2e+20
+  },
+  "tangent_point_offsets_arcsec": {
+    "NGC4216": 707.71,
+    "NGC4294": 339.633,
+    "NGC4298": 139.705,
+    "NGC4536": 499.03,
+    "NGC4568": 78.094,
+    "NGC4607": 233.578
+  },
+  "delivered": {
+    "release_asset": "https://github.com/xergon/gsg-tcg-data/releases/download/i3-vertico-viva-v1/i3_vertico_viva_products_v1.tar.gz",
+    "release_asset_bytes": 40189115,
+    "release_asset_sha256": "893914b17c3bb2c4c08286746db057b7684b3b6092508ca2e205dae9db1ef785",
+    "files_in_asset": 1818,
+    "uncompressed_bytes": 227966976,
+    "manifest": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i3_vertico_viva/MANIFEST_FULL.tsv",
+    "readme": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i3_vertico_viva/README.md",
+    "beam_grid_table": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i3_vertico_viva/BEAM_GRID_TABLE.csv",
+    "vertico_vizier_tables": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i3_vertico_viva/vertico_vizier_J_ApJS_257_21_table12.tsv",
+    "viva_native_beams": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i3_vertico_viva/viva_chung2009_table2_beams.tsv",
+    "checksums": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i3_vertico_viva/CHECKSUMS.sha256"
+  },
+  "deferred": {
+    "spectral_cubes_files": 485,
+    "spectral_cubes_bytes": 2355261120,
+    "preview_pdfs_files": 1741,
+    "preview_pdfs_bytes": 125724000,
+    "where": "every URL + byte count is in MANIFEST_FULL.tsv; all fetchable with no auth from https://ws-cadc.canfar.net/vault/files/"
+  },
+  "verification": {
+    "method": "exact byte-count match against publisher VOSpace node lengths + FITS SIMPLE magic on every file",
+    "fits_verified": 1463,
+    "csv_verified": 194,
+    "failures": 0,
+    "deferred_urls_spot_checked": 4,
+    "deferred_spot_check_failures": 0
+  },
+  "manifest_rows": 4040,
+  "manifest_enumerated_bytes": 2660596651
+}

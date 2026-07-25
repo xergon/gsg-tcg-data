@@ -1,0 +1,80 @@
+[
+ {
+  "galaxy": "J0419-54",
+  "ngc": "NGC1566",
+  "dr": "DR1",
+  "robust": "r05",
+  "taper": "t60",
+  "product": "cube",
+  "file": "comb_10tracks_J0419_54_HI_r05_t60_mg095_2.image-ics.fits",
+  "drive_path": "/DR1/cubes/J0419-54/comb_10tracks_J0419_54_HI_r05_t60_mg095_2.image-ics.fits",
+  "drive_id": "1rVL6AwVHAT2ycZpJttI3wYDbQu7_k7jI",
+  "bytes": 208673280,
+  "md5": "8b43f9713f1a8c9198c86f64ff806715"
+ },
+ {
+  "galaxy": "J0419-54",
+  "ngc": "NGC1566",
+  "dr": "DR1",
+  "robust": "r10",
+  "taper": "t90",
+  "product": "cube",
+  "file": "comb_10tracks_J0419_54_HI_r10_t90_mg095_2.image-ics.fits",
+  "drive_path": "/DR1/cubes/J0419-54/comb_10tracks_J0419_54_HI_r10_t90_mg095_2.image-ics.fits",
+  "drive_id": "1nrhHPm90kEx1AUPDrK6n00gWQmeM7dYE",
+  "bytes": 92842560,
+  "md5": "9cfaec7063c5827d70cf2b0c15a80f0d"
+ },
+ {
+  "galaxy": "J0445-59",
+  "ngc": "NGC1672",
+  "dr": "DR3",
+  "robust": "r05",
+  "taper": "t60",
+  "product": "cube",
+  "file": "comb_10tracks_J0445_59_HI_r05_t60_mg095_2.image-ics.fits",
+  "drive_path": "/DR3/cubes/J0445-59/comb_10tracks_J0445_59_HI_r05_t60_mg095_2.image-ics.fits",
+  "drive_id": "1dgIOni2675e1Js8TAZwlMFTvm8TvUtTa",
+  "bytes": 206628480,
+  "md5": "2ac62fa0b0a4d8ecbf2e0e952d560dec"
+ },
+ {
+  "galaxy": "J0445-59",
+  "ngc": "NGC1672",
+  "dr": "DR3",
+  "robust": "r10",
+  "taper": "t90",
+  "product": "cube",
+  "file": "comb_10tracks_J0445_59_HI_r10_t90_mg095_2.image-ics.fits",
+  "drive_path": "/DR3/cubes/J0445-59/comb_10tracks_J0445_59_HI_r10_t90_mg095_2.image-ics.fits",
+  "drive_id": "1TbidbY0Qbk2SutTpZB4bQFSB8SPpGFPc",
+  "bytes": 91932480,
+  "md5": "ac68203c68ef3933c73198a66549f796"
+ },
+ {
+  "galaxy": "J1318-21",
+  "ngc": "NGC5068",
+  "dr": "DR1",
+  "robust": "r05",
+  "taper": "t60",
+  "product": "cube",
+  "file": "comb_10tracks_J1318_21_HI_r05_t60_mg095_2.image-ics.fits",
+  "drive_path": "/DR1/cubes/J1318-21/comb_10tracks_J1318_21_HI_r05_t60_mg095_2.image-ics.fits",
+  "drive_id": "1aFUtL-WtGF2Gp5oDIOjOR_gwZKb696Rm",
+  "bytes": 199624320,
+  "md5": "d098a949c8b49e73cd7b972987b40a4c"
+ },
+ {
+  "galaxy": "J1318-21",
+  "ngc": "NGC5068",
+  "dr": "DR1",
+  "robust": "r10",
+  "taper": "t90",
+  "product": "cube",
+  "file": "comb_10tracks_J1318_21_HI_r10_t90_mg095_2.image-ics.fits",
+  "drive_path": "/DR1/cubes/J1318-21/comb_10tracks_J1318_21_HI_r10_t90_mg095_2.image-ics.fits",
+  "drive_id": "1MM3EX7Lb6Bw-Wgf0QXYD4_57WD2UJEEZ",
+  "bytes": 88816320,
+  "md5": "2143c5db692a0260ed1ca4de38d1bb42"
+ }
+]

@@ -1,0 +1,20 @@
+block,test_type,object,ra_deg,dec_deg,ns_hat,gamma_hat,neglog10_p_local,neglog10_p_local_sigma,neglog10_p_global,neglog10_p_global_sigma
+Northern Sky Survey,,Hottest Spot,40.69,0.02,102.6,3.4,6.6,5.0,1.1,1.4
+110 gamma-ray sources,,,,,,,,,,
+,Most significant source,NGC 1068,40.67,-0.01,102.2,3.4,6.6,5.0,4.5,4.0
+,Binomial test,3 Sources,,,,,4.8,4.2,2.9,3.0
+,Other sources in binomial excess,PKS 1424+240,216.76,23.80,96.3,3.6,4.1,3.8,-,
+,,TXS 0506+056,77.36,5.69,4.9,1.9,3.4,3.3,-,
+47 X-ray bright AGN,,,,,,,,,,
+,Most significant source,NGC 7469,345.82,8.87,5.5,1.9,4.1,3.8,2.1,2.4
+,Binomial test,11 Sources,,,,,4.8,4.2,3.3,3.3
+,Other sources in binomial excess,NGC 4151*,182.64,39.41,27.6,2.7,2.9,3.1,-,
+,,CGCG 420-015*,73.36,4.06,35.3,2.7,2.4,2.7,-,
+,,Cygnus A*,299.87,40.73,3.4,1.6,2.2,2.5,-,
+,,LEDA 166445,42.68,54.70,57.1,4.4,1.8,2.1,-,
+,,NGC 4992,197.27,11.63,27.3,2.9,1.6,2.0,-,
+,,NGC 1194*,45.95,-1.10,43.2,4.4,1.5,1.8,-,
+,,Mrk 1498,247.02,51.78,39.9,3.6,1.4,1.7,-,
+,,MCG +4-48-2*,307.15,25.73,36.7,3.2,1.4,1.7,-,
+,,NGC 3079,150.49,55.68,33.8,3.6,1.3,1.7,-,
+,,Mrk 417,162.38,22.96,4.4,2.0,1.3,1.6,-,

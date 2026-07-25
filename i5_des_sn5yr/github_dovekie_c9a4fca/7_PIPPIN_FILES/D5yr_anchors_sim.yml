@@ -1,0 +1,30 @@
+
+ALIAS:
+  COSMOLOGY: &cosmology
+    OMEGA_MATTER: 0.315
+    OMEGA_LAMBDA: 0.685
+    w0_LAMBDA:     -1.0
+    wa_LAMBDA:        0
+    H0:            70.0
+
+  DES_SURVEY: &des_survey
+    INPUT_FILE_INCLUDE: $SNDATA_ROOT/sample_input_files/DES-SN5YR/base_files/sim/sim_des5yr_survey.input
+
+  DESIA_NOMINAL: &desia_nominal
+    BASE: $SNDATA_ROOT/sample_input_files/DES-SN5YR/base_files/sim/sim_ia_salt_des5yr.input
+
+  FOUND_NOMINAL: &found_nominal
+    BASE: $SNDATA_ROOT/sample_input_files/DES-SN5YR/base_files/sim/sim_ia_salt_found.input
+
+  LOWZ_NOMINAL: &lowz_nominal
+    BASE: $SNDATA_ROOT/sample_input_files/DES-SN5YR/base_files/sim/sim_ia_salt_lowz.input
+
+  DATASIM_SIZE: &datasim_size
+    NGEN_UNIT: 1
+    RANSEED_CHANGE: 5 23488
+    BATCH_MEM: 8GB
+
+  BIASCORSIM_SIZE: &biascorsim_size
+    NGEN_UNIT:      30           # reduce 30 -> 10 for quick test
+    RANSEED_REPEAT: 40 6789      # reduce 40 -> 10 for quick test
+    BATCH_MEM: 8GB

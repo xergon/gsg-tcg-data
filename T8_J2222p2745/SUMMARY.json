@@ -1,0 +1,90 @@
+{
+ "row": "T8 \u2014 SDSS J2222+2745",
+ "fetched_utc": "2026-07-25T09:30:00Z",
+ "n_files": 9,
+ "files": {
+  "J2222_gband_lightcurve_Dahle2015_Table1.csv": {
+   "bytes": 8127,
+   "md5": "dd3e7a9f4011dcf7b48e782a81187b07",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/T8_J2222p2745/J2222_gband_lightcurve_Dahle2015_Table1.csv"
+  },
+  "MANIFEST.md": {
+   "bytes": 12137,
+   "md5": "e0e3e43d6e206c3d16c9d3eebe858a6a",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/T8_J2222p2745/MANIFEST.md"
+  },
+  "MANIFEST_HST_GO13337_J2222.csv": {
+   "bytes": 5034,
+   "md5": "d1bf6bb946eea3361e5c6aff061da26a",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/T8_J2222p2745/MANIFEST_HST_GO13337_J2222.csv"
+  },
+  "R1_Williams2021a_Table1_standard_stars.txt": {
+   "bytes": 715,
+   "md5": "aa00c2c4f5aa09ca2b0f41bb3b6b6c6f",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/T8_J2222p2745/R1_Williams2021a_Table1_standard_stars.txt"
+  },
+  "R1_Williams2021a_Table2_CIV_lags.txt": {
+   "bytes": 780,
+   "md5": "481184bbe0f14fb998df9c0fe7db602c",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/T8_J2222p2745/R1_Williams2021a_Table2_CIV_lags.txt"
+  },
+  "R1_Williams2021a_Table3_linewidths_MBH.txt": {
+   "bytes": 1705,
+   "md5": "20cd95468f0c05655527e5298d94762c",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/T8_J2222p2745/R1_Williams2021a_Table3_linewidths_MBH.txt"
+  },
+  "R3_Williams2021b_BLR_model_posterior.csv": {
+   "bytes": 1090,
+   "md5": "f1479130bca0471d6cc5240d184a6076",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/T8_J2222p2745/R3_Williams2021b_BLR_model_posterior.csv"
+  },
+  "Refsdal_Kelly2023_Table3_photometry_mrt.txt": {
+   "bytes": 61840,
+   "md5": "d7ba6d652d349898dcfbc94c971fa58e",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/T8_J2222p2745/Refsdal_Kelly2023_Table3_photometry_mrt.txt"
+  },
+  "cadence_summary.json": {
+   "bytes": 413,
+   "md5": "9b0ddc88063b266f386be16c9592cf3a",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/T8_J2222p2745/cadence_summary.json"
+  }
+ },
+ "gemini_program_ids": [
+  "GN-2016B-Q-28",
+  "GN-2017A-FT-9",
+  "GN-2017B-Q-33",
+  "GN-2018A-Q-103",
+  "GN-2018B-Q-143",
+  "GN-2019A-Q-203",
+  "GN-2019B-Q-232",
+  "GN-2020A-Q-105",
+  "GN-2020B-Q-132",
+  "GN-2015A-FT-16"
+ ],
+ "gemini_program_id_source": "published acknowledgements, arXiv 2011.02007 vr_lags.tex L911 (archive.gemini.edu returns HTTP 403 to this host)",
+ "macro_delays_current_best": {
+  "source": "Dyrland 2019 (UiO MSc), quoted in Napier+2023 arXiv 2301.11240 Table time_delays",
+  "dt_AB_days": "42.44 +1.36 -1.44",
+  "dt_AC_days": "-696.65 +2.00 -2.10",
+  "SUPERSEDES": {
+   "source": "Dahle+2015 DOI 10.1088/0004-637X/813/1/67",
+   "dt_AB_days": "47.7 +/- 6.0",
+   "dt_AC_days": "-722 +/- 24"
+  }
+ },
+ "CIV_lag_restframe_days": {
+  "CCF_tau_cen_Williams2021a": "36.5 +2.9 -3.9",
+  "model_tau_median_Williams2021b": "36.4 +1.8 -1.8",
+  "model_tau_MEAN_Williams2021b": "59.4 +2.7 -2.5"
+ },
+ "blocked": [
+  "archive.gemini.edu HTTP 403 IP/ISP block + login required \u2014 human required"
+ ],
+ "deferred": [
+  "raw GMOS-N frames",
+  "NOT/ALFOSC epoch photometry (unpublished)",
+  "2016-2020 campaign light curves (unpublished)",
+  "Dyrland2019 posterior samples",
+  "HST/MAST pixel data"
+ ]
+}

@@ -1,0 +1,153 @@
+{
+  "file": "transpositions_2014-07.npz",
+  "bytes": 859128741,
+  "sha256": "ce89c6ea1c3d9395ceef8273145fadac590100f125e7634410e988db8cfa9f7f",
+  "format": "numpy .npz (zip, DEFLATE). np.load(path); z['<name>'] -> 1-D array.",
+  "n_records": 23941814,
+  "n_games": 1048440,
+  "all_columns_are_row_aligned_1d_length": 23941814,
+  "source_corpus": {
+    "name": "lichess_db_standard_rated_2014-07.pgn.zst",
+    "url": "https://database.lichess.org/standard/lichess_db_standard_rated_2014-07.pgn.zst",
+    "bytes": 200304103,
+    "sha256": "d73fa278979e3dd36d9af98c7b09c5eb03f8644ec5beccddc191af7b4959cad8",
+    "games_in_file": 1048440,
+    "role": "DISCOVERY period"
+  },
+  "scope": {
+    "MIN_PLY": 6,
+    "MAX_PLY": 30,
+    "rule": "one record per ply p with MIN_PLY <= p < MAX_PLY and at least 4 preceding plies; the record describes the position BEFORE the move stored in nxt",
+    "variant_games_skipped": 0
+  },
+  "hashing": {
+    "digest": "BLAKE2b, digest_size=8 (64-bit)",
+    "personalization": "b'i4-rep-v1'  (used for repetition_ledger_hash and state)",
+    "int64_encoding": "int.from_bytes(digest, 'little', signed=True)",
+    "unpersonalized_columns": [
+      "state_fen5",
+      "hist1",
+      "hist4",
+      "nxt"
+    ],
+    "note": "state_fen5/hist1/hist4/nxt use blake2b(digest_size=8) with NO personalization, bit-identical to the pass-1 scout extraction."
+  },
+  "repetition_ledger_spec_as_implemented": {
+    "ledger_key_k": "python-chess Board.epd() = placement / side-to-move / castling / LEGAL en-passant. Library call: chess.Board.epd() with its default en_passant='legal' (verified equal to ' '.join(board.fen().split(' ')[:4])). halfmove and fullmove counters are EXCLUDED.",
+    "segment_reset": "chess.Board.is_irreversible(move) evaluated on the PRE-move board (is_zeroing OR _reduces_castling_rights OR has_legal_en_passant). After an irreversible move the count-map is cleared and re-seeded with the post-move position at count 1.",
+    "count_map": "{k: occurrences} over the current reversible segment, INCLUDING the current position; seeded at the game's initial position with count 1.",
+    "serialization": "'\\n'.join('<k>:<count>') over items in LEXICOGRAPHIC KEY ORDER (python sorted() on the ASCII EPD strings), encoded UTF-8.",
+    "L_t": "repetition_ledger_hash = blake2b(serialization, digest_size=8, person=b'i4-rep-v1')",
+    "X_t": "state = blake2b(fen_fields_1to5.encode('utf-8') || L_t_RAW_8_BYTES, digest_size=8, person=b'i4-rep-v1').  The concatenation uses the 8 RAW digest bytes of L_t (not hex, not decimal). fen_fields_1to5 is the space-joined first five FEN fields."
+  },
+  "columns": {
+    "state": {
+      "dtype": "int64",
+      "meaning": "X_t, the RULE-COMPLETE state key (FEN 1-5 + repetition ledger)"
+    },
+    "state_fen5": {
+      "dtype": "int64",
+      "meaning": "pass-1 scout key: hash of FEN fields 1-5 only, rule-INCOMPLETE; carried so the scout-vs-complete re-partition is measurable in-file"
+    },
+    "repetition_ledger_hash": {
+      "dtype": "int64",
+      "meaning": "L_t"
+    },
+    "hist1": {
+      "dtype": "int64",
+      "meaning": "hash of the single preceding move (UCI)"
+    },
+    "hist4": {
+      "dtype": "int64",
+      "meaning": "hash of the 4 preceding moves, space-joined UCI, oldest first"
+    },
+    "nxt": {
+      "dtype": "int64",
+      "meaning": "hash of the move actually played from this state (UCI) -- the prediction target"
+    },
+    "gidx": {
+      "dtype": "int32",
+      "meaning": "game index, 0..n_games-1, globally unique and non-decreasing; use for game-disjoint train/held-out splits"
+    },
+    "eband": {
+      "dtype": "int8",
+      "meaning": "mean-Elo band: 0 <1400, 1 <1600, 2 <1800, 3 <2000, 4 <2200, 5 >=2200; -1 unknown"
+    },
+    "tclass": {
+      "dtype": "int8",
+      "meaning": "time control from base+40*inc: 0 bullet <179s, 1 blitz <479s, 2 rapid <1499s, 3 classical; -1 unknown"
+    },
+    "ply": {
+      "dtype": "int8",
+      "meaning": "0-based ply index of the position (MIN_PLY..MAX_PLY-1)"
+    },
+    "current_position_occurrence_count": {
+      "dtype": "uint8",
+      "meaning": "count-map[k_current], >=1, INCLUDES the current occurrence; saturates at 255"
+    },
+    "can_claim_threefold_now": {
+      "dtype": "bool",
+      "meaning": "current position has occurred >=3 times in the segment. NOT python-chess can_claim_threefold_repetition(), which also returns True for the after-one-move case"
+    },
+    "can_claim_threefold_after_one_move": {
+      "dtype": "bool",
+      "meaning": "exists a legal move whose resulting position has occurred 3 times; reported INDEPENDENTLY of can_claim_threefold_now"
+    },
+    "meta": {
+      "dtype": "int64",
+      "shape": 6,
+      "meaning": "[n_games, n_records, MIN_PLY, MAX_PLY, variant_games_skipped, n_legalmove_scans]"
+    }
+  },
+  "not_computed_here": "No estimator, no delta_1/2/3/4, no verdict. i4 owns the estimator spec (Jeffreys alpha=1/2 with both models sharing K_x, singleton/backoff rules, symmetric held-out cross-entropy); building a second one risks a silently different statistic.",
+  "verification": {
+    "corpus_sha256_matches_staged_and_publisher_content_length": true,
+    "six_way_split_byte_exact": "chunk bytes sum to 1048308056 == decompressed original; game counts sum to 1048440",
+    "pass1_regression": "on the first 20,000 games (458,108 records) the 8 carried-over columns (state_fen5,hist1,hist4,nxt,gidx,eband,tclass,ply) are BIT-IDENTICAL to the pass-1 bench",
+    "ledger_hand_checks": [
+      "knight-shuffle threefold -> current_position_occurrence_count == 3, agrees with python-chess Board.is_repetition(3)",
+      "an intervening pawn move resets the segment -> count 2, not 3",
+      "a legal en-passant makes every move irreversible (is_irreversible True for a quiet knight move)"
+    ],
+    "literal_differs_check_is_VACUOUS": "X_t != h64(fen5) on 23941814/23941814 records BY CONSTRUCTION (different hash inputs). The non-vacuous check is the re-partition below.",
+    "repartition_full_corpus": {
+      "distinct_fen5_keys": 18575215,
+      "distinct_rule_complete_X_t_keys": 18744120,
+      "added_keys": 168905,
+      "added_pct": 0.9093,
+      "fen5_groups_with_ge2_records": 1013787,
+      "fen5_groups_SPLIT_by_ledger": 141797,
+      "pct_of_multirecord_fen5_groups_split": 13.987,
+      "records_in_a_split_fen5_group": 1253135,
+      "pct_records_in_a_split_group": 5.2341
+    },
+    "transposition_density": {
+      "records_in_an_X_t_group_of_size_ge2": 6190299,
+      "pct": 25.856,
+      "n_such_groups": 992605,
+      "max_group_size": 10227
+    },
+    "repetition_rarity_in_this_ply_window": {
+      "occurrence_count_histogram_1_to_5": [
+        23936849,
+        4782,
+        172,
+        10,
+        1
+      ],
+      "records_with_occurrence_ge2": 4965,
+      "pct": 0.0207,
+      "can_claim_threefold_now": 183,
+      "can_claim_threefold_after_one_move": 528,
+      "READ_THIS": "Within MIN_PLY=6..MAX_PLY=30 actual repetitions are near-absent. The rule-completeness fix therefore bites almost entirely through SEGMENT MEMBERSHIP (which reversible positions preceded this one), not through realised repetitions. The two threefold-claim columns are near-degenerate at this window; to make repetition RIGHTS a live discriminator the ply window must extend well past 30."
+    },
+    "run": {
+      "wall_clock_extract_s": 443.68,
+      "workers": 6,
+      "threads_pinned": 1,
+      "peak_rss_per_worker_bytes": 426016768,
+      "merge_wall_s": 20.76,
+      "merge_peak_rss_bytes": 1652375552
+    }
+  }
+}

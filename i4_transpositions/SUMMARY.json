@@ -1,0 +1,35 @@
+{
+  "row": "i4",
+  "lane": "state-sufficiency break-hunt / transposition extraction",
+  "period": "2014-07 (DISCOVERY)",
+  "delivered": {
+    "transpositions_2014-07.npz": {
+      "bytes": 859128741,
+      "sha256": "ce89c6ea1c3d9395ceef8273145fadac590100f125e7634410e988db8cfa9f7f",
+      "url": "https://github.com/xergon/gsg-tcg-data/releases/download/i4-transpositions-2014-07-v1/transpositions_2014-07.npz"
+    },
+    "transpositions_2014-07.contract.json": {
+      "url": "https://github.com/xergon/gsg-tcg-data/releases/download/i4-transpositions-2014-07-v1/transpositions_2014-07.contract.json",
+      "mirror": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i4_transpositions/transpositions_2014-07.contract.json"
+    },
+    "extract2.py": {
+      "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i4_transpositions/extract2.py",
+      "note": "exact extractor source"
+    },
+    "README.md": {
+      "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i4_transpositions/README.md"
+    }
+  },
+  "n_games": 1048440,
+  "n_records": 23941814,
+  "state_key": "RULE-COMPLETE: X_t = blake2b(FEN1-5 || L_t, digest_size=8, person=b'i4-rep-v1')",
+  "not_computed": "no estimator, no delta_1/2/3/4, no verdict - i4 owns the estimator spec",
+  "replication_corpus_2016-01": {
+    "staged_on_local_disk": false,
+    "already_mirrored_publicly": true,
+    "url": "https://github.com/xergon/gsg-tcg-data/releases/download/i4-lichess-standard-rated/lichess_db_standard_rated_2016-01.pgn.zst",
+    "bytes": 871536010,
+    "equals_lichess_content_length": true,
+    "note": "NOT run this pass, by instruction. One download away."
+  }
+}

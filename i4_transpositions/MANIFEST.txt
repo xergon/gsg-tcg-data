@@ -1,0 +1,11 @@
+URL VERIFICATION - i4 transpositions 2014-07
+(each URL curl-verified after upload; see verified_at / http / bytes)
+
+https://github.com/xergon/gsg-tcg-data/releases/download/i4-transpositions-2014-07-v1/transpositions_2014-07.npz
+https://github.com/xergon/gsg-tcg-data/releases/download/i4-transpositions-2014-07-v1/transpositions_2014-07.contract.json
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i4_transpositions/transpositions_2014-07.contract.json
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i4_transpositions/README.md
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i4_transpositions/extract2.py
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i4_transpositions/SUMMARY.json
+https://github.com/xergon/gsg-tcg-data/releases/download/i4-lichess-standard-rated/lichess_db_standard_rated_2014-07.pgn.zst
+https://github.com/xergon/gsg-tcg-data/releases/download/i4-lichess-standard-rated/lichess_db_standard_rated_2016-01.pgn.zst

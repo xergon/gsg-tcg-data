@@ -1,0 +1,26 @@
+Table 3 
+Emission Line Widths and Black Hole Mass Measurements
+
+
+	Mean Spectrum		rms Spectrum		
+Image	FWHM	sigma _line	FWHM	sigma _line	
+	km s^-1	km s^-1	km s^-1	km s^-1	
+A	7925 +or- 100	4499 +or- 80	7705 +or- 372	6100 +or- 286	
+B	7555 +or- 93	4209 +or- 69	7848 +or- 665	5477 +or- 199	
+C	7700 +or- 96	4018 +or- 87	11,400 +or- 860	5774 +or- 202	
+Combined	7734 +or- 59	4261 +or- 49	9219 +or- 458	5907 +or- 148	
+					
+	${\mathrm{log}}_{10}({M}_{\mathrm{vir}}/{M}_{\odot })={\mathrm{log}}_{10}({M}_{\mathrm{BH}}/{M}_{\odot })-{\mathrm{log}}_{10}f$				
+					
+A	8.65 +or- 0.04	8.16 +or- 0.04	8.62 +or- 0.06	8.42 +or- 0.06	
+B	8.61 +or- 0.04	8.10 +or- 0.04	8.65 +or- 0.09	8.33 +or- 0.05	
+C	8.62 +or- 0.04	8.06 +or- 0.05	8.97 +or- 0.08	8.37 +or- 0.05	
+Combined	8.63 +or- 0.04	8.11 +or- 0.04	8.79 +or- 0.06	8.40 +or- 0.05	
+					
+	${\mathrm{log}}_{10}({M}_{\mathrm{BH}}/{M}_{\odot })$				
+					
+A	9.37 +or- 0.51	8.67 +or- 0.26	cdots	9.05 +or- 0.14	
+B	9.30 +or- 0.51	8.63 +or- 0.26	cdots	8.96 +or- 0.13	
+C	9.32 +or- 0.50	8.57 +or- 0.27	cdots	9.00 +or- 0.13	
+Combined	9.35 +or- 0.51	8.63 +or- 0.27	cdots	9.02 +or- 0.13	
+Note. Emission line widths, virial product, and black hole mass measurements. We give the measurements for each of the individual quasar images, as well as the combined spectra. The f values used to calculate M _BH are ${\mathrm{log}}_{10}{f}_{{\rm{C}}{\rm\small{IV}};\mathrm{rms},\sigma }\,=0.63\pm 0.12$, ${\mathrm{log}}_{10}{f}_{{\rm{C}}{\rm\small{IV}};\mathrm{mean},\sigma }=0.52\pm 0.26$, and ${\mathrm{log}}_{10}{f}_{{\rm{C}}{\rm\small{IV}};\mathrm{mean},\mathrm{FWHM}}\,=0.69\pm 0.50$. We do not compute the value based on the FWHM and rms spectrum for the reasons described in Section 6.4.

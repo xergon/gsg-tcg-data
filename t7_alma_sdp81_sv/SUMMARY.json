@@ -1,0 +1,159 @@
+{
+ "row": "T7 \u2014 tracer-dependent lens potential in SDP.81",
+ "dataset": "ADS/JAO.ALMA#2011.0.00016.SV",
+ "harvested_utc": "2026-07-25T09:37:38Z",
+ "identifiers": {
+  "project": "2011.0.00016.SV",
+  "sgous": "uid://A002/X8fa7af/X10",
+  "gous": "uid://A002/X8fa7af/X11",
+  "mous": "uid://A002/X8fa7af/X12",
+  "n_mous": 1,
+  "schedblocks": [
+   "SDP.81_B4",
+   "SDP.81_B6",
+   "SDP.81_B7"
+  ],
+  "data_rights": "Public",
+  "obs_release_date": "2016-06-24T14:02:08",
+  "qa2_state": "ASDM_SEMIPASS"
+ },
+ "execution_blocks": {
+  "total": 32,
+  "by_band": {
+   "4": 12,
+   "6": 9,
+   "7": 11
+  },
+  "uids_by_band": {
+   "4": [
+    "uid://A002/X91068d/Xa1e",
+    "uid://A002/X91068d/Xc50",
+    "uid://A002/X91068d/Xead",
+    "uid://A002/X915f1c/X5d0",
+    "uid://A002/X924c91/X12c",
+    "uid://A002/X924c91/X34f",
+    "uid://A002/X924c91/X572",
+    "uid://A002/X924c91/X847",
+    "uid://A002/X924c91/Xa47",
+    "uid://A002/X93514d/X1634",
+    "uid://A002/X93514d/X1857",
+    "uid://A002/X93514d/Xfc6"
+   ],
+   "6": [
+    "uid://A002/X8fd70d/X1484",
+    "uid://A002/X8fd70d/X188b",
+    "uid://A002/X907514/X11d6",
+    "uid://A002/X915f1c/X8be",
+    "uid://A002/X916b15/X1716",
+    "uid://A002/X923b56/X43c",
+    "uid://A002/X923b56/X65f",
+    "uid://A002/X92c694/X1099",
+    "uid://A002/X92ec61/X1f23"
+   ],
+   "7": [
+    "uid://A002/X91dc9f/X2eb",
+    "uid://A002/X91dc9f/X517",
+    "uid://A002/X91dc9f/Xb6",
+    "uid://A002/X91f01f/X5e6",
+    "uid://A002/X91f01f/X812",
+    "uid://A002/X920302/X1059",
+    "uid://A002/X920302/X1336",
+    "uid://A002/X920302/X1562",
+    "uid://A002/X920302/Xe29",
+    "uid://A002/X925649/Xa99",
+    "uid://A002/X925649/Xcc5"
+   ]
+  }
+ },
+ "volume": {
+  "asa_dataportal_bytes": 580727593278,
+  "asa_dataportal_GiB": 540.84,
+  "sv_portal_bytes": 431849396177,
+  "sv_portal_GiB": 402.19
+ },
+ "url_verification": {
+  "urls_swept": 74,
+  "http_200": 74,
+  "declared_vs_actual_mismatches": 0,
+  "method": "HTTP HEAD against ALMA DataLink/request-handler declared sizes"
+ },
+ "publisher_checksum_available": false,
+ "spw_map": {
+  "band4_CO54": {
+   "spw": "3,7,11,15,19,23,27,31,35,39,43,47",
+   "rest_GHz": 576.26793,
+   "sky_GHz": 142.57,
+   "detection": "detection"
+  },
+  "band6_CO87": {
+   "spw": "2",
+   "rest_GHz": 921.7997,
+   "sky_GHz": 228.05534,
+   "detection": "detection"
+  },
+  "band6_H2O": {
+   "spw": "3,4",
+   "rest_GHz": 987.92676,
+   "sky_GHz": 244.415,
+   "detection": "weak detection"
+  },
+  "band7_CO109": {
+   "spw": "3",
+   "rest_GHz": 1151.98544,
+   "sky_GHz": 285.00382,
+   "detection": "detection"
+  }
+ },
+ "redshift": 3.042,
+ "beams_mas": {
+  "continuum": {
+   "band4": [
+    60,
+    54
+   ],
+   "band6": [
+    39,
+    30
+   ],
+   "band7": [
+    31,
+    23
+   ]
+  },
+  "line_max": 170
+ },
+ "uvtaper_published": "outertaper=['1000klambda'] (1 Mlambda) on ALL reference line images",
+ "untapered_product_available": [
+  "SDP.81.Band4.CO_z3.042.fits (Band 4 CO(5-4), cell 0.01arcsec)"
+ ],
+ "calibration_free_arm": "Band 6 CO(8-7) spw2 vs H2O spw3/4 \u2014 same 9 EBs, same calibration solution",
+ "kill_criterion_context": {
+  "threshold_mas": 2.0,
+  "best_continuum_beam_mas": [
+   31,
+   23
+  ],
+  "line_beam_mas": 170,
+  "line_imaging_cell_mas": 20,
+  "continuum_imaging_cell_mas": 5
+ },
+ "smallest_units_bytes": {
+  "raw_asdm": 3655892992,
+  "per_eb_calibrated_ms": 6615224320,
+  "whole_band_calibrated": 9043149221,
+  "github_release_cap": 2147483648
+ },
+ "reduction": {
+  "casa_version": "4.2.2",
+  "imaging_scripts_source": "casaguides ALMA2014_LBC_SVDATA"
+ },
+ "defects_found": [
+  "3 byte-identical duplicate members in ASA 2011-08-01 group",
+  "ASA packages omit SDP81_Band7_ReferenceImages.tgz and SDP81_Band7_UncalibratedData.tgz",
+  "2 ASA package members are 10240 zero bytes (empty tar, HTTP 200)",
+  "ivoa.obscore exposes only 5 of 32 asdm_uid",
+  "Band 6 H2O spectral resolution differs between first 5 and latter 4 EBs",
+  "Band 6 README 9exec/11exec inconsistency",
+  "Band 4 README mislabels SDP.81_Band4.ms"
+ ]
+}

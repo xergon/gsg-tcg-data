@@ -1,0 +1,95 @@
+###################################################################################
+This Readme file contains a description of the SDP.81 Band 6
+ALMA 2014 Long Baseline Campaign Science Verification 
+data, scripts and data products. 
+
+Spectral windows include continuum (236 GHz) and the redshifted CO J=8-7 and
+H2O, 2(0,2)-1(1,1) lines (rest frequency 921.799 GHz and 987.927 GHz, repsectively).
+
+The resolution achieved for the continuum data is 39 x 30 mas.
+
+It was necessary to uv-taper the spectral line data so the resulting
+angular resolution is coarser (up to 170 mas).
+
+Additional information can be found at:
+http://almascience.org/alma-data/science-verification
+
+The Calibrated Data and Reference Images provided here were produced using
+CASA version 4.2.2.
+
+The imaging scripts and other imaging details can be found at the following
+CASA guide page:
+http://casaguides.nrao.edu/index.php?title=ALMA2014_LBC_SVDATA
+
+###################################################################################
+
+
+SDP81_Band6_CalibrationScripts.tgz contains the calibration scripts:
+
+* uid___A002_X8fd70d_X1484.ms.scriptForCalibration.py
+* uid___A002_X8fd70d_X188b.ms.scriptForCalibration.py
+* uid___A002_X907514_X11d6.ms.scriptForCalibration.py
+* uid___A002_X915f1c_X8be.ms.scriptForCalibration.py
+* uid___A002_X916b15_X1716.ms.scriptForCalibration.py
+* uid___A002_X923b56_X43c.ms.scriptForCalibration.py
+* uid___A002_X923b56_X65f.ms.scriptForCalibration.py
+* uid___A002_X92c694_X1099.ms.scriptForCalibration.py
+* uid___A002_X92ec61_X1f23.ms.scriptForCalibration.py
+
+
+SDP81_Band6_UncalibratedData.tgz contains the raw data:
+
+Nine asdm datasets:
+* uid___A002_X8fd70d_X1484
+* uid___A002_X8fd70d_X188b
+* uid___A002_X907514_X11d6
+* uid___A002_X915f1c_X8be
+* uid___A002_X916b15_X1716
+* uid___A002_X923b56_X43c
+* uid___A002_X923b56_X65f
+* uid___A002_X92c694_X1099
+* uid___A002_X92ec61_X1f23
+
+
+SDP81_Band6_CalibratedData.tgz contains the calibrated uv-data:
+
+* SDP81_band6_9exec.ms.calavg
+* SDP81_band6_9exec.ms.co87
+* SDP81_band6_9exec.ms.h2o
+
+To produce these calibrated datasets you will need to execute the calibration
+scripts in SDP81_Band6_CalibrationScripts.tgz and follow the imaging script
+that is located at the CASA guide page listed above.
+
+SDP81_band6_11exec.ms.calavg is the spectrally averaged continuum calibrated dataset.
+SDP81_band6_9exec.ms.co87 and SDP81_band6_9exec.ms.h2o are the higher spectral resolution
+calibrated datasets that contain the H2O and CO J=8-7 lines.
+
+
+SDP81_Band6_ReferenceImages.tgz contains the line and continuum image products:
+
+* SDP81_9exec.co87.R1uvtaper1000klambda.fits
+* SDP81_9exec.co87.R1uvtaper1000klambda.mom0.2sigma.fits
+* SDP81_9exec.h2o.R1uvtaper1000klambda.10.5kms.fits
+* SDP81_band6_9exec.contR1.image.fits
+
+---------------------------------------------------------------
+
+Publications making use of these data must include the following statement 
+in the acknowledgement:
+
+"This paper makes use of the following ALMA data: ADS/JAO.ALMA#2011.0.00016.SV. 
+ALMA is a partnership of ESO (representing its member states), NSF (USA) and 
+NINS (Japan), together with NRC (Canada) and NSC and ASIAA (Taiwan), and KASI (Republic of Korea), 
+in cooperation with the Republic of Chile. The Joint ALMA Observatory is 
+operated by ESO, AUI/NRAO and NAOJ."
+
+In addition, publications from NA authors must include the standard NRAO 
+acknowledgement:
+
+"The National Radio Astronomy Observatory is a facility of the National 
+Science Foundation operated under cooperative agreement by Associated 
+Universities, Inc."
+
+---------------------------------------------------------------
+---------------------------------------------------------------

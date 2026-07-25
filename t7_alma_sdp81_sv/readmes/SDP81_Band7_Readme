@@ -1,0 +1,104 @@
+###################################################################################
+This Readme file contains a description of the SDP.81 Band 7
+ALMA 2014 Long Baseline Campaign Science Verification 
+data, scripts and data products. 
+
+Spectral windows include continuum (290 GHz) and the redshifted CO J=10-9 line
+(rest frequency 1151.985 GHz).
+
+The resolution achieved for the continuum data is 31 x 23 mas.
+
+It was necessary to uv-taper the spectral line data so the resulting
+angular resolution is coarser (up to 170 mas).
+
+Additional information can be found at:
+http://almascience.org/alma-data/science-verification
+
+The Calibrated Data and Reference Images provided here were produced using
+CASA version 4.2.2.
+
+The imaging scripts and other imaging details can be found at the following
+CASA guide page:
+http://casaguides.nrao.edu/index.php?title=ALMA2014_LBC_SVDATA
+
+###################################################################################
+
+
+SDP81_Band7_CalibrationScripts.tgz contains the calibration scripts:
+
+* uid___A002_X91dc9f_X2eb.ms.scriptForCalibration.py
+* uid___A002_X91dc9f_X517.ms.scriptForCalibration.py
+* uid___A002_X91dc9f_Xb6.ms.scriptForCalibration.py
+* uid___A002_X91f01f_X5e6.ms.scriptForCalibration.py
+* uid___A002_X91f01f_X812.ms.scriptForCalibration.py
+* uid___A002_X920302_X1059.ms.scriptForCalibration.py
+* uid___A002_X920302_X1336.ms.scriptForCalibration.py
+* uid___A002_X920302_X1562.ms.scriptForCalibration.py
+* uid___A002_X920302_Xe29.ms.scriptForCalibration.py
+* uid___A002_X925649_Xa99.ms.scriptForCalibration.py
+* uid___A002_X925649_Xcc5.ms.scriptForCalibration.py
+
+
+SDP81_Band7_UncalibratedData.tgz contains the raw data:
+
+11 asdm datasets:
+* uid___A002_X91dc9f_X2eb
+* uid___A002_X91dc9f_X517
+* uid___A002_X91dc9f_Xb6
+* uid___A002_X91f01f_X5e6
+* uid___A002_X91f01f_X812
+* uid___A002_X920302_X1059
+* uid___A002_X920302_X1336
+* uid___A002_X920302_X1562
+* uid___A002_X920302_Xe29
+* uid___A002_X925649_Xa99
+* uid___A002_X925649_Xcc5
+
+
+SDP81_Band7_CalibratedData.tgz contains the calibrated uv-data:
+
+* SDP81_band7_11exec.ms.calavg
+* SDP81_band7_11exec.ms.spw3
+
+To produce these calibrated datasets you will need to execute the calibration
+scripts in SDP81_Band7_CalibrationScripts.tgz and follow the imaging script
+that is located at the CASA guide page listed above.
+
+SDP81_band7_11exec.ms.calavg is the spectrally averaged continuum calibrated dataset
+and SDP81_band7_11exec.ms.spw3 is the higher spectral resolution calibrated dataset
+that contains the CO J=10-9 line.
+
+
+SDP81_Band7_ReferenceImages.tgz contains the CO J=10-9 line and continuum image products:
+
+* SDP81_11exec.co109.R1uvtaper1000kl.image.fits
+* SDP81_11exec.co109.R1uvtaper1000kl.image.mom0_2.5sigma.fits
+* SDP81_band7_11exec.contR1.image.fits
+
+
+SDP81_Band6+7_ReferenceImages.tgz contains the 1.14 mm combined Band6 and Band 7 continuum image products, which are uv-tapered to a resolution of 175 x 120 mas (see the imaging scripts for details):
+
+* SDP81_B67.continuum.R1uvtaper1000klambda.image.tt0.fits
+* SDP81_B67.continuum.R1uvtaper1000klambda.image.alpha.fits
+* SDP81_B67.continuum.R1uvtaper1000klambda.image.alpha.error.fits
+
+---------------------------------------------------------------
+
+Publications making use of these data must include the following statement 
+in the acknowledgement:
+
+"This paper makes use of the following ALMA data: ADS/JAO.ALMA#2011.0.00016.SV. 
+ALMA is a partnership of ESO (representing its member states), NSF (USA) and 
+NINS (Japan), together with NRC (Canada) and NSC and ASIAA (Taiwan), and KASI (Republic of Korea), 
+in cooperation with the Republic of Chile. The Joint ALMA Observatory is 
+operated by ESO, AUI/NRAO and NAOJ."
+
+In addition, publications from NA authors must include the standard NRAO 
+acknowledgement:
+
+"The National Radio Astronomy Observatory is a facility of the National 
+Science Foundation operated under cooperative agreement by Associated 
+Universities, Inc."
+
+---------------------------------------------------------------
+---------------------------------------------------------------

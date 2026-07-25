@@ -1,0 +1,100 @@
+###################################################################################
+This Readme file contains a description of the SDP.81 Band 4
+ALMA 2014 Long Baseline Campaign Science Verification 
+data, scripts and data products. 
+
+Spectral windows include continuum (151 GHz) and the redshifted CO J=5-4 line
+(rest frequency 576.267 GHz).
+
+The resolution achieved for the continuum data is 60 x 54 mas.
+
+It was necessary to uv-taper the spectral line data so the resulting
+angular resolution is coarser (up to 170 mas).
+
+Additional information can be found at:
+http://almascience.org/alma-data/science-verification
+
+The Calibrated Data and Reference Images provided here were produced using
+CASA version 4.2.2.
+
+The imaging scripts and other imaging details can be found at the following
+CASA guide page:
+http://casaguides.nrao.edu/index.php?title=ALMA2014_LBC_SVDATA
+
+###################################################################################
+
+
+SDP81_Band4_CalibrationScripts.tgz contains the calibration scripts:
+
+* uid___A002_X91068d_Xa1e.ms.scriptForCalibration.py
+* uid___A002_X91068d_Xc50.ms.scriptForCalibration.py
+* uid___A002_X91068d_Xead.ms.scriptForCalibration.py
+* uid___A002_X915f1c_X5d0.ms.scriptForCalibration.py
+* uid___A002_X924c91_X12c.ms.scriptForCalibration.py
+* uid___A002_X924c91_X34f.ms.scriptForCalibration.py
+* uid___A002_X924c91_X572.ms.scriptForCalibration.py
+* uid___A002_X924c91_X847.ms.scriptForCalibration.py
+* uid___A002_X924c91_Xa47.ms.scriptForCalibration.py
+* uid___A002_X93514d_X1634.ms.scriptForCalibration.py
+* uid___A002_X93514d_X1857.ms.scriptForCalibration.py
+* uid___A002_X93514d_Xfc6.ms.scriptForCalibration.py
+
+
+SDP81_Band4_UncalibratedData.tgz contains the raw data:
+
+12 asdm datasets:
+* uid___A002_X91068d_Xa1e
+* uid___A002_X91068d_Xc50
+* uid___A002_X91068d_Xead
+* uid___A002_X915f1c_X5d0
+* uid___A002_X924c91_X12c
+* uid___A002_X924c91_X34f
+* uid___A002_X924c91_X572
+* uid___A002_X924c91_X847
+* uid___A002_X924c91_Xa47
+* uid___A002_X93514d_X1634
+* uid___A002_X93514d_X1857
+* uid___A002_X93514d_Xfc6
+
+
+SDP81_Band4_CalibratedData.tgz contains the calibrated uv-data:
+
+* SDP.81_Band4.ms
+* SDP.81_Band4_continuum.ms
+
+To produce these calibrated datasets you will need to execute the calibration
+scripts in SDP81_Band4_CalibrationScripts.tgz and follow the imaging script
+that is located at the CASA guide page listed above.
+
+SDP.81_Band4.ms is the spectrally averaged continuum calibrated dataset.
+
+
+SDP81_Band4_ReferenceImages_z3.042.tgz contains the line and continuum image products:
+
+* SDP.81_B4_cont.fits
+* SDP.81_B4_cont_smooth.fits
+* SDP.81.Band4.CO_z3.042.fits
+* SDP.81.Band4.CO.mom0_z3.042.fits
+* SDP.81.Band4.CO_smooth_z3.042.fits
+* SDP.81.Band4.CO_smooth.mom0_z3.042.fits
+
+---------------------------------------------------------------
+
+Publications making use of these data must include the following statement 
+in the acknowledgement:
+
+"This paper makes use of the following ALMA data: ADS/JAO.ALMA#2011.0.00016.SV. 
+ALMA is a partnership of ESO (representing its member states), NSF (USA) and 
+NINS (Japan), together with NRC (Canada) and NSC and ASIAA (Taiwan), and KASI (Republic of Korea), 
+in cooperation with the Republic of Chile. The Joint ALMA Observatory is 
+operated by ESO, AUI/NRAO and NAOJ."
+
+In addition, publications from NA authors must include the standard NRAO 
+acknowledgement:
+
+"The National Radio Astronomy Observatory is a facility of the National 
+Science Foundation operated under cooperative agreement by Associated 
+Universities, Inc."
+
+---------------------------------------------------------------
+---------------------------------------------------------------

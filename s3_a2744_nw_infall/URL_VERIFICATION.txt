@@ -1,0 +1,15 @@
+URL VERIFICATION  2026-07-25T10:34:12Z   method: HTTP range-read of first 8 KiB, magic bytes checked
+OK   http=206    8192 B  magic=SIMPLE  =   https://archive.stsci.edu/pub/hlsp/frontier/abell2744/models/bradac/v2/hlsp_frontier_model_abell2744_bradac_v2_kappa.fits
+OK   http=206    8192 B  magic=SIMPLE  =   https://archive.stsci.edu/pub/hlsp/frontier/abell2744/models/cats/v4.1/hlsp_frontier_model_abell2744_cats_v4.1_x-pixels-deflect.fits
+OK   http=206    8192 B  magic=SIMPLE  =   https://archive.stsci.edu/pub/hlsp/frontier/abell2744/models/diego/v4.1/hlsp_frontier_model_abell2744_diego_v4.1_x-pixels-deflect.fits
+OK   http=206    8192 B  magic=SIMPLE  =   https://archive.stsci.edu/pub/hlsp/frontier/abell2744/models/glafic/v4/hlsp_frontier_model_abell2744_glafic_v4_x-arcsec-deflect.fits
+OK   http=206    8192 B  magic=SIMPLE  =   https://archive.stsci.edu/pub/hlsp/frontier/abell2744/models/keeton/v4/hlsp_frontier_model_abell2744_keeton_v4_x-arcsec-deflect.fits
+OK   http=206    8192 B  magic=SIMPLE  =   https://archive.stsci.edu/pub/hlsp/frontier/abell2744/models/sharon/v4cor/hlsp_frontier_model_abell2744_sharon_v4cor_gamma.fits
+OK   http=206    8192 B  magic=SIMPLE  =   https://archive.stsci.edu/pub/hlsp/frontier/abell2744/models/sharon/v3/hlsp_frontier_model_abell2744_sharon_v3_gamma.fits
+OK   http=206    8192 B  magic=SIMPLE  =   https://archive.stsci.edu/pub/hlsp/frontier/abell2744/models/williams/v4/hlsp_frontier_model_abell2744_williams_v4_y-arcsec-deflect.fits
+OK   http=206    8192 B  magic=SIMPLE  =   https://archive.stsci.edu/pub/hlsp/frontier/abell2744/models/zitrin-ltm-gauss/v3/hlsp_frontier_model_abell2744_zitrin-ltm-gauss_v3_y-arcsec-deflect.fits
+OK   http=206    8192 B  magic=SIMPLE  =   https://archive.stsci.edu/pub/hlsp/frontier/abell2744/models/zitrin-nfw/v3/hlsp_frontier_model_abell2744_zitrin-nfw_v3_kappa.fits
+OK   http=200  189516 B  magic=<!DOCTYPE   https://archive.stsci.edu/pub/hlsp/frontier/abell2744/models/diego/v4.1/range/
+OK   http=200   25945 B  magic=<!DOCTYPE   https://cxc.cfa.harvard.edu/cda/cdc_dois/cdc_257.html
+OK   http=206    8192 B  magic=...l}gV     https://arxiv.org/e-print/1507.03992
+verified_ok=13 verified_fail=0

@@ -1,0 +1,57 @@
+Medezinski et al. 2016, ApJ 817, 24 — arXiv:1507.03992
+"Frontier Fields Clusters: Deep Subaru Observations of Abell 2744"
+Source: arXiv /e-print/ LaTeX (A2744_ms_20151001.tex), NOT the rendered HTML.
+Full source shipped alongside as A2744_ms_20151001.tex.
+
+ADOPTED FRAME (paper, Sec.1):
+  cluster centre = R.A. 00:14:18.9, Decl. -30:23:22 (J2000), from Ebeling+2010;
+  "closely corresponds to the cluster X-ray brightness peak".
+COSMOLOGY (paper, Sec.1): Om=0.3, OL=0.7, H0=100h km/s/Mpc, h=0.7.
+  Paper states 1 arcmin = 272 kpc at the cluster redshift  ->  4.533 kpc/arcsec.
+  Independent recomputation at z=0.3072 gives 4.5277 kpc/arcsec. AGREE.
+
+-------------------------------------------------------------------------------
+TABLE 4 (tab:subhalos) — Detected Substructures
+Centroids relative to the cluster centre above, in ARCMIN.
+Sign convention: X_c positive = WEST, Y_c positive = NORTH
+  (established from the sign of W (+1.36) vs NE (-1.62); not stated verbatim in
+   the paper text — flagged as an inference, verify before use).
+
+ Halo    X_c(')          Y_c(')          z_l          z_s,eff       S/N
+ Core   -0.33 +/-0.18   -0.72 +/-0.16   0.32+/-0.01  1.27+/-0.08   12.1
+ W       1.36 +/-0.42   -0.59 +/-0.43   0.30+/-0.04  1.27+/-0.07    7.9
+ NE     -1.62 +/-0.33    0.85 +/-0.53   0.30+/-0.02  1.27+/-0.08    4.7
+ NW      0.98 +/-0.37    1.89 +/-0.48   0.30+/-0.01  1.27+/-0.08    7.0
+
+-------------------------------------------------------------------------------
+TABLE 5 (tab:offsets) — Measured Offsets of DM halos   [ARCSEC, 90% CL]
+
+ Halo   nearest BCG        M11 DM halos       X-ray feature
+ Core     6 +24 -1          16 +19 -8          13 +24 -6
+ W       72 +34 -53         80 +34 -54         91 +66 -27
+ NE       --                24 +64 -6           --
+ NW      68 +25 -42         69 +32 -63         87 +34 -28
+
+ Col.(4) X-ray reference: southern cool remnant core for Core; main X-ray
+ emission for W; **the NW interloper** for the NW subhalo.
+ Errors are 90% confidence bounds from bootstrapped map offsets.
+
+-------------------------------------------------------------------------------
+NW OFFSETS CONVERTED AT 4.5277 kpc/arcsec (z=0.3072)  [arithmetic only]
+
+ NW vs X-ray interloper : 87" (+34,-28)  ->  394 kpc  (range 267 .. 548 kpc)
+ NW vs nearest BCG      : 68" (+25,-42)  ->  308 kpc  (range 118 .. 421 kpc)
+ NW vs M11 DM halo      : 69" (+32,-63)  ->  312 kpc  (range  27 .. 457 kpc)
+
+ Against S3's threshold Delta_NW >= 150 kpc  ( = 33.13 arcsec ):
+   - vs X-ray interloper: central value AND the 90% lower bound (267 kpc)
+     both exceed 150 kpc.
+   - vs nearest BCG: central value exceeds it; the 90% lower bound
+     (118 kpc) does NOT.
+
+-------------------------------------------------------------------------------
+PAPER'S OWN STATED LIMITATION (abstract, verbatim fragment):
+ the authors state that space-based observations extending beyond the current
+ Frontier Fields coverage to the west and northwestern area are essential to
+ confirm or refute these findings.
+ -> This is the same coverage problem quantified in ../README.md.

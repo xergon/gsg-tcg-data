@@ -1,0 +1,66 @@
+{
+ "cosmology": {
+  "H0": 70,
+  "Om": 0.3,
+  "OL": 0.7,
+  "z_lens": 0.3072,
+  "kpc_per_arcsec": 4.5277,
+  "note": "Medezinski+2016 adopt Om=0.3,OL=0.7,h=0.7 and quote 1 arcmin = 272 kpc at z=0.308 -> 4.533 kpc/arcsec; independent agreement with 4.5277"
+ },
+ "threshold": {
+  "Delta_NW_kpc": 150,
+  "Delta_NW_arcsec": 33.129,
+  "Delta_perp_max_kpc": 50,
+  "Delta_perp_max_arcsec": 11.043
+ },
+ "reference_centre": {
+  "source": "Ebeling+2010 X-ray peak, as adopted by Medezinski+2016",
+  "RA_sex": "00:14:18.9",
+  "Dec_sex": "-30:23:22",
+  "RA_deg": 3.5787500000000003,
+  "Dec_deg": -30.389444444444443
+ },
+ "substructures_Medezinski2016_Tab4": {
+  "Core": {
+   "RA_deg": 3.585126,
+   "Dec_deg": -30.401444,
+   "r_from_Xray_centre_arcsec": 47.5,
+   "Xc_arcmin_West": -0.33,
+   "Yc_arcmin_North": -0.72,
+   "SN_kappa": 12.1,
+   "r_from_Xray_centre_kpc": 215.1
+  },
+  "W": {
+   "RA_deg": 3.552473,
+   "Dec_deg": -30.399278,
+   "r_from_Xray_centre_arcsec": 88.9,
+   "Xc_arcmin_West": 1.36,
+   "Yc_arcmin_North": -0.59,
+   "SN_kappa": 7.9,
+   "r_from_Xray_centre_kpc": 402.5
+  },
+  "NE": {
+   "RA_deg": 3.61005,
+   "Dec_deg": -30.375278,
+   "r_from_Xray_centre_arcsec": 109.8,
+   "Xc_arcmin_West": -1.62,
+   "Yc_arcmin_North": 0.85,
+   "SN_kappa": 4.7,
+   "r_from_Xray_centre_kpc": 497.1
+  },
+  "NW": {
+   "RA_deg": 3.559815,
+   "Dec_deg": -30.357944,
+   "r_from_Xray_centre_arcsec": 127.7,
+   "Xc_arcmin_West": 0.98,
+   "Yc_arcmin_North": 1.89,
+   "SN_kappa": 7.0,
+   "r_from_Xray_centre_kpc": 578.2
+  },
+  "XrayCen_Ebeling10": {
+   "RA_deg": 3.57875,
+   "Dec_deg": -30.389444,
+   "r_from_Xray_centre_arcsec": 0.0
+  }
+ }
+}

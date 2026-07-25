@@ -1,0 +1,172 @@
+{
+ "row": "S3",
+ "lane": "a2744_nw_first_infall_polarity",
+ "fetched_utc": "2026-07-25T10:34Z",
+ "z_lens": 0.3072,
+ "kpc_per_arcsec": 4.5277,
+ "threshold_Delta_NW_kpc": 150,
+ "threshold_Delta_NW_arcsec": 33.129,
+ "threshold_Delta_perp_kpc": 50,
+ "threshold_Delta_perp_arcsec": 11.043,
+ "go_no_go": {
+  "hff_families_total": 11,
+  "model_versions_tested": 29,
+  "families_covering_NW_at_latest_version": [
+   "cats_v4.1",
+   "diego_v4.1(WSLAP+,free-form)",
+   "merten_v1(SaWLens,free-form,PRE-HFF)"
+  ],
+  "n_covering": 3,
+  "n_covering_free_form": 2,
+  "GRALE_covers_NW": false,
+  "GRALE_note": "williams v1/v3/v4 all 140-169 arcsec FOV; NW clump at 127.7 arcsec from centre falls outside at every version",
+  "additional_covering_but_caveated": {
+   "sharon_v2_v3": "covers, but superseded version",
+   "uncover_v2.0": "covers (7.6x7.6 arcmin, 0.04 arcsec/pix) but built with Zitrin+2015 analytic code => NOT method-independent of the Zitrin family; parametric not free-form"
+  },
+  "gate_status": "SATISFIABLE WITH ZERO MARGIN at latest versions (3 families, 2 free-form)"
+ },
+ "common_frame": {
+  "ctype": "RA---TAN/DEC--TAN",
+  "equinox": 2000.0,
+  "radesys": "FK5",
+  "rotation": "CD1_2=CD2_1=0 in all 29 versions - no rotation anywhere",
+  "pixel_scales_source": "CDELT/CD read from FITS headers, not filenames"
+ },
+ "published_NW_offset_Medezinski2016": {
+  "vs_xray_interloper_arcsec": [
+   87,
+   34,
+   -28
+  ],
+  "vs_xray_interloper_kpc": [
+   394,
+   548,
+   267
+  ],
+  "vs_nearest_BCG_arcsec": [
+   68,
+   25,
+   -42
+  ],
+  "vs_nearest_BCG_kpc": [
+   308,
+   421,
+   118
+  ],
+  "clears_150kpc_at_90pct_lower_bound": {
+   "vs_xray_interloper": true,
+   "vs_nearest_BCG": false
+  }
+ },
+ "derived_WL_products_computed": "NONE - S3 inverse-Sigma_crit^2 quarantine gate not engaged",
+ "blocked": {
+  "glass_jwst_hlsp_dir": "https://archive.stsci.edu/pub/hlsp/glass-jwst/ returns HTTP 200 carrying a MyST SSO login page; auth wall, not circumvented, needs a human"
+ },
+ "chandra_cdc257": {
+  "n_obsids": 102,
+  "mirrored": false
+ },
+ "files": {
+  "MANIFEST_URLS.txt": {
+   "bytes": 11969,
+   "md5": "523d6006192b02eed2dcfe9f798a135b"
+  },
+  "README.md": {
+   "bytes": 7255,
+   "md5": "4d811c14d0ee6fe0904c3e3c8c8c7cda"
+  },
+  "URL_VERIFICATION.txt": {
+   "bytes": 2187,
+   "md5": "e8fcf8d2644740e22ad5e5ac2479df5c"
+  },
+  "a2744_geometry_and_substructures.json": {
+   "bytes": 1617,
+   "md5": "fe66f3f8fcfc7f60d2a76c048f046828"
+  },
+  "chandra_cdc257/cdc257.json": {
+   "bytes": 1341,
+   "md5": "98456ca9d4effad3b1298617be7111c9"
+  },
+  "chandra_cdc257/cdc257_obsids.txt": {
+   "bytes": 909,
+   "md5": "0df3a66f60a1a9dbea1d6167357ddd26"
+  },
+  "chandra_cdc257/cdc257_retrieval_urls.txt": {
+   "bytes": 8208,
+   "md5": "7f805f5f377788e03a6061602bfff91f"
+  },
+  "hff_a2744_model_geometry.csv": {
+   "bytes": 6934,
+   "md5": "746f4a22b6cc64a647bb67133bd230da"
+  },
+  "kappa_nw_covering/hlsp_frontier_model_abell2744_cats_v4.1_kappa.fits": {
+   "bytes": 16007040,
+   "md5": "44775e99ddd94afe352629ef26550f20"
+  },
+  "kappa_nw_covering/hlsp_frontier_model_abell2744_diego_v4.1_gamma.fits": {
+   "bytes": 1056960,
+   "md5": "93a52713e5fb01ec63ce98e59005aa3a"
+  },
+  "kappa_nw_covering/hlsp_frontier_model_abell2744_diego_v4.1_kappa.fits": {
+   "bytes": 1056960,
+   "md5": "3983a40e30d9141f5c060a2f1f129445"
+  },
+  "kappa_nw_covering/hlsp_frontier_model_abell2744_diego_v4.1_x-arcsec-deflect.fits": {
+   "bytes": 1056960,
+   "md5": "318d7edef642716078d140447bbef3d7"
+  },
+  "kappa_nw_covering/hlsp_frontier_model_abell2744_diego_v4.1_y-arcsec-deflect.fits": {
+   "bytes": 1056960,
+   "md5": "f531b30bc0d081b02d6ce42de794f94b"
+  },
+  "kappa_nw_covering/hlsp_frontier_model_abell2744_merten_v1_gamma.fits": {
+   "bytes": 135360,
+   "md5": "e6004fb958efcd34918ccf17281228fd"
+  },
+  "kappa_nw_covering/hlsp_frontier_model_abell2744_merten_v1_kappa.fits": {
+   "bytes": 135360,
+   "md5": "3d3842d600afbd233bb919ccfc4d1fd5"
+  },
+  "medezinski2016/A2744_ms_20151001.tex": {
+   "bytes": 95034,
+   "md5": "9880901ee1821e48800b467c10aeac91"
+  },
+  "medezinski2016/medezinski2016_key_tables.txt": {
+   "bytes": 3088,
+   "md5": "0b5a679672ff119956beed8b959e9fcb"
+  },
+  "model_readmes/hlsp_frontier_model_abell2744_cats_v4.1_readme.txt": {
+   "bytes": 4051,
+   "md5": "99fb7992a514884e826297f7ae1f01fb"
+  },
+  "model_readmes/hlsp_frontier_model_abell2744_diego_v4.1_readme.txt": {
+   "bytes": 5098,
+   "md5": "2a2487ccc686e34cb8aba1238d72f85b"
+  },
+  "model_readmes/hlsp_frontier_model_abell2744_merten_v1_readme.txt": {
+   "bytes": 6842,
+   "md5": "e7e4c11bcc712990ea5352caf1af1522"
+  },
+  "model_readmes/hlsp_frontier_model_abell2744_v1_readme.txt": {
+   "bytes": 3848,
+   "md5": "e4c4549fb076d201e79a126baff20e01"
+  },
+  "model_readmes/hlsp_frontier_model_abell2744_williams_v4_readme.txt": {
+   "bytes": 10013,
+   "md5": "5a554e4e9b80ea2b5b433fce9009e5ca"
+  },
+  "uncover_v2/UNCOVER_A2744_lensmodel_v2.0_README.txt": {
+   "bytes": 3999,
+   "md5": "f272ba214d7d9f10c31d708575f5e130"
+  },
+  "uncover_v2/uncover_DR4.1_MSA_target_magnifications_v2.0.fits": {
+   "bytes": 175680,
+   "md5": "0aa2f3d233ff295e822fdfd7e3d70071"
+  },
+  "uncover_v2/uncover_DR4.1_MSA_target_magnifications_v2.0.txt": {
+   "bytes": 225926,
+   "md5": "6384c43656f554f5c00244bfd206dc99"
+  }
+ }
+}

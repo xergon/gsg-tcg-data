@@ -3,15 +3,24 @@
   "_source_page": "https://niriss.github.io/lensing.html",
   "_source_bundle": "https://www.dropbox.com/scl/fo/vrat9opa0ik4nt9xjbkju/AFmi2G8cZ50dkzzYTBj_yac?rlkey=5v1uby7rl0oruag4ssewfn69k&st=quwppvkm&dl=0",
   "_paper": "https://ui.adsabs.harvard.edu/abs/2026arXiv260122245R/abstract",
-
   "versions": {
-    "v0": {"README_last_updated": "30.1.2026"},
-    "v1": {"README_last_updated": "17.3.2026", "note": "slight modification of the cluster member catalogue; adds cluster_members_specz_cat.dat. USE v1 - it is the newer release."}
+    "v0": {
+      "README_last_updated": "30.1.2026"
+    },
+    "v1": {
+      "README_last_updated": "17.3.2026",
+      "note": "slight modification of the cluster member catalogue; adds cluster_members_specz_cat.dat. USE v1 - it is the newer release."
+    }
   },
-
-  "cosmology": {"H0_km_s_Mpc": 70.0, "omegaM": 0.300, "omegaX": 0.700, "omegaK": 0.0, "wX": -1.0, "wa": 0.0},
-  "z_lens": 0.2960,
-
+  "cosmology": {
+    "H0_km_s_Mpc": 70.0,
+    "omegaM": 0.3,
+    "omegaX": 0.7,
+    "omegaK": 0.0,
+    "wX": -1.0,
+    "wa": 0.0
+  },
+  "z_lens": 0.296,
   "wcs_reference": {
     "_from": "runmode/reference 3 in Rihtarsic26_fiducial_best.par",
     "RA_deg": 104.65871237187717,
@@ -20,49 +29,169 @@
     "convention_verified_empirically": true,
     "x_arcsec": "x = -(RA - RA_ref) * 3600 * cos(Dec_ref)   [+x points WEST]",
     "y_arcsec": "y = +(Dec - Dec_ref) * 3600                 [+y points NORTH]",
-    "residual_check_arcsec": {"BCG1": [0.005, 0.009], "BCG3": [-0.057, 0.021]}
+    "residual_check_arcsec": {
+      "BCG1": [
+        0.005,
+        0.009
+      ],
+      "BCG3": [
+        -0.057,
+        0.021
+      ]
+    }
   },
-
   "map_pixel_scales": {
     "_warning": "The lens-model maps are NOT on a 40 mas grid. 40 mas is the NIRCam drizzle grid of the imaging, not the delivered model maps.",
-    "best_fit_maps": {"pixel_scale_mas": 50, "verified_CDELT_arcsec": 0.0500062507813476, "example_file": "v0/best_fit_model/best_fit_maps/bulletclu-psi-50mas_.fits", "NAXIS": [8000, 8000], "CRVAL_deg": [104.658712, -55.957146]},
-    "sample_maps": {"pixel_scale_mas": 200, "n_samples_per_map_type": 100},
-    "gas_component_maps": {"file_pattern": "xray_*_dsdls1.fits", "NAXIS": [256, 256], "pixel_scale_arcsec": 1.968, "CRVAL_deg": [104.54570727, -55.93486017799999], "CRPIX": [214.625, 152.625]}
+    "best_fit_maps": {
+      "pixel_scale_mas": 50,
+      "verified_CDELT_arcsec": 0.0500062507813476,
+      "example_file": "v0/best_fit_model/best_fit_maps/bulletclu-psi-50mas_.fits",
+      "NAXIS": [
+        8000,
+        8000
+      ],
+      "CRVAL_deg": [
+        104.658712,
+        -55.957146
+      ]
+    },
+    "sample_maps": {
+      "pixel_scale_mas": 200,
+      "n_samples_per_map_type": 100
+    },
+    "gas_component_maps": {
+      "file_pattern": "xray_*_dsdls1.fits",
+      "NAXIS": [
+        256,
+        256
+      ],
+      "pixel_scale_arcsec": 1.968,
+      "CRVAL_deg": [
+        104.54570727,
+        -55.93486017799999
+      ],
+      "CRPIX": [
+        214.625,
+        152.625
+      ]
+    }
   },
   "map_normalisation": "All delivered kappa/gamma/dpl/psi maps are scaled so that Dls/Ds = 1 (stated in README.dat).",
   "map_types_available": {
     "dpl1_dpl2": "deflection components, arcsec",
-    "gamma": "shear modulus", "gamma1_gamma2": "shear components",
-    "kappa": "convergence", "psi": "lensing potential"
+    "gamma": "shear modulus",
+    "gamma1_gamma2": "shear components",
+    "kappa": "convergence",
+    "psi": "lensing potential"
   },
-
   "BCG_positions": {
     "_from": "potentiel O4/O5/O6 in Rihtarsic26_fiducial_best.par, cross-checked against cluster_members_specz_cat.dat magnitudes",
-    "BCG1_main_cluster":   {"lenstool_xy_arcsec": [-0.015, -0.029], "RA_deg": 104.6587198, "Dec_deg": -55.9571538, "mag_F277W": 15.75, "z_spec": 0.2987, "z_ref": "Barrena+2002"},
-    "BCG2_main_cluster":   {"lenstool_xy_arcsec": [24.042, 29.128],  "RA_deg": 104.6467828, "Dec_deg": -55.9490546, "mag_F277W": 15.98},
-    "BCG3_subcluster":     {"lenstool_xy_arcsec": [186.076, 49.620], "RA_deg": 104.5663819, "Dec_deg": -55.9433624, "mag_F277W": 16.25, "z_spec": 0.2974, "z_ref": "Barrena+2002"}
+    "BCG1_main_cluster": {
+      "lenstool_xy_arcsec": [
+        -0.015,
+        -0.029
+      ],
+      "RA_deg": 104.6587198,
+      "Dec_deg": -55.9571538,
+      "mag_F277W": 15.75,
+      "z_spec": 0.2987,
+      "z_ref": "Barrena+2002"
+    },
+    "BCG2_main_cluster": {
+      "lenstool_xy_arcsec": [
+        24.042,
+        29.128
+      ],
+      "RA_deg": 104.6467828,
+      "Dec_deg": -55.9490546,
+      "mag_F277W": 15.98
+    },
+    "BCG3_subcluster": {
+      "lenstool_xy_arcsec": [
+        186.076,
+        49.62
+      ],
+      "RA_deg": 104.5663819,
+      "Dec_deg": -55.9433624,
+      "mag_F277W": 16.25,
+      "z_spec": 0.2974,
+      "z_ref": "Barrena+2002"
+    }
   },
-
   "xray_gas_convergence_peaks": {
     "_method": "global and local maxima of v1/best_fit_model/xray_kappa_dsdls1.fits (256x256, 1.968 arcsec/pix), 9x9 maximum filter, threshold 0.5*max",
     "_caution": "These are peaks of the GAS CONVERGENCE map that Lenstool ingests, not of a raw Chandra X-ray surface-brightness image. Two peaks of nearly equal amplitude.",
-    "peak_A": {"RA_deg": 104.6302787, "Dec_deg": -55.9482929, "lenstool_xy_arcsec": [57.303, 31.870], "kappa": 0.12235},
-    "peak_B": {"RA_deg": 104.5853642, "Dec_deg": -55.9433955, "lenstool_xy_arcsec": [147.820, 49.501], "kappa": 0.12231}
+    "peak_A": {
+      "RA_deg": 104.6302787,
+      "Dec_deg": -55.9482929,
+      "lenstool_xy_arcsec": [
+        57.303,
+        31.87
+      ],
+      "kappa": 0.12235
+    },
+    "peak_B": {
+      "RA_deg": 104.5853642,
+      "Dec_deg": -55.9433955,
+      "lenstool_xy_arcsec": [
+        147.82,
+        49.501
+      ],
+      "kappa": 0.12231
+    }
   },
-
   "constraints": {
     "gold_multiple_images": 135,
     "source_galaxies_with_spec_z": 27,
     "source_ids": "K1-K15, N1-N12",
-    "z_source_min": 0.897, "z_source_max": 6.64,
+    "z_source_min": 0.897,
+    "z_source_max": 6.64,
     "all_multiple_images_incl_candidates": 199,
     "positional_uncertainty_arcsec": 0.5,
     "_verified_by": "row counts and unique-z counts computed directly from v1/bullet_gold_v4.dat and v1/bullet_multim_full.dat"
   },
-
   "lenstool_run_modes": {
     "best_fit_model": "inverse 4 (chi2 minimisation), par = Rihtarsic26_fiducial_best.par",
     "sample_model": "inverse 3 (parameter-space sampling), par = Rihtarsic26_fiducial_bayes.par"
   },
-  "field_extent_arcsec": {"xmin": -250.0, "xmax": 300.0, "ymin": -250.0, "ymax": 250.0}
+  "field_extent_arcsec": {
+    "xmin": -250.0,
+    "xmax": 300.0,
+    "ymin": -250.0,
+    "ymax": 250.0
+  },
+  "FILENAME_TRAP": {
+    "_severity": "read this before using any map",
+    "issue": "In v1 the best-fit lensing-potential map is NAMED 'bulletclu-psi-200mas_.fits' but its actual grid is 50 mas.",
+    "evidence": {
+      "v0/best_fit_model/best_fit_maps/bulletclu-psi-50mas_.fits": {
+        "NAXIS": [
+          8000,
+          8000
+        ],
+        "CDELT_arcsec": 0.0500062507813476,
+        "CDELT_mas": 50.0,
+        "sha256": "3bf50ec5162838ec05f0071660a8440fce5c49a63c1a08fe736f063ddedc9bbe"
+      },
+      "v1/best_fit_model/best_fit_maps/bulletclu-psi-200mas_.fits": {
+        "NAXIS": [
+          8000,
+          8000
+        ],
+        "CDELT_arcsec": 0.0500062507813476,
+        "CDELT_mas": 50.0,
+        "sha256": "3aa4d11d1dbbba3afba176f133efa9e9f489987ff0cf5671f86d49c2989a81d5"
+      }
+    },
+    "the_two_files_are_not_identical": "different sha256 - they are different model versions, not copies",
+    "sample_maps_are_correctly_named": {
+      "example": "bulletclu-kappa-200mas_0.fits",
+      "NAXIS": [
+        2000,
+        2000
+      ],
+      "CDELT_mas": 200.1
+    },
+    "rule": "Take the pixel scale from CDELT in the FITS header, never from the filename."
+  }
 }

@@ -1,0 +1,24 @@
+{
+ "survey": "KiDS-1000 (KiDS DR4.1)",
+ "registration_wall": false,
+ "auth_required": false,
+ "docs": "https://kids.strw.leidenuniv.nl/DR4/KiDS-1000_shearcatalogue.php",
+ "shear_catalogue": {
+  "file": "KiDS_DR4.1_ugriZYJHKs_SOM_gold_WL_cat.fits",
+  "bytes": 17712469440,
+  "sources": 21262011,
+  "fits_magic_verified": true,
+  "mirrored": false,
+  "url": "https://kids.strw.leidenuniv.nl/DR4/data_files/KiDS_DR4.1_ugriZYJHKs_SOM_gold_WL_cat.fits",
+  "why_not_mirrored": "17.7 GB; exceeds the 2 GiB GitHub release-asset cap and the measured link is ~0.5 MB/s."
+ },
+ "nz_tarball": {
+  "file": "KiDS1000_SOM_N_of_Z.tar.gz",
+  "bytes": 4360,
+  "md5": "626660c57ba58b88bee6c8009b188b3f",
+  "sha256": "1962a9117413f7fbb8adb863e4a85e250998257572cfffcbe2834e61c7d1704a",
+  "mirrored": true,
+  "url": "https://kids.strw.leidenuniv.nl/DR4/data_files/KiDS1000_SOM_N_of_Z.tar.gz",
+  "tomographic_bins": 5
+ }
+}

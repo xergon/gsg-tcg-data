@@ -1,0 +1,347 @@
+J/ApJS/261/2   BASS. XXII. The Swift/BAT AGN Sp. Survey DR2 cat.   (Koss+, 2022)
+================================================================================
+BASS. XXII. The BASS DR2 AGN catalog and data.
+    Koss M.J., Ricci C., Trakhtenbrot B., Oh K., den Brok J.S.,
+    Mejia-Restrepo J.E., Stern D., Privon G.C., Treister E., Powell M.C.,
+    Mushotzky R., Bauer F.E., Ananna T.T., Balokovic M., Bar R.E., Becker G.,
+    Bessiere P., Burtscher L., Caglar T., Congiu E., Evans P., Harrison F.,
+    Heida M., Ichikawa K., Kamraj N., Lamperti I., Pacucci F., Ricci F.,
+    Riffel R., Rojas A.F., Schawinski K., Temple M.J., Urry C.M., Veilleux S.,
+    Williams J.
+   <Astrophys. J. Suppl. Ser., 261, 2 (2022)>
+   =2022ApJS..261....2K
+================================================================================
+ADC_Keywords: Active gal. nuclei; Galaxies, Seyfert; Spectra, optical;
+              X-ray sources; Infrared; Cross identifications; Surveys
+Keywords: X-ray active galactic nuclei ; Active galactic nuclei ;
+          Seyfert galaxies ; X-ray quasars ; X-ray surveys ; Surveys ;
+          Sky surveys ; Galaxy spectroscopy
+
+Abstract:
+    We present the active galactic nucleus (AGN) catalog and optical
+    spectroscopy for the second data release of the Swift BAT AGN
+    Spectroscopic Survey (BASS DR2). With this DR2 release we provide 1449
+    optical spectra, of which 1182 are released for the first time, for
+    the 858 hard-X-ray-selected AGNs in the Swift BAT 70-month sample. The
+    majority of the spectra (801/1449, 55%) are newly obtained from Very
+    Large Telescope (VLT)/X-shooter or Palomar/Doublespec. Many of the
+    spectra have both higher resolution (R>2500, N~450) and/or very wide
+    wavelength coverage (3200-10000{AA}, N~600) that are important for a
+    variety of AGN and host galaxy studies. We include newly revised AGN
+    counterparts for the full sample and review important issues for
+    population studies, with 47 AGN redshifts determined for the first
+    time and 790 black hole mass and accretion rate estimates. This
+    release is spectroscopically complete for all AGNs (100%, 858/858),
+    with 99.8% having redshift measurements (857/858) and 96% completion
+    in black hole mass estimates of unbeamed AGNs (722/752). This AGN
+    sample represents a unique census of the brightest hard-X-ray-selected
+    AGNs in the sky, spanning many orders of magnitude in Eddington ratio
+    (L/L_Edd_=10^-5^-100), black hole mass (M_BH_=10^5^-10^10^M_{sun}_),
+    and AGN bolometric luminosity (L_bol_=10^40^-10^47^erg/s).
+
+Description:
+    The initial 70-month catalog (Baumgartner+ 2013, J/ApJS/207/19) was
+    composed of 1210 sources, including 822 classified as AGNs or
+    associated with a galaxy and likely an AGN, 287 Galactic sources
+    (e.g., high/low-mass X-ray binary, cataclysmic variable, pulsar), 19
+    clusters, and 82 unknown sources. The counterpart positions and AGN
+    classifications were updated based on WISE and X-ray data for 838 AGNs
+    in the BASS DR1 (Ricci+ 2017, J/ApJS/233/17), which included three
+    dual AGN systems. Here we discuss the BASS DR2 AGN counterparts after
+    an extensive examination of the remaining unknown 70-month catalog
+    sources.
+
+    The largest sample of targeted sources, 402, was observed with the
+    Palomar Double Spectrograph (DBSP) on the 200-inch Hale telescope.
+    These AGNs were observed as part of a dedicated program on BAT AGNs
+    (P.I. M. Urry or M. Powell) or as part of the NuSTAR program
+    (P.I. F. Harrison and D. Stern), where they served as backup targets
+    to faint NuSTAR serendipitous sources. The observations were performed
+    between 2012 October and 2020 November. See Section 3.2.1.
+
+    A total of 211 were observed with the VLT X-shooter, a multiwavelength
+    (3000-25000{AA}) echelle spectrograph with medium spectral resolution
+    R=4000-18000. There were also 69 observations with VLT/FORS2 done in a
+    single observing semester in 2017 (099.A-0403A). See Section 3.2.2.
+
+    We observed 153 sources at the Southern Astrophysical Research (SOAR)
+    telescope using the Goodman instrument as part of six programs between
+    2017 and 2020 (P.I. C. Ricci). See Section 3.2.3.
+
+    Over 11 nights in 2016, 119 AGNs were observed with the du Pont
+    telescope with the Bollens & Chivens spectrograph (P.I. C. Ricci).
+
+    Some AGNs were also observed with the Keck telescopes associated with
+    observations of NuSTAR-observed AGNs and mergers (e.g.,
+    Koss+ 2016ApJ...824L...4K). A total of 21 observations were carried
+    out using the Low Resolution Imaging Spectrometer (LRIS) on the Keck I
+    Telescope.
+
+    We performed 12 observations with the Magellan Echellete (MagE)
+    spectrograph on the Magellan Clay telescope.
+
+    We also included additional spectra from archival sources. We used
+    spectra from the SDSS (APO), with 151 sources from DR16 (V/154).
+    See Section 3.2.7.
+
+File Summary:
+--------------------------------------------------------------------------------
+ FileName    Lrecl  Records   Explanations
+--------------------------------------------------------------------------------
+ReadMe          80        .   This file
+table8.dat     302     1449   Master observing table
+table9.dat     133      858   General hard-X-ray selected AGN properties
+table11.dat    106       47   Newly identified redshifts
+--------------------------------------------------------------------------------
+
+See also:
+ IX/10   : ROSAT All-Sky Bright Source Catalogue (1RXS) (Voges+ 1999)
+ VIII/37 : The Third Bologna Survey (B3) (Ficarra+ 1985)
+ VII/259 : 6dF galaxy survey final redshift release (Jones+, 2009)
+ II/328  : AllWISE Data Release (Cutri+ 2013)
+ V/154   : Sloan Digital Sky Surveys (SDSS), Release 16 (DR16) (Ahumada+, 2020)
+ J/AJ/127/156     : Soft X-Ray-Selected AGNs complete sample (Grupe+, 2004)
+ J/ApJS/155/271   : CDF-South: Optical spectroscopy (Szokoly+, 2004)
+ J/ApJS/165/19    : SEXSI catalog. III (Eckart+, 2006)
+ J/AJ/133/313     : AGN from RASS and SDSS DR5 (Anderson+, 2007)
+ J/A+A/495/691    : Multifrequency cat. of blazars, Roma-BZCAT (Massaro+, 2009)
+ J/ApJ/701/811    : Chandra observations of INTEGRAL sources (Tomsick+, 2009)
+ J/ApJ/693/1713   : Spectroscopy of X-ray sources in ECDF-S (Treister+, 2009)
+ J/MNRAS/401/1151 : RASS-6dFGS catalogue (Mahony+, 2010)
+ J/ApJS/191/124   : Opt. spectroscopy of ECDF-S X-ray sources (Silverman+, 2010)
+ J/A+A/534/A110   : Type-2 AGN from XMM-COSMOS bolometric output (Lusso+, 2011)
+ J/ApJS/194/45    : QSO properties from SDSS-DR7 (Shen+, 2011)
+ J/ApJ/746/L22    : Dual AGNs in the nearby Universe (Koss+, 2012)
+ J/ApJS/207/19    : Hard X-ray survey from BAT 2004-2010 (Baumgartner+, 2013)
+ J/ApJ/788/48     : X-ray through NIR photometry of NGC 2617 (Shappee+, 2014)
+ J/A+A/587/A61    : BlackCAT, stellar-mass BH in trans. (Corral-Santana+, 2016)
+ J/MNRAS/457/110  : Northern XMM-XXL field AGN catalog (Menzel+, 2016)
+ J/ApJ/850/74     : Swift/BAT AGN Spectroscopic Survey. I. (Koss+, 2017)
+ J/ApJS/233/17    : Swift/BAT AGN spectroscopic survey. V. X-ray (Ricci+, 2017)
+ J/MNRAS/470/4838 : Redshift cat. of HE 0435-1223 field-of-view (Sluse+, 2017)
+ J/AJ/155/247     : RVs of 6 X-ray cataclysmic binaries (Halpern+, 2018)
+ J/ApJS/235/4     : 105-month Swift-BAT all-sky hard X-ray survey (Oh+, 2018)
+ J/A+A/627/A148   : TANAMI radio galaxies I (Angioni+, 2019)
+ J/ApJ/883/163    : OI abs. search in Keck & VLT sp. of 199 QSOs (Becker+, 2019)
+ J/ApJS/244/24    : A z=0 Multiwave. Galaxy Synthesis (z0MGS). I. (Leroy+, 2019)
+ J/ApJ/881/154    : BAT AGN spectroscopic survey. XVI. Blazars (Paliya+, 2019)
+ J/A+A/636/A97    : SDSS-IV/SPIDERS X-ray PS sp. Cat. (Comparat+, 2020)
+ J/A+A/654/A132   : X-shooter sp. of AGN & inactive galaxies (Burtscher+, 2021)
+ J/ApJS/252/29    : BAT AGN Sp. Survey. XX. Molecular gas (Koss+, 2021)
+ http://swift.gsfc.nasa.gov/results/bs70mon/ : Swift-BAT 70-months
+ http://www.bass-survey.com/ : The BAT AGN Spectroscopic Survey home page
+
+Byte-by-byte Description of file: table8.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units       Label     Explanations
+--------------------------------------------------------------------------------
+  1-   4 I4     ---         ID        [1/1210] Catalog ID in the BASS DR2
+                                       survey (G1)
+       5 A1     ---       m_ID        [AB] Component on sequential number (G1)
+  7-  16 A10    ---         Tel       Name of observatory
+ 18-  22 F5.2   m           Diam      [1.5/10] Telescope diameter
+ 24-  42 A19    ---         Inst      Instrument
+ 44-  90 A47    ---         File1     Associated FITS spectral file (1)
+ 92- 142 A51    ---         File2     Associated FITS spectral file, red
+                                       spectrum (1)
+144- 163 A20    ---         Flags     Associated calibration or spectral
+                                       extraction flags (2)
+165- 174 A10    ---         Date      UT date of observation, YYYY-MM-DD
+176- 196 A21    ---         Range     Spectral range (3)
+198- 210 A13    ---         Grating1  Associated grating or grism (1)
+212- 220 A9     ---         Grating2  Associated grating or grism, red spectrum
+                                       (1)
+222- 225 I4     ---         R1        [200/8333]? Instrumental resolution (1)
+227- 231 I5     ---         R2        [817/14167]? Instrumental resolution, red
+                                       spectrum (1)
+233- 236 F4.1   0.1nm       FWHM1     [0.6/25]? Instrumental FWHM (1)
+238- 241 F4.1   0.1nm       FWHM2     [0.6/10.4]? Instrumental FWHM, red
+                                       spectrum (1)
+243- 245 F3.1   arcsec      SlitW1    [0.5/3]? Slit width (1)
+247- 249 F3.1   arcsec      SlitW2    [0.7/1.8]? Slit width, red spectrum (1)
+251- 255 F5.1   arcsec      SlitL1    [0.8/109.4]? Slit length (1)(4)
+257- 260 F4.1   arcsec      SlitL2    [0.9/14.2]? Slit length, red
+                                       spectrum (1)(4)
+262- 264 I3     deg         PA        [0/359]? Position angle,
+                                       measured East of North
+266- 270 F5.2   arcsec      Seeing    [-1/56.07]? Recorded seeing or average
+                                       seeing of observations
+272- 275 F4.2   ---         AirM      [1/2.76]? Average airmass during
+                                       observation
+277- 281 I5     s           Exptime   [60/10800]? Total exposure from all
+                                       combined observations
+283- 286 F4.2   0.1nm/pix   crpix1    [0.2/8.44]? Pixel dispersion, Angstroms
+                                       per pixel (1)(5)
+288- 291 F4.2   0.1nm/pix   crpix2    [0.2/2.57]? Pixel dispersion, Angstroms
+                                       per pixel (1)(5)
+293- 297 F5.1   km/s        BC        [-29.8/30.1] Barycenter correction (6)
+299- 302 F4.2   mag         EBV       [0.01/3.42] Atmospheric extinction
+--------------------------------------------------------------------------------
+Note (1): For telescopes with both a blue and red side, two values are given
+    with the blue side listed first (e.g. File1, FWHM1, etc) and the red
+    side listed second.
+Note (2): Any associated flags with calibration or spectral extraction
+          as follows:
+    Star = foreground stellar contamination, that a very nearby star (<2")
+           contributed to the emission despite a very small extraction region;
+    Red  = only the red side is extracted because the Galactic extinction was
+           so high (e.g. A_V_>3) that no source is detected in the blue;
+    Calibration = the object was observed under poor conditions or the
+                  standard star was observed on a different night, so spectral
+                  calibration may be more uncertain than usual;
+    Tellurics   = the spectrum suffers from worse than usual telluric
+                  correction or that the molecfit (Smette+ 2015A&A...576A..77S)
+                  correction was unsuccessful;
+    Shortblue   = The setup has a shorter than normal blue wavelength coverage
+                  due to a reduction issue.
+Note (3): For telescopes with both a blue and red side, two spectral ranges
+    are merged in this column with the blue side first and the red side
+    listed following a colon (:).
+Note (4): If multiple exposures were combined with optimal extraction (e.g.
+    Palomar/DBSP), the average value is listed.
+Note (5): Only included for spectra with linear dispersions.
+Note (6): Barycenter correction needed for the Earth's motion based on
+    observation time and observatory location. The computed correction
+    should be added to any observed velocity to determine the final
+    barycentric radial velocity. As this correction is small (e.g. <30km/s),
+    it has not been applied to any catalog measurements in the DR2.
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: table9.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units   Label   Explanations
+--------------------------------------------------------------------------------
+   1-  4 I4     ---     ID      [1/1210] Catalog ID in the BASS DR2 survey (G1)
+       5 A1     ---   m_ID      [AB] Component on sequential number (G1)
+   7- 33 A27    ---     CName   Counterpart source name
+  35- 39 A5     ---   n_ID      [bdfnw, ] Flag(s) on ID; column added by CDS (1)
+  41- 51 F11.7  deg     RAdeg   Right Ascension (J2000) (2)
+  53- 65 F13.9  deg     DEdeg   [-86.64/85.92] Declination (J2000) (2)
+  67- 75 A9     ---     Type    AGN type based on optical spectroscopy (3)
+  77- 87 F11.8  ---     z       [-0.000113/3.66]? Best z (4)
+  89- 98 A10    ---     ztype   Redshift type (4)
+ 100-106 F7.1   Mpc     Dist    [3.5/32216.1]? Distance
+ 108-112 F5.2   [Msun]  logMBH  [5.4/10.7]? log, Best black hole mass (5)
+ 114-121 A8     ---     Method  Method for black hole mass (5)
+ 123-127 F5.2   [10-7W] logLbol [41.28/49.5]? log of AGN bolometric luminosity
+                                 in erg/s units
+ 129-133 F5.2   [-]     logEdd  [-4.8/2.1]? log, Eddington ratio
+--------------------------------------------------------------------------------
+Note (1): Note as follows:
+    n = new counterpart in BASS DR2 (see Table 1, section 2.1)
+    d = dual AGN in DR2 (see Table 4, section 2.3)
+    w = weakly associated counterparts in DR2 (see Table 5, section 2.4)
+    f = faint soft X-ray counterparts in DR2 (see Table 6, section 2.5)
+    b = Beamed AGN changes in DR2 (see Table 16, Appendix 1.1)
+Note (2): Equatorial position of optical/IR counterpart to the BAT AGN
+    based on WISE positions.
+Note (3): AGN type as follows:
+    Sy1   = AGN with broad H{beta} (360 occurrences),
+    Sy1.9 = AGN with narrow H{beta} and broad H{alpha} (101 occurrences),
+    Sy2   = AGN with narrow H{beta} and H{alpha} (292 occurrences).
+
+    For beamed AGN, the types include the following:
+    BZQ = those with the presence of broad lines (75 occurrences),
+    BZG = only host http://swift.gsfc.nasa.gov/results/bs70mon/
+          galaxy features lacking broad lines (8 occurrences),
+    BZB = traditional continuum dominated blazars with no emission lines or
+          host galaxy features (22 occurrences).
+Note (4): Best DR2 redshift measurement and the line or method used for the
+    measurement. The majority of fits are done with [OIII]{lambda}5007
+    (88%, 755/858). Measurements are from a broad line fitting code
+    (Mejia-Restrepo et al., accepted) referred to as OIII broad, MgII
+    broad, and CIV broad, respectively, when available for all Sy1 and BZQ
+    sources with broad line H{beta}. For narrow line sources, the redshift
+    is based on emission-line fitting of [OIII]{lambda}5007, when
+    possible. For some high Galactic extinction sources, single emission
+    line fits to other lines are used (in the table as Ha for H{alpha},
+    SIII for [SII]{lambda}9531, and HeI for HeII{lambda}10830). For some
+    high redshift sources z>1 without high quality broad line fitting we
+    report the estimates from single emission line fits of CIV{lambda}1549
+    and MgII{lambda}2798 (referred to as CIV and MgII). Host galaxy
+    templates (referred to as Gal Temp) are used for some BZB with no
+    emission lines. For the remaining sources, DR1 fits or those from
+    Simbad are used for redshift estimates.
+Note (5): The best black hole mass measurement and the method used for the
+    measurement. We do not report errors from either broad line fitting or
+    velocity dispersions as the they are less than 0.1dex and the errors
+    are dominated by the intrinsic spread of virial and {sigma}* based BH mass
+    estimates of order 0.5dex.
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: table11.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units   Label  Explanations
+--------------------------------------------------------------------------------
+  1-   4 I4     ---     ID     [25/1208] BASS DR2 index (G1)
+  6-  24 A19    ---     SWIFT  Swift name (SWIFT JHHMM.m+DDMM)
+ 26-  53 A28    ---     CName  Counterpart name in NED or SIMBAD based
+                                on the WISE position
+ 55-  59 A5     ---     Type   AGN DR2 type
+ 61-  73 A13    ---     Tel    Telescope/Instrument
+ 75-  82 F8.6   ---     z      [0.018/3.66] Best DR2 redshift
+ 84- 101 A18    ---     Line   Line
+103- 106 F4.2   mag     Av     [0/9.7] Visual extinction, A_V_ (1)
+--------------------------------------------------------------------------------
+Note (1): Visual extinction due to Milky Way foreground dust, using maps of
+    Schlegel et al. (1998ApJ...500..525S) and the extinction law derived
+    by Cardelli et al. (1989ApJ...345..245C).
+--------------------------------------------------------------------------------
+
+Global notes:
+Note (G1): BASS DR2 numbers from the BAT 70-month survey catalog identifiers
+    (Baumgartner+, 2013, J/ApJS/207/19 - <SWIFT JHHMM+DDMMA> in Simbad;
+    see http://swift.gsfc.nasa.gov/results/bs70mon/). 
+    Note that, the components ("B") are not part of 
+    Baumgartner+, 2013, J/ApJS/207/19 ("A" components have been added 
+    by CDS to match the other BASS papers).
+--------------------------------------------------------------------------------
+
+History:
+  From electronic version of the journal
+
+References:
+  Koss et al.           Paper I.       2017ApJ...850...74K  Cat. J/ApJ/850/74
+  Berney et al.         Paper II.      2015MNRAS.454.3622B
+  Oh et al.             Paper III.     2017MNRAS.464.1466O
+  Lamperti et al.       Paper IV.      2017MNRAS.467..540L  Cat. J/MNRAS/467/540
+  Ricci et al.          Paper V.       2017ApJS..233...17R  Cat. J/ApJS/233/17
+  Trakhtenbrot et al.   Paper VI.      2017MNRAS.470..800T
+  Ricci et al.          Paper VII.     2017Natur.549..488R
+  Shimizu et al.        Paper VIII.    2018ApJ...856..154S
+  Powell et al.         Paper IX.      2018ApJ...858..110P
+  Oh et al.             Paper X.       2018ApJS..235....4O  Cat. J/ApJS/235/4
+  Ichikawa et al.       Paper XI.      2019ApJ...870...31I  Cat. J/ApJ/870/31
+  Ricci et al.          Paper XII.     2018MNRAS.480.1819R
+  Bar et al.            Paper XIII.    2019MNRAS.489.3073B
+  Koss et al.           Paper XIV.     2018Natur.563..214K
+  Smith et al.          Paper XV.      2020MNRAS.492.4216S
+  Paliya et al.         Paper XVI.     2019ApJ...881..154P  Cat. J/ApJ/881/154
+  Baek et al.           Paper XVII.    2019MNRAS.488.4317B
+  Liu et al.            Paper XVIII.   2020ApJ...896..122L
+  Rojas et al.          Paper XIX.     2020MNRAS.491.5867R
+  Koss et al.           Paper XX.      2021ApJS..252...29K  Cat. J/ApJS/252/29
+  Koss et al.           Paper XXI.     2022ApJS..261....1K
+  Koss et al.           Paper XXII.    2022ApJS..261....2K  This catalog
+  Pfeifle et al.        Paper XXIII.   2022ApJS..261....3P
+  Oh et al.             Paper XXIV.    2022ApJS..261....4O  Cat. J/ApJS/261/4
+  Mejia-Restrepo et al. Paper XXV.     2022ApJS..261....5M  Cat. J/ApJS/261/5
+  Koss et al.           Paper XXVI.    2022ApJS..261....6K  Cat. J/ApJS/261/6
+  Gupta et al.          Paper XXVII.   2021MNRAS.504..428G
+  den Brok et al.       Paper XXVIII.  2022ApJS..261....7D  Cat. J/ApJS/261/7
+  Ricci et al.          Paper XXIX.    2022ApJS..261....8R  Cat. J/ApJS/261/8
+  Ananna et al.         Paper XXX.     2022ApJS..261....9A
+  Kakkad et al.         Paper XXXI.    2022MNRAS.511.2105K
+  Kawamuro et al.       Paper XXXII.   2022ApJ...938...87K
+  Marcotulli et al.     Paper XXXIII.  2022ApJ...940...77M  Cat. J/ApJ/940/77
+  Kawamuro et al.       Paper XXXIV.   2023ApJS..269...24K  Cat. J/ApJS/269/24
+  Caglar et al.         Paper XXXV.    2023ApJ...956...60C
+  Powell et al.         Paper XXXVI.   2022ApJ...938...77P
+  Ricci et al.          Paper XXXVII.  2022ApJ...938...67R
+  Ananna et al.         Paper XXXVIII. 2022ApJ...939L..13A
+  Temple et al.         Paper XXXIX.   2023MNRAS.518.2938T
+  Tortosa et al.        Paper XL.      2023MNRAS.526.1687T
+  Ricci et al.          Paper XLII.    2023ApJ...959...27R
+
+================================================================================
+(End)                    Prepared by [AAS], Emmanuelle Perret [CDS]  29-Aug-2022

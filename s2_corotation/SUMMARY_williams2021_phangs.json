@@ -1,0 +1,76 @@
+{
+  "group": "s2_corotation",
+  "delivery": "williams2021_pattern_speeds + PHANGS-ALMA/MUSE/JWST for the S2 trio",
+  "delivered_utc": "2026-07-25",
+  "trio": ["NGC1433", "NGC3351", "NGC1672"],
+  "note_on_trio_change": "NGC 4303 was dropped by the thread on its own static screen (sigma_R/R_CR = 0.658). NGC 1433 was not among the original eight, so nothing previously staged covers it.",
+
+  "williams2021_pattern_speeds": {
+    "upstream": "https://github.com/thomaswilliamsastro/phangs_pattern_speeds",
+    "commit": "33e814890d5ede0d46bd351c0f65a54443560538",
+    "commit_date": "2021-03-08T10:51:12+01:00",
+    "paper": "Williams et al. 2021, arXiv:2102.01091",
+    "files_mirrored": 62,
+    "pattern_speed_table_v1p0.fits": {
+      "bytes": 97920,
+      "md5": "df7873cb74f06a12887e94ff6bc0f4c6",
+      "md5_verified_by": "two independent routes - git clone blob and a fresh raw.githubusercontent GET - identical",
+      "magic": "SIMPLE  =",
+      "structure": "PrimaryHDU (no data) + BinTableHDU, 83 rows x 101 columns",
+      "units": "pattern speeds km/s/kpc; radii kpc; DIST Mpc; INCL/PA deg"
+    },
+    "csv_export": "williams2021_pattern_speed_table_v1p0.csv - all 83 rows, all 101 columns, for sandbox use without astropy"
+  },
+
+  "STRUCTURAL_FACTS_THAT_CHANGE_WHAT_CAN_BE_COMPUTED": [
+    "There is NO single QUAL flag per galaxy. There are THREE independent columns: OM_P_ALMA_QUAL, OM_P_MUSE_MASS_QUAL, OM_P_MUSE_HA_QUAL. Any 'galaxy X is QUAL=1' claim is underdetermined until the tracer is named.",
+    "QUAL semantics (from create_diagnostic_webpage.py, stored as classifier index + 1): 1 = single well-defined pattern speed; 2 = clear multiple pattern speeds but otherwise a 1; 3 = poor fit, integral not converged / distrusted; 4 = data of insufficient quality. Published value is the MODE over three human classifiers (ee, es, tw); on full disagreement the MAX is taken.",
+    "NGC 1433 - the new lead galaxy - carries OM_P_ALMA_QUAL = 3 (PoorFit) on CO, the very tracer the withdrawn fixed-annulus Pi_g statistic was built on. Its two MUSE tracers are QUAL = 1.",
+    "NGC 4303, the galaxy just dropped, is QUAL = 1 in ALL THREE tracers - the cleanest of the five galaxies examined. Every one of the three retained trio galaxies carries a QUAL >= 2 on at least one tracer.",
+    "NGC 3627 is QUAL=1 on ALMA and on MUSE_HA, QUAL=2 on MUSE_MASS - so 'NGC 3627 is not QUAL=1' is true only for the stellar tracer.",
+    "Williams+2021 lists MULTIPLE corotation radii per tracer. NGC 1433 has three ALMA CR (0.0721, 0.3064, 1.8201 kpc) and two Ha CR (0.0721, 3.7123 kpc). Published NGC 1433 corotation candidates span 0.072 to 6.275 kpc, a factor of ~87.",
+    "Williams+2021 and Ruiz-Garcia 2024 disagree on R_CR at 3.07 sigma for NGC 1433 (stellar 6.275+/-0.375 vs 4.8+/-0.3) and 2.35 sigma for NGC 1672 (6.073+/-1.589 vs 11.9+/-1.9). Ruiz-Garcia Table A.3 lists NO pattern speed for any trio galaxy.",
+    "NGC 1433 R_CR_ALMA_1 = 0.07208333611488343 kpc with ERR exactly equal to the value - consistent with R = 0, not resolved. R_CR_MUSE_HA_1 is the IDENTICAL number with the IDENTICAL error, i.e. the two tracers are not independent at that entry.",
+    "make_table.py line 266 contains a published, unfixed copy-paste bug: in the MUSE-mass branch it assigns to alma_co_q instead of muse_mass_q, so on unanimous three-way classifier disagreement OM_P_ALMA_QUAL is overwritten by the MUSE-mass maximum. The inputs needed to determine which rows are affected (quality_flags/batch{1,2}_{ee,es,tw}.txt) are NOT shipped with the repo.",
+    "PHANGS-ALMA: there is no *.pbcor.fits in this release - the cube is <gal>_12m+7m+tp_co21.fits, already primary-beam corrected. There is no _broad_mom1 or _broad_emom1: the broad products are mom0/emom0/tpeak only, and the velocity field is _mom1wprior / _emom1wprior with no 'broad' token. Masks are _broadmask.fits and _strictmask.fits (one word, no underscore), not _broad_mask / _strict_mask.",
+    "All three trio galaxies use the '12m+7m+tp' basename. The '12m7mtp' variant does NOT occur anywhere in the by_galaxy tree for these three - the archive's own basenames are preserved verbatim in the manifest.",
+    "The three galaxies are NOT at a common angular resolution at native scale: BMAJ = 1.0977 / 1.4632 / 1.9324 arcsec and pixel = 0.300 / 0.400 / 0.500 arcsec/pix for NGC1433 / NGC3351 / NGC1672, all read from BMAJ, BMIN and CDELT2 in the FITS headers. Beams are round (BMIN == BMAJ, BPA = 0). Matched-resolution copies exist in the archive at 2, 7.5, 11 and 15 arcsec and are listed in the manifest.",
+    "PHANGS-JWST F2100W headers carry NO BMAJ / BMIN / PSF keyword at all. Pixel scale is 0.11091 arcsec/pix, derived from CDELT1 = CDELT2 = 3.0808e-05 deg in the SCI extension and independently from sqrt(PIXAR_A2); the two agree. Any PSF FWHM must come from the instrument documentation, NOT from these files."
+  ],
+
+  "products": {
+    "phangs_alma_co21_native_moments": {
+      "n_files": 39,
+      "total_bytes": 41932800,
+      "galaxies": 3,
+      "per_galaxy": ["broad_mom0", "broad_emom0", "broad_tpeak", "mom1wprior", "emom1wprior", "strict_mom0", "strict_emom0", "strict_mom1", "strict_emom1", "strict_mom2", "strict_emom2", "strict_ew", "strict_eew"],
+      "verification": "every file: HTTP 200, magic bytes 'SIMPLE  =', MD5 and header-derived BMAJ/BMIN/BPA/CDELT2 recorded in MANIFEST_alma_moments.tsv",
+      "source": "https://cadc-west-01.canfar.net/vault/files/phangs/RELEASES/PHANGS-ALMA/by_galaxy/<gal>/"
+    },
+    "phangs_jwst_f2100w": {
+      "n_files": 3,
+      "total_bytes": 480715200,
+      "location": "GitHub release asset (over the 100 MB raw-file limit)",
+      "source": "https://archive.stsci.edu/hlsps/phangs-jwst/v1p1/<gal>/"
+    },
+    "phangs_muse_dap_maps_native": {
+      "n_files": 3,
+      "total_bytes": 1288005120,
+      "location": "GitHub release asset",
+      "source": "https://cadc-west-01.canfar.net/vault/files/phangs/RELEASES/PHANGS-MUSE/DR1.0/MAPS/"
+    }
+  },
+
+  "deferred": {
+    "why": "size only - every deferred file is directly fetchable at the URL in MANIFEST_ARCHIVE_S2_TRIO.tsv",
+    "PHANGS-MUSE_DATACUBES": {"n": 6, "bytes": 205527969600, "note": "native + copt mosaics for the trio, 27-46 GB each. Far over the 2 GiB GitHub release-asset cap; cannot be re-hosted intact."},
+    "PHANGS-MUSE_MAPS_copt": {"n": 3, "bytes": 1288005120, "note": "PSF-homogenised twins of the mirrored native MAPS: 0.91 / 1.05 / 0.96 arcsec for NGC1433 / NGC3351 / NGC1672."},
+    "PHANGS-MUSE_IMAGES": {"n": 24, "bytes": 222000000, "note": "white-light + SDSS g/r/i, native and copt, 7-12 MB each."},
+    "PHANGS-ALMA_other": {"n": 216, "bytes": 12200000000, "note": "full cubes, noise cubes, coverage cubes, 3D masks, and the 2/7.5/11/15 arcsec matched-resolution moment sets."},
+    "PHANGS-JWST_tweakback": {"n": 3, "bytes": 1497773844, "note": "per-tile tarballs, 300-599 MB each."},
+    "PHANGS-ALMA_full_release_tarball": {"bytes": 209889889654, "note": "209.9 GB single tar.gz - listed for completeness, not fetched."}
+  },
+
+  "manifest": "MANIFEST_ARCHIVE_S2_TRIO.tsv - 297 rows, every product for the three galaxies with byte count, MIRRORED/DEFERRED status and complete direct URL",
+  "not_fetched_by_instruction": "Zenodo record 13898598 (PDF-only; the Ruiz-Garcia tables already in this directory were parsed from arXiv LaTeX)"
+}

@@ -1,0 +1,269 @@
+{
+  "generated_utc": "2026-07-25T08:34:00Z",
+  "fleet_row": "S7 / EFC-1 (excitation-frequency collapse)",
+  "A_pds_superlibs": {
+    "doi": "10.17189/b2aj-cz96",
+    "doi_url": "https://doi.org/10.17189/b2aj-cz96",
+    "bundle": "urn:nasa:pds:libs_reference_database::1.1",
+    "collection": "urn:nasa:pds:libs_reference_database:data_superlibs::1.0",
+    "archive_root": "https://pds-geosciences.wustl.edu/speclib/urn-nasa-pds-libs_reference_database/data_superlibs/",
+    "per_shot_confirmed": true,
+    "per_shot_structure": "one CSV per target/location; 24 header rows then 8767 wavelength rows; 25 columns = wavelength + 24 per-shot un-normalized intensity integrations (PDS4 XML label: 'Un-Normalized intensity, integration N')",
+    "collection_total_files": 314300,
+    "collection_total_bytes": 600589091152,
+    "collection_total_GB": 600.6,
+    "leaf_dirs": {
+      "10k/earth/3mj": {
+        "files": 25400,
+        "bytes": 42789501349
+      },
+      "10k/earth/4mj": {
+        "files": 21680,
+        "bytes": 36892813185
+      },
+      "10k/earth/5mj": {
+        "files": 25380,
+        "bytes": 43639727138
+      },
+      "10k/earth/7mj": {
+        "files": 3680,
+        "bytes": 6463133735
+      },
+      "10k/earth/9mj": {
+        "files": 3670,
+        "bytes": 6492458455
+      },
+      "10k/mars/3mj": {
+        "files": 25640,
+        "bytes": 42918310121
+      },
+      "10k/mars/5mj": {
+        "files": 25660,
+        "bytes": 43389618638
+      },
+      "10k/mars/7mj": {
+        "files": 25700,
+        "bytes": 43958613742
+      },
+      "10k/mars/9mj": {
+        "files": 25620,
+        "bytes": 44327009040
+      },
+      "10k/vacuum/3mj": {
+        "files": 27470,
+        "bytes": 52314868509
+      },
+      "10k/vacuum/5mj": {
+        "files": 27420,
+        "bytes": 52811210244
+      },
+      "10k/vacuum/7mj": {
+        "files": 27456,
+        "bytes": 53106693292
+      },
+      "10k/vacuum/9mj": {
+        "files": 27420,
+        "bytes": 53311911472
+      },
+      "18k/mars/3mj": {
+        "files": 5524,
+        "bytes": 19229537268
+      },
+      "18k/mars/5mj": {
+        "files": 5528,
+        "bytes": 19416076956
+      },
+      "18k/mars/7mj": {
+        "files": 5528,
+        "bytes": 19645297867
+      },
+      "18k/mars/9mj": {
+        "files": 5524,
+        "bytes": 19882310141
+      }
+    },
+    "inventory_products": 157149,
+    "full_manifest_note": "pds_superlibs_file_manifest.csv.gz has all 314300 direct URLs + byte sizes; any subset is fetchable directly from the PDS archive root",
+    "staged_sample": {
+      "file": "pds_superlibs_10k_mars_pershot_sample_50std_4energies.tar.gz",
+      "bytes": 140750282,
+      "md5": "e82fe384dad3fe78c5b84c0afcadfc98",
+      "contents": "10k/mars at 3,5,7,9 mJ; 50 geological standards present at ALL FOUR energies; 200 per-shot CSVs + 200 PDS4 XML labels; 679698865 bytes uncompressed; every file byte-size-verified against the PDS manifest",
+      "published_url": "https://github.com/xergon/gsg-tcg-data/releases/download/s7-libs-efc1-v1/pds_superlibs_10k_mars_pershot_sample_50std_4energies.tar.gz"
+    },
+    "DEFERRED": "Full 600.6 GB collection NOT mirrored - infeasible for GitHub. 2412 standards are common to all four 10k/mars energies; 50 staged. Also not staged: 10k/earth, 10k/vacuum, 18k/mars.",
+    "note_energies": "PDS 10k/mars energies are 3/5/7/9 mJ - DIFFERENT from the Zenodo 2.4/4.0/5.6/7.2 mJ set."
+  },
+  "B_zenodo": {
+    "doi": "10.5281/zenodo.7566042",
+    "doi_url": "https://doi.org/10.5281/zenodo.7566042",
+    "title": "Mount Holyoke College Laser Induced Breakdown Spectra; SuperLIBS 10K; Mars analog atmosphere",
+    "license": "cc-by-4.0",
+    "all_md5_verified": true,
+    "structure": "row1=column class (comp/meta/wvl), row2=names; 8 oxide wt% + 'Pellet Name' + 16078 wavelength channels from 233.1524722 nm; 2433 spectra rows",
+    "files": [
+      {
+        "file": "zenodo.10K_MARS_4.0mJ.csv",
+        "bytes": 385335561,
+        "published_md5": "d4ed6d5f0d889b600892d6666ca2f504",
+        "verified_md5": "d4ed6d5f0d889b600892d6666ca2f504",
+        "md5_match": true,
+        "rows": 2435,
+        "columns": 16088,
+        "source_url": "https://zenodo.org/api/records/7566042/files/zenodo.10K_MARS_4.0mJ.csv/content",
+        "published_url": "https://github.com/xergon/gsg-tcg-data/releases/download/s7-libs-efc1-v1/zenodo.10K_MARS_4.0mJ.csv"
+      },
+      {
+        "file": "zenodo.10K_MARS_5.6mJ.csv",
+        "bytes": 386054061,
+        "published_md5": "f5f290fe2c6a6abc221c6aeb5653a6a7",
+        "verified_md5": "f5f290fe2c6a6abc221c6aeb5653a6a7",
+        "md5_match": true,
+        "rows": 2435,
+        "columns": 16088,
+        "source_url": "https://zenodo.org/api/records/7566042/files/zenodo.10K_MARS_5.6mJ.csv/content",
+        "published_url": "https://github.com/xergon/gsg-tcg-data/releases/download/s7-libs-efc1-v1/zenodo.10K_MARS_5.6mJ.csv"
+      },
+      {
+        "file": "zenodo.10K_MARS_2.4mJ.csv",
+        "bytes": 384394593,
+        "published_md5": "93b92ba759e34711c44567bc8f3d264d",
+        "verified_md5": "93b92ba759e34711c44567bc8f3d264d",
+        "md5_match": true,
+        "rows": 2435,
+        "columns": 16088,
+        "source_url": "https://zenodo.org/api/records/7566042/files/zenodo.10K_MARS_2.4mJ.csv/content",
+        "published_url": "https://github.com/xergon/gsg-tcg-data/releases/download/s7-libs-efc1-v1/zenodo.10K_MARS_2.4mJ.csv"
+      },
+      {
+        "file": "zenodo.10K_MARS_7.2mJ.csv",
+        "bytes": 386557742,
+        "published_md5": "cb5047dada6acecb3f97a3119701a741",
+        "verified_md5": "cb5047dada6acecb3f97a3119701a741",
+        "md5_match": true,
+        "rows": 2435,
+        "columns": 16088,
+        "source_url": "https://zenodo.org/api/records/7566042/files/zenodo.10K_MARS_7.2mJ.csv/content",
+        "published_url": "https://github.com/xergon/gsg-tcg-data/releases/download/s7-libs-efc1-v1/zenodo.10K_MARS_7.2mJ.csv"
+      }
+    ]
+  },
+  "C_nist_asd": {
+    "doi": "10.18434/T4W30F",
+    "version": "ASD v5.12",
+    "endpoint": "https://physics.nist.gov/cgi-bin/ASD/lines1.pl",
+    "range_nm": [
+      240,
+      870
+    ],
+    "stages": "I-III",
+    "energy_unit": "eV",
+    "wavelength_medium": "air",
+    "columns": "element, sp_num, obs_wl_air(nm), unc_obs_wl, ritz_wl_air(nm), unc_ritz_wl, intens, Aki(s^-1), Acc, Ei(eV), Ek(eV), conf_i, term_i, J_i, conf_k, term_k, J_k, g_i, g_k, Type, tp_ref, line_ref",
+    "total_line_rows": 20592,
+    "per_element": [
+      {
+        "element": "Si",
+        "file": "nist_asd_Si_I-III_240-870nm.tsv",
+        "bytes": 103596,
+        "md5": "274a77876a2c8a3f9fd9ef708c2f87b5",
+        "line_rows": 912,
+        "http_status": 200,
+        "query_url": "https://physics.nist.gov/cgi-bin/ASD/lines1.pl?spectra=Si+I-III&limits_type=0&low_w=240&upp_w=870&unit=1&de=0&format=3&line_out=0&remove_js=on&en_unit=1&output=0&bibrefs=1&page_size=15&show_obs_wl=1&show_calc_wl=1&unc_out=1&order_out=0&show_av=2&tsb_value=0&A_out=0&intens_out=on&allowed_out=1&forbid_out=1&conf_out=on&term_out=on&enrg_out=on&J_out=on&g_out=on&submit=Retrieve+Data",
+        "published_url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/s7_libs_efc1/nist/nist_asd_Si_I-III_240-870nm.tsv"
+      },
+      {
+        "element": "Al",
+        "file": "nist_asd_Al_I-III_240-870nm.tsv",
+        "bytes": 75257,
+        "md5": "c69c894b2894c38e1a47968f35345fe2",
+        "line_rows": 626,
+        "http_status": 200,
+        "query_url": "https://physics.nist.gov/cgi-bin/ASD/lines1.pl?spectra=Al+I-III&limits_type=0&low_w=240&upp_w=870&unit=1&de=0&format=3&line_out=0&remove_js=on&en_unit=1&output=0&bibrefs=1&page_size=15&show_obs_wl=1&show_calc_wl=1&unc_out=1&order_out=0&show_av=2&tsb_value=0&A_out=0&intens_out=on&allowed_out=1&forbid_out=1&conf_out=on&term_out=on&enrg_out=on&J_out=on&g_out=on&submit=Retrieve+Data",
+        "published_url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/s7_libs_efc1/nist/nist_asd_Al_I-III_240-870nm.tsv"
+      },
+      {
+        "element": "Fe",
+        "file": "nist_asd_Fe_I-III_240-870nm.tsv",
+        "bytes": 2090398,
+        "md5": "9ed1c7d7f2433c63ebe0c646aaf91cba",
+        "line_rows": 12485,
+        "http_status": 200,
+        "query_url": "https://physics.nist.gov/cgi-bin/ASD/lines1.pl?spectra=Fe+I-III&limits_type=0&low_w=240&upp_w=870&unit=1&de=0&format=3&line_out=0&remove_js=on&en_unit=1&output=0&bibrefs=1&page_size=15&show_obs_wl=1&show_calc_wl=1&unc_out=1&order_out=0&show_av=2&tsb_value=0&A_out=0&intens_out=on&allowed_out=1&forbid_out=1&conf_out=on&term_out=on&enrg_out=on&J_out=on&g_out=on&submit=Retrieve+Data",
+        "published_url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/s7_libs_efc1/nist/nist_asd_Fe_I-III_240-870nm.tsv"
+      },
+      {
+        "element": "Mg",
+        "file": "nist_asd_Mg_I-III_240-870nm.tsv",
+        "bytes": 76537,
+        "md5": "3bdfd1ce3398e7bd0aa9d7d7b58de08a",
+        "line_rows": 604,
+        "http_status": 200,
+        "query_url": "https://physics.nist.gov/cgi-bin/ASD/lines1.pl?spectra=Mg+I-III&limits_type=0&low_w=240&upp_w=870&unit=1&de=0&format=3&line_out=0&remove_js=on&en_unit=1&output=0&bibrefs=1&page_size=15&show_obs_wl=1&show_calc_wl=1&unc_out=1&order_out=0&show_av=2&tsb_value=0&A_out=0&intens_out=on&allowed_out=1&forbid_out=1&conf_out=on&term_out=on&enrg_out=on&J_out=on&g_out=on&submit=Retrieve+Data",
+        "published_url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/s7_libs_efc1/nist/nist_asd_Mg_I-III_240-870nm.tsv"
+      },
+      {
+        "element": "Ca",
+        "file": "nist_asd_Ca_I-III_240-870nm.tsv",
+        "bytes": 63126,
+        "md5": "d325e872a3a353e6448fa3616ff2b343",
+        "line_rows": 426,
+        "http_status": 200,
+        "query_url": "https://physics.nist.gov/cgi-bin/ASD/lines1.pl?spectra=Ca+I-III&limits_type=0&low_w=240&upp_w=870&unit=1&de=0&format=3&line_out=0&remove_js=on&en_unit=1&output=0&bibrefs=1&page_size=15&show_obs_wl=1&show_calc_wl=1&unc_out=1&order_out=0&show_av=2&tsb_value=0&A_out=0&intens_out=on&allowed_out=1&forbid_out=1&conf_out=on&term_out=on&enrg_out=on&J_out=on&g_out=on&submit=Retrieve+Data",
+        "published_url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/s7_libs_efc1/nist/nist_asd_Ca_I-III_240-870nm.tsv"
+      },
+      {
+        "element": "Na",
+        "file": "nist_asd_Na_I-III_240-870nm.tsv",
+        "bytes": 129523,
+        "md5": "41153f71821b4f1dec5365aa8ace85e8",
+        "line_rows": 1048,
+        "http_status": 200,
+        "query_url": "https://physics.nist.gov/cgi-bin/ASD/lines1.pl?spectra=Na+I-III&limits_type=0&low_w=240&upp_w=870&unit=1&de=0&format=3&line_out=0&remove_js=on&en_unit=1&output=0&bibrefs=1&page_size=15&show_obs_wl=1&show_calc_wl=1&unc_out=1&order_out=0&show_av=2&tsb_value=0&A_out=0&intens_out=on&allowed_out=1&forbid_out=1&conf_out=on&term_out=on&enrg_out=on&J_out=on&g_out=on&submit=Retrieve+Data",
+        "published_url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/s7_libs_efc1/nist/nist_asd_Na_I-III_240-870nm.tsv"
+      },
+      {
+        "element": "K",
+        "file": "nist_asd_K_I-III_240-870nm.tsv",
+        "bytes": 38374,
+        "md5": "3f0dab9b7cb3c551ef6048d9b4346dd0",
+        "line_rows": 266,
+        "http_status": 200,
+        "query_url": "https://physics.nist.gov/cgi-bin/ASD/lines1.pl?spectra=K+I-III&limits_type=0&low_w=240&upp_w=870&unit=1&de=0&format=3&line_out=0&remove_js=on&en_unit=1&output=0&bibrefs=1&page_size=15&show_obs_wl=1&show_calc_wl=1&unc_out=1&order_out=0&show_av=2&tsb_value=0&A_out=0&intens_out=on&allowed_out=1&forbid_out=1&conf_out=on&term_out=on&enrg_out=on&J_out=on&g_out=on&submit=Retrieve+Data",
+        "published_url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/s7_libs_efc1/nist/nist_asd_K_I-III_240-870nm.tsv"
+      },
+      {
+        "element": "Ti",
+        "file": "nist_asd_Ti_I-III_240-870nm.tsv",
+        "bytes": 649474,
+        "md5": "3f6d3308765c8e37334a21cdae1be7d6",
+        "line_rows": 4225,
+        "http_status": 200,
+        "query_url": "https://physics.nist.gov/cgi-bin/ASD/lines1.pl?spectra=Ti+I-III&limits_type=0&low_w=240&upp_w=870&unit=1&de=0&format=3&line_out=0&remove_js=on&en_unit=1&output=0&bibrefs=1&page_size=15&show_obs_wl=1&show_calc_wl=1&unc_out=1&order_out=0&show_av=2&tsb_value=0&A_out=0&intens_out=on&allowed_out=1&forbid_out=1&conf_out=on&term_out=on&enrg_out=on&J_out=on&g_out=on&submit=Retrieve+Data",
+        "published_url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/s7_libs_efc1/nist/nist_asd_Ti_I-III_240-870nm.tsv"
+      }
+    ]
+  },
+  "repo_files": {
+    "pds/pds_superlibs_file_manifest.csv.gz": {
+      "bytes": 2649733,
+      "md5": "423761386d75ccbeecf919229bd67e5d",
+      "published_url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/s7_libs_efc1/pds/pds_superlibs_file_manifest.csv.gz"
+    },
+    "pds/collection_data_superlibs_inventory.csv": {
+      "bytes": 16051768,
+      "md5": "4912c1e1687a992b7d8142e3f91a941c",
+      "published_url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/s7_libs_efc1/pds/collection_data_superlibs_inventory.csv"
+    },
+    "pds/bundle_readme.txt": {
+      "bytes": 1717,
+      "md5": "4db65dcd438ec7f284fedb80a45b60b8",
+      "published_url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/s7_libs_efc1/pds/bundle_readme.txt"
+    },
+    "zenodo/zenodo_record_7566042.json": {
+      "bytes": 5230,
+      "md5": "c0ff54787ce362213aba1bd8f1d4d262",
+      "published_url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/s7_libs_efc1/zenodo/zenodo_record_7566042.json"
+    }
+  }
+}

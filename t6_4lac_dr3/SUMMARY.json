@@ -95,7 +95,7 @@
     "note": "table-4LAC-DR3-h.fits was re-downloaded from the FSSC on 2026-07-25 and is byte-identical to the 2026-07-21 frozen copy."
   },
   "icetracks_dr2_companion": {
-    "status": "NOT MIRRORED IN THIS REPO \u2014 fetch from Harvard Dataverse (endpoints re-checked live 2026-07-25)",
+    "status": "MIRRORED IN THIS REPO as a release asset (was NOT present before 2026-07-25; the pre-existing 'already delivered' note was a self-report, not a published artifact)",
     "doi": "10.7910/DVN/MMIIZA",
     "whole_release_zip": "https://dataverse.harvard.edu/api/access/dataset/:persistentId/versions/1.0?persistentId=doi:10.7910/DVN/MMIIZA",
     "zip_bytes_compressed": 116163148,
@@ -106,6 +106,48 @@
     "seasons": 14,
     "livetime_days": 4963.37,
     "TRAP": "Per-file endpoint WITHOUT ?format=original returns a Dataverse-INGESTED, DOUBLE-QUOTE-WRAPPED file whose MD5 does not match the published MD5, while the API filesize field describes the ingested file so a byte-size gate PASSES on the corrupt copy. ALWAYS append ?format=original, or take the whole-release zip.",
-    "dr1_superseded": "DR1 (doi:10.7910/DVN/VKL316, 2008-2018) is SUPERSEDED and must not be used or combined; only 49.8% of DR1 IC79 and 39.5% of IC86-2011 events survive into DR2."
+    "dr1_superseded": "DR1 (doi:10.7910/DVN/VKL316, 2008-2018) is SUPERSEDED and must not be used or combined; only 49.8% of DR1 IC79 and 39.5% of IC86-2011 events survive into DR2.",
+    "mirror_url": "https://github.com/xergon/gsg-tcg-data/releases/download/t6-icetracks-dr2-v1.0/icetracks_dr2_full_release_v1.0.zip",
+    "mirror_sha256": "b0c0f2db33c59c3c2a79bb73ddfe290e6a13ea834d20093f3e7be14c2cd81748",
+    "mirror_bytes": 116163148,
+    "mirror_verification": {
+      "zip_magic": "PK\\x03\\x04",
+      "unzip_t_crc32": "OK on all 44 members",
+      "uncompressed_bytes": 2609179705,
+      "readme_md5": "e21fdbf666ed36ede0566f5901788a68 (matches published Dataverse md5)",
+      "events_total": 1643355,
+      "events_expected": 1643355,
+      "events_match": true,
+      "per_season_rows": {
+        "IC40": 36900,
+        "IC59": 107011,
+        "IC79": 101956,
+        "IC86_I": 118774,
+        "IC86_II": 116669,
+        "IC86_III": 126535,
+        "IC86_IV": 129520,
+        "IC86_V": 130389,
+        "IC86_VI": 126260,
+        "IC86_VII": 147460,
+        "IC86_VIII": 131516,
+        "IC86_IX": 112830,
+        "IC86_X": 129840,
+        "IC86_XI": 127695
+      },
+      "derived_livetime_days": 4963.37,
+      "contains_originals_not_ingested": "confirmed \u2014 rows unquoted; IC40_effectiveArea.csv is 148112 B (original) not 152112 B (ingested)"
+    },
+    "contents": {
+      "events/<SEASON>_exp.csv": "14 files. Columns run, event, subevent, MJD[days], log10(E/GeV), AngErr[deg], RA[deg], Dec[deg], Azimuth[deg], Zenith[deg]. NO single event_id (identity is the TRIPLE run+event+subevent; ids RESET per season). NO season column \u2014 season is in the FILENAME only. AngErr has a hard floor of 0.2 deg.",
+      "irfs/<CONFIG>_smearing.csv": "ONLY 4 files (IC40, IC59, IC79, IC86), NOT 14 \u2014 IC86 covers IC86-2011..2021. 598,080,195 B each. Column Fractional_Counts is NOT a probability density: it is events-in-5D-bin / events-in-that-(E_nu,Dec_nu)-bin. Divide by bin volume for a density. Bin widths vary per cell; unlisted cells are 0.",
+      "irfs/<CONFIG>_effectiveArea.csv": "4 files. 40 log10(E_nu) x 50 dec = 2000 rows. Dec bins ARE uniform in sin(dec) (0.04 steps, -1..+1) but are STORED IN DEGREES \u2014 convert, do not assume.",
+      "uptime/<SEASON>_exp.csv": "14 files. Columns MJD_start[days], MJD_stop[days] ONLY \u2014 livetime_days is NOT a column, derive as sum(stop-start)."
+    },
+    "caution_for_T6": "Per-season effective areas and per-season IRFs DO NOT EXIST \u2014 there are 4 detector-configuration IRF sets covering 14 seasons, IC86 shared across 11. Any per-season systematic derived from the IRFs is not separable in the public products. This bears directly on the 'season' axis of the requested angular_smearing.zarr."
+  },
+  "not_built": {
+    "angular_smearing.zarr": "NOT BUILT \u2014 needs T6 decisions (density-vs-fractional-counts convention, and the per-season axis is not separable: only 4 IRF configs exist for 14 seasons).",
+    "halo_core_scrambles.parquet": "NOT BUILT \u2014 needs T6 decisions on the 10,000 RA-scramble contract.",
+    "events.parquet/effective_area.parquet/uptime.parquet": "NOT BUILT \u2014 raw originals are in the mirrored zip; conversion contract not yet given."
   }
 }

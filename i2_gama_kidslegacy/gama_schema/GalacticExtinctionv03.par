@@ -1,0 +1,32 @@
+# EqInputCat
+# GalacticExtinction
+# v03
+# 2014-08-18
+# Joe Liske <jochen.liske@uni-hamburg.de>
+#
+# This table provides the Galactic foreground extinction in all GALEX,
+# SDSS (= KiDS), UKIDSS and VIKING bands for all objects in the GAMA II
+# equatorial survey regions, i.e. for every object in InputCatA,
+# TilingExtra and SpStandards.
+#
+CATAID        1  -    meta.id;meta.main                    Unique ID of GAMA object
+RA            2  deg  pos.eq.ra                            RA of position for which the extinction was calculated (J2000)
+DEC           3  deg  pos.eq.dec                           DEC of position for which the extinction was calculated (J2000)
+EBV           4  mag  phys.absorption.gal                  E(B-V)
+A_FUV         5  mag  phys.absorption.gal;em.UV.100-200nm  Galactic extinction in GALEX FUV band
+A_NUV         6  mag  phys.absorption.gal;em.UV.200-300nm  Galactic extinction in GALEX NUV band
+A_B_MGC       7  mag  phys.absorption.gal;em.opt.B         Galactic extinction in MGC B band
+A_u           8  mag  phys.absorption.gal;em.opt.U         Galactic extinction in SDSS and KiDS u band
+A_g           9  mag  phys.absorption.gal;em.opt.B         Galactic extinction in SDSS and KiDS g band
+A_r          10  mag  phys.absorption.gal;em.opt.R         Galactic extinction in SDSS and KiDS r band
+A_i          11  mag  phys.absorption.gal;em.opt.I         Galactic extinction in SDSS and KiDS i band
+A_z          12  mag  phys.absorption.gal;em.opt           Galactic extinction in SDSS and KiDS z band
+A_Y_UKIDSS   13  mag  phys.absorption.gal;em.IR.NIR        Galactic extinction in UKIDSS Y band
+A_J_UKIDSS   14  mag  phys.absorption.gal;em.IR.J          Galactic extinction in UKIDSS J band
+A_H_UKIDSS   15  mag  phys.absorption.gal;em.IR.H          Galactic extinction in UKIDSS H band
+A_K_UKIDSS   16  mag  phys.absorption.gal;em.IR.K          Galactic extinction in UKIDSS K band
+A_Z_VIKING   17  mag  phys.absorption.gal;em.opt           Galactic extinction in VIKING Z band
+A_Y_VIKING   18  mag  phys.absorption.gal;em.IR.NIR        Galactic extinction in VIKING Y band
+A_J_VIKING   19  mag  phys.absorption.gal;em.IR.J          Galactic extinction in VIKING J band
+A_H_VIKING   20  mag  phys.absorption.gal;em.IR.H          Galactic extinction in VIKING H band
+A_K_VIKING   21  mag  phys.absorption.gal;em.IR.K          Galactic extinction in VIKING K band

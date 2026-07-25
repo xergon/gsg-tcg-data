@@ -1,0 +1,57 @@
+[
+  {
+    "stage": "S0  TilingCat v46 (GAMA-II equatorial parent)",
+    "n": 221373,
+    "note": "G09+G12+G15, 3 x 12x5 deg^2 = 180 deg^2"
+  },
+  {
+    "stage": "S1  SURVEY_CLASS >= 4  (r<19.8 GAMA-II main survey)",
+    "n": 189004,
+    "note": ""
+  },
+  {
+    "stage": "S2  NQ >= 3  (reliable spectroscopic redshift)",
+    "n": 186137,
+    "note": ""
+  },
+  {
+    "stage": "S3  join DistancesFrames v14 on CATAID",
+    "n": 186137,
+    "note": "Z_CMB, DM"
+  },
+  {
+    "stage": "S3b 0.002 < Z_CMB < 0.6",
+    "n": 182305,
+    "note": ""
+  },
+  {
+    "stage": "S4  join SersicCatSDSS v09 on CATAID",
+    "n": 182305,
+    "note": "1:1 with TilingCat"
+  },
+  {
+    "stage": "S5  valid r-band Sersic fit (0<Re<1000\", 0.1<n<20, 0<=e<1, 0<mag<30)",
+    "n": 181608,
+    "note": "GALINDEX_r==20 is the GALFIT ceiling -> excluded"
+  },
+  {
+    "stage": "S6  join StellarMassesLambdarv24.fits on CATAID (LEFT)",
+    "n": 181608,
+    "note": "logmstar present for 181,536"
+  },
+  {
+    "stage": "S7  join G3CGal v10 + G3CFoFGroup v10 (LEFT)",
+    "n": 181608,
+    "note": "in a FoF group: 74,222; ungrouped: 107,386"
+  },
+  {
+    "stage": "S8  join EnvironmentMeasures v06 (LEFT)",
+    "n": 181608,
+    "note": "has env measure: 67,740 (DMU is z-limited, N_total=92,513)"
+  },
+  {
+    "stage": "S9  lens table written (pre-isolation, pre-KiDS)",
+    "n": 181608,
+    "note": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/fleet_fanout_harvest_2026_07_25/i2_gama_kidslegacy/build/gama_lens_stage_pre_isolation.parquet"
+  }
+]

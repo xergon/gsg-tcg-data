@@ -1,0 +1,37 @@
+[
+  {
+    "stage": "KiDS-Legacy gold catalogue (full)",
+    "n": 40894394,
+    "note": "50 cols, EXT=Main"
+  },
+  {
+    "stage": "KiDS-Legacy sources inside GAMA G09/G12/G15 (+0.25 deg)",
+    "n": 6063590,
+    "note": ""
+  },
+  {
+    "stage": "GAMA lens table carried in",
+    "n": 181608,
+    "note": ""
+  },
+  {
+    "stage": "per-lens source counts 100_300 kpc",
+    "n": 44502149,
+    "note": "median per lens = 50"
+  },
+  {
+    "stage": "per-lens source counts 300_1000 kpc",
+    "n": 373071167,
+    "note": "median per lens = 544"
+  },
+  {
+    "stage": "per-lens source counts 30_1400 kpc",
+    "n": 739121657,
+    "note": "median per lens = 1164"
+  },
+  {
+    "stage": "FINAL gama_kidslegacy_ipr_rar_inputs_v1.parquet",
+    "n": 181608,
+    "note": "/Users/resorb/Documents/My Papers/Research Program Management/implementation_lanes/fleet_fanout_harvest_2026_07_25/i2_gama_kidslegacy/build/gama_kidslegacy_ipr_rar_inputs_v1.parquet"
+  }
+]

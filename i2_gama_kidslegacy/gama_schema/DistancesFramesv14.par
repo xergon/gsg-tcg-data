@@ -1,0 +1,24 @@
+# LocalFlowCorrection
+# DistancesFrames
+# v14
+# 2015-05-22
+# Ivan Baldry <i.baldry@ljmu.ac.uk>
+#
+# This table provides redshifts in various reference frames,
+# flow-corrected redshifts, and distance moduli for all GAMA II
+# objects with redshifts.
+#
+CATAID          1  -    meta.id;meta.main            Unique GAMA ID of object
+RA              2  deg  pos.eq.ra                    J2000 coordinate
+DEC             3  deg  pos.eq.dec                   J2000 coordinate
+NQ              4  -    meta.code.qual;src.redshift  Quality of redshift
+Z_HELIO         5  -    src.redshift                 Heliocentric redshift
+Z_LG            6  -    src.redshift                 Local Group frame redshift
+Z_CMB           7  -    src.redshift                 CMB frame redshift 
+Z_TONRY         8  -    src.redshift                 Flow-corrected redshift using Tonry et al. model
+Z_TONRY_HIGH    9  -    src.redshift                 Recomputed after adjusting z_helio by +180 km/s
+Z_TONRY_LOW    10  -    src.redshift                 Recomputed after adjusting z_helio by -180 km/s
+DM_70_30_70    11  mag  phot.mag.distMod             Distance modulus for 737 cosmology
+DM_100_30_70   12  mag  phot.mag.distMod             Distance modulus for H0=100, om_m=0.30, om_L=0.70
+DM_70_25_75    13  mag  phot.mag.distMod             Distance modulus for H0=70, om_m=0.25, om_L=0.75
+DM_100_25_75   14  mag  phot.mag.distMod             Distance modulus for H0=100, om_m=0.25, om_L=0.75

@@ -1,0 +1,38 @@
+# EqInputCat
+# InputCatA
+# v07
+# 2015-04-29
+# Ivan Baldry <i.baldry@ljmu.ac.uk>
+#
+# This is the GAMA II master input catalogue for the GAMA II
+# equatorial survey regions. It provides SDSS DR7 data for an enlarged
+# area of 14x6.5 deg^2 covering the GAMA II equatorial regions.
+#
+CATAID            1  -       meta.id;meta.main             Unique GAMA ID of object
+OBJID             2  -       meta.id                       SDSS objid
+RA                3  deg     pos.eq.ra                     J2000 coordinate
+DEC               4  deg     pos.eq.dec                    J2000 coordinate
+FLAGS             5  -       meta.code.qual;phot           See SDSS photoobj table
+PRIMTARGET        6  -       meta.code.class               See SDSS photoobj table
+TYPE              7  -       src.class                     SDSS photo type (3=galaxy, 6=star, 8=sky)
+PSFMAG_R          8  mag     phot.mag;em.opt.R             SDSS DR7 r band PSF magnitude
+FIBERMAG_R        9  mag     phot.mag;em.opt.R             SDSS DR7 r band 3-arcsec fibre magnitude
+FLAGS_R          10  -       meta.code.qual;phot;em.opt.R  See SDSS photoobj table
+EXTINCTION_R     11  mag     phys.absorption.gal;em.opt.R  Galactic extinction in r band
+PETRORAD_R       12  arcsec  phys.angSize;em.opt.R         Petrosian radius in r band
+PETROR90_R       13  arcsec  phys.angSize;em.opt.R         Radius containing 90% of Petrosian flux
+PETROR50_R       14  arcsec  phys.angSize;em.opt.R         Radius containing 50% of Petrosian flux
+PETROMAG_G       15  mag     phot.mag;em.opt               SDSS DR7 g band Petrosian magnitude
+PETROMAG_R       16  mag     phot.mag;em.opt.R             SDSS DR7 r band Petrosian magnitude
+PETROMAG_I       17  mag     phot.mag;em.opt.I             SDSS DR7 i band Petrosian magnitude
+MODELMAG_U       18  mag     phot.mag;em.opt.U             SDSS DR7 u band model magnitude
+MODELMAG_G       19  mag     phot.mag;em.opt               SDSS DR7 g band model magnitude
+MODELMAG_R       20  mag     phot.mag;em.opt.R             SDSS DR7 r band model magnitude
+MODELMAG_I       21  mag     phot.mag;em.opt.I             SDSS DR7 i band model magnitude
+MODELMAG_Z       22  mag     phot.mag;em.opt               SDSS DR7 z band model magnitude
+STATUS           23  -       meta.code.status              See SDSS photoobj table
+RUN              24  -       obs.param                     SDSS run number
+MASK_IC_10       25  -       meta.code                     Mask value 0.0 to 1.0 around V<10 stars, see notes
+MASK_IC_12       26  -       meta.code                     Mask value 0.0 to 1.0 around V<12 stars, see notes
+MASK_SATUR       27  -       meta.code                     Saturation class from FLAGS and FLAGS_R, see notes
+EXCEPTION_FLAG   28  -       meta.code                     Exceptions to mask criteria, targets to include

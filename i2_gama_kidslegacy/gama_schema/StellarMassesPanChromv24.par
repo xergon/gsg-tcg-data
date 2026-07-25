@@ -1,0 +1,130 @@
+# StellarMasses
+# StellarMassesPanChrom
+# v24
+# 2021-06-04
+# Edward Taylor <entaylor@swin.edu.au>
+#
+# This table provides stellar masses, restframe photometry, and other
+# ancillary stellar population parameters from stellar population fits
+# to multiband SEDs (using aperture-matched photometry) for all D > 0
+# objects in the equatorial survey regions.
+#
+CATAID                 1  -                 meta.id;meta.main                unique GAMA II ID of GAMA object
+Z                      2  -                 src.redshift                     heliocentric redshift
+comovingdist           3  Mpc               pos.distance                     comoving distance, derived using Z_TONRY
+nefffilt               4  -                 meta.number                      effective number of filters used in SPS fit
+snratio                5  -                 meta.number                      net signal-to-noise across all filters used for SPS fit
+ppp                    6  -                 meta.number                      Posterior Predictive P-value goodness-of-fit statistic
+nefftemp               7  -                 meta.number                      effective number of filters contributing to SPS fit
+logmstar               8  dex(Msun)         phys.mass                        stellar mass estimate
+dellogmstar            9  dex(Msun)         stat.error                       statistical uncertainty in logmstar
+mstar                 10  Msun              phys.mass                        stellar mass estimate
+delmstar              11  Msun              stat.error                       statistical uncertainty in mstar
+logage                12  dex(yr)           time.age                         time since start of star formation
+dellogage             13  dex(yr)           stat.error                       statistical uncertainty in logage
+logtau                14  dex(yr)           time.scale                       star formation history e-folding time
+dellogtau             15  dex(yr)           stat.error                       statistical uncertainty in logtau
+logmet                16  -                 phys.abund.Z                     stellar metallicity Z = log [O/H] (Z_sol = 0.02)
+dellogmet             17  -                 stat.error                       statistical uncertainty in logmet
+dustEBV               18  mag               phys.absorption                  single screen dust extinction E(B-V)
+deldustEBV            19  mag               stat.error                       statistical uncertainty in dustEBV
+logmremnants          20  dex(Msun)         phys.mass                        mass in subluminous stellar remnants
+dellogmremnants       21  dex(Msun)         stat.error                       statistical uncertainty in logmremnants
+logmintsfh            22  dex(Msun)         phys.mass                        mass inferred from integration over the full SFH
+dellogmintsfh         23  dex(Msun)         stat.error                       statistical uncertainty in logmintsfh
+logLWage              24  dex(yr)           time.age                         light-weighted mean stellar age
+dellogLWage           25  dex(yr)           stat.error                       statistical uncertainty in logLWage
+uminusr               26  mag               phot.color                       restframe (u-r) colour
+deluminusr            27  mag               stat.error                       statistical uncertainty in uminusr
+uminusr_stars         28  mag               phot.color                       intrinsic stellar (u-r) colour (corrected for internal dust)
+deluminusr_stars      29  mag               stat.error                       statistical uncertainty in uminusr_stars
+gminusi               30  mag               phot.color                       restframe (g-i) colour
+delgminusi            31  mag               stat.error                       statistical uncertainty in gminusi
+gminusi_stars         32  mag               phot.color                       intrinsic stellar (g-i) colour (corrected for internal dust)
+delgminusi_stars      33  mag               stat.error                       statistical uncertainty in gminusi_stars
+logmoverl_i           34  dex(Msun/Lsun,i)  phys.composition.massLightRatio  i-band mass-to-light ratio
+dellogmoverl_i        35  dex(Msun/Lsun,i)  stat.error                       statistical uncertainty in logmoverl_i
+C_logM_gi             36  -                 stat.correlation                 correlation coefficient for logmstar and gminusi
+C_logM_gistars        37  -                 stat.correlation                 correlation coefficient for logmstar and gminusi_stars
+C_logM_ur             38  -                 stat.correlation                 correlation coefficient for logmstar and uminusr
+C_logM_urstars        39  -                 stat.correlation                 correlation coefficient for logmstar and uminusr_stars
+C_logM_logLWage       40  -                 stat.correlation                 correlation coefficient for logmstar and logLWage
+C_logM_EBV            41  -                 stat.correlation                 correlation coefficient for logmstar and dustEBV
+absmag_FUV            42  mag               phys.magAbs                      FUV-band absolute magnitude (restframe; AB)
+delabsmag_FUV         43  mag               stat.error                       statistical uncertainty in absmag_FUV
+absmag_NUV            44  mag               phys.magAbs                      NUV-band absolute magnitude (restframe; AB)
+delabsmag_NUV         45  mag               stat.error                       statistical uncertainty in absmag_NUV
+absmag_u              46  mag               phys.magAbs                      u-band absolute magnitude (restframe; AB)
+delabsmag_u           47  mag               stat.error                       statistical uncertainty in absmag_u
+absmag_g              48  mag               phys.magAbs                      g-band absolute magnitude (restframe; AB)
+delabsmag_g           49  mag               stat.error                       statistical uncertainty in absmag_g
+absmag_r              50  mag               phys.magAbs                      r-band absolute magnitude (restframe; AB)
+delabsmag_r           51  mag               stat.error                       statistical uncertainty in absmag_r
+absmag_i              52  mag               phys.magAbs                      i-band absolute magnitude (restframe; AB)
+delabsmag_i           53  mag               stat.error                       statistical uncertainty in absmag_i
+absmag_Z              54  mag               phys.magAbs                      Z-band absolute magnitude (restframe; AB)
+delabsmag_Z           55  mag               stat.error                       statistical uncertainty in absmag_Z
+absmag_Y              56  mag               phys.magAbs                      Y-band absolute magnitude (restframe; AB)
+delabsmag_Y           57  mag               stat.error                       statistical uncertainty in absmag_Y
+absmag_J              58  mag               phys.magAbs                      J-band absolute magnitude (restframe; AB)
+delabsmag_J           59  mag               stat.error                       statistical uncertainty in absmag_J
+absmag_H              60  mag               phys.magAbs                      H-band absolute magnitude (restframe; AB)
+delabsmag_H           61  mag               stat.error                       statistical uncertainty in absmag_H
+absmag_K              62  mag               phys.magAbs                      K-band absolute magnitude (restframe; AB)
+delabsmag_K           63  mag               stat.error                       statistical uncertainty in absmag_K
+absmag_W1             64  mag               phys.magAbs                      W1-band absolute magnitude (restframe; AB)
+delabsmag_W1          65  mag               stat.error                       statistical uncertainty in absmag_W1
+absmag_W2             66  mag               phys.magAbs                      W2-band absolute magnitude (restframe; AB)
+delabsmag_W2          67  mag               stat.error                       statistical uncertainty in absmag_W2
+absmag_FUV_stars      68  mag               phys.magAbs                      intrinsic stellar FUV-band absolute magnitude (restframe; AB)
+delabsmag_FUV_stars   69  mag               stat.error                       statistical uncertainty in absmag_FUV_stars
+absmag_NUV_stars      70  mag               phys.magAbs                      intrinsic stellar NUV-band absolute magnitude (restframe; AB)
+delabsmag_NUV_stars   71  mag               stat.error                       statistical uncertainty in absmag_NUV_stars
+absmag_u_stars        72  mag               phys.magAbs                      intrinsic stellar u-band absolute magnitude (restframe; AB)
+delabsmag_u_stars     73  mag               stat.error                       statistical uncertainty in absmag_u_stars
+absmag_g_stars        74  mag               phys.magAbs                      intrinsic stellar g-band absolute magnitude (restframe; AB)
+delabsmag_g_stars     75  mag               stat.error                       statistical uncertainty in absmag_g_stars
+absmag_r_stars        76  mag               phys.magAbs                      intrinsic stellar r-band absolute magnitude (restframe; AB)
+delabsmag_r_stars     77  mag               stat.error                       statistical uncertainty in absmag_r_stars
+absmag_i_stars        78  mag               phys.magAbs                      intrinsic stellar i-band absolute magnitude (restframe; AB)
+delabsmag_i_stars     79  mag               stat.error                       statistical uncertainty in absmag_i_stars
+absmag_Z_stars        80  mag               phys.magAbs                      intrinsic stellar Z-band absolute magnitude (restframe; AB)
+delabsmag_Z_stars     81  mag               stat.error                       statistical uncertainty in absmag_Z_stars
+absmag_Y_stars        82  mag               phys.magAbs                      intrinsic stellar Y-band absolute magnitude (restframe; AB)
+delabsmag_Y_stars     83  mag               stat.error                       statistical uncertainty in absmag_Y_stars
+absmag_J_stars        84  mag               phys.magAbs                      intrinsic stellar J-band absolute magnitude (restframe; AB)
+delabsmag_J_stars     85  mag               stat.error                       statistical uncertainty in absmag_J_stars
+absmag_H_stars        86  mag               phys.magAbs                      intrinsic stellar H-band absolute magnitude (restframe; AB)
+delabsmag_H_stars     87  mag               stat.error                       statistical uncertainty in absmag_H_stars
+absmag_K_stars        88  mag               phys.magAbs                      intrinsic stellar K-band absolute magnitude (restframe; AB)
+delabsmag_K_stars     89  mag               stat.error                       statistical uncertainty in absmag_K_stars
+absmag_W1_stars       90  mag               phys.magAbs                      intrinsic stellar W1-band absolute magnitude (restframe; AB)
+delabsmag_W1_stars    91  mag               stat.error                       statistical uncertainty in absmag_W1_stars
+absmag_W2_stars       92  mag               phys.magAbs                      intrinsic stellar W2-band absolute magnitude (restframe; AB)
+delabsmag_W2_stars    93  mag               stat.error                       statistical uncertainty in absmag_W2_stars
+fitflux_FUV           94  Jy                phot.flux.density                observers frame FUV-band flux from SPS fit
+delfitflux_FUV        95  Jy                stat.error                       statistical uncertainty in fitflux_FUV
+fitflux_NUV           96  Jy                phot.flux.density                observers frame NUV-band flux from SPS fit
+delfitflux_NUV        97  Jy                stat.error                       statistical uncertainty in fitflux_NUV
+fitflux_u             98  Jy                phot.flux.density                observers frame u-band flux from SPS fit
+delfitflux_u          99  Jy                stat.error                       statistical uncertainty in fitflux_u
+fitflux_g            100  Jy                phot.flux.density                observers frame g-band flux from SPS fit
+delfitflux_g         101  Jy                stat.error                       statistical uncertainty in fitflux_g
+fitflux_r            102  Jy                phot.flux.density                observers frame r-band flux from SPS fit
+delfitflux_r         103  Jy                stat.error                       statistical uncertainty in fitflux_r
+fitflux_i            104  Jy                phot.flux.density                observers frame i-band flux from SPS fit
+delfitflux_i         105  Jy                stat.error                       statistical uncertainty in fitflux_i
+fitflux_Z            106  Jy                phot.flux.density                observers frame Z-band flux from SPS fit
+delfitflux_Z         107  Jy                stat.error                       statistical uncertainty in fitflux_Z
+fitflux_Y            108  Jy                phot.flux.density                observers frame Y-band flux from SPS fit
+delfitflux_Y         109  Jy                stat.error                       statistical uncertainty in fitflux_Y
+fitflux_J            110  Jy                phot.flux.density                observers frame J-band flux from SPS fit
+delfitflux_J         111  Jy                stat.error                       statistical uncertainty in fitflux_J
+fitflux_H            112  Jy                phot.flux.density                observers frame H-band flux from SPS fit
+delfitflux_H         113  Jy                stat.error                       statistical uncertainty in fitflux_H
+fitflux_K            114  Jy                phot.flux.density                observers frame K-band flux from SPS fit
+delfitflux_K         115  Jy                stat.error                       statistical uncertainty in fitflux_K
+fitflux_W1           116  Jy                phot.flux.density                observers frame W1-band flux from SPS fit
+delfitflux_W1        117  Jy                stat.error                       statistical uncertainty in fitflux_W1
+fitflux_W2           118  Jy                phot.flux.density                observers frame W2-band flux from SPS fit
+delfitflux_W2        119  Jy                stat.error                       statistical uncertainty in fitflux_W2

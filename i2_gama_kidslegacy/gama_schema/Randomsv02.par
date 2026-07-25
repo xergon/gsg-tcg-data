@@ -1,0 +1,21 @@
+# Randoms
+# Randoms
+# v02
+# 2016-09-16
+# Daniel Farrow <dfarrow@mpe.mpg.de>
+#
+# This table provides a set of randomly distributed points with the
+# same selection function as the galaxies in the GAMA II equatorial
+# survey regions. Each point is a clone of a real GAMA galaxy,
+# identified by its CATAID, which can be used to assign properties to
+# the random points. The redshifts of randoms are restricted to a
+# Gaussian window around the redshift of the real galaxy being cloned.
+#
+RANDID         1  -    meta.id;meta.main     Unique random ID   
+CATAID         2  -    meta.id               GAMA galaxy ID
+RA             3  deg  pos.eq.ra             Right Ascension 
+DEC            4  deg  pos.eq.dec            Declination 
+Z              5  -    src.redshift          Redshift 
+R_PETRO_ABS    6  mag  phys.magAbs;em.opt.R  Absolute r-band Petrosian magnitude 
+R_PETRO        7  mag  phot.mag;em.opt.R     Apparent r-band Petrosian magnitude
+RAND_NUM       8  -    stat.value            A random number in the range (0,1] to select subsets

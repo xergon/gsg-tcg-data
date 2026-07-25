@@ -1,0 +1,33 @@
+# SpecCat
+# SpecAll
+# v27
+# 2015-05-21
+# Joe Liske <jochen.liske@uni-hamburg.de>
+#
+# This table lists all spectra that are available in the GAMA survey
+# regions, including GAMA spectra and those from previous
+# spectroscopic surveys (such as the SDSS). Duplicate observations of
+# the same object are retained in this table (but a flag is provided
+# to mark the spectrum that provided the best available redshift of a
+# given object). Every spectrum listed in this table is available in
+# the GAMA DR4 database.
+#
+SPECID         1  -       meta.id;meta.main                 Unique ID of spectrum
+SURVEY         2  -       meta.dataset                      Survey this spectrum originated from
+SURVEY_CODE    3  -       meta.code;meta.dataset            Numerical code for originating survey
+RA             4  deg     pos.eq.ra                         RA of spectrum (J2000)
+DEC            5  deg     pos.eq.dec                        DEC of spectrum (J2000)
+WMIN           6  A       em.wl;stat.min                    Minimum wavelength of spectrum
+WMAX           7  A       em.wl;stat.max                    Maximum wavelength of spectrum
+Z              8  -       src.redshift                      Heliocentric redshift
+NQ             9  -       meta.code.qual;src.redshift       Normalised redshift quality (use nQ > 2 for science)
+PROB          10  -       stat.probability;src.redshift     Probability that redshift is correct
+FILENAME      11  -       meta.id;meta.file;meta.fits       Full path and filename of the spectrum
+URL           12  -       meta.ref.url;meta.file;meta.fits  URL of the spectrum
+URL_IMG       13  -       meta.ref.url;meta.file            URL of the spectrum's image
+CATAID        14  -       meta.id.cross;src                 ID of matched GAMA object
+GAMA_NAME     15  -       meta.id.cross;src                 Name of matched GAMA object
+IC_FLAG       16  -       meta.code.member                  Catalogue source(s) of matched GAMA object
+DIST          17  arcsec  pos.angDistance                   Distance between spectrum and matched GAMA object
+IS_SBEST      18  -       meta.code                         Spectrum with best redshift for this object in originating survey?
+IS_BEST       19  -       meta.code                         Spectrum with best redshift for this object?

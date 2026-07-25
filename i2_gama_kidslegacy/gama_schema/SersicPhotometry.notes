@@ -1,0 +1,283 @@
+SersicPhotometry
+2015-12-17
+Lee Kelvin <l.s.kelvin@ljmu.ac.uk>
+
+The SersicPhotometry DMU produces a single-Sersic (1-component only)
+fit to the 2D surface brightness distribution of every object in the
+GAMA II equatorial survey regions (i.e. every object in TilingCatv41).
+The fitting is performed across all passbands in the SDSS (ugriz),
+UKIDSS-LAS (YJHK) and VISTA VIKING (ZYJHK) surveys. This DMU contains
+three catalogues, one for each survey: SersicCatSDSS, SersicCatUKIDSS
+and SersicCatVIKING.
+
+Galaxy single-Sersic modelling is achieved using SIGMA v1.0-2
+(Structural Investigation of Galaxies via Model Analysis). SIGMA is a
+wrapper around several contemporary astronomy tools such as Source
+Extractor (<a href="https://ui.adsabs.harvard.edu/abs/1996A%26AS..117..393B">Bertin & Arnouts 1996</a>), PSF Extractor (Bertin and Delorme,
+priv. comm.) and GALFIT 3 (<a href="https://ui.adsabs.harvard.edu/abs/2010AJ....139.2097P">Peng et al. 2010</a>), as well as analysis and
+processing code written in the open-source <a href="http://www.r-project.org/">R programming language</a> (R
+Development Core Team, 2010). Please cite <a href="https://ui.adsabs.harvard.edu/abs/2012MNRAS.421.1007K">Kelvin et al. (2012)</a> when
+using data products from this DMU.
+
+GALFIT is the workhorse fitting algorithm used within SIGMA. To
+produce a model of a galaxy, GALFIT must be provided with suitable
+starting parameters (such as size, magnitude, ellipticity, etc.), an
+appropriate PSF and cutouts of both the science data and any
+associated weight maps. The cutouts are created from the GAMA v03
+mosaics, with physical initial conditions and the PSF provided by
+Source Extractor and PSF Extractor, respectively. These programs are
+called and setup automatically within the SIGMA script, their outputs
+reprocessed into a form GALFIT is able to read, and fed into GALFIT.
+GALFIT uses a simple downhill minimisation in order to minimise the
+global chi^2 of the model. Its outputs are analysed by SIGMA for any
+obvious errors, and, if found, an attempt at fixing them will
+automatically be made.
+
+The catalogues within this DMU do not contain many of the calculated
+Source Extractor and PSF Extractor values used as an input into
+GALFIT. Instead, only the main Source Extractor and PSF Extractor
+values are included, alongside the full GALFIT outputs. In addition,
+several utility parameters (such as truncated magnitude and central
+surface brightness, etc.) are estimated based on the GALFIT outputs,
+and provided here, for convenience.
+
+Below are more detailed notes on several of the columns provided by
+the catalogues of the SersicPhotometry DMU. The unique identifier for
+the SersicPhotometry DMU is the CATAID (column 1) which refers to the
+GAMA ID of an object. Null entries in any of the catalogues are
+labelled -9999. For further details on the operation of SIGMA, please
+refer to Kelvin et al. (2012).
+
+* The Mosaicing DMU has not yet undergone Quality Control, however,
+  its outputs will not change in the foreseeable future.
+
+Dependencies:
+    InputCat    TilingCatv41
+    Mosaicing   v03 (non-QC'ed product)
+
+################################################################################
+
+SURVEY_OLDCLASS (from TilingCatv41)
+
+soc = 0:  not a target (except for checks on vis_class=3).
+soc = 1:  filler targets - 19.8-19.85, multi-lambda (G12).
+soc = 2:  H-ATLAS targets.
+soc >= 3: *** MS *** union of GAMA II main survey and GAMA I main survey.
+soc >= 4: GAMA I main survey.
+soc >= 5: GAMA I main survey r or z-selected. 
+soc >= 6: GAMA I main survey r-selected only. 
+soc = 7:  r < 19.0 and sg_sep > 0.25 (Year 1 high priority targets).
+
+################################################################################
+
+SURVEY_CLASS (from TilingCatv41)
+
+sc = 0:  not a target (except for checks on vis_class=3).
+sc = 1:  filler targets - 19.8-19.85, multi-lambda (G12).
+sc = 2:  H-ATLAS targets.
+sc >= 3: *** MS *** union of GAMA II main survey and GAMA I main survey.
+sc >= 4: r < 19.8, GAMA II main survey.
+sc >= 5: r < 19.8 and satisfies r-band star-galaxy separation.
+sc = 6:  r < 19.4 and satisfies r-band star-galaxy separation.
+
+See 'Input catalogue and star-galaxy separation' (IC) paper for
+details on selection.
+
+Further note: Objects with target_flags=0 (also survey_class=0) have 
+2 <= vis_class <= 4 or they are excluded only by Eq. 12 of the IC
+paper (Sec. 5.2). These remain in the tiling catalogue because they
+are rejected by a more subjective criteria than the other selections.
+
+################################################################################
+
+Position Angles / GALPA
+
+The position angle on the image recovered from GALFIT. This is defined
+from the positive x-axis of the image (approximately aligned to west),
+increasing from zero anti-clockwise.
+
+x-positive     0 degrees
+y-positive    90 degrees
+x-negative   180 degrees (equivalent to x-positive, redundant)
+y-negative   -90 degrees (equivalent to y-positive, redundant)
+
+This DMU does *not* include equivalent WCS angles on the sky. However,
+an approximate on-sky angle can be recovered as:
+
+GALPA_J2000_X = GALPA_X + (THETA_J2000 - THETA_IMAGE)
+
+where THETA_J2000 and THETA_IMAGE are the on-sky and on-image position
+angles, respectively, listed in the table <a href="/dr4/schema/table.php?name=ApMatchedCat">ApMatchedCat</a> in the
+ApMatchedPhotom DMU.
+
+Despite this being only an approximation, we recommend the use of
+GALPA_J2000_X over THETA_J2000.
+
+################################################################################
+
+GALPLAN
+
+From time to time, giving GALFIT too much freedom whilst fitting
+(e.g., attempting to fit >5 secondary Sérsic sources at the same time
+as the primary galaxy) causes the GALFIT code to crash. In cases like
+this, we re-run GALFIT with a different set of initial conditions; in
+essence, an automatic hotfix.  These hotfixes, or GALFIT plans
+(GALPLAN) are tried in a sequential order until one of them
+successfully produces a stable GALFIT output file. Below we list the
+GALPLAN flag identifiers, and their meaning.
+
+0  - All hotfixes below have been attempted, without success
+1  - standard setup, SExtractor used as input
+2  - shrink fitting region (only if a very bright nearby neighbour is detected)
+3a - jiggle initial guess fitting parameters down (smaller/fainter)
+3b - jiggle initial guess fitting parameters up (larger/brighter)
+4  - mask all secondary sources
+5  - remove all fitting constraints
+
+Note that GALPLAN 3a and 3b appear simply as 3 in the output
+catalogues.
+
+If the first fit fails, and a sufficiently bright nearby source is not
+automatically detected, SIGMA skips to 3b and alters the SExtractor
+inputs by mag+1 and radius*0.9 ('jiggle' down).
+
+If GALPLAN 3a is unsuccessful, SIGMA skips to 3b and alters the
+SExtractor inputs by mag-1 and radius*1.1 ('jiggle' up).
+
+These hotfixes can significantly help as, often, GALFIT only needs a
+little assistance getting out of a local minimum that it had
+previously been trapped in. However, we caution that just because
+GALFIT has created an output file without crashing does not mean that
+the model is a good description of the galaxy.
+
+################################################################################
+
+Goodness of Fit
+
+The SersicPhotometry catalogues provide two main estimators of
+goodness of fit: GALCHI2 and PRICHI2, two measures of the reduced
+chi^2 statistic, in addition to their associated parameters (number of
+free parameters, number of degrees of freedom, and full unreduced
+chi^2 statistic).
+
+The GALCHI2 values represent the GALFIT goodness of fit statistic.
+This statistic is derived from all pixels in the entire input fitting
+region, including secondary objects.
+
+The PRICHI2 values represent derived goodness of fit statistics based
+on only those pixels which belong to the primary galaxy Source
+Extractor segmentation map. As such, PRICHI2 is intended to be a more
+reliable goodness of fit statistic to use for model quality
+estimation, and is recommended for science use.
+
+################################################################################
+
+Magnitudes
+
+Magnitudes presented in this catalogue have not been corrected for the
+effect of foreground Milky Way dust extinction. Should these
+corrections be required, they can be obtained from the table
+<a href="/dr4/schema/table.php?name=GalacticExtinction">GalacticExtinction</a> in the EqInputCat DMU.
+
+All photometry is on the AB system.
+
+################################################################################
+
+FAQs
+
+Q: How would you recommend to exclude bad fits from the
+SersicPhotometry catalogues, in each band, and why?
+
+A: First up, you can use the goodness of fit estimators to gain an
+insight into the quality of the fit. Each galaxy has two goodness of
+fit estimators: GALCHI2 and PRICHI2. GALCHI2 is the reduced
+chi-squared as output by GALFIT. PRICHI2 is the recalculated reduced
+chi-squared as calculated by SIGMA, using only those pixels which
+belong to the primary galaxy (as determined by the Source Extractor
+segmentation map).
+
+The catalogues also give the number of degrees of freedom
+(GALNDOF/PRINDOF = number of pixels - number of fitted parameters =
+pixels - 7) and the total (non-reduced) chi-squared values
+(GALCHI2FULL/PRICHI2FULL), which should allow you to calculate a
+p-value for each galaxy, should you wish to do so.
+
+Choosing the thresholds for what may be considered a 'good' reduced
+chi-squared is best left to the user. We recommend using the range 
+0.5 < chi-squared-reduced < 1.5 (or 2), but other options are
+available (e.g., exclude the outlying 10%, say). In general, we find
+the primary goodness of fit estimators (PRI*) tend to be more
+sensitive to the fit of the primary galaxy. For science therefore, we
+generally recommend their use over the GALFIT values, which instead
+tell you more about the quality of the model fit to the image as a
+whole (i.e., including secondary and tertiary galaxies as well).
+
+In addition, GALFIT also outputs statistical (Poisson based) errors
+for each of the main measurables. These may be used to gauge the
+robustness of the output parameters.
+
+There's also the quality of the PSF to consider. If the PSF is badly
+modelled, it increases the chance that the galaxy will be badly
+modelled also. To correct for this, you may consider removing galaxies
+with a bad PSF model fit using either the goodness of fit estimator
+(PSFCHI2) or the number of stars used to make the PSF (PSFNUM). In
+general, we advise caution when using PSF models created using less
+than 10 prototype stars.
+
+Next up, there is cross comparison with other photometry methods. If
+the Sérsic model is recovering significantly different flux from an
+aperture based model, something has gone wrong. The possibilities are
+either a) the Sérsic model is completely erroneous, and has converged
+on something meaningless, or, b), the aperture is contaminated
+somehow, usually due to an overwhelmingly large aperture radius (e.g.,
+crowded field, nearby star), or the galaxy is too faint to generate an
+accurate aperture size. In any event, when these two numbers disagree
+by more than 50%, it speaks to the quality of the input data, which
+then impacts the quality of the output model, either for Sersic
+photometry or other complementary photometry methods. We advise
+against using these values, if possible.
+
+Finally, the 'best' way to check a model fit is to have a look at the
+1D light profile for your object of interest, and overplot the
+recovered Sersic profile. Looking at catalogue outputs to try and
+gauge the goodness of fit for any given individual object is never a
+substitute for actually looking at the data.
+
+In summary: Utilising the (primary) chi^2 of both the galaxy and the
+PSF, cross-comparison with different photometric methods, and
+inspecting the 1D surface brightness profiles for small sample checks
+should allow for bad fits to easily be identified and removed.
+
+
+Q: Some galaxies are consistently +1 or -1 mag brighter than their
+Petrosian or Kron magnitudes; why is this?
+
+A: One of the problems with the previous SersicPhotometryv07 DMU was
+the relatively small size of some of the fitting regions. On occasion,
+the flux in the wings of galaxies was erroneously missed, impacting
+the ability to successfully model this flux. To that end, for the
+SersicPhotometryv09 DMU we have increased the size of the initial
+fitting region. This successfully includes more flux from the primary
+galaxy, however, it also includes more flux from nearby neighbouring
+sources such as galaxies or foreground stars. This can, on occasion,
+cause fitting problems for the GALFIT software, as we are increasing
+the complexity of the model fit for each additional component we wish
+to model.
+
+If the standard model fit fails (GALPLAN 1), and a bright nearby star
+is detected, SIGMA will attempt GALPLAN 3a and 3b (modifying the
+initial SExtractor inputs by mag +1/-1 and radius *0.9/*1.1). For
+particularly extreme cases, the GALFIT software determines that it
+hasn't been given enough information to calculate the local gradient
+in probability space, or, more likely, the starting parameters are now
+so incorrect that it has no chance of calculating an initial gradient
+with which to start the minimisation procedure. In this scenario, the
+code will finish, and the output catalogue for this object will show a
+galaxy with a magnitude of the Source Extractor input mag+1 or mag-1.
+
+Testing shows that this problem is minimal (< ~1%) and, in any event,
+only has an impact for the Sersic photometry of objects in close
+proximity to very bright nearby sources.
+
+################################################################################
+

@@ -1,0 +1,49 @@
+{
+  "row": "i2",
+  "title": "GAMA DR4 x KiDS-Legacy DR5 - kinematics-lensing transfer inputs on log10(A_IPR/kpc^2)",
+  "generated_utc": "2026-07-25T10:30:00Z",
+  "release": "https://github.com/xergon/gsg-tcg-data/releases/tag/i2-gama-kidslegacy-v1",
+  "deliverables": [
+    {"name": "gama_kidslegacy_ipr_rar_inputs_v1.parquet", "bytes": 73531708, "rows": 181608, "cols": 85,
+     "sha256": "53be8ebfa8889870c1cab9fbfbc34a5ba9350af91e443ac1d561fa5e37573959",
+     "url": "https://github.com/xergon/gsg-tcg-data/releases/download/i2-gama-kidslegacy-v1/gama_kidslegacy_ipr_rar_inputs_v1.parquet"},
+    {"name": "kidslegacy_sources_gama_equatorial_v1.parquet", "bytes": 247800161, "rows": 6063590, "cols": 16,
+     "sha256": "32b2565569d6753fb114029d72d922ac4bdde2b72fb30b30e3fd282937890e69",
+     "url": "https://github.com/xergon/gsg-tcg-data/releases/download/i2-gama-kidslegacy-v1/kidslegacy_sources_gama_equatorial_v1.parquet"}
+  ],
+  "cosmology": {"H0": 70.0, "Om": 0.3, "OL": 0.7, "flat": true, "h70": 1.0,
+                "note": "Mistele et al. 2024 use H0=73; radii scale 1/h70, areas 1/h70^2"},
+  "galellip_convention": "GALELLIP_<band> == 1 - (b/a) == 1 - q  [confirmed: online schema, .par descriptor, empirical range 0..0.99995]",
+  "galre_convention": "GALRE_<band> is the SEMI-MAJOR-AXIS half-light radius in arcsec",
+  "n_parent_no_isolation": 181560,
+  "n_parent_gate": 76370,
+  "gate_verdict": {
+    "no_isolation": {"n": 181560, "pass": true},
+    "groupid_eq_0_z_0p1_0p5": {"n": 95456, "pass": true},
+    "R_isol_gt_2Mpc": {"n": 76453, "pass": true, "warning": "clears by 83 rows - not a margin"},
+    "R_isol_gt_3Mpc_Brouwer2021": {"n": 44111, "pass": false},
+    "R_isol_gt_4Mpc_Mistele2024_fiducial": {"n": 27267, "pass": false,
+      "implied_SE_beta_A": 0.0644, "implied_sigma": 2.44,
+      "note": "scaled from the thread's own SE=0.03739 at N=76370 as SE ~ N^-0.5"}
+  },
+  "kids_legacy_sources_in_gama_footprint": 6063590,
+  "kids_legacy_total_sources": 40894394,
+  "lens_source_pairs": {"100_300kpc": 44502149, "300_1000kpc": 373071167, "30_1400kpc": 739121657},
+  "not_rehosted_too_large": [
+    {"file": "KiDS_Legacy_NS_unblind_final.fits.gz", "bytes": 7179531549,
+     "url": "https://kids.strw.leidenuniv.nl/DR5/data_files/KiDS_Legacy_NS_unblind_final.fits.gz"},
+    {"file": "KiDS_DR4.1_ugriZYJHKs_SOM_gold_WL_cat.fits", "bytes": 17712469440,
+     "url": "https://kids.strw.leidenuniv.nl/DR4/data_files/KiDS_DR4.1_ugriZYJHKs_SOM_gold_WL_cat.fits"}
+  ],
+  "deferred": [
+    {"file": "Randomsv02.fits", "bytes": 6969075840, "rows": 145188792,
+     "url": "https://www.gama-survey.org/dr4/data/cat/Randoms/v02/Randomsv02.fits",
+     "reason": "not needed for the IPR/RAR input table; >24h at observed throughput and it starved the KiDS transfer"}
+  ],
+  "target_list_corrections": {
+    "environmentmeasures_v05": "DOES NOT EXIST - only v06 is published; v06 used",
+    "StellarMassesv24.fits": "DOES NOT EXIST - v24 ships 5 tables; StellarMassesLambdarv24 used (equatorial, LAMBDAR)",
+    "eqinputcat_v46": "resolves to TilingCatv46.fits"
+  },
+  "blocked": []
+}

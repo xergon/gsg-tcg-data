@@ -1,0 +1,31 @@
+       bytes       rows  sha256                                                            file  URL
+    21078720     339693  df0167e9f40f2f8dc82b8c2a33c502efa9edcfbeb180ee431977808a9d529ace  DistancesFramesv14.fits  https://www.gama-survey.org/dr4/data/cat/LocalFlowCorrection/v14/DistancesFramesv14.fits
+        1469             d97e376b5544cfc65ffac954ecaa19091386810b7a3304f99f50caf48b89931c  DistancesFramesv14.par  https://www.gama-survey.org/dr4/data/cat/LocalFlowCorrection/v14/DistancesFramesv14.par
+         278             ed306ef1596636be6a9243b70fcaa7dba5c1f39a0f22dff530f637a815b84021  EnvironmentMeasures.notes  https://www.gama-survey.org/dr4/data/cat/?/EnvironmentMeasures.notes
+     7053120      92513  9c6a8f86fcfdf6a3e8e3114739d56eec5631312e25d450a3d6aa9c2ad5832e57  EnvironmentMeasuresv06.fits  https://www.gama-survey.org/dr4/data/cat/EnvironmentMeasures/v06/EnvironmentMeasuresv06.fits
+        2477             4b86885becbfa18558839e935024ae6d0795cc8bd28359bc13e4619a41a285e5  EnvironmentMeasuresv06.par  https://www.gama-survey.org/dr4/data/cat/EnvironmentMeasures/v06/EnvironmentMeasuresv06.par
+     7502400      26194  b6e50b03f1cab40141c1b2a9928dbb585fbe13de7de98bbdea467bccedcff83f  G3CFoFGroupv10.fits  https://www.gama-survey.org/dr4/data/cat/GroupFinding/v10/G3CFoFGroupv10.fits
+        8132             1eef833a570482aef87674fb38f5baccc855713e9fc227b323591a6d057df7ff  G3CFoFGroupv10.par  https://www.gama-survey.org/dr4/data/cat/GroupFinding/v10/G3CFoFGroupv10.par
+    17167680     204110  398e8ae19000ea1dbb10ce2a1f6607eaa61cecbde219e4305688a89227220dcc  G3CGalv10.fits  https://www.gama-survey.org/dr4/data/cat/GroupFinding/v10/G3CGalv10.fits
+        3038             e7490ab2e63c7fa7cdd908dad46748d5055693b069ce0d10611b5374c6b50128  G3CGalv10.par  https://www.gama-survey.org/dr4/data/cat/GroupFinding/v10/G3CGalv10.par
+   168534720    1831676  3cc58dc9d50031f35e1ba1c9c9d65e36f5fc15969d964ebd1f88e045c594b0c9  GalacticExtinctionv03.fits  https://www.gama-survey.org/dr4/data/cat/EqInputCat/v46/GalacticExtinctionv03.fits
+        2399             122e5a32f529550953527d149f843ba5ac66e599639f366d122c52e9f89abd0e  GalacticExtinctionv03.par  https://www.gama-survey.org/dr4/data/cat/EqInputCat/v46/GalacticExtinctionv03.par
+   227076480    1831071  f6dc17e6a27ec42ae592005dacbac8f47eb72a2efa09e0c3c9025c70c4824f23  InputCatAv07.fits  https://www.gama-survey.org/dr4/data/cat/EqInputCat/v46/InputCatAv07.fits
+        2833             d5726340f124ccb66acf5dbf200380becc31686bdc4ee9c0fa9e315025e6aab9  InputCatAv07.par  https://www.gama-survey.org/dr4/data/cat/EqInputCat/v46/InputCatAv07.par
+        1047             63e175ca50184af251d0d0cde2e555cbed922b0efd692f9d09725222597b2582  Randomsv02.par  https://www.gama-survey.org/dr4/data/cat/Randoms/v02/Randomsv02.par
+   156841920     221373  d61b9b612eb9807a8dfea02f0a0134530e7243ebda1ecc549f34c1cf98b6093f  SersicCatSDSSv09.fits  https://www.gama-survey.org/dr4/data/cat/SersicPhotometry/v09/SersicCatSDSSv09.fits
+       23245             e81a769972aefc8ca054fbe614f5d864f3b740ceb4cd6caca363b69ce4481d11  SersicCatSDSSv09.par  https://www.gama-survey.org/dr4/data/cat/SersicPhotometry/v09/SersicCatSDSSv09.par
+       13693             23ef94ba9c1569f99c36b0b5edc3ec65acbb6617727a397e1351407db315e85f  SersicPhotometry.notes  https://www.gama-survey.org/dr4/data/cat/?/SersicPhotometry.notes
+   190232640     522558  17e69b876b68a2e0e2033e9cf9948e2b0caf8f697cf6d8eadca54057bb0c9aad  SpecAllv27.fits  https://www.gama-survey.org/dr4/data/cat/SpecCat/v27/SpecAllv27.fits
+        2319             7704f9f96acded8738f9d07360fd6ed3514c3a3deb5ffd78c7fda805e9b79a70  SpecAllv27.par  https://www.gama-survey.org/dr4/data/cat/SpecCat/v27/SpecAllv27.par
+   126253440     344905  e997cace56d01924f3eef163ae30d64888726ff7ea09ca7d6b56f588935e42f2  SpecObjv27.fits  https://www.gama-survey.org/dr4/data/cat/SpecCat/v27/SpecObjv27.fits
+        1990             613cc8dcd4e2d400d463c7caced6eabd71a03a634a09997d0f1a77f7394c7cb4  SpecObjv27.par  https://www.gama-survey.org/dr4/data/cat/SpecCat/v27/SpecObjv27.par
+       11500             1dcdf61d33ade0547c1b46aaab2165e5479cfa673dc4447698e8bdb7f878f39d  StellarMasses.notes  https://www.gama-survey.org/dr4/data/cat/?/StellarMasses.notes
+   177727680     370116  cbb473d291fc6f3d0393a4d29ef96094be767d0252c0028b42228f39ea8e0337  StellarMassesGKVv24.fits  https://www.gama-survey.org/dr4/data/cat/StellarMasses/v24/StellarMassesGKVv24.fits
+       14547             d3b376ae9d88233d098e0cdc5348f7e5a9f826a3d53544bf58b96bf90c97185b  StellarMassesGKVv24.par  https://www.gama-survey.org/dr4/data/cat/StellarMasses/v24/StellarMassesGKVv24.par
+    95310720     200077  1a98b61c1a92a082d1925a1c38aff135b2f3aaa66322d93a874ace65d95a23f4  StellarMassesLambdarv24.fits  https://www.gama-survey.org/dr4/data/cat/StellarMasses/v24/StellarMassesLambdarv24.fits
+       14537             380454606b4f21fb5ec636269b69a28a3fbdee4f9a05dfcaf851967e09360238  StellarMassesLambdarv24.par  https://www.gama-survey.org/dr4/data/cat/StellarMasses/v24/StellarMassesLambdarv24.par
+    95667840     200828  b18b8e2c19a78779d78b31578d7528d7eb3d3cabc998e14fbcd2f2fcd8aef841  StellarMassesPanChromv24.fits  https://www.gama-survey.org/dr4/data/cat/StellarMasses/v24/StellarMassesPanChromv24.fits
+       14547             d13d7c5a9c2330c58be1e77242d862b54befe8a7f10841fa0406501d53e8811d  StellarMassesPanChromv24.par  https://www.gama-survey.org/dr4/data/cat/StellarMasses/v24/StellarMassesPanChromv24.par
+    36334080     221373  c9dc8e098a76ede238f9d0d6b2ccd953ed3681ea86b79b04a741e8915942e67b  TilingCatv46.fits  https://www.gama-survey.org/dr4/data/cat/EqInputCat/v46/TilingCatv46.fits
+        3795             de58c79a1cb5e7ab942ab4ac43a7c9b931de549fe8d712cb955ab6bdeefb39b1  TilingCatv46.par  https://www.gama-survey.org/dr4/data/cat/EqInputCat/v46/TilingCatv46.par

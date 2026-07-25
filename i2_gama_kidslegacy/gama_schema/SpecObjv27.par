@@ -1,0 +1,28 @@
+# SpecCat
+# SpecObj
+# v27
+# 2015-05-21
+# Joe Liske <jochen.liske@uni-hamburg.de>
+#
+# This table lists each observed target and the spectrum that
+# provides its best redshift (from GAMA or otherwise).
+# 
+CATAID         1  -       meta.id;meta.main                 Unique ID of GAMA object
+GAMA_NAME      2  -       meta.id                           Name of GAMA object
+IC_FLAG        3  -       meta.code.member                  Catalogue source(s) of GAMA object
+N_SPEC         4  -       meta.number;spect                 Number of spectra available for this object
+N_GAMA_SPEC    5  -       meta.number;spect                 Number of GAMA spectra available for this object
+DIST           6  arcsec  pos.angDistance                   Distance between GAMA object and best matched spectrum
+SPECID         7  -       meta.id.cross;spect               ID of best matched spectrum
+SURVEY         8  -       meta.dataset                      Survey best matched spectrum originated from
+SURVEY_CODE    9  -       meta.code;meta.dataset            Numerical code for originating survey
+RA            10  deg     pos.eq.ra                         RA of spectrum (J2000)
+DEC           11  deg     pos.eq.dec                        DEC of spectrum (J2000)
+WMIN          12  A       em.wl;stat.min                    Minimum wavelength of spectrum
+WMAX          13  A       em.wl;stat.max                    Maximum wavelength of spectrum
+Z             14  -       src.redshift                      Heliocentric redshift
+NQ            15  -       meta.code.qual;src.redshift       Normalised redshift quality (use nQ > 2 for science)
+PROB          16  -       stat.probability;src.redshift     Probability that redshift is correct
+FILENAME      17  -       meta.id;meta.file;meta.fits       Full path and filename of the spectrum
+URL           18  -       meta.ref.url;meta.file;meta.fits  URL of the spectrum
+URL_IMG       19  -       meta.ref.url;meta.file            URL of the spectrum's image

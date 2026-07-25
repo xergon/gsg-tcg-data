@@ -1,0 +1,220 @@
+StellarMasses
+2021-06-04
+Edward Taylor <entaylor@swin.edu.au>
+
+This DMU provides stellar masses, restframe photometry, and other
+ancillary stellar population parameters from stellar population fits
+to multiband SEDs for all objects with D > 0 across the five GAMA
+survey regions. Multiple tables are provided, corresponding to
+different sources of photometry, as detailed below. Note that these
+tables include many stars and galaxies with unknown redshifts (NQ=1)
+for which the derived values are not meaningful. Users need to
+exercise their own quality control.
+
+______________________________________________________________________
+
+The following tables are provided by this DMU:
+
+Table	      	     	 Source photometry (DMU/table)
+----------------------------------------------------------------------
+StellarMassesGKV	 <a href="/dr4/schema/table.php?id=682">gkvInputCatv02/gkvInputCatv02</a>
+StellarMassesLambdar	 <a href="/dr4/schema/table.php?id=519">LambdarPhotometryv01/LambdarCatv01</a>
+StellarMassesPanChrom	 <a href="/dr4/schema/table.php?id=505">PanchromaticPhotomv03/21BandPhotomv03</a>
+StellarMassesG02CFHTLS	 <a href="/dr4/schema/table.php?id=581">G02InputCatv07/G02CFHTLSInputCatv04</a>
+StellarMassesG02SDSS	 <a href="/dr4/schema/table.php?id=580">G02InputCatv07/G02SDSSInputCatv01</a>
+
+In each case, the photometry table was matched with <a href="/dr4/schema/table.php?id=488">DistancesFramesv14</a>
+and all objects with Z_TONRY > 0 were selected for the corresponding
+StellarMasses table, regardless of the value of NQ.
+
+When using the tables of this DMU, please refer to:
+<a href="https://ui.adsabs.harvard.edu/abs/2011MNRAS.418.1587T">E.N. Taylor et al., 2011, MNRAS, 418, 1587</a>.
+
+Compared to previous versions of this DMU, the process of deriving its
+results has been completely refactored, including some small bug
+fixes. There are several minor changes to the modelling compared to
+what is described in the original paper: 1.) the fits are made to a
+fixed restframe wavelength range (3000 - 11000 A), rather than a fixed
+set of bands; 2.) slight changes to the priors, which are uniform in:
+age, log(tau), log(Z), and EBV.
+
+NOTE: The values in these tables are based on aperture (Petro, AUTO,
+LAMBDAR, or ProFound) photometry, which may miss a significant
+fraction of a galaxy's light. In past versions of this DMU, the tables
+contained a 'fluxscale' parameter, which could be used to rescale the
+aperture-derived values to match the total flux as inferred from
+Sersic modelling. Since v24, this parameter is no longer included in
+the various tables.
+
+______________________________________________________________________
+
+DMU dependencies:
+    DistancesFramesv14     - Heliocentric and flow-corrected redshifts
+    GalacticExtinctionv03  - Foreground dust attenuation corrections
+    21BandPhotomv03        - Multiband photometry for G09/12/15
+    LambdarCatv01          - Multiband photometry for G09/12/15
+    G02TilingCatv07        - Catalogue cross-identifications for G02
+    G02SDSSInputCatv01     - SDSS photometry for G02 targets
+    G02CFHTLSInputCatv04   - CFHTLS photometry for G02 targets
+    gkvInputCat02          - Multiband photometry for G09/12/15/23
+______________________________________________________________________
+
+
+STELLAR POPULATION SYNTHESIS MODELLING: ______________________________
+
+The data provided by these tables have been derived through stellar
+population synthesis modelling of broadband photometry. In the fits,
+each photometric point is weighted so that the fits are effectively to
+the fixed restframe wavelength range 3000 to 11000 Angstrom for all
+galaxies at all redshifts. The modelling is done using the Bruzual &
+Charlot (2003) stellar evolution models, assuming a Chabrier (2003)
+stellar initial mass function (IMF) and the Calzetti et al. (2000)
+dust curve. The SPS models used in the fitting are defined via four
+parameters: time since formation (i.e. age), e-folding time for the
+(exponentially declining) star formation history, stellar metallicity,
+and dust attenuation (Section 3.1 of Taylor et al. 2011). The values
+of all derived parameters given in the tables, including the formal
+uncertainties, have been derived in a Bayesian way (Sections 3.2-3.4
+of Taylor et al. 2011).
+
+DISTANCES AND COSMOLOGY: _____________________________________________
+
+All values are derived for the concordance (Omega_m, Omega_L, h) =
+(0.3, 0.7, 0.7) cosmology. Stellar population parameters including
+ages, dust extinctions, and mass-to-light ratios are cosmology
+independent, inasmuch as they pertain to the stellar populations at
+the time of observation. Restframe luminosities and thus the total
+stellar mass do depend on distance, and so on h^-2. These can be
+scaled in the usual way, such that a higher value of h implies a lower
+distance, and thus a lower luminosity/mass (see below). Note that
+distances have been computed using the flow-corrected redshifts
+'Z_TONRY' given in DistancesFramesv14. These values have been derived
+using the Tonry et al. (2000) flow model for very low redshifts, and
+then tapering to a CMB-centric frame for z > 0.03, as described by
+<a href="https://ui.adsabs.harvard.edu/abs/2012MNRAS.421..621B">Baldry et al. (2012)</a>.
+
+BASED ON (FINITE) APERTURE PHOTOMETRY: _______________________________
+
+The results given in these tables have been derived from aperture
+photometry. The various DMUs that produced the different photometric
+catalogues used here, employed a variety of schemes to define the
+apertures, which all aim to get consistent *colours* across the
+SED. These different schemes all aim to capture most of the galaxy
+flux, in order to get a representative colour for each galaxy as a
+whole (i.e. to limit the impact of colour gradients). But because all
+of these schemes use a finite aperture, they are all prone to miss
+some low-level flux beyond the aperture.
+
+In general, therefore, an aperture correction is required for
+integrated quantities (i.e. stellar mass or luminosity) to account for
+mass/flux that falls beyond the finite aperture used for the SEDs. In
+previous versions of this DMU, the column 'fluxscale' had been
+provided for this purpose. Since v24, this quantity is no longer
+included in the catalogues.
+
+If missed flux/aperture corrections are a concern, it is now the
+responsibility of the user to derive an appropriate aperture
+correction as:
+
+    fluxscale = 10**-0.4 * (m_total - m_aperture)
+
+where m_total and m_aperture represent the total and aperture flux in
+a given band or bands. A good choice for total magnitude estimates are
+profile-fit magnitudes like those given in the <a href="/dr4/schema/dmu.php?name=SersicPhotometry">SersicPhotometry</a> or
+<a href="/dr4/schema/dmu.php?name=BDDecomp">BDDecomp</a> DMUs. The rescalings for mass and absolute magnitudes are
+then:
+
+    logmstar_total = logmstar + log10(fluxscale)
+or:
+    absmag_total = absmag - 2.5 * log10(fluxscale)
+
+Note that the numerical value of fluxscale should be greater than or
+equal to 1.
+
+GOODNESS OF FIT STATISTIC: ___________________________________________
+
+From v16, this DMU includes the Posterior Predictive P-value (PPP) as
+a goodness of fit statistic, which can be roughly thought of as a
+Bayesian analogue to the frequentist reduced chi^2. The PPP is a
+useful tool for checking whether or to what extent the model is
+consistent with the data. Given the observed data and the posterior
+PDF on the properties of the model, the PPP quantifies the fraction of
+future observations that would be predicted to be as discrepant as the
+observed data. As an example, a PPP < 0.01 could be taken to imply
+that the current data invalidate even the 'most likely' model at 99%
+confidence.
+
+Whether and how best to use this information is probably application
+specific, and is left to the user to decide. In general terms, a PPP~0
+generally indicates a likely catastrophic failure of the SED fit, but
+can also indicate, for example, just one bad photometric point.
+Individual SED fits with PPP < 0.2 should be treated with some
+suspicion. A PPP of ~0.5 implies a perfect fit. A PPP of ~1 implies an
+improbably good fit - either the observational uncertainties have been
+overestimated, or the data are being over-fit.
+
+DIFFERENT MASS ESTIMATORS: ___________________________________________
+
+There are three different masses given in the tables:
+
+  * logmstar -- this is the total mass of all luminous material plus
+      remnants, but excluding mass recycled back into the ISM, at the
+      time of observation.
+      
+  * logmremnants -- this is the total mass of all non- or sub-luminous
+      stellar remnants (e.g. white dwarfs), at the time of
+      observation.
+      
+  * logmintsfh -- this is the total mass of all stars formed, obtained
+      by integrating over the implied SFH, up to the time of
+      observation.
+
+Note that the difference between the combined mass of stars and
+remnants on the one hand, and the integral of the SFH on the other, is
+mass lost in stellar winds or other ejecta. In this sense, embedded in
+the values of logmintsfh is the assumption that none of this 'lost'
+mass is 'recycled' back into new generations of stars.
+
+It is envisaged that most users will want to use the 'logmstar's,
+which are the most directly comparable to what is most often used in
+the literature. To get just the luminous stars, one should subtract
+'mremnants' from 'mstar'. Finally, the integral of the implied SFH
+gives the total mass of all stars formed, from the earliest times up
+to the epoch of observation. In most cases, 'logmintsfh' is the most
+directly comparable to the stellar masses that are output by
+simulations.
+
+RESTFRAME PHOTOMETRY AND COLOURS: ____________________________________
+
+All of the photometry provided by these tables has been inferred from
+the SPS fits as an attribute of the SP models. All restframe
+photometry uses AB zeropoints and is k-corrected to redshift 0, with
+no evolution corrections. The table contains restframe (g - i) and
+(u - r) colours (in the columns 'gminusi' and 'uminusi', respectively)
+as well as restframe photometry in individual bands (e.g. 'absmag_g'
+and 'absmag_i'). Because in the fitting process, ugriz fluxes are
+highly correlated with one another, the formal uncertainties on
+'gminusi' or 'uminusr' cannot in general be derived from the
+'delrfphot'. It is thus preferable to use, e.g., 'gminusi' and the
+associated uncertainty 'delgminusi' rather than 'absmag_g' -
+'absmag_i'.
+
+Further, note that the fact that the fits are constrained to the
+restframe wavelength range 3000-11000 A means that any restframe
+photometry blueward of the u band and redward of the Y band should be
+considered as extrapolations of the fit-to data.
+
+INTRINSIC VERSUS EFFECTIVE RESTFRAME PHOTOMETRY: _____________________
+
+The quantities 'absmag_X' should be understood as *effective*
+restframe absolute magnitudes in the X-band; that is, the absolute
+magnitudes corresponding to the light the observer actually sees from
+the galaxy, without correction for extinction within the galaxy
+itself. In contrast, the quantities 'absmag_X_stars' give *intrinsic*
+absolute magnitudes in the X-band, which should be understood to be
+the total light emitted by stars; that is, corrected for internal dust
+extinction according to 'dustEBV'. In both cases, these values are
+derived from the SPS fits as properties of the stellar populations in
+a similar way to ages, metallicities, mass-to-light ratios,
+etc. (i.e. a la Equation 5 of Taylor et al. 2011).
+

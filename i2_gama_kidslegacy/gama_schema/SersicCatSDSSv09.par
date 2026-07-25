@@ -1,0 +1,191 @@
+# SersicPhotometry
+# SersicCatSDSS
+# v09
+# 2015-12-17
+# Lee Kelvin <l.s.kelvin@ljmu.ac.uk>
+#
+# This table provides the results of a single-Sersic-component fit to
+# the 2D surface brightness distribution of every object in the
+# GAMA II equatorial survey regions in the SDSS ugriz bands.
+#
+CATAID             1  -             meta.id                                            GAMA Object ID
+RA                 2  deg           pos.eq.ra                                          Right Ascension (J2000)
+DEC                3  deg           pos.eq.dec                                         Declination (J2000)
+R_PETRO            4  mag           phot.mag;em.opt.R                                  Extinction-corrected SDSS DR7 Petrosian mag
+SURVEY_OLDCLASS    5  -             meta.code.class                                    Useful for selecting samples, see notes
+SURVEY_CLASS       6  -             meta.code.class                                    Useful for selecting samples, see notes
+CENFLUX_u          7  counts        phot.count;em.opt.u                                Central pixel flux value prior to background estimation
+BACKFLUX_u         8  counts        phot.count;em.opt.u                                SEx subtracted background at object position      
+PSFNUM_u           9  -             meta.number;em.opt.u                               PSFEx number of stars used
+PSFCHI2_u         10  -             stat.fit.goodness;em.opt.u                         PSFEx PSF reduced Chi^2
+PSFFWHM_u         11  arcsec        instr.det.psf;meta.modelled;em.opt.u               PSFEx PSF FWHM
+NSEC_u            12  -             meta.number;em.opt.u                               SEx number of secondary components detected
+GALXCEN_u         13  pixel         pos.cartesian.x;meta.modelled;em.opt.u             GALFIT pixel pos. of model in cutout (x)
+GALYCEN_u         14  pixel         pos.cartesian.y;meta.modelled;em.opt.u             GALFIT pixel pos. of model in cutout (y)
+GALMAG_u          15  mag           phot.mag;meta.modelled;em.opt.u                    GALFIT magnitude of Sersic model
+GALRE_u           16  arcsec        phys.angSize;meta.modelled;em.opt.u                GALFIT effective (half-light) radius (semi-major axis)
+GALINDEX_u        17  -             stat.fit.param;meta.modelled;em.opt.u              GALFIT Sersic index
+GALELLIP_u        18  -             src.ellipticity;meta.modelled;em.opt.u             GALFIT ellipticity (1-(b/a))
+GALPA_u           19  deg           pos.posAng;meta.modelled;em.opt.u                  GALFIT position angle (x+, CCW) (see notes)
+GALXCENERR_u      20  pixel         pos.cartesian.x;stat.error;meta.modelled;em.opt.u  GALFIT error on x position
+GALYCENERR_u      21  pixel         pos.cartesian.y;stat.error;meta.modelled;em.opt.u  GALFIT error on y position
+GALMAGERR_u       22  mag           phot.mag;stat.error;meta.modelled;em.opt.u         GALFIT error on magnitude
+GALREERR_u        23  arcsec        phys.angSize;stat.error;meta.modelled;em.opt.u     GALFIT error on re
+GALINDEXERR_u     24  -             stat.fit.param;stat.error;meta.modelled;em.opt.u   GALFIT error on Sersic index
+GALELLIPERR_u     25  -             src.ellipticity;stat.error;meta.modelled;em.opt.u  GALFIT error on ellipticity
+GALPAERR_u        26  deg           pos.posAng;stat.error;meta.modelled;em.opt.u       GALFIT error on position angle
+GALRA_u           27  deg           pos.eq.ra;meta.modelled;em.opt.u                   GALFIT Right Ascension as determined by GALFIT
+GALDEC_u          28  deg           pos.eq.dec;meta.modelled;em.opt.u                  GALFIT Declination as determined by GALFIT
+GALMAG10RE_u      29  mag           phot.mag;meta.modelled;em.opt.u                    GALFIT magnitude of model, truncated at 10*re
+GALMU0_u          30  mag/arcsec^2  phot.mag.sb;meta.modelled;em.opt.u                 GALFIT central surface brightness
+GALMUE_u          31  mag/arcsec^2  phot.mag.sb;meta.modelled;em.opt.u                 GALFIT effective surface brightness at re
+GALMUEAVG_u       32  mag/arcsec^2  phot.mag.sb;meta.modelled;em.opt.u                 GALFIT effective surface brightness within re
+GALR90_u          33  arcsec        phys.angSize;meta.modelled;em.opt.u                GALFIT rad containing 90% of total light (semi-major axis)
+GALCHI2FULL_u     34  -             stat.fit.goodness;em.opt.u                         GALFIT Chi^2 goodness-of-fit parameter (pri + sec)
+GALNDOF_u         35  -             stat.fit.goodness;em.opt.u                         GALFIT model number of degrees of freedom (pri + sec)
+GALCHI2_u         36  -             stat.fit.goodness;em.opt.u                         GALFIT reduced Chi^2 of output model (pri + sec)
+GALPLAN_u         37  -             stat.fit.goodness;em.opt.u                         SIGMA chosen GALFIT modelling plan (see notes)
+PRICHI2FULL_u     38  -             stat.fit.goodness;em.opt.u                         PRIMARY Chi^2 goodness-of-fit paramter (primary only)
+PRINFP_u          39  -             stat.fit.goodness;em.opt.u                         PRIMARY model number of free parameters (primary only)
+PRINDOF_u         40  -             stat.fit.goodness;em.opt.u                         PRIMARY model number of degrees of freedom (primary only)
+PRICHI2_u         41  -             stat.fit.goodness;em.opt.u                         PRIMARY reduced Chi^2 of output model (primary only)
+CENFLUX_g         42  counts        phot.count;em.opt.g                                Central pixel flux value prior to background estimation
+BACKFLUX_g        43  counts        phot.count;em.opt.g                                SEx subtracted background at object position      
+PSFNUM_g          44  -             meta.number;em.opt.g                               PSFEx number of stars used
+PSFCHI2_g         45  -             stat.fit.goodness;em.opt.g                         PSFEx PSF reduced Chi^2
+PSFFWHM_g         46  arcsec        instr.det.psf;meta.modelled;em.opt.g               PSFEx PSF FWHM
+NSEC_g            47  -             meta.number;em.opt.g                               SEx number of secondary components detected
+GALXCEN_g         48  pixel         pos.cartesian.x;meta.modelled;em.opt.g             GALFIT pixel pos. of model in cutout (x)
+GALYCEN_g         49  pixel         pos.cartesian.y;meta.modelled;em.opt.g             GALFIT pixel pos. of model in cutout (y)
+GALMAG_g          50  mag           phot.mag;meta.modelled;em.opt.g                    GALFIT magnitude of Sersic model
+GALRE_g           51  arcsec        phys.angSize;meta.modelled;em.opt.g                GALFIT effective (half-light) radius (semi-major axis)
+GALINDEX_g        52  -             stat.fit.param;meta.modelled;em.opt.g              GALFIT Sersic index
+GALELLIP_g        53  -             src.ellipticity;meta.modelled;em.opt.g             GALFIT ellipticity (1-(b/a))
+GALPA_g           54  deg           pos.posAng;meta.modelled;em.opt.g                  GALFIT position angle (x+, CCW) (see notes)
+GALXCENERR_g      55  pixel         pos.cartesian.x;stat.error;meta.modelled;em.opt.g  GALFIT error on x position
+GALYCENERR_g      56  pixel         pos.cartesian.y;stat.error;meta.modelled;em.opt.g  GALFIT error on y position
+GALMAGERR_g       57  mag           phot.mag;stat.error;meta.modelled;em.opt.g         GALFIT error on magnitude
+GALREERR_g        58  arcsec        phys.angSize;stat.error;meta.modelled;em.opt.g     GALFIT error on re
+GALINDEXERR_g     59  -             stat.fit.param;stat.error;meta.modelled;em.opt.g   GALFIT error on Sersic index
+GALELLIPERR_g     60  -             src.ellipticity;stat.error;meta.modelled;em.opt.g  GALFIT error on ellipticity
+GALPAERR_g        61  deg           pos.posAng;stat.error;meta.modelled;em.opt.g       GALFIT error on position angle
+GALRA_g           62  deg           pos.eq.ra;meta.modelled;em.opt.g                   GALFIT Right Ascension as determined by GALFIT
+GALDEC_g          63  deg           pos.eq.dec;meta.modelled;em.opt.g                  GALFIT Declination as determined by GALFIT
+GALMAG10RE_g      64  mag           phot.mag;meta.modelled;em.opt.g                    GALFIT magnitude of model, truncated at 10*re
+GALMU0_g          65  mag/arcsec^2  phot.mag.sb;meta.modelled;em.opt.g                 GALFIT central surface brightness
+GALMUE_g          66  mag/arcsec^2  phot.mag.sb;meta.modelled;em.opt.g                 GALFIT effective surface brightness at re
+GALMUEAVG_g       67  mag/arcsec^2  phot.mag.sb;meta.modelled;em.opt.g                 GALFIT effective surface brightness within re
+GALR90_g          68  arcsec        phys.angSize;meta.modelled;em.opt.g                GALFIT rad containing 90% of total light (semi-major axis)
+GALCHI2FULL_g     69  -             stat.fit.goodness;em.opt.g                         GALFIT Chi^2 goodness-of-fit parameter (pri + sec)
+GALNDOF_g         70  -             stat.fit.goodness;em.opt.g                         GALFIT model number of degrees of freedom (pri + sec)
+GALCHI2_g         71  -             stat.fit.goodness;em.opt.g                         GALFIT reduced Chi^2 of output model (pri + sec)
+GALPLAN_g         72  -             stat.fit.goodness;em.opt.g                         SIGMA chosen GALFIT modelling plan (see notes)
+PRICHI2FULL_g     73  -             stat.fit.goodness;em.opt.g                         PRIMARY Chi^2 goodness-of-fit paramter (primary only)
+PRINFP_g          74  -             stat.fit.goodness;em.opt.g                         PRIMARY model number of free parameters (primary only)
+PRINDOF_g         75  -             stat.fit.goodness;em.opt.g                         PRIMARY model number of degrees of freedom (primary only)
+PRICHI2_g         76  -             stat.fit.goodness;em.opt.g                         PRIMARY reduced Chi^2 of output model (primary only)
+CENFLUX_r         77  counts        phot.count;em.opt.r                                Central pixel flux value prior to background estimation
+BACKFLUX_r        78  counts        phot.count;em.opt.r                                SEx subtracted background at object position      
+PSFNUM_r          79  -             meta.number;em.opt.r                               PSFEx number of stars used
+PSFCHI2_r         80  -             stat.fit.goodness;em.opt.r                         PSFEx PSF reduced Chi^2
+PSFFWHM_r         81  arcsec        instr.det.psf;meta.modelled;em.opt.r               PSFEx PSF FWHM
+NSEC_r            82  -             meta.number;em.opt.r                               SEx number of secondary components detected
+GALXCEN_r         83  pixel         pos.cartesian.x;meta.modelled;em.opt.r             GALFIT pixel pos. of model in cutout (x)
+GALYCEN_r         84  pixel         pos.cartesian.y;meta.modelled;em.opt.r             GALFIT pixel pos. of model in cutout (y)
+GALMAG_r          85  mag           phot.mag;meta.modelled;em.opt.r                    GALFIT magnitude of Sersic model
+GALRE_r           86  arcsec        phys.angSize;meta.modelled;em.opt.r                GALFIT effective (half-light) radius (semi-major axis)
+GALINDEX_r        87  -             stat.fit.param;meta.modelled;em.opt.r              GALFIT Sersic index
+GALELLIP_r        88  -             src.ellipticity;meta.modelled;em.opt.r             GALFIT ellipticity (1-(b/a))
+GALPA_r           89  deg           pos.posAng;meta.modelled;em.opt.r                  GALFIT position angle (x+, CCW) (see notes)
+GALXCENERR_r      90  pixel         pos.cartesian.x;stat.error;meta.modelled;em.opt.r  GALFIT error on x position
+GALYCENERR_r      91  pixel         pos.cartesian.y;stat.error;meta.modelled;em.opt.r  GALFIT error on y position
+GALMAGERR_r       92  mag           phot.mag;stat.error;meta.modelled;em.opt.r         GALFIT error on magnitude
+GALREERR_r        93  arcsec        phys.angSize;stat.error;meta.modelled;em.opt.r     GALFIT error on re
+GALINDEXERR_r     94  -             stat.fit.param;stat.error;meta.modelled;em.opt.r   GALFIT error on Sersic index
+GALELLIPERR_r     95  -             src.ellipticity;stat.error;meta.modelled;em.opt.r  GALFIT error on ellipticity
+GALPAERR_r        96  deg           pos.posAng;stat.error;meta.modelled;em.opt.r       GALFIT error on position angle
+GALRA_r           97  deg           pos.eq.ra;meta.modelled;em.opt.r                   GALFIT Right Ascension as determined by GALFIT
+GALDEC_r          98  deg           pos.eq.dec;meta.modelled;em.opt.r                  GALFIT Declination as determined by GALFIT
+GALMAG10RE_r      99  mag           phot.mag;meta.modelled;em.opt.r                    GALFIT magnitude of model, truncated at 10*re
+GALMU0_r         100  mag/arcsec^2  phot.mag.sb;meta.modelled;em.opt.r                 GALFIT central surface brightness
+GALMUE_r         101  mag/arcsec^2  phot.mag.sb;meta.modelled;em.opt.r                 GALFIT effective surface brightness at re
+GALMUEAVG_r      102  mag/arcsec^2  phot.mag.sb;meta.modelled;em.opt.r                 GALFIT effective surface brightness within re
+GALR90_r         103  arcsec        phys.angSize;meta.modelled;em.opt.r                GALFIT rad containing 90% of total light (semi-major axis)
+GALCHI2FULL_r    104  -             stat.fit.goodness;em.opt.r                         GALFIT Chi^2 goodness-of-fit parameter (pri + sec)
+GALNDOF_r        105  -             stat.fit.goodness;em.opt.r                         GALFIT model number of degrees of freedom (pri + sec)
+GALCHI2_r        106  -             stat.fit.goodness;em.opt.r                         GALFIT reduced Chi^2 of output model (pri + sec)
+GALPLAN_r        107  -             stat.fit.goodness;em.opt.r                         SIGMA chosen GALFIT modelling plan (see notes)
+PRICHI2FULL_r    108  -             stat.fit.goodness;em.opt.r                         PRIMARY Chi^2 goodness-of-fit paramter (primary only)
+PRINFP_r         109  -             stat.fit.goodness;em.opt.r                         PRIMARY model number of free parameters (primary only)
+PRINDOF_r        110  -             stat.fit.goodness;em.opt.r                         PRIMARY model number of degrees of freedom (primary only)
+PRICHI2_r        111  -             stat.fit.goodness;em.opt.r                         PRIMARY reduced Chi^2 of output model (primary only)
+CENFLUX_i        112  counts        phot.count;em.opt.i                                Central pixel flux value prior to background estimation
+BACKFLUX_i       113  counts        phot.count;em.opt.i                                SEx subtracted background at object position      
+PSFNUM_i         114  -             meta.number;em.opt.i                               PSFEx number of stars used
+PSFCHI2_i        115  -             stat.fit.goodness;em.opt.i                         PSFEx PSF reduced Chi^2
+PSFFWHM_i        116  arcsec        instr.det.psf;meta.modelled;em.opt.i               PSFEx PSF FWHM
+NSEC_i           117  -             meta.number;em.opt.i                               SEx number of secondary components detected
+GALXCEN_i        118  pixel         pos.cartesian.x;meta.modelled;em.opt.i             GALFIT pixel pos. of model in cutout (x)
+GALYCEN_i        119  pixel         pos.cartesian.y;meta.modelled;em.opt.i             GALFIT pixel pos. of model in cutout (y)
+GALMAG_i         120  mag           phot.mag;meta.modelled;em.opt.i                    GALFIT magnitude of Sersic model
+GALRE_i          121  arcsec        phys.angSize;meta.modelled;em.opt.i                GALFIT effective (half-light) radius (semi-major axis)
+GALINDEX_i       122  -             stat.fit.param;meta.modelled;em.opt.i              GALFIT Sersic index
+GALELLIP_i       123  -             src.ellipticity;meta.modelled;em.opt.i             GALFIT ellipticity (1-(b/a))
+GALPA_i          124  deg           pos.posAng;meta.modelled;em.opt.i                  GALFIT position angle (x+, CCW) (see notes)
+GALXCENERR_i     125  pixel         pos.cartesian.x;stat.error;meta.modelled;em.opt.i  GALFIT error on x position
+GALYCENERR_i     126  pixel         pos.cartesian.y;stat.error;meta.modelled;em.opt.i  GALFIT error on y position
+GALMAGERR_i      127  mag           phot.mag;stat.error;meta.modelled;em.opt.i         GALFIT error on magnitude
+GALREERR_i       128  arcsec        phys.angSize;stat.error;meta.modelled;em.opt.i     GALFIT error on re
+GALINDEXERR_i    129  -             stat.fit.param;stat.error;meta.modelled;em.opt.i   GALFIT error on Sersic index
+GALELLIPERR_i    130  -             src.ellipticity;stat.error;meta.modelled;em.opt.i  GALFIT error on ellipticity
+GALPAERR_i       131  deg           pos.posAng;stat.error;meta.modelled;em.opt.i       GALFIT error on position angle
+GALRA_i          132  deg           pos.eq.ra;meta.modelled;em.opt.i                   GALFIT Right Ascension as determined by GALFIT
+GALDEC_i         133  deg           pos.eq.dec;meta.modelled;em.opt.i                  GALFIT Declination as determined by GALFIT
+GALMAG10RE_i     134  mag           phot.mag;meta.modelled;em.opt.i                    GALFIT magnitude of model, truncated at 10*re
+GALMU0_i         135  mag/arcsec^2  phot.mag.sb;meta.modelled;em.opt.i                 GALFIT central surface brightness
+GALMUE_i         136  mag/arcsec^2  phot.mag.sb;meta.modelled;em.opt.i                 GALFIT effective surface brightness at re
+GALMUEAVG_i      137  mag/arcsec^2  phot.mag.sb;meta.modelled;em.opt.i                 GALFIT effective surface brightness within re
+GALR90_i         138  arcsec        phys.angSize;meta.modelled;em.opt.i                GALFIT rad containing 90% of total light (semi-major axis)
+GALCHI2FULL_i    139  -             stat.fit.goodness;em.opt.i                         GALFIT Chi^2 goodness-of-fit parameter (pri + sec)
+GALNDOF_i        140  -             stat.fit.goodness;em.opt.i                         GALFIT model number of degrees of freedom (pri + sec)
+GALCHI2_i        141  -             stat.fit.goodness;em.opt.i                         GALFIT reduced Chi^2 of output model (pri + sec)
+GALPLAN_i        142  -             stat.fit.goodness;em.opt.i                         SIGMA chosen GALFIT modelling plan (see notes)
+PRICHI2FULL_i    143  -             stat.fit.goodness;em.opt.i                         PRIMARY Chi^2 goodness-of-fit paramter (primary only)
+PRINFP_i         144  -             stat.fit.goodness;em.opt.i                         PRIMARY model number of free parameters (primary only)
+PRINDOF_i        145  -             stat.fit.goodness;em.opt.i                         PRIMARY model number of degrees of freedom (primary only)
+PRICHI2_i        146  -             stat.fit.goodness;em.opt.i                         PRIMARY reduced Chi^2 of output model (primary only)
+CENFLUX_z        147  counts        phot.count;em.opt.z                                Central pixel flux value prior to background estimation
+BACKFLUX_z       148  counts        phot.count;em.opt.z                                SEx subtracted background at object position      
+PSFNUM_z         149  -             meta.number;em.opt.z                               PSFEx number of stars used
+PSFCHI2_z        150  -             stat.fit.goodness;em.opt.z                         PSFEx PSF reduced Chi^2
+PSFFWHM_z        151  arcsec        instr.det.psf;meta.modelled;em.opt.z               PSFEx PSF FWHM
+NSEC_z           152  -             meta.number;em.opt.z                               SEx number of secondary components detected
+GALXCEN_z        153  pixel         pos.cartesian.x;meta.modelled;em.opt.z             GALFIT pixel pos. of model in cutout (x)
+GALYCEN_z        154  pixel         pos.cartesian.y;meta.modelled;em.opt.z             GALFIT pixel pos. of model in cutout (y)
+GALMAG_z         155  mag           phot.mag;meta.modelled;em.opt.z                    GALFIT magnitude of Sersic model
+GALRE_z          156  arcsec        phys.angSize;meta.modelled;em.opt.z                GALFIT effective (half-light) radius (semi-major axis)
+GALINDEX_z       157  -             stat.fit.param;meta.modelled;em.opt.z              GALFIT Sersic index
+GALELLIP_z       158  -             src.ellipticity;meta.modelled;em.opt.z             GALFIT ellipticity (1-(b/a))
+GALPA_z          159  deg           pos.posAng;meta.modelled;em.opt.z                  GALFIT position angle (x+, CCW) (see notes)
+GALXCENERR_z     160  pixel         pos.cartesian.x;stat.error;meta.modelled;em.opt.z  GALFIT error on x position
+GALYCENERR_z     161  pixel         pos.cartesian.y;stat.error;meta.modelled;em.opt.z  GALFIT error on y position
+GALMAGERR_z      162  mag           phot.mag;stat.error;meta.modelled;em.opt.z         GALFIT error on magnitude
+GALREERR_z       163  arcsec        phys.angSize;stat.error;meta.modelled;em.opt.z     GALFIT error on re
+GALINDEXERR_z    164  -             stat.fit.param;stat.error;meta.modelled;em.opt.z   GALFIT error on Sersic index
+GALELLIPERR_z    165  -             src.ellipticity;stat.error;meta.modelled;em.opt.z  GALFIT error on ellipticity
+GALPAERR_z       166  deg           pos.posAng;stat.error;meta.modelled;em.opt.z       GALFIT error on position angle
+GALRA_z          167  deg           pos.eq.ra;meta.modelled;em.opt.z                   GALFIT Right Ascension as determined by GALFIT
+GALDEC_z         168  deg           pos.eq.dec;meta.modelled;em.opt.z                  GALFIT Declination as determined by GALFIT
+GALMAG10RE_z     169  mag           phot.mag;meta.modelled;em.opt.z                    GALFIT magnitude of model, truncated at 10*re
+GALMU0_z         170  mag/arcsec^2  phot.mag.sb;meta.modelled;em.opt.z                 GALFIT central surface brightness
+GALMUE_z         171  mag/arcsec^2  phot.mag.sb;meta.modelled;em.opt.z                 GALFIT effective surface brightness at re
+GALMUEAVG_z      172  mag/arcsec^2  phot.mag.sb;meta.modelled;em.opt.z                 GALFIT effective surface brightness within re
+GALR90_z         173  arcsec        phys.angSize;meta.modelled;em.opt.z                GALFIT rad containing 90% of total light (semi-major axis)
+GALCHI2FULL_z    174  -             stat.fit.goodness;em.opt.z                         GALFIT Chi^2 goodness-of-fit parameter (pri + sec)
+GALNDOF_z        175  -             stat.fit.goodness;em.opt.z                         GALFIT model number of degrees of freedom (pri + sec)
+GALCHI2_z        176  -             stat.fit.goodness;em.opt.z                         GALFIT reduced Chi^2 of output model (pri + sec)
+GALPLAN_z        177  -             stat.fit.goodness;em.opt.z                         SIGMA chosen GALFIT modelling plan (see notes)
+PRICHI2FULL_z    178  -             stat.fit.goodness;em.opt.z                         PRIMARY Chi^2 goodness-of-fit paramter (primary only)
+PRINFP_z         179  -             stat.fit.goodness;em.opt.z                         PRIMARY model number of free parameters (primary only)
+PRINDOF_z        180  -             stat.fit.goodness;em.opt.z                         PRIMARY model number of degrees of freedom (primary only)
+PRICHI2_z        181  -             stat.fit.goodness;em.opt.z                         PRIMARY reduced Chi^2 of output model (primary only)

@@ -1,0 +1,43 @@
+# EqInputCat
+# TilingCat
+# v46
+# 2015-05-22
+# Ivan Baldry <i.baldry@ljmu.ac.uk>
+#
+# Science targets in the GAMA II equatorial survey regions.
+# 
+CATAID             1  -             meta.id;meta.main            Unique GAMA ID of object
+OBJID              2  -             meta.id                      SDSS objid
+RA                 3  deg           pos.eq.ra                    J2000 coordinate
+DEC                4  deg           pos.eq.dec                   J2000 coordinate
+FIBERMAG_R         5  mag           phot.mag;em.opt.R            SDSS DR7 r band fibre magnitude
+R_PETRO            6  mag           phot.mag;em.opt.R            Extinction-corrected SDSS DR7 r band Petrosian magnitude 
+U_MODEL            7  mag           phot.mag;em.opt.U            Extinction-corrected SDSS DR7 u band model magnitude
+G_MODEL            8  mag           phot.mag;em.opt.B            Extinction-corrected SDSS DR7 g band model magnitude
+R_MODEL            9  mag           phot.mag;em.opt.R            Extinction-corrected SDSS DR7 r band model magnitude
+I_MODEL           10  mag           phot.mag;em.opt.I            Extinction-corrected SDSS DR7 i band model magnitude
+Z_MODEL           11  mag           phot.mag;em.opt.I            Extinction-corrected SDSS DR7 z band model magnitude
+SURVEY_CODE       12  -             meta.code;meta.dataset       Survey code for redshift source, see notes
+Z                 13  -             src.redshift                 Spectroscopic redshift, -1 for none attempted
+NQ                14  -             meta.code.qual;src.redshift  Quality of redshift
+NQ2_FLAG          15  -             meta.code.qual;src.redshift  Tests of NQ=2 redshifts, see notes
+SPECID            16  -             meta.id.cross;spect          ID of spectrum from SpecAll table
+VEL_ERR           17  km/s          src.redshift;stat.error      Redshift uncertainty, c delta ln(1+z), see notes
+NUM_GAMA_SPEC     18  -             meta.number;spect            Number of GAMA spectra within 1 arcsec
+R_SB              19  mag/arcsec^2  phot.mag.sb;em.opt.R         SDSS Petro half-light surface brightness
+SG_SEP            20  mag           src.class.starGalaxy         r_psf - r_model star-galaxy separation parameter
+SG_SEP_JK         21  mag           src.class.starGalaxy         J - K - f_locus star-galaxy separation parameter
+K_AUTO            22  mag           phot.mag;em.IR.K             Extinction-corrected r-defined auto AB mag 
+RADIO_FLUX        23  mJy           phot.flux.density;em.radio   Flux from FIRST-SDSS matching
+HATLAS_FLAG       24  -             meta.code                    1 for match to H-ATLAS SDSS possible ID
+AREA_FLAG         25  -             meta.code                    1-deg strip, 2 for GAMA I regions
+TARGET_FLAGS      26  -             meta.code                    Bitwise target criteria, see notes
+SURVEY_OLDCLASS   27  -             meta.code.class              Useful for selecting samples, see notes
+SURVEY_CLASS      28  -             meta.code.class              Useful for selecting samples, see notes
+PRIORITY_CLASS    29  -             meta.code.class              Priorities for targeting, see notes
+NEIGHBOUR_CLASS   30  -             meta.code.class              Number of survey_class>=3 targets within 40 arcsec
+TC_V11_ID         31  -             meta.code.cross              CATAID of object in TilingCatv11, see notes
+MASK_IC_10        32  -             meta.code                    Mask value 0.0 to 1.0 around V<10 stars
+MASK_IC_12        33  -             meta.code                    Mask value 0.0 to 1.0 around V<12 stars
+VIS_CLASS         34  -             mata.code.qual               Visual classification, see notes
+VIS_CLASS_USER    35  -             meta.id                      Initials of classifiers, xxx for none

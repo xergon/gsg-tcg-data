@@ -1,0 +1,52 @@
+Column                      Unit          Description                                                                Format
+THELI_NAME                                THELI identifier name for the tile                                         17A
+RAJ2000                     deg           Centroid sky position right ascension (J2000)                              1D
+DECJ2000                    deg           Centroid sky position declination (J2000)                                  1D
+PATCH                                     Survey patch identifier (North/South)                                      8A
+Level                       count         Detection threshold above background                                       1E
+FLUX_RADIUS                 pixel         Half-light radius                                                          1E
+Agaper                      arcsec        Major axis of GAaP aperture optimal min_aper                               1E
+Bgaper                      arcsec        Minor axis of GAaP aperture optimal min_aper                               1E
+SG2DPHOT                                  2DPhot Star/Galaxy classifier (1 for high confidence star)                 1I
+MAG_AUTO                    mag           r-band magnitude                                                           1E
+MAG_GAAP_u                  mag           u-band GAaP magnitude optimal min_aper                                     1E
+MAG_GAAP_g                  mag           g-band GAaP magnitude optimal min_aper                                     1E
+MAG_GAAP_r                  mag           r-band GAaP magnitude optimal min_aper                                     1E
+MAG_GAAP_i1                 mag           i-band GAaP magnitude optimal min_aper, from first pass                    1E
+MAG_GAAP_i2                 mag           i-band GAaP magnitude optimal min_aper, from second pass                   1E
+MAG_GAAP_Z                  mag           Z-band GAaP magnitude optimal min_aper                                     1E
+MAG_GAAP_Y                  mag           Y-band GAaP magnitude optimal min_aper                                     1E
+MAG_GAAP_J                  mag           J-band GAaP magnitude optimal min_aper                                     1E
+MAG_GAAP_H                  mag           H-band GAaP magnitude optimal min_aper                                     1E
+MAG_GAAP_Ks                 mag           Ks-band GAaP magnitude optimal min_aper                                    1E
+Z_B                                       10-band BPZ redshift estimate; peak of posterior probability distribution  1D
+T_B                                       Spectral type corresponding to Z_B                                         1D
+TOMOBIN                                   Tomographic bin index                                                      1I
+PSF_e1                                    mean ellipticity of PSF, component 1                                       1E
+PSF_e2                                    mean ellipticity of PSF, component 2                                       1E
+PSF_Strehl_ratio                          Pseudo-Strehl ratio of PSF (flux fraction in central pixel)                1E
+PSF_Q11                                   model PSF moment Q11                                                       1E
+PSF_Q22                                   model PSF moment Q22                                                       1E
+PSF_Q12                                   model PSF moment Q12                                                       1E
+bulge_fraction                            Lensfit galaxy model bulge-fraction B/T                                    1E
+pixel_SNratio                             Lensfit data S/N ratio                                                     1E
+model_SNratio                             Lensfit model S/N ratio                                                    1E
+autocal_scalelength_pixels pixel          Lensfit galaxy model scale length                                          1E
+2D_measurement_variance                   Lensfit measurement variance                                               1E
+n_exposures_used                          Number of exposures used                                                   1E
+delta_SNR                                 Lensift change in SNR between exposures - useful to detect asteroids       1E
+PSF_e1_exp1                               PSF model ellipticity component 1 on exposure 1                            1E
+PSF_e2_exp1                               PSF model ellipticity component 2 on exposure 1                            1E
+PSF_e1_exp2                               PSF model ellipticity component 1 on exposure 2                            1E
+PSF_e2_exp2                               PSF model ellipticity component 2 on exposure 2                            1E
+PSF_e1_exp3                               PSF model ellipticity component 1 on exposure 3                            1E
+PSF_e2_exp3                               PSF model ellipticity component 2 on exposure 3                            1E
+PSF_e1_exp4                               PSF model ellipticity component 1 on exposure 4                            1E
+PSF_e2_exp4                               PSF model ellipticity component 2 on exposure 4                            1E
+PSF_e1_exp5                               PSF model ellipticity component 1 on exposure 5                            1E
+PSF_e2_exp5                               PSF model ellipticity component 2 on exposure 5                            1E
+shear_weight_only                         Recalibrated Lensfit inverse variance weight                               1E
+gold_weight_only                          N(z) estimation gold-weight                                                1E
+e1                                        c-corrected and recalibrated Lensfit ellipticity e1 - no m corr            1E
+e2                                        c-corrected and recalibrated Lensfit ellipticity e2 - no m corr            1E
+weight                                    Final source weight, including shear and gold weights                      1E

@@ -75,7 +75,11 @@ B7 CO(10-9) -> spw3 split, 960 ch.
   resolution from SPW 4 in the **latter 4** EBs; ALMA resamples them with `width=[2,1]` to force a
   common 2.5 km/s grid. Any H2O-vs-CO differential inherits a resolution discontinuity that splits
   the Band 6 EB set 5/4. Treat "H2O arm" as two sub-arms unless you re-derive from raw.
-- **B7 spw 3 channel 1 is flagged** (`flagdata(vis=...calavg, spw='3:1')`). Do not treat it as data.
+- **B7 spw 3 channel 1 is flagged in the CONTINUUM `calavg` MS** (`flagdata(vis=...calavg, spw='3:1')`).
+  ALMA's stated reason, verbatim: *230/240 channels in the parent datasets that contribute to this
+  channel were flagged due to the presence of the CO 10-9 line*, and CASA 4.2.2 cannot produce
+  channelized weights for a proper weighted sum. ALMA calls the sensitivity loss negligible. This is
+  line contamination of the continuum, **not** corrupt data, and it does not affect the line MS.
 
 ---
 
@@ -120,6 +124,7 @@ line product. Decide explicitly whether that is reachable before spending the pu
 uvtapering"*. Both cubes are in the Band 4 reference-image tarball:
 
 - `SDP.81.Band4.CO_z3.042.fits`        <- **untapered**, 10 mas cells
+  (produced with `interactive=True` and a hand-drawn `prior.mask` — it is not a blind product)
 - `SDP.81.Band4.CO_smooth_z3.042.fits` <- tapered
 
 Band 4 CO(5-4) is therefore the **only** arm where your no-taper condition is already met by an
@@ -171,6 +176,35 @@ copy of the SV portal. Verified by downloading the members and hashing them:
    of 10,240 NUL bytes — an empty tar with 0 entries, served as HTTP 200 with
    `Content-Type: application/tar`. Only Band 6's README survives packaging
    (`2011-07-01_005_of_005`); the Band 4 and Band 7 READMEs are the empty ones.
+
+### The two routes are the SAME BYTES — verified
+
+The ASA "package" members are the SV-portal files **renamed**, not repackaged. Proof: the SV portal's
+`SDP81_Band6+7_ReferenceImages.tgz` and the ASA's `2011-08-01_001_of_006.tar` are both 1,721,222 bytes
+with the identical md5 `6c552534ab37e193cf68999e05945994` — a gzip stream served under a `.tar` name.
+So either route gives identical data, **except** for the Band 7 gap below. Full mapping:
+
+| ASA package member | bytes | is actually |
+|---|---|---|
+| `2011-06-01_001_of_005` | 9,043,149,221 | `SDP81_Band4_CalibratedData.tgz` |
+| `2011-06-01_002_of_005` | 17,910 | `SDP81_Band4_CalibrationScripts.tgz` |
+| `2011-06-01_003_of_005` | 1,212,386,119 | `SDP81_Band4_ReferenceImages_z3.042.tgz` |
+| `2011-06-01_004_of_005` | 77,538,234,020 | `SDP81_Band4_UncalibratedData.tgz` |
+| `2011-06-01_005_of_005` | 10,240 | **EMPTY** (should hold `SDP81_Band4_Readme`) |
+| `2011-07-01_001_of_005` | 44,965,898,587 | `SDP81_Band6_CalibratedData.tgz` |
+| `2011-07-01_002_of_005` | 13,274 | `SDP81_Band6_CalibrationScripts.tgz` |
+| `2011-07-01_003_of_005` | 386,715,687 | `SDP81_Band6_ReferenceImages.tgz` |
+| `2011-07-01_004_of_005` | 34,501,182,039 | `SDP81_Band6_UncalibratedData.tgz` |
+| `2011-07-01_005_of_005` | 10,240 | tar holding `SDP81_Band6_Readme` (the only README that survives) |
+| `2011-08-01_001_of_006` | 1,721,222 | `SDP81_Band6+7_ReferenceImages.tgz` |
+| `2011-08-01_002_of_006` | 86,078,616,365 | `SDP81_Band7_CalibratedData.tgz` |
+| `2011-08-01_003_of_006` | 13,894 | `SDP81_Band7_CalibrationScripts.tgz` |
+| `2011-08-01_004_of_006` | 1,721,222 | **duplicate** of `_001` |
+| `2011-08-01_005_of_006` | 1,721,222 | **duplicate** of `_001` |
+| `2011-08-01_006_of_006` | 10,240 | **EMPTY** (should hold `SDP81_Band7_Readme`) |
+
+Never delivered by the ASA package route: `SDP81_Band7_ReferenceImages.tgz`,
+`SDP81_Band7_UncalibratedData.tgz`, `SDP81_Band4_Readme`, `SDP81_Band7_Readme`.
 
 **=> Use the SV portal URLs (the "SV PORTAL" section of `URLS.md`) as the entry point, not the ASA packages.**
 

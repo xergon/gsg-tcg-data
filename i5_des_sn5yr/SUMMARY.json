@@ -1,0 +1,146 @@
+{
+  "target_row": "i5 \u2014 residual cosmic phase de-sharpening in Type Ia supernovae",
+  "fetched_utc": "2026-07-25T09:10:45Z",
+  "fetched_by": "Cat data-sourcing arm (Claude)",
+  "EXCLUSIONS": {
+    "excluded_directories": [
+      "4_DISTANCES_COVMAT",
+      "5_COSMOLOGY"
+    ],
+    "reason": "Excluded on i5's explicit instruction so the test stays independent of distance-modulus cosmology, H0 and a0. Absent from every file on main AND from both release tarballs.",
+    "verified_absent": true,
+    "caveat": "0_DATA in the Dovekie version carries LENSDMU / LENSDMU_ERR (lensing magnification distance-modulus correction) in the per-SN HEAD table. It is NOT part of the two excluded directories, but it is a distance-modulus-adjacent quantity \u2014 flagged so i5 can drop it if the test requires. The Zenodo v1.2 HEAD table does not have these columns."
+  },
+  "sources": {
+    "zenodo": {
+      "record": 12720778,
+      "record_doi": "10.5281/zenodo.12720778",
+      "concept_doi": "10.5281/zenodo.12720777",
+      "file": "DES-SN5YR-1.2.zip",
+      "bytes": 1534568826,
+      "published_md5": "9019a6ddc569553bc323e9e1b68a55bf",
+      "computed_md5": "9019a6ddc569553bc323e9e1b68a55bf",
+      "md5_verified": true,
+      "computed_sha256": "fd8e4a5c84c044c4ca6032b308fcb74a314f37246975c3633411146164ec7dba",
+      "magic_bytes": "504b0304 (PK zip) \u2014 not an HTML shell",
+      "version_meaning": "Vincenzi et al. 2024 release"
+    },
+    "github": {
+      "repo": "des-science/DES-SN5YR",
+      "snapshot_commit": "c9a4fcafc4cbd19bd750dee47fc76194a45c181f",
+      "commit_date": "2026-01-28T10:43:40Z",
+      "version_meaning": "DES-Dovekie reanalysis (Popovic et al. 2026); upstream README states it supersedes the original DES-SN5YR results"
+    },
+    "data_paper": {
+      "ref": "Sanchez et al. 2024, ApJ 975, 5",
+      "doi": "10.3847/1538-4357/ad739a",
+      "arxiv": "2406.05046",
+      "data_availability": "Paper points at github.com/des-science/DES-SN5YR and doi:10.5281/zenodo.12720777 \u2014 exactly the two sources mirrored here."
+    }
+  },
+  "verified_counts": {
+    "smp_high_quality_light_curves": 19706,
+    "smp_photometry_epochs": 1798736,
+    "photometrically_classified_SNe": 1635,
+    "hostgal_specz_available": 8302,
+    "lowz_light_curves": 342,
+    "foundation_light_curves": 185,
+    "des_mocks_in_1_SIMULATIONS_zenodo_v1.2": 25,
+    "redshift_range": "0.1 < z < 1.13 (cosmology sample; per Sanchez et al. 2024)",
+    "how_checked": "NEVT_ALL/NEVT_HOSTGAL_SPECZ from DES-SN5YR_DES.README; row counts read directly from the FITS tables with astropy; mock count = directory count under 1_SIMULATIONS/SNIa_SIMULATIONS."
+  },
+  "NOT_OBTAINED": {
+    "diffimg_light_curves_31636": {
+      "status": "NOT PUBLIC",
+      "detail": "Sanchez et al. 2024 describes 31,636 DIFFIMG light curves alongside the 19,706 SMP ones. Only the SMP set is released. A DES-SN5YR_DES_DIFFIMG directory is named in the ReadTheDocs contents list but exists in NO public version \u2014 checked HEAD, tag 1.3, tag v1.2 and the Zenodo zip. 0_DATA/README.md still reads 'will be released after acceptance of Sanchez et al. 2024'. Upstream gap, not a fetch failure."
+    },
+    "dovekie_simulation_light_curves": {
+      "status": "BLOCKED UPSTREAM",
+      "detail": "The 250 *.FITS.gz under 1_SIMULATIONS at Dovekie HEAD are git-LFS tracked and GitHub returns 'Git LFS is disabled for this repository'. raw.githubusercontent serves a 131-byte pointer stub, HTTP 200. Those stubs were REMOVED from what is published here rather than passed off as data. Mitigation: the 25 Vincenzi-era mocks in the Zenodo v1.2 tarball are complete real files and are included."
+    }
+  },
+  "version_differences": {
+    "all_PHOT_light_curve_files_identical": true,
+    "detail": "Checked by git blob SHA: DES/LOWZ/Foundation PHOT files and DES5YR_SALT3_LCFIT.LCPLOT.gz are bit-identical between HEAD and tag 1.3. Only DES-SN5YR_DES_HEAD.FITS.gz (per-SN metadata) differs \u2014 regenerated 2025-12-02 per the upstream UPDATES block: 2025-04 filter rename g,r,i,z -> DES-g,DES-r,DES-i,DES-z; 2025-12 corrected HOSTGAL_MAG_[band]/HOSTGAL_MAGERR_[band].",
+    "head_table_columns": {
+      "zenodo_v1.2": 96,
+      "dovekie": 99,
+      "only_in_v1.2": [
+        "IAUC"
+      ],
+      "only_in_dovekie": [
+        "NAME_IAUC",
+        "NAME_TRANSIENT",
+        "LENSDMU",
+        "LENSDMU_ERR"
+      ],
+      "rows_both": 19706
+    },
+    "tag_1.3_vs_zenodo_v1.2": "Over the six kept directories: 725 files identical, 3 differ \u2014 all pippin configs (D5yr_analysis.yml, D5yr_biascor.yml, D5yr_sim_nominal.yml)."
+  },
+  "per_epoch_columns_available": [
+    "MJD",
+    "BAND",
+    "CCDNUM",
+    "IMGNUM",
+    "FIELD",
+    "PHOTFLAG",
+    "PHOTPROB",
+    "FLUXCAL",
+    "FLUXCALERR",
+    "PSF_SIG1",
+    "PSF_SIG2",
+    "PSF_RATIO",
+    "SKY_SIG",
+    "SKY_SIG_T",
+    "RDNOISE",
+    "ZEROPT",
+    "ZEROPT_ERR",
+    "GAIN",
+    "XPIX",
+    "YPIX"
+  ],
+  "published": {
+    "release_tag": "i5-des-sn5yr-v1",
+    "release_assets": {
+      "DES-SN5YR-zenodo-v1.2-EXCL45.tar.gz": {
+        "bytes": 1170147464,
+        "sha256": "630dd8dd3668cc6854e79ab8219153ce24fa645da70514d98c4bf393f2fe411d",
+        "url": "https://github.com/xergon/gsg-tcg-data/releases/download/i5-des-sn5yr-v1/DES-SN5YR-zenodo-v1.2-EXCL45.tar.gz"
+      },
+      "DES-SN5YR-github-c9a4fca-EXCL45.tar.gz": {
+        "bytes": 135547317,
+        "sha256": "dbb78d3f9ae7b5aa9807f90cf13f0ca6493f66eecb6d0d6f8ddc74991b5ae4b0",
+        "url": "https://github.com/xergon/gsg-tcg-data/releases/download/i5-des-sn5yr-v1/DES-SN5YR-github-c9a4fca-EXCL45.tar.gz"
+      },
+      "DES-SN5YR_DES_PHOT.csv.gz": {
+        "bytes": 87414696,
+        "sha256": "312b0c5592a86eca19ecc068e8774af03149f87b6e40ebfbe6de5404e98621c6",
+        "url": "https://github.com/xergon/gsg-tcg-data/releases/download/i5-des-sn5yr-v1/DES-SN5YR_DES_PHOT.csv.gz"
+      }
+    },
+    "main_tree_stats": {
+      "github_dovekie_c9a4fca": {
+        "files": 431,
+        "bytes": 175460498
+      },
+      "zenodo_v1.2": {
+        "files": 28,
+        "bytes": 3191015
+      },
+      "derived_csv": {
+        "files": 4,
+        "bytes": 8559976
+      }
+    },
+    "raw_url_base": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i5_des_sn5yr"
+  },
+  "integrity_guards_run": [
+    "publisher md5 verified before deriving anything",
+    "zip magic bytes checked (PK, not an HTML shell)",
+    "every published file scanned for git-LFS pointer stubs",
+    "every published file scanned for HTML-shell headers",
+    "4_/5_ absence asserted in the staged tree and in both tarball listings"
+  ],
+  "derived_csv_note": "derived_csv/ is a pure format conversion (astropy Table.read -> CSV -> gzip). No rows filtered, no columns dropped, no values altered. Provided because FITS is awkward to pull over a URL."
+}

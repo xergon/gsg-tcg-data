@@ -1,0 +1,81 @@
+# Before using this input file:
+#  - check keys below with CHANGE in comment field
+#  - check optional OUTPUT redirect
+#
+
+# % include: $SNDATA_ROOT/sample_input_files/DES-SN5YR/D5yr_anchors_sim.yml %
+
+#### Change the following PATH options depending on the machine/cluster you are using #####
+#### By default, everything is saved in $PIPPIN_OUTPUT
+#GLOBAL:
+#  OUTPUT:
+#    output_dir: $PIPPIN_OUTPUT
+
+ALIAS:
+
+#### Change the following batch info options depending on the machine/cluster you are using #####
+  BATCHINFO: &batchinfo
+     BATCH_INFO: sbatch $SBATCH_TEMPLATES/SBATCH_Midway2b.TEMPLATE 5
+
+SIM:
+  DATALOWZSIM:
+    IA:
+      <<: *lowz_nominal
+    GLOBAL:
+      <<: *datasim_size
+      <<: *cosmology
+      <<: *batchinfo
+
+  DATAFOUNDSIM:
+    IA:
+      <<: *found_nominal
+    GLOBAL:
+      <<: *datasim_size
+      <<: *cosmology
+      <<: *batchinfo
+
+  DATADESSIM:
+    IA:
+      <<: *desia_nominal
+    GLOBAL:
+      <<: *des_survey
+      <<: *datasim_size
+      <<: *cosmology
+      <<: *batchinfo
+
+  DATADESSIM_CC:
+    PECIAX:
+      BASE: $SNDATA_ROOT/sample_input_files/DES-SN5YR/base_files/sim/sim_iax_dust.input
+    PECIA91BG:
+      BASE: $SNDATA_ROOT/sample_input_files/DES-SN5YR/base_files/sim/sim_ia91bg.input
+    II_TEMPLATES:
+      BASE: $SNDATA_ROOT/sample_input_files/DES-SN5YR/base_files/sim/sim_ii_v19_li11revised_nodust.input
+    Ibc_TEMPLATES:      
+      BASE: $SNDATA_ROOT/sample_input_files/DES-SN5YR/base_files/sim/sim_ibc_v19_li11revised_nodust.input
+    GLOBAL:
+      <<: *des_survey
+      <<: *cosmology
+      <<: *datasim_size
+      <<: *batchinfo
+
+LCFIT:
+  D3:
+    BASE: $SNDATA_ROOT/sample_input_files/DES-SN5YR/base_files/lcfit/lcfit_desSMP_5yr.nml
+    MASK: DES
+    OPTS:
+      <<: *batchinfo
+      BATCH_MEM: 16GB
+
+  L3:
+    BASE: $SNDATA_ROOT/sample_input_files/DES-SN5YR/base_files/lcfit/lcfit_lowz_des5yr.nml
+    MASK: LOWZ
+    OPTS:
+      <<: *batchinfo
+      BATCH_MEM: 16GB
+
+  F3:
+    BASE: $SNDATA_ROOT/sample_input_files/DES-SN5YR/base_files/lcfit/lcfit_found_des5yr.nml
+    MASK: FOUND
+    OPTS:
+      <<: *batchinfo
+      BATCH_MEM: 16GB

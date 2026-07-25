@@ -1,0 +1,30 @@
+{
+  "jla_rows": 613,
+  "pplus_rows": 750,
+  "pplus_dropped_columns": [
+    "MU_SH0ES",
+    "MU_SH0ES_ERR_DIAG",
+    "CEPH_DIST",
+    "IS_CALIBRATOR",
+    "USED_IN_SH0ES_HF",
+    "m_b_corr",
+    "m_b_corr_err_DIAG",
+    "m_b_corr_err_RAW",
+    "m_b_corr_err_VPEC",
+    "biasCor_m_b",
+    "biasCorErr_m_b",
+    "biasCor_m_b_COVSCALE",
+    "biasCor_m_b_COVADD",
+    "zHD",
+    "zHDERR"
+  ],
+  "pplus_by_survey": {
+    "SDSS": 321,
+    "PS1MD": 269,
+    "SNLS": 160
+  },
+  "jla_by_survey": {
+    "SDSS": 374,
+    "SNLS": 239
+  }
+}

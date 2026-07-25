@@ -1,0 +1,13 @@
+{
+  "spec_SNIa_118_120": 499,
+  "SNIa_query_119": 41,
+  "zSNIa_106": 824,
+  "pSNIa_103": 624,
+  "readme_Sako_table3": {
+    "SNIa": 500,
+    "SNIa?": 36,
+    "zSNIa": 907,
+    "pSNIa": 677
+  },
+  "note": "shipped FITS SNTYPE counts DIFFER from the Sako+2014 Table 3 reproduced in the dataset README"
+}

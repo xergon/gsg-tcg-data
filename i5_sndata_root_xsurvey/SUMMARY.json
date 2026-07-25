@@ -1,0 +1,276 @@
+{
+  "target_row": "i5 \u2014 residual cosmic phase de-sharpening in SNe Ia (cross-survey replication)",
+  "fetched_utc": "2026-07-25T11:19:28Z",
+  "source": {
+    "zenodo_record": 19503606,
+    "record_doi": "10.5281/zenodo.19503606",
+    "concept_doi": "10.5281/zenodo.4001177",
+    "title": "SNDATA_ROOT for SNANA software",
+    "publication_date": "2026-04-10",
+    "file": "SNDATA_ROOT_2026-04-10.tar.gz",
+    "bytes": 1970835028,
+    "published_md5": "0ff9100985903edf13887123564e5ebb",
+    "computed_md5": "0ff9100985903edf13887123564e5ebb",
+    "md5_verified": true,
+    "computed_sha256": "d529d116386b7132e93c1ef6358e6bf4b13b78c1f8c042703b98ffc42a0c881f",
+    "magic_bytes": "1f8b0800 (gzip) \u2014 not an HTML shell",
+    "uncompressed_files": 13404,
+    "uncompressed_bytes": 3041326122
+  },
+  "surveys_present": {
+    "SNLS": {
+      "present": true,
+      "real_photometry": true,
+      "datasets": [
+        "lcmerge/SNLS3year/SNLS3year_MEGACAM",
+        "lcmerge/SNLS3year/SNLS3year+METADATA",
+        "lcmerge/JLA2014/JLA2014_SNLS",
+        "lcmerge/SNLS_Ast06"
+      ]
+    },
+    "PS1MD": {
+      "present": true,
+      "real_photometry": true,
+      "datasets": [
+        "lcmerge/PS1MD_Jones18",
+        "lcmerge/Pantheon/Pantheon_PS1MD_FITS"
+      ]
+    },
+    "SDSS-II": {
+      "present": true,
+      "real_photometry": true,
+      "datasets": [
+        "lcmerge/SDSS_allCandidates+BOSS",
+        "lcmerge/SDSS_HOLTZ08"
+      ]
+    }
+  },
+  "per_survey_counts": [
+    {
+      "survey": "SNLS",
+      "dataset": "SNLS3year_MEGACAM",
+      "tag": "SNLS_SNLS3year_MEGACAM",
+      "format": "text .dat.gz",
+      "description": "spec-confirmed SNIa (Guy+2010 / Conley+2011)",
+      "n_light_curves": 281,
+      "n_epochs": 23837,
+      "n_with_redshift": 281,
+      "n_with_peak_epoch": 281,
+      "n_with_host_logmass": 0,
+      "n_with_host_surface_brightness": 0,
+      "n_epochs_with_PHOTFLAG": 0,
+      "n_with_SALT2_x1c_JLA2014": 239,
+      "n_with_SALT2_x1c_PantheonPlus": 160,
+      "z_min": 0.082,
+      "z_max": 1.06
+    },
+    {
+      "survey": "SNLS",
+      "dataset": "JLA2014_SNLS",
+      "tag": "SNLS_JLA2014",
+      "format": "text .dat.gz",
+      "description": "spec-confirmed SNIa, JLA recalibration (Betoule+2014)",
+      "n_light_curves": 239,
+      "n_epochs": 21206,
+      "n_with_redshift": 239,
+      "n_with_peak_epoch": 239,
+      "n_with_host_logmass": 0,
+      "n_with_host_surface_brightness": 0,
+      "n_epochs_with_PHOTFLAG": 0,
+      "n_with_SALT2_x1c_JLA2014": 239,
+      "n_with_SALT2_x1c_PantheonPlus": 160,
+      "z_min": 0.124,
+      "z_max": 1.06
+    },
+    {
+      "survey": "SNLS",
+      "dataset": "SNLS_Ast06",
+      "tag": "SNLS_Ast06",
+      "format": "text .dat.gz",
+      "description": "1st-year SNLS (Astier+2006)",
+      "n_light_curves": 71,
+      "n_epochs": 2983,
+      "n_with_redshift": 71,
+      "n_with_peak_epoch": 71,
+      "n_with_host_logmass": 0,
+      "n_with_host_surface_brightness": 0,
+      "n_epochs_with_PHOTFLAG": 0,
+      "n_with_SALT2_x1c_JLA2014": 58,
+      "n_with_SALT2_x1c_PantheonPlus": 36,
+      "z_min": 0.2486,
+      "z_max": 1.01
+    },
+    {
+      "survey": "PS1MD",
+      "dataset": "PS1MD_Jones18",
+      "tag": "PS1MD_Jones18",
+      "format": "FITS HEAD/PHOT",
+      "description": "PHOTOMETRICALLY classified SNIa (Jones+2018)",
+      "n_light_curves": 1169,
+      "n_epochs": 434024,
+      "n_with_redshift": 1169,
+      "n_with_peak_epoch": 1169,
+      "n_with_host_logmass": 1158,
+      "n_with_host_surface_brightness": 1166,
+      "n_epochs_with_PHOTFLAG": 434024,
+      "n_with_SALT2_x1c_JLA2014": 0,
+      "n_with_SALT2_x1c_PantheonPlus": 253,
+      "z_min": 0.0265,
+      "z_max": 0.9406
+    },
+    {
+      "survey": "PS1MD",
+      "dataset": "Pantheon_PS1MD_FITS",
+      "tag": "PS1MD_Pantheon_specIa",
+      "format": "FITS HEAD/PHOT",
+      "description": "spec-confirmed SNIa (Rest+2014 / Scolnic+2018)",
+      "n_light_curves": 369,
+      "n_epochs": 16320,
+      "n_with_redshift": 369,
+      "n_with_peak_epoch": 369,
+      "n_with_host_logmass": 360,
+      "n_with_host_surface_brightness": 369,
+      "n_epochs_with_PHOTFLAG": 16320,
+      "n_with_SALT2_x1c_JLA2014": 0,
+      "n_with_SALT2_x1c_PantheonPlus": 269,
+      "z_min": 0.0264,
+      "z_max": 0.6712
+    },
+    {
+      "survey": "SDSS",
+      "dataset": "SDSS_allCandidates+BOSS",
+      "tag": "SDSS_allCandidates_BOSS",
+      "format": "FITS HEAD/PHOT",
+      "description": "ALL transients 2005-2007 (Sako+2018), SMPv8+BOSS",
+      "n_light_curves": 10258,
+      "n_epochs": 1110308,
+      "n_with_redshift": 4684,
+      "n_with_peak_epoch": 10258,
+      "n_with_host_logmass": 4542,
+      "n_with_host_surface_brightness": 10258,
+      "n_epochs_with_PHOTFLAG": 1110308,
+      "n_with_SALT2_x1c_JLA2014": 368,
+      "n_with_SALT2_x1c_PantheonPlus": 321,
+      "z_min": -0.0041,
+      "z_max": 6.4716
+    }
+  ],
+  "salt2_coverage": [
+    {
+      "survey": "PS1MD",
+      "dataset": "PS1MD_Jones18",
+      "n_sn": 1169,
+      "n_JLA_x1": 0,
+      "n_Pplus_x1": 253,
+      "n_JLA_logMst": 0,
+      "n_Pplus_mass": 253
+    },
+    {
+      "survey": "PS1MD",
+      "dataset": "PS1MD_Pantheon_specIa",
+      "n_sn": 369,
+      "n_JLA_x1": 0,
+      "n_Pplus_x1": 269,
+      "n_JLA_logMst": 0,
+      "n_Pplus_mass": 269
+    },
+    {
+      "survey": "SDSS",
+      "dataset": "SDSS_allCandidates_BOSS",
+      "n_sn": 10258,
+      "n_JLA_x1": 368,
+      "n_Pplus_x1": 321,
+      "n_JLA_logMst": 368,
+      "n_Pplus_mass": 321
+    },
+    {
+      "survey": "SNLS",
+      "dataset": "SNLS_Ast06",
+      "n_sn": 71,
+      "n_JLA_x1": 58,
+      "n_Pplus_x1": 36,
+      "n_JLA_logMst": 58,
+      "n_Pplus_mass": 36
+    },
+    {
+      "survey": "SNLS",
+      "dataset": "SNLS_JLA2014",
+      "n_sn": 239,
+      "n_JLA_x1": 239,
+      "n_Pplus_x1": 160,
+      "n_JLA_logMst": 239,
+      "n_Pplus_mass": 160
+    },
+    {
+      "survey": "SNLS",
+      "dataset": "SNLS_SNLS3year_MEGACAM",
+      "n_sn": 281,
+      "n_JLA_x1": 239,
+      "n_Pplus_x1": 160,
+      "n_JLA_logMst": 239,
+      "n_Pplus_mass": 160
+    }
+  ],
+  "go_no_go": {
+    "photometry_only_spec_confirmed_SNIa": {
+      "SNLS": 281,
+      "SDSS_II": 499,
+      "PS1MD": 369,
+      "total": 1149
+    },
+    "with_SALT2_x1c_homogeneous_PantheonPlus": {
+      "SNLS": 160,
+      "SDSS_II": 321,
+      "PS1MD": 269,
+      "total": 750
+    },
+    "with_SALT2_x1c_maximal_JLA_plus_PantheonPlus": {
+      "SNLS": 239,
+      "SDSS_II": 368,
+      "PS1MD": 269,
+      "total": 876
+    }
+  },
+  "structural_findings": [
+    "SNDATA_ROOT contains NO SALT2 x1/c for SNLS, PS1MD or SDSS \u2014 only CFA3 has .FITRES files.",
+    "SNLS has NO host mass, NO host surface brightness and NO PHOTFLAG in any shipped file.",
+    "PS1MD_Jones18 (1169) is the PHOTOMETRIC sample (SNTYPE==0 for all); the spectroscopic PS1 set is Pantheon_PS1MD_FITS (369).",
+    "PS1MD_Jones18 SNIDs (PSc000006) and Pantheon/Pantheon+ CIDs (000006) are disjoint namespaces; naive join = 0 matches.",
+    "SDSS and PS1MD SNIDs are both bare integers and collide \u2014 join on (survey, SNID).",
+    "HOSTGAL_SPECZ is 0 for every row in both FITS HEAD tables; use REDSHIFT_HELIO/REDSHIFT_FINAL.",
+    "Only 4684 of 10258 SDSS rows have any redshift; PEAKMJD is populated for all 10258.",
+    "Shipped SDSS SNTYPE counts differ from the Sako+2014 Table 3 in the dataset's own README (499/41/824/624 vs 500/36/907/677).",
+    "Extracting on macOS/Windows silently destroys 25 SDSS per-CCD filter curves (44 case-colliding groups, 88 files); CCDAVG pairs are byte-identical, per-CCD pairs are NOT. Case-safe copies shipped.",
+    "SNLS MegaCam throughputs are PER-SUPERNOVA (285 filters-<SNID> dirs), not one curve per band.",
+    "PS1MD_RS14.SIMLIB covers seasons 2010 + half 2011 but Jones18 PEAKMJD spans 55083-56677.",
+    "SDSS_3year.SIMLIB was regenerated 2026-01-27 (NLIBID key added by C. Meldorf).",
+    "dscolnic/Pantheon lcparam_full_long.txt names x1/color/3rdvar in its header but all are exactly 0.0 in all 1048 rows \u2014 NOT usable, not shipped."
+  ],
+  "lensdmu_ruling": {
+    "reintroduced": false,
+    "note": "No LENSDMU/LENSDMU_ERR equivalent exists in SNDATA_ROOT or in either SALT2 table. Pantheon+ cosmology/distance columns were DROPPED (MU_SH0ES, CEPH_DIST, m_b_corr*, biasCor*, zHD*). JLA e_mb is flagged: its published ReadMe states it includes a lensing contribution and mb is bias-corrected; it is not separable from the table."
+  },
+  "external_salt2_sources": [
+    {
+      "name": "JLA2014 table F3",
+      "url": "https://cdsarc.cds.unistra.fr/ftp/J/A+A/568/A22/tablef3.dat",
+      "bytes": 143560,
+      "rows": 740,
+      "used": "239 SNLS + 374 SDSS",
+      "ref": "Betoule et al. 2014, A&A 568, A22"
+    },
+    {
+      "name": "Pantheon+SH0ES.dat",
+      "url": "https://raw.githubusercontent.com/PantheonPlusSH0ES/DataRelease/main/Pantheon%2B_Data/4_DISTANCES_AND_COVAR/Pantheon%2BSH0ES.dat",
+      "bytes": 579283,
+      "rows": 1701,
+      "used": "160 SNLS + 321 SDSS + 269 PS1MD",
+      "ref": "Brout et al. 2022"
+    }
+  ],
+  "deferred": [
+    "SDSS_HOLTZ08 (146 SNe): native files shipped, no derived CSV \u2014 verbose SDSS multi-band EPOCH format needs a separate parser; superseded by SDSS_allCandidates+BOSS.",
+    "Rest of SNDATA_ROOT (3.04 GB, 13404 files) not re-hosted; full manifest in MANIFEST_SNDATA_ROOT.tsv.gz."
+  ],
+  "blocked": "none \u2014 dataset fully public, no access control, registration or credential encountered"
+}

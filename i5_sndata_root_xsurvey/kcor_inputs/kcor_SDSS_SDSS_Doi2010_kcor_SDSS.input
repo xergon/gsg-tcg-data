@@ -1,0 +1,92 @@
+DOCUMENTATION:
+    PURPOSE: Collect calibration info and make kcor tables for SDSS
+    REF: 
+    - AUTHOR:  Kessler et al., 2009
+      ADS:     https://ui.adsabs.harvard.edu/abs/2009ApJS..185...32K
+    INTENT:  Nominal
+    USAGE_CODE: kcor.exe kcor_SDSS.input
+    VALIDATE_SCIENCE: used in SDSS 1st-year cosmology analyses
+    PRIMARY_REF: AB for SDSS, BD17 for Bessell
+    NOTES:
+    - add SURVEY keys (Apr 2022) so that snlc_fit.exe works with calib-shift keys
+DOCUMENTATION_END:
+
+# ------------------------------------------------
+
+SN_SED:    Hsiao07.dat   # spectral template for SN
+
+BD17_SED:  bd_17d4708_stisnic_003.dat 
+
+# SDSS filters
+MAGSYSTEM:   AB 
+FILTSYSTEM:  COUNT 
+FILTPATH:    $SNDATA_ROOT/filters/SDSS/SDSS_Doi2010/CCDAVG 
+SURVEY:  SDSS  # Apr 6 2022
+FILTER:  SDSS-u   u.dat   0.0      
+FILTER:  SDSS-g   g.dat   0.0      
+FILTER:  SDSS-r   r.dat   0.0      
+FILTER:  SDSS-i   i.dat   0.0      
+FILTER:  SDSS-z   z.dat   0.0      
+
+FILTER:  SDSS-U   U.dat   0.0     # overlap CCD1 
+FILTER:  SDSS-G   G.dat   0.0     # overlap CCD1 
+FILTER:  SDSS-R   R.dat   0.0     # overlap CCD1 
+FILTER:  SDSS-I   I.dat   0.0     # overlap CCD1 
+FILTER:  SDSS-Z   Z.dat   0.0     # overlap CCD1 
+
+
+MAGSYSTEM:  BD17 
+FILTSYSTEM: ENERGY 
+FILTPATH:   $SNDATA_ROOT/filters/Bessell90/Bessell90_K09
+SURVEY: LOWZ   # Apr 6 2022
+FILTER: Bessell-U   Bessell90_U.dat      9.724 
+FILTER: Bessell-B   Bessell90_B.dat      9.907 
+FILTER: Bessell-V   Bessell90_V.dat      9.464 
+FILTER: Bessell-R   Bessell90_R.dat      9.166 
+FILTER: Bessell-I   Bessell90_I.dat      8.846 
+FILTER: Bessell-BX  Bessell90_BX.dat     9.907 
+
+# Define K-corrections 
+# 1st filter is rest-frame. 
+# 2nd filter is observer-frame. 
+# 3rd arg is short-hand name for table storage. 
+
+KCOR:  Bessell-U   SDSS-u   K_Uu 
+KCOR:  Bessell-U   SDSS-g   K_Ug 
+KCOR:  Bessell-B   SDSS-g   K_Bg 
+KCOR:  Bessell-B   SDSS-r   K_Br 
+KCOR:  Bessell-V   SDSS-r   K_Vr 
+KCOR:  Bessell-V   SDSS-i   K_Vi 
+KCOR:  Bessell-R   SDSS-r   K_Rr 
+KCOR:  Bessell-R   SDSS-i   K_Ri 
+KCOR:  Bessell-R   SDSS-z   K_Rz 
+KCOR:  Bessell-I   SDSS-i   K_Ii 
+KCOR:  Bessell-I   SDSS-z   K_Iz 
+
+KCOR:  Bessell-U   SDSS-U   K_UU 
+KCOR:  Bessell-U   SDSS-G   K_UG 
+KCOR:  Bessell-B   SDSS-G   K_BG 
+KCOR:  Bessell-B   SDSS-R   K_BR 
+KCOR:  Bessell-V   SDSS-R   K_VR 
+KCOR:  Bessell-V   SDSS-I   K_VI 
+KCOR:  Bessell-R   SDSS-R   K_RR 
+KCOR:  Bessell-R   SDSS-I   K_RI 
+KCOR:  Bessell-R   SDSS-Z   K_RZ 
+KCOR:  Bessell-I   SDSS-I   K_II 
+KCOR:  Bessell-I   SDSS-Z   K_IZ 
+
+
+# Define generation grids. 
+REDSHIFT_RANGE:    0.0  0.46 
+REDSHIFT_BINSIZE:  0.02      
+
+# define AV grid. 
+RV:          3.1   A(V)/E(B-V) in LMC 
+AV_RANGE:   -6.0  6.0  
+AV_BINSIZE:  0.5  
+AV_OPTION:   2   
+
+LAMBDA_RANGE: 2100 11300  # for SN templates
+
+OUTFILE:  kcor_SDSS_Bessell90_BD17.fits 
+

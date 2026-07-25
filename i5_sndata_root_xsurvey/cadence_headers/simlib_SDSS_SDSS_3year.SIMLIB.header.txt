@@ -1,0 +1,40 @@
+DOCUMENTATION:
+    PURPOSE: SDSS 3-year cadence for SNANA simulation
+    REF:
+    - AUTHOR: Kessler et al. 2013
+      ADS:    https://ui.adsabs.harvard.edu/abs/2013ApJ...764...48K
+    INTENT:   Nominal
+    USAGE_KEY:  SIMLIB_FILE
+    USAGE_CODE: snlc_sim.exe
+    VALIDATE_SCIENCE: used in JLA & Pantheon cosmology analyses
+    NOTES:
+    - includes seasons 2005+2006+2007
+    VERSIONS:
+    - DATE:  2012-03-12
+      AUTHORS: R. Kessler
+    - DATE: 2026-01-27
+      AUTHORS: C. Meldorf (Added NLIBID Key for batch mode.)
+DOCUMENTATION_END:
+
+# ----------------------------------
+
+SURVEY: SDSS     FILTERS: ugriz   TELESCOPE:  SDSS
+NLIBID: 1998
+GENSKIP_PEAKMJD:   53705  53975   # skip the off-season 
+GENSKIP_PEAKMJD:   54060  54345   # idem 
+
+# add the following sigma_0 'FLUXCAL' errors in quadrature to all obs.
+FLUXERR_ADD:  ugriz  28  10  15  23  60
+
+COMMENT: Error correction needed to match SMP errors.
+
+#             FILTs  LOG10(SNR)   ERROR/ERROR(SNANA)
+FLUXERR_COR:  ugriz  -0.90     1.0212  0.9930  1.0115  0.9885  0.9840
+FLUXERR_COR:  ugriz  -0.70     1.0288  0.9895  1.0150  0.9846  0.9866
+FLUXERR_COR:  ugriz  -0.50     1.0351  0.9869  1.0180  0.9819  0.9891
+FLUXERR_COR:  ugriz  -0.30     1.0400  0.9852  1.0204  0.9803  0.9913
+FLUXERR_COR:  ugriz  -0.10     1.0436  0.9844  1.0222  0.9797  0.9934
+FLUXERR_COR:  ugriz   0.10     1.0458  0.9845  1.0234  0.9802  0.9954
+FLUXERR_COR:  ugriz   0.30     1.0466  0.9855  1.0241  0.9818  0.9971
+FLUXERR_COR:  ugriz   0.50     1.0460  0.9874  1.0241  0.9845  0.9987
+FLUXERR_COR:  ugriz   0.70     1.0440  0.9902  1.0236  0.9882  1.0001

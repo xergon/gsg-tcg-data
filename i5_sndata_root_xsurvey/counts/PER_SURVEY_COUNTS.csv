@@ -1,0 +1,7 @@
+survey,dataset,tag,format,description,n_light_curves,n_epochs,n_with_redshift,n_with_peak_epoch,n_with_host_logmass,n_with_host_surface_brightness,n_epochs_with_PHOTFLAG,n_with_SALT2_x1c_JLA2014,n_with_SALT2_x1c_PantheonPlus,z_min,z_max
+SNLS,SNLS3year_MEGACAM,SNLS_SNLS3year_MEGACAM,text .dat.gz,spec-confirmed SNIa (Guy+2010 / Conley+2011),281,23837,281,281,0,0,0,239,160,0.082,1.06
+SNLS,JLA2014_SNLS,SNLS_JLA2014,text .dat.gz,"spec-confirmed SNIa, JLA recalibration (Betoule+2014)",239,21206,239,239,0,0,0,239,160,0.124,1.06
+SNLS,SNLS_Ast06,SNLS_Ast06,text .dat.gz,1st-year SNLS (Astier+2006),71,2983,71,71,0,0,0,58,36,0.2486,1.01
+PS1MD,PS1MD_Jones18,PS1MD_Jones18,FITS HEAD/PHOT,PHOTOMETRICALLY classified SNIa (Jones+2018),1169,434024,1169,1169,1158,1166,434024,0,253,0.0265,0.9406
+PS1MD,Pantheon_PS1MD_FITS,PS1MD_Pantheon_specIa,FITS HEAD/PHOT,spec-confirmed SNIa (Rest+2014 / Scolnic+2018),369,16320,369,369,360,369,16320,0,269,0.0264,0.6712
+SDSS,SDSS_allCandidates+BOSS,SDSS_allCandidates_BOSS,FITS HEAD/PHOT,"ALL transients 2005-2007 (Sako+2018), SMPv8+BOSS",10258,1110308,4684,10258,4542,10258,1110308,368,321,-0.0041,6.4716

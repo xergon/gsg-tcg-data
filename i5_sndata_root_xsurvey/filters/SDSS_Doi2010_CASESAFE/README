@@ -1,0 +1,16 @@
+Dec 2012: Final AB offsets from joint SNLS+SDSS calibration
+Betoule et al, 2012 (arXiv:1212.4864)
+
+ SDSS u  -0.06791
+ SDSS g   0.02028
+ SDSS r   0.00493
+ SDSS i   0.01780
+ SDSS z   0.01015
+
+ ------------------------------------------ 
+ Comments generated from 
+   /home/s1/rkessler/sdss/util/SDSS_build_CCDfilters.pl 
+
+
+ Column-dependent filter-transmissions copied from 
+   /data/dp62.b/data/SNDATA_ROOT/INTERNAL/SDSS/filters/SDSS_col* 

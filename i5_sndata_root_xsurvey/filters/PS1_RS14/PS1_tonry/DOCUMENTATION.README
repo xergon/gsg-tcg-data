@@ -1,0 +1,17 @@
+DOCUMENTATION:
+    PURPOSE: PS1 filter transmissions for medium deep (MD)
+    REF: 
+    - AUTHOR:  Tonry et al., 2012  (calibration)
+      ADS:     https://ui.adsabs.harvard.edu/abs/2012ApJ...750...99T
+    INTENT:  Nominal
+    USAGE_KEY:  FILTER
+    USAGE_CODE: kcor.exe
+    VALIDATE_SCIENCE: used in RS14 and Pantheon cosmology analyses
+    ATMOSPHERE:  includes airmass = 1.2
+    LEAKAGE:     ??
+    NOTES:
+    - averaged over focal plane
+    VERSIONS:
+    - AUTHOR: D. Scolnic
+      DATE:  2016-04
+DOCUMENTATION_END:

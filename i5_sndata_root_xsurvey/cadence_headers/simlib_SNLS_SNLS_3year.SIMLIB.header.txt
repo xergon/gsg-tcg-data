@@ -1,0 +1,40 @@
+DOCUMENTATION:
+    PURPOSE: SNLS cadence for SNANA simulation
+    REF:
+    - AUTHOR: Kessler et al. 2013
+      ADS:    https://ui.adsabs.harvard.edu/abs/2013ApJ...764...48K
+    INTENT:  Nominal
+    USAGE_KEY:  SIMLIB_FILE
+    USAGE_CODE: snlc_sim.exe
+    VALIDATE_SCIENCE: used in several SNIa-cosmology analyses
+    NOTES:
+    - includes each exposure; need to run co-add program
+    VERSIONS:
+    - DATE: Mar 3 2012
+      AUTHORS: R. Kessler
+DOCUMENTATION_END:
+
+
+SURVEY: SNLS   FILTERS: griz   TELESCOPE: CFHT
+
+FLUXERR_ADD:  griz  0.22  0.30  1.08  1.62
+
+              FILTs  LOG10(SNR)   ERROR/ERROR(SNANA)
+FLUXERR_COR:  griz  -0.90     1.0475  1.0461  1.0755  1.05
+FLUXERR_COR:  griz  -0.70     1.0549  1.0524  1.0750  1.05
+FLUXERR_COR:  griz  -0.50     1.0608  1.0580  1.0736  1.05
+FLUXERR_COR:  griz  -0.30     1.0653  1.0628  1.0715  1.05
+FLUXERR_COR:  griz  -0.10     1.0683  1.0669  1.0686  1.0480
+FLUXERR_COR:  griz   0.10     1.0698  1.0702  1.0650  1.0647
+FLUXERR_COR:  griz   0.30     1.0697  1.0726  1.0606  1.0744
+FLUXERR_COR:  griz   0.50     1.0681  1.0743  1.0555  1.0767
+FLUXERR_COR:  griz   0.70     1.0650  1.0751  1.0498  1.0715
+FLUXERR_COR:  griz   0.90     1.0604  1.0752  1.0433  1.0590
+FLUXERR_COR:  griz   1.10     1.0543  1.0744  1.0362  1.0396
+FLUXERR_COR:  griz   1.30     1.0468  1.0727  1.0284  1.0143
+FLUXERR_COR:  griz   1.50     1.0379  1.0703  1.0201  0.9837
+FLUXERR_COR:  griz   1.70     1.0278  1.0671  1.0112  0.9491
+FLUXERR_COR:  griz   1.90     1.0165  1.0630  1.0017  0.9114
+FLUXERR_COR:  griz   2.10     1.0041  1.0582  0.9918  0.8716
+FLUXERR_COR:  griz   2.30     0.9906  1.0527  0.9814  0.8306
+FLUXERR_COR:  griz   2.50     0.9762  1.0464  0.9706  0.7892

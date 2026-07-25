@@ -1,0 +1,17 @@
+DOCUMENTATION:
+    PURPOSE: CFA3 filter transmissions
+    REF: 
+    - AUTHOR:  ??
+      ADS:     ??
+    INTENT:  Nominal
+    USAGE_KEY:  FILTER
+    USAGE_CODE: kcor.exe
+    VALIDATE_SCIENCE: used in RS14 and Pantheon cosmology analyses
+    ATMOSPHERE:  includes airmass = 1.2
+    LEAKAGE:     ??
+    NOTES:
+    - incorporate README ???    
+    VERSIONS:
+    - AUTHOR: D. Scolnic
+      DATE:  2016-04
+DOCUMENTATION_END:

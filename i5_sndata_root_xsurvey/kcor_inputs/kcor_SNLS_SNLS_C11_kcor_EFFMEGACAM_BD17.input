@@ -1,0 +1,58 @@
+
+            *** Input for K corrections ***
+
+
+# ======================== BEGIN INPUT  =========================
+
+# specify spectral template for supernova
+
+SN_SED: Hsiao07.dat
+
+
+# specify primary spectrum
+BD17_SED:  bd_17d4708_stisnic_002.dat
+VEGA_SED:  alpha_lyr_stis_003.dat 
+
+# specify filters :  
+MAGSYSTEM: BD17     (define mag system for filters below)
+FILTSYSTEM: COUNT
+FILTPATH: SNLS3year/SNLS3-Megacam
+FILTER: SNLS-g effMEGACAM-g.dat   9.6906
+FILTER: SNLS-r effMEGACAM-r.dat   9.2183
+FILTER: SNLS-i effMEGACAM-i.dat   8.9142
+FILTER: SNLS-z effMEGACAM-z.dat   8.7736
+
+
+
+# give list of K correction matrices to compute
+# First filter is rest-frame;
+# 2nd filter is observers [redshifted] frame
+# 3rd arg is short-hand name for table storage
+
+
+# define redshift grid for Kcor matrtix.
+# Note that the "epoch" grid is taken automatically from the SN template.
+
+REDSHIFT_RANGE:   0.0  1.20
+REDSHIFT_BINSIZE: 0.05
+
+# define AV grid
+RV:          3.1   A(V)/E(B-V) in LMC
+AV_RANGE:   -6.0  6.0
+AV_BINSIZE:  0.25
+AV_OPTION:   2   [1 => use AV at avg lambda in filter  (with CCM89)]
+                 [2 => convolve spectrum and extinction with CCM89 law]
+
+
+# define lambda range for SN templates; 
+# template lambda binning is used internally
+LAMBDA_RANGE: 2100 11300
+
+# define output file for kcor grid
+OUTFILE: kcor_EFFMEGACAM_BD17.fits
+
+
+
+
+
+

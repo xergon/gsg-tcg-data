@@ -82,7 +82,7 @@
         "bytes": 19882310141
       }
     },
-    "inventory_products": 157149,
+    "inventory_products": 157150,
     "full_manifest_note": "pds_superlibs_file_manifest.csv.gz has all 314300 direct URLs + byte sizes; any subset is fetchable directly from the PDS archive root",
     "staged_sample": {
       "file": "pds_superlibs_10k_mars_pershot_sample_50std_4energies.tar.gz",

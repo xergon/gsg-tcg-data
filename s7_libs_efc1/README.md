@@ -14,7 +14,7 @@ wavelength rows; columns = wavelength + 24 *individual shot* intensity integrati
 
 - `pds/pds_superlibs_file_manifest.csv.gz` — all **314,300** files with direct URL + byte size
   (17 leaf dirs: 10k/{earth,mars,vacuum}, 18k/mars × 3–9 mJ). **Full collection = 600.6 GB.**
-- `pds/collection_data_superlibs_inventory.csv` — official PDS inventory, 157,149 products (LIDVIDs)
+- `pds/collection_data_superlibs_inventory.csv` — official PDS inventory, 157,150 products (LIDVIDs)
 - `pds/bundle_readme.txt` — bundle README
 
 The full 600.6 GB is **not** mirrored. A matched per-shot sample is in the release (see below);

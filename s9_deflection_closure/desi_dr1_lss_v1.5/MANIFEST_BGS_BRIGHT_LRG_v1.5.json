@@ -1,0 +1,1154 @@
+[
+ {
+  "file": "BGS_BRIGHT_0_full.ran.fits",
+  "bytes": 6694315200,
+  "sha256": "bb5b43d8982b91a89fb790f57dbd4e06cc9cf0fa1212884185eb0fc256d865f2",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_0_full.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_0_full_HPmapcut.ran.fits",
+  "bytes": 6762827520,
+  "sha256": "367bfe1630e065983b1bcd421378c14f2f54df92ec45eab3f2f243a2a37a3152",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_0_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_0_full_noveto.ran.fits",
+  "bytes": 7030368000,
+  "sha256": "3f67d0c684fa3eb5ab2d02a3ea46abc0128a26352b8255e5c2d6b3655764ea85",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_0_full_noveto.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_10_full.ran.fits",
+  "bytes": 6692745600,
+  "sha256": "531de52fae6531ad595c9b580e4689f395dbf1de716783cb82f0f4aa5189173e",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_10_full.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_10_full_HPmapcut.ran.fits",
+  "bytes": 6761171520,
+  "sha256": "ac7bd5c3228233ce05e54431c3e7e960b50730f7e585a289dcf48420b40faa5f",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_10_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_10_full_noveto.ran.fits",
+  "bytes": 7028006400,
+  "sha256": "207292e1e2ff815b6f7f88a017f54fd7618843597c784a43c3ac062b89f2df8d",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_10_full_noveto.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_11_full.ran.fits",
+  "bytes": 6695357760,
+  "sha256": "7829bcdf4305992f4a7899d368a8f3196141a1375d19d969f86f0192b0578075",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_11_full.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_11_full_HPmapcut.ran.fits",
+  "bytes": 6763916160,
+  "sha256": "73d9bc107901ed778bcb95f3fbbaab866b1ee5c80064e013ca215c456446925d",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_11_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_11_full_noveto.ran.fits",
+  "bytes": 7031188800,
+  "sha256": "c16cf5bd35fbfdaa757f543804a7da3b2b624ec63a2948e9898e69e123b17732",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_11_full_noveto.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_12_full.ran.fits",
+  "bytes": 6694418880,
+  "sha256": "48224bbdab3b395869e9ab756bb7b43fc591a14ea14bb45f777a4af1fe0d5651",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_12_full.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_12_full_HPmapcut.ran.fits",
+  "bytes": 6762913920,
+  "sha256": "6debbf21f71410463309c3c1816ec5cdffe0b7fb190fe9b92a972dccefa720b9",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_12_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_12_full_noveto.ran.fits",
+  "bytes": 7030221120,
+  "sha256": "e6c9f1b5f27ac0f5d040695d8d24b3ce2a91c1b0d50b9968697ff222d59bb23c",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_12_full_noveto.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_13_full.ran.fits",
+  "bytes": 6695542080,
+  "sha256": "99bc7c7d333e409a441071e6ada48cc9183480ad6421a7d0ecf71a05d38478ad",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_13_full.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_13_full_HPmapcut.ran.fits",
+  "bytes": 6764019840,
+  "sha256": "637f8eb6e8a09d60391f1109e6e4e8b2f31aa9c11b34d5598cc69bb3cc00b4c0",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_13_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_13_full_noveto.ran.fits",
+  "bytes": 7030949760,
+  "sha256": "c683a69fc9c1584e65a980dec8e5c9afbbc29390ff89e3a0f7b655987c72099f",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_13_full_noveto.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_14_full.ran.fits",
+  "bytes": 6694156800,
+  "sha256": "ea8547c7aed5b06bcb9e0f9c8911d6d6f9956463ee190fd3e3d82dc991143e98",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_14_full.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_14_full_HPmapcut.ran.fits",
+  "bytes": 6762646080,
+  "sha256": "e44ed307ebcab5c3a558f36c2714e0e26cda5f6ae8eb58702dca7f91a58da610",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_14_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_14_full_noveto.ran.fits",
+  "bytes": 7029959040,
+  "sha256": "fcabf8229f1892df8f82bd51b5193460299f41c21ef838a0499c6678f21ca201",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_14_full_noveto.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_15_full.ran.fits",
+  "bytes": 6696725760,
+  "sha256": "b454085e485898918d62ab693efedbc137f5f6c868cdc8d97bc625c5db0b7f11",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_15_full.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_15_full_HPmapcut.ran.fits",
+  "bytes": 6765468480,
+  "sha256": "c276d0a2c2c3577ebe4cfd34326b7f81182e8f76a687ea3bd04614b7f8f9bc2f",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_15_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_15_full_noveto.ran.fits",
+  "bytes": 7033340160,
+  "sha256": "b88df8a2a96d17c3c30159430db5e5bff59a7e39fb1ad4d6028c1e68f863abb1",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_15_full_noveto.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_16_full.ran.fits",
+  "bytes": 6694778880,
+  "sha256": "bb521a3c862ab8d7e96d37ca1fbbf7d736bc76353b1834c36d6cc2828efc74b8",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_16_full.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_16_full_HPmapcut.ran.fits",
+  "bytes": 6762911040,
+  "sha256": "54d44b5f4bf35ae86c93b66aeb9e62bc38b14d2c57039ee3d2217faed980f249",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_16_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_16_full_noveto.ran.fits",
+  "bytes": 7030344960,
+  "sha256": "3fdeb74e855882f95bad3b43a4c932b679dd27be1a2a2c23fd588d4562464150",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_16_full_noveto.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_17_full.ran.fits",
+  "bytes": 6695026560,
+  "sha256": "ba2c294d92eb9beac42959827ff3d8bf6c014795852d4ce443525bcd62bd4559",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_17_full.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_17_full_HPmapcut.ran.fits",
+  "bytes": 6762841920,
+  "sha256": "26f291fca58155e74f595e4638952f7d9e4bddcab1000e6ea0f88424327afb33",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_17_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_17_full_noveto.ran.fits",
+  "bytes": 7031185920,
+  "sha256": "b4a23a68610b6fbb5f4c9453d26799ead1d04eb78db546e04cc546a8e1761514",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_17_full_noveto.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_1_full.ran.fits",
+  "bytes": 6696227520,
+  "sha256": "5ff198e0bd473cea9187cef04dd095807e2b638d9dd61e456af50a4b5cbc635b",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_1_full.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_1_full_HPmapcut.ran.fits",
+  "bytes": 6764794560,
+  "sha256": "36ecff92b70c19378d97c37f315eecb940129b2035a6cbb2811dc64d20cb5107",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_1_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_1_full_noveto.ran.fits",
+  "bytes": 7032378240,
+  "sha256": "ebd65353e4105fc472f8e5ed1b5f2e81d65b0d4720bff1985fd6dedff538ac95",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_1_full_noveto.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_2_full.ran.fits",
+  "bytes": 6692590080,
+  "sha256": "a21c72be4668e2a950759c90af0a6650471aaa254f7587154cecdc960c43aefc",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_2_full.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_2_full_HPmapcut.ran.fits",
+  "bytes": 6761044800,
+  "sha256": "be718b3fc1e546feab6710a236118c52b62cae3e96b04eafcb31e56b9841f2e5",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_2_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_2_full_noveto.ran.fits",
+  "bytes": 7028317440,
+  "sha256": "e702b56452a614f6bac7a7fe9784d57495f34babc1f0967b4de739a366e45440",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_2_full_noveto.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_3_full.ran.fits",
+  "bytes": 6694686720,
+  "sha256": "fd2b00eadb07f05b6bbd917d2b130fb1dfd60f961e5b84ca9d624fedfb3ca71f",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_3_full.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_3_full_HPmapcut.ran.fits",
+  "bytes": 6763268160,
+  "sha256": "3a7604f6d256928012d60b19ef853376435e6a04f40246eec170f0de483302cd",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_3_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_3_full_noveto.ran.fits",
+  "bytes": 7030584000,
+  "sha256": "4cb6d288142253285ef4b5256c6f1a79d86ef343d580bdaed4ff0fc131c7b56f",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_3_full_noveto.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_4_full.ran.fits",
+  "bytes": 6696403200,
+  "sha256": "5266daf2623adef3b115f14f626d6f9ca1704fd3d6a7756a2307e1d81e254c75",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_4_full.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_4_full_HPmapcut.ran.fits",
+  "bytes": 6764984640,
+  "sha256": "5872928dccb566fc668c04fe7e22ba0a6e3f6709f78419544fd3a49f07f54cbf",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_4_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_4_full_noveto.ran.fits",
+  "bytes": 7032568320,
+  "sha256": "fc9cee6d9ae4e7333db68b3c52f78a75c9e8c7da6c96b9471806f67edfeb8b91",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_4_full_noveto.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_5_full.ran.fits",
+  "bytes": 6695400960,
+  "sha256": "e703031e63cff8b77d1848e532dc704a78468cfcf5661ddbbe0c13f8e86df14d",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_5_full.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_5_full_HPmapcut.ran.fits",
+  "bytes": 6764143680,
+  "sha256": "367de1f1dff213aa2dd0adbb0b31c0933280eda655e1dd85b4114e3e4bfb60ed",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_5_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_5_full_noveto.ran.fits",
+  "bytes": 7031387520,
+  "sha256": "8fa676a0677895a8fd549959bba32401508875a4b6b8996460cdbab026a3d6d3",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_5_full_noveto.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_6_full.ran.fits",
+  "bytes": 6692598720,
+  "sha256": "9d8434c5ce685ed31721a27d578a520b8343d1464ad6a536d98ff3a42f6be992",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_6_full.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_6_full_HPmapcut.ran.fits",
+  "bytes": 6761462400,
+  "sha256": "9c4d6093594a73b926833a9bf732511f8c27f845ff6eb60bac253a50cc4b7ea6",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_6_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_6_full_noveto.ran.fits",
+  "bytes": 7028786880,
+  "sha256": "49ae626d6596b02a4a9d410e1e110151a216a230735c8db082244ae1b6006d20",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_6_full_noveto.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_7_full.ran.fits",
+  "bytes": 6695432640,
+  "sha256": "b35ee08ffaf4dfd095be1d0d9e65e3f607ecab6a07ce25c7d7b9fef8dd2bf050",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_7_full.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_7_full_HPmapcut.ran.fits",
+  "bytes": 6763553280,
+  "sha256": "f1e9e5dabe7455bd7b5801ed55199da5e6b9a57be4c5ae7bf163445e51fa8494",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_7_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_7_full_noveto.ran.fits",
+  "bytes": 7030892160,
+  "sha256": "5cf43c574b7b14430b5a93e2ba17cc405c42dd05af11f032710174edc45bb216",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_7_full_noveto.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_8_full.ran.fits",
+  "bytes": 6695239680,
+  "sha256": "7f9c002f10d0e2074bedbbef67b4cd069cb32111f8ab0562084994f45fcfeec5",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_8_full.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_8_full_HPmapcut.ran.fits",
+  "bytes": 6764152320,
+  "sha256": "cd213e9d487b3bc328d4bf129bca20024b18f683756812823bee91feaba9101f",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_8_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_8_full_noveto.ran.fits",
+  "bytes": 7030771200,
+  "sha256": "7d50bb0d49d5015cd50cd8846d987047080ff109850f2b2392a47b8092516890",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_8_full_noveto.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_9_full.ran.fits",
+  "bytes": 6693894720,
+  "sha256": "1bfc79a6fb322de0c1a4977d98c80bc6d76653284e7ae9491e484a300980e40c",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_9_full.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_9_full_HPmapcut.ran.fits",
+  "bytes": 6762839040,
+  "sha256": "033031b52c17e211e2f242d8c265cd29526198fccddcb51bbbcdad054288e42c",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_9_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_9_full_noveto.ran.fits",
+  "bytes": 7030068480,
+  "sha256": "76133362faa9e4ea6c45e33e090bff4d39863a9a90d4012db11549c5e53653d1",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_9_full_noveto.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_NGC_0_clustering.ran.fits",
+  "bytes": 1656118080,
+  "sha256": "7b2cb1f342f248bb4009faa0b1b411d6eecc1f17d297ce2bf2bee28d7fa5862c",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_NGC_0_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_NGC_10_clustering.ran.fits",
+  "bytes": 1655556480,
+  "sha256": "a02a09ce106a739c97d2ec82457611e09899a9208b3c47cac59bf4001c8bc8ee",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_NGC_10_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_NGC_11_clustering.ran.fits",
+  "bytes": 1656449280,
+  "sha256": "7753ccbb5631fe8453ecc4d392bf1e662575ba41fa952956f4be1ecd1af8ad46",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_NGC_11_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_NGC_12_clustering.ran.fits",
+  "bytes": 1656313920,
+  "sha256": "7b50a1027fe0c1965b45681a51face1dbb7ff8304193d042d90af7e81c51ee51",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_NGC_12_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_NGC_13_clustering.ran.fits",
+  "bytes": 1656878400,
+  "sha256": "161705e63902e2eb385213a39c96536d05b00e4da549e6641260c8e51035598c",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_NGC_13_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_NGC_14_clustering.ran.fits",
+  "bytes": 1656400320,
+  "sha256": "a34baac79efb0abd96fc367092c247d8ffc55dca1089b102c9cfada577abf327",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_NGC_14_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_NGC_15_clustering.ran.fits",
+  "bytes": 1656993600,
+  "sha256": "d94530067449bc5c0d44a2532a485de4c62525241809f68a6f2833f1da3a533f",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_NGC_15_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_NGC_16_clustering.ran.fits",
+  "bytes": 1656057600,
+  "sha256": "a3b420c627f6d2ec5ca42c0dd47c19f4e993de4d027ded6a9c25f6c6fb3ff286",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_NGC_16_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_NGC_17_clustering.ran.fits",
+  "bytes": 1656190080,
+  "sha256": "e0cca6101f286bcea73bd2cc359b0f17251f2e59910da6879fc4e2fbc9383214",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_NGC_17_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_NGC_1_clustering.ran.fits",
+  "bytes": 1656449280,
+  "sha256": "b021b9c47fb2c84472cdb03a2f7dc5fb2a811aaa34547444baa59d0a7ef161f0",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_NGC_1_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_NGC_2_clustering.ran.fits",
+  "bytes": 1655956800,
+  "sha256": "a4f0efb2b78b11adda294eee04a3010a709fe52244caf84b42f26a3c610c7de9",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_NGC_2_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_NGC_3_clustering.ran.fits",
+  "bytes": 1656313920,
+  "sha256": "8891454468b01ebf46d8a4c2efe98fd4b171050cf853b030adcac7a36d0d3b8c",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_NGC_3_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_NGC_4_clustering.ran.fits",
+  "bytes": 1656999360,
+  "sha256": "c7b23949c19d8ccf67fd7a3b5d98077fdba973d5beedbb9737a18649d4859414",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_NGC_4_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_NGC_5_clustering.ran.fits",
+  "bytes": 1656650880,
+  "sha256": "268873c62a36527ffbb3d092ce0c66fec6df349b359fba9f0fabb3dbab5e6150",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_NGC_5_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_NGC_6_clustering.ran.fits",
+  "bytes": 1655956800,
+  "sha256": "52c58c6b4055b20f9eab39444375473b56dc5f218326e0555663f0bf25289a18",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_NGC_6_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_NGC_7_clustering.ran.fits",
+  "bytes": 1656414720,
+  "sha256": "c072b3c043bce7526a39347a9ccc87055a5094d2dcbb8fd4e8f91f0af4fefec6",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_NGC_7_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_NGC_8_clustering.ran.fits",
+  "bytes": 1656792000,
+  "sha256": "82594a896af71564cf4b7423fc4ea73150b1fb4f9a5c3fe90cb80bf7f7e0e81a",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_NGC_8_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_NGC_9_clustering.ran.fits",
+  "bytes": 1656596160,
+  "sha256": "bcda82b76a4c3729d36cecc3572b0169f37604365add3f160daff93f5606bc8d",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_NGC_9_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_NGC_clustering.dat.fits",
+  "bytes": 340464960,
+  "sha256": "04b86400761459a30592d52e86cb56cdd9457c1a6a3b8a310e31f517e9dfc5b1",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_NGC_clustering.dat.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_SGC_0_clustering.ran.fits",
+  "bytes": 679127040,
+  "sha256": "a37e2e5bb824f006a5d9f5d5771b8318252f429294a2ebe7e1ffcfbfd3e2a277",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_SGC_0_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_SGC_10_clustering.ran.fits",
+  "bytes": 679115520,
+  "sha256": "2c1dd55d6e5828bfdc96deacc5a5b4aa4eb4d60e46bbc2103c16a46dacd5ad18",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_SGC_10_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_SGC_11_clustering.ran.fits",
+  "bytes": 679173120,
+  "sha256": "d9f5ea5316752384ec0bb3094c72ab7d9e06b01345b77299b089f4155d8d2d75",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_SGC_11_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_SGC_12_clustering.ran.fits",
+  "bytes": 678960000,
+  "sha256": "bdf38bff69c02a7c2bd3f55ee6c41de5fe3c606ac54b861a43a4ab27d8a8d6c8",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_SGC_12_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_SGC_13_clustering.ran.fits",
+  "bytes": 678778560,
+  "sha256": "6a2092fc9b0726f6c088be2ff3e828ca8f902444832263470aa6b44c0d974d91",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_SGC_13_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_SGC_14_clustering.ran.fits",
+  "bytes": 678781440,
+  "sha256": "2afeff1575b886896d6ffdc7da17afce070c6718510ee7babb56b80b091162ca",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_SGC_14_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_SGC_15_clustering.ran.fits",
+  "bytes": 679161600,
+  "sha256": "47b9cce411eed38abb6a58fbbd09d7c1bb1d16f39045ac4189a2222effec9a78",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_SGC_15_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_SGC_16_clustering.ran.fits",
+  "bytes": 679216320,
+  "sha256": "106d14cb7c7970c6a2267804921bf257e8499adde9bb02633ec0c0a579862abb",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_SGC_16_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_SGC_17_clustering.ran.fits",
+  "bytes": 679060800,
+  "sha256": "e4d172110c62a743a3b540eddcc427cff7099b6c1dae548095c6dabe1afbcd56",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_SGC_17_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_SGC_1_clustering.ran.fits",
+  "bytes": 679475520,
+  "sha256": "1df70e47d7a7d575c5efab6df0297f4c8783674b5ac0e569a6c47b2463a58bae",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_SGC_1_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_SGC_2_clustering.ran.fits",
+  "bytes": 678672000,
+  "sha256": "73ca7e0999737da60bdd073382c2356e5763bfae14fa27696794d7810ee156a3",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_SGC_2_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_SGC_3_clustering.ran.fits",
+  "bytes": 679083840,
+  "sha256": "6adedfebc52018483a4762bdee1b2f84b9c1dfc2165cdc69fbb0faf84c50d6c2",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_SGC_3_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_SGC_4_clustering.ran.fits",
+  "bytes": 678988800,
+  "sha256": "d2189e5399baee44ed2b9faa5511e5f2962b5f224532c6510c71242902650811",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_SGC_4_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_SGC_5_clustering.ran.fits",
+  "bytes": 679046400,
+  "sha256": "6482fce43b0f1b07dfc35f09789e85ee2b05cb88a0e5a5ee302e0bdd1c1d6cdc",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_SGC_5_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_SGC_6_clustering.ran.fits",
+  "bytes": 678816000,
+  "sha256": "02be5a16e7027d2bf49114c726b7a6d0368122c6dbe60e3b163b29ec6f9a4c8c",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_SGC_6_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_SGC_7_clustering.ran.fits",
+  "bytes": 679080960,
+  "sha256": "ac22873cfcff8c9bad03127e5d5ad8365ff5190d6eb9d21f30f4c8f5bd374548",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_SGC_7_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_SGC_8_clustering.ran.fits",
+  "bytes": 678908160,
+  "sha256": "af101ac8b723ffe93fc0c62259ab1f4322a63b6847f2807ea1f21ddeeea1ee11",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_SGC_8_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_SGC_9_clustering.ran.fits",
+  "bytes": 678651840,
+  "sha256": "8a324cfdb05d5e5627cd6fe69029361d33fefa0d0895a3d3e852a715cb8e1010",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_SGC_9_clustering.ran.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_SGC_clustering.dat.fits",
+  "bytes": 122624640,
+  "sha256": "1a411153ebb6f492f45d55ac7347fc702665994c8fd94ffe71f29a160c3fe053",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_SGC_clustering.dat.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_frac_tlobs.fits",
+  "bytes": 561600,
+  "sha256": "60d52ab155d2a4b39ff5d715d284b98fec43f2e50504e176dcf1264f71b656e8",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_frac_tlobs.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_full.dat.fits",
+  "bytes": 5214271680,
+  "sha256": "0f3988b7556f3b5b5c70c86469161c80608c70a67b329e3c47b1fe247868b1e2",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_full.dat.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_full_HPmapcut.dat.fits",
+  "bytes": 5186908800,
+  "sha256": "e7f7d094bdce89b8acc84abdba23fcd2fb80fdc4117d52ac45772b0625f3171c",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_full_HPmapcut.dat.fits"
+ },
+ {
+  "file": "BGS_BRIGHT_full_noveto.dat.fits",
+  "bytes": 5593510080,
+  "sha256": "f453d15a6554ed7ec398bf28e8f5c6c153157089fa74e91f7d4587746b689cf7",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_full_noveto.dat.fits"
+ },
+ {
+  "file": "LRG_0_full.ran.fits",
+  "bytes": 5809821120,
+  "sha256": "88ea77c9c99e346aa5265a3babdb50e0ea6e81a8302037a59742de12b77a0c38",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_0_full.ran.fits"
+ },
+ {
+  "file": "LRG_0_full_HPmapcut.ran.fits",
+  "bytes": 5854536000,
+  "sha256": "f958eff909ab9217cc0588099831770e1927860e3ebb43520627486ccfbc67cc",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_0_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "LRG_0_full_noveto.ran.fits",
+  "bytes": 7867013760,
+  "sha256": "d842a782a0a82b01b60509838da7aa96923fa9d83729c33a10ac40b6cb4dcf30",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_0_full_noveto.ran.fits"
+ },
+ {
+  "file": "LRG_10_full.ran.fits",
+  "bytes": 5808424320,
+  "sha256": "23463b221b73be5107d9f1fa90e224379051a2741c772a07f4c01557d9c821e9",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_10_full.ran.fits"
+ },
+ {
+  "file": "LRG_10_full_HPmapcut.ran.fits",
+  "bytes": 5853358080,
+  "sha256": "1ebf27cc7eb29d9e577aa9f98edcafc087fbce77d430a18f717a82cf119a85e0",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_10_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "LRG_10_full_noveto.ran.fits",
+  "bytes": 7866054720,
+  "sha256": "65980e260514576552d9ee72e9afe2ee4f6a70e9327be86e2bd085e47d1e0c34",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_10_full_noveto.ran.fits"
+ },
+ {
+  "file": "LRG_11_full.ran.fits",
+  "bytes": 5911479360,
+  "sha256": "c3531e79042bc08ea661b0bfb6a0ba863eb99bf4a28cbce71037548ff8dad49f",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_11_full.ran.fits"
+ },
+ {
+  "file": "LRG_11_full_HPmapcut.ran.fits",
+  "bytes": 5952962880,
+  "sha256": "6f63100c6e439c4b5fec4367ae461cc11f29a6a4b89b39d6e2bdd724ed59030f",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_11_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "LRG_11_full_noveto.ran.fits",
+  "bytes": 8010169920,
+  "sha256": "7d5c4c08f1602ffd29bbe1bb4b479ff61e4f03c76072f835683ae774ab6045ca",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_11_full_noveto.ran.fits"
+ },
+ {
+  "file": "LRG_12_full.ran.fits",
+  "bytes": 5807027520,
+  "sha256": "49acfac12720226e6e6c3ab9ee46865fcae60bce8772d16fe7620d58940188e7",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_12_full.ran.fits"
+ },
+ {
+  "file": "LRG_12_full_HPmapcut.ran.fits",
+  "bytes": 5852021760,
+  "sha256": "1dd90cb1e68072650cdf27a60d51fb49254ad7d5158e12992a1107faa22a6f8a",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_12_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "LRG_12_full_noveto.ran.fits",
+  "bytes": 7865314560,
+  "sha256": "fae5cb1ae993bcb7a93d976e748f80b7c4a385ca47298fc32620d9e6a3ad725d",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_12_full_noveto.ran.fits"
+ },
+ {
+  "file": "LRG_13_full.ran.fits",
+  "bytes": 5808156480,
+  "sha256": "bb5cb97177161cab7223ff0752002855381f2000c0d0f038e02326a2ea78c67c",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_13_full.ran.fits"
+ },
+ {
+  "file": "LRG_13_full_HPmapcut.ran.fits",
+  "bytes": 5852678400,
+  "sha256": "35f5ca584f77f56677b1ee44f7fac0ce756a1a97ddd1ff24a10855755a6f664c",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_13_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "LRG_13_full_noveto.ran.fits",
+  "bytes": 7868341440,
+  "sha256": "644655135c60dd38c0cd753d24a4b7e01dd133edc2cdf15d587d94cc411db719",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_13_full_noveto.ran.fits"
+ },
+ {
+  "file": "LRG_14_full.ran.fits",
+  "bytes": 5809688640,
+  "sha256": "61dac8c2ed7492c6692b41db502957effd0bf671d5058081d0acc503b8f2cac3",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_14_full.ran.fits"
+ },
+ {
+  "file": "LRG_14_full_HPmapcut.ran.fits",
+  "bytes": 5854570560,
+  "sha256": "8fb7d38adfe1f87f9411a7d49560deaa0cff39e0faf163111399b22494e73aa6",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_14_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "LRG_14_full_noveto.ran.fits",
+  "bytes": 7866535680,
+  "sha256": "f6c1e8c21f12e23516547bb8fafb523608f24f27f971b253c2a076fd43986c62",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_14_full_noveto.ran.fits"
+ },
+ {
+  "file": "LRG_15_full.ran.fits",
+  "bytes": 5944020480,
+  "sha256": "e2aa11e54f2b32c9258675f6b7af8b5c48d90cc29d674dce8ff368d3581c3629",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_15_full.ran.fits"
+ },
+ {
+  "file": "LRG_15_full_HPmapcut.ran.fits",
+  "bytes": 5984971200,
+  "sha256": "bb1bf7d8609d8837e0a4f796d30d7a29e0ab5b41176bf1b077778fb538a968a8",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_15_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "LRG_15_full_noveto.ran.fits",
+  "bytes": 8053136640,
+  "sha256": "3a044106344bf6b37ae3bc5b74e1cb1478d2947daf3b3ac138a0ab40fc7d125b",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_15_full_noveto.ran.fits"
+ },
+ {
+  "file": "LRG_16_full.ran.fits",
+  "bytes": 5912893440,
+  "sha256": "abbae3dd33405275d902316a68b89fed5bb43855db20a17763714a647fe96644",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_16_full.ran.fits"
+ },
+ {
+  "file": "LRG_16_full_HPmapcut.ran.fits",
+  "bytes": 5954155200,
+  "sha256": "a0b6a0713a78933f9d4624a8f0edd1c98708e02880f97603e222701a93a1a306",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_16_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "LRG_16_full_noveto.ran.fits",
+  "bytes": 8011175040,
+  "sha256": "a8bc43ec0df1d797007ea594511fdf44b1a86ae48ce03a94f9b348c24c595928",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_16_full_noveto.ran.fits"
+ },
+ {
+  "file": "LRG_17_full.ran.fits",
+  "bytes": 5910531840,
+  "sha256": "a46e756d0fb1b810baa772056f2402b79ae7701241a68c263a054be5006b0a13",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_17_full.ran.fits"
+ },
+ {
+  "file": "LRG_17_full_HPmapcut.ran.fits",
+  "bytes": 5951393280,
+  "sha256": "1385599c24d225f2a73f97fdadfa5a7634a19ef1cb94211a92737c900221b59a",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_17_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "LRG_17_full_noveto.ran.fits",
+  "bytes": 8009570880,
+  "sha256": "28581b1e7c9cfafe43a3f8d0a401223cecd4d15fa0b0277dc10381467833418d",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_17_full_noveto.ran.fits"
+ },
+ {
+  "file": "LRG_1_full.ran.fits",
+  "bytes": 5807977920,
+  "sha256": "4feae9227b758671559e723cdbd53f455c15a2860cce7f4571910f119126c6dd",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_1_full.ran.fits"
+ },
+ {
+  "file": "LRG_1_full_HPmapcut.ran.fits",
+  "bytes": 5852321280,
+  "sha256": "3bdd9e0ce0c417df014c85073474289ed3dba3db35a0d0984c82ba37c6aa5fdf",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_1_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "LRG_1_full_noveto.ran.fits",
+  "bytes": 7866221760,
+  "sha256": "ef7862e30db1b1b2c97454cd265bdf70b58faa6ad376d362502d70eb9fffbf3e",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_1_full_noveto.ran.fits"
+ },
+ {
+  "file": "LRG_2_full.ran.fits",
+  "bytes": 5926907520,
+  "sha256": "4e83b44f3956765110a22a24ca7c10c5a1c3bfc226707392bbf3736de7a42281",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_2_full.ran.fits"
+ },
+ {
+  "file": "LRG_2_full_HPmapcut.ran.fits",
+  "bytes": 5967832320,
+  "sha256": "00443b146eb574c0b46007a1d65090a50ca1618ffb8514d2c1a6dda6ab452cde",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_2_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "LRG_2_full_noveto.ran.fits",
+  "bytes": 8032236480,
+  "sha256": "e1525fb2a7f4ad5b38a0448d05cb9df513c46e4495bf32095d2e2b4c1cf5b2e0",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_2_full_noveto.ran.fits"
+ },
+ {
+  "file": "LRG_3_full.ran.fits",
+  "bytes": 5897678400,
+  "sha256": "49148c1844220a70bb5e4618cbcfdcc03fa0deda055ddc4d6d69a5142159b5ff",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_3_full.ran.fits"
+ },
+ {
+  "file": "LRG_3_full_HPmapcut.ran.fits",
+  "bytes": 5939945280,
+  "sha256": "9603cfc08869d1f5eeb9ddd339ee01a8389b5009d4403b8c07e721aa3401406f",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_3_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "LRG_3_full_noveto.ran.fits",
+  "bytes": 7989963840,
+  "sha256": "2ad5b2ed4cfd390149e51e80155338c24a6751d612b0002ed3bf9eed7314ffa1",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_3_full_noveto.ran.fits"
+ },
+ {
+  "file": "LRG_4_full.ran.fits",
+  "bytes": 5927561280,
+  "sha256": "313adbd1f7d03d34d9103d1f18a669603396ba3f613bac22d91583db1f2c7943",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_4_full.ran.fits"
+ },
+ {
+  "file": "LRG_4_full_HPmapcut.ran.fits",
+  "bytes": 5968385280,
+  "sha256": "8cfff2463dff879f12d2201d283a0fdc8d6488534bddfdb5fbfb164dff9f544e",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_4_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "LRG_4_full_noveto.ran.fits",
+  "bytes": 8032680000,
+  "sha256": "2ab316e7046c5ed28759f6682a0329a4375fc9f80241869d39497fb13daa7f7a",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_4_full_noveto.ran.fits"
+ },
+ {
+  "file": "LRG_5_full.ran.fits",
+  "bytes": 5942131200,
+  "sha256": "7673c56df414f3df457b40f32fbced240c267094c5a6f00301dce3eccec68e95",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_5_full.ran.fits"
+ },
+ {
+  "file": "LRG_5_full_HPmapcut.ran.fits",
+  "bytes": 5982799680,
+  "sha256": "0b967a6ea65089076fa4107c868c6377481ef0884390722509104744379b6477",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_5_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "LRG_5_full_noveto.ran.fits",
+  "bytes": 8051155200,
+  "sha256": "c779351121ee164db278d586f501ef9429a5a13888e2b2d1ef6680cf4a65637c",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_5_full_noveto.ran.fits"
+ },
+ {
+  "file": "LRG_6_full.ran.fits",
+  "bytes": 5914768320,
+  "sha256": "ab0a509347bce52a5f0c669ed3ab3c36c9f7631d8c4feff3a03f8ee4a454c207",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_6_full.ran.fits"
+ },
+ {
+  "file": "LRG_6_full_HPmapcut.ran.fits",
+  "bytes": 5956346880,
+  "sha256": "efc26d28876f439c2a0da333a5f291f8a0ef71bb0d576080b573514c895b487a",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_6_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "LRG_6_full_noveto.ran.fits",
+  "bytes": 8011143360,
+  "sha256": "52753abd0cb03b1fcff9df373041a2be81671f3154e905e1023e6aeb968263fb",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_6_full_noveto.ran.fits"
+ },
+ {
+  "file": "LRG_7_full.ran.fits",
+  "bytes": 5913259200,
+  "sha256": "26198596551b1d47b9ce3472b2624b69d3ec0fe4782c10961c6071a487f60089",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_7_full.ran.fits"
+ },
+ {
+  "file": "LRG_7_full_HPmapcut.ran.fits",
+  "bytes": 5955045120,
+  "sha256": "f92b56d0db2ac0bf7a3e9feec00b9ef0fcf045252243729b78018d5f51aafb26",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_7_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "LRG_7_full_noveto.ran.fits",
+  "bytes": 8009064000,
+  "sha256": "5037838f52c84db9b353968cfbd4f648e342cb7765a5983c95a082930156e840",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_7_full_noveto.ran.fits"
+ },
+ {
+  "file": "LRG_8_full.ran.fits",
+  "bytes": 5808424320,
+  "sha256": "71b0fd8e5fc5ab8ba0bbab5a0538e6f72e1db47b04f14ac0c35b3a4687bb5422",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_8_full.ran.fits"
+ },
+ {
+  "file": "LRG_8_full_HPmapcut.ran.fits",
+  "bytes": 5853182400,
+  "sha256": "f60635460fb3890448482fae364a573f062591547841ea80a749972dfd66a926",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_8_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "LRG_8_full_noveto.ran.fits",
+  "bytes": 7866495360,
+  "sha256": "f86d758d7548436d00a045632c2a4f06e1a917d2fc700c00f89432aae8b6ca59",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_8_full_noveto.ran.fits"
+ },
+ {
+  "file": "LRG_9_full.ran.fits",
+  "bytes": 5928338880,
+  "sha256": "85b0575981a7906c0897fa34d69b2feefa25085b7518e7962dabe7d3d1884c99",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_9_full.ran.fits"
+ },
+ {
+  "file": "LRG_9_full_HPmapcut.ran.fits",
+  "bytes": 5969540160,
+  "sha256": "efa84c1fb734ff71f8213c825aae7783f37900b93800e4662a7ea7c3703030a0",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_9_full_HPmapcut.ran.fits"
+ },
+ {
+  "file": "LRG_9_full_noveto.ran.fits",
+  "bytes": 8031588480,
+  "sha256": "1b1dbae88427d3b2f38f0f380b96d2a852870ab266ce149ea41b426c2e82129a",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_9_full_noveto.ran.fits"
+ },
+ {
+  "file": "LRG_NGC_0_clustering.ran.fits",
+  "bytes": 985916160,
+  "sha256": "f80aaa1bd48f2695c07cbccd480065f74e8e393e6a9e93b209af42419749e2bd",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_NGC_0_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_NGC_10_clustering.ran.fits",
+  "bytes": 985432320,
+  "sha256": "c34d0a8dde47ea3be8e4d69d4d29e3810bfa161916dead93e6a5ba33defc776e",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_NGC_10_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_NGC_11_clustering.ran.fits",
+  "bytes": 985602240,
+  "sha256": "7f787bb536000662f73447b29f2a588a1c90ea40a0eed21f8bdce5d8838b7121",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_NGC_11_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_NGC_12_clustering.ran.fits",
+  "bytes": 985608000,
+  "sha256": "b8000523d804f6d75bc871a8951f11af5606a1d6110faccffc4746ef1bb9337a",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_NGC_12_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_NGC_13_clustering.ran.fits",
+  "bytes": 985590720,
+  "sha256": "5accd962b1abbae39ef4de346c1a476299a0b66f721dd6b245236578a7da7ce4",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_NGC_13_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_NGC_14_clustering.ran.fits",
+  "bytes": 986031360,
+  "sha256": "65354efb55393fc7cbea4d818778a160768e631017376dccf6b1594332b7dc58",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_NGC_14_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_NGC_15_clustering.ran.fits",
+  "bytes": 986135040,
+  "sha256": "281d65b118502dd373f7bad4491bc1b74b372a2d03f468f8700dc9571b8a4f50",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_NGC_15_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_NGC_16_clustering.ran.fits",
+  "bytes": 985982400,
+  "sha256": "582eb9abfdd0476cf917baffafd37f8316cce7870b84ff145c3159cad64c4e6e",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_NGC_16_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_NGC_17_clustering.ran.fits",
+  "bytes": 985115520,
+  "sha256": "41b881fe358f6879552583b7c252de8f8a31e18c5806400bf2bb9634a05384ee",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_NGC_17_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_NGC_1_clustering.ran.fits",
+  "bytes": 985394880,
+  "sha256": "92ddf5980dc83e5b503df6f3f4e21e651f8701bdd5abf9435e0ad04f3d647e5a",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_NGC_1_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_NGC_2_clustering.ran.fits",
+  "bytes": 985570560,
+  "sha256": "00d2af1b89bb04669484da3743e6d701dd3efc3c1e0c3d1caeaf619bb6212f9a",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_NGC_2_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_NGC_3_clustering.ran.fits",
+  "bytes": 985976640,
+  "sha256": "7d108cc86e14435e2380e9e103986fa2162608cfe41e932ce01811588c15995e",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_NGC_3_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_NGC_4_clustering.ran.fits",
+  "bytes": 985622400,
+  "sha256": "955d30cb842ebe6df0bfdf1d44ae28edf654faa11c7a14509e5d047f2fc0b64d",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_NGC_4_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_NGC_5_clustering.ran.fits",
+  "bytes": 986011200,
+  "sha256": "0ea46600fe194cd97af736cb81f70e95913ddb0bca84f10184e1a6d7300fbded",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_NGC_5_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_NGC_6_clustering.ran.fits",
+  "bytes": 986123520,
+  "sha256": "b83ea5e5fcddd38a1fda4f31174547e9189647a29ad89cedcbf8d5b78d110562",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_NGC_6_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_NGC_7_clustering.ran.fits",
+  "bytes": 985731840,
+  "sha256": "89e07386e15ebec8115661e72000b2e3b5b1902ba7694e66878af53e956bb6a3",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_NGC_7_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_NGC_8_clustering.ran.fits",
+  "bytes": 985826880,
+  "sha256": "cb16134848cbbfd46ffbcfd969ed8370cf035f18e866a050a4b025c2585abbf3",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_NGC_8_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_NGC_9_clustering.ran.fits",
+  "bytes": 985991040,
+  "sha256": "7e3d1b078e4ecf7a0167a93e80d0fd21213e4f4b6bde0c9fdbad8fdf05692316",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_NGC_9_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_NGC_clustering.dat.fits",
+  "bytes": 143196480,
+  "sha256": "84548c4ea5208232f1c2f04416ddf272c72fa31313e3bbb60e67d134f186a027",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_NGC_clustering.dat.fits"
+ },
+ {
+  "file": "LRG_SGC_0_clustering.ran.fits",
+  "bytes": 520781760,
+  "sha256": "70821a9609c4f825fecd6c45f6ede3b95bc309103e7ca580231b212a27e2592e",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_SGC_0_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_SGC_10_clustering.ran.fits",
+  "bytes": 520963200,
+  "sha256": "de5b3d4ad74931640cf981ac30d43348827d6f6b8b642dc1062117d61682c298",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_SGC_10_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_SGC_11_clustering.ran.fits",
+  "bytes": 520583040,
+  "sha256": "47e555e8f034368cddbd86e9aded1f1073e5bd5ecedb0c5c4a5e7bc671b3c0e1",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_SGC_11_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_SGC_12_clustering.ran.fits",
+  "bytes": 520441920,
+  "sha256": "f3e64a3fdafa27776fc8bcda5bd5b058d090fd10090d550005638aeb0b57d2b9",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_SGC_12_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_SGC_13_clustering.ran.fits",
+  "bytes": 520629120,
+  "sha256": "32cd76673a04b0aea5fa2aced32d9218ce89bebabbe9a5184b2a4ed8869800d0",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_SGC_13_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_SGC_14_clustering.ran.fits",
+  "bytes": 520675200,
+  "sha256": "1f46abc5721c599de6e093f4ac9f97dd02550e3f9d7272aa1c844b24e266f886",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_SGC_14_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_SGC_15_clustering.ran.fits",
+  "bytes": 520888320,
+  "sha256": "ebc546f10725605eb11c7a6474c7d733261910e5d0f6d0ca1340b57196a112a7",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_SGC_15_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_SGC_16_clustering.ran.fits",
+  "bytes": 520505280,
+  "sha256": "5c0e45bce2b7453aa7b7afd561d96cb2a5e09093cf9280692b711b276359ada7",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_SGC_16_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_SGC_17_clustering.ran.fits",
+  "bytes": 520675200,
+  "sha256": "007a4debe07373f93cd00e26360b19d7a3d51c0c3bae3a0968cdba7c225e38a2",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_SGC_17_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_SGC_1_clustering.ran.fits",
+  "bytes": 520732800,
+  "sha256": "4d798de8c7103a42e28edd3bd2eb9b8662a1795a65a6e1c55558f57a56ddca94",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_SGC_1_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_SGC_2_clustering.ran.fits",
+  "bytes": 520750080,
+  "sha256": "816c55bc611ddf38114b7e8b3650ff4e1811b675ce467f07f521fd3e4d4e38dc",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_SGC_2_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_SGC_3_clustering.ran.fits",
+  "bytes": 520548480,
+  "sha256": "6194e5f2b6b945257e69c79cf94429021c29ff960b06e3a7c5319668998bba57",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_SGC_3_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_SGC_4_clustering.ran.fits",
+  "bytes": 520836480,
+  "sha256": "202f888e229857647b5b4353a5324f4b1791863d811a0e950fb397be982dd4a8",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_SGC_4_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_SGC_5_clustering.ran.fits",
+  "bytes": 520464960,
+  "sha256": "598b82c419d53cd62e81e0c1f9fa22dd0d9c2194976e14fdb23d2a257b7afec7",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_SGC_5_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_SGC_6_clustering.ran.fits",
+  "bytes": 520920000,
+  "sha256": "7d3cb57eda3d087119ac3be2dac65049f4b90827aa137787641eb90ca4da35b9",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_SGC_6_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_SGC_7_clustering.ran.fits",
+  "bytes": 520983360,
+  "sha256": "37a87b7819193993ca365054d0cc1c38685237ddac203e33dd2ae4bf02cb3151",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_SGC_7_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_SGC_8_clustering.ran.fits",
+  "bytes": 520522560,
+  "sha256": "093aa4ec855bcacdc3d43c71b8514d31e54e2f5f5de4e4d8c271a4a3583c3744",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_SGC_8_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_SGC_9_clustering.ran.fits",
+  "bytes": 520758720,
+  "sha256": "58b1f1c5c4fefec4058b5d731471075e47a423d593b5af3529fc3345cc1c0c9a",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_SGC_9_clustering.ran.fits"
+ },
+ {
+  "file": "LRG_SGC_clustering.dat.fits",
+  "bytes": 64272960,
+  "sha256": "ae478557d9ef70257cc689197052515f5ebbc0b23359c81159a8ad3289332e69",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_SGC_clustering.dat.fits"
+ },
+ {
+  "file": "LRG_frac_tlobs.fits",
+  "bytes": 3885120,
+  "sha256": "c836b679ecbbce25cc54bcfa15e3d50ad1021a7a389fa9dfa9e044129a9086d9",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_frac_tlobs.fits"
+ },
+ {
+  "file": "LRG_full.dat.fits",
+  "bytes": 2970558720,
+  "sha256": "3fc919c74f1d9a9059214da7808f14992eaa1c1bf318434ccca83746f4c8dd5a",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_full.dat.fits"
+ },
+ {
+  "file": "LRG_full_HPmapcut.dat.fits",
+  "bytes": 2955335040,
+  "sha256": "726152c434e0c2fb6f03c2822ae98d2c20f3dd770e1e824d07363677a2e4f31c",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_full_HPmapcut.dat.fits"
+ },
+ {
+  "file": "LRG_full_noveto.dat.fits",
+  "bytes": 4309934400,
+  "sha256": "54cb3a9c6ab5168b4e4347de9de1dbef1fa68adbebc47a0bddc825b3305d8896",
+  "url": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/LRG_full_noveto.dat.fits"
+ }
+]

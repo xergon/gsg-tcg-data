@@ -1,0 +1,288 @@
+{
+ "_generated_utc": "2026-07-25T08:31:56Z",
+ "fleet_row": "T5 \u2014 same-tracer E_G join: do ACT CMB-lensing potentials and DESI RSD growth obey one GR source law?",
+ "cross_block_present": true,
+ "cross_block_detail": {
+  "A_ACTxDESI_bandpower_covariance": {
+   "cross_bin_blocks_present": true,
+   "cross_probe_blocks_present": true,
+   "PR4_x_DR6_blocks_present": true,
+   "evidence": "171 stored 12x12 blocks == exactly the upper triangle of 18 spectra (18*19/2 = 171). Assembled to a complete 216x216 matrix with ZERO missing blocks. Symmetric to max|C-C^T|/max|C| = 2.30e-17. Positive definite (min eig 1.00e-17 > 0, cond 2.21e6). Cross-spectrum correlation is non-trivial: median |rho| = 0.0716, max |rho| = 0.4841, 88.2 per cent of cross-blocks exceed |rho| > 0.01.",
+   "storage_convention": "cov_X_Y_M_N = Cov(C^{XY}, C^{MN}); upper triangle over the 18 spectra only; transpose for the lower half. NOT diagonal-only, NOT lower-triangle-only.",
+   "spectra": "18 = 6 (PR4 x gal) + 6 (DR6 x gal) + 6 (gal auto); 12 bandpowers each; gal = BGSz1, BGSz2, LRGz1..LRGz4"
+  },
+  "B_DESI_DR1_compressed_ShapeFit_covariance": {
+   "cross_redshift_bin_blocks_present": false,
+   "evidence": "Published as SIX independent per-bin 4x4 covariances. arXiv:2411.12021 states verbatim: 'We consider each redshift bin independent'. Printed in the paper as UPPER TRIANGLE ONLY ('-' in the lower half); lower half verified empty before symmetrising. All 12 matrices positive definite after symmetrisation.",
+   "warning": "A diagonal/per-bin-only product. If T5's statistic needs DESI cross-redshift-bin covariance, it is NOT in this product and must come from the (currently offline) DR1 full-shape likelihood HDF5 files."
+  }
+ },
+ "A_act_dr6_planck_pr4_x_desi": {
+  "status": "COMPLETE \u2014 fetched, publisher-checksum-verified, mirrored",
+  "zenodo_doi": "10.5281/zenodo.15307488",
+  "zenodo_record_url": "https://zenodo.org/api/records/15307488",
+  "zenodo_file_url": "https://zenodo.org/api/records/15307488/files/bgs+lrg_cross_pr4+dr6.tgz/content",
+  "paper": "arXiv:2503.24385 (Sailer et al. 2025)",
+  "concept_doi_note": "Zenodo record 15307488 reports doi 10.48550/arXiv.2503.24385 in its metadata; the collection DOI given by the task (10.5281/zenodo.15307488) resolves to the same record.",
+  "archive": {
+   "name": "bgs+lrg_cross_pr4+dr6.tgz",
+   "bytes": 15234007,
+   "publisher_md5": "78d3ae824e49a100020b3ff3f53a1bb1",
+   "computed_md5": "78d3ae824e49a100020b3ff3f53a1bb1",
+   "md5_match": true,
+   "computed_sha256": "343492841ca67b3859b7fed6f20b59cd9e393161343971227ed73ad7508588be",
+   "magic_bytes_check": "gzip compressed data (verified, not an HTML shell)",
+   "mirror_url": "https://github.com/xergon/gsg-tcg-data/releases/download/t5-act-desi-v1/bgs%2Blrg_cross_pr4%2Bdr6.tgz"
+  },
+  "contents_delivered": {
+   "C_ell_kappa_g": "PR4 x {BGSz1,BGSz2,LRGz1..4} and DR6 x {same} \u2014 i.e. PR4-only AND ACT-DR6-only, delivered separately (12 spectra)",
+   "C_ell_gg": "6 galaxy auto-spectra",
+   "window_functions": "wl_<X>_<Y>: 12 bandpowers x 6144 multipoles, NaMaster get_bandpower_windows",
+   "n_of_z": "6 dNdz files (BGSz1, BGSz2, LRGz1..LRGz4)",
+   "cij": "8x8xnell fiducial spectra used to build the covariance (map order PR4, DR6, BGSz1, BGSz2, LRGz1..4)",
+   "bandpower_binning": "nside 2048; ledges [20,44,79,124,178,243,317,401,495,600,713,837,971]; 12 bands"
+  },
+  "NOT_in_the_archive": {
+   "HEFT_templates": "Not bundled. Released separately: Aemulus nu emulator https://github.com/AemulusProject/aemulus_nu_public ; likelihood code MaPar https://github.com/NoahSailer/MaPar",
+   "scale_cuts": "Not a file in the archive \u2014 they are tabulated in the papers. Transcribed verbatim from the arXiv LaTeX sources into scale_cuts_and_sample_properties.json (BGS from arXiv:2503.24385 Table 1; LRG from arXiv:2407.04607 tab:scalecuts)."
+  }
+ },
+ "B_desi_dr1_full_shape_and_bao_clustering_vac": {
+  "status": "BLOCKED \u2014 official host offline for a scheduled NERSC power upgrade",
+  "canonical_doc_url": "https://data.desi.lbl.gov/doc/releases/dr1/vac/full-shape-bao-clustering/",
+  "canonical_base_url": "https://data.desi.lbl.gov/public/dr1/vac/dr1/full-shape-bao-clustering/v1.0/",
+  "likelihood_dir_url": "https://data.desi.lbl.gov/public/dr1/vac/dr1/full-shape-bao-clustering/v1.0/data/likelihood/",
+  "spectrum_dir_url": "https://data.desi.lbl.gov/public/dr1/vac/dr1/full-shape-bao-clustering/v1.0/data/spectrum/",
+  "globus_route": "globus transfer 6b4e1f6a-e600-11ed-9b9b-c9bb788c490e:/dr1/vac/dr1/full-shape-bao-clustering/v1.0/data <your-endpoint>:/path --recursive   (requires an interactive Globus OAuth login; not performed)",
+  "companion_code_repo": "https://github.com/cosmodesi/desi-kp-cosmological-likelihoods (dr1/cobaya/download.py hardcodes the base URL above; dr1/read_clustering_statistics.ipynb reads the HDF5)",
+  "outage_evidence": {
+   "cause": "NERSC: 'Major Power Upgrade to Disrupt Services July 22 - August 3' / 'A major power upgrade is affecting the availability of NERSC systems and services.' (https://www.nersc.gov/live-status/motd/, last updated July 22 2026)",
+   "expected_return": "on or after 2026-08-03",
+   "probes": "25 consecutive HTTPS probes over ~17 min, all connection-level failures (HTTP 000); ICMP 100 per cent loss to 128.55.206.106",
+   "independent_egress_confirmations": 4,
+   "egress_points_tried": [
+    "this host (curl, IPv4, 8 A-records)",
+    "Claude WebFetch (US)",
+    "r.jina.ai reader proxy (TimeoutError)",
+    "api.allorigins.win (Cloudflare 522 origin unreachable)"
+   ],
+   "control": "www.nersc.gov returns HTTP 200 from the same host, so this is not a local network block on the whole domain; portal.nersc.gov (same 128.55.206.x range) is equally unreachable.",
+   "wayback": "No Wayback snapshot exists for the VAC doc page or the data tree."
+  },
+  "substitute_delivered": "desi_dr1_shapefit_compressed.json / .csv \u2014 see below"
+ },
+ "B_substitute_desi_dr1_shapefit_compressed": {
+  "what": "Per-tracer DESI DR1 compressed ShapeFit data vectors and FULL 4x4 parameter covariances, for both 'ShapeFit only' and 'ShapeFit + post-reconstruction BAO'.",
+  "source": "arXiv:2411.12021 (DESI 2024 V, KP5), Appendix app:SFcov; cross-checked against Table tab:SF-results, tab:fiducial_values, tab:Y1data. Parsed from the arXiv /e-print/ LaTeX, not HTML.",
+  "why_this_is_NERSC_independent": "arXiv-hosted; entirely unaffected by the NERSC outage.",
+  "tracers_matched_to_T5_request": {
+   "BGS_BRIGHT-21.5 z=0.1-0.4": "BGS, z_eff 0.295 (appendix labels it 0.30), N=300017",
+   "LRG z=0.4-0.6": "LRG1, z_eff 0.510, N=506905",
+   "LRG z=0.6-0.8": "LRG2, z_eff 0.706, N=771875",
+   "LRG z=0.8-1.1": "LRG3, z_eff 0.919, N=859824"
+  },
+  "galactic_cap": "GCcomb (NGC+SGC combined) \u2014 the DESI DR1 KP5 baseline",
+  "parameters_per_tracer": [
+   "D_V/r_d",
+   "D_H/D_M",
+   "f*sigma_s8",
+   "m+n"
+  ],
+  "verification": "All 12 blocks (6 tracers x 2 regimes) reproduce the published f*sigma_s8/(f*sigma_s8)_fid ratios of Table tab:SF-results to <0.006 absolute. All 12 covariances positive definite. Upper-triangle-only storage detected and handled: lower half asserted empty before symmetrising.",
+  "supplied": [
+   "z_eff",
+   "f*sigma_s8 (and f*sigma_s8/fiducial)",
+   "full 4x4 covariance and correlation",
+   "fiducial D_M/r_d, D_H/r_d, D_V/r_d, D_H/D_M, sigma_s8, f*sigma_s8",
+   "r_d_fid = 99.0792 Mpc/h"
+  ],
+  "NOT_supplied": [
+   "b1*sigma8 or beta = f/b",
+   "window matrix",
+   "per-k scale cuts",
+   "NGC/SGC split"
+  ],
+  "NOT_supplied_reason": "These live only in the DR1 full-shape likelihood HDF5 files behind the offline NERSC host."
+ },
+ "B_supplementary_rotated_shapefit_gccomb": {
+  "source_doi": "10.5281/zenodo.18629072",
+  "source_url": "https://zenodo.org/records/18629072",
+  "paper": "Cosmological constraints from a joint DESI DR1 Full-Shape and DR2 BAO",
+  "what": "16 small (6x6) covariances joining DR2 BAO with rotated DR1 ShapeFit, per GCcomb tracer/z-bin (LRG z0.4-0.6, z0.6-0.8, z0.8-1.1, ELG_LOP, QSO, LRG+ELG_LOPnotqso). No BGS.",
+  "findings": {
+   "block_diag_variants": "DR1-ShapeFit x DR2-BAO cross-block is exactly ZERO by construction.",
+   "mocks_scaledby_chains and mocks_w_chain_blockdiag variants": "DO carry a non-zero DR1xDR2 cross-block.",
+   "asymmetry_warning": "All 16 arrays are stored SLIGHTLY NON-SYMMETRIC (max|C-C^T|/max|C| between 3.6e-5 and 3.8e-4) \u2014 they are chain-estimated, not analytically symmetrised. Symmetrise before inverting. All are positive definite after symmetrisation."
+  },
+  "paper_data_tar_gz": {
+   "bytes": 305659195,
+   "publisher_md5": "ff5e5ec8c844a36ffa30b93216a5c740",
+   "computed_md5": "ff5e5ec8c844a36ffa30b93216a5c740",
+   "md5_match": true,
+   "verdict": "NOT MIRRORED \u2014 inspected and rejected. Contains only cosmology MCMC chains (combine_dr21/fits/... cobaya chain.N.txt), zero per-tracer likelihood or spectrum products. Nothing T5 needs.",
+   "url": "https://zenodo.org/api/records/18629072/files/paper_data.tar.gz/content"
+  }
+ },
+ "further_lead_not_mirrored": {
+  "doi": "10.5281/zenodo.17636841",
+  "url": "https://zenodo.org/api/records/17636841/files/RSD_kxg_Zenodo_chains_data.tar.gz/content",
+  "record_url": "https://zenodo.org/records/17636841",
+  "title": "Data: A joint analysis of 3D clustering and galaxy x CMB-lensing cross-correlations with DESI DR1 galaxies (Maus et al. 2025)",
+  "bytes": 1918687654,
+  "publisher_md5": "d47491ba713051e7d830d70c06b5c9ae",
+  "relevance": "This is reference [MM25] promised in the conclusions of arXiv:2503.24385 as the joint analysis of the ACT/PR4 cross-correlations with DESI 3D clustering \u2014 i.e. the closest existing public analogue of the T5 same-tracer join.",
+  "status": "Download started and confirmed live (380 MB pulled at ~24 MB/min, Zenodo reachable) then stopped to avoid a ~1 h serial transfer. Not mirrored. Fetch directly from the URL above; Zenodo is unaffected by the NERSC outage."
+ },
+ "published_files": {
+  "covariance_full_216x216.txt": {
+   "bytes": 909609,
+   "sha256": "076261a1ae3c5ed4464c0c581cd6031388ddb64c781ff3f74497ab9fc6212678",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/covariance_full_216x216.txt"
+  },
+  "scale_cuts_and_sample_properties.json": {
+   "bytes": 4294,
+   "sha256": "063d7e1d6fbe2d38bdab2182bcf6011e09b9fd5fdf772514f2be73e11f073728",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/scale_cuts_and_sample_properties.json"
+  },
+  "covariance_full_216x216.npy": {
+   "bytes": 373376,
+   "sha256": "f445b615ac40c0f453eb95e0cc4c7667ed7ad8c43bce0b1465f0f8c5a22f86e9",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/covariance_full_216x216.npy"
+  },
+  "covariance_index.json": {
+   "bytes": 931,
+   "sha256": "6c97d256bc4227fb5312f4873fa81708a6bf3ca41ca7067c0a686634cf2f4b95",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/covariance_index.json"
+  },
+  "desi_dr1_shapefit_compressed.csv": {
+   "bytes": 2448,
+   "sha256": "90cdf9e17a473fcaad0efc2776da8f492b4cac5da14256ba9ae19f7d0c6fac64",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/desi_dr1_shapefit_compressed.csv"
+  },
+  "desi_dr1_shapefit_compressed.json": {
+   "bytes": 21280,
+   "sha256": "0c08006c4bf20243ba05bf636b34bd80892f927ae5b61d5a2322f58c09557929",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/desi_dr1_shapefit_compressed.json"
+  },
+  "bandpowers_cl.csv": {
+   "bytes": 18254,
+   "sha256": "14edb14f9aca6a69892ea32ada0a4c61f400ed660da5804c1e22136e40112c41",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/bandpowers_cl.csv"
+  },
+  "covariance_correlation_216x216.csv": {
+   "bytes": 446418,
+   "sha256": "8d4d13e40e9af84c23c1e52cf6ac6fc82eab1a1c9e53ee1f5b7189fbf9b66c0a",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/covariance_correlation_216x216.csv"
+  },
+  "nz/BGSz2_dNdz.txt": {
+   "bytes": 3700,
+   "sha256": "9e9719c8613d91910004c8f03a086a4e0f77a9baa09061d6889b2ea304782773",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/nz/BGSz2_dNdz.txt"
+  },
+  "nz/LRGz1_dNdz.txt": {
+   "bytes": 7660,
+   "sha256": "c17ad947a8b2c5ab5f8c15b7903a055d456c5ebb2133039239c8d4e9e5cf2e2b",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/nz/LRGz1_dNdz.txt"
+  },
+  "nz/LRGz4_dNdz.txt": {
+   "bytes": 7660,
+   "sha256": "8714a32e552d17c8a6cd605a852127b719ae5aa41738e57d64f363d900bc468c",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/nz/LRGz4_dNdz.txt"
+  },
+  "nz/BGSz1_dNdz.txt": {
+   "bytes": 3700,
+   "sha256": "92e3c6b6e6d3c37a4a0dea7111489c4d26a313b44356b6ba17c479777701998f",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/nz/BGSz1_dNdz.txt"
+  },
+  "nz/LRGz2_dNdz.txt": {
+   "bytes": 7660,
+   "sha256": "3329e2e9ee756c1a9c7c9d8507a38a7cd12f14a210abd3b6900c639fc9344f58",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/nz/LRGz2_dNdz.txt"
+  },
+  "nz/LRGz3_dNdz.txt": {
+   "bytes": 7660,
+   "sha256": "9b36bd3926a51d2b86cca13650a56d229ebe859d0441043d9006c36a5e24578d",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/nz/LRGz3_dNdz.txt"
+  },
+  "desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_mocks_scaledby_chains_bao_dr2_ELG_LOP_w_rotated_shapefit_dr1_ELG_LOP_GCcomb_z1.1-1.6.npy": {
+   "bytes": 416,
+   "sha256": "958c5266036bcef8ffa6f8a37c5b31275fb2c4c104db92c2f01149e47cf4d42d",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_mocks_scaledby_chains_bao_dr2_ELG_LOP_w_rotated_shapefit_dr1_ELG_LOP_GCcomb_z1.1-1.6.npy"
+  },
+  "desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_block_diag_chains_bao_dr2_LRG_w_rotated_shapefit_dr1_LRG_GCcomb_z0.6-0.8.npy": {
+   "bytes": 416,
+   "sha256": "a6ea3f09d8fb0cdd0a5a17081a7b197b763504a3b1dc9f2b0e5359f56e2c6ddb",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_block_diag_chains_bao_dr2_LRG_w_rotated_shapefit_dr1_LRG_GCcomb_z0.6-0.8.npy"
+  },
+  "desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_block_diag_chains_bao_dr2_LRG_w_rotated_shapefit_dr1_LRG_GCcomb_z0.8-1.1.npy": {
+   "bytes": 416,
+   "sha256": "b700aeacc64c8314ebcf33055f6ac971943831290c24d95ff22903872ccb5546",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_block_diag_chains_bao_dr2_LRG_w_rotated_shapefit_dr1_LRG_GCcomb_z0.8-1.1.npy"
+  },
+  "desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_mocks_scaledby_chains_bao_dr2_LRG_w_rotated_shapefit_dr1_LRG_GCcomb_z0.4-0.6.npy": {
+   "bytes": 416,
+   "sha256": "479f09b9dfc76388fdcfe4096671086ac4d06e275850e6f2d27c6ccc1da1641a",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_mocks_scaledby_chains_bao_dr2_LRG_w_rotated_shapefit_dr1_LRG_GCcomb_z0.4-0.6.npy"
+  },
+  "desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_mocks_w_chain_blockdiag_bao_dr2_LRG_w_rotated_shapefit_dr1_LRG_GCcomb_z0.8-1.1.npy": {
+   "bytes": 416,
+   "sha256": "b590df064ee8221164a325d9b3e95bba58329f78d159310f79af90af12a8ceda",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_mocks_w_chain_blockdiag_bao_dr2_LRG_w_rotated_shapefit_dr1_LRG_GCcomb_z0.8-1.1.npy"
+  },
+  "desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_mocks_scaledby_chains_bao_dr2_QSO_w_rotated_shapefit_dr1_QSO_GCcomb_z0.8-2.1.npy": {
+   "bytes": 416,
+   "sha256": "adf4a0a4ec5565dd5e63a839ed41234e91ce1d6a29a64cb9f713ce4a5cff5d35",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_mocks_scaledby_chains_bao_dr2_QSO_w_rotated_shapefit_dr1_QSO_GCcomb_z0.8-2.1.npy"
+  },
+  "desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_mocks_w_chain_blockdiag_bao_dr2_LRG_w_rotated_shapefit_dr1_LRG_GCcomb_z0.6-0.8.npy": {
+   "bytes": 416,
+   "sha256": "0e37c7431e1e6a2f3f2452d00c4a9a059cf842a9ce61b239f6e3467e2e327202",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_mocks_w_chain_blockdiag_bao_dr2_LRG_w_rotated_shapefit_dr1_LRG_GCcomb_z0.6-0.8.npy"
+  },
+  "desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_block_diag_chains_bao_dr2_ELG_LOP_w_rotated_shapefit_dr1_ELG_LOP_GCcomb_z1.1-1.6.npy": {
+   "bytes": 416,
+   "sha256": "81d20ce6f9bab8776706adbbd7ed28c27ee921e1250912422b4be8fe3011d14f",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_block_diag_chains_bao_dr2_ELG_LOP_w_rotated_shapefit_dr1_ELG_LOP_GCcomb_z1.1-1.6.npy"
+  },
+  "desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_block_diag_chains_bao_dr2_LRG_w_rotated_shapefit_dr1_LRG_GCcomb_z0.4-0.6.npy": {
+   "bytes": 416,
+   "sha256": "216149a98178110a458b0e95cb16b842dada7849e84327945af17a4229b8c4e5",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_block_diag_chains_bao_dr2_LRG_w_rotated_shapefit_dr1_LRG_GCcomb_z0.4-0.6.npy"
+  },
+  "desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_block_diag_chains_bao_dr2_QSO_w_rotated_shapefit_dr1_QSO_GCcomb_z0.8-2.1.npy": {
+   "bytes": 416,
+   "sha256": "39b68887ad392b6b2ba9a2cc5f439972726554a8f66362c23ca69d6130ccf681",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_block_diag_chains_bao_dr2_QSO_w_rotated_shapefit_dr1_QSO_GCcomb_z0.8-2.1.npy"
+  },
+  "desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_block_diag_chains_bao_dr2_LRG+ELG_LOPnotqso_w_rotated_shapefit_dr1_LRG_GCcomb_z0.8-1.1.npy": {
+   "bytes": 416,
+   "sha256": "986a3255f682ccd31f43885aae0d23517d405ad1cdc9447448cc54532b3536b9",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_block_diag_chains_bao_dr2_LRG+ELG_LOPnotqso_w_rotated_shapefit_dr1_LRG_GCcomb_z0.8-1.1.npy"
+  },
+  "desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_mocks_scaledby_chains_bao_dr2_LRG_w_rotated_shapefit_dr1_LRG_GCcomb_z0.6-0.8.npy": {
+   "bytes": 416,
+   "sha256": "cce12051135cc5986a20233d0102b975a84ab2630fcba4931223c80e276445d0",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_mocks_scaledby_chains_bao_dr2_LRG_w_rotated_shapefit_dr1_LRG_GCcomb_z0.6-0.8.npy"
+  },
+  "desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_mocks_scaledby_chains_bao_dr2_LRG+ELG_LOPnotqso_w_rotated_shapefit_dr1_LRG_GCcomb_z0.8-1.1.npy": {
+   "bytes": 416,
+   "sha256": "62a5b84ce56cffd98c47eb76a4006c02f563d9ebbcc410e3deef74078cd26d19",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_mocks_scaledby_chains_bao_dr2_LRG+ELG_LOPnotqso_w_rotated_shapefit_dr1_LRG_GCcomb_z0.8-1.1.npy"
+  },
+  "desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_mocks_w_chain_blockdiag_bao_dr2_QSO_w_rotated_shapefit_dr1_QSO_GCcomb_z0.8-2.1.npy": {
+   "bytes": 416,
+   "sha256": "b168310bedb5def7c1a3759910b7074ac479c540942dabb2a42fef06291a24f6",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_mocks_w_chain_blockdiag_bao_dr2_QSO_w_rotated_shapefit_dr1_QSO_GCcomb_z0.8-2.1.npy"
+  },
+  "desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_mocks_scaledby_chains_bao_dr2_LRG_w_rotated_shapefit_dr1_LRG_GCcomb_z0.8-1.1.npy": {
+   "bytes": 416,
+   "sha256": "16d261d8eacf3c4d7503c9e7604e4bbdcdf0715e4f73c7f77b852efc5d7958b5",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_mocks_scaledby_chains_bao_dr2_LRG_w_rotated_shapefit_dr1_LRG_GCcomb_z0.8-1.1.npy"
+  },
+  "desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_mocks_w_chain_blockdiag_bao_dr2_LRG_w_rotated_shapefit_dr1_LRG_GCcomb_z0.4-0.6.npy": {
+   "bytes": 416,
+   "sha256": "bf78737a45e305123d7082f29d53ec6114af300756f571dd2f9fbc243eb0fe08",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t5_act_desi/desi_dr1fs_dr2bao_rotated_shapefit_gccomb/covariance_mocks_w_chain_blockdiag_bao_dr2_LRG_w_rotated_shapefit_dr1_LRG_GCcomb_z0.4-0.6.npy"
+  }
+ }
+}

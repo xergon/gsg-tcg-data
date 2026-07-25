@@ -1,0 +1,72 @@
+{
+ "host": "https://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3kp_cats",
+ "registration_wall": false,
+ "auth_required": false,
+ "total_bytes": 507442563899,
+ "requested_three_total_bytes": 376077368208,
+ "files": [
+  {
+   "file": "DESY3_metacal_v03-004.h5",
+   "bytes": 312037859376,
+   "url": "https://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3kp_cats/DESY3_metacal_v03-004.h5",
+   "note": "shear catalogue (metacal), REQUESTED",
+   "hdf5_magic_verified": true
+  },
+  {
+   "file": "DESY3_sompz_v0.50.h5",
+   "bytes": 36792670792,
+   "url": "https://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3kp_cats/DESY3_sompz_v0.50.h5",
+   "note": "SOMPZ photo-z, REQUESTED",
+   "hdf5_magic_verified": true
+  },
+  {
+   "file": "DESY3_indexcat.h5",
+   "bytes": 27246838040,
+   "url": "https://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3kp_cats/DESY3_indexcat.h5",
+   "note": "index/selection catalogue, REQUESTED",
+   "hdf5_magic_verified": true
+  },
+  {
+   "file": "DESY3_GOLD_2_2.1.h5",
+   "bytes": 62576415312,
+   "url": "https://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3kp_cats/DESY3_GOLD_2_2.1.h5",
+   "note": "Y3 GOLD photometry",
+   "hdf5_magic_verified": false
+  },
+  {
+   "file": "DESY3_GOLD_2_2.1_DNF.h5",
+   "bytes": 6400054312,
+   "url": "https://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3kp_cats/DESY3_GOLD_2_2.1_DNF.h5",
+   "note": "GOLD DNF photo-z",
+   "hdf5_magic_verified": false
+  },
+  {
+   "file": "DESY3_maglim_redmagic_v0.5.1.h5",
+   "bytes": 25596046944,
+   "url": "https://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3kp_cats/DESY3_maglim_redmagic_v0.5.1.h5",
+   "note": "MagLim + redMaGiC LENS samples",
+   "hdf5_magic_verified": false
+  },
+  {
+   "file": "DESY3_sompz_v0.40.h5",
+   "bytes": 36792672616,
+   "url": "https://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3kp_cats/DESY3_sompz_v0.40.h5",
+   "note": "SOMPZ v0.40 (superseded by v0.50)",
+   "hdf5_magic_verified": false
+  },
+  {
+   "file": "cats.yaml",
+   "bytes": 1108,
+   "url": "https://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3kp_cats/cats.yaml",
+   "note": "HDF5 group/table map - MIRRORED",
+   "hdf5_magic_verified": false
+  },
+  {
+   "file": "example.py",
+   "bytes": 5399,
+   "url": "https://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3kp_cats/example.py",
+   "note": "reference reader - MIRRORED",
+   "hdf5_magic_verified": false
+  }
+ ]
+}

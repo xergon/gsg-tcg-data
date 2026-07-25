@@ -1,0 +1,42 @@
+{
+  "lane": "C-MemoryClock — CANUCS Bullet Cluster lens model",
+  "fetched_utc": "2026-07-25T09:40Z",
+  "sources": {
+    "canucs_lensing_page": "https://niriss.github.io/lensing.html",
+    "bullet_lens_model_bundle": "https://www.dropbox.com/scl/fo/vrat9opa0ik4nt9xjbkju/AFmi2G8cZ50dkzzYTBj_yac?rlkey=5v1uby7rl0oruag4ssewfn69k&st=quwppvkm&dl=0",
+    "paper_ads": "https://ui.adsabs.harvard.edu/abs/2026arXiv260122245R/abstract",
+    "paper_arxiv": "https://arxiv.org/abs/2601.22245",
+    "paper_aanda": "https://www.aanda.org/articles/aa/full_html/2026/06/aa59214-26/aa59214-26.html",
+    "canucs_mast_doi": "https://doi.org/10.17909/ph4n-6n76"
+  },
+  "delivered": {
+    "model_core_tarball": {
+      "url": "https://github.com/xergon/gsg-tcg-data/releases/download/cmc-bullet-canucs-v1/bullet_canucs_2026_model_core.tar.zst",
+      "bytes_compressed": 232576271,
+      "bytes_uncompressed": 340538289,
+      "files": 74,
+      "sha256": "91939e7e780ed8411c1c7f825033abc43d2b6d265d8f7154ab4da8b23905c3e3"
+    },
+    "model_core_manifest": "https://github.com/xergon/gsg-tcg-data/releases/download/cmc-bullet-canucs-v1/bullet_canucs_2026_model_core_manifest.csv",
+    "browsable_on_main": "https://github.com/xergon/gsg-tcg-data/tree/main/cmc_bullet_canucs",
+    "geometry_json": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/cmc_bullet_canucs/GEOMETRY_AND_WCS.json"
+  },
+  "verification": {
+    "method": "Entries recovered from the streaming ZIP by parsing local file headers (entries are STORED, method=0), then content-checked. Magic bytes checked on every file; no HTML shells.",
+    "gold_images_counted": 135,
+    "source_galaxies_counted": 27,
+    "z_source_range": [0.897, 6.64],
+    "all_images_incl_candidates": 199,
+    "psi_50mas_map": {"NAXIS": [8000, 8000], "CDELT_arcsec": 0.0500062507813476, "finite_fraction": 1.0}
+  },
+  "corrections_to_prior_assumptions": [
+    "v1 (README 17.3.2026) supersedes v0 (30.1.2026) — use v1.",
+    "Model maps are 50 mas (best-fit) and 200 mas (Bayesian samples), NOT 40 mas. The 40 mas figure is the NIRCam drizzle grid of the imaging, not the delivered model map grid.",
+    "All delivered kappa/gamma/dpl/psi maps are scaled so Dls/Ds = 1.",
+    "The gas component enters Lenstool as external maps (xray_*_dsdls1.fits, 256x256 at 1.968 arcsec/pix), not as an analytic halo."
+  ],
+  "not_fetched_by_instruction": {
+    "jwst_go_4598": {"status": "available in MAST, NOT fetched (explicitly not needed yet)", "observations_bullet": 15, "includes_F277W": true},
+    "chandra_bullet_doi": {"doi": "https://doi.org/10.25574/cdc.373", "obsids": [3184, 4984, 4985, 4986, 5355, 5356, 5357, 5358, 5361], "status": "NOT fetched (explicitly not needed yet)"}
+  }
+}

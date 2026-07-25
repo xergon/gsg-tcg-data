@@ -1,0 +1,245 @@
+{
+ "NGC1566": {
+  "mhongoose_id": "J0419-54",
+  "files": [
+   {
+    "file": "J0419-54_r05_chan.fits",
+    "bytes": 12971520,
+    "md5": "c2bd4c3e9637d5f03351a246b2855dff",
+    "robust": "0.5",
+    "product": "chan"
+   },
+   {
+    "file": "J0419-54_r05_mom0.fits",
+    "bytes": 12971520,
+    "md5": "4e0d7a90e8adf094fab929c1cff3f94b",
+    "robust": "0.5",
+    "product": "mom0"
+   },
+   {
+    "file": "J0419-54_r05_mom0_pb.fits",
+    "bytes": 12971520,
+    "md5": "ca6b216df6356dc56e6f35c13d5c04b2",
+    "robust": "0.5",
+    "product": "mom0_pb"
+   },
+   {
+    "file": "J0419-54_r05_mom1.fits",
+    "bytes": 12971520,
+    "md5": "49e6d3218d45d1dc5554bfb7c8d47990",
+    "robust": "0.5",
+    "product": "mom1"
+   },
+   {
+    "file": "J0419-54_r05_mom2.fits",
+    "bytes": 12971520,
+    "md5": "1e8cfeff990b269976aa9118afd90dda",
+    "robust": "0.5",
+    "product": "mom2"
+   },
+   {
+    "file": "J0419-54_r15_chan.fits",
+    "bytes": 2396160,
+    "md5": "af5c7ff4de540ee05ac92ec3759deb8d",
+    "robust": "1.5",
+    "product": "chan"
+   },
+   {
+    "file": "J0419-54_r15_mom0.fits",
+    "bytes": 2396160,
+    "md5": "985da3179f4f8c9f64989f187262c124",
+    "robust": "1.5",
+    "product": "mom0"
+   },
+   {
+    "file": "J0419-54_r15_mom0_pb.fits",
+    "bytes": 2396160,
+    "md5": "baa10c26167587e971f5721b1cbfed79",
+    "robust": "1.5",
+    "product": "mom0_pb"
+   },
+   {
+    "file": "J0419-54_r15_mom1.fits",
+    "bytes": 2396160,
+    "md5": "1031422c35083a63b3268f6d951f3722",
+    "robust": "1.5",
+    "product": "mom1"
+   },
+   {
+    "file": "J0419-54_r15_mom2.fits",
+    "bytes": 2396160,
+    "md5": "461af74b6bf351eb74c0b132e0dd2d23",
+    "robust": "1.5",
+    "product": "mom2"
+   }
+  ],
+  "total_bytes": 76838400,
+  "zip": {
+   "name": "MHONGOOSE_singletrack_NGC1566_J0419-54.zip",
+   "bytes": 1211680,
+   "md5": "76e95d861a8e544186602f1393f72f99"
+  }
+ },
+ "NGC1672": {
+  "mhongoose_id": "J0445-59",
+  "files": [
+   {
+    "file": "J0445-59_r05_chan.fits",
+    "bytes": 12971520,
+    "md5": "ffb30e2191c605a59ca382755ca71a03",
+    "robust": "0.5",
+    "product": "chan"
+   },
+   {
+    "file": "J0445-59_r05_mom0.fits",
+    "bytes": 12971520,
+    "md5": "7967b7a609c1b8fda560123a14c78ee6",
+    "robust": "0.5",
+    "product": "mom0"
+   },
+   {
+    "file": "J0445-59_r05_mom0_pb.fits",
+    "bytes": 12971520,
+    "md5": "8f1fb2695f61958015ea4b05853d8574",
+    "robust": "0.5",
+    "product": "mom0_pb"
+   },
+   {
+    "file": "J0445-59_r05_mom1.fits",
+    "bytes": 12971520,
+    "md5": "5177cc2d6e4fe60ce9d47e181f685292",
+    "robust": "0.5",
+    "product": "mom1"
+   },
+   {
+    "file": "J0445-59_r05_mom2.fits",
+    "bytes": 12971520,
+    "md5": "8125184db31d36ebe14c4ca2e7a8ea29",
+    "robust": "0.5",
+    "product": "mom2"
+   },
+   {
+    "file": "J0445-59_r15_chan.fits",
+    "bytes": 2396160,
+    "md5": "922d87a2cd480662030d8d1547c3b089",
+    "robust": "1.5",
+    "product": "chan"
+   },
+   {
+    "file": "J0445-59_r15_mom0.fits",
+    "bytes": 2396160,
+    "md5": "c0de2b1de22bb4c8e44d098ac73007ae",
+    "robust": "1.5",
+    "product": "mom0"
+   },
+   {
+    "file": "J0445-59_r15_mom0_pb.fits",
+    "bytes": 2396160,
+    "md5": "31c8132d5bbde4d812775cc6c5f455ed",
+    "robust": "1.5",
+    "product": "mom0_pb"
+   },
+   {
+    "file": "J0445-59_r15_mom1.fits",
+    "bytes": 2396160,
+    "md5": "51f78b7ec0a09dfa2974eeab6904e1be",
+    "robust": "1.5",
+    "product": "mom1"
+   },
+   {
+    "file": "J0445-59_r15_mom2.fits",
+    "bytes": 2396160,
+    "md5": "2fa5ed5d165cd0a207c2c369479b894b",
+    "robust": "1.5",
+    "product": "mom2"
+   }
+  ],
+  "total_bytes": 76838400,
+  "zip": {
+   "name": "MHONGOOSE_singletrack_NGC1672_J0445-59.zip",
+   "bytes": 1190372,
+   "md5": "9084e125f56212e3ed5b2afbd276d1b2"
+  }
+ },
+ "NGC5068": {
+  "mhongoose_id": "J1318-21",
+  "files": [
+   {
+    "file": "J1318-21_r05_chan.fits",
+    "bytes": 12971520,
+    "md5": "4151f4fecd5b24d3342296ee2ada2302",
+    "robust": "0.5",
+    "product": "chan"
+   },
+   {
+    "file": "J1318-21_r05_mom0.fits",
+    "bytes": 12971520,
+    "md5": "0533f00787b544f6df2337861ba69b3e",
+    "robust": "0.5",
+    "product": "mom0"
+   },
+   {
+    "file": "J1318-21_r05_mom0_pb.fits",
+    "bytes": 12971520,
+    "md5": "339868920d3c6d0594905660748b1a53",
+    "robust": "0.5",
+    "product": "mom0_pb"
+   },
+   {
+    "file": "J1318-21_r05_mom1.fits",
+    "bytes": 12971520,
+    "md5": "d01f4b11c5b2430a0886c0cba7c80468",
+    "robust": "0.5",
+    "product": "mom1"
+   },
+   {
+    "file": "J1318-21_r05_mom2.fits",
+    "bytes": 12971520,
+    "md5": "ddfbb332a9760fdce89e7371b99a38d7",
+    "robust": "0.5",
+    "product": "mom2"
+   },
+   {
+    "file": "J1318-21_r15_chan.fits",
+    "bytes": 2396160,
+    "md5": "744f9b5f34f67cb648383bc635be8b2b",
+    "robust": "1.5",
+    "product": "chan"
+   },
+   {
+    "file": "J1318-21_r15_mom0.fits",
+    "bytes": 2396160,
+    "md5": "bb6e6037f70852f9bdc6443242e35d5f",
+    "robust": "1.5",
+    "product": "mom0"
+   },
+   {
+    "file": "J1318-21_r15_mom0_pb.fits",
+    "bytes": 2396160,
+    "md5": "580726c8946c68c645ff48167f0a9c89",
+    "robust": "1.5",
+    "product": "mom0_pb"
+   },
+   {
+    "file": "J1318-21_r15_mom1.fits",
+    "bytes": 2396160,
+    "md5": "7e4eac221d46582cc21c5af02fe21998",
+    "robust": "1.5",
+    "product": "mom1"
+   },
+   {
+    "file": "J1318-21_r15_mom2.fits",
+    "bytes": 2396160,
+    "md5": "80e0d3caf457164ec54662213f93b346",
+    "robust": "1.5",
+    "product": "mom2"
+   }
+  ],
+  "total_bytes": 76838400,
+  "zip": {
+   "name": "MHONGOOSE_singletrack_NGC5068_J1318-21.zip",
+   "bytes": 982127,
+   "md5": "ea4381d30c4ffb2e5b6afc8b6a7bf8a3"
+  }
+ }
+}

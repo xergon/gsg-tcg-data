@@ -24,7 +24,42 @@
    "sharon_v2_v3": "covers, but superseded version",
    "uncover_v2.0": "covers (7.6x7.6 arcmin, 0.04 arcsec/pix) but built with Zitrin+2015 analytic code => NOT method-independent of the Zitrin family; parametric not free-form"
   },
-  "gate_status": "SATISFIABLE WITH ZERO MARGIN at latest versions (3 families, 2 free-form)"
+  "gate_status": "SATISFIABLE ONLY IF S3 accepts pre-HFF SaWLens v1 as the free-form leg; WSLAP+ is edge-limited and GRALE does not cover",
+  "edge_headroom_from_NW_clump": {
+   "cats_v4.1": {
+    "N_arcsec": 148.1,
+    "S_arcsec": 451.9,
+    "E_arcsec": 382.5,
+    "W_arcsec": 218.2,
+    "min_headroom_arcsec": 148.1,
+    "min_headroom_kpc": 670.5,
+    "fits_150kpc": true
+   },
+   "diego_v4.1": {
+    "N_arcsec": 18.4,
+    "S_arcsec": 245.1,
+    "E_arcsec": 217.5,
+    "W_arcsec": 46.1,
+    "min_headroom_arcsec": 18.4,
+    "min_headroom_kpc": 83.1,
+    "fits_150kpc": false
+   },
+   "merten_v1": {
+    "N_arcsec": 594.3,
+    "S_arcsec": 897.3,
+    "E_arcsec": 829.4,
+    "W_arcsec": 666.1,
+    "min_headroom_arcsec": 594.3,
+    "min_headroom_kpc": 2691.0,
+    "fits_150kpc": true
+   }
+  },
+  "CRITICAL_free_form_problem": {
+   "GRALE": "does not cover the NW clump at any version (v1 140\", v3 140\", v4 169\")",
+   "WSLAP+_diego_v4.1": "covers, but only 18.4 arcsec = 83 kpc of headroom to the northern map edge, LESS than the 33.13 arcsec = 150 kpc threshold; a northward displacement runs off the map",
+   "SaWLens_merten_v1": "ample headroom, but PRE-HFF model, only version, 8.33 arcsec = 37.7 kpc per pixel so 150 kpc is ~4 pixels",
+   "conclusion": "No free-form leg both covers the NW clump with room to measure 150 kpc AND is a post-HFF model resolving it. The >=1 free-form clause is the binding constraint."
+  }
  },
  "common_frame": {
   "ctype": "RA---TAN/DEC--TAN",
@@ -73,8 +108,8 @@
    "md5": "523d6006192b02eed2dcfe9f798a135b"
   },
   "README.md": {
-   "bytes": 7255,
-   "md5": "4d811c14d0ee6fe0904c3e3c8c8c7cda"
+   "bytes": 8378,
+   "md5": "5ffc3648dd99fa1a258ccda80df60034"
   },
   "URL_VERIFICATION.txt": {
    "bytes": 2187,
@@ -155,6 +190,10 @@
   "model_readmes/hlsp_frontier_model_abell2744_williams_v4_readme.txt": {
    "bytes": 10013,
    "md5": "5a554e4e9b80ea2b5b433fce9009e5ca"
+  },
+  "nw_edge_headroom.json": {
+   "bytes": 562,
+   "md5": "649a0607e74a2bf07eb440a0881e2d6d"
   },
   "uncover_v2/UNCOVER_A2744_lensmodel_v2.0_README.txt": {
    "bytes": 3999,

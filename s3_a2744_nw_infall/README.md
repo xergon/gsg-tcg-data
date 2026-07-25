@@ -45,10 +45,29 @@ Two ways to widen the margin, both with caveats S3 must rule on:
   **the Zitrin et al. (2015) analytic code**, so it is **not method-independent of the Zitrin family**,
   and it is parametric, not free-form.
 
-⚠ **Merten/SaWLens is the weakest leg**: it exists **only at v1, which is a PRE-HFF model**
-(built on pre-HFF imaging, per the HLSP readme), and its pixel is **8.33″ = 37.7 kpc**.
-The 150 kpc threshold is **≈4 pixels** in that map. It carries the free-form requirement jointly
-with WSLAP+, so if S3 rejects a pre-HFF model, **WSLAP+ becomes the single free-form leg.**
+### 🔴🔴 The free-form requirement is in worse shape than "2 of 3 are free-form" suggests
+
+Covering the clump is not enough — **the 33.13″ displacement itself has to fit inside the map.**
+Headroom from the NW clump to each map edge (`nw_edge_headroom.json`):
+
+| Family | N | S | E | W | **min headroom** | Δ_NW = 33.13″ fits? |
+|---|---|---|---|---|---|---|
+| CATS v4.1 | 148.1″ | 451.9″ | 382.5″ | 218.2″ | **148.1″ = 670 kpc** | yes |
+| **WSLAP+ v4.1** | **18.4″** | 245.1″ | 217.5″ | 46.1″ | **18.4″ = 83 kpc** | **NO** |
+| SaWLens v1 | 594.3″ | 897.3″ | 829.4″ | 666.1″ | **594.3″ = 2691 kpc** | yes |
+
+**The NW clump sits only 18.4″ (83 kpc) below the northern edge of the WSLAP+ map** — less than the
+150 kpc being measured. A displacement with any significant northward component **runs off the map**.
+
+So each free-form leg is independently compromised:
+- **GRALE** — does not cover the NW clump at any version.
+- **WSLAP+** — covers, but has only 83 kpc of northward headroom, < the 150 kpc threshold.
+- **SaWLens** — ample headroom, but **v1 only, a PRE-HFF model**, at **8.33″ = 37.7 kpc/pixel**,
+  so 150 kpc is **≈4 pixels**.
+
+**⇒ There is no free-form leg that both covers the NW clump with room to measure 150 kpc *and* is
+a post-HFF model at a resolution that resolves it.** S3 should treat "≥1 free-form" as the binding
+constraint and decide explicitly whether pre-HFF SaWLens v1 qualifies — the answer decides the row.
 
 ---
 

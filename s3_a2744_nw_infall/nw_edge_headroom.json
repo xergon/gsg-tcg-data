@@ -1,0 +1,29 @@
+{
+ "cats_v4.1": {
+  "N_arcsec": 148.1,
+  "S_arcsec": 451.9,
+  "E_arcsec": 382.5,
+  "W_arcsec": 218.2,
+  "min_headroom_arcsec": 148.1,
+  "min_headroom_kpc": 670.5,
+  "fits_150kpc": true
+ },
+ "diego_v4.1": {
+  "N_arcsec": 18.4,
+  "S_arcsec": 245.1,
+  "E_arcsec": 217.5,
+  "W_arcsec": 46.1,
+  "min_headroom_arcsec": 18.4,
+  "min_headroom_kpc": 83.1,
+  "fits_150kpc": false
+ },
+ "merten_v1": {
+  "N_arcsec": 594.3,
+  "S_arcsec": 897.3,
+  "E_arcsec": 829.4,
+  "W_arcsec": 666.1,
+  "min_headroom_arcsec": 594.3,
+  "min_headroom_kpc": 2691.0,
+  "fits_150kpc": true
+ }
+}

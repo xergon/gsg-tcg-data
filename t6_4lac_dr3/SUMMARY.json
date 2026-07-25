@@ -1,0 +1,111 @@
+{
+  "delivery": "T6_4LAC_DR3_v1",
+  "for_thread": "T6 (propagation-induced neutrino angular halo)",
+  "built_utc": "2026-07-25T08:00:05Z",
+  "catalog": {
+    "name": "Fermi-LAT Fourth AGN Catalog Data Release 3 (4LAC-DR3)",
+    "official_page": "https://fermi.gsfc.nasa.gov/ssc/data/access/lat/4LACDR3/",
+    "lat_data_span_years": 12
+  },
+  "files": {
+    "table-4LAC-DR3-h.fits": {
+      "bytes": 910080,
+      "sha256": "01ea965408db20baa007894b5710466d66bca6fbc794653710d6840d16381306",
+      "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t6_4lac_dr3/table-4LAC-DR3-h.fits",
+      "source_url": "https://fermi.gsfc.nasa.gov/ssc/data/access/lat/4LACDR3/table-4LAC-DR3-h.fits"
+    },
+    "table-4LAC-DR3-l.fits": {
+      "bytes": 126720,
+      "sha256": "0ba0a50d21f51ceef3adede9d43ab4f7a074aa3d34c5e7e656af1e1ea6931286",
+      "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t6_4lac_dr3/table-4LAC-DR3-l.fits",
+      "source_url": "https://fermi.gsfc.nasa.gov/ssc/data/access/lat/4LACDR3/table-4LAC-DR3-l.fits"
+    },
+    "sources_fsrq.parquet": {
+      "bytes": 180088,
+      "sha256": "b7ac8850260702bd8b91521ee6a154abc4be4cceaa41017a466f38e57543daee",
+      "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t6_4lac_dr3/sources_fsrq.parquet",
+      "source_url": "derived from table-4LAC-DR3-h.fits"
+    }
+  },
+  "row_counts": {
+    "high_latitude_total": 3407,
+    "high_latitude_expected": 3407,
+    "high_latitude_matches_expected": true,
+    "low_latitude_total": 407,
+    "fsrq_high_latitude": 755,
+    "fsrq_high_latitude_identified_UPPER": 40,
+    "fsrq_high_latitude_associated_lower": 715,
+    "fsrq_with_redshift_gt0": 755,
+    "fsrq_missing_redshift": 0
+  },
+  "fsrq_selection": {
+    "rule": "CLASS.strip().lower() == 'fsrq'  (4LAC convention: UPPERCASE=identified, lowercase=associated; BOTH kept)",
+    "excluded_nearby_classes": [
+      "ssrq (2)",
+      "css (5)",
+      "bcu (1208)",
+      "bll (1357+22)",
+      "rdg",
+      "nlsy1",
+      "agn",
+      "sey"
+    ],
+    "redshift_range": [
+      0.02889000065624714,
+      4.313000202178955
+    ],
+    "redshift_median": 1.1130000352859497
+  },
+  "sources_fsrq_parquet": {
+    "rows": 755,
+    "columns": 49,
+    "compression": "zstd",
+    "derived_columns": {
+      "CLASS_norm": "lowercased/stripped CLASS",
+      "is_identified": "True when raw CLASS is UPPERCASE (identified, not merely associated)",
+      "ra_deg": "RA_Counterpart when a valid counterpart position exists, else RAJ2000",
+      "dec_deg": "DEC_Counterpart when a valid counterpart position exists, else DEJ2000",
+      "position_source": "'counterpart' or 'LAT' \u2014 all 755 FSRQ use the counterpart position",
+      "sin_dec": "sin(dec_deg) \u2014 IceCube declination-band coordinate",
+      "catalog_file": "provenance",
+      "catalog_hdu": "provenance"
+    },
+    "note": "All 41 original 4LAC columns retained verbatim (Redshift cast to float64); nothing dropped."
+  },
+  "class_counts_high_latitude": {
+    "bll": 1357,
+    "bcu": 1208,
+    "fsrq": 715,
+    "FSRQ": 40,
+    "rdg": 36,
+    "BLL": 22,
+    "agn": 6,
+    "RDG": 6,
+    "css": 5,
+    "nlsy1": 4,
+    "NLSY1": 4,
+    "ssrq": 2,
+    "AGN": 1,
+    "sey": 1
+  },
+  "verification": {
+    "fits_magic_bytes": "SIMPLE  = (confirmed on both FITS)",
+    "fresh_download_http": 200,
+    "fresh_download_sha256_matches_local_frozen_copy": true,
+    "note": "table-4LAC-DR3-h.fits was re-downloaded from the FSSC on 2026-07-25 and is byte-identical to the 2026-07-21 frozen copy."
+  },
+  "icetracks_dr2_companion": {
+    "status": "NOT MIRRORED IN THIS REPO \u2014 fetch from Harvard Dataverse (endpoints re-checked live 2026-07-25)",
+    "doi": "10.7910/DVN/MMIIZA",
+    "whole_release_zip": "https://dataverse.harvard.edu/api/access/dataset/:persistentId/versions/1.0?persistentId=doi:10.7910/DVN/MMIIZA",
+    "zip_bytes_compressed": 116163148,
+    "uncompressed_bytes": 2609179705,
+    "zip_members": 44,
+    "file_entries": 41,
+    "events_total": 1643355,
+    "seasons": 14,
+    "livetime_days": 4963.37,
+    "TRAP": "Per-file endpoint WITHOUT ?format=original returns a Dataverse-INGESTED, DOUBLE-QUOTE-WRAPPED file whose MD5 does not match the published MD5, while the API filesize field describes the ingested file so a byte-size gate PASSES on the corrupt copy. ALWAYS append ?format=original, or take the whole-release zip.",
+    "dr1_superseded": "DR1 (doi:10.7910/DVN/VKL316, 2008-2018) is SUPERSEDED and must not be used or combined; only 49.8% of DR1 IC79 and 39.5% of IC86-2011 events survive into DR2."
+  }
+}

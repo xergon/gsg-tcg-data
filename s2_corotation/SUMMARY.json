@@ -1,0 +1,145 @@
+{
+ "group": "s2_corotation",
+ "title": "Ruiz-Garcia et al. 2024 - Dynamical resonances in PHANGS galaxies: bar corotation catalogue",
+ "purpose": "Gates S2 selection lock: R_CR + uncertainty, bar radius, pattern speed, quality flags.",
+ "provenance": {
+  "doi_journal": "10.1051/0004-6361/202450935",
+  "arxiv": "2410.13353",
+  "zenodo_record": "13898598",
+  "zenodo_doi_field_in_record": "10.1051/0004-6361/xxxxxxx (placeholder left by the authors in the Zenodo metadata)",
+  "data_availability_statement": "Supplementary material is available at: https://zenodo.org/records/13898598",
+  "note_on_extraction": "The Zenodo record contains ONLY a 26 MB PDF appendix - no machine-readable table. The CSVs here were parsed from the arXiv e-print LaTeX source (AAmain.tex longtables), which carries the identical published table content in text form."
+ },
+ "verification": {
+  "zenodo_published_md5": "ffbfd67b24c3c90190c978a7bfa4ba42",
+  "downloaded_pdf_md5": "ffbfd67b24c3c90190c978a7bfa4ba42",
+  "pdf_md5_match": true,
+  "pdf_bytes": 26097127,
+  "arxiv_source_tarball_md5": "10b6735397d3a959a34a7e41762a2419",
+  "arxiv_source_tarball_bytes": 40061114,
+  "parse_cross_checks_against_paper_text": {
+   "sample_size_expected_74": 74,
+   "barred_expected_46": 46,
+   "CR_determined_expected_38": 38,
+   "QF_1_or_2_subset_expected_20": 20,
+   "all_four_match_published_abstract_and_text": true
+  }
+ },
+ "contents": {
+  "ruizgarcia2024_tableA1_phangs_sample.csv": "Table A.1 - full PHANGS sample (74 galaxies): RA, Dec, PA, incl, distance (with errors), rotation sense, bar flag, CO coverage radii.",
+  "ruizgarcia2024_tableA2_corotation.csv": "Table A.2 - THE CATALOGUE: 46 barred galaxies with R_CR (kpc) + uncertainty, R_bar (kpc), ratio R = R_CR/R_bar, quality flag QF, nominal ICA map. 38 have a determined R_CR.",
+  "ruizgarcia2024_tableA3_pattern_speed_resonances.csv": "Table A.3 - pattern speed Omega_p (km/s/kpc) and Lindblad resonances iILR / oILR / OLR (kpc), with errors. 28 galaxies have Omega_p, 16 an OLR, 18 an oILR, 6 an iILR.",
+  "parse_tables.py": "The parser, for bit-exact reproduction from the arXiv source."
+ },
+ "column_notes": {
+  "errors": "err_lo / err_hi are separate columns. Symmetric errors have err_lo == err_hi. 8 rows in Table A.3 carry genuinely asymmetric errors, preserved as published.",
+  "QF": "Quality flag 1 (best) to 3 (worst), carrying the published dagger annotations verbatim: '1','2','2^dagger','2^ddagger','3','3^dagger'. The paper's headline R = 1.12 +/- 0.39 EXCLUDES QF=3; that subset is exactly the 20 rows whose QF starts with 1 or 2.",
+  "empty_cells": "An empty cell means the published table printed '...' (not determined). Never treat as zero."
+ },
+ "flags_for_the_thread": [
+  "Table A.1 NGC 1566 PA cell contains a typo in the published LaTeX source: '214.{\\pm 4.1} 7' - the trailing digit of 214.7 sits outside the error brace. Reassembled to PA = 214.7 +/- 4.1 and flagged in the parse_note column. No other row needed repair.",
+  "Table A.3 NGC 5068 lists OLR = 0.7 (+0.0/-0.4) kpc with iILR and oILR both undetermined. That OLR is SMALLER than the same galaxy's R_CR = 1.9 kpc. Delivered verbatim as published - not corrected, not dropped. Treat with suspicion before use.",
+  "All three MHONGOOSE fleet targets are in the catalogue and ALL THREE carry QF = 3^dagger, the lowest-confidence tier."
+ ],
+ "fleet_targets": {
+  "NGC 1566 (J0419-54)": {
+   "corotation": {
+    "object": "NGC 1566",
+    "R_CR_kpc": "6.2",
+    "R_CR_err_lo_kpc": "0.6",
+    "R_CR_err_hi_kpc": "0.6",
+    "R_bar_kpc": "3.07",
+    "Rratio_CR_over_bar": "2.01",
+    "QF": "3^dagger",
+    "nominal_map": "ICA2"
+   },
+   "resonances": {
+    "object": "NGC 1566",
+    "Omega_p_km_s_kpc": "36.1",
+    "Omega_p_err_lo": "4.1",
+    "Omega_p_err_hi": "4.1",
+    "iILR_kpc": "",
+    "iILR_err_lo": "",
+    "iILR_err_hi": "",
+    "oILR_kpc": "1.6",
+    "oILR_err_lo": "0.0",
+    "oILR_err_hi": "0.0",
+    "OLR_kpc": "7.3",
+    "OLR_err_lo": "0.0",
+    "OLR_err_hi": "0.0"
+   }
+  },
+  "NGC 1672 (J0445-59)": {
+   "corotation": {
+    "object": "NGC 1672",
+    "R_CR_kpc": "11.9",
+    "R_CR_err_lo_kpc": "1.9",
+    "R_CR_err_hi_kpc": "1.9",
+    "R_bar_kpc": "7.00",
+    "Rratio_CR_over_bar": "1.70",
+    "QF": "3^dagger",
+    "nominal_map": "ICA1"
+   },
+   "resonances": {
+    "object": "NGC 1672",
+    "Omega_p_km_s_kpc": "",
+    "Omega_p_err_lo": "",
+    "Omega_p_err_hi": "",
+    "iILR_kpc": "",
+    "iILR_err_lo": "",
+    "iILR_err_hi": "",
+    "oILR_kpc": "",
+    "oILR_err_lo": "",
+    "oILR_err_hi": "",
+    "OLR_kpc": "",
+    "OLR_err_lo": "",
+    "OLR_err_hi": ""
+   }
+  },
+  "NGC 5068 (J1318-21)": {
+   "corotation": {
+    "object": "NGC 5068",
+    "R_CR_kpc": "1.9",
+    "R_CR_err_lo_kpc": "0.1",
+    "R_CR_err_hi_kpc": "0.1",
+    "R_bar_kpc": "0.88",
+    "Rratio_CR_over_bar": "2.19",
+    "QF": "3^dagger",
+    "nominal_map": "ICA2"
+   },
+   "resonances": {
+    "object": "NGC 5068",
+    "Omega_p_km_s_kpc": "26.0",
+    "Omega_p_err_lo": "1.2",
+    "Omega_p_err_hi": "1.2",
+    "iILR_kpc": "",
+    "iILR_err_lo": "",
+    "iILR_err_hi": "",
+    "oILR_kpc": "",
+    "oILR_err_lo": "",
+    "oILR_err_hi": "",
+    "OLR_kpc": "0.7",
+    "OLR_err_lo": "0.4",
+    "OLR_err_hi": "0.0"
+   }
+  }
+ },
+ "files": {
+  "ruizgarcia2024_tableA1_phangs_sample.csv": {
+   "md5": "6ce2c1213943322c6a3cb5f4b27f180e",
+   "bytes": 5453
+  },
+  "ruizgarcia2024_tableA2_corotation.csv": {
+   "md5": "74221173efa0145319b22c895e63b484",
+   "bytes": 1942
+  },
+  "ruizgarcia2024_tableA3_pattern_speed_resonances.csv": {
+   "md5": "ffbc07e0e92a13144905fa7827b77c93",
+   "bytes": 1791
+  },
+  "parse_tables.py": {
+   "md5": "734e92050156dd38d0ac0a04d639d7ea",
+   "bytes": 5713
+  }
+ }
+}

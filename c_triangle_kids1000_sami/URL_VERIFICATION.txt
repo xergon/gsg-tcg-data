@@ -1,0 +1,35 @@
+C-Triangle — URL VERIFICATION.  Every URL below was curl'd AFTER publication and the bytes came back.
+generated 2026-07-25T12:59:02Z
+commit-pinned to 0a5980015144a708cb365a487e3d924be732041a
+
+HTTP 200       17024 B  OK         https://raw.githubusercontent.com/xergon/gsg-tcg-data/0a5980015144a708cb365a487e3d924be732041a/c_triangle_kids1000_sami/README_DELIVERY.md
+HTTP 200       17490 B  OK         https://raw.githubusercontent.com/xergon/gsg-tcg-data/0a5980015144a708cb365a487e3d924be732041a/c_triangle_kids1000_sami/KIDS1000_SHEAR_CALIBRATION.md
+HTTP 200        9283 B  OK         https://raw.githubusercontent.com/xergon/gsg-tcg-data/0a5980015144a708cb365a487e3d924be732041a/c_triangle_kids1000_sami/MANIFEST.md
+HTTP 200        7793 B  OK         https://raw.githubusercontent.com/xergon/gsg-tcg-data/0a5980015144a708cb365a487e3d924be732041a/c_triangle_kids1000_sami/N_QUALIFIED.json
+HTTP 200        9535 B  OK         https://raw.githubusercontent.com/xergon/gsg-tcg-data/0a5980015144a708cb365a487e3d924be732041a/c_triangle_kids1000_sami/SUMMARY.json
+HTTP 200        1938 B  OK         https://raw.githubusercontent.com/xergon/gsg-tcg-data/0a5980015144a708cb365a487e3d924be732041a/c_triangle_kids1000_sami/checksums_sha256.txt
+HTTP 200      423171 B  OK         https://raw.githubusercontent.com/xergon/gsg-tcg-data/0a5980015144a708cb365a487e3d924be732041a/c_triangle_kids1000_sami/sami_dr3_lens_table.csv
+HTTP 200      274269 B  OK         https://raw.githubusercontent.com/xergon/gsg-tcg-data/0a5980015144a708cb365a487e3d924be732041a/c_triangle_kids1000_sami/sami_gama_targets.csv
+HTTP 200      230943 B  OK         https://raw.githubusercontent.com/xergon/gsg-tcg-data/0a5980015144a708cb365a487e3d924be732041a/c_triangle_kids1000_sami/per_lens_source_counts.csv
+HTTP 200      178515 B  OK         https://raw.githubusercontent.com/xergon/gsg-tcg-data/0a5980015144a708cb365a487e3d924be732041a/c_triangle_kids1000_sami/KiDS1000_tile_footprint.csv
+HTTP 200     4657755 B  OK         https://raw.githubusercontent.com/xergon/gsg-tcg-data/0a5980015144a708cb365a487e3d924be732041a/c_triangle_kids1000_sami/DESI_LS_DR9_cutout_urls.txt
+HTTP 200      256623 B  OK         https://raw.githubusercontent.com/xergon/gsg-tcg-data/0a5980015144a708cb365a487e3d924be732041a/c_triangle_kids1000_sami/desi_dr9_bricks_gama_strip.csv
+HTTP 200         903 B  OK         https://raw.githubusercontent.com/xergon/gsg-tcg-data/0a5980015144a708cb365a487e3d924be732041a/c_triangle_kids1000_sami/giblin2021_stats_table_blindC.txt
+HTTP 200       78911 B  OK         https://raw.githubusercontent.com/xergon/gsg-tcg-data/0a5980015144a708cb365a487e3d924be732041a/c_triangle_kids1000_sami/kids_dr4.1_release_description.txt
+HTTP 200    16107936 B  OK         https://raw.githubusercontent.com/xergon/gsg-tcg-data/0a5980015144a708cb365a487e3d924be732041a/c_triangle_kids1000_sami/kids1000_sami_5arcmin_compact.parquet
+HTTP 200        6719 B  OK         https://raw.githubusercontent.com/xergon/gsg-tcg-data/0a5980015144a708cb365a487e3d924be732041a/c_triangle_kids1000_sami/stream_filter.py
+HTTP 200        4464 B  OK         https://raw.githubusercontent.com/xergon/gsg-tcg-data/0a5980015144a708cb365a487e3d924be732041a/c_triangle_kids1000_sami/postprocess.py
+HTTP 200      668908 B  OK         https://raw.githubusercontent.com/xergon/gsg-tcg-data/0a5980015144a708cb365a487e3d924be732041a/c_triangle_kids1000_sami/sami/InputCatGAMADR3.csv
+HTTP 200      142291 B  OK         https://raw.githubusercontent.com/xergon/gsg-tcg-data/0a5980015144a708cb365a487e3d924be732041a/c_triangle_kids1000_sami/sami/InputCatClustersDR3.csv
+HTTP 200      413426 B  OK         https://raw.githubusercontent.com/xergon/gsg-tcg-data/0a5980015144a708cb365a487e3d924be732041a/c_triangle_kids1000_sami/sami/CubeObs.csv
+HTTP 200      347961 B  OK         https://raw.githubusercontent.com/xergon/gsg-tcg-data/0a5980015144a708cb365a487e3d924be732041a/c_triangle_kids1000_sami/sami/samiDR3gaskinPA.csv
+HTTP 200      506548 B  OK         https://raw.githubusercontent.com/xergon/gsg-tcg-data/0a5980015144a708cb365a487e3d924be732041a/c_triangle_kids1000_sami/sami/samiDR3Stelkin.csv
+
+RELEASE ASSET (over the 100 MB git limit, under the 2 GiB release cap):
+HTTP 200   125764741 B  OK  sha256 49788f42e3cad569b1a015dcaa1dd59f7f730fe5e8d9b379e2d497817b80a774
+https://github.com/xergon/gsg-tcg-data/releases/download/c-triangle-kids1000-sami-v1/kids1000_sami_15arcmin_sources.parquet
+  re-downloaded after publication: sha256 matched, parquet opened with 2,457,532 rows x 27 columns
+
+REUSED, verified byte-identical to the publisher original:
+HTTP 200        4360 B  OK  sha256 1962a9117413f7fbb8adb863e4a85e250998257572cfffcbe2834e61c7d1704a
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/s9_deflection_closure/kids1000/KiDS1000_SOM_N_of_Z.tar.gz

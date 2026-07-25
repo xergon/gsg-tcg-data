@@ -1,0 +1,59 @@
+i4 TRANSPOSITIONS 2014-07 — v3 MANIFEST AND URL VERIFICATION
+Published 2026-07-25 (UTC). All URLs below were curl-verified after publication.
+
+ARTIFACT
+  transpositions_2014-07_v3.npz
+  bytes   1252278284
+  sha256  d1e302d4d6e0f7b1f2b7ef37634e0d8aaacc6703bf24adf2a211ccc992770dab
+  arrays  19        records 23941814        games 1048440        ply 6..29 (MAX_PLY=30 EXCLUSIVE)
+
+  Re-downloaded from the public release URL: byte count matched, sha256 re-matched,
+  PK magic confirmed, np.load opened all 19 arrays (17 row-aligned at 23,941,814),
+  and BOTH contract assertions were re-run on that downloaded copy and PASSED.
+
+CHANGES VS v2 — exactly two, nothing else
+  1. player_fold = splitmix64(player_hash) & 1        (v2: player_hash & 1, no mixing)
+  2. uint64 dtype on all nine 64-bit digest columns   (v2: signed int64 — SAME BYTES)
+
+  splitmix64 ROUTE USED: the CANONICAL finalizer. The thread's own i4_repetition_state.py
+  was NOT on our disk, so its version could not be copied verbatim. Constants
+  0x9E3779B97F4A7C15 / 0xBF58476D1CE4E5B9 / 0x94D049BB133111EB, shifts 30 / 27 / 31.
+  Known-answer: driven from seed 0 it emits 0xE220A8397B1DCDAF then 0x6E789E6AA1B965F4,
+  matching the published splitmix64 reference vectors. CONFIRM IT MATCHES YOURS.
+
+RELEASE ASSETS (tag i4-transpositions-2014-07-v3)
+https://github.com/xergon/gsg-tcg-data/releases/download/i4-transpositions-2014-07-v3/transpositions_2014-07_v3.npz
+https://github.com/xergon/gsg-tcg-data/releases/download/i4-transpositions-2014-07-v3/transpositions_2014-07_v3.contract.json
+
+COMMIT-PINNED RAW FILES (commit f80870e6b43bf4ff9da4a970cc157f09eb93fec6)
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/f80870e6b43bf4ff9da4a970cc157f09eb93fec6/i4_transpositions/transpositions_2014-07_v3.contract.json
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/f80870e6b43bf4ff9da4a970cc157f09eb93fec6/i4_transpositions/README_v3.md
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/f80870e6b43bf4ff9da4a970cc157f09eb93fec6/i4_transpositions/SUMMARY_v3.json
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/f80870e6b43bf4ff9da4a970cc157f09eb93fec6/i4_transpositions/build_v3.py
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/f80870e6b43bf4ff9da4a970cc157f09eb93fec6/i4_transpositions/verify_v3.py
+  HTTP 200 each; byte counts 22964 / 4823 / 3082 / 4373 / 7030.
+
+v1 AND v2 ARE STILL LIVE AND UNTOUCHED — nothing was deleted or overwritten
+  v1  transpositions_2014-07.npz      859128741 B   tag i4-transpositions-2014-07-v1  (HTTP 206 on range probe)
+  v2  transpositions_2014-07_v2.npz  1252278870 B   tag i4-transpositions-2014-07-v2  (HTTP 206 on range probe)
+
+FULL-CORPUS VERIFICATION (not a slice)
+  every column except player_fold: BYTES IDENTICAL to v2 across all 23,941,814 records
+  the 13 original v1 columns + meta: still BIT-IDENTICAL to v1 across all 23,941,814 records
+  the int64 -> uint64 change is therefore proved to be a pure relabel: v3.view(np.int64) == v2
+
+AUDIT NUMBERS RE-RUN ON v3
+  distinct 128-bit state keys   18744120
+  distinct 64-bit state keys    18744120     collisions 0     (unchanged from v2)
+  distinct movers               30350
+  movers fold0 / fold1          15217 / 15133        (v2: 15306 / 15044)
+  movers in BOTH folds          0                    (v2: 0)   — still 0, by construction
+  records fold0 / fold1         12115750 / 11826064  (v2: 11887504 / 12054310)
+  games straddling both folds   513954               (v2: 513601)
+  records that changed fold     11848278  (49.4878%) — expected: splitmix64 rehashes before the parity bit
+
+TIMING
+  v3 rebuild 27.7 s, verification 28.5 s. No PGN re-extraction was needed or performed.
+
+NOT COMPUTED, DELIBERATELY
+  no Delta1/2/3/4, no permutation test, no estimator, no verdict.

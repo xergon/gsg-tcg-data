@@ -103,11 +103,17 @@ offsets to RA/Dec.
 > maxima of the published `merten_v1` κ map reproduces the W clump to **6″** and the NW clump to **24″**;
 > under the EAST convention the same clumps land **350″** and **168″** away. West is correct. Medezinski's
 > table is self-evidently the same convention — under EAST their clump named "W" would sit east.
+>
+> 🔴 **Stronger still: the reconstructed Medezinski NW position reproduces two *independent* published
+> offsets to better than 0.5″.** Medezinski+2016 state their NW peak is "68 +25 −42 arcsec north of the
+> closest BCG in the northwest clump" and "58 +45 −14 arcsec west of the closest BCG in the north clump".
+> Measured from the reconstructed position against the Furtak+2022 BCGs: **68.38″** to NW-BCG1 and
+> **58.04″** to N-BCG. The Table-4 → RA/Dec chain is correct.
 
 **Mass, κ-map local maxima (measured here).** Local maximum of the *published* κ map, Gaussian-smoothed to
 20″ FWHM, inside a ±30″ box centred on each NW BCG. Done for CATS v4.1, WSLAP+/Diego v4.1, SaWLens/Merten
-v1 and UNCOVER v2.0. All four independent families put the NW mass peak within **2.8″–6.3″ of NW-BCG1**,
-and UNCOVER puts a second peak **2.9″ from NW-BCG2**. WCS taken from the FITS headers
+v1 and UNCOVER v2.0. All four independent families put the NW mass peak within **2.95″–4.39″ of NW-BCG1**,
+and UNCOVER puts a second peak **2.03″ from NW-BCG2**. WCS taken from the FITS headers
 (`CTYPE=RA---TAN/DEC--TAN`, `EQUINOX 2000.0`, `RADESYS FK5`, `CD1_2 = CD2_1 = 0` in all four).
 
 **Gas, X-ray (measured here).** All **102** ObsIDs of Chandra CDC 257 (DOI 10.25574/cdc.257),
@@ -117,8 +123,8 @@ of 15 variants (5 smoothing scales × {all, split-half A, split-half B}); rms sc
 
 | | RA/Dec (FK5 J2000) | validation |
 |---|---|---|
-| main X-ray peak | 00:14:18.82 −30:23:25.1 | **3.0″** from the Ebeling+2010 centre that Medezinski+2016 adopt |
-| **NW interloper peak** | **00:14:08.37 −30:22:00.6** | **728 kpc NW** of the main peak (Owers+2011: "~750 kpc to the northwest"); **83.9″** from the Medezinski NW WL peak (published: 87 +34 −28 arcsec, 90% CL); **140 kpc** from the western NW mass peak and **385 kpc** from the eastern one (Merten+2011: ">150 kpc for NW2", "at least 400 kpc" for NW1) |
+| main X-ray peak | 00:14:18.82 −30:23:25.1 | **3.29″** from the Ebeling+2010 centre that Medezinski+2016 adopt |
+| **NW interloper peak** | **00:14:08.37 −30:22:00.6** | **722 kpc NW** of the main peak (Owers+2011: "~750 kpc to the northwest"); **83.86″** from the Medezinski NW WL peak (published: 87 +34 −28 arcsec, 90% CL); **432 kpc** from the Merten+2011 NW1 WL peak (Merten+2011: "at least 400 kpc"); **133 kpc** from the nearest mass peak, UNCOVER `North-West-2` |
 
 Four independent published quantities reproduced. **No exposure map, no vignetting correction, no
 background subtraction, no point-source removal** — see the caveats block in `chandra_xray_peaks_2p16Ms.json`.
@@ -148,14 +154,14 @@ observed −133 kpc is a datum the adopted scenario does not predict, not a conf
 
 **2. The WL and SL NW mass positions disagree by ~70″ = 317 kpc, and that is the largest systematic in the
 problem.** All four lens models put the NW mass on the NW BCGs (~00:14:13.0 −30:22:34.7). Medezinski's
-Subaru WL peak sits at 00:14:14.36 −30:21:28.6, **68″ north of the closest NW BCG** — the paper says so
-itself. Chadayammuri+2024 side against the WL peaks: *"the positions of the X-ray peaks and BCGs … are
+Subaru WL peak sits at 00:14:14.36 −30:21:28.6, **68.38″ from NW-BCG1** — the paper itself says
+"68 +25 −42 arcsec north of the closest BCG in the northwest clump". Chadayammuri+2024 side against the WL peaks: *"the positions of the X-ray peaks and BCGs … are
 nevertheless better traces of the subcluster positions than low-significance weak lensing peaks."* This
 choice moves Δ_lead from −171 kpc (WL) to −307 kpc (SL) on AX_A — **it moves the magnitude, not the sign.**
 
 **3. The NW substructure is two objects, not one, and they give different magnitudes.** NW-1 (east) and
-NW-2 (west) are separated by 47″ = 213 kpc. The gas sits between them in projection: 140 kpc from NW-2 and
-385 kpc from NW-1. Any single number for "the NW mass peak" is a choice between them. **Both are emitted.**
+NW-2 (west) are separated by 42.9″ = 194 kpc (their BCGs by 41.3″ = 187 kpc). The gas sits between them in
+projection: **133 kpc** from NW-2 and **323 kpc** from NW-1. Any single number for "the NW mass peak" is a choice between them. **Both are emitted.**
 
 ---
 

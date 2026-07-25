@@ -9,14 +9,14 @@
     "dec": -30.390314,
     "component": "S",
     "err_arcsec": 5.0,
-    "detail": "0.5-2 keV merged counts image, 2\"/pix TAN, NO exposure correction. Position = mean of 15 variants (FWHM 15/20/30/40/60\" x {all,splitA,splitB}); rms scatter 1.1\", max 4.0\". Reproduces Ebeling+2010 adopted centre 00:14:18.9 -30:23:22 to 3\"."
+    "detail": "0.5-2 keV merged counts image, 2\"/pix TAN, NO exposure correction. Position = mean of 15 variants (FWHM 15/20/30/40/60\" x {all,splitA,splitB}); rms scatter 1.1\", max 4.0\". Reproduces Ebeling+2010 adopted centre 00:14:18.9 -30:23:22 to 3.29\"."
    },
    "XRAY_thiswork_NW_interloper": {
     "ra": 3.534858,
     "dec": -30.366826,
     "component": "NW",
     "err_arcsec": 5.0,
-    "detail": "0.5-2 keV merged counts image, 2\"/pix TAN, NO exposure correction. Position = mean of 15 variants; rms scatter 1.3\", max 4.6\". Cross-checks: 160.8\"=728 kpc NW of the main peak (Owers+2011 quote ~750 kpc NW); 83.9\" from the Medezinski+2016 NW WL peak (published offset 87 +34 -28 arcsec)."
+    "detail": "0.5-2 keV merged counts image, 2\"/pix TAN, NO exposure correction. Position = mean of 15 variants; rms scatter 1.3\", max 4.6\". Cross-checks: 159.6\"=722 kpc NW of the main peak (Owers+2011 quote ~750 kpc NW); 83.86\" from the Medezinski+2016 NW WL peak (published offset 87 +34 -28 arcsec); 95.3\"=432 kpc from the Merten+2011 NW1 WL peak (Merten+2011: \"at least 400 kpc\")."
    }
   }
  },
@@ -45,10 +45,11 @@
   ]
  },
  "validation": [
-  "main peak lands 3.0 arcsec from the Ebeling+2010 adopted centre 00:14:18.9 -30:23:22 that Medezinski+2016 use as their frame origin",
-  "NW peak lies 160.8 arcsec = 728 kpc NW of the main peak; Owers+2011 state the interloper is \"~750 kpc to the northwest of the X-ray surface brightness peak\"",
-  "NW peak lies 83.9 arcsec from the Medezinski+2016 NW weak-lensing peak; Medezinski+2016 Table 5 publish that offset as 87 (+34,-28) arcsec (90% CL)",
-  "NW peak lies 140 kpc from the western NW mass peak (NW-BCG2 / UNCOVER North-West-2) and 385 kpc from the eastern one (NW-BCG1 / North-West-1); Merten+2011 state \">150 kpc for NW2\" and \"at least 400 kpc\" for NW1"
+  "main peak lands 3.29 arcsec from the Ebeling+2010 adopted centre 00:14:18.9 -30:23:22 that Medezinski+2016 use as their frame origin",
+  "NW peak lies 159.6 arcsec = 722 kpc NW of the main peak; Owers+2011 state the interloper is \"~750 kpc to the northwest of the X-ray surface brightness peak\"",
+  "NW peak lies 83.86 arcsec from the Medezinski+2016 NW weak-lensing peak; Medezinski+2016 Table 5 publish that offset as 87 (+34,-28) arcsec (90% CL)",
+  "NW peak lies 95.3 arcsec = 432 kpc from the Merten+2011 NW (=their NW1) weak-lensing peak; Merten+2011 state the distance to NW1 \"is even at least 400 kpc\"",
+  "NW peak lies 133 kpc from the nearest mass peak (UNCOVER North-West-2 / NW-BCG2); Merten+2011 state \">150 kpc for NW2\" for their own western NW peak (position not tabulated)"
  ],
  "per_obsid": [
   {

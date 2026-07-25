@@ -41,20 +41,21 @@
   "main_xray_peak": "00:14:18.82 -30:23:25.1 (FK5 J2000) = 3.578428, -30.390314",
   "source": "THIS WORK: all 102 ObsIDs of Chandra CDC 257 (DOI 10.25574/cdc.257), 2.1621 Ms, 975070 events 0.5-2 keV, 2 arcsec/pix TAN, no exposure correction",
   "validations": [
-   "3.0\" from the Ebeling+2010 adopted centre",
-   "728 kpc NW of the main peak vs Owers+2011 \"~750 kpc\"",
-   "83.9\" from the Medezinski+2016 NW WL peak vs published 87 (+34,-28) arcsec",
-   "140 kpc / 385 kpc from the two NW mass peaks vs Merten+2011 \">150 kpc for NW2\" / \"at least 400 kpc\" for NW1"
+   "3.29\" from the Ebeling+2010 adopted centre",
+   "722 kpc NW of the main peak vs Owers+2011 \"~750 kpc\"",
+   "83.86\" from the Medezinski+2016 NW WL peak vs published 87 (+34,-28) arcsec",
+   "432 kpc from the Merten+2011 NW1 WL peak vs their \"at least 400 kpc\"",
+   "133 kpc from the nearest mass peak (UNCOVER North-West-2)"
   ],
   "positional_stability": "rms 1.1\" (main) and 1.3\" (NW) over 5 smoothing scales x 3 data splits; worst excursion 4.6\""
  },
  "lensing_quarantine": "NOT ENGAGED. No ESD, no shear profile, no stacked contrast, no Sigma_crit weighting was computed. Only argmax locations of published maps plus spherical trigonometry.",
  "structural_findings": [
   "Chadayammuri+2024 state that in their FIRST-INFALL scenario \"the BCG is always well aligned with the subcluster X-ray peak\", and on that basis \"our binary simulations therefore disfavour a first-infall scenario for NW\". Their first-infall verdict rests on TRIPLE-merger cool-core survival, not on the offset. The measured -133 kpc is therefore a datum the adopted scenario does NOT predict.",
-  "WL and SL disagree on the NW mass position by ~70 arcsec = 317 kpc. All four lens models put it on the NW BCGs; the Medezinski Subaru WL peak is 68 arcsec north of the nearest NW BCG. This moves |Delta_lead| from 171 to 307 kpc on AX_A - it does NOT move the sign.",
-  "The NW substructure is TWO objects 47 arcsec = 213 kpc apart. The gas lies between them in projection: 140 kpc from NW-2, 385 kpc from NW-1. Both are emitted; there is no single \"NW mass peak\".",
+  "WL and SL disagree on the NW mass position by 68.8 arcsec = 312 kpc. All four lens models put it on the NW BCGs; the Medezinski Subaru WL peak is 68.38 arcsec from NW-BCG1 (the paper itself quotes \"68 +25 -42 arcsec north of the closest BCG\"). This moves |Delta_lead| from 171 to 307 kpc on AX_A - it does NOT move the sign.",
+  "The NW substructure is TWO objects 42.9 arcsec = 194 kpc apart. The gas lies between them in projection: 133 kpc from NW-2, 323 kpc from NW-1. Both are emitted; there is no single \"NW mass peak\".",
   "S2 is never given a coordinate in Chadayammuri+2024. Both candidate identifications are emitted as separate axes (AX_A/AX_B vs AX_C/AX_D); they differ by 0.6 deg in axis PA and <1 kpc in Delta_lead.",
-  "The Medezinski+2016 \"X_c positive = West\" sign convention, previously flagged as INFERRED, is now VERIFIED by measurement against the published merten_v1 kappa map (W clump reproduces to 6 arcsec under West, 350 arcsec off under East).",
+  "The Medezinski+2016 \"X_c positive = West\" sign convention, previously flagged as INFERRED, is now VERIFIED: the reconstructed NW position reproduces two independent published offsets to better than 0.5 arcsec (68.38\" to NW-BCG1 vs published 68\"; 58.04\" to N-BCG vs published 58\"), and the merten_v1 kappa map reproduces the W clump to 6\" under West vs 350\" off under East.",
   "DELIVERY DEFECT FOUND AND FIXED: every URL in chandra_cdc257/cdc257_retrieval_urls.txt returns HTTP 404. The cgi-gen/cda/retrieve5.pl endpoint no longer exists (404 even with no query string). Corrected file with 102 verified URLs written alongside.",
   "The TNG Cluster Mergers catalogue is ~20 MB, not a heavy-compute job - but it contains NO gas field at all, so a gas-lead census cannot be derived from it. It is blocked behind an API-key 403 regardless."
  ],
@@ -76,16 +77,24 @@
    "md5": "b7e49ca5d3ced716e5fd37fae5735288"
   },
   "README.md": {
-   "bytes": 11742,
-   "md5": "8a944cc34f9a96af317d42865e6662d0"
+   "bytes": 12338,
+   "md5": "0a8cd0a8ee8e7ddef79917172c9d9b81"
+  },
+  "SUMMARY.json": {
+   "bytes": 5328,
+   "md5": "ac767d5c7a303af817c681b9b20ffcb1"
   },
   "TNG_CENSUS_ENUMERATION.md": {
    "bytes": 7907,
    "md5": "602a1781b8d99b11da5630101e44cd09"
   },
+  "URL_VERIFICATION.txt": {
+   "bytes": 2589,
+   "md5": "bf5db19f835fa2ae9d8959d6046ea088"
+  },
   "chandra_xray_peaks_2p16Ms.json": {
-   "bytes": 24141,
-   "md5": "33f00a37d2b7b411c019144f07e7ae88"
+   "bytes": 24356,
+   "md5": "40a2da56be9dfdf962a0684160718d85"
   }
  }
 }

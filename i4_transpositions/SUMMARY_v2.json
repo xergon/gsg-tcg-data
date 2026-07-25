@@ -1,0 +1,60 @@
+{
+  "row": "i4",
+  "lane": "state-sufficiency break-hunt / transposition extraction",
+  "period": "2014-07 (DISCOVERY)",
+  "artifact_version": "v2",
+  "supersedes": "transpositions_2014-07.npz (v1) -- v1 REMAINS PUBLISHED AND UNCHANGED",
+  "why_v2": "v1 failed i4's own validate_contract(): it requires state_hash128_lo, state_hash128_hi, player_hash, player_fold, none of which v1 contained. i4's player-disjoint primary scoring and its 128-bit collision audit were both unrunnable on v1. Omission in the extraction brief, not a thread-side change.",
+  "delivered": {
+    "transpositions_2014-07_v2.npz": {
+      "bytes": 1252278870,
+      "sha256": "f3de65f5502952d76c1df133cdd8d47ace21f340a43eb8a3628402c8ba3d004d",
+      "url": "https://github.com/xergon/gsg-tcg-data/releases/download/i4-transpositions-2014-07-v2/transpositions_2014-07_v2.npz",
+      "arrays": 19
+    },
+    "transpositions_2014-07_v2.contract.json": {
+      "url": "https://github.com/xergon/gsg-tcg-data/releases/download/i4-transpositions-2014-07-v2/transpositions_2014-07_v2.contract.json"
+    },
+    "extract3.py": {"note": "exact extractor source for v2"},
+    "merge2.py": {"note": "exact merger source"},
+    "audit2.py": {"note": "exact audit source (bit-identity, collision, folds)"}
+  },
+  "n_games": 1048440,
+  "n_records": 23941814,
+  "new_columns": ["state_hash128_lo", "state_hash128_hi", "player_hash", "player_fold"],
+  "bit_identity_vs_v1": "all 13 v1 data columns AND meta byte-for-byte equal across ALL 23,941,814 records (full corpus, not a slice)",
+  "collision_audit_64bit": {
+    "distinct_128bit_keys": 18744120,
+    "distinct_64bit_keys": 18744120,
+    "collisions": 0,
+    "consequence": "the 64-bit and 128-bit state keys induce the IDENTICAL partition, so Delta4_64 == Delta4_128 exactly; the state-key-aliasing abandonment condition cannot fire on this corpus"
+  },
+  "player_disjoint_split": {
+    "distinct_movers": 30350,
+    "movers_fold0": 15306,
+    "movers_fold1": 15044,
+    "movers_in_both_folds": 0,
+    "records_fold0": 11887504,
+    "records_fold1": 12054310,
+    "records_per_mover_min_median_max": [1, 96, 49867],
+    "records_with_unknown_mover": 0,
+    "games_contributing_to_both_folds": 513601,
+    "warning": "player-disjoint is NOT game-disjoint; 49.0% of games straddle the two folds"
+  },
+  "ply30": {
+    "MAX_PLY_is_EXCLUSIVE": true,
+    "records_now": 23941814,
+    "extra_if_inclusive": 938817,
+    "total_if_inclusive": 24880631,
+    "pct_increase": 3.9212
+  },
+  "run": {"wall_clock_extract_s": 346.32, "workers": 8, "merge_s": 28.92, "audit_s": 19.12},
+  "state_key": "RULE-COMPLETE: X_t = blake2b(FEN1-5 || L_t, digest_size=8, person=b'i4-rep-v1'); 128-bit twin = same input, digest_size=16, same personalization",
+  "not_computed": "no estimator, no delta_1/2/3/4, no permutation test, no verdict - i4 owns the estimator spec and has shipped its own source",
+  "replication_corpus_2016-01": {
+    "already_mirrored_publicly": true,
+    "url": "https://github.com/xergon/gsg-tcg-data/releases/download/i4-lichess-standard-rated/lichess_db_standard_rated_2016-01.pgn.zst",
+    "bytes": 871536010,
+    "blocker": "i4 confirms 4,770,357 games -> ~109.27M records; with the four v2 columns that projects to well over GitHub's 2 GiB asset cap, so it MUST be split into parts or column-reduced. Split-vs-column-reduce is still unanswered."
+  }
+}

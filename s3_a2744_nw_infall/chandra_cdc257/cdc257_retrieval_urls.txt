@@ -1,3 +1,9 @@
+# 🔴🔴 WARNING (added 2026-07-25): EVERY URL IN THIS FILE IS DEAD — HTTP 404.
+# The endpoint https://cxc.cfa.harvard.edu/cgi-gen/cda/retrieve5.pl no longer exists
+# (404 even with no query string). Use cdc257_retrieval_urls_CORRECTED.txt instead,
+# which carries 102 verified-working URLs plus their byte counts.
+# This file is retained only so the defect is visible, not silently overwritten.
+#
 # Public per-ObsID evt2 retrieval (CDA). One COMPLETE URL per line.
 # NOT mirrored: 2.1 Ms across 102 observations. Documented subset policy in README.md.
 https://cxc.cfa.harvard.edu/cgi-gen/cda/retrieve5.pl?filetype=evt2&obsid=2212

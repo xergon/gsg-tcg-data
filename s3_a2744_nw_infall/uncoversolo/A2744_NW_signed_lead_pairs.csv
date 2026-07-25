@@ -1,0 +1,89 @@
+axis_id,axis_definition,gas_object,mass_object,delta_lead_kpc,delta_lead_arcsec,delta_perp_kpc,delta_perp_arcsec,sign,total_sep_kpc
+AX_A,"NW1_SL -> Main-2_SL   [S3 axis ""NW->S2"", S2=Main-2/BCG2 preferred]",XRAY_thiswork_NW_interloper,SL_halo_NorthWest-1,-316.45,-69.892,63.16,13.95,gas_TRAILS_outward,322.69
+AX_B,NW2_SL -> Main-2_SL   [S2=Main-2/BCG2],XRAY_thiswork_NW_interloper,SL_halo_NorthWest-1,-320.57,-70.802,36.94,8.159,gas_TRAILS_outward,322.69
+AX_C,NW1_SL -> Main-1_SL   [alternative S2=Main-1/BCG1],XRAY_thiswork_NW_interloper,SL_halo_NorthWest-1,-315.76,-69.74,66.55,14.698,gas_TRAILS_outward,322.7
+AX_D,NW2_SL -> Main-1_SL   [alternative S2=Main-1/BCG1],XRAY_thiswork_NW_interloper,SL_halo_NorthWest-1,-319.82,-70.636,42.99,9.495,gas_TRAILS_outward,322.7
+AX_E,NW1_SL -> Ebeling10 X-ray centre,XRAY_thiswork_NW_interloper,SL_halo_NorthWest-1,-322.39,-71.204,14.04,3.101,gas_TRAILS_outward,322.7
+AX_F,Medezinski16 NW -> Medezinski16 Core  [WL-only],XRAY_thiswork_NW_interloper,SL_halo_NorthWest-1,-267.91,-59.171,179.87,39.727,gas_TRAILS_outward,322.69
+AX_G,Merten11 NW -> Merten11 Core  [WL-only],XRAY_thiswork_NW_interloper,SL_halo_NorthWest-1,-308.82,-68.207,93.6,20.673,gas_TRAILS_outward,322.69
+AX_H,NW X-ray peak -> main X-ray peak  [gas-only],XRAY_thiswork_NW_interloper,SL_halo_NorthWest-1,-322.38,-71.202,14.21,3.138,gas_TRAILS_outward,322.69
+AX_A,"NW1_SL -> Main-2_SL   [S3 axis ""NW->S2"", S2=Main-2/BCG2 preferred]",XRAY_thiswork_NW_interloper,SL_halo_NorthWest-2,-133.2,-29.419,-0.68,-0.15,gas_TRAILS_outward,133.2
+AX_B,NW2_SL -> Main-2_SL   [S2=Main-2/BCG2],XRAY_thiswork_NW_interloper,SL_halo_NorthWest-2,-132.7,-29.308,-11.62,-2.566,gas_TRAILS_outward,133.21
+AX_C,NW1_SL -> Main-1_SL   [alternative S2=Main-1/BCG1],XRAY_thiswork_NW_interloper,SL_halo_NorthWest-2,-133.21,-29.421,0.75,0.166,gas_TRAILS_outward,133.21
+AX_D,NW2_SL -> Main-1_SL   [alternative S2=Main-1/BCG1],XRAY_thiswork_NW_interloper,SL_halo_NorthWest-2,-132.9,-29.353,-9.11,-2.012,gas_TRAILS_outward,133.21
+AX_E,NW1_SL -> Ebeling10 X-ray centre,XRAY_thiswork_NW_interloper,SL_halo_NorthWest-2,-131.54,-29.052,-21.03,-4.645,gas_TRAILS_outward,133.21
+AX_F,Medezinski16 NW -> Medezinski16 Core  [WL-only],XRAY_thiswork_NW_interloper,SL_halo_NorthWest-2,-123.25,-27.221,50.55,11.165,gas_TRAILS_outward,133.21
+AX_G,Merten11 NW -> Merten11 Core  [WL-only],XRAY_thiswork_NW_interloper,SL_halo_NorthWest-2,-132.64,-29.295,12.27,2.71,gas_TRAILS_outward,133.21
+AX_H,NW X-ray peak -> main X-ray peak  [gas-only],XRAY_thiswork_NW_interloper,SL_halo_NorthWest-2,-131.55,-29.054,-20.96,-4.629,gas_TRAILS_outward,133.21
+AX_A,"NW1_SL -> Main-2_SL   [S3 axis ""NW->S2"", S2=Main-2/BCG2 preferred]",XRAY_thiswork_NW_interloper,WL_Medezinski16_NW,-171.29,-37.832,338.84,74.837,gas_TRAILS_outward,379.67
+AX_B,NW2_SL -> Main-2_SL   [S2=Main-2/BCG2],XRAY_thiswork_NW_interloper,WL_Medezinski16_NW,-198.56,-43.854,323.62,71.476,gas_TRAILS_outward,379.68
+AX_C,NW1_SL -> Main-1_SL   [alternative S2=Main-1/BCG1],XRAY_thiswork_NW_interloper,WL_Medezinski16_NW,-167.66,-37.03,340.66,75.239,gas_TRAILS_outward,379.68
+AX_D,NW2_SL -> Main-1_SL   [alternative S2=Main-1/BCG1],XRAY_thiswork_NW_interloper,WL_Medezinski16_NW,-192.43,-42.501,327.31,72.291,gas_TRAILS_outward,379.69
+AX_E,NW1_SL -> Ebeling10 X-ray centre,XRAY_thiswork_NW_interloper,WL_Medezinski16_NW,-221.08,-48.828,308.67,68.174,gas_TRAILS_outward,379.68
+AX_F,Medezinski16 NW -> Medezinski16 Core  [WL-only],XRAY_thiswork_NW_interloper,WL_Medezinski16_NW,-28.0,-6.184,378.65,83.63,gas_TRAILS_outward,379.68
+AX_G,Merten11 NW -> Merten11 Core  [WL-only],XRAY_thiswork_NW_interloper,WL_Medezinski16_NW,-137.57,-30.384,353.88,78.159,gas_TRAILS_outward,379.68
+AX_H,NW X-ray peak -> main X-ray peak  [gas-only],XRAY_thiswork_NW_interloper,WL_Medezinski16_NW,-220.92,-48.793,308.79,68.2,gas_TRAILS_outward,379.68
+AX_A,"NW1_SL -> Main-2_SL   [S3 axis ""NW->S2"", S2=Main-2/BCG2 preferred]",XRAY_thiswork_NW_interloper,WL_Merten11_NW,-409.62,-90.47,136.22,30.086,gas_TRAILS_outward,431.68
+AX_B,NW2_SL -> Main-2_SL   [S2=Main-2/BCG2],XRAY_thiswork_NW_interloper,WL_Merten11_NW,-419.43,-92.636,102.1,22.55,gas_TRAILS_outward,431.68
+AX_C,NW1_SL -> Main-1_SL   [alternative S2=Main-1/BCG1],XRAY_thiswork_NW_interloper,WL_Merten11_NW,-408.14,-90.143,140.6,31.053,gas_TRAILS_outward,431.68
+AX_D,NW2_SL -> Main-1_SL   [alternative S2=Main-1/BCG1],XRAY_thiswork_NW_interloper,WL_Merten11_NW,-417.43,-92.195,109.99,24.293,gas_TRAILS_outward,431.68
+AX_E,NW1_SL -> Ebeling10 X-ray centre,XRAY_thiswork_NW_interloper,WL_Merten11_NW,-425.63,-94.006,72.0,15.902,gas_TRAILS_outward,431.68
+AX_F,Medezinski16 NW -> Medezinski16 Core  [WL-only],XRAY_thiswork_NW_interloper,WL_Merten11_NW,-325.87,-71.973,283.12,62.531,gas_TRAILS_outward,431.68
+AX_G,Merten11 NW -> Merten11 Core  [WL-only],XRAY_thiswork_NW_interloper,WL_Merten11_NW,-394.45,-87.119,175.37,38.733,gas_TRAILS_outward,431.68
+AX_H,NW X-ray peak -> main X-ray peak  [gas-only],XRAY_thiswork_NW_interloper,WL_Merten11_NW,-425.6,-93.999,72.22,15.951,gas_TRAILS_outward,431.68
+AX_A,"NW1_SL -> Main-2_SL   [S3 axis ""NW->S2"", S2=Main-2/BCG2 preferred]",XRAY_thiswork_NW_interloper,KAPPAMAX_CATS_v4.1_NWBCG1,-296.92,-65.579,43.51,9.61,gas_TRAILS_outward,300.09
+AX_B,NW2_SL -> Main-2_SL   [S2=Main-2/BCG2],XRAY_thiswork_NW_interloper,KAPPAMAX_CATS_v4.1_NWBCG1,-299.49,-66.146,18.96,4.188,gas_TRAILS_outward,300.09
+AX_C,NW1_SL -> Main-1_SL   [alternative S2=Main-1/BCG1],XRAY_thiswork_NW_interloper,KAPPAMAX_CATS_v4.1_NWBCG1,-296.44,-65.473,46.69,10.312,gas_TRAILS_outward,300.09
+AX_D,NW2_SL -> Main-1_SL   [alternative S2=Main-1/BCG1],XRAY_thiswork_NW_interloper,KAPPAMAX_CATS_v4.1_NWBCG1,-299.08,-66.056,24.62,5.438,gas_TRAILS_outward,300.09
+AX_E,NW1_SL -> Ebeling10 X-ray centre,XRAY_thiswork_NW_interloper,KAPPAMAX_CATS_v4.1_NWBCG1,-300.08,-66.276,-2.39,-0.528,gas_TRAILS_outward,300.09
+AX_F,Medezinski16 NW -> Medezinski16 Core  [WL-only],XRAY_thiswork_NW_interloper,KAPPAMAX_CATS_v4.1_NWBCG1,-257.43,-56.857,154.23,34.064,gas_TRAILS_outward,300.1
+AX_G,Merten11 NW -> Merten11 Core  [WL-only],XRAY_thiswork_NW_interloper,KAPPAMAX_CATS_v4.1_NWBCG1,-291.29,-64.335,72.15,15.935,gas_TRAILS_outward,300.09
+AX_H,NW X-ray peak -> main X-ray peak  [gas-only],XRAY_thiswork_NW_interloper,KAPPAMAX_CATS_v4.1_NWBCG1,-300.09,-66.279,-2.23,-0.493,gas_TRAILS_outward,300.1
+AX_A,"NW1_SL -> Main-2_SL   [S3 axis ""NW->S2"", S2=Main-2/BCG2 preferred]",XRAY_thiswork_NW_interloper,KAPPAMAX_WSLAPplus_diego_v4.1_NWBCG1,-319.24,-70.508,55.18,12.187,gas_TRAILS_outward,323.97
+AX_B,NW2_SL -> Main-2_SL   [S2=Main-2/BCG2],XRAY_thiswork_NW_interloper,KAPPAMAX_WSLAPplus_diego_v4.1_NWBCG1,-322.7,-71.272,28.76,6.352,gas_TRAILS_outward,323.98
+AX_C,NW1_SL -> Main-1_SL   [alternative S2=Main-1/BCG1],XRAY_thiswork_NW_interloper,KAPPAMAX_WSLAPplus_diego_v4.1_NWBCG1,-318.63,-70.373,58.6,12.943,gas_TRAILS_outward,323.97
+AX_D,NW2_SL -> Main-1_SL   [alternative S2=Main-1/BCG1],XRAY_thiswork_NW_interloper,KAPPAMAX_WSLAPplus_diego_v4.1_NWBCG1,-322.1,-71.14,34.85,7.697,gas_TRAILS_outward,323.98
+AX_E,NW1_SL -> Ebeling10 X-ray centre,XRAY_thiswork_NW_interloper,KAPPAMAX_WSLAPplus_diego_v4.1_NWBCG1,-323.93,-71.544,5.73,1.266,gas_TRAILS_outward,323.98
+AX_F,Medezinski16 NW -> Medezinski16 Core  [WL-only],XRAY_thiswork_NW_interloper,KAPPAMAX_WSLAPplus_diego_v4.1_NWBCG1,-273.56,-60.419,173.58,38.337,gas_TRAILS_outward,323.98
+AX_G,Merten11 NW -> Merten11 Core  [WL-only],XRAY_thiswork_NW_interloper,KAPPAMAX_WSLAPplus_diego_v4.1_NWBCG1,-312.37,-68.991,85.93,18.979,gas_TRAILS_outward,323.97
+AX_H,NW X-ray peak -> main X-ray peak  [gas-only],XRAY_thiswork_NW_interloper,KAPPAMAX_WSLAPplus_diego_v4.1_NWBCG1,-323.92,-71.542,5.9,1.303,gas_TRAILS_outward,323.97
+AX_A,"NW1_SL -> Main-2_SL   [S3 axis ""NW->S2"", S2=Main-2/BCG2 preferred]",XRAY_thiswork_NW_interloper,KAPPAMAX_SaWLens_merten_v1_NWBCG1,-314.14,-69.382,74.9,16.543,gas_TRAILS_outward,322.95
+AX_B,NW2_SL -> Main-2_SL   [S2=Main-2/BCG2],XRAY_thiswork_NW_interloper,KAPPAMAX_SaWLens_merten_v1_NWBCG1,-319.23,-70.506,48.84,10.787,gas_TRAILS_outward,322.94
+AX_C,NW1_SL -> Main-1_SL   [alternative S2=Main-1/BCG1],XRAY_thiswork_NW_interloper,KAPPAMAX_SaWLens_merten_v1_NWBCG1,-313.32,-69.201,78.27,17.287,gas_TRAILS_outward,322.95
+AX_D,NW2_SL -> Main-1_SL   [alternative S2=Main-1/BCG1],XRAY_thiswork_NW_interloper,KAPPAMAX_SaWLens_merten_v1_NWBCG1,-318.26,-70.292,54.85,12.114,gas_TRAILS_outward,322.95
+AX_E,NW1_SL -> Ebeling10 X-ray centre,XRAY_thiswork_NW_interloper,KAPPAMAX_SaWLens_merten_v1_NWBCG1,-321.9,-71.096,26.0,5.742,gas_TRAILS_outward,322.95
+AX_F,Medezinski16 NW -> Medezinski16 Core  [WL-only],XRAY_thiswork_NW_interloper,KAPPAMAX_SaWLens_merten_v1_NWBCG1,-261.27,-57.705,189.83,41.926,gas_TRAILS_outward,322.95
+AX_G,Merten11 NW -> Merten11 Core  [WL-only],XRAY_thiswork_NW_interloper,KAPPAMAX_SaWLens_merten_v1_NWBCG1,-305.37,-67.445,105.07,23.206,gas_TRAILS_outward,322.94
+AX_H,NW X-ray peak -> main X-ray peak  [gas-only],XRAY_thiswork_NW_interloper,KAPPAMAX_SaWLens_merten_v1_NWBCG1,-321.88,-71.091,26.17,5.78,gas_TRAILS_outward,322.94
+AX_A,"NW1_SL -> Main-2_SL   [S3 axis ""NW->S2"", S2=Main-2/BCG2 preferred]",XRAY_thiswork_NW_interloper,KAPPAMAX_UNCOVER_v2.0_zitrin_NWBCG1,-292.39,-64.578,59.25,13.086,gas_TRAILS_outward,298.33
+AX_B,NW2_SL -> Main-2_SL   [S2=Main-2/BCG2],XRAY_thiswork_NW_interloper,KAPPAMAX_UNCOVER_v2.0_zitrin_NWBCG1,-296.27,-65.435,35.03,7.737,gas_TRAILS_outward,298.33
+AX_C,NW1_SL -> Main-1_SL   [alternative S2=Main-1/BCG1],XRAY_thiswork_NW_interloper,KAPPAMAX_UNCOVER_v2.0_zitrin_NWBCG1,-291.74,-64.434,62.39,13.78,gas_TRAILS_outward,298.34
+AX_D,NW2_SL -> Main-1_SL   [alternative S2=Main-1/BCG1],XRAY_thiswork_NW_interloper,KAPPAMAX_UNCOVER_v2.0_zitrin_NWBCG1,-295.56,-65.278,40.61,8.969,gas_TRAILS_outward,298.34
+AX_E,NW1_SL -> Ebeling10 X-ray centre,XRAY_thiswork_NW_interloper,KAPPAMAX_UNCOVER_v2.0_zitrin_NWBCG1,-298.01,-65.819,13.86,3.061,gas_TRAILS_outward,298.33
+AX_F,Medezinski16 NW -> Medezinski16 Core  [WL-only],XRAY_thiswork_NW_interloper,KAPPAMAX_UNCOVER_v2.0_zitrin_NWBCG1,-247.2,-54.597,167.03,36.891,gas_TRAILS_outward,298.34
+AX_G,Merten11 NW -> Merten11 Core  [WL-only],XRAY_thiswork_NW_interloper,KAPPAMAX_UNCOVER_v2.0_zitrin_NWBCG1,-285.25,-63.001,87.38,19.299,gas_TRAILS_outward,298.33
+AX_H,NW X-ray peak -> main X-ray peak  [gas-only],XRAY_thiswork_NW_interloper,KAPPAMAX_UNCOVER_v2.0_zitrin_NWBCG1,-298.01,-65.819,14.02,3.096,gas_TRAILS_outward,298.34
+AX_A,"NW1_SL -> Main-2_SL   [S3 axis ""NW->S2"", S2=Main-2/BCG2 preferred]",XRAY_thiswork_NW_interloper,KAPPAMAX_UNCOVER_v2.0_zitrin_NWBCG2,-138.14,-30.51,1.03,0.227,gas_TRAILS_outward,138.14
+AX_B,NW2_SL -> Main-2_SL   [S2=Main-2/BCG2],XRAY_thiswork_NW_interloper,KAPPAMAX_UNCOVER_v2.0_zitrin_NWBCG2,-137.76,-30.426,-10.33,-2.282,gas_TRAILS_outward,138.15
+AX_C,NW1_SL -> Main-1_SL   [alternative S2=Main-1/BCG1],XRAY_thiswork_NW_interloper,KAPPAMAX_UNCOVER_v2.0_zitrin_NWBCG2,-138.13,-30.508,2.51,0.554,gas_TRAILS_outward,138.15
+AX_D,NW2_SL -> Main-1_SL   [alternative S2=Main-1/BCG1],XRAY_thiswork_NW_interloper,KAPPAMAX_UNCOVER_v2.0_zitrin_NWBCG2,-137.93,-30.464,-7.72,-1.705,gas_TRAILS_outward,138.15
+AX_E,NW1_SL -> Ebeling10 X-ray centre,XRAY_thiswork_NW_interloper,KAPPAMAX_UNCOVER_v2.0_zitrin_NWBCG2,-136.68,-30.188,-20.1,-4.439,gas_TRAILS_outward,138.15
+AX_F,Medezinski16 NW -> Medezinski16 Core  [WL-only],XRAY_thiswork_NW_interloper,KAPPAMAX_UNCOVER_v2.0_zitrin_NWBCG2,-127.15,-28.083,54.02,11.931,gas_TRAILS_outward,138.15
+AX_G,Merten11 NW -> Merten11 Core  [WL-only],XRAY_thiswork_NW_interloper,KAPPAMAX_UNCOVER_v2.0_zitrin_NWBCG2,-137.39,-30.344,14.44,3.189,gas_TRAILS_outward,138.15
+AX_H,NW X-ray peak -> main X-ray peak  [gas-only],XRAY_thiswork_NW_interloper,KAPPAMAX_UNCOVER_v2.0_zitrin_NWBCG2,-136.69,-30.19,-20.03,-4.424,gas_TRAILS_outward,138.15
+AX_A,"NW1_SL -> Main-2_SL   [S3 axis ""NW->S2"", S2=Main-2/BCG2 preferred]",XRAY_thiswork_NW_interloper,BCG_NW-BCG1,-307.04,-67.814,60.61,13.386,gas_TRAILS_outward,312.97
+AX_B,NW2_SL -> Main-2_SL   [S2=Main-2/BCG2],XRAY_thiswork_NW_interloper,BCG_NW-BCG1,-310.99,-68.686,35.17,7.768,gas_TRAILS_outward,312.97
+AX_C,NW1_SL -> Main-1_SL   [alternative S2=Main-1/BCG1],XRAY_thiswork_NW_interloper,BCG_NW-BCG1,-306.38,-67.668,63.9,14.113,gas_TRAILS_outward,312.97
+AX_D,NW2_SL -> Main-1_SL   [alternative S2=Main-1/BCG1],XRAY_thiswork_NW_interloper,BCG_NW-BCG1,-310.27,-68.527,41.04,9.064,gas_TRAILS_outward,312.97
+AX_E,NW1_SL -> Ebeling10 X-ray centre,XRAY_thiswork_NW_interloper,BCG_NW-BCG1,-312.7,-69.064,12.96,2.862,gas_TRAILS_outward,312.97
+AX_F,Medezinski16 NW -> Medezinski16 Core  [WL-only],XRAY_thiswork_NW_interloper,BCG_NW-BCG1,-260.21,-57.471,173.91,38.41,gas_TRAILS_outward,312.98
+AX_G,Merten11 NW -> Merten11 Core  [WL-only],XRAY_thiswork_NW_interloper,BCG_NW-BCG1,-299.71,-66.195,90.15,19.911,gas_TRAILS_outward,312.97
+AX_H,NW X-ray peak -> main X-ray peak  [gas-only],XRAY_thiswork_NW_interloper,BCG_NW-BCG1,-312.7,-69.064,13.13,2.9,gas_TRAILS_outward,312.98
+AX_A,"NW1_SL -> Main-2_SL   [S3 axis ""NW->S2"", S2=Main-2/BCG2 preferred]",XRAY_thiswork_NW_interloper,BCG_NW-BCG2,-132.73,-29.315,-6.41,-1.416,gas_TRAILS_outward,132.88
+AX_B,NW2_SL -> Main-2_SL   [S2=Main-2/BCG2],XRAY_thiswork_NW_interloper,BCG_NW-BCG2,-131.76,-29.101,-17.29,-3.819,gas_TRAILS_outward,132.89
+AX_C,NW1_SL -> Main-1_SL   [alternative S2=Main-1/BCG1],XRAY_thiswork_NW_interloper,BCG_NW-BCG2,-132.8,-29.331,-4.98,-1.1,gas_TRAILS_outward,132.89
+AX_D,NW2_SL -> Main-1_SL   [alternative S2=Main-1/BCG1],XRAY_thiswork_NW_interloper,BCG_NW-BCG2,-132.06,-29.167,-14.8,-3.269,gas_TRAILS_outward,132.89
+AX_E,NW1_SL -> Ebeling10 X-ray centre,XRAY_thiswork_NW_interloper,BCG_NW-BCG2,-130.19,-28.754,-26.62,-5.879,gas_TRAILS_outward,132.88
+AX_F,Medezinski16 NW -> Medezinski16 Core  [WL-only],XRAY_thiswork_NW_interloper,BCG_NW-BCG2,-125.01,-27.61,45.07,9.954,gas_TRAILS_outward,132.89
+AX_G,Merten11 NW -> Merten11 Core  [WL-only],XRAY_thiswork_NW_interloper,BCG_NW-BCG2,-132.73,-29.315,6.52,1.44,gas_TRAILS_outward,132.89
+AX_H,NW X-ray peak -> main X-ray peak  [gas-only],XRAY_thiswork_NW_interloper,BCG_NW-BCG2,-130.21,-28.759,-26.55,-5.864,gas_TRAILS_outward,132.89

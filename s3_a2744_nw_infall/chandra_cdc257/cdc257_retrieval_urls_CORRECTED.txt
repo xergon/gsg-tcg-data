@@ -1,0 +1,117 @@
+# Chandra Data Collection 257 (DOI 10.25574/cdc.257) — CORRECTED per-ObsID evt2 URLs.
+# Written 2026-07-25 by the S3 uncoversolo pass.
+#
+# 🔴 THE URLS IN ../chandra_cdc257/cdc257_retrieval_urls.txt ARE DEAD. The endpoint
+#    https://cxc.cfa.harvard.edu/cgi-gen/cda/retrieve5.pl returns HTTP 404 for every ObsID, and
+#    404 for the bare script with no parameters at all — the CGI no longer exists.
+#    Verified 2026-07-25 for obsids 2212 / 25277 / 25907 and for both query-parameter orderings.
+#
+# WORKING ROUTE (verified: all 102 downloaded, 281.6 MB total, 2.1621 Ms, 975,070 events at 0.5-2 keV):
+#    https://cxc.cfa.harvard.edu/cdaftp/byobsid/<LAST DIGIT OF OBSID>/<OBSID>/primary/<FILE>
+#    The N-version differs per ObsID (N002/N003/N004) and MUST be read from the directory listing,
+#    NOT guessed from the ObsID. Listing URL: .../primary/  (returns an HTML index, HTTP 200).
+#
+# Columns below: obsid  bytes  COMPLETE URL (one per line, verbatim).
+
+ 2212    7959255  https://cxc.cfa.harvard.edu/cdaftp/byobsid/2/2212/primary/acisf02212N005_evt2.fits.gz
+ 7712     857850  https://cxc.cfa.harvard.edu/cdaftp/byobsid/2/7712/primary/acisf07712N004_evt2.fits.gz
+ 7915    5628670  https://cxc.cfa.harvard.edu/cdaftp/byobsid/5/7915/primary/acisf07915N003_evt2.fits.gz
+ 8477   14422267  https://cxc.cfa.harvard.edu/cdaftp/byobsid/7/8477/primary/acisf08477N003_evt2.fits.gz
+ 8557    8747210  https://cxc.cfa.harvard.edu/cdaftp/byobsid/7/8557/primary/acisf08557N003_evt2.fits.gz
+25277    1655200  https://cxc.cfa.harvard.edu/cdaftp/byobsid/7/25277/primary/acisf25277N002_evt2.fits.gz
+25278    1087016  https://cxc.cfa.harvard.edu/cdaftp/byobsid/8/25278/primary/acisf25278N002_evt2.fits.gz
+25279    2696786  https://cxc.cfa.harvard.edu/cdaftp/byobsid/9/25279/primary/acisf25279N003_evt2.fits.gz
+25907    4134765  https://cxc.cfa.harvard.edu/cdaftp/byobsid/7/25907/primary/acisf25907N003_evt2.fits.gz
+25908    2492139  https://cxc.cfa.harvard.edu/cdaftp/byobsid/8/25908/primary/acisf25908N002_evt2.fits.gz
+25909    1886767  https://cxc.cfa.harvard.edu/cdaftp/byobsid/9/25909/primary/acisf25909N002_evt2.fits.gz
+25910    2077936  https://cxc.cfa.harvard.edu/cdaftp/byobsid/0/25910/primary/acisf25910N003_evt2.fits.gz
+25911    2082839  https://cxc.cfa.harvard.edu/cdaftp/byobsid/1/25911/primary/acisf25911N002_evt2.fits.gz
+25912    1902401  https://cxc.cfa.harvard.edu/cdaftp/byobsid/2/25912/primary/acisf25912N002_evt2.fits.gz
+25913    2181441  https://cxc.cfa.harvard.edu/cdaftp/byobsid/3/25913/primary/acisf25913N002_evt2.fits.gz
+25914    3144451  https://cxc.cfa.harvard.edu/cdaftp/byobsid/4/25914/primary/acisf25914N002_evt2.fits.gz
+25915    2276842  https://cxc.cfa.harvard.edu/cdaftp/byobsid/5/25915/primary/acisf25915N002_evt2.fits.gz
+25916    1972158  https://cxc.cfa.harvard.edu/cdaftp/byobsid/6/25916/primary/acisf25916N002_evt2.fits.gz
+25917    3528084  https://cxc.cfa.harvard.edu/cdaftp/byobsid/7/25917/primary/acisf25917N002_evt2.fits.gz
+25918    2405112  https://cxc.cfa.harvard.edu/cdaftp/byobsid/8/25918/primary/acisf25918N002_evt2.fits.gz
+25919    3080060  https://cxc.cfa.harvard.edu/cdaftp/byobsid/9/25919/primary/acisf25919N002_evt2.fits.gz
+25920    3709468  https://cxc.cfa.harvard.edu/cdaftp/byobsid/0/25920/primary/acisf25920N002_evt2.fits.gz
+25921    1473077  https://cxc.cfa.harvard.edu/cdaftp/byobsid/1/25921/primary/acisf25921N002_evt2.fits.gz
+25922    3802151  https://cxc.cfa.harvard.edu/cdaftp/byobsid/2/25922/primary/acisf25922N003_evt2.fits.gz
+25923    1243344  https://cxc.cfa.harvard.edu/cdaftp/byobsid/3/25923/primary/acisf25923N003_evt2.fits.gz
+25924    2449434  https://cxc.cfa.harvard.edu/cdaftp/byobsid/4/25924/primary/acisf25924N003_evt2.fits.gz
+25925    2589713  https://cxc.cfa.harvard.edu/cdaftp/byobsid/5/25925/primary/acisf25925N002_evt2.fits.gz
+25926    5735859  https://cxc.cfa.harvard.edu/cdaftp/byobsid/6/25926/primary/acisf25926N002_evt2.fits.gz
+25927    1854394  https://cxc.cfa.harvard.edu/cdaftp/byobsid/7/25927/primary/acisf25927N002_evt2.fits.gz
+25928    1899172  https://cxc.cfa.harvard.edu/cdaftp/byobsid/8/25928/primary/acisf25928N003_evt2.fits.gz
+25929    3056962  https://cxc.cfa.harvard.edu/cdaftp/byobsid/9/25929/primary/acisf25929N002_evt2.fits.gz
+25930    2268610  https://cxc.cfa.harvard.edu/cdaftp/byobsid/0/25930/primary/acisf25930N002_evt2.fits.gz
+25931    1744961  https://cxc.cfa.harvard.edu/cdaftp/byobsid/1/25931/primary/acisf25931N002_evt2.fits.gz
+25932    1682574  https://cxc.cfa.harvard.edu/cdaftp/byobsid/2/25932/primary/acisf25932N003_evt2.fits.gz
+25933    2138380  https://cxc.cfa.harvard.edu/cdaftp/byobsid/3/25933/primary/acisf25933N002_evt2.fits.gz
+25934    2383073  https://cxc.cfa.harvard.edu/cdaftp/byobsid/4/25934/primary/acisf25934N002_evt2.fits.gz
+25935    2124050  https://cxc.cfa.harvard.edu/cdaftp/byobsid/5/25935/primary/acisf25935N002_evt2.fits.gz
+25936    1321901  https://cxc.cfa.harvard.edu/cdaftp/byobsid/6/25936/primary/acisf25936N002_evt2.fits.gz
+25937    3343023  https://cxc.cfa.harvard.edu/cdaftp/byobsid/7/25937/primary/acisf25937N002_evt2.fits.gz
+25938    2059323  https://cxc.cfa.harvard.edu/cdaftp/byobsid/8/25938/primary/acisf25938N002_evt2.fits.gz
+25939    1471374  https://cxc.cfa.harvard.edu/cdaftp/byobsid/9/25939/primary/acisf25939N002_evt2.fits.gz
+25940    2432390  https://cxc.cfa.harvard.edu/cdaftp/byobsid/0/25940/primary/acisf25940N002_evt2.fits.gz
+25941    3210157  https://cxc.cfa.harvard.edu/cdaftp/byobsid/1/25941/primary/acisf25941N002_evt2.fits.gz
+25942    1831107  https://cxc.cfa.harvard.edu/cdaftp/byobsid/2/25942/primary/acisf25942N003_evt2.fits.gz
+25943    1488754  https://cxc.cfa.harvard.edu/cdaftp/byobsid/3/25943/primary/acisf25943N002_evt2.fits.gz
+25944    2443492  https://cxc.cfa.harvard.edu/cdaftp/byobsid/4/25944/primary/acisf25944N003_evt2.fits.gz
+25945    1818098  https://cxc.cfa.harvard.edu/cdaftp/byobsid/5/25945/primary/acisf25945N003_evt2.fits.gz
+25946    2819549  https://cxc.cfa.harvard.edu/cdaftp/byobsid/6/25946/primary/acisf25946N002_evt2.fits.gz
+25947    1302404  https://cxc.cfa.harvard.edu/cdaftp/byobsid/7/25947/primary/acisf25947N002_evt2.fits.gz
+25948    2979341  https://cxc.cfa.harvard.edu/cdaftp/byobsid/8/25948/primary/acisf25948N002_evt2.fits.gz
+25949    1843005  https://cxc.cfa.harvard.edu/cdaftp/byobsid/9/25949/primary/acisf25949N002_evt2.fits.gz
+25950    2765799  https://cxc.cfa.harvard.edu/cdaftp/byobsid/0/25950/primary/acisf25950N002_evt2.fits.gz
+25951    3229706  https://cxc.cfa.harvard.edu/cdaftp/byobsid/1/25951/primary/acisf25951N003_evt2.fits.gz
+25952     942668  https://cxc.cfa.harvard.edu/cdaftp/byobsid/2/25952/primary/acisf25952N002_evt2.fits.gz
+25953    2840934  https://cxc.cfa.harvard.edu/cdaftp/byobsid/3/25953/primary/acisf25953N003_evt2.fits.gz
+25954    1577482  https://cxc.cfa.harvard.edu/cdaftp/byobsid/4/25954/primary/acisf25954N002_evt2.fits.gz
+25955    4108309  https://cxc.cfa.harvard.edu/cdaftp/byobsid/5/25955/primary/acisf25955N003_evt2.fits.gz
+25956    1554611  https://cxc.cfa.harvard.edu/cdaftp/byobsid/6/25956/primary/acisf25956N002_evt2.fits.gz
+25957    2459217  https://cxc.cfa.harvard.edu/cdaftp/byobsid/7/25957/primary/acisf25957N002_evt2.fits.gz
+25958    1490528  https://cxc.cfa.harvard.edu/cdaftp/byobsid/8/25958/primary/acisf25958N003_evt2.fits.gz
+25959    1394120  https://cxc.cfa.harvard.edu/cdaftp/byobsid/9/25959/primary/acisf25959N002_evt2.fits.gz
+25960    2309266  https://cxc.cfa.harvard.edu/cdaftp/byobsid/0/25960/primary/acisf25960N002_evt2.fits.gz
+25961    1707870  https://cxc.cfa.harvard.edu/cdaftp/byobsid/1/25961/primary/acisf25961N002_evt2.fits.gz
+25962    1994445  https://cxc.cfa.harvard.edu/cdaftp/byobsid/2/25962/primary/acisf25962N002_evt2.fits.gz
+25963    4187326  https://cxc.cfa.harvard.edu/cdaftp/byobsid/3/25963/primary/acisf25963N002_evt2.fits.gz
+25964    1838928  https://cxc.cfa.harvard.edu/cdaftp/byobsid/4/25964/primary/acisf25964N002_evt2.fits.gz
+25965    3255719  https://cxc.cfa.harvard.edu/cdaftp/byobsid/5/25965/primary/acisf25965N002_evt2.fits.gz
+25966    1714185  https://cxc.cfa.harvard.edu/cdaftp/byobsid/6/25966/primary/acisf25966N002_evt2.fits.gz
+25967    3779656  https://cxc.cfa.harvard.edu/cdaftp/byobsid/7/25967/primary/acisf25967N003_evt2.fits.gz
+25968    3161320  https://cxc.cfa.harvard.edu/cdaftp/byobsid/8/25968/primary/acisf25968N003_evt2.fits.gz
+25969    3145616  https://cxc.cfa.harvard.edu/cdaftp/byobsid/9/25969/primary/acisf25969N002_evt2.fits.gz
+25970    2994491  https://cxc.cfa.harvard.edu/cdaftp/byobsid/0/25970/primary/acisf25970N002_evt2.fits.gz
+25971    1521675  https://cxc.cfa.harvard.edu/cdaftp/byobsid/1/25971/primary/acisf25971N002_evt2.fits.gz
+25972    3874041  https://cxc.cfa.harvard.edu/cdaftp/byobsid/2/25972/primary/acisf25972N003_evt2.fits.gz
+25973    2054799  https://cxc.cfa.harvard.edu/cdaftp/byobsid/3/25973/primary/acisf25973N002_evt2.fits.gz
+26280    1507844  https://cxc.cfa.harvard.edu/cdaftp/byobsid/0/26280/primary/acisf26280N003_evt2.fits.gz
+27347    2490507  https://cxc.cfa.harvard.edu/cdaftp/byobsid/7/27347/primary/acisf27347N002_evt2.fits.gz
+27449    1073246  https://cxc.cfa.harvard.edu/cdaftp/byobsid/9/27449/primary/acisf27449N002_evt2.fits.gz
+27450    1086354  https://cxc.cfa.harvard.edu/cdaftp/byobsid/0/27450/primary/acisf27450N002_evt2.fits.gz
+27556    2809658  https://cxc.cfa.harvard.edu/cdaftp/byobsid/6/27556/primary/acisf27556N002_evt2.fits.gz
+27563    1153959  https://cxc.cfa.harvard.edu/cdaftp/byobsid/3/27563/primary/acisf27563N002_evt2.fits.gz
+27575    2118193  https://cxc.cfa.harvard.edu/cdaftp/byobsid/5/27575/primary/acisf27575N002_evt2.fits.gz
+27678    1266076  https://cxc.cfa.harvard.edu/cdaftp/byobsid/8/27678/primary/acisf27678N002_evt2.fits.gz
+27679    1474652  https://cxc.cfa.harvard.edu/cdaftp/byobsid/9/27679/primary/acisf27679N002_evt2.fits.gz
+27680    1365949  https://cxc.cfa.harvard.edu/cdaftp/byobsid/0/27680/primary/acisf27680N002_evt2.fits.gz
+27681    1009832  https://cxc.cfa.harvard.edu/cdaftp/byobsid/1/27681/primary/acisf27681N002_evt2.fits.gz
+27739    1882433  https://cxc.cfa.harvard.edu/cdaftp/byobsid/9/27739/primary/acisf27739N002_evt2.fits.gz
+27780    1309788  https://cxc.cfa.harvard.edu/cdaftp/byobsid/0/27780/primary/acisf27780N002_evt2.fits.gz
+27856    1554755  https://cxc.cfa.harvard.edu/cdaftp/byobsid/6/27856/primary/acisf27856N002_evt2.fits.gz
+27857    1327355  https://cxc.cfa.harvard.edu/cdaftp/byobsid/7/27857/primary/acisf27857N002_evt2.fits.gz
+27896    1323697  https://cxc.cfa.harvard.edu/cdaftp/byobsid/6/27896/primary/acisf27896N002_evt2.fits.gz
+27974    2577605  https://cxc.cfa.harvard.edu/cdaftp/byobsid/4/27974/primary/acisf27974N002_evt2.fits.gz
+28370    1866006  https://cxc.cfa.harvard.edu/cdaftp/byobsid/0/28370/primary/acisf28370N002_evt2.fits.gz
+28483    1814246  https://cxc.cfa.harvard.edu/cdaftp/byobsid/3/28483/primary/acisf28483N002_evt2.fits.gz
+28872    1400722  https://cxc.cfa.harvard.edu/cdaftp/byobsid/2/28872/primary/acisf28872N002_evt2.fits.gz
+28886     921157  https://cxc.cfa.harvard.edu/cdaftp/byobsid/6/28886/primary/acisf28886N002_evt2.fits.gz
+28887    1801111  https://cxc.cfa.harvard.edu/cdaftp/byobsid/7/28887/primary/acisf28887N002_evt2.fits.gz
+28910    2254289  https://cxc.cfa.harvard.edu/cdaftp/byobsid/0/28910/primary/acisf28910N002_evt2.fits.gz
+28920    1379329  https://cxc.cfa.harvard.edu/cdaftp/byobsid/0/28920/primary/acisf28920N002_evt2.fits.gz
+28934    1723824  https://cxc.cfa.harvard.edu/cdaftp/byobsid/4/28934/primary/acisf28934N002_evt2.fits.gz
+28951    1117043  https://cxc.cfa.harvard.edu/cdaftp/byobsid/1/28951/primary/acisf28951N002_evt2.fits.gz
+28952    1213444  https://cxc.cfa.harvard.edu/cdaftp/byobsid/2/28952/primary/acisf28952N002_evt2.fits.gz

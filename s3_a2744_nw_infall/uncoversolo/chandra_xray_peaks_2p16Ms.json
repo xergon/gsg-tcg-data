@@ -1,0 +1,973 @@
+{
+ "measurement": {
+  "n_files": 102,
+  "exposure_Ms": 2.1620999,
+  "events": 975070,
+  "peaks": {
+   "XRAY_thiswork_main_peak": {
+    "ra": 3.578428,
+    "dec": -30.390314,
+    "component": "S",
+    "err_arcsec": 5.0,
+    "detail": "0.5-2 keV merged counts image, 2\"/pix TAN, NO exposure correction. Position = mean of 15 variants (FWHM 15/20/30/40/60\" x {all,splitA,splitB}); rms scatter 1.1\", max 4.0\". Reproduces Ebeling+2010 adopted centre 00:14:18.9 -30:23:22 to 3\"."
+   },
+   "XRAY_thiswork_NW_interloper": {
+    "ra": 3.534858,
+    "dec": -30.366826,
+    "component": "NW",
+    "err_arcsec": 5.0,
+    "detail": "0.5-2 keV merged counts image, 2\"/pix TAN, NO exposure correction. Position = mean of 15 variants; rms scatter 1.3\", max 4.6\". Cross-checks: 160.8\"=728 kpc NW of the main peak (Owers+2011 quote ~750 kpc NW); 83.9\" from the Medezinski+2016 NW WL peak (published offset 87 +34 -28 arcsec)."
+   }
+  }
+ },
+ "image": {
+  "grid": {
+   "RA0": 3.57875,
+   "DEC0": -30.389444,
+   "pix_arcsec": 2.0,
+   "N": 700
+  },
+  "n_files": 102,
+  "total_exposure_s": 2162099.9,
+  "total_events_0p5_2keV": 975070,
+  "method": [
+   "per-ObsID evt2 from the Chandra Data Archive (CDC 257, DOI 10.25574/cdc.257), all 102 ObsIDs",
+   "energy filter 500 < E < 2000 eV on the evt2 EVENTS table",
+   "sky (x,y) -> (RA,Dec) via the per-column TAN WCS keywords TCRVL/TCRPX/TCDLT in each EVENTS header",
+   "accumulated into ONE common TAN grid, 2 arcsec/pixel, tangent point = Ebeling+2010 centre",
+   "NO exposure map, NO vignetting correction, NO background subtraction, NO point-source removal",
+   "peak = argmax of the Gaussian-smoothed image inside a +/-60 arcsec box around a seed",
+   "quoted position = mean over 15 variants: FWHM in {15,20,30,40,60} arcsec x {all, split-half A, split-half B}"
+  ],
+  "caveats": [
+   "counts image only: chip gaps and vignetting are NOT corrected. Mitigation: 102 pointings at many roll angles, and the split-half test moves both peaks by <5 arcsec.",
+   "the two positions reported are extended-emission maxima; bright point sources elsewhere in the field were NOT removed but do not lie within either search box at the smoothing scales used."
+  ]
+ },
+ "validation": [
+  "main peak lands 3.0 arcsec from the Ebeling+2010 adopted centre 00:14:18.9 -30:23:22 that Medezinski+2016 use as their frame origin",
+  "NW peak lies 160.8 arcsec = 728 kpc NW of the main peak; Owers+2011 state the interloper is \"~750 kpc to the northwest of the X-ray surface brightness peak\"",
+  "NW peak lies 83.9 arcsec from the Medezinski+2016 NW weak-lensing peak; Medezinski+2016 Table 5 publish that offset as 87 (+34,-28) arcsec (90% CL)",
+  "NW peak lies 140 kpc from the western NW mass peak (NW-BCG2 / UNCOVER North-West-2) and 385 kpc from the eastern one (NW-BCG1 / North-West-1); Merten+2011 state \">150 kpc for NW2\" and \"at least 400 kpc\" for NW1"
+ ],
+ "per_obsid": [
+  {
+   "file": "acisf02212N005_evt2.fits.gz",
+   "obsid": 2212,
+   "instrume": "ACIS",
+   "detnam": "ACIS-23567",
+   "exposure_s": 24815.6,
+   "roll": 45.802754355689,
+   "events_0.5-2keV_in_grid": 33668
+  },
+  {
+   "file": "acisf07712N004_evt2.fits.gz",
+   "obsid": 7712,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 8067.9,
+   "roll": 31.888375142807,
+   "events_0.5-2keV_in_grid": 7133
+  },
+  {
+   "file": "acisf07915N003_evt2.fits.gz",
+   "obsid": 7915,
+   "instrume": "ACIS",
+   "detnam": "ACIS-012367",
+   "exposure_s": 18618.8,
+   "roll": 315.4683549638,
+   "events_0.5-2keV_in_grid": 16936
+  },
+  {
+   "file": "acisf08477N003_evt2.fits.gz",
+   "obsid": 8477,
+   "instrume": "ACIS",
+   "detnam": "ACIS-012367",
+   "exposure_s": 45906.7,
+   "roll": 117.15861353146,
+   "events_0.5-2keV_in_grid": 38384
+  },
+  {
+   "file": "acisf08557N003_evt2.fits.gz",
+   "obsid": 8557,
+   "instrume": "ACIS",
+   "detnam": "ACIS-012367",
+   "exposure_s": 27812.9,
+   "roll": 117.15986860695,
+   "events_0.5-2keV_in_grid": 23433
+  },
+  {
+   "file": "acisf25277N002_evt2.fits.gz",
+   "obsid": 25277,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 18680.9,
+   "roll": 335.19976232205,
+   "events_0.5-2keV_in_grid": 7065
+  },
+  {
+   "file": "acisf25278N002_evt2.fits.gz",
+   "obsid": 25278,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 9775.1,
+   "roll": 302.2021317319,
+   "events_0.5-2keV_in_grid": 4284
+  },
+  {
+   "file": "acisf25279N003_evt2.fits.gz",
+   "obsid": 25279,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 24460.7,
+   "roll": 34.209424482155,
+   "events_0.5-2keV_in_grid": 11105
+  },
+  {
+   "file": "acisf25907N003_evt2.fits.gz",
+   "obsid": 25907,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 36796.4,
+   "roll": 314.70779340307,
+   "events_0.5-2keV_in_grid": 16187
+  },
+  {
+   "file": "acisf25908N002_evt2.fits.gz",
+   "obsid": 25908,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 22606.6,
+   "roll": 6.9353318856181,
+   "events_0.5-2keV_in_grid": 10265
+  },
+  {
+   "file": "acisf25909N002_evt2.fits.gz",
+   "obsid": 25909,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 19333.0,
+   "roll": 125.48807158749,
+   "events_0.5-2keV_in_grid": 7548
+  },
+  {
+   "file": "acisf25910N003_evt2.fits.gz",
+   "obsid": 25910,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 19305.4,
+   "roll": 13.207464908749,
+   "events_0.5-2keV_in_grid": 8673
+  },
+  {
+   "file": "acisf25911N002_evt2.fits.gz",
+   "obsid": 25911,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 16854.8,
+   "roll": 148.00094078152,
+   "events_0.5-2keV_in_grid": 7879
+  },
+  {
+   "file": "acisf25912N002_evt2.fits.gz",
+   "obsid": 25912,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 15373.8,
+   "roll": 148.24870678614,
+   "events_0.5-2keV_in_grid": 7359
+  },
+  {
+   "file": "acisf25913N002_evt2.fits.gz",
+   "obsid": 25913,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 19638.8,
+   "roll": 46.112548841944,
+   "events_0.5-2keV_in_grid": 8662
+  },
+  {
+   "file": "acisf25914N002_evt2.fits.gz",
+   "obsid": 25914,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 28202.4,
+   "roll": 348.20894298401,
+   "events_0.5-2keV_in_grid": 12839
+  },
+  {
+   "file": "acisf25915N002_evt2.fits.gz",
+   "obsid": 25915,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 21076.2,
+   "roll": 44.984437631191,
+   "events_0.5-2keV_in_grid": 9289
+  },
+  {
+   "file": "acisf25916N002_evt2.fits.gz",
+   "obsid": 25916,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 22201.6,
+   "roll": 46.601213571983,
+   "events_0.5-2keV_in_grid": 8208
+  },
+  {
+   "file": "acisf25917N002_evt2.fits.gz",
+   "obsid": 25917,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 35618.6,
+   "roll": 112.07867501756,
+   "events_0.5-2keV_in_grid": 13939
+  },
+  {
+   "file": "acisf25918N002_evt2.fits.gz",
+   "obsid": 25918,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 20630.1,
+   "roll": 26.180293562241,
+   "events_0.5-2keV_in_grid": 9671
+  },
+  {
+   "file": "acisf25919N002_evt2.fits.gz",
+   "obsid": 25919,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 25286.7,
+   "roll": 118.20989640137,
+   "events_0.5-2keV_in_grid": 12098
+  },
+  {
+   "file": "acisf25920N002_evt2.fits.gz",
+   "obsid": 25920,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 30505.7,
+   "roll": 118.20662264319,
+   "events_0.5-2keV_in_grid": 14442
+  },
+  {
+   "file": "acisf25921N002_evt2.fits.gz",
+   "obsid": 25921,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 16867.0,
+   "roll": 85.456151355237,
+   "events_0.5-2keV_in_grid": 6151
+  },
+  {
+   "file": "acisf25922N003_evt2.fits.gz",
+   "obsid": 25922,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 31367.7,
+   "roll": 118.20307137064,
+   "events_0.5-2keV_in_grid": 14951
+  },
+  {
+   "file": "acisf25923N003_evt2.fits.gz",
+   "obsid": 25923,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 10937.7,
+   "roll": 40.21414710412,
+   "events_0.5-2keV_in_grid": 4950
+  },
+  {
+   "file": "acisf25924N003_evt2.fits.gz",
+   "obsid": 25924,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 21792.8,
+   "roll": 34.207219876572,
+   "events_0.5-2keV_in_grid": 9814
+  },
+  {
+   "file": "acisf25925N002_evt2.fits.gz",
+   "obsid": 25925,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 23597.0,
+   "roll": 47.489060390941,
+   "events_0.5-2keV_in_grid": 10495
+  },
+  {
+   "file": "acisf25926N002_evt2.fits.gz",
+   "obsid": 25926,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 61174.6,
+   "roll": 99.196705199333,
+   "events_0.5-2keV_in_grid": 23030
+  },
+  {
+   "file": "acisf25927N002_evt2.fits.gz",
+   "obsid": 25927,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 20532.2,
+   "roll": 13.198060525284,
+   "events_0.5-2keV_in_grid": 7750
+  },
+  {
+   "file": "acisf25928N003_evt2.fits.gz",
+   "obsid": 25928,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 15871.8,
+   "roll": 131.1993954802,
+   "events_0.5-2keV_in_grid": 7496
+  },
+  {
+   "file": "acisf25929N002_evt2.fits.gz",
+   "obsid": 25929,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 27719.0,
+   "roll": 54.205739876823,
+   "events_0.5-2keV_in_grid": 12059
+  },
+  {
+   "file": "acisf25930N002_evt2.fits.gz",
+   "obsid": 25930,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 19922.2,
+   "roll": 311.43678391285,
+   "events_0.5-2keV_in_grid": 8915
+  },
+  {
+   "file": "acisf25931N002_evt2.fits.gz",
+   "obsid": 25931,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 14584.0,
+   "roll": 138.49457072949,
+   "events_0.5-2keV_in_grid": 6870
+  },
+  {
+   "file": "acisf25932N003_evt2.fits.gz",
+   "obsid": 25932,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 14081.7,
+   "roll": 131.19938688398,
+   "events_0.5-2keV_in_grid": 6460
+  },
+  {
+   "file": "acisf25933N002_evt2.fits.gz",
+   "obsid": 25933,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 23876.3,
+   "roll": 80.189003978722,
+   "events_0.5-2keV_in_grid": 8907
+  },
+  {
+   "file": "acisf25934N002_evt2.fits.gz",
+   "obsid": 25934,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 19299.3,
+   "roll": 146.63606890783,
+   "events_0.5-2keV_in_grid": 8962
+  },
+  {
+   "file": "acisf25935N002_evt2.fits.gz",
+   "obsid": 25935,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 24075.0,
+   "roll": 70.192915475737,
+   "events_0.5-2keV_in_grid": 8820
+  },
+  {
+   "file": "acisf25936N002_evt2.fits.gz",
+   "obsid": 25936,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 12916.9,
+   "roll": 264.71038770274,
+   "events_0.5-2keV_in_grid": 5387
+  },
+  {
+   "file": "acisf25937N002_evt2.fits.gz",
+   "obsid": 25937,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 30778.5,
+   "roll": 304.80860747042,
+   "events_0.5-2keV_in_grid": 13305
+  },
+  {
+   "file": "acisf25938N002_evt2.fits.gz",
+   "obsid": 25938,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 18656.8,
+   "roll": 305.03050599614,
+   "events_0.5-2keV_in_grid": 8219
+  },
+  {
+   "file": "acisf25939N002_evt2.fits.gz",
+   "obsid": 25939,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 14321.3,
+   "roll": 264.7063112855,
+   "events_0.5-2keV_in_grid": 5837
+  },
+  {
+   "file": "acisf25940N002_evt2.fits.gz",
+   "obsid": 25940,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 27719.0,
+   "roll": 82.192546620122,
+   "events_0.5-2keV_in_grid": 10306
+  },
+  {
+   "file": "acisf25941N002_evt2.fits.gz",
+   "obsid": 25941,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 32644.7,
+   "roll": 114.19577443937,
+   "events_0.5-2keV_in_grid": 12713
+  },
+  {
+   "file": "acisf25942N003_evt2.fits.gz",
+   "obsid": 25942,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 15178.2,
+   "roll": 131.19858059846,
+   "events_0.5-2keV_in_grid": 7209
+  },
+  {
+   "file": "acisf25943N002_evt2.fits.gz",
+   "obsid": 25943,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 16686.1,
+   "roll": 50.919106131026,
+   "events_0.5-2keV_in_grid": 6248
+  },
+  {
+   "file": "acisf25944N003_evt2.fits.gz",
+   "obsid": 25944,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 21618.4,
+   "roll": 34.208652905339,
+   "events_0.5-2keV_in_grid": 9866
+  },
+  {
+   "file": "acisf25945N003_evt2.fits.gz",
+   "obsid": 25945,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 17023.0,
+   "roll": 358.20924521533,
+   "events_0.5-2keV_in_grid": 7676
+  },
+  {
+   "file": "acisf25946N002_evt2.fits.gz",
+   "obsid": 25946,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 29692.4,
+   "roll": 107.19258890217,
+   "events_0.5-2keV_in_grid": 11442
+  },
+  {
+   "file": "acisf25947N002_evt2.fits.gz",
+   "obsid": 25947,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 14895.4,
+   "roll": 6.1660544116179,
+   "events_0.5-2keV_in_grid": 5575
+  },
+  {
+   "file": "acisf25948N002_evt2.fits.gz",
+   "obsid": 25948,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 27865.9,
+   "roll": 358.20598233884,
+   "events_0.5-2keV_in_grid": 12457
+  },
+  {
+   "file": "acisf25949N002_evt2.fits.gz",
+   "obsid": 25949,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 20816.3,
+   "roll": 324.38972954362,
+   "events_0.5-2keV_in_grid": 7791
+  },
+  {
+   "file": "acisf25950N002_evt2.fits.gz",
+   "obsid": 25950,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 29694.7,
+   "roll": 108.08175980231,
+   "events_0.5-2keV_in_grid": 11344
+  },
+  {
+   "file": "acisf25951N003_evt2.fits.gz",
+   "obsid": 25951,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 28707.2,
+   "roll": 317.20906131581,
+   "events_0.5-2keV_in_grid": 12453
+  },
+  {
+   "file": "acisf25952N002_evt2.fits.gz",
+   "obsid": 25952,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 10842.5,
+   "roll": 359.92097573736,
+   "events_0.5-2keV_in_grid": 3959
+  },
+  {
+   "file": "acisf25953N003_evt2.fits.gz",
+   "obsid": 25953,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 24754.3,
+   "roll": 17.691323370402,
+   "events_0.5-2keV_in_grid": 11474
+  },
+  {
+   "file": "acisf25954N002_evt2.fits.gz",
+   "obsid": 25954,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 13397.5,
+   "roll": 138.70006774568,
+   "events_0.5-2keV_in_grid": 6245
+  },
+  {
+   "file": "acisf25955N003_evt2.fits.gz",
+   "obsid": 25955,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 43422.6,
+   "roll": 96.807768062707,
+   "events_0.5-2keV_in_grid": 16729
+  },
+  {
+   "file": "acisf25956N002_evt2.fits.gz",
+   "obsid": 25956,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 13902.4,
+   "roll": 48.567617283035,
+   "events_0.5-2keV_in_grid": 6333
+  },
+  {
+   "file": "acisf25957N002_evt2.fits.gz",
+   "obsid": 25957,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 21797.5,
+   "roll": 34.208237896156,
+   "events_0.5-2keV_in_grid": 9957
+  },
+  {
+   "file": "acisf25958N003_evt2.fits.gz",
+   "obsid": 25958,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 12317.5,
+   "roll": 131.1999309651,
+   "events_0.5-2keV_in_grid": 5828
+  },
+  {
+   "file": "acisf25959N002_evt2.fits.gz",
+   "obsid": 25959,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 15386.2,
+   "roll": 84.66456801827,
+   "events_0.5-2keV_in_grid": 5832
+  },
+  {
+   "file": "acisf25960N002_evt2.fits.gz",
+   "obsid": 25960,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 24757.4,
+   "roll": 104.0179047675,
+   "events_0.5-2keV_in_grid": 9313
+  },
+  {
+   "file": "acisf25961N002_evt2.fits.gz",
+   "obsid": 25961,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 18840.4,
+   "roll": 34.25544196724,
+   "events_0.5-2keV_in_grid": 7278
+  },
+  {
+   "file": "acisf25962N002_evt2.fits.gz",
+   "obsid": 25962,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 21803.7,
+   "roll": 31.030698090709,
+   "events_0.5-2keV_in_grid": 8534
+  },
+  {
+   "file": "acisf25963N002_evt2.fits.gz",
+   "obsid": 25963,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 37585.1,
+   "roll": 305.48417778175,
+   "events_0.5-2keV_in_grid": 16693
+  },
+  {
+   "file": "acisf25964N002_evt2.fits.gz",
+   "obsid": 25964,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 20318.1,
+   "roll": 42.490613864192,
+   "events_0.5-2keV_in_grid": 7797
+  },
+  {
+   "file": "acisf25965N002_evt2.fits.gz",
+   "obsid": 25965,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 35651.8,
+   "roll": 104.48634422885,
+   "events_0.5-2keV_in_grid": 13419
+  },
+  {
+   "file": "acisf25966N002_evt2.fits.gz",
+   "obsid": 25966,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 18840.4,
+   "roll": 90.196160053801,
+   "events_0.5-2keV_in_grid": 7039
+  },
+  {
+   "file": "acisf25967N003_evt2.fits.gz",
+   "obsid": 25967,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 33639.1,
+   "roll": 88.189467851973,
+   "events_0.5-2keV_in_grid": 15315
+  },
+  {
+   "file": "acisf25968N003_evt2.fits.gz",
+   "obsid": 25968,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 27458.2,
+   "roll": 110.20681907336,
+   "events_0.5-2keV_in_grid": 12390
+  },
+  {
+   "file": "acisf25969N002_evt2.fits.gz",
+   "obsid": 25969,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 27719.0,
+   "roll": 342.70186510363,
+   "events_0.5-2keV_in_grid": 12858
+  },
+  {
+   "file": "acisf25970N002_evt2.fits.gz",
+   "obsid": 25970,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 24753.1,
+   "roll": 116.59405984087,
+   "events_0.5-2keV_in_grid": 11675
+  },
+  {
+   "file": "acisf25971N002_evt2.fits.gz",
+   "obsid": 25971,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 12614.1,
+   "roll": 131.1998960388,
+   "events_0.5-2keV_in_grid": 5936
+  },
+  {
+   "file": "acisf25972N003_evt2.fits.gz",
+   "obsid": 25972,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 31745.1,
+   "roll": 134.19603713506,
+   "events_0.5-2keV_in_grid": 14904
+  },
+  {
+   "file": "acisf25973N002_evt2.fits.gz",
+   "obsid": 25973,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 18145.9,
+   "roll": 314.70960196575,
+   "events_0.5-2keV_in_grid": 8039
+  },
+  {
+   "file": "acisf26280N003_evt2.fits.gz",
+   "obsid": 26280,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 11742.3,
+   "roll": 275.20214011045,
+   "events_0.5-2keV_in_grid": 5937
+  },
+  {
+   "file": "acisf27347N002_evt2.fits.gz",
+   "obsid": 27347,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 21954.9,
+   "roll": 34.207691664481,
+   "events_0.5-2keV_in_grid": 9958
+  },
+  {
+   "file": "acisf27449N002_evt2.fits.gz",
+   "obsid": 27449,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 9778.1,
+   "roll": 6.0137186999879,
+   "events_0.5-2keV_in_grid": 4383
+  },
+  {
+   "file": "acisf27450N002_evt2.fits.gz",
+   "obsid": 27450,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 9777.1,
+   "roll": 2.5449484915001,
+   "events_0.5-2keV_in_grid": 4409
+  },
+  {
+   "file": "acisf27556N002_evt2.fits.gz",
+   "obsid": 27556,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 25152.1,
+   "roll": 311.0827594135,
+   "events_0.5-2keV_in_grid": 10963
+  },
+  {
+   "file": "acisf27563N002_evt2.fits.gz",
+   "obsid": 27563,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 11699.5,
+   "roll": 116.19702189888,
+   "events_0.5-2keV_in_grid": 4525
+  },
+  {
+   "file": "acisf27575N002_evt2.fits.gz",
+   "obsid": 27575,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 19650.0,
+   "roll": 302.20522260041,
+   "events_0.5-2keV_in_grid": 8597
+  },
+  {
+   "file": "acisf27678N002_evt2.fits.gz",
+   "obsid": 27678,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 12420.2,
+   "roll": 265.20303608908,
+   "events_0.5-2keV_in_grid": 5032
+  },
+  {
+   "file": "acisf27679N002_evt2.fits.gz",
+   "obsid": 27679,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 11931.2,
+   "roll": 266.70312227701,
+   "events_0.5-2keV_in_grid": 5530
+  },
+  {
+   "file": "acisf27680N002_evt2.fits.gz",
+   "obsid": 27680,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 13210.9,
+   "roll": 265.20573500273,
+   "events_0.5-2keV_in_grid": 5470
+  },
+  {
+   "file": "acisf27681N002_evt2.fits.gz",
+   "obsid": 27681,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 9777.0,
+   "roll": 265.2050190216,
+   "events_0.5-2keV_in_grid": 4074
+  },
+  {
+   "file": "acisf27739N002_evt2.fits.gz",
+   "obsid": 27739,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 21305.3,
+   "roll": 339.20375390076,
+   "events_0.5-2keV_in_grid": 7935
+  },
+  {
+   "file": "acisf27780N002_evt2.fits.gz",
+   "obsid": 27780,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 14893.6,
+   "roll": 67.333224795998,
+   "events_0.5-2keV_in_grid": 5505
+  },
+  {
+   "file": "acisf27856N002_evt2.fits.gz",
+   "obsid": 27856,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 15875.7,
+   "roll": 125.26732083464,
+   "events_0.5-2keV_in_grid": 6242
+  },
+  {
+   "file": "acisf27857N002_evt2.fits.gz",
+   "obsid": 27857,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 12920.3,
+   "roll": 124.54020283693,
+   "events_0.5-2keV_in_grid": 5107
+  },
+  {
+   "file": "acisf27896N002_evt2.fits.gz",
+   "obsid": 27896,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 13728.0,
+   "roll": 117.61534966247,
+   "events_0.5-2keV_in_grid": 5258
+  },
+  {
+   "file": "acisf27974N002_evt2.fits.gz",
+   "obsid": 27974,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 28710.3,
+   "roll": 85.107935326989,
+   "events_0.5-2keV_in_grid": 10761
+  },
+  {
+   "file": "acisf28370N002_evt2.fits.gz",
+   "obsid": 28370,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 20727.4,
+   "roll": 82.192377911063,
+   "events_0.5-2keV_in_grid": 7741
+  },
+  {
+   "file": "acisf28483N002_evt2.fits.gz",
+   "obsid": 28483,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 20218.8,
+   "roll": 70.195551601224,
+   "events_0.5-2keV_in_grid": 7504
+  },
+  {
+   "file": "acisf28872N002_evt2.fits.gz",
+   "obsid": 28872,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 13109.2,
+   "roll": 50.278431214453,
+   "events_0.5-2keV_in_grid": 5625
+  },
+  {
+   "file": "acisf28886N002_evt2.fits.gz",
+   "obsid": 28886,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 9957.7,
+   "roll": 32.250444312924,
+   "events_0.5-2keV_in_grid": 3839
+  },
+  {
+   "file": "acisf28887N002_evt2.fits.gz",
+   "obsid": 28887,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 19843.9,
+   "roll": 33.186706100319,
+   "events_0.5-2keV_in_grid": 7572
+  },
+  {
+   "file": "acisf28910N002_evt2.fits.gz",
+   "obsid": 28910,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 25751.5,
+   "roll": 326.0096964846,
+   "events_0.5-2keV_in_grid": 9500
+  },
+  {
+   "file": "acisf28920N002_evt2.fits.gz",
+   "obsid": 28920,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 15276.1,
+   "roll": 4.6608188941338,
+   "events_0.5-2keV_in_grid": 6034
+  },
+  {
+   "file": "acisf28934N002_evt2.fits.gz",
+   "obsid": 28934,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 19824.8,
+   "roll": 345.20035080765,
+   "events_0.5-2keV_in_grid": 7546
+  },
+  {
+   "file": "acisf28951N002_evt2.fits.gz",
+   "obsid": 28951,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 12901.6,
+   "roll": 347.84885354027,
+   "events_0.5-2keV_in_grid": 4799
+  },
+  {
+   "file": "acisf28952N002_evt2.fits.gz",
+   "obsid": 28952,
+   "instrume": "ACIS",
+   "detnam": "ACIS-0123",
+   "exposure_s": 13789.0,
+   "roll": 339.20043780221,
+   "events_0.5-2keV_in_grid": 5152
+  }
+ ]
+}

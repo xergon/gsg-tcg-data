@@ -1,0 +1,75 @@
+{
+ "kpc_per_arcsec": 4.5277,
+ "axes": {
+  "AX_A": {
+   "desc": "NW1_SL -> Main-2_SL   [S3 axis \"NW->S2\", S2=Main-2/BCG2 preferred]",
+   "origin": "SL_halo_NorthWest-1",
+   "endpoint": "SL_halo_Main-2",
+   "pa_deg": 130.76483260608873,
+   "length_arcsec": 130.5048249753824,
+   "length_kpc": 590.8866960410389
+  },
+  "AX_B": {
+   "desc": "NW2_SL -> Main-2_SL   [S2=Main-2/BCG2]",
+   "origin": "SL_halo_NorthWest-2",
+   "endpoint": "SL_halo_Main-2",
+   "pa_deg": 126.05722750837121,
+   "length_arcsec": 171.55715321030638,
+   "length_kpc": 776.7593225903042
+  },
+  "AX_C": {
+   "desc": "NW1_SL -> Main-1_SL   [alternative S2=Main-1/BCG1]",
+   "origin": "SL_halo_NorthWest-1",
+   "endpoint": "SL_halo_Main-1",
+   "pa_deg": 131.37939310571272,
+   "length_arcsec": 155.34460754821905,
+   "length_kpc": 703.3537795960714
+  },
+  "AX_D": {
+   "desc": "NW2_SL -> Main-1_SL   [alternative S2=Main-1/BCG1]",
+   "origin": "SL_halo_NorthWest-2",
+   "endpoint": "SL_halo_Main-1",
+   "pa_deg": 127.13815159419916,
+   "length_arcsec": 196.20198105749935,
+   "length_kpc": 888.3437096340399
+  },
+  "AX_E": {
+   "desc": "NW1_SL -> Ebeling10 X-ray centre",
+   "origin": "SL_halo_NorthWest-1",
+   "endpoint": "XRAY_Ebeling10_centre",
+   "pa_deg": 121.97142378404922,
+   "length_arcsec": 87.55083901305821,
+   "length_kpc": 396.40393379942367
+  },
+  "AX_F": {
+   "desc": "Medezinski16 NW -> Medezinski16 Core  [WL-only]",
+   "origin": "WL_Medezinski16_NW",
+   "endpoint": "WL_Medezinski16_Core",
+   "pa_deg": 153.35131377273623,
+   "length_arcsec": 175.22200867101628,
+   "length_kpc": 793.3526886597605
+  },
+  "AX_G": {
+   "desc": "Merten11 NW -> Merten11 Core  [WL-only]",
+   "origin": "WL_Merten11_NW",
+   "endpoint": "WL_Merten11_Core",
+   "pa_deg": 136.33580648324858,
+   "length_arcsec": 121.66184771211654,
+   "length_kpc": 550.8483478861501
+  },
+  "AX_H": {
+   "desc": "NW X-ray peak -> main X-ray peak  [gas-only]",
+   "origin": "XRAY_thiswork_NW_interloper",
+   "endpoint": "XRAY_thiswork_main_peak",
+   "pa_deg": 122.01149023958621,
+   "length_arcsec": 159.5633207803741,
+   "length_kpc": 722.4548474973
+  }
+ },
+ "sign_convention": {
+  "dpar": "positive = TOWARD the axis endpoint (INWARD, i.e. NW -> S2). Negative = outward/NW-ward.",
+  "dperp": "positive = rotated toward EAST (increasing position angle) from the inward axis direction.",
+  "pa": "position angle in degrees East of North, measured at the axis origin.",
+  "delta_lead": "dpar(gas) - dpar(mass); >0 gas leads the infall, <0 gas trails."
+ }
+}

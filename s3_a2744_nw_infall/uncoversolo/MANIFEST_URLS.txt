@@ -1,0 +1,92 @@
+# S3 uncoversolo pass — every SOURCE url used, COMPLETE and VERBATIM, one per line.
+# Written 2026-07-25 (UTC).
+
+## == arXiv /e-print/ LaTeX SOURCE (not rendered HTML) — all HTTP 200, all opened and parsed ==
+# Furtak+2022, UNCOVER SL model of A2744, DM-halo and BCG position tables  [3.76e7 bytes]
+https://arxiv.org/e-print/2212.04381
+# Chadayammuri+2024, "Closing Pandora's Box", deep 2.1 Ms Chandra + merger sims  [4962400 bytes]
+https://arxiv.org/e-print/2407.03142
+# Merten+2011, SaWLens A2744, "Structures identified within our lensing reconstruction"  [3810192 bytes]
+https://arxiv.org/e-print/1103.2772
+# Owers+2011, "The Dissection of Abell 2744"  [6422709 bytes]
+https://arxiv.org/e-print/1012.1315
+# Kempner & David 2004, Chandra view of the multiple merger in A2744  [316417 bytes]
+https://arxiv.org/e-print/astro-ph/0310185
+# Jauzac+2016, extraordinary amount of substructure in A2744  [3950425 bytes]  (fetched, not used)
+https://arxiv.org/e-print/1606.04527
+# Medezinski+2016 — already mirrored at ../medezinski2016/A2744_ms_20151001.tex
+https://arxiv.org/e-print/1507.03992
+
+## == UNCOVER v2.0 lens model (Furtak & Zitrin) — Google Drive, NOT MAST /pub/hlsp ==
+# Landing page
+https://jwst-uncover.github.io/DR4.html
+# v2.0 lensing-maps folder (contains the three model sub-folders + catalogues)
+https://drive.google.com/drive/folders/1Y3CGDH9EfqrjCHZSwwx4SLFDvCV8pqlV
+# all-versions top folder
+https://drive.google.com/drive/folders/1Lc7uveJr_ZNIcvAQYVfAeRF8Qr68D_5p
+# Best-model_low-resolution_100mas  (folder)
+https://drive.google.com/drive/folders/1m7pdHe_qZt4PiAJTC4NB10kK8pJlNG77
+# Best-model_low-resolution_40mas   (folder)
+https://drive.google.com/drive/folders/1ymPT0lLCVEcshhy7ViVy7BPjYJ--_1q_
+# Model-range_low-resolution_100mas (folder, 50 MCMC draws)
+https://drive.google.com/drive/folders/1R8TiQa07DsE0CYHH1kRau4hbRQt-14uI
+#
+# --- direct file downloads. Pattern that works from the command line:
+# --- https://drive.usercontent.google.com/download?id=<ID>&export=download&confirm=t
+# kappa, 100 mas  [VERIFIED: 71790883 bytes gz -> 83216644 bytes FITS, 4561x4561 float32]
+https://drive.usercontent.google.com/download?id=1AZ5QOaxn2H2eaB3kcmwWdd8MdjzZQHMb&export=download&confirm=t
+# gamma, 100 mas
+https://drive.usercontent.google.com/download?id=1eHsE8hNa9DRExWxks-tbtNejQruLfMfO&export=download&confirm=t
+# gamma1, 100 mas
+https://drive.usercontent.google.com/download?id=18XMLw7LqmS8tVwmw4FRqt_GFO7DpFey3&export=download&confirm=t
+# gamma2, 100 mas
+https://drive.usercontent.google.com/download?id=1Ku005XNsXXDDlEoDeQve4f6aH-pELCPy&export=download&confirm=t
+# psi, 100 mas
+https://drive.usercontent.google.com/download?id=1yJ7ValE-FRLNXchEccXS0uiMXyEBEOjs&export=download&confirm=t
+# x-arcsec-deflect, 100 mas
+https://drive.usercontent.google.com/download?id=1BHZ63x9nYAd5O0s1K_mO1UndyaekeJjz&export=download&confirm=t
+# y-arcsec-deflect, 100 mas
+https://drive.usercontent.google.com/download?id=1Ht5KmqeXifqI8Q0tSRcVzPvEz6iAaH3w&export=download&confirm=t
+# x-pixels-deflect, 100 mas
+https://drive.usercontent.google.com/download?id=1PClnDEBCmVguBJazMMXciHPEXI4pfWfJ&export=download&confirm=t
+# y-pixels-deflect, 100 mas
+https://drive.usercontent.google.com/download?id=1gGbcBKGlmRF9i3zjZ2c_8_nQ_d33jIOG&export=download&confirm=t
+# magnif (Dds/Ds=1), 100 mas
+https://drive.usercontent.google.com/download?id=1ZLUvlYKsoYFMFd3UGMl3FwoToYL2eZn1&export=download&confirm=t
+# magnification maps by source redshift, 100 mas: z=1,2,4,6,8,10,15,20
+https://drive.usercontent.google.com/download?id=1TFTssEOvMQGAzNdkK-xCwui2DUzpkgfD&export=download&confirm=t
+https://drive.usercontent.google.com/download?id=1JJqZ81YGeObBIhaJo4ZYq5PLg3rgRsVp&export=download&confirm=t
+https://drive.usercontent.google.com/download?id=1xFJqQs1DhVMClNAEJlQ579F9OsN2HpvQ&export=download&confirm=t
+https://drive.usercontent.google.com/download?id=1TQ5_GzYewROjkaATXs2xl9n0rVW4rLUF&export=download&confirm=t
+https://drive.usercontent.google.com/download?id=1lZOPNf6t5Kt8UI1zYsQXBnS8qRih3zO4&export=download&confirm=t
+https://drive.usercontent.google.com/download?id=1pL_wAsmcURg1XH-utcGnjlaJuQcmIlUS&export=download&confirm=t
+https://drive.usercontent.google.com/download?id=10I_zosQ7eas2DTFpso5yXdQavBqwhp4w&export=download&confirm=t
+https://drive.usercontent.google.com/download?id=1wXjNguxgpab9jpowvlKbi5lq9FNk1cXp&export=download&confirm=t
+# cluster-member catalogue (552 galaxies used in the v2.0 model)
+https://drive.usercontent.google.com/download?id=1Kvjydfl_lMlhkH_uhgQFaPIqKrROk5gp&export=download&confirm=t
+# multiple-image catalogue (FITS)
+https://drive.usercontent.google.com/download?id=1uQQQBA1W_zd-y8SILZfBYKpVGAGoTxMG&export=download&confirm=t
+# multiple-image catalogue (DS9 region)
+https://drive.usercontent.google.com/download?id=1LrwYhenVn2NvqG99ZiD11dAGQhPnTk0v&export=download&confirm=t
+# SL-map FOV region file
+https://drive.usercontent.google.com/download?id=1sdNQ7YaU6AcVZ9D6kMjxasbAZeoQcpFl&export=download&confirm=t
+# README v2.0
+https://drive.usercontent.google.com/download?id=10IGwetPxd06EFDTIzYXJIy8yip6iLdYa&export=download&confirm=t
+# critical-curve overview PDF
+https://drive.usercontent.google.com/download?id=1ri9rBe3jH-pYbrHkIaIktsX9f8y57Crb&export=download&confirm=t
+
+## == Chandra CDC 257 — see ../chandra_cdc257/cdc257_retrieval_urls_CORRECTED.txt ==
+# 🔴 the OLD retrieve5.pl URLs are ALL DEAD (HTTP 404). Working pattern, 102/102 verified:
+# https://cxc.cfa.harvard.edu/cdaftp/byobsid/<last digit of obsid>/<obsid>/primary/<file>
+https://cxc.cfa.harvard.edu/cdaftp/byobsid/7/25907/primary/acisf25907N003_evt2.fits.gz
+https://cxc.cfa.harvard.edu/cda/cdc_dois/cdc_257.html
+
+## == IllustrisTNG / TNG-Cluster — documentation open, DATA BEHIND A 403 API-KEY WALL ==
+https://www.tng-project.org/data/
+https://www.tng-project.org/data/cluster/
+https://www.tng-project.org/data/downloads/TNG-Cluster/
+https://www.tng-project.org/data/downloads/TNG300-1/
+https://www.tng-project.org/data/docs/specifications/
+# 🛑 403 {"detail":"Failed session auth (and no API-Key sent)."} — a human must fetch these two
+https://www.tng-project.org/api/TNG-Cluster/files/cluster_mergers.hdf5
+https://www.tng-project.org/api/TNG300-1/files/cluster_mergers.hdf5

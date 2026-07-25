@@ -1,0 +1,49 @@
+{
+  "row": "C-Triangle",
+  "generated_utc": "2026-07-25T12:06:56Z",
+  "falsifier": "N_qualified < 1000 => PIVOT",
+  "verdict": "KILL DOES NOT FIRE - every rung of the ladder is >= 1000; the tightest (L7) is 1120, a 1.12x margin",
+  "footprint_overlap": {
+    "sami_dr3_unique_galaxies_WARNSTAR0_ISBEST": 2996,
+    "sami_dr3_GAMA_region": 2100,
+    "sami_dr3_cluster_region": 896,
+    "GAMA_inside_KiDS1000": 2100,
+    "GAMA_outside_KiDS1000": 0,
+    "fractional_overlap_GAMA": 1.0,
+    "cluster_inside_KiDS1000": 212,
+    "note": "Every single SAMI DR3 GAMA-region galaxy falls inside the KiDS-1000 1006-tile footprint. KiDS-N was built to cover GAMA G09/G12/G15."
+  },
+  "by_gama_field": {
+    "G09": 657,
+    "G12": 702,
+    "G15": 741
+  },
+  "N_qualified_ladder": {
+    "L0_any_SAMI_DR3_GAMA_galaxy_with_a_cube": 2100,
+    "L1_plus_finite_PA_GASKIN": 2099,
+    "L2_plus_PA_GASKIN_ERR_le_10deg": 2075,
+    "L3_plus_PA_GASKIN_ERR_le_5deg": 2033,
+    "L4_plus_finite_PA_STELKIN": 1808,
+    "L5_gas_and_stellar_PA_both": 1808,
+    "L6_plus_finite_LAMBDAR_RE_spin_proxy": 1155,
+    "L7_STRICT_PAgas_e10_and_LAMBDAR_RE_and_no_warn": 1120
+  },
+  "lens_redshifts": {
+    "n": 2100,
+    "min": 0.00375,
+    "median": 0.04007,
+    "max": 0.11211,
+    "note": "z_spec median 0.0401 - these are VERY low-redshift lenses; Sigma_crit is correspondingly large"
+  },
+  "kids_footprint": {
+    "tiles_DR4_0": 1006,
+    "tiles_DR4_1": 196,
+    "dr4_1_is_subset_of_dr4_0": true,
+    "kids_N_tiles": 492,
+    "kids_S_tiles": 514,
+    "tile_model": "1.0 deg x 1.0 deg box on each published tile centre; KiDS-N rows are at dec -3.5,-2.5,-1.5,-0.5,0.5,1.5,2.2,2.5 with 1.0 deg RA pitch",
+    "effective_area_deg2_after_masking": 777.4,
+    "gross_tile_area_deg2": 1006
+  },
+  "caveat": "Footprint membership is tile-level. It does NOT account for the KiDS 9-band MASK column; ~23% of the gross tile area is masked (777.4 of 1006 deg2). Per-aperture usable source counts must be recomputed from the delivered per-aperture source extract using MASK."
+}

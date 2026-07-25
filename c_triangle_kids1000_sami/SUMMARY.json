@@ -1,0 +1,175 @@
+{
+  "row": "C-Triangle",
+  "lane": "c_triangle_kids1000_sami",
+  "fetched_utc": "2026-07-25T12:12:08Z",
+  "headline_numbers": {
+    "N_qualified_footprint_only": 2100,
+    "N_qualified_with_gas_PA_err_le_10deg": 2075,
+    "N_qualified_strict_with_spin_proxy": 1120,
+    "N_qualified_kill_threshold": 1000,
+    "N_qualified_verdict": "PASS - tightest rung 1120, margin 1.12x; LAMBDAR_RE is the binding cut, not the footprint",
+    "c2_published_uncorrected": 0.0006,
+    "c2_published_uncorrected_err": 0.0001,
+    "c_residual_after_KiDS_correction_quadrature": 0.00027386,
+    "c_residual_after_KiDS_correction_per_component": 0.00019365,
+    "c_kill_threshold": 0.0004,
+    "c_verdict": "PASS only if the c-subtraction is applied. Raw shipped e1/e2 have c2=6e-4 > 4e-4 and fail. Margin after correction 1.46x.",
+    "alpha_psf_leakage_bins123": "consistent with zero at 2 sigma",
+    "alpha_psf_leakage_bins45": 0.04,
+    "alpha_psf_leakage_bins45_err": 0.01,
+    "psf_residual_model_c1_rms_exposure_weighted": 0.00074271,
+    "psf_residual_model_c1_frac_above_4e4": 0.8421
+  },
+  "sami_dr3": {
+    "unique_galaxies_published": 3068,
+    "with_ISBEST_and_WARNSTAR0": 2996,
+    "gama_region": 2100,
+    "cluster_region": 896,
+    "filler_only": 72,
+    "calibration_stars": 177,
+    "gaskinPA_rows": 3426,
+    "stelkin_rows": 3426,
+    "cubeobs_rows": 3712,
+    "z_spec_median": 0.04007,
+    "z_spec_min": 0.00375,
+    "z_spec_max": 0.11211,
+    "source": "Data Central VO TAP https://datacentral.org.au/vo/tap/sync (anonymous)",
+    "paper_doi": "10.1093/mnras/stab229"
+  },
+  "kids1000": {
+    "catalogue": "KiDS_DR4.1_ugriZYJHKs_SOM_gold_WL_cat.fits",
+    "url": "https://kids.strw.leidenuniv.nl/DR4/data_files/KiDS_DR4.1_ugriZYJHKs_SOM_gold_WL_cat.fits",
+    "content_length_bytes": 17712469440,
+    "last_modified": "Mon, 07 Dec 2020 21:10:05 GMT",
+    "naxis1": 833,
+    "naxis2": 21262011,
+    "tfields": 193,
+    "magic": "SIMPLE  =",
+    "accept_ranges": true,
+    "rehostable_as_release_asset": false,
+    "reason": "exceeds the 2 GiB GitHub release-asset cap",
+    "n_of_z_reused": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/s9_deflection_closure/kids1000/KiDS1000_SOM_N_of_Z.tar.gz",
+    "n_of_z_sha256": "1962a9117413f7fbb8adb863e4a85e250998257572cfffcbe2834e61c7d1704a",
+    "n_of_z_bytes": 4360,
+    "n_of_z_identical_to_publisher": true,
+    "tiles_dr4_0": 1006,
+    "tiles_dr4_1": 196,
+    "dr4_1_subset_of_dr4_0": true,
+    "eso_archive_doi": "10.18727/archive/37",
+    "programme_ids": [
+      "177.A-3016",
+      "177.A-3017",
+      "177.A-3018",
+      "179.A-2004"
+    ],
+    "shear_paper": "Giblin, Heymans, Asgari et al. 2021, A&A 645, A105, arXiv:2007.01845"
+  },
+  "desi_ls_dr9": {
+    "primary_host_status": "DOWN - www.legacysurvey.org resolves to lb.cosmo-viewer.production.svc.spin.nersc.org; NERSC power upgrade 2026-07-22..2026-08-03",
+    "substitute": "NOIRLab Astro Data Lab SIA collection ls_dr9",
+    "sia_endpoint": "https://datalab.noirlab.edu/sia/ls_dr9",
+    "tap_endpoint": "https://datalab.noirlab.edu/tap/sync",
+    "galaxies_matched_to_brick": 2100,
+    "galaxies_unmatched": 0,
+    "urls_generated": 31500,
+    "products_per_galaxy": 15,
+    "spot_verified": "10 of 10 returned valid FITS",
+    "estimated_full_pull_gb": 30,
+    "missing_product": "image-z is absent from the Data Lab ls_dr9 SIA collection at every position tested; invvar-z/model-z/chi2-z/nexp-z/depth-z/galdepth-z/psfsize-z are all present",
+    "no_residual_product": "DR9 bricks ship no resid-* layer; residual = image - model",
+    "survey_paper_doi": "10.3847/1538-3881/ab089d"
+  },
+  "blocked": {
+    "sami_dr3_map_products": {
+      "status": "BLOCKED - human needed",
+      "route_1": "https://datacentral.org.au/api/services/sov/?source=<CATID> -> HTTP 403 Authentication credentials were not provided",
+      "route_2": "https://datacentral.org.au/services/download/ POST -> HTTP 400 'email: This field is required.' (delivery-by-email, mandatory personal address)",
+      "halpha_product_id": 180,
+      "halpha_product_label": "SAMI DR3 SAMI 1-component line emission map: Halpha",
+      "stellar_velocity_ids": [
+        149,
+        157
+      ],
+      "form_fields": [
+        "source_list",
+        "data_releases",
+        "data_products_ifs",
+        "loose_matching",
+        "email"
+      ],
+      "action_taken": "No account created, no email submitted."
+    }
+  },
+  "files": [
+    {
+      "path": "README_DELIVERY.md",
+      "bytes": 13155,
+      "sha256": "5c1da2019b2a654bb0a6afa815bafdc0ed03620eeaa65fd40d997f164adb80ff"
+    },
+    {
+      "path": "KIDS1000_SHEAR_CALIBRATION.md",
+      "bytes": 11201,
+      "sha256": "a0e40845771e141d02a450f09e71a512913bb3db73526c1669a362f3fbd241d4"
+    },
+    {
+      "path": "N_QUALIFIED.json",
+      "bytes": 2030,
+      "sha256": "a63507e7a7b564ade3543c2c2a993b9df93e8496fc0adbd6fe3ee6248d9a1666"
+    },
+    {
+      "path": "sami_dr3_lens_table.csv",
+      "bytes": 423171,
+      "sha256": "3a29b0104e0d8cc39bcde7d0d28c095c779dac49618e044250b8dc375e880151"
+    },
+    {
+      "path": "sami_gama_targets.csv",
+      "bytes": 274269,
+      "sha256": "b329c4a459ce44f8b127939f6cee4012cbebc728959c837a5b79314cc0dbc146"
+    },
+    {
+      "path": "KiDS1000_tile_footprint.csv",
+      "bytes": 178515,
+      "sha256": "b1dbb05b319325ddc3a3ca7aa6d35d5ff3441ffe8ef60b117d29ba452fba9b7c"
+    },
+    {
+      "path": "DESI_LS_DR9_cutout_urls.txt",
+      "bytes": 4657755,
+      "sha256": "9a5b7787e2319b538d7dffa8edbe86a56048273139700ed40cee865757fba735"
+    },
+    {
+      "path": "desi_dr9_bricks_gama_strip.csv",
+      "bytes": 256623,
+      "sha256": "cc5907d4a7c4bb80ce01f4d59bd5e849676d50e8b68ba599d464a6555c046b20"
+    },
+    {
+      "path": "giblin2021_stats_table_blindC.txt",
+      "bytes": 903,
+      "sha256": "edd443faa116a755889571b26776bd00989fe50cae7e74ab8a73bca3e77ae234"
+    },
+    {
+      "path": "sami/InputCatGAMADR3.csv",
+      "bytes": 668908,
+      "sha256": "43859f7a3113618d57560b32b9fbb0602e946b949bfa44b504649199fd079a24"
+    },
+    {
+      "path": "sami/InputCatClustersDR3.csv",
+      "bytes": 142291,
+      "sha256": "af2d168802cf39c2980e4d65900de4187baf6b9a8025b086126c25faf680eb78"
+    },
+    {
+      "path": "sami/CubeObs.csv",
+      "bytes": 413426,
+      "sha256": "645de035d6d01ba04a28471dc6c00ed748ff5131e8dae5735fefd6bafecd13b7"
+    },
+    {
+      "path": "sami/samiDR3gaskinPA.csv",
+      "bytes": 347961,
+      "sha256": "890402f963fb383a1d676750ba9b0a25055db9830b580fe9d4fa0a42fecf314c"
+    },
+    {
+      "path": "sami/samiDR3Stelkin.csv",
+      "bytes": 506548,
+      "sha256": "04af7913fd774a5a2103f09392af58a4b7271375e76ee276f19e091d861079e4"
+    }
+  ]
+}

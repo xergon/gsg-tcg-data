@@ -1,0 +1,37 @@
+# URL VERIFICATION — S3 uncoversolo delivery
+# commit-pinned raw URLs, fetched back and byte/md5-compared against disk. 2026-07-25T11:13:15Z
+# commit 312c293426969c00574340432e35fa8995f1dc83
+
+# NOTE: this file itself is added in the NEXT commit; the data URLs above/below are pinned at
+# the commit named in the header and were fetched back and byte+md5-matched against disk. 10/10 MATCH.
+
+http=200  bytes=11742  md5=8a944cc34f9a96af317d42865e6662d0  MATCH
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/312c293426969c00574340432e35fa8995f1dc83/s3_a2744_nw_infall/uncoversolo/README.md
+
+http=200  bytes=4912  md5=9d4cb21b9a9ff09c122c87e99d5906b7  MATCH
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/312c293426969c00574340432e35fa8995f1dc83/s3_a2744_nw_infall/uncoversolo/SUMMARY.json
+
+http=200  bytes=22758  md5=e655dd3969d7636f0e1662feacd9def8  MATCH
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/312c293426969c00574340432e35fa8995f1dc83/s3_a2744_nw_infall/uncoversolo/A2744_NW_uncoversolo_geometry.csv
+
+http=200  bytes=14202  md5=05c72b686494667b35232a56fec8a1cb  MATCH
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/312c293426969c00574340432e35fa8995f1dc83/s3_a2744_nw_infall/uncoversolo/A2744_NW_signed_lead_pairs.csv
+
+http=200  bytes=2500  md5=e57f69922f3fd65c886aed3a791615a4  MATCH
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/312c293426969c00574340432e35fa8995f1dc83/s3_a2744_nw_infall/uncoversolo/A2744_NW_axis_definitions.json
+
+http=200  bytes=24141  md5=33f00a37d2b7b411c019144f07e7ae88  MATCH
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/312c293426969c00574340432e35fa8995f1dc83/s3_a2744_nw_infall/uncoversolo/chandra_xray_peaks_2p16Ms.json
+
+http=200  bytes=7907  md5=602a1781b8d99b11da5630101e44cd09  MATCH
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/312c293426969c00574340432e35fa8995f1dc83/s3_a2744_nw_infall/uncoversolo/TNG_CENSUS_ENUMERATION.md
+
+http=200  bytes=6195  md5=b7e49ca5d3ced716e5fd37fae5735288  MATCH
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/312c293426969c00574340432e35fa8995f1dc83/s3_a2744_nw_infall/uncoversolo/MANIFEST_URLS.txt
+
+http=200  bytes=11674  md5=810555a11dac832e24211c93acfed7f7  MATCH
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/312c293426969c00574340432e35fa8995f1dc83/s3_a2744_nw_infall/chandra_cdc257/cdc257_retrieval_urls_CORRECTED.txt
+
+http=200  bytes=8610  md5=eacd7bae11d87d6811eea6432128d328  MATCH
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/312c293426969c00574340432e35fa8995f1dc83/s3_a2744_nw_infall/chandra_cdc257/cdc257_retrieval_urls.txt
+

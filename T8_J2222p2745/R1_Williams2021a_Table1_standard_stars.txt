@@ -1,0 +1,10 @@
+Table 1 
+Standard Star Properties
+
+
+Star	R.A.	Decl.	u	g	r	i	z	Spectral	Template	
+	(J2000.0)	(J2000.0)	(mag)	(mag)	(mag)	(mag)	(mag)	Type	File	
+stand1	22:22:04.30	+27:45:34.0	20.80 +or- 0.06	19.66 +or- 0.01	19.03 +or- 0.01	18.74 +or- 0.01	18.59 +or- 0.03	K0V	G 149-25	
+stand2	22:22:06.23	+27:45:35.6	20.22 +or- 0.04	19.04 +or- 0.01	18.56 +or- 0.01	18.35 +or- 0.01	18.27 +or- 0.02	G5V	G 11-45	
+stand3	22:22:05.36	+27:45:37.9	21.67 +or- 0.12	19.78 +or- 0.01	18.96 +or- 0.01	18.67 +or- 0.01	18.49 +or- 0.03	K3IV	121146	
+Note. The three standard stars used for flux calibration along with their coordinates, SDSS photometry, fitted spectral type, and Indo-U.S. Library of Coude Feed Stellar Spectra template file names.

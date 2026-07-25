@@ -1,0 +1,32 @@
+=================================================
+BULLET CLUSTER lens model V1
+=================================================
+
+Author: Gregor Rihtarsic
+last updated: 17.3.2026
+(slight modification of the cluster member catalogue)
+
+The lens model was constrained with parametric lens modelling code Lenstool (https://projets.lam.fr/projects/lenstool/wiki/LenstoolManual, Kneib et al. 1996; Jullo et al. 2007; Jullo & Kneib 2009) and is described in Rihtarsic et al. (2026).
+
+COSMOLOGY
+Omega_matter=0.3
+Omega_Lambda=0.7
+H_0=70 km/s/Mpc
+
+=================================================
+CONTENT
+
+bullet_multim_full.dat: contains all multiple images with IDs, ICRS coordinates, system redshifts and our quality grades (gold, silver or bronze). 
+
+bullet_gold_v4.dat: multiple image catalogue containing most secure (gold) multiple images  (used as model constraints) in Lenstool format. The catalogue is provided using icrs and fk5 coordinates (fk5.dat).
+
+bullet_bronze_v4.dat contains all multiple image candidates in Lenstool format. The catalogue is provided using icrs and fk5 coordinates (fk5.dat).
+
+cluster_members_specz_cat.dat cluster member catalogue with positions (ICRS), F277W magnitudes, spectroscopic redshifts compiled from the literature and one of the spectroscopic redshift references (the oldest available, apart from Rihtarsic+2026 sources). 
+
+best_fit_model folder
+contains the fiducial lens model parameter file (Rihtarsic26_fiducial_best.par), that was used to find the chi2 minimum (lenstool optimisation mode "inverse 4"), together with input multiple image catalogue (bullet_gold_v4.fk5.dat), cluster member catalogue (cm_v6.fk5.dat) and gas maps, included in the lens model (xray*.fits). We also provide several Lenstool output files (best.par, bestopt.par, chires.dat, dist.dat, bayes.dat, burnin.dat, see Lenstool documentation). best_fit_maps folder contains the best-fit lensing defleciton (dpl1, dpl2 in arcsec), shear (gamma), shear component(gamma1, gamma2), convergence (kappa) and lensing potential (psi) maps in 50 mas resolution. The maps are scaled so that Dls/Ds=1.
+
+sample_model folder
+contains the fiducial  lens model parameter file (Rihtarsic26_fiducial_bayes.par) that was used to sample the parameter space (lenstool optimisation mode "inverse 3"), together with input and output files. 
+sample_maps folder contains 100 bayesian sample maps for each map type (deflection, shear, shear component, convergence and lensing potential) in 200 mas resolution. The maps are scaled so that Dls/Ds=1.

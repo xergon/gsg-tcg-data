@@ -1,0 +1,348 @@
+runmode
+    reference 3 104.65871237187717 -55.95714573753225
+	inverse       4 0.02 2830 #3000
+	image 1 bullet_gold_v4.fk5.dat
+	restart   1 1376179
+	end
+image
+	multfile    1 bullet_gold_v4.fk5.dat
+        verbose 1
+	forme       -2
+        newton 1
+	mult_wcs    1
+	sigposArcsec	0.5
+	end
+grille
+	nombre      128
+	polaire     1
+        nlens_crit  1
+	nlentille   300
+	nlens_opt   12
+	end
+#main cluster halo
+potentiel O1
+	profil            81
+	x_centre          0.0
+	y_centre          0.0
+	ellipticite       0.3
+	angle_pos         50.0
+	core_radius_kpc   100.0
+	cut_radius_kpc    2000.
+	v_disp            1000.0
+	z_lens            0.2960
+	end
+limit O1
+	x_centre        1  -5 14 0.1
+        y_centre        1  -5 19 0.1
+        ellipticite     1   0.0 0.7 0.1
+	angle_pos       1   0 180. 1.0
+	core_radius_kpc 1   5 200.0 1.0
+	v_disp          1   0.0 2000.0 10.0
+	end
+#main cluster halo 2
+potentiel O2
+	profil            81
+	x_centre          24.046
+	y_centre          29.126
+	ellipticite       0.15
+	angle_pos         70.0
+	core_radius_kpc   200.0
+	cut_radius_kpc    2000.
+	v_disp            1000.0
+	z_lens            0.2960
+	end
+limit O2
+        x_centre        1 20 56 0.1
+        y_centre        1 25 57 0.1
+	ellipticite     1 0.0 0.7 0.1
+	angle_pos       1 0. 180. 1.0
+	core_radius_kpc 1 5 300.0 1.0
+	v_disp          1 0.0 2000.0 10.0
+	end
+#subcluster halo
+potentiel O3
+	profil           81
+	x_centre         186.02
+	y_centre         49.625
+	ellipticite      0.176
+	angle_pos        20.0
+	core_radius_kpc  100.0
+	cut_radius_kpc   2000.
+	v_disp           1000.0
+	z_lens           0.2960
+	end
+limit O3
+        x_centre        1  175 195 0.1
+        y_centre        1  40 60 0.1
+	ellipticite     1  0.0 0.6 0.1
+	angle_pos       1  0 180 1.0
+	core_radius_kpc 1  5 200.0 1.0
+	v_disp          1  0.0 2000.0 10.0
+	end
+
+#BCG 1 main cluster
+potentiel O4
+	profil            81
+	x_centre          -0.015
+	y_centre          -0.029
+	ellipticite       0.134
+	angle_pos         77.5
+	core_radius_kpc   0.1
+	cut_radius_kpc    144
+	v_disp            300.0
+	mag		  15.75
+	z_lens            0.2960
+	end
+limit O4
+	v_disp    1 50 500.0 1.0
+	end
+
+#BCG 2 main cluster
+potentiel O5
+	profil          81
+	x_centre        24.042  
+	y_centre        29.128
+	ellipticite     0.064
+	angle_pos       28.610
+	core_radius_kpc 0.1
+	cut_radius_kpc  126
+	v_disp          200.0
+	mag	         15.98
+	z_lens          0.2960
+	end
+limit O5
+	v_disp    1 50 500.0 1.0
+	end
+
+potentiel O6 #BCG 3 subcluster
+	profil            81
+	x_centre     186.076
+	y_centre     49.620
+	ellipticite       0.074
+	angle_pos         172.528
+	core_radius_kpc   0.1
+	cut_radius_kpc    113
+	v_disp            239.718918
+	mag		  16.250
+	z_lens            0.2960
+	end
+
+limit O6
+	v_disp    1 50 500.0 1.0
+	end
+
+
+
+#galaxy 9 (former 10) near sys1
+potentiel O7
+	profil          81
+	x_centre        51.963
+	y_centre        48.920
+	ellipticite     0.101
+	angle_pos       9.900
+	core_radius_kpc 0.1
+	cut_radius_kpc  71
+	v_disp          200.0
+	mag		17.308
+	z_lens          0.2960
+	end
+limit O7
+	v_disp    1 0 400.0 1.0
+	end
+
+
+#DB lens galaxy 9 (former 13)
+potentiel O8
+	profil            81
+	x_centre          5.210 
+	y_centre          23.017
+	ellipticite       0
+	angle_pos         0
+	core_radius_kpc   0.1
+	cut_radius_kpc    70
+	v_disp            91.154
+	mag		  17.369
+	z_lens            0.2960
+	end
+limit O8
+	v_disp    1 0.0 400 1.0
+	end
+
+
+
+
+potentiel 09 #group on top of group 13
+	profil            81
+	x_centre     3.703
+	y_centre     -21.328
+	ellipticite       0.0
+	angle_pos         0
+	core_radius_kpc   0.30
+	cut_radius_kpc    2000.
+	v_disp            239.718918
+	z_lens            0.2960
+	end
+limit 09
+	#x_centre     1	0.2 10.2 0.1
+	#y_centre     1	-27.6 -17.6 0.1
+	ellipticite     1   0.0 0.7 0.1
+	angle_pos       1   0 180. 1.0
+	core_radius_kpc 1   5 200.0 1.0
+	v_disp          1   0.0 2000.0 10.0
+	end
+#gal 5
+potentiel 010 
+	profil          81
+	x_centre        42.764
+	y_centre        50.685
+	ellipticite     0.030 
+	angle_pos       149.435
+	core_radius_kpc 0.1
+	cut_radius_kpc  89
+	v_disp          200.0
+	mag		  16.847
+	z_lens          0.2960
+	end
+
+limit 01O
+	v_disp    1 0. 400. 1.0
+	end
+
+potential 57
+	profile       81
+	x_centre     4.4480
+	y_centre     -84.1050
+	ellipticity     0.0
+	angle_pos       0.0
+	core_radius_kpc     50.0
+	cut_radius_kpc     1087.6
+	v_disp     526.4
+	z_lens     0.2960
+	end
+limit 57
+	v_disp    1 0.0 1058.1 1.0
+	end
+
+potential 51
+	profile       81
+	x_centre     67.2102
+	y_centre     92.8672
+	ellipticity     0.0
+	angle_pos       0.0
+	core_radius_kpc     50.0
+	cut_radius_kpc     1285.9
+	v_disp     620.8
+	z_lens     0.2960
+	end
+limit 51
+	v_disp    1 0.0 1291.5 1.0
+	end
+
+potential 52
+	profile       81
+	x_centre     -82.2841
+	y_centre     -170.9464
+	ellipticity     0.0
+	angle_pos       0.0
+	core_radius_kpc     50.0
+	cut_radius_kpc     776.6
+	v_disp     378.4
+	z_lens     0.2960
+	end
+potential 53
+	profile       81
+	x_centre     -168.8713
+	y_centre     73.3498
+	ellipticity     0.0
+	angle_pos       0.0
+	core_radius_kpc     50.0
+	cut_radius_kpc     1163.8
+	v_disp     562.7
+	z_lens     0.2960
+	end
+potential 55
+	profile       81
+	x_centre     158.4693
+	y_centre     -120.2889
+	ellipticity     0.0
+	angle_pos       0.0
+	core_radius_kpc     50.0
+	cut_radius_kpc     895.8
+	v_disp     435.1
+	z_lens     0.2960
+	end
+
+potential 59
+	profile       81
+	x_centre     328.9675
+	y_centre     177.0770
+	ellipticity     0.0
+	angle_pos       0.0
+	core_radius_kpc     50.0
+	cut_radius_kpc     1048.2
+	v_disp     507.6
+	z_lens     0.2960
+	end
+potential 510
+	profile       81
+	x_centre     -23.1900
+	y_centre     66.7709
+	ellipticity     0.0
+	angle_pos       0.0
+	core_radius_kpc     50.0
+	cut_radius_kpc     790.6
+	v_disp     385.0
+	z_lens     0.2960
+	end
+
+potential  040 #gas
+	profile 17
+    	kappamap 3 xray_kappa_dsdls1.fits
+    	gamma1map 3 xray_gamma1_dsdls1.fits
+    	gamma2map 3 xray_gamma2_dsdls1.fits
+    	dplxmap 3 xray_alpha1_dsdls1.fits
+    	dplymap 3 xray_alpha2_dsdls1.fits
+   	potenmap 3 xray_pot_dsdls1.fits
+	z_lens 0.2960
+	end
+
+potfile
+	filein  3 cm_v6.fk5.dat
+	zlens   0.296
+	type    81
+	corekpc 0.1
+	mag0   15.77
+	sigma   1 10.0 350 1.0
+	cutkpc  1 1.0 200 1.0
+	slope   0 4.0 0.0
+	vdslope 0 4.0 0.0
+	end
+cline
+	nplan    1 3.000 
+	dmax     250.000
+	algorithm   MARCHINGSQUARES
+	limitHigh   10.0
+	limitLow    1.000
+	end
+grande
+	iso         0 0 1.000 0.000 0.000
+	name        best
+	profil      0 0
+	contour     0 0
+	large_dist  2.000
+	end
+cosmologie
+	H0         70.000
+	omegaM     0.300
+	omegaX     0.700
+	omegaK     0.
+	wX         -1.000
+	wa         0.000
+	end
+champ
+	xmin     -250.000
+	xmax     300
+	ymin     -250.000
+	ymax     250.000
+	end
+fini

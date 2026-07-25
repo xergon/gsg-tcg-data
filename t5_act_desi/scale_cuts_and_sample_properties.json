@@ -1,0 +1,71 @@
+{
+  "_provenance": "Transcribed verbatim from the arXiv LaTeX sources (/e-print/), not from HTML.",
+  "BGS": {
+    "source_paper": "arXiv:2503.24385 (Sailer et al. 2025), Table 1 'tab:sample_properties'",
+    "note": "ell_min/ell_max refer to bandpower BIN EDGES, not centers.",
+    "bins": {
+      "BGSz1": {"z_eff": 0.211, "sbar_mu": 0.81, "SN2D_pois_x1e7": 4.63, "ell_min_auto_gg": 79, "ell_min_Planck_kg": 20, "ell_min_ACT_kg": 44, "ell_max": 243},
+      "BGSz2": {"z_eff": 0.352, "sbar_mu": 0.80, "SN2D_pois_x1e7": 9.18, "ell_min_auto_gg": 79, "ell_min_Planck_kg": 20, "ell_min_ACT_kg": 44, "ell_max": 401}
+    },
+    "priors": {
+      "b1L": "U(-1,2)", "b2L": "U(-5,5)", "bsL": "N(0,1)", "alpha_a": "N(0,50)",
+      "alpha_x": "N(alpha_a/(2*b1E), 2)", "SN2D": "N_r(SN2D_pois, 0.3)", "s_mu": "N(sbar_mu, 0.1)",
+      "_note": "b1E = 1 + b1L; N_r(mu, sigma/mu) == N(mu, sigma). Same priors for both BGS bins."
+    },
+    "kmax_motivation": "ell_max set so that approx k_max = 0.6 h/Mpc at the effective redshift of each photo-z bin."
+  },
+  "LRG": {
+    "source_paper": "arXiv:2407.04607 (Sailer et al. 2024), Tables 'tab:scalecuts' and LRG sample properties",
+    "sample_properties": {
+      "LRGz1": {"z_eff": 0.470, "b1E_bestfit_PR4pDR6": 1.8, "zbar": 0.470, "dz": 0.063, "s_mu": 0.972, "nbar_theta_deg2": 81.9, "SN2D_x1e6": 4.07},
+      "LRGz2": {"z_eff": 0.625, "b1E_bestfit_PR4pDR6": 2.0, "zbar": 0.628, "dz": 0.074, "s_mu": 1.044, "nbar_theta_deg2": 148.1, "SN2D_x1e6": 2.25},
+      "LRGz3": {"z_eff": 0.785, "b1E_bestfit_PR4pDR6": 2.2, "zbar": 0.791, "dz": 0.078, "s_mu": 0.974, "nbar_theta_deg2": 162.4, "SN2D_x1e6": 2.05},
+      "LRGz4": {"z_eff": 0.914, "b1E_bestfit_PR4pDR6": 2.4, "zbar": 0.924, "dz": 0.096, "s_mu": 0.988, "nbar_theta_deg2": 148.3, "SN2D_x1e6": 2.25}
+    },
+    "scale_cuts": {
+      "HEFT_fiducial": {
+        "Planck_kappa_g": {"ell_min": [20,20,20,20], "ell_max": [600,600,600,600]},
+        "ACT_kappa_g":    {"ell_min": [44,44,44,44], "ell_max": [600,600,600,600]},
+        "gg":             {"ell_min": [79,79,79,79], "ell_max": [600,600,600,600]}
+      },
+      "linear_theory": {
+        "_note": "lowest redshift bin z1 is DROPPED for linear theory",
+        "Planck_kappa_g": {"ell_min": [null,20,20,20], "ell_max": [null,178,243,243]},
+        "ACT_kappa_g":    {"ell_min": [null,44,44,44], "ell_max": [null,178,243,243]},
+        "gg":             {"ell_min": [null,79,79,79], "ell_max": [null,178,243,243]}
+      },
+      "model_independent": {
+        "Planck_kappa_g": {"ell_min": [20,20,20,20], "ell_max": [178,178,243,243]},
+        "ACT_kappa_g":    {"ell_min": [44,44,44,44], "ell_max": [178,178,243,243]},
+        "gg":             {"ell_min": [79,79,79,79], "ell_max": [178,178,243,243]}
+      },
+      "order": ["z1","z2","z3","z4"]
+    },
+    "ell_min_rationale": {
+      "kappa_g_Planck": "ell_min = 20: beyond-Limber corrections < 1 per cent",
+      "gg": "ell_min = 79",
+      "kappa_g_ACT": "ell_min = 44: DR6 mean-field contamination greatly exceeds signal for ell < 30"
+    },
+    "ell_max_rationale": "HEFT accurate to sub-percent for k <= 0.6 h/Mpc; ell_max ~= chi(z_min) * 0.6 h/Mpc gives 600 for bin 1, adopted z-independently. Linear-theory cuts set by ell_max ~= chi(z_eff)*0.1 h/Mpc -> k_max ~= 0.11, 0.13, 0.11 h/Mpc for z2,z3,z4."
+  },
+  "HEFT_templates": {
+    "model": "Hybrid Effective Field Theory (HEFT)",
+    "emulator_simulations": "Aemulus nu",
+    "public_code_url": "https://github.com/AemulusProject/aemulus_nu_public",
+    "likelihood_code": "MaPar",
+    "likelihood_code_url": "https://github.com/NoahSailer/MaPar",
+    "note": "The HEFT emulator itself is NOT bundled inside the Zenodo bandpower archive; it is released separately via the two GitHub repositories above."
+  },
+  "window_functions": {
+    "estimator": "NaMaster get_bandpower_windows",
+    "shape_in_archive": "wl_<X>_<Y>: 12 bandpowers x 6144 multipoles (ell = 0..6143)",
+    "truncation_used_in_paper": "theory convolution sum truncated at ell_max = 1000; windows < 1e-6 for ell > 1000",
+    "namaster_url": "https://github.com/LSSTDESC/NaMaster"
+  },
+  "covariance": {
+    "estimator": "NaMaster gaussian_covariance",
+    "cross_bin_blocks_present": true,
+    "cross_probe_blocks_present": true,
+    "PR4_x_DR6_blocks_present": true
+  }
+}

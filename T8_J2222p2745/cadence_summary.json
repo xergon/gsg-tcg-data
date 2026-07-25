@@ -1,0 +1,16 @@
+{
+ "row": "T8 / SDSS J2222+2745",
+ "n_photometric_rows": 115,
+ "n_unique_nights": 48,
+ "MJD_first": 55122.2,
+ "MJD_last": 57260.148,
+ "span_days": 2137.9,
+ "span_years": 5.85,
+ "median_night_gap_d_all": 16,
+ "monitoring_only_first_MJD": 55829,
+ "monitoring_span_days": 1431,
+ "monitoring_span_years": 3.92,
+ "median_night_gap_d_monitoring": 15.5,
+ "mean_night_gap_d_monitoring": 31.1,
+ "max_seasonal_gap_d": 354
+}

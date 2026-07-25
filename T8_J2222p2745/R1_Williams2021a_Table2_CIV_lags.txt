@@ -1,0 +1,18 @@
+Table 2 
+Rest-frame Emission Line Lags
+
+
+Light Curve	tau _cen (days)	tau _peak (days)	
+C IV Gauss-Hermite	${36.5}_{-3.9}^{+2.9}$	${28.1}_{-5.4}^{+8.0}$	
+Narrowband from spec.	${85.9}_{-4.2}^{+4.2}$	${85.5}_{-3.3}^{+4.6}$	
+Narrowband from phot.	${91}_{-12}^{+16}$	${91}_{-13}^{+12}$	
+Narrowband combined	${86.2}_{-5.0}^{+4.5}$	${88.6}_{-5.8}^{+4.9}$	
+5650-5780 Aring			
+(-12,420 to -5800 km s^-1)	${25}_{-15}^{+11}$	${9.9}_{-1.8}^{+6.6}$	
+5780-5848 Aring			
+(-5800 to -2340 km s^-1)	${44.4}_{-2.4}^{+3.1}$	${43.8}_{-13.2}^{+4.2}$	
+5904-6000 Aring			
+(510-5400 km s^-1)	${53.9}_{-2.9}^{+3.7}$	${44.5}_{-4.6}^{+2.0}$	
+6000-6130 Aring			
+(5400-12,020 km s^-1)	${7.5}_{-3.5}^{+4.2}$	${3.7}_{-1.2}^{+5.5}$	
+Note. Rest-frame emission line lags measured using cross-correlation analysis.

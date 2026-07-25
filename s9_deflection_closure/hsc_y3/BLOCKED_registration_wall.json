@@ -1,0 +1,12 @@
+{
+ "survey": "HSC S19A Shape Catalog (PDR3) / HSC-Y3",
+ "status": "BLOCKED_REGISTRATION_WALL",
+ "http_status": 401,
+ "www_authenticate": "Basic realm=\"hsc-ssp\"",
+ "public_doc_url": "https://hsc-release.mtk.nao.ac.jp/doc/index.php/s19a-shape-catalog-pdr3/",
+ "walled_prefix": "https://hsc-release.mtk.nao.ac.jp/archive/filetree/",
+ "evidence": "Both the directory and a concrete file under /archive/filetree/ return 401 with www-authenticate: Basic realm=\"hsc-ssp\". Every data link on the public doc page resolves under that prefix.",
+ "action_taken": "NONE. No account created, no credentials entered, no access control bypassed.",
+ "stefan_facing_item": true,
+ "what_a_human_must_do": "Self-register a free hsc-ssp account and accept the HSC SSP data-use terms, then the same URLs work with HTTP Basic auth."
+}

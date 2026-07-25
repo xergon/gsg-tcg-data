@@ -1,0 +1,181 @@
+{
+  "lane": "S9 universal-light-deflection closure  M_i(R) = dSigma_CMB / dSigma_optical over identical DESI lenses",
+  "staged_by": "Cat data-sourcing arm",
+  "staged_utc": "2026-07-25T09:05:34Z",
+  "note_on_verification": "Every downloaded file was checked for byte count AND magic bytes. The PIC DESI mirror was OBSERVED to return HTTP 200 with a 21-byte 'Internal Server Error' body for both BGS_BRIGHT_NGC_nz.txt and BGS_BRIGHT_NGC_clustering.dat.fits on first attempt; the fetch loop retries until the published sha256 matches. Do not trust a 200 from this mirror without checking the sha256sum file.",
+  "targets": {
+    "A_zenodo_17636841": {
+      "status": "COMPLETE",
+      "role": "PRIMARY",
+      "contents": "334 entries. Includes cl_ggkg_PR4_{BGS,LRG_z1..z3}_FKP_v1.5.json (Planck PR4) and cl_ggkg_DR6_LRG_z1..z3 (ACT DR6) galaxy x CMB-lensing cross-spectra, plus RSD/BAO covariances and MCMC chains.",
+      "gzip_magic_verified": true,
+      "doi": "10.5281/zenodo.17636841",
+      "title": "Data: A joint analysis of 3D clustering and galaxy x CMB-lensing cross-correlations with DESI DR1 galaxies",
+      "record_url": "https://zenodo.org/records/17636841",
+      "source_url": "https://zenodo.org/api/records/17636841/files/RSD_kxg_Zenodo_chains_data.tar.gz/content",
+      "publisher_md5": "d47491ba713051e7d830d70c06b5c9ae",
+      "publisher_bytes": 1918687654,
+      "local": {
+        "bytes": 1918687654,
+        "md5": "d47491ba713051e7d830d70c06b5c9ae",
+        "sha256": "6777dc73c2d6dc7de0aa606c91049d1a3c231eeeb2e405e113e1b29fef2c3c2a",
+        "magic_hex": "1f8b08000000000000"
+      },
+      "mirror_url": "https://github.com/xergon/gsg-tcg-data/releases/download/s9-deflection-v1/RSD_kxg_Zenodo_chains_data.tar.gz"
+    },
+    "B_desi_dr1_lss": {
+      "status": "COMPLETE_MANIFEST_PARTIAL_BYTES",
+      "role": "PRIMARY (lens sample)",
+      "requested_path": "survey/catalogs/dr1/LSS/iron/LSScats/v1/",
+      "SPEC_CORRECTION": "There is NO v1/ directory in DESI DR1. LSScats/ contains exactly v1.2, v1.5 and v1.5pip. v1.5 is staged here (the DR1 fiducial LSS catalogue version).",
+      "PRIMARY_HOST_UNREACHABLE": "data.desi.lbl.gov (and portal.nersc.gov) are NOT routable from this machine: DNS resolves to 128.55.206.106-113 but TCP 80 and 443 both return 'Network is unreachable', inside and outside the sandbox, on every resolved IP. Used the official European mirror at PIC instead.",
+      "mirror_base": "https://webdav-hdfs.pic.es/data/public/DESI/DR1/survey/catalogs/dr1/LSS/iron/LSScats/v1.5/",
+      "mirror_note": "WebDAV: GET on a directory returns HTTP 200 with an EMPTY body. Use PROPFIND with 'Depth: 1' to list.",
+      "tracers": [
+        "BGS_BRIGHT",
+        "LRG"
+      ],
+      "manifest_file": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/s9_deflection_closure/desi_dr1_lss_v1.5/MANIFEST_BGS_BRIGHT_LRG_v1.5.json",
+      "manifest_entries": 192,
+      "manifest_total_bytes": 820507849920,
+      "manifest_all_have_publisher_sha256": true,
+      "all_manifest_urls_http_200": true,
+      "official_checksums": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/s9_deflection_closure/desi_dr1_lss_v1.5/dr1_survey_catalogs_dr1_LSS_iron_LSScats_v1.5.sha256sum",
+      "downloaded_and_sha256_verified_against_publisher": {
+        "BGS_BRIGHT_NGC_clustering.dat.fits": {
+          "bytes": 340464960,
+          "md5": "945156caa9a1ae712d59ef5cfcf3b760",
+          "sha256": "04b86400761459a30592d52e86cb56cdd9457c1a6a3b8a310e31f517e9dfc5b1",
+          "magic_hex": "53494d504c4520203d",
+          "release_url": "https://github.com/xergon/gsg-tcg-data/releases/download/s9-deflection-v1/BGS_BRIGHT_NGC_clustering.dat.fits"
+        },
+        "BGS_BRIGHT_SGC_clustering.dat.fits": {
+          "bytes": 122624640,
+          "md5": "99458c1fe78ef0004adafc92b5c5ed85",
+          "sha256": "1a411153ebb6f492f45d55ac7347fc702665994c8fd94ffe71f29a160c3fe053",
+          "magic_hex": "53494d504c4520203d",
+          "release_url": "https://github.com/xergon/gsg-tcg-data/releases/download/s9-deflection-v1/BGS_BRIGHT_SGC_clustering.dat.fits"
+        },
+        "LRG_NGC_clustering.dat.fits": {
+          "bytes": 143196480,
+          "md5": "3d114b6d049ad1f0fdf3928594e0b13f",
+          "sha256": "84548c4ea5208232f1c2f04416ddf272c72fa31313e3bbb60e67d134f186a027",
+          "magic_hex": "53494d504c4520203d",
+          "release_url": "https://github.com/xergon/gsg-tcg-data/releases/download/s9-deflection-v1/LRG_NGC_clustering.dat.fits"
+        },
+        "LRG_SGC_clustering.dat.fits": {
+          "bytes": 64272960,
+          "md5": "84a8ccac60b1ea8235eb00678d38dcfd",
+          "sha256": "ae478557d9ef70257cc689197052515f5ebbc0b23359c81159a8ad3289332e69",
+          "magic_hex": "53494d504c4520203d",
+          "release_url": "https://github.com/xergon/gsg-tcg-data/releases/download/s9-deflection-v1/LRG_SGC_clustering.dat.fits"
+        }
+      },
+      "nz_files": [
+        "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/s9_deflection_closure/desi_dr1_lss_v1.5/BGS_BRIGHT_NGC_nz.txt",
+        "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/s9_deflection_closure/desi_dr1_lss_v1.5/BGS_BRIGHT_SGC_nz.txt",
+        "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/s9_deflection_closure/desi_dr1_lss_v1.5/LRG_NGC_nz.txt",
+        "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/s9_deflection_closure/desi_dr1_lss_v1.5/LRG_SGC_nz.txt"
+      ],
+      "DEFERRED": "The 18-realisation randoms were NOT mirrored. Clustering randoms alone are 65.0 GiB and the full BGS_BRIGHT+LRG set is 764.2 GiB; the measured link here is ~0.5 MB/s aggregate. Every random file's direct URL, exact byte count and official sha256 are in the manifest and all were verified HTTP 200, so any subset can be pulled directly without re-discovery."
+    },
+    "F_zenodo_15726063": {
+      "status": "COMPLETE",
+      "role": "VALIDATION ONLY - figure-level data from the DESI E_G paper. NOT primary data. Must never be used as an input catalogue; use it only to check a reproduction against published curves.",
+      "doi": "10.5281/zenodo.15726063",
+      "title": "Testing gravitational physics by combining spectroscopic and weak lensing datasets using the E_G estimator",
+      "record_url": "https://zenodo.org/records/15726063",
+      "source_url": "https://zenodo.org/api/records/15726063/files/desieg_data_in_figures.tgz/content",
+      "publisher_md5": "586a308e3f419dc410b612ef710b525e",
+      "md5_verified": true,
+      "local": {
+        "bytes": 9319,
+        "md5": "586a308e3f419dc410b612ef710b525e",
+        "sha256": "0dd8670bc11bdfaf57ffbe653aaa88932212cab1a6914fa342d23bd403eef51c",
+        "magic_hex": "1f8b0800202b5a6800"
+      },
+      "contents": [
+        "Fig3.dat",
+        "Fig4.dat",
+        "Fig5.dat",
+        "Fig6.dat",
+        "Fig7.dat"
+      ],
+      "mirror_url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/s9_deflection_closure/validation_only/desieg_data_in_figures.tgz"
+    },
+    "C_des_y3": {
+      "status": "PUBLIC_VERIFIED_NOT_MIRRORED",
+      "role": "source catalogue (one of the >=2 required)",
+      "registration_wall": false,
+      "note": "Fully public over plain HTTPS, no auth. All three verified as genuine HDF5 by range-read of bytes 0-15 (89 48 44 46 0d 0a 1a 0a). Not mirrored: 376 GB total, and every file exceeds the 2 GiB GitHub release-asset cap, so re-hosting is impossible without splitting.",
+      "files": [
+        {
+          "name": "DESY3_metacal_v03-004.h5",
+          "bytes": 312037859376,
+          "url": "https://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3kp_cats/DESY3_metacal_v03-004.h5"
+        },
+        {
+          "name": "DESY3_sompz_v0.50.h5",
+          "bytes": 36792670792,
+          "url": "https://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3kp_cats/DESY3_sompz_v0.50.h5"
+        },
+        {
+          "name": "DESY3_indexcat.h5",
+          "bytes": 27246838040,
+          "url": "https://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3kp_cats/DESY3_indexcat.h5"
+        }
+      ],
+      "all_urls_http_200": true,
+      "hdf5_magic_verified": true
+    },
+    "D_hsc_s19a_pdr3": {
+      "status": "BLOCKED_REGISTRATION_WALL",
+      "role": "source catalogue (one of the >=2 required)",
+      "registration_wall": true,
+      "evidence": "GET https://hsc-release.mtk.nao.ac.jp/archive/filetree/... -> HTTP 401 Unauthorized, header: www-authenticate: Basic realm=\"hsc-ssp\". Confirmed on the directory and on a concrete file. The documentation pages are public (HTTP 200) but EVERY data link on the S19A/Y3 shape-catalog page points into /archive/filetree/, which is uniformly 401.",
+      "action_taken": "None. No account created, no credentials entered, no access control bypassed.",
+      "stefan_facing": true,
+      "what_is_needed": "An hsc-ssp account (free self-registration at https://hsc-release.mtk.nao.ac.jp/doc/ ) held by a human; the shape catalogue additionally requires accepting the HSC SSP data-use terms.",
+      "public_doc_url": "https://hsc-release.mtk.nao.ac.jp/doc/index.php/s19a-shape-catalog-pdr3/"
+    },
+    "E_kids1000": {
+      "status": "PARTIAL - n(z) COMPLETE, 17.7 GB shear catalogue DEFERRED",
+      "role": "source catalogue (one of the >=2 required)",
+      "registration_wall": false,
+      "note": "Fully public, no auth. Shear catalogue verified as genuine FITS by range-read (bytes 0-8 == 'SIMPLE  ='). 21,262,011 sources.",
+      "shear_catalogue": {
+        "name": "KiDS_DR4.1_ugriZYJHKs_SOM_gold_WL_cat.fits",
+        "bytes": 17712469440,
+        "url": "https://kids.strw.leidenuniv.nl/DR4/data_files/KiDS_DR4.1_ugriZYJHKs_SOM_gold_WL_cat.fits",
+        "fits_magic_verified": true,
+        "downloaded": false,
+        "why_deferred": "17.7 GB at the measured ~0.5 MB/s aggregate link is ~10 h, and the file exceeds the 2 GiB GitHub release-asset cap so it cannot be re-hosted intact anyway.",
+        "resume_command": "curl -L --retry 5 --retry-delay 10 -C - -o KiDS_DR4.1_ugriZYJHKs_SOM_gold_WL_cat.fits https://kids.strw.leidenuniv.nl/DR4/data_files/KiDS_DR4.1_ugriZYJHKs_SOM_gold_WL_cat.fits"
+      },
+      "nz_tarball": {
+        "name": "KiDS1000_SOM_N_of_Z.tar.gz",
+        "url": "https://kids.strw.leidenuniv.nl/DR4/data_files/KiDS1000_SOM_N_of_Z.tar.gz",
+        "local": {
+          "bytes": 4360,
+          "md5": "626660c57ba58b88bee6c8009b188b3f",
+          "sha256": "1962a9117413f7fbb8adb863e4a85e250998257572cfffcbe2834e61c7d1704a",
+          "magic_hex": "1f8b08086020c95f00"
+        },
+        "contents": "SOM-calibrated n(z) for the 5 KiDS-1000 tomographic bins (blindC, fiducial)",
+        "mirror_url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/s9_deflection_closure/kids1000/KiDS1000_SOM_N_of_Z.tar.gz",
+        "downloaded": true
+      }
+    }
+  },
+  "two_of_three_source_surveys": {
+    "requirement": "S9 kill line needs reproduction with >=2 of DES-Y3 / HSC-Y3 / KiDS-1000",
+    "accessible_without_any_access_control": [
+      "DES-Y3",
+      "KiDS-1000"
+    ],
+    "blocked": [
+      "HSC-Y3 (401 Basic realm hsc-ssp)"
+    ],
+    "verdict": "Two independent source surveys (DES-Y3 and KiDS-1000) are reachable with no credential of any kind, so the >=2 requirement is satisfiable. Neither was fully mirrored here - bytes are pullable directly from the verified URLs above."
+  }
+}

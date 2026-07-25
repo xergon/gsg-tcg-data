@@ -35,8 +35,14 @@ By GAMA field: **G09 657, G12 702, G15 741**.
 `PA_GASKIN` spans **0.5° → 360.0°**, with **50.13% of values above 180°** and a flat octant histogram. It is
 measured with **`fit_kinematic_pa`** (Krajnović et al. 2006, Appendix C), applied to the 1-component gas
 kinematic maps — a routine that returns the PA of the **receding** half of the velocity field over the full
-circle. **⇒ The rotation sense is encoded in the PA itself. `PA_GASKIN` *is* the externally supplied signed
+circle. **⇒ The rotation sense is encoded in the PA itself: `PA_GASKIN` fixes *which half of the velocity
+field is receding*, which fixes the direction of the sky-projected angular-momentum vector
+(`PA_kin ± 90°` under a fixed handedness convention). `PA_GASKIN` *is* the externally supplied signed
 spin-parity label C-Triangle asked for, with no extra ingredient.**
+
+Note this also means **`PA_GASKIN_ERR` barely matters for a PA-free estimator.** If only the *sign* is
+consumed and never the angle, a 10° PA error is irrelevant — the sign is determined whenever the PA is
+determined at all. On that reading the operative count is **L1 = 2099**, and the error cut is a courtesy.
 
 `PA_STELKIN` behaves identically (1.0° → 359.5°, 49.88% above 180°).
 
@@ -58,6 +64,32 @@ quality.**
 galaxy in eleven the spin-parity label **flips between tracers**. `Γ_B` must flip sign with it. That is a
 built-in, zero-cost falsification test on the estimator itself, and it is far sharper than a random-sign
 null because the flip is physically real and externally labelled.
+
+
+### ✅ EMPIRICALLY CONFIRMED — this is a measured coverage count, not a geometric model
+
+The full 17,712,469,440 B KiDS-1000 SOM-gold catalogue was streamed end to end and every gold source
+within 15′ of a SAMI GAMA lens was kept: **2,457,532 sources, 8,888,898 lens–source pairs at 15′**
+(985,199 at 5′).
+
+| aperture | median sources/lens | mean | p10 | p90 | lenses with ≥1 |
+|---|---|---|---|---|---|
+| 1′ | 15.0 | 15.4 | 1.0 | 29.0 | 1904 |
+| 2′ | 73.0 | 71.4 | 27.0 | 111.0 | 2038 |
+| 3′ | 170.0 | 165.8 | 75.9 | 242.1 | 2087 |
+| 5′ | **472.0** | 469.1 | 275.9 | 661.0 | **2092** |
+| 10′ | 1889.5 | 1881.4 | 1289.6 | 2486.1 | 2096 |
+| 15′ | **4236.0** | 4232.8 | 3049.6 | 5361.3 | **2098** |
+
+**Only 2 of 2,100 lenses have zero KiDS coverage within 15′** — CATID 375564 and 375615, both at the G09
+western edge (RA 129.894/130.042, dec 1.251/1.246), i.e. a mask or tile gap. Eight have none within 5′.
+
+**⇒ `N_qualified` = 2097** (finite `PA_GASKIN` **and** ≥1 real KiDS source within 15′), **2091** at 5′, and
+**2075** if you demand ≥100 sources inside a 5′ aperture. Every one of those is >2× the kill threshold.
+
+Sanity: predicted from the gross density `21,262,011 / (1006 deg² × 3600) = 5.871 arcmin⁻²` → 461 sources at
+5′ and 4150 at 15′. **Measured medians 472 and 4236 — agreement to 2 %.** The extraction is complete, not
+silently truncated.
 
 Other counts, for completeness:
 * SAMI DR3 unique galaxies with `ISBEST` cube and `WARNSTAR=0`: **2996** (2100 GAMA + 896 cluster).
@@ -156,7 +188,9 @@ bin membership is not a column; assign it from `Z_B`.
 | `KiDS1000_tile_footprint.csv` | — | all 1,006 DR4.0 + 196 DR4.1 tile centres, patch label, complete per-tile URL |
 | `DESI_LS_DR9_cutout_urls.txt` | — | **31,500 complete cutout URLs** = 15 products × 2,100 galaxies, NERSC-independent |
 | `MANIFEST.md`, `SUMMARY.json`, `URL_VERIFICATION.txt` | — | provenance |
-| *(release asset)* `kids1000_sami_aperture_sources` | ~0.7 GB | every KiDS-1000 gold source within **15′** of a SAMI GAMA lens, 27 columns |
+| `per_lens_source_counts.csv` | 230,943 | per-lens KiDS source counts at 1/2/3/5/10/15′, raw and after `MASK==0 & fitclass==0 & weight>0` |
+| `kids1000_sami_5arcmin_compact.parquet` | 16,107,936 | **726,894** sources within 5′ of a lens, 12 columns — small enough to load in the Pro sandbox |
+| *(release asset)* `kids1000_sami_15arcmin_sources.parquet` | 125,764,741 | **2,457,532** sources within 15′ of a lens, all 27 columns, zstd-9 |
 
 **No `Γ_B`, no shear profile, no ESD, no stacked contrast was computed.** The aperture-source file is a
 spatial row selection plus a column subset — nothing derived.

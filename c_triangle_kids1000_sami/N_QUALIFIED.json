@@ -2,7 +2,7 @@
   "row": "C-Triangle",
   "generated_utc": "2026-07-25T12:06:56Z",
   "falsifier": "N_qualified < 1000 => PIVOT",
-  "verdict": "KILL DOES NOT FIRE. Decisive point: PA_GASKIN spans 0.5-360.0 deg (fit_kinematic_pa, Krajnovic+2006 App.C) and therefore ALREADY CARRIES THE ROTATION SENSE -- it IS a signed spin-parity label on its own. N_qualified = 2099 (finite PA_GASKIN) / 2075 (err <= 10 deg), a 2.1x margin. LAMBDAR_RE (N=1155) is only needed for spin MAGNITUDE, not parity, and is NOT the binding cut.",
+  "verdict": "KILL DOES NOT FIRE. Decisive point: PA_GASKIN spans 0.5-360.0 deg (fit_kinematic_pa, Krajnovic+2006 App.C) and therefore ALREADY CARRIES THE ROTATION SENSE -- it IS a signed spin-parity label on its own. N_qualified = 2099 (finite PA_GASKIN) / 2075 (err <= 10 deg), a 2.1x margin. LAMBDAR_RE (N=1155) is only needed for spin MAGNITUDE, not parity, and is NOT the binding cut. EMPIRICALLY CONFIRMED against the real catalogue: 2098 of 2100 lenses have actual KiDS gold sources within 15 arcmin (median 4236 per lens; 472 within 5 arcmin). N_qualified = 2097 with a finite PA_GASKIN and real coverage.",
   "footprint_overlap": {
     "sami_dr3_unique_galaxies_WARNSTAR0_ISBEST": 2996,
     "sami_dr3_GAMA_region": 2100,
@@ -93,6 +93,95 @@
         "frac_above_150deg": 0.0776
       },
       "note": "~8-9 percent of the sample are gas-star COUNTER-ROTATORS. That is a free internal sign control: the spin-parity label flips between tracers for 1 galaxy in 11, and Gamma_B must flip with it."
+    }
+  },
+  "EMPIRICAL_N_qualified": {
+    "method": "Streamed the full 17,712,469,440 B KiDS-1000 SOM-gold catalogue over HTTP, kept every gold source within 15 arcmin of a SAMI GAMA lens, then counted per lens. This is a measured coverage count, not a tile-geometry model.",
+    "sources_extracted_within_15arcmin": 2457532,
+    "lens_source_pairs_within_15arcmin": 8888898,
+    "lens_source_pairs_within_5arcmin": 985199,
+    "lenses_with_zero_sources_within_15arcmin": 2,
+    "lenses_with_zero_sources_within_5arcmin": 8,
+    "zero_coverage_CATIDs_15arcmin": [
+      "375564",
+      "375615"
+    ],
+    "zero_coverage_positions": [
+      [
+        129.89422026,
+        1.2511931
+      ],
+      [
+        130.04200051,
+        1.24630305
+      ]
+    ],
+    "zero_coverage_note": "Both sit at the G09 western edge (RA ~129.9-130.0, dec ~1.25) - a masked region or tile gap. 2098 of 2100 lenses have real KiDS coverage.",
+    "N_qualified_PAgas_and_ge1_src_15arcmin": 2097,
+    "N_qualified_PAgas_and_ge1_src_5arcmin": 2091,
+    "N_qualified_PAgas_and_ge100_src_5arcmin": 2075,
+    "per_lens_source_counts": {
+      "r1arcmin": {
+        "median": 15.0,
+        "mean": 15.4,
+        "p10": 1.0,
+        "p90": 29.0,
+        "n_lenses_ge1": 1904
+      },
+      "r2arcmin": {
+        "median": 73.0,
+        "mean": 71.4,
+        "p10": 27.0,
+        "p90": 111.0,
+        "n_lenses_ge1": 2038
+      },
+      "r3arcmin": {
+        "median": 170.0,
+        "mean": 165.8,
+        "p10": 75.9,
+        "p90": 242.1,
+        "n_lenses_ge1": 2087
+      },
+      "r5arcmin": {
+        "median": 472.0,
+        "mean": 469.1,
+        "p10": 275.9,
+        "p90": 661.0,
+        "n_lenses_ge1": 2092
+      },
+      "r10arcmin": {
+        "median": 1889.5,
+        "mean": 1881.4,
+        "p10": 1289.6,
+        "p90": 2486.1,
+        "n_lenses_ge1": 2096
+      },
+      "r15arcmin": {
+        "median": 4236.0,
+        "mean": 4232.8,
+        "p10": 3049.6,
+        "p90": 5361.3,
+        "n_lenses_ge1": 2098
+      }
+    },
+    "predicted_vs_measured": "Predicted from the gross density 21,262,011/(1006 deg2 x 3600) = 5.871 arcmin^-2: 461 sources at 5 arcmin, 4150 at 15 arcmin. Measured medians 472 and 4236. Agreement to 2 percent - the extraction is complete, not truncated.",
+    "verification": {
+      "rows_read": 21263264,
+      "naxis2": 21262011,
+      "note": "The parser read 1,253 row-units past NAXIS2 - trailing bytes after the main table (FITS padding and/or a trailing HDU). None were retained: the keep count froze at 2,748,487 well before the file end, and the post-filter tallies are clean (Z_B fraction in (0.1,1.2] = 1.000000 exactly over all 2,457,532 kept rows).",
+      "MASK_values_over_2457532_sources": {
+        "0": 2160091,
+        "2": 140584,
+        "4098": 110906,
+        "4096": 45950,
+        "1": 1
+      },
+      "MASK_conclusion": "Residual bits are exactly {0,1,12} and nothing else across 2.46M sources - the standard KiDS lensing bitmask selection has already been applied at build time. Do NOT re-cut on MASK==0: that discards 12.10 percent of the sample, concentrated around bright stars.",
+      "fitclass": {
+        "0": 2451123,
+        "-9": 6409
+      },
+      "Z_B_fraction_in_0p1_to_1p2": 1.0
     }
   }
 }

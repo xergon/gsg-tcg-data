@@ -1,13 +1,13 @@
 {
   "row": "C-Triangle",
   "lane": "c_triangle_kids1000_sami",
-  "fetched_utc": "2026-07-25T12:12:08Z",
+  "fetched_utc": "2026-07-25T12:58:18Z",
   "headline_numbers": {
     "N_qualified_footprint_only": 2100,
     "N_qualified_with_gas_PA_err_le_10deg": 2075,
     "N_qualified_strict_with_spin_proxy": 1120,
     "N_qualified_kill_threshold": 1000,
-    "N_qualified_verdict": "PASS - tightest rung 1120, margin 1.12x; LAMBDAR_RE is the binding cut, not the footprint",
+    "N_qualified_verdict": "PASS. PA_GASKIN spans 0.5-360 deg (fit_kinematic_pa) so it IS a signed spin-parity label on its own; LAMBDAR_RE is NOT the binding cut. Empirically confirmed against the real catalogue: 2098 of 2100 lenses have KiDS gold sources within 15 arcmin, median 4236 per lens. N_qualified = 2097.",
     "c2_published_uncorrected": 0.0006,
     "c2_published_uncorrected_err": 0.0001,
     "c_residual_after_KiDS_correction_quadrature": 0.00027386,
@@ -18,7 +18,11 @@
     "alpha_psf_leakage_bins45": 0.04,
     "alpha_psf_leakage_bins45_err": 0.01,
     "psf_residual_model_c1_rms_exposure_weighted": 0.00074271,
-    "psf_residual_model_c1_frac_above_4e4": 0.8421
+    "psf_residual_model_c1_frac_above_4e4": 0.8421,
+    "N_qualified_EMPIRICAL_PAgas_and_real_KiDS_coverage_15arcmin": 2097,
+    "N_qualified_EMPIRICAL_PAgas_and_ge100_sources_within_5arcmin": 2075,
+    "signed_spin_parity_label_column": "sami_dr3.samiDR3gaskinPA.PA_GASKIN (0-360 deg, receding side)",
+    "gas_star_counter_rotator_fraction": 0.0902
   },
   "sami_dr3": {
     "unique_galaxies_published": 3068,
@@ -62,7 +66,28 @@
       "177.A-3018",
       "179.A-2004"
     ],
-    "shear_paper": "Giblin, Heymans, Asgari et al. 2021, A&A 645, A105, arXiv:2007.01845"
+    "shear_paper": "Giblin, Heymans, Asgari et al. 2021, A&A 645, A105, arXiv:2007.01845",
+    "MASK_already_bitmask_selected": {
+      "values_over_2457532_sources": {
+        "0": 2160091,
+        "2": 140584,
+        "4098": 110906,
+        "4096": 45950,
+        "1": 1
+      },
+      "residual_bits": [
+        0,
+        1,
+        12
+      ],
+      "warning": "Do NOT re-cut on MASK==0 - it discards 12.10 percent of the sample, concentrated around bright stars."
+    },
+    "dr4_1_is_a_MASK_bugfix": {
+      "scope": "196 of 1006 tiles, up to ~5 percent of sources had erroneous VIKING NIR MASK values in DR4.0",
+      "ugri_identical_to_dr4_0": true,
+      "unmasked_9band_area_gain_percent": 0.5,
+      "sami_lenses_on_an_affected_tile": 0
+    }
   },
   "desi_ls_dr9": {
     "primary_host_status": "DOWN - www.legacysurvey.org resolves to lb.cosmo-viewer.production.svc.spin.nersc.org; NERSC power upgrade 2026-07-22..2026-08-03",
@@ -171,5 +196,44 @@
       "bytes": 506548,
       "sha256": "04af7913fd774a5a2103f09392af58a4b7271375e76ee276f19e091d861079e4"
     }
-  ]
+  ],
+  "aperture_extract": {
+    "method": "full-file HTTP stream of the 17,712,469,440 B publisher FITS with an on-the-fly spatial row filter; the 16 GB file was never stored",
+    "sources_within_15arcmin": 2457532,
+    "lens_source_pairs_15arcmin": 8888898,
+    "lens_source_pairs_5arcmin": 985199,
+    "median_sources_per_lens": {
+      "r1": 15.0,
+      "r2": 73.0,
+      "r3": 170.0,
+      "r5": 472.0,
+      "r10": 1889.5,
+      "r15": 4236.0
+    },
+    "lenses_with_zero_coverage_15arcmin": 2,
+    "lenses_with_zero_coverage_5arcmin": 8,
+    "release_asset": {
+      "url": "https://github.com/xergon/gsg-tcg-data/releases/download/c-triangle-kids1000-sami-v1/kids1000_sami_15arcmin_sources.parquet",
+      "bytes": 125764741,
+      "sha256": "49788f42e3cad569b1a015dcaa1dd59f7f730fe5e8d9b379e2d497817b80a774",
+      "rows": 2457532,
+      "columns": 27,
+      "compression": "zstd level 9",
+      "verified": "re-downloaded from the release URL; sha256 matched and the parquet opened with 2457532 rows x 27 columns"
+    },
+    "compact_in_repo": {
+      "path": "kids1000_sami_5arcmin_compact.parquet",
+      "bytes": 16107936,
+      "sha256": "ac7b8f62e9f72bf183c576714006c1dbc787d0b7d5eb1ca422fbb01fbe5fb125",
+      "rows": 726894,
+      "columns": 12,
+      "note": "5 arcmin radius, sandbox-sized"
+    },
+    "per_lens_counts": {
+      "path": "per_lens_source_counts.csv",
+      "bytes": 230943,
+      "sha256": "6e075ff03d46e91e4127dc91666a5bae66ac9f17a3f1b3b713b42b7c1e44712f"
+    },
+    "quarantine_respected": "No Gamma_B, no shear profile, no ESD, no stacked contrast, and no weighted-mean-ellipticity c-term was computed by this agent. Selection and counting only."
+  }
 }

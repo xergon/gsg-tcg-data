@@ -213,16 +213,30 @@ MASK = 4098    1,993 rows    3.18 %   (bits 1 and 12)
 MASK = 4096    1,406 rows    2.24 %   (bit 12 — Astro-WISE r-band halo+stellar PULECENELLA mask)
 ```
 
-**Only bits 1 and 12 ever survive; every one of the other fourteen bits is absent from all 62,735 rows.**
-That is the signature of a bitmask selection having already been applied at build time, retaining exactly
-the two bits KiDS tolerates for lensing. (The constant is not stated in the DR4.1 release description and
-is not asserted here — the empirical bit pattern is.)
+Confirmed at scale on the **2,457,532** sources extracted around the SAMI lenses:
 
-**⇒ Re-cutting the gold catalogue on `MASK == 0` would discard 10.62 % of the sources, and not at random:
+```
+MASK =    0   2,160,091   87.90 %
+MASK =    2     140,584    5.72 %   (bit 1)
+MASK = 4098     110,906    4.51 %   (bits 1 + 12)
+MASK = 4096      45,950    1.87 %   (bit 12)
+MASK =    1           1    0.00 %   (bit 0 — one single source in 2.46 million)
+```
+
+**The residual bit set is exactly {0, 1, 12} and nothing else, across 2.46 million sources.** Every one of
+the other thirteen bits is absent. That is the unambiguous signature of a `MASK & X == 0` selection having
+already been applied at build time with `X` excluding bits 0, 1 and 12 — i.e. the standard KiDS lensing
+bitmask. (The constant is not printed in the DR4.1 release description; the bit pattern is measured here,
+and it is the pattern that matters.)
+
+**⇒ Re-cutting the gold catalogue on `MASK == 0` discards 12.10 % of the sources, and not at random:
 bit 1 is the faint star-halo mask and bit 12 the r-band stellar-halo mask, so the loss is concentrated
 around bright stars — exactly where a local-aperture estimator is already most exposed to a spatially
-coherent additive.** Use the catalogue as delivered. `fitclass` is `0` for 62,616 rows and `−9` for 119
-(0.19 %); the `−9` rows all carry `weight ≈ 15.44–15.56`, i.e. they are not zero-weighted.
+coherent additive.** Use the catalogue as delivered.
+
+`fitclass` over the same 2.46 M: `0` for 2,451,123 and `−9` for 6,409 (0.26 %); in the head sample the
+`−9` rows all carry `weight ≈ 15.44–15.56`, i.e. they are **not** zero-weighted and will contribute if you
+do not cut them. `Z_B` lies in (0.1, 1.2] for **1.000000** of all 2,457,532 extracted sources.
 
 Other selections already applied on disk, verified on the same sample:
 * `Z_B` strictly within **(0.1, 1.2]** — fraction inside = 1.000

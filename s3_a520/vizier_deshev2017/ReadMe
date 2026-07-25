@@ -1,0 +1,80 @@
+J/A+A/607/A131       Abell 520 galaxies redshifts                (Deshev+, 2017)
+================================================================================
+Galaxy evolution in merging clusters:
+The passive core of the "Train Wreck" cluster of galaxies, A520.
+    Deshev B., Finoguenov A., Verdugo M., Ziegler B., Park C., Seong Hwang H.,
+    Haines C., Kamphuis P., Tamm A., Einasto M., Hwang N., Park B.-G.
+    <Astron. Astrophys. 607, A131 (2017)>
+    =2017A&A...607A.131D        (SIMBAD/NED BibCode)
+================================================================================
+ADC_Keywords: Clusters, galaxy ; Galaxies, optical ; Galaxies, photometry  ;
+              Galaxies, spectra ; Galaxy catalogs ; Photometry, SDSS ;
+              Redshifts ; Spectroscopy
+Keywords: galaxies: clusters: general -
+          galaxies: clusters: individual: Abell 520 - galaxies: evolution
+
+Abstract:
+    The mergers of galaxy clusters are the most energetic events in the
+    universe after the Big Bang. An ever increasing fraction of local
+    clusters exhibit signs of recent or past mergers. Our goal is to probe
+    how these mergers affect the evolution and content of their member
+    galaxies. We specifically aim to answer the following questions: Is
+    the quenching of star formation in merging clusters enhanced when
+    compared with relaxed clusters? Is the quenching accompanied by a
+    (short lived) burst of star formation? We obtained optical
+    spectroscopy of $>400$ galaxies in the field of the merging cluster
+    Abell 520. We combine these observations with archival data to get a
+    comprehensive picture of the state of star formation in the members of
+    this merging cluster. Finally, we compare these observations with a
+    control sample of 10 non-merging clusters at the same redshift from
+    The Arizona Cluster Redshift Survey (ACReS). We split the member
+    galaxies in passive, star forming or recently quenched depending on
+    their spectra. The core of the merger shows a decreased fraction of
+    star-forming galaxies compared to clusters in the non-merging sample.
+    This region, dominated by passive galaxies, is extended along the axis
+    of the merger. We find evidence of rapid quenching of the galaxies
+    during the core passage with no signs of a star burst on the time
+    scales of the merger. Additionally, we report the tentative discovery
+    of an infalling group along the main filament feeding the merger,
+    currently at ~2.5Mpc from the merger centre. This group contains a
+    high fraction of star forming galaxies as well as ~2/3 of all the
+    recently quenched galaxies in our survey.
+
+Description:
+    Multi-fibre spectroscopy carried out with Hectospec on MMT, USA on 19
+    and 22 of February 2014. Grism 270 was used. Photometry with
+    SExtractor on images from Megacam on CFHT in Hawaii, USA.
+
+File Summary:
+--------------------------------------------------------------------------------
+ FileName      Lrecl  Records   Explanations
+--------------------------------------------------------------------------------
+ReadMe            80        .   This file
+table1.dat        56      407   Redshifts of 407 galaxies in the field of A520
+spectra.fits    2880     4865   Spectra
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: table1.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units   Label     Explanations
+--------------------------------------------------------------------------------
+   1-  4  I4    ---     Num       Sequential number
+   6- 13  F8.5  deg     RAdeg     Right ascension (J2000)
+  15- 22  F8.5  deg     DEdeg     Declination (J2000)
+  24- 30  F7.5  ---     z         Redshift
+  32- 38  F7.5  ---   e_z         Uncertainty on redshift
+  40- 46  F7.3  mag     rMAG      Absolute r' SDSS magnitude
+  48- 54  F7.3  mag     gMAG      Absolute g' SDSS magnitude
+      56  I1    ---     Memb      [1/3] Membership (1)
+--------------------------------------------------------------------------------
+Note (1): Membership code as follows:
+           1 = cluster member
+           2 = near field
+           3 = non member
+--------------------------------------------------------------------------------
+
+Acknowledgements:
+     Boris Deshev, boris(at)to.ee
+
+================================================================================
+(End)                                        Patricia Vannier [CDS]  19-Jul-2017

@@ -1,0 +1,496 @@
+J/ApJS/233/17  Swift/BAT AGN spectroscopic survey. V. X-ray data  (Ricci+, 2017)
+================================================================================
+BAT AGN spectroscopic survey.
+V. X-ray properties of the Swift/BAT 70-month AGN catalog.
+    Ricci C., Trakhtenbrot B., Koss M.J., Ueda Y., Del Vecchio I., Treister E.,
+    Schawinski K., Paltani S., Oh K., Lamperti I., Berney S., Gandhi P.,
+    Ichikawa K., Bauer F.E., Ho L.C., Asmus D., Beckmann V., Soldi S.,
+    Balokovic M., Gehrels N., Markwardt C.B.
+   <Astrophys. J. Suppl. Ser., 233, 17-17 (2017)>
+   =2017ApJS..233...17R    (SIMBAD/NED BibCode)
+================================================================================
+ADC_Keywords: Gamma rays ; X-ray sources ; Active gal. nuclei ; BL Lac objects ;
+              Redshifts
+Keywords: galaxies: active; galaxies: Seyfert; quasars: general
+          X-rays: diffuse background; X-rays: general
+
+Abstract:
+    Hard X-ray (>=10keV) observations of active galactic nuclei (AGNs) can
+    shed light on some of the most obscured episodes of accretion onto
+    supermassive black holes. The 70-month Swift/BAT all-sky survey, which
+    probes the 14-195keV energy range, has currently detected 838 AGNs. We
+    report here on the broadband X-ray (0.3-150keV) characteristics of
+    these AGNs, obtained by combining XMM-Newton, Swift/XRT, ASCA,
+    Chandra, and Suzaku observations in the soft X-ray band (<=10keV) with
+    70-month averaged Swift/BAT data. The nonblazar AGNs of our sample are
+    almost equally divided into unobscured (N_H_<10^22^cm^-2^) and
+    obscured (N_H_>=10^22^cm^-2^) AGNs, and their Swift/BAT continuum is
+    systematically steeper than the 0.3-10keV emission, which suggests
+    that the presence of a high-energy cutoff is almost ubiquitous. We
+    discuss the main X-ray spectral parameters obtained, such as the
+    photon index, the reflection parameter, the energy of the cutoff,
+    neutral and ionized absorbers, and the soft excess for both obscured
+    and unobscured AGNs.
+
+Description:
+    Our sample consists of the 838 AGNs detected within the 70-month
+    Swift/BAT catalog (Baumgartner+, 2013, J/ApJS/207/19).
+
+    The spectral analysis was carried out combining the 70-month
+    time-averaged Swift/BAT spectra with data obtained by several X-ray
+    facilities: ASCA (Section 3.1), Chandra (Section 3.2), Suzaku (Section
+    3.3), Swift/XRT (Section 3.4), and XMM-Newton (Section 3.5). Only two
+    AGNs (SWIFT J1119.5+5132 and SWIFT J1313.6+3650A) were not observed by
+    any X-ray facility in the 0.3-10keV range. Details of the soft X-ray
+    observation used for the broadband X-ray spectral analysis of each
+    source are reported in Table 2.
+
+File Summary:
+--------------------------------------------------------------------------------
+ FileName   Lrecl Records  Explanations
+--------------------------------------------------------------------------------
+ReadMe         80       .  This file
+table1.dat     99     838  List of the Swift/BAT AGN from the 70-month catalog
+table2.dat     84     838  Log of the soft X-ray observations
+table5.dat    210     836  Parameters obtained by the analysis of
+                            the broad-band X-ray spectra
+table6.dat     58      26  Parameters of the broken power-law continuum
+table7.dat     82      99  Parameters of the warm absorbers
+table8.dat     96     309  Parameters of the Gaussian lines
+table9.dat    147      75  Spectral parameters obtained with the torus model
+table12.dat    60     836  X-ray fluxes of the sources of our sample
+table13.dat    55     801  X-ray luminosities of the sources of our sample
+table14.dat    31      56  Intrinsic 2-10keV fluxes and luminosities for
+                            Compton-thick (CT, log(N_H_/cm^-2^)>=24) AGN
+table15.dat    78     836  Values of Gamma-nEc and Gamma-0310
+--------------------------------------------------------------------------------
+
+See also:
+ VIII/76 : Leiden/Argentine/Bonn (LAB) Survey of Galactic HI (Kalberla+ 2005)
+ VII/233 : The 2MASS Extended sources (IPAC/UMass, 2003-2006)
+ VII/274 : The Roma BZCAT - 5th edition (Massaro+, 2015)
+ J/A+A/418/465    : Mid-infrared and hard X-ray emission in AGN (Lutz+, 2004)
+ J/ApJ/633/L77    : SWIFT/BAT detections of AGN (Markwardt+, 2005)
+ J/ApJ/663/81     : SED of hard X-ray selected AGN in XMDS (Polletta+, 2007)
+ J/ApJ/673/96     : BAT X-ray Survey - III (Ajello+, 2008)
+ J/A+A/487/119    : AGN in XMM-Newton Hard Bright Survey (Della Ceca+, 2008)
+ J/ApJ/681/113    : Swift BAT survey of AGNs (Tueller+, 2008)
+ J/ApJ/699/603    : Evolution of Swift/BAT blazars (Ajello+, 2009)
+ J/A+A/505/417    : Second INTEGRAL AGN catalogue (Beckmann+, 2009)
+ J/MNRAS/397/1177 : Swift-XRT observations of GRBs (Evans+, 2009)
+ J/A+A/495/691    : Multifreq. catalogue of blazars, Roma-BZCAT (Massaro+, 2009)
+ J/A+A/510/A48    : Palermo Swift-BAT Hard X-ray Catalogue (Cusumano+, 2010)
+ J/A+A/524/A64    : The 54-month Palermo BAT-survey catalogue (Cusumano+, 2010)
+ J/ApJS/186/378   : Hard X-ray survey from Swift-BAT 2004-2006 (Tueller+, 2010)
+ J/MNRAS/413/1206 : XMM survey of 12um selected galaxies (Brightman+, 2011)
+ J/ApJ/728/58     : Swift-BAT survey of AGNs (Burlon+, 2011)
+ J/A+A/530/A42    : X-ray properties of AGNs in XBS (Corral+, 2011)
+ J/ApJ/739/57     : Ultra hard X-ray AGNs in the Swift/BAT survey (Koss+, 2011)
+ J/ApJ/742/61     : Phot. redshift of AGNs from XMM- & C-COSMOS (Salvato+ 2011)
+ J/ApJ/742/66     : New Fermi/LAT extragalactic sources (Teng+, 2011)
+ J/ApJ/749/21     : AGNs detected by 60 month Swift/BAT survey (Ajello+, 2012)
+ J/ApJ/754/45     : IR properties of Swift/BAT X-ray AGNs (Ichikawa+, 2012)
+ J/ApJ/746/L22    : Dual AGNs in the nearby Universe (Koss+, 2012)
+ J/MNRAS/426/1750 : INTEGRAL/IBIS AGN catalogue (Malizia+, 2012)
+ J/A+A/545/A101   : Spectra of 29 Swift/BAT optical counterparts (Parisi+, 2012)
+ J/MNRAS/426/2522 : FeK lines in Seyfert 1 galaxies (Patrick+, 2012)
+ J/ApJS/207/19    : X-ray survey from Swift-BAT 2004-2010 (Baumgartner+, 2013)
+ J/MNRAS/430/60   : Suzaku view of ionized outflows in AGN (Gofford+, 2013)
+ J/ApJ/765/L26    : Swift/BAT hard X-ray data from GOALS LIRGs (Koss+, 2013)
+ J/ApJS/209/14    : The Swift/BAT hard X-ray transient monitor (Krimm+, 2013)
+ J/ApJS/206/17    : New gamma-ray blazar candidates in the 3PBC (Maselli+, 2013)
+ J/ApJ/763/111    : X-ray spectral analysis of Swift/BAT AGNs (Vasudevan+, 2013)
+ J/ApJ/794/152    : PACS observations of Herschel-BAT sample (Melendez+, 2014)
+ J/A+A/561/A67    : Spectra of 75 Swift/BAT optical counterparts (Parisi, 2014)
+ J/A+A/563/A57    : Long-term variability of AGN at hard X-rays (Soldi+, 2014)
+ J/ApJ/815/L13    : Compton-thick AGNs from 70mth Swift/BAT cat. (Ricci+, 2015)
+ J/ApJ/807/129    : X-ray to MIR luminosities relation of AGNs (Stern, 2015)
+ J/A+A/588/A70    : Hard X-ray view of the soft excess in AGN (Boissay+, 2016)
+ J/MNRAS/460/19   : Update of INTEGRAL/IBIS AGN catalogue (Malizia+, 2016)
+ J/MNRAS/456/3335 : SPIRE observations of Herschel-BAT sample (Shimizu+, 2016)
+ J/ApJ/835/74     : IR phot. of AGNs in Swift/BAT 70mth cat. (Ichikawa+, 2017)
+ J/ApJ/836/99     : NuSTAR serendipitous survey: 40-month (Lansbury+, 2017)
+ J/ApJ/835/223    : A catalog of nearby galaxies with Chandra obs. (She+, 2017)
+ J/ApJ/850/74     : Swift/BAT AGN Spectroscopic Survey. I. (Koss+, 2017)
+ http://swift.gsfc.nasa.gov/results/bs70mon/ : Swift BAT 70-month hard X-ray
+                                                           survey online catalog
+
+Byte-by-byte Description of file: table1.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units Label    Explanations
+--------------------------------------------------------------------------------
+   1-  5 A5     ---   ---      [SWIFT]
+   6- 19 A14    ---   SWIFT    Swift-BAT 70-month hard X-ray survey source
+                                name (JHHMM.m+DDMMAN)
+  21- 21 A1     ---   DZ       [ab] Distance identifier (2)
+  23- 47 A25    ---   OName    Counterpart source name
+  49- 57 F9.5   deg   RAdeg    Right Ascension, decimal degrees (J2000)
+  59- 67 F9.5   deg   DEdeg    Declination, decimal degrees (J2000)
+  69- 75 F7.5   ---   z        [0.0001/3.7]? Redshift of the counterpart (3)
+  77- 81 F5.3   --- b_zphot    [0.002/0.7]? Lower boundary of the
+                                photometric redshift (4)
+  83- 87 F5.3   --- B_zphot    [0.003/0.9]? Upper boundary of the
+                                photometric redshift (4)
+  89- 95 F7.1   Mpc   Dist     [3.7/32342]? Distance of the source (5)
+  97- 99 A3     ---   BZ       Blazar flag (6)
+--------------------------------------------------------------------------------
+Note (2): Distance identifier as follows:
+     a = sources with photometric redshifts (27 occurrences);
+     b = sources with redshift-independent distances (43 occurrences).
+Note (3): Redshifts are spectroscopic unless DZ = a (photometric).
+Note (4): Bounds on the photometric redshifts are given when DZ = a.
+Note (5): For sources with DZ = b we report the redshift-independent distances.
+Note (6): We flagged all blazars in our sample according to the latest release
+          (5.0.0; Massaro+ 2015, VII/274) of the Roma BZCAT catalog (Massaro+
+          2009, J/A+A/495/691) and using the results of recent works on
+          BAT-detected blazars (Ajello+ 2009, J/ApJ/699/603 ;
+          Maselli+ 2013, J/ApJS/206/17). Flag as follows:
+    BZB = BL Lacs (26 occurrences)
+    BZQ = Flat Spectrum Radio Quasars (53 occurrences)
+    BZU = blazars of uncertain type (26 occurrences)
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: table2.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units Label  Explanations
+--------------------------------------------------------------------------------
+   1-  5 A5     ---   ---    [SWIFT]
+   6- 19 A14    ---   SWIFT  Swift-BAT 70-month hard X-ray survey source
+                              name (JHHMM.m+DDMMAN)
+  21- 38 A18    ---   XObs   X-ray observatory used for the soft X-ray
+                              (0.3-10keV) spectrum
+  40- 49 A10    ---   ObsID  Observation ID
+  51- 55 F5.1   ks    Exp1   [0.7/249]? Exposure of the observations carried out
+                              by Swift/XRT, XMM-Newton EPIC/PN, Chandra/ACIS,
+                              Suzakus front-illuminated cameras, and ASCA/SIS
+  57- 60 F4.1   ks    Exp2   [21/34]? Exposure of the observations carried out
+                              by ASCA/GIS
+  62- 68 I7     ct    Cts1   [3/2111120]? Number of counts of Swift/XRT,
+                              XMM-Newton EPIC/PN, Chandra/ACIS, Suzaku
+                              front-illuminated cameras, and ASCA/SIS0
+  70- 74 I5     ct    Cts2   [566/82047]? Number of counts of Suzaku
+                              back-illuminated cameras and ASCA/SIS1
+  76- 79 I4     ct    Cts3   [1250/7594]? Number of counts of ASCA/GIS2
+  81- 84 I4     ct    Cts4   [1629/9334]? Number of counts of ASCA/GIS3
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: table5.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units    Label    Explanations
+--------------------------------------------------------------------------------
+   1-  5 A5     ---      ---      [SWIFT]
+   6- 19 A14    ---      SWIFT    Swift-BAT 70-month hard X-ray survey source
+                                   name (JHHMM.m+DDMMAN)
+  21- 25 F5.2   [cm-2]   logNH    [19/25] Column density of the neutral
+                                   obscuring material, in logarithm (1)
+  27- 31 F5.2   [cm-2] b_logNH    Lower bound, 90% confidence interval for logNH
+  33- 37 F5.2   [cm-2] B_logNH    Upper bound, 90% confidence interval for logNH
+  39- 39 A1     ---    f_logNH    [f] Flag on logNH (G1)
+  41- 44 F4.2   ---      Gamma    [0.5/3.2] Photon index of the primary
+                                   X-ray continuum
+  46- 49 F4.2   ---    E_Gamma    [0.01/2]? Upper error (90%) for Gamma
+  51- 54 F4.2   ---    e_Gamma    ? Lower error (90%) for Gamma
+  56- 56 A1     ---    f_Gamma    [f] Flag on Gamma (G1)
+  58- 60 A3     ---    l_Ecut     [<>= ] Limit flag for Ecut
+  62- 64 I3     keV      Ecut     [11/655]? Energy of the cutoff
+  66- 66 A1     ---    f_Ecut     Flag on Ecut (G1)
+  68- 70 I3     keV    E_Ecut     [5/492]? Upper error (90%) for Ecut
+  72- 74 I3     keV    e_Ecut     ? Lower error (90%) for Ecut
+  76- 78 A3     ---    l_R        [<>= ] Limit flag for R
+  80- 84 F5.2   ---      R        [0.01/26]? Reflection parameter
+  86- 86 A1     ---    f_R        [f] Flag on R (G1)
+  88- 92 F5.2   ---    E_R        [0.02/14]? Upper error (90%) for R
+  94- 97 F4.2   ---    e_R        ? Lower error (90%) for R
+  99-103 F5.2   ---      CBAT     [0.2/27] Cross-calibration constant
+ 105-105 A1     ---    f_CBAT     [f] Flag on CBAT (G1)
+ 107-111 F5.2   ---    E_CBAT     [0.02/39]? Upper error (90%) for CBAT
+ 113-117 F5.2   ---    e_CBAT     ? Lower error (90%) for CBAT
+ 119-121 A3     ---    l_fscatt   [<= ] Upper limit flag on fscatt
+ 123-127 F5.2   %        fscatt   [0.01/80]? Fraction of scattered radiation
+ 129-133 F5.2   %      E_fscatt   [0.03/52]? Upper error (90%) fscatt
+ 135-139 F5.2   %      e_fscatt   ? Lower error (90%) fscatt
+ 141-145 F5.3   keV      Temp     [0.02/4.1]? Temperature of the blackbody or
+                                   thermal plasma component (2)
+ 147-151 F5.3   keV    E_Temp     [0.001/1.2]? Upper error (90%) for Temp (2)
+ 153-157 F5.3   keV    e_Temp     ? Lower error (90%) for Temp (2)
+ 159-162 F4.2   keV      Temp2    [0.07/9]? Temperature of the second thermal
+                                   plasma component
+ 164-167 F4.2   keV    E_Temp2    [0.01/1]? Upper error (90%) for Temp2
+ 169-172 F4.2   keV    e_Temp2    ? Lower error (90%) for Temp2
+ 174-177 F4.2   keV      Temp3    [0.83]? Temperature of the third thermal
+                                   plasma component
+ 179-182 F4.2   keV    E_Temp3    [0.02]? Upper error (90%) for Temp3
+ 184-187 F4.2   keV    e_Temp3    [0.02]? Lower error (90%) for Temp3
+ 189-190 A2     ---      Model    Spectral model used for the spectral fitting
+                                   (see table 4)
+ 192-192 A1     ---    f_Model    [G] Flag for the model (3)
+ 194-200 F7.2   ---      Stat     [4/3526] Value of the statistic
+ 202-205 I4     ---      DOF      [7/3354] Number of degrees of freedom
+ 207-210 A4     ---    f_Stat     Statistic used (4)
+--------------------------------------------------------------------------------
+Note (1): Sources with logNH=20.00 are completely unobscured.
+Note (2): Temperature of the blackbody component (for unobscured objects) or of
+          the thermal plasma component (for obscured objects).
+Note (3): Flag for the model:
+      G = a Gaussian line was added to the model
+Note (4): Statistic used as follows:
+    chi2 = chi-squared;
+       C = Cash statistic
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: table6.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units   Label    Explanations
+--------------------------------------------------------------------------------
+   1-  5 A5     ---     ---      [SWIFT]
+   6- 19 A14    ---     SWIFT    Swift-BAT 70-month hard X-ray survey source
+                                  name (JHHMM.m+DDMMA)
+  21- 25 F5.2   ---     Gamma2   [-2.2/3.6] Value of the second photon index of
+                                  the broken power law (1)
+  27- 30 F4.2   ---   E_Gamma2   [0.02/2.2] Upper error (90%) for Gamma2
+  32- 35 F4.2   ---   e_Gamma2   Lower error (90%) for Gamma2
+  37- 39 A3     ---   l_Ebkn     [<= ] Upper limit flag for Ebkn
+  41- 45 F5.2   keV     Ebkn     [1.4/88] Energy of the break (1)
+  47- 51 F5.2   keV   E_Ebkn     [0.02/32]? Upper error (90%) for Ebkn
+  53- 58 F6.2   keV   e_Ebkn     ? Lower error (90%) for Ebkn
+--------------------------------------------------------------------------------
+Note (1): For SWIFTJ1256.2-0551 two sets of values are reported since the source
+          was fitted using model C8, which considers a double broken power-law.
+          For this object the second line reports the value of Gamma2 and E2bkn.
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: table7.dat
+--------------------------------------------------------------------------------
+  Bytes Format Units       Label Explanations
+--------------------------------------------------------------------------------
+  1-  5 A5     ---         ---   [SWIFT]
+  6- 19 A14    ---         SWIFT Swift-BAT 70-month hard X-ray survey source
+                                  name (JHHMM.m+DDMMA)
+ 21- 26 F6.2   10+22cm-2   NHw   [0.1/181] Column density of the warm
+                                  absorbers
+ 28- 33 F6.2   10+22cm-2 E_NHw   [0.02/163] Upper error (90%) for NHw
+ 35- 39 F5.2   10+22cm-2 e_NHw   Lower error (90%) for NHw
+ 41- 43 A3     ---       l_logXi [<= ] Upper limit flag for logXi
+ 45- 49 F5.2   [10-9W.m]   logXi [-2/72]? Log of ionization parameter, erg*cm/s
+ 51- 54 F4.2   [10-9W.m] E_logXi ? Upper error (90%) for logXi
+ 56- 60 F5.2   [10-9W.m] e_logXi [0.02/33]? Lower error (90%) for logXi
+ 62- 64 A3     ---       l_fwcov [<>= ] Limit flag for fwcov
+ 66- 69 F4.1   %           fwcov [1.6/100]? Covering factor of the warm absorber
+ 71- 75 F5.2   %         E_fwcov ? Upper error (90%) for fwcov
+ 77- 82 F6.2   %         e_fwcov [0.1/38]? Lower error (90%) for fwcov
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: table8.dat
+--------------------------------------------------------------------------------
+  Bytes Format Units          Label    Explanations
+--------------------------------------------------------------------------------
+  1-  5 A5     ---            ---      [SWIFT]
+  6- 19 A14    ---            SWIFT    Swift-BAT 70-month hard X-ray survey
+                                        source name (JHHMM.m+DDMMAN)
+ 21- 25 F5.3   keV            Ekalpha  [5.4/7.7]? Energy of the Kalpha line
+ 27- 31 F5.3   keV          e_Ekalpha  [0.002/2]? Lower error (90%) for Ekalpha
+ 33- 37 F5.3   keV          E_Ekalpha  ? Upper error (90%) for Ekalpha
+ 39- 39 A1     ---          f_Ekalpha  Flag for EKalpha (G1)
+ 41- 43 A3     ---          l_EW       [<>= ] Limit flag for EW
+ 45- 48 I4     eV             EW       [9/7300]? Equivalent width of the
+                                        Kalpha line
+ 50- 53 I4     eV           E_EW       ? Upper error (90%) for EW
+ 55- 58 I4     eV           e_EW       [2/5641]? Lower error (90%) for EW
+ 60- 62 I3     eV             sigma    [12/237]? Width of the line
+ 64- 66 I3     eV           E_sigma    [4/258]? Upper error (90%) for sigma
+ 68- 70 I3     eV           e_sigma    ? Lower error (90%) for sigma
+ 72- 74 A3     ---          l_nKalpha  [<= ] Limit flag for nKalpha
+ 76- 81 F6.2  10-6ph/cm2/s    nKalpha  [0.07/587]? Normalization of the
+                                        Kalpha line, 1e-6photons/cm^2^/s
+ 83- 88 F6.2  10-6ph/cm2/s  e_nKalpha  [0.03/303]? Lower error (90%) for nKalpha
+ 90- 96 F7.2  10-6ph/cm2/s  E_nKalpha  ? Upper error (90%) for nKalpha
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: table9.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units    Label      Explanations
+--------------------------------------------------------------------------------
+   1-  5 A5     ---      ---        [SWIFT]
+   6- 19 A14    ---      SWIFT      Swift-BAT 70-month hard X-ray survey
+                                     source name (JHHMM.m+DDMMA)
+  21- 23 A3     ---    l_thetaOA    [<>= ] Limit flag for thetaOA
+  25- 26 I2     deg      thetaOA    [31/82] Half-opening angle of the torus
+  28- 29 I2     deg    E_thetaOA    ? Upper error (90%) for thetaOA
+  31- 32 I2     deg    e_thetaOA    [2/25]? Lower error (90%) for thetaOA
+  34- 34 A1     ---    f_thetaOA    [f] Flag on thetaOA (G1)
+  36- 40 F5.2   [cm-2]   logNH-tor  [23.3/25.6] Log of the column density of
+                                     the neutral obscuring material obtained
+                                     with the torus model
+  42- 46 F5.2   [cm-2] b_logNH-tor  [22.9/25.1] Lower bound of the 90%
+                                     confidence interval for logNH-tor
+  48- 52 F5.2   [cm-2] B_logNH-tor  [23.4/26] Upper bound of the 90% confidence
+                                     interval for logNH-tor (1)
+  54- 57 F4.2   ---      Gamma-tor  [1.2/3] Photon index of the primary X-ray
+                                     continuum obtained with the torus model
+  59- 62 F4.2   ---    E_Gamma-tor  Upper error (90%) for Gamma-tor
+  64- 67 F4.2   ---    e_Gamma-tor  [0.01/1] Lower error (90%) for Gamma-tor
+  69- 71 A3     ---    l_fscatt-tor [<= ] Upper limit Flag for Gamma-tor
+  73- 77 F5.2   %        fscatt-tor [0.01/18.3]? Fraction of scattered
+                                     radiation obtained with the torus model
+  79- 83 F5.2   %      E_fscatt-tor [0.01/20]? Upper error (90%) for fscatt-tor
+  85- 88 F4.2   %      e_fscatt-tor ? Lower error (90%) for fscatt-tor
+  90- 93 F4.2   keV      Temp-tor   [0.03/1.3]? Temperature of the thermal
+                                     plasma component obtained with the
+                                     torus model
+  95- 98 F4.2   keV    E_Temp-tor   [0.01/8]? Upper error (90%) for Temp-tor
+ 100-103 F4.2   keV    e_Temp-tor   ? Lower error (90%) for Temp-tor
+ 105-108 F4.2   keV      Temp2-tor  [0.6/1.1]? Temperature of the second thermal
+                                     plasma component obtained with the
+                                     torus model
+ 110-113 F4.2   keV    E_Temp2-tor  [0.03/0.4]? Upper error (90%) for Temp2-tor
+ 115-118 F4.2   keV    e_Temp2-tor  ? Lower error (90%) for Temp2-tor
+ 120-123 F4.2   ---      CBAT-tor   [0.3/8]? Cross-calibration constant obtained
+                                     with the torus model
+ 125-128 F4.2   ---    E_CBAT-tor   [0.08/9]? Upper error (90%) for CBAT-tor
+ 130-133 F4.2   ---    e_CBAT-tor   ? Lower error (90%) for CBAT-tor
+ 135-135 A1     ---    f_CBAT-tor   [f] Flag for CBAT-tor (G1)
+ 137-142 F6.1   ---      Stat-tor   [6/1958] Value of the statistic obtained
+                                     with the torus model
+ 144-147 I4     ---      DOF-tor    [12/1463] Number of degrees of freedom
+                                     for the torus model
+--------------------------------------------------------------------------------
+Note (1): Entries with upper bounds of "26.00" should be considered
+          as lower limits.
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: table12.dat
+--------------------------------------------------------------------------------
+  Bytes Format Units    Label      Explanations
+--------------------------------------------------------------------------------
+  1-  5 A5     ---      ---        [SWIFT]
+  6- 19 A14    ---      SWIFT      Swift-BAT 70-month hard X-ray survey
+                                    source name (JHHMM.m+DDMMAN)
+ 21- 26 F6.1 10-12mW/m2 F2-10obs   [0.1/1283] Observed flux in the 2-10keV
+                                    range, in units of 1e-12erg/cm2/s
+ 28- 33 F6.1 10-12mW/m2 F14-195obs [3/1389] Observed flux in the 14-195keV
+                                    range, in units of 1e-12erg/cm2/s
+ 35- 40 F6.1 10-12mW/m2 F2-10int   [0.2/1280] Intrinsic flux in the 2-10keV
+                                    range, in units of 1e-12erg/cm2/s
+ 42- 46 F5.1 10-12mW/m2 F20-50int  [1/522] Intrinsic flux in the 20-50keV
+                                    range, in units of 1e-12erg/cm2/s
+ 48- 53 F6.1 10-12mW/m2 F14-150int [2.9/1471] Intrinsic flux in the
+                                    14-150keV range, in units of 1e-12erg/cm2/s
+ 55- 60 F6.1 10-12mW/m2 F14-195int [3/1681] Intrinsic flux in the 14-195keV
+                                    range, in units of 1e-12 erg/cm2/s
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: table13.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units   Label         Explanations
+--------------------------------------------------------------------------------
+   1-  5 A5     ---     ---           [SWIFT]
+   6- 19 A14    ---     SWIFT         Swift-BAT 70-month hard X-ray survey
+                                       source name (JHHMM.m+DDMMAN)
+  21- 25  F5.2  [10-7W] logL2-10obs   [38.3/47.6] Observed log of luminosity in
+                                       the 2-10keV range, in units of erg/s
+  27- 31  F5.2  [10-7W] logL14-195obs [38.5/48.2] Observed log of luminosity in
+                                       the 14-195keV range, in units of erg/s
+  33- 37  F5.2  [10-7W] logL2-10int   [38.3/47.6] Intrinsic log of luminosity in
+                                       the 2-10keV range, in units of erg/s
+  39- 43  F5.2  [10-7W] logL20-50int  [38.1/47.6] Intrinsic log of luminosity in
+                                       the 20-50keV range, in units of erg/s
+  45- 49  F5.2  [10-7W] logL14-150int [38.5/48.1] Intrinsic log of luminosity in
+                                       the 14-150keV range, in units of erg/s
+  51- 55  F5.2  [10-7W] logL14-195int [38.5/48.2] Intrinsic log of luminosity in
+                                       the 14-195keV range, in units of erg/s
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: table14.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units     Label       Explanations
+--------------------------------------------------------------------------------
+   1-  5 A5     ---       ---         [SWIFT]
+   6- 19 A14    ---       SWIFT       Swift-BAT 70-month hard X-ray survey
+                                       source name (JHHMM.m+DDMMAN)
+  21- 25  F5.1 10-12mW/m2 F2-10       [4/624] Extrapolated intrinsic flux in
+                                       the 2-10 keV range for the CT AGN,
+                                       in units of 1e-12 erg/s/cm2 (2)
+  27- 31  F5.2  [10-7W]   logL2-10    [41.6/44.9] Extrapolated lof of intrinsic
+                                       luminosity in the 2-10keV range for
+                                       the CT AGN, in units of erg/s (2)
+--------------------------------------------------------------------------------
+Note (2): The intrinsic flux and luminosity in the 2-10keV range are
+          extrapolated from the intrinsic 14-150keV flux or luminosity,
+          respectively.
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: table15.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units   Label       Explanations
+--------------------------------------------------------------------------------
+   1-  5 A5     ---     ---         [SWIFT]
+   6- 19 A14    ---     SWIFT       Swift-BAT 70-month hard X-ray survey
+                                     source name (JHHMM.m+DDMMAN)
+  21- 27 F7.5   ---     Gamma-nEc   [0.8/3.1]? Photon index fixing the energy
+                                     of the cutoff to 500keV
+  29- 37 F9.7   ---   e_Gamma-nEc   ? Lower error (90%) for Gamma-nEc
+  39- 47 F9.7   ---   E_Gamma-nEc   [0.01/4.4]? Upper error (90%) for Gamma-nEc
+  49- 58 F10.7  ---     Gamma-0310  [-1.5/4.2]? Photon index fixing the energy
+                                     of the cutoff and removing the reflection
+                                     component (2)
+  60- 68 F9.7   ---   e_Gamma-0310  ? Lower error (90%) for Gamma-0310 (2)
+  70- 78 F9.7   ---   E_Gamma-0310  [0.01/5.3]? Upper error (90%)
+                                     for Gamma-0310 (2)
+--------------------------------------------------------------------------------
+Note (2): Photon index obtained fixing the energy of the cutoff to 500keV,
+          removing the reflection component and fitting in the 0.3-10keV range
+          only.
+--------------------------------------------------------------------------------
+
+Global notes:
+Note (G1): "f" for sources for which the value was fixed during the fitting.
+--------------------------------------------------------------------------------
+
+History:
+  From electronic version of the journal
+
+References:
+  Koss et al.           Paper I.       2017ApJ...850...74K  Cat. J/ApJ/850/74
+  Berney et al.         Paper II.      2015MNRAS.454.3622B
+  Oh et al.             Paper III.     2017MNRAS.464.1466O
+  Lamperti et al.       Paper IV.      2017MNRAS.467..540L  Cat. J/MNRAS/467/540
+  Ricci et al.          Paper V.       2017ApJS..233...17R  This catalog
+  Trakhtenbrot et al.   Paper VI.      2017MNRAS.470..800T
+  Ricci et al.          Paper VII.     2017Natur.549..488R
+  Shimizu et al.        Paper VIII.    2018ApJ...856..154S
+  Powell et al.         Paper IX.      2018ApJ...858..110P
+  Oh et al.             Paper X.       2018ApJS..235....4O  Cat. J/ApJS/235/4
+  Ichikawa et al.       Paper XI.      2019ApJ...870...31I  Cat. J/ApJ/870/31
+  Ricci et al.          Paper XII.     2018MNRAS.480.1819R
+  Bar et al.            Paper XIII.    2019MNRAS.489.3073B
+  Koss et al.           Paper XIV.     2018Natur.563..214K
+  Smith et al.          Paper XV.      2020MNRAS.492.4216S
+  Paliya et al.         Paper XVI.     2019ApJ...881..154P  Cat. J/ApJ/881/154
+  Baek et al.           Paper XVII.    2019MNRAS.488.4317B
+  Liu et al.            Paper XVIII.   2020ApJ...896..122L
+  Rojas et al.          Paper XIX.     2020MNRAS.491.5867R
+  Koss et al.           Paper XX.      2021ApJS..252...29K  Cat. J/ApJS/252/29
+  Koss et al.           Paper XXI.     2022ApJS..261....1K
+  Koss et al.           Paper XXII.    2022ApJS..261....2K  Cat. J/ApJS/261/2
+  Pfeifle et al.        Paper XXIII.   2022ApJS..261....3P
+  Oh et al.             Paper XXIV.    2022ApJS..261....4O  Cat. J/ApJS/261/4
+  Mejia-Restrepo et al. Paper XXV.     2022ApJS..261....5M  Cat. J/ApJS/261/5
+  Koss et al.           Paper XXVI.    2022ApJS..261....6K  Cat. J/ApJS/261/6
+  Gupta et al.          Paper XXVII.   2021MNRAS.504..428G
+  den Brok et al.       Paper XXVIII.  2022ApJS..261....7D  Cat. J/ApJS/261/7
+  Ricci et al.          Paper XXIX.    2022ApJS..261....8R  Cat. J/ApJS/261/8
+  Ananna et al.         Paper XXX.     2022ApJS..261....9A
+  Kakkad et al.         Paper XXXI.    2022MNRAS.511.2105K
+  Kawamuro et al.       Paper XXXII.   2022ApJ...938...87K
+  Marcotulli et al.     Paper XXXIII.  2022ApJ...940...77M  Cat. J/ApJ/940/77
+  Kawamuro et al.       Paper XXXIV.   2023ApJS..269...24K  Cat. J/ApJS/269/24
+  Caglar et al.         Paper XXXV.    2023ApJ...956...60C
+  Powell et al.         Paper XXXVI.   2022ApJ...938...77P
+  Ricci et al.          Paper XXXVII.  2022ApJ...938...67R
+  Ananna et al.         Paper XXXVIII. 2022ApJ...939L..13A
+  Temple et al.         Paper XXXIX.   2023MNRAS.518.2938T
+  Tortosa et al.        Paper XL.      2023MNRAS.526.1687T
+  Ricci et al.          Paper XLII.    2023ApJ...959...27R
+
+================================================================================
+(End)                 Prepared by [AAS], Emmanuelle Perret [CDS]    13-Feb-2018

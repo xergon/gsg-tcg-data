@@ -1,0 +1,7 @@
+asset	bytes	md5	url
+hlsp_phangs-jwst_jwst_miri_ngc1433_f2100w_v1p1_img.fits	180532800	d0fc5e9bedb4791c9a8be51aea0fb34f	https://github.com/xergon/gsg-tcg-data/releases/download/s2-corotation-phangs-2026-07-25/hlsp_phangs-jwst_jwst_miri_ngc1433_f2100w_v1p1_img.fits
+hlsp_phangs-jwst_jwst_miri_ngc1672_f2100w_v1p1_img.fits	107735040	a418975db98f71d6a98ed89801f35526	https://github.com/xergon/gsg-tcg-data/releases/download/s2-corotation-phangs-2026-07-25/hlsp_phangs-jwst_jwst_miri_ngc1672_f2100w_v1p1_img.fits
+hlsp_phangs-jwst_jwst_miri_ngc3351_f2100w_v1p1_img.fits	192447360	5ae6b5c9db49024c25a2a7419d709f4d	https://github.com/xergon/gsg-tcg-data/releases/download/s2-corotation-phangs-2026-07-25/hlsp_phangs-jwst_jwst_miri_ngc3351_f2100w_v1p1_img.fits
+NGC1433_MAPS_native.fits	574395840	bd8a0774f1bc31fc732832fc4882eeaf	https://github.com/xergon/gsg-tcg-data/releases/download/s2-corotation-phangs-2026-07-25/NGC1433_MAPS_native.fits
+NGC1672_MAPS_native.fits	372602880	26e7600197788ac8e3b650088cbd939e	https://github.com/xergon/gsg-tcg-data/releases/download/s2-corotation-phangs-2026-07-25/NGC1672_MAPS_native.fits
+NGC3351_MAPS_native.fits	341006400	c58bdaef2b385fd50faf00ea7a5c3024	https://github.com/xergon/gsg-tcg-data/releases/download/s2-corotation-phangs-2026-07-25/NGC3351_MAPS_native.fits

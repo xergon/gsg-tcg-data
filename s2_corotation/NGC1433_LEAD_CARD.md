@@ -144,3 +144,27 @@ read from `CD2_2`. The copt PSF is **0.91 / 1.05 / 0.96 arcsec** for NGC1433 / N
 and that value appears only in the **filename**; the trio's native PSFs are not equal to each
 other and are not equal to the copt values. Per-galaxy pixel grids differ in size
 (1480x915, 897x896, 1235x711) but not in scale.
+
+## FILENAME vs HEADER - what the archive's names do and do not tell you
+
+Checked from `BMAJ`, `BMIN`, `BPA` and `CDELT2`/`CD2_2` in every delivered FITS, never from the name.
+
+| product | resolution token in name | achieved, from header |
+|---|---|---|
+| ngc1433 CO(2-1) native | *(no token)* | BMAJ = BMIN = **1.0977"**, BPA = 0, pixel **0.300"** |
+| ngc3351 CO(2-1) native | *(no token)* | BMAJ = BMIN = **1.4632"**, BPA = 0, pixel **0.400"** |
+| ngc1672 CO(2-1) native | *(no token)* | BMAJ = BMIN = **1.9324"**, BPA = 0, pixel **0.500"** |
+| MUSE MAPS / IMAGES, all three | `native` / `copt_X.XXasec` | pixel **0.2000"** for all six, from `CD2_2` |
+| JWST F2100W, all three | *(none)* | **no BMAJ / BMIN / PSF keyword exists**; pixel **0.11091"** from CDELT1=CDELT2 and independently from sqrt(PIXAR_A2) |
+
+Three things follow:
+
+1. **The trio is not at a common resolution and not on a common pixel grid.** Native CO beams differ
+   by a factor of 1.76 across the three galaxies and the pixel scales differ by 1.67. Anything
+   compared across the trio at "native" resolution is being compared at three different beams.
+   Matched-resolution CO copies exist in the archive at 2, 7.5, 11 and 15 arcsec (all listed in the
+   manifest) and are the correct route if a common beam is required.
+2. **The `copt_X.XXasec` token is a name, not a header property.** The copt PSF appears in the
+   filename only; it is not written into `CD2_2`, which is 0.2" for native and copt alike.
+3. **The JWST PSF cannot be taken from these files at all** - the HLSP headers simply do not carry
+   one. Any F2100W PSF FWHM must be sourced from instrument documentation and stated as such.

@@ -1,0 +1,51 @@
+i2 — ALL DELIVERED URLS, COMPLETE AND VERBATIM, ONE PER LINE
+Every URL below was curl'd after publication and confirmed to return real bytes
+(FITS -> "SIMPLE  =", parquet -> "PAR1", markdown/json -> nonzero byte count).
+
+--- PRIMARY DELIVERABLES (GitHub release assets) ---
+https://github.com/xergon/gsg-tcg-data/releases/download/i2-gama-kidslegacy-v1/gama_kidslegacy_ipr_rar_inputs_v1.parquet
+https://github.com/xergon/gsg-tcg-data/releases/download/i2-gama-kidslegacy-v1/kidslegacy_sources_gama_equatorial_v1.parquet
+
+--- GAMA DR4 SOURCE CATALOGUES, RE-HOSTED VERBATIM (GitHub release assets) ---
+https://github.com/xergon/gsg-tcg-data/releases/download/i2-gama-kidslegacy-v1/TilingCatv46.fits
+https://github.com/xergon/gsg-tcg-data/releases/download/i2-gama-kidslegacy-v1/SersicCatSDSSv09.fits
+https://github.com/xergon/gsg-tcg-data/releases/download/i2-gama-kidslegacy-v1/StellarMassesLambdarv24.fits
+https://github.com/xergon/gsg-tcg-data/releases/download/i2-gama-kidslegacy-v1/StellarMassesGKVv24.fits
+https://github.com/xergon/gsg-tcg-data/releases/download/i2-gama-kidslegacy-v1/DistancesFramesv14.fits
+https://github.com/xergon/gsg-tcg-data/releases/download/i2-gama-kidslegacy-v1/G3CGalv10.fits
+https://github.com/xergon/gsg-tcg-data/releases/download/i2-gama-kidslegacy-v1/G3CFoFGroupv10.fits
+https://github.com/xergon/gsg-tcg-data/releases/download/i2-gama-kidslegacy-v1/EnvironmentMeasuresv06.fits
+https://github.com/xergon/gsg-tcg-data/releases/download/i2-gama-kidslegacy-v1/SpecObjv27.fits
+
+--- DOCUMENTATION (raw.githubusercontent) ---
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i2_gama_kidslegacy/SUMMARY.json
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i2_gama_kidslegacy/MANIFEST.md
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i2_gama_kidslegacy/POWER_GO_NOGO.md
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i2_gama_kidslegacy/GALELLIP_RESOLUTION.md
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i2_gama_kidslegacy/MISTELE_EQ_4.1_4.3.md
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i2_gama_kidslegacy/README_DELIVERY.md
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i2_gama_kidslegacy/COLUMNS.txt
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i2_gama_kidslegacy/checksums_gama.txt
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i2_gama_kidslegacy/STAGE_COUNTS_lens.json
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i2_gama_kidslegacy/STAGE_COUNTS_source.json
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i2_gama_kidslegacy/KiDS_Legacy_NS_unblind_final.readme.txt
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i2_gama_kidslegacy/gama_schema/SersicCatSDSSv09.par
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i2_gama_kidslegacy/build_lens_table.py
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i2_gama_kidslegacy/build_isolation.py
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i2_gama_kidslegacy/build_sources_and_join.py
+
+--- KiDS-Legacy COSMIC SHEAR DATA VECTORS + SOM n(z) (raw.githubusercontent) ---
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i2_gama_kidslegacy/kids_legacy_cosmicshear_data/KiDS_Legacy_cosebis.fits
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i2_gama_kidslegacy/kids_legacy_cosmicshear_data/KiDS_Legacy_bandpowers.fits
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i2_gama_kidslegacy/kids_legacy_cosmicshear_data/KiDS_Legacy_xipm.fits
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/i2_gama_kidslegacy/kids_legacy_cosmicshear_data/Nz_covariance.txt
+
+--- TOO LARGE TO RE-HOST (>2 GiB GitHub asset cap) — FETCH FROM THE PUBLISHER ---
+https://kids.strw.leidenuniv.nl/DR5/data_files/KiDS_Legacy_NS_unblind_final.fits.gz
+https://kids.strw.leidenuniv.nl/DR5/data_files/KiDS_Legacy_NS_unblind_final.readme.txt
+https://kids.strw.leidenuniv.nl/sci_data/KiDS_Legacy_cosmic_shear_data_release.tar.gz
+https://kids.strw.leidenuniv.nl/DR4/data_files/KiDS_DR4.1_ugriZYJHKs_SOM_gold_WL_cat.fits
+https://kids.strw.leidenuniv.nl/DR4/data_files/KiDS1000_SOM_N_of_Z.tar.gz
+
+--- DEFERRED, DIRECTLY FETCHABLE ---
+https://www.gama-survey.org/dr4/data/cat/Randoms/v02/Randomsv02.fits

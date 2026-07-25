@@ -31,7 +31,15 @@ SGOUS  uid://A002/X8fa7af/X10
 | `scripts/*.tgz` | the original calibration-script tarballs as published |
 
 Reference-image tarballs (all four, 1.67 GiB total) are attached to the GitHub **release**, not
-committed here.
+committed here. Complete URLs, our computed md5s, and a per-tarball FITS inventory are at the
+bottom of `URLS.md`. Highlights:
+
+- **Band 4** carries `SDP.81.Band4.CO_z3.042.fits` (1.07 GB) — the **only untapered line cube**
+  in the whole SV release, and therefore the only published product that meets your no-taper
+  requirement.
+- **Band 6** carries the CO(8-7) and H2O cubes together — the one arm where calibration cancels
+  by construction (same 9 EBs, same solution). See FINDINGS section 4.
+- **Band 7** carries the CO(10-9) cube and the sharpest continuum (31 x 23 mas).
 
 ## Volume, and what could not be re-hosted
 - ASA route **540.84 GiB** / SV-portal route **402.19 GiB** (heavily overlapping).

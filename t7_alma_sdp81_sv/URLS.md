@@ -87,3 +87,56 @@ https://almascience.eso.org/dataPortal/2011.0.00016.SV_2011-08-01_003_of_006.tar
 https://almascience.eso.org/dataPortal/2011.0.00016.SV_2011-08-01_004_of_006.tar    # 1,721,222 bytes
 https://almascience.eso.org/dataPortal/2011.0.00016.SV_2011-08-01_005_of_006.tar    # 1,721,222 bytes
 https://almascience.eso.org/dataPortal/2011.0.00016.SV_2011-08-01_006_of_006.tar    # 10,240 bytes
+
+---
+
+## MIRRORED ON THIS REPO — reference images (the only products under GitHub's 2 GiB cap)
+
+Each was downloaded from the SV portal, byte-count matched, gzip-CRC verified, and opened.
+The md5 values below are **ours** — computed after download. **ALMA publishes no checksum**,
+so these are a self-consistency reference for re-downloads, NOT a publisher checksum.
+
+https://github.com/xergon/gsg-tcg-data/releases/download/t7-alma-sdp81-sv-v1/SDP81_Band4_ReferenceImages_z3.042.tgz    # 1,212,386,119 bytes  md5 6c4ed2a251aac9ec4a8ddf1fad2d09a2  [Band 4]
+https://github.com/xergon/gsg-tcg-data/releases/download/t7-alma-sdp81-sv-v1/SDP81_Band6_ReferenceImages.tgz    # 386,715,687 bytes  md5 3b313d31535e0e371ee7b9c5095c1d61  [Band 6]
+https://github.com/xergon/gsg-tcg-data/releases/download/t7-alma-sdp81-sv-v1/SDP81_Band7_ReferenceImages.tgz    # 186,502,606 bytes  md5 83a7a6aae1210deec9bc338148316c53  [Band 7]
+https://github.com/xergon/gsg-tcg-data/releases/download/t7-alma-sdp81-sv-v1/SDP81_Band6%2B7_ReferenceImages.tgz    # 1,721,222 bytes  md5 6c552534ab37e193cf68999e05945994  [Band 6+7]
+
+### FITS inventory inside each (verified by listing the archives)
+
+**Band 4** (`SDP81_Band4_ReferenceImages_z3.042/`) — the only band with an untapered line cube:
+```
+SDP.81.Band4.CO_z3.042.fits              1,071,118,080   CO(5-4) cube, UNTAPERED, 10 mas cells
+SDP.81.Band4.CO_smooth_z3.042.fits         215,072,640   CO(5-4) cube, 1 Mlambda taper
+SDP.81.Band4.CO.mom0_z3.042.fits             9,118,080   moment-0, untapered
+SDP.81.Band4.CO_smooth.mom0_z3.042.fits      1,926,720   moment-0, tapered
+SDP.81_B4_cont.fits                          9,120,960   continuum, 60 x 54 mas
+SDP.81_B4_cont_smooth.fits                   9,123,840   continuum, tapered
+```
+
+**Band 6** (`SDP81_Band6_ReferenceImages/`) — both tracers of the calibration-free arm:
+```
+SDP81_9exec.h2o.R1uvtaper1000klambda.10.5kms.fits            198,838,080   H2O cube
+SDP81_9exec.co87.R1uvtaper1000klambda.fits                   180,855,360   CO(8-7) cube
+SDP81_band6_9exec.contR1.image.fits                           36,146,880   continuum, 39 x 30 mas
+SDP81_9exec.co87.R1uvtaper1000klambda.mom0.2sigma.fits         2,030,400   CO(8-7) moment-0
+SDP81_9exec.h2o.R1uvtaper1000klambda.10.5kms.mom0_4sigma.fits  1,949,760   H2O moment-0
+```
+Note: the Band 6 README lists only 4 files here; the tarball actually contains **5** — the
+H2O `mom0_4sigma` map is undocumented.
+
+**Band 7** (`SDP81_Band7_ReferenceImages/`):
+```
+SDP81_11exec.co109.R1uvtaper1000kl.image.fits                180,786,240   CO(10-9) cube
+SDP81_band7_11exec.contR1.image.fits                          36,158,400   continuum, 31 x 23 mas
+SDP81_11exec.co109.R1uvtaper1000kl.image.mom0_2.5sigma.fits    1,961,280   CO(10-9) moment-0
+```
+
+**Band 6+7 combined** (`SDP81_Band6+7_ReferenceImages/`):
+```
+SDP81_B67.continuum.R1uvtaper1000klambda.image.tt0.fits          1,961,280   combined continuum
+SDP81_B67.continuum.R1uvtaper1000klambda.image.alpha.fits        1,817,280   spectral index
+SDP81_B67.continuum.R1uvtaper1000klambda.image.alpha.error.fits  1,817,280   spectral index error
+```
+ALMA's own caveat on the spectral index: it *"did not work well at full resolution, as evidenced by
+the almost complete masking of the resulting spectral index map"* — the alpha map is only usable
+tapered, and even then the flux densities are, in ALMA's words, not well constrained.

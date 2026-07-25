@@ -1,0 +1,124 @@
+{
+ "built_utc": null,
+ "method": "uproot 5.6.9 opening the record's ONLINE file directly over https://opendata.cern.ch/eos/opendata/... (HTTP range reads). No CMSSW, no XRootD, no download of the full file.",
+ "readable_without_cmssw": {
+  "recoPFJets_ak5PFJets__RECO": {
+   "split": true,
+   "n_subbranches": 39,
+   "leaves": [
+    "qx3_",
+    "pt_",
+    "eta_",
+    "phi_",
+    "mass_",
+    "vertex_.fCoordinates.fX/fY/fZ",
+    "pdgId_",
+    "status_",
+    "mJetArea",
+    "mPileupEnergy",
+    "mPassNumber",
+    "m_specific.mChargedHadronEnergy",
+    "m_specific.mNeutralHadronEnergy",
+    "m_specific.mPhotonEnergy",
+    "m_specific.mElectronEnergy",
+    "m_specific.mMuonEnergy",
+    "m_specific.mHFHadronEnergy",
+    "m_specific.mHFEMEnergy",
+    "m_specific.mChargedHadronMultiplicity",
+    "m_specific.mNeutralHadronMultiplicity",
+    "m_specific.mPhotonMultiplicity",
+    "m_specific.mElectronMultiplicity",
+    "m_specific.mMuonMultiplicity",
+    "m_specific.mHFHadronMultiplicity",
+    "m_specific.mHFEMMultiplicity",
+    "m_specific.mChargedEmEnergy",
+    "m_specific.mChargedMuEnergy",
+    "m_specific.mNeutralEmEnergy",
+    "m_specific.mChargedMultiplicity",
+    "m_specific.mNeutralMultiplicity"
+   ],
+   "verified_in": [
+    "cms-5 (DATA)",
+    "cms-776 (PYTHIA6)",
+    "cms-750 (HERWIGPP)"
+   ]
+  },
+  "recoPFCandidates_particleFlow__RECO": {
+   "split": true,
+   "n_subbranches": 49,
+   "leaves_used": [
+    "pt_",
+    "eta_",
+    "phi_",
+    "mass_",
+    "pdgId_",
+    "qx3_",
+    "vertex_.fCoordinates.fX/fY/fZ",
+    "ecalERatio_",
+    "hcalERatio_",
+    "rawEcalEnergy_",
+    "rawHcalEnergy_",
+    "flags_",
+    "vertexType_",
+    "positionAtECALEntrance_.fCoordinates.fX/fY/fZ"
+   ],
+   "verified_in": [
+    "cms-5 (DATA)",
+    "cms-776 (PYTHIA6)",
+    "cms-750 (HERWIGPP)"
+   ]
+  },
+  "EventAuxiliary_raw_byte_parse": {
+   "note": "edm::EventAuxiliary FAILS uproot deserialization (DeserializationError, edm::Hash<2> version 9). But run/lumi/event are recoverable by a fixed-offset big-endian uint32 read of the branch's raw basket byte segments.",
+   "offsets_bytes_big_endian_uint32": {
+    "run": 43,
+    "luminosityBlock": 47,
+    "event": 51
+   },
+   "offset_is_file_local": "Locate it per file by scanning for the offset where the uint32 lies in the dataset's declared run range for ALL entries of basket 0 \u2014 that is how these offsets were found. Do NOT hard-code 43/47/51 blindly.",
+   "validation": {
+    "file": "00052C5A-EF70-E011-B43F-00266CF32A00.root",
+    "n_events": 5679,
+    "unique_runs": [
+     146511
+    ],
+    "lumi_min": 182,
+    "lumi_max": 189,
+    "n_unique_lumisections": 8,
+    "event_number_uniqueness": 1.0,
+    "fraction_inside_golden_json": 1.0,
+    "lumi_monotone_nondecreasing": true
+   }
+  }
+ },
+ "NOT_readable_without_cmssw": {
+  "recoPFJets...obj.dau": "the jet->constituent edm::PtrVector. uproot raises NotImplementedError: memberwise serialization of AsArray. => the CMS ak5PFJet constituent list cannot be read. Constituent-level substructure must be obtained by RE-CLUSTERING the full particleFlow PFCandidate collection (anti-kt R=0.5), which IS readable.",
+  "recoGenJets_ak5GenJets__SIM": "unsplit in AODSIM (4 wrapper sub-branches only) - NOT readable",
+  "recoGenParticles_genParticles__SIM": "unsplit in AODSIM - NOT readable",
+  "GenEventInfoProduct_generator__SIM": "unsplit in AODSIM - NOT readable => the per-event generator weight and pthat are NOT accessible without CMSSW. Only the dataset-level pthat/HT bin (from the dataset name) is available.",
+  "EventAuxiliary (as an object)": "uproot DeserializationError - use the raw byte parse above instead"
+ },
+ "structural_facts": {
+  "mJetArea_is_zero": "ak5PFJets mJetArea == 0.0 for ALL 108,120 jets in the checked cms-5 data file. Jet area is not populated in the 2010 AOD => area-median (rho*A) pileup subtraction cannot be done from the stored value. double_ak5PFJets_rho_RECO IS present and readable.",
+  "jets_per_event_cms5_sample": 19.04,
+  "pt_spectrum_one_cms5_file": {
+   "n_jets": 108120,
+   "n_events": 5679,
+   "pt_gt_30": 10740,
+   "pt_gt_50": 7681,
+   "pt_gt_100": 1487,
+   "pt_gt_150": 224,
+   "pt_gt_200": 50,
+   "pt_gt_300": 4
+  }
+ },
+ "online_file_event_counts_singleton_records": {
+  "cms-776 PYTHIA6 300-470": 24000,
+  "cms-784 PYTHIA6 470-600": 14400,
+  "cms-789 PYTHIA6 600-800": 14400,
+  "cms-735 MADGRAPH HT250-500": 480,
+  "cms-736 MADGRAPH HT500-1000": 3789,
+  "cms-739 HERWIGPP flat": 4744,
+  "cms-750 HERWIGPP 300-470": "ALL 52 files online = 1,000,000 events (one sampled file = 20,982)"
+ }
+}

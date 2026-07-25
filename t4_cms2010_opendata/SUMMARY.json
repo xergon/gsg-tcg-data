@@ -1,0 +1,292 @@
+{
+ "row": "T4",
+ "target": "HOJD \u2014 higher-order jet discrepancy",
+ "built_utc": "2026-07-25T09:52:56Z",
+ "what": "Full enumeration (manifest + official file index + metadata) of the 10 CMS 2010 Open Data records named by T4, plus the validation mask in full, plus a measured report of what is computable from AOD without CMSSW.",
+ "all_outputs_are_plain_utf8_text": true,
+ "github_release_assets_used": false,
+ "totals": {
+  "records": 10,
+  "files": 6151,
+  "bytes": 6264892341783,
+  "events": 47061889,
+  "online_files": 1773,
+  "online_bytes": 2385933274214,
+  "on_demand_files": 4378,
+  "on_demand_bytes": 3878959067569
+ },
+ "records": [
+  {
+   "recid": "cms-5",
+   "family": "DATA",
+   "doi": "10.7483/OPENDATA.CMS.3S7F.2E9W",
+   "title": "/Jet/Run2010B-Apr21ReReco-v1/AOD",
+   "events": 20022826,
+   "files": 1664,
+   "bytes": 2029445136008,
+   "files_online": 1664,
+   "online_bytes": 2029445136008,
+   "record_url": "https://opendata.cern.ch/record/5",
+   "file_index_csv": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t4_cms2010_opendata/file_index/cms-5_file_index.csv"
+  },
+  {
+   "recid": "cms-776",
+   "family": "PYTHIA6",
+   "doi": "10.7483/OPENDATA.CMS.M0DU.0ZIS",
+   "title": "/QCD_Pt_300to470_TuneZ2star_HFshowerLibrary_7TeV_pythia6/Summer12-LowPU2010_DR42_PU_S0_START42_V17B-v1/AODSIM",
+   "events": 1000000,
+   "files": 48,
+   "bytes": 166889613488,
+   "files_online": 1,
+   "online_bytes": 4007779927,
+   "record_url": "https://opendata.cern.ch/record/776",
+   "file_index_csv": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t4_cms2010_opendata/file_index/cms-776_file_index.csv"
+  },
+  {
+   "recid": "cms-784",
+   "family": "PYTHIA6",
+   "doi": "10.7483/OPENDATA.CMS.IUW0.ZE04",
+   "title": "/QCD_Pt_470to600_TuneZ2star_HFshowerLibrary_7TeV_pythia6/Summer12-LowPU2010_DR42_PU_S0_START42_V17B-v1/AODSIM",
+   "events": 995200,
+   "files": 53,
+   "bytes": 172860658093,
+   "files_online": 1,
+   "online_bytes": 2505826105,
+   "record_url": "https://opendata.cern.ch/record/784",
+   "file_index_csv": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t4_cms2010_opendata/file_index/cms-784_file_index.csv"
+  },
+  {
+   "recid": "cms-789",
+   "family": "PYTHIA6",
+   "doi": "10.7483/OPENDATA.CMS.DMTH.QZAA",
+   "title": "/QCD_Pt_600to800_TuneZ2star_HFshowerLibrary_7TeV_pythia6/Summer12-LowPU2010_DR42_PU_S0_START42_V17B-v1/AODSIM",
+   "events": 984800,
+   "files": 50,
+   "bytes": 173210841006,
+   "files_online": 1,
+   "online_bytes": 2530935430,
+   "record_url": "https://opendata.cern.ch/record/789",
+   "file_index_csv": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t4_cms2010_opendata/file_index/cms-789_file_index.csv"
+  },
+  {
+   "recid": "cms-750",
+   "family": "HERWIGPP",
+   "doi": "10.7483/OPENDATA.CMS.3LQB.XHC8",
+   "title": "/QCD_Pt-300to470_Tune23_HFshowerLibrary_7TeV_herwigpp/Summer12-LowPU2010_DR42_PU_S0_START42_V17B-v1/AODSIM",
+   "events": 1000000,
+   "files": 52,
+   "bytes": 194943939664,
+   "files_online": 52,
+   "online_bytes": 194943939664,
+   "record_url": "https://opendata.cern.ch/record/750",
+   "file_index_csv": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t4_cms2010_opendata/file_index/cms-750_file_index.csv"
+  },
+  {
+   "recid": "cms-752",
+   "family": "HERWIGPP",
+   "doi": "10.7483/OPENDATA.CMS.SHCL.L4DN",
+   "title": "/QCD_Pt-470to600_Tune23_HFshowerLibrary_7TeV_herwigpp/Summer12-LowPU2010_DR42_PU_S0_START42_V17B-v1/AODSIM",
+   "events": 1000000,
+   "files": 65,
+   "bytes": 204997782038,
+   "files_online": 30,
+   "online_bytes": 90687868217,
+   "record_url": "https://opendata.cern.ch/record/752",
+   "file_index_csv": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t4_cms2010_opendata/file_index/cms-752_file_index.csv"
+  },
+  {
+   "recid": "cms-754",
+   "family": "HERWIGPP",
+   "doi": "10.7483/OPENDATA.CMS.HXIO.IG23",
+   "title": "/QCD_Pt-600to800_Tune23_HFshowerLibrary_7TeV_herwigpp/Summer12-LowPU2010_DR42_PU_S0_START42_V17B-v1/AODSIM",
+   "events": 1000000,
+   "files": 64,
+   "bytes": 209178349148,
+   "files_online": 21,
+   "online_bytes": 60442385321,
+   "record_url": "https://opendata.cern.ch/record/754",
+   "file_index_csv": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t4_cms2010_opendata/file_index/cms-754_file_index.csv"
+  },
+  {
+   "recid": "cms-739",
+   "family": "HERWIGPP_FLAT",
+   "doi": "10.7483/OPENDATA.CMS.0BXP.EATB",
+   "title": "/QCD_Pt-15to1000_TuneEE3C_Flat_7TeV_herwigpp/Summer12-LowPU2010_DR42_BS2011_PU_S0_START42_V17B-v1/AODSIM",
+   "events": 10804952,
+   "files": 933,
+   "bytes": 1498144344529,
+   "files_online": 1,
+   "online_bytes": 658415460,
+   "record_url": "https://opendata.cern.ch/record/739",
+   "file_index_csv": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t4_cms2010_opendata/file_index/cms-739_file_index.csv"
+  },
+  {
+   "recid": "cms-735",
+   "family": "MADGRAPH_PYTHIA6",
+   "doi": "10.7483/OPENDATA.CMS.16QN.CYZ2",
+   "title": "/QCD_HT-250To500_TuneZ2Star_7TeV-madgraph-pythia6/Summer12-LowPU2010_DR42_BS2011_PU_S0_START42_V17B-v1/AODSIM",
+   "events": 5602739,
+   "files": 1663,
+   "bytes": 830354322579,
+   "files_online": 1,
+   "online_bytes": 73095744,
+   "record_url": "https://opendata.cern.ch/record/735",
+   "file_index_csv": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t4_cms2010_opendata/file_index/cms-735_file_index.csv"
+  },
+  {
+   "recid": "cms-736",
+   "family": "MADGRAPH_PYTHIA6",
+   "doi": "10.7483/OPENDATA.CMS.4AMU.8HJ2",
+   "title": "/QCD_HT-500To1000_TuneZ2Star_7TeV-madgraph-pythia6/Summer12-LowPU2010_DR42_BS2011_PU_S0_START42_V17B-v1/AODSIM",
+   "events": 4651372,
+   "files": 1559,
+   "bytes": 784867355230,
+   "files_online": 1,
+   "online_bytes": 637892338,
+   "record_url": "https://opendata.cern.ch/record/736",
+   "file_index_csv": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t4_cms2010_opendata/file_index/cms-736_file_index.csv"
+  }
+ ],
+ "validation_mask": {
+  "filename": "Cert_136033-149442_7TeV_Apr21ReReco_Collisions10_JSON_v2.txt",
+  "source_record": "https://opendata.cern.ch/record/1000",
+  "doi": "10.7483/OPENDATA.CMS.YDT4.BW6J",
+  "bytes": 8873,
+  "publisher_adler32": "b829579f",
+  "adler32_recomputed_match": true,
+  "sha256": "bc6c6b538f044aa7df27b2fddf01263aef4c9d4a90d0901a70e0d94a2557605b",
+  "n_runs": 273,
+  "run_min": 136035,
+  "run_max": 149294,
+  "n_ranges": 522,
+  "n_lumisections": 74596
+ },
+ "key_findings": [
+  "AOD/AODSIM ak5PFJets and particleFlow PFCandidates are SPLIT and uproot-readable over plain HTTPS with no CMSSW.",
+  "The jet->constituent PtrVector (obj.dau) is NOT readable \u2014 constituent-level HOJD features require re-clustering anti-kt R=0.5 from the PFCandidate collection.",
+  "GenEventInfoProduct / GenJets / genParticles are UNSPLIT in AODSIM \u2014 per-event generator weight and pthat are NOT obtainable without CMSSW.",
+  "run/lumi/event ARE recoverable from raw edm::EventAuxiliary bytes (BE uint32 at offsets 43/47/51 in the checked file); validated 5679/5679 events inside the golden JSON.",
+  "mJetArea == 0.0 for all 108,120 jets checked in a cms-5 file \u2014 jet area is not populated in the 2010 AOD.",
+  "4,378 of 6,151 files (3.879 TB) are on CTA tape: hot EOS returns HTTP 404, the cold uri times out. The MadGraph+Pythia6 leg has ONE online file per record (480 and 3,789 events) \u2014 a matched three-family test is tape-blocked there.",
+  "No MOD-style derived per-jet product exists for CMS 2010 \u2014 unlike 2011A. AOD or nothing.",
+  "7 TeV Herwig++ QCD exists ONLY in the Summer12-LowPU2010 production => 2010 is the only year where all three generator families coexist at 7 TeV.",
+  "These 2010 records are Summer12-LowPU2010_DR42, PU_S0 (zero pileup), CMSSW 4.2.8, START42_V17B \u2014 a different year/tune/pileup era from the delivered 2011A STAGE1 table."
+ ],
+ "deferred": {
+  "bulk_bytes": 6264892341783,
+  "reason": "AOD bulk not mirrored: 6.265 TB, GitHub release cap 2 GiB, and the thread cannot materialise release binaries. Every file is directly fetchable from CERN via the https_url in the per-record index.",
+  "tape_bytes": 3878959067569,
+  "tape_files": 4378,
+  "tape_note": "Not fetchable by any automated route; needs a human recall request to the CERN Open Data team against the published exact list."
+ },
+ "outputs": [
+  {
+   "path": "AOD_UPROOT_PROBE.json",
+   "bytes": 4555,
+   "sha256": "64b7a98d6b22543432949b70860230cf2716f8ff3fba10a6129e53893c873af7",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t4_cms2010_opendata/AOD_UPROOT_PROBE.json"
+  },
+  {
+   "path": "Cert_136033-149442_7TeV_Apr21ReReco_Collisions10_JSON_v2.txt",
+   "bytes": 8873,
+   "sha256": "bc6c6b538f044aa7df27b2fddf01263aef4c9d4a90d0901a70e0d94a2557605b",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t4_cms2010_opendata/Cert_136033-149442_7TeV_Apr21ReReco_Collisions10_JSON_v2.txt"
+  },
+  {
+   "path": "MANIFEST_RECORDS.csv",
+   "bytes": 4908,
+   "sha256": "ff88fce75008ea803c3e8d242ac87f517436b3baf79637fbf7038bbe283ebe96",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t4_cms2010_opendata/MANIFEST_RECORDS.csv"
+  },
+  {
+   "path": "ONLINE_SUBSET.csv",
+   "bytes": 775632,
+   "sha256": "02d7b329657537570c339596fa1df9c7bd4e3a3a9a97832ed0444d145d33434b",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t4_cms2010_opendata/ONLINE_SUBSET.csv"
+  },
+  {
+   "path": "README.md",
+   "bytes": 15463,
+   "sha256": "c87275f731af3957cf46becf94fa5d23285a5f0c7df3ec9301565543973e20b1",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t4_cms2010_opendata/README.md"
+  },
+  {
+   "path": "RECORD_METADATA.json",
+   "bytes": 60648,
+   "sha256": "76c09cb0f01fad8f987df64f1202c45272099acf2bcfe5d4b49c79cbffd536c1",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t4_cms2010_opendata/RECORD_METADATA.json"
+  },
+  {
+   "path": "SCOUT_SUBSET.csv",
+   "bytes": 7679,
+   "sha256": "383e6d16f9db28d28770f22f3cdabf156c3eb211a9a3355cce6b0c4c18899bc1",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t4_cms2010_opendata/SCOUT_SUBSET.csv"
+  },
+  {
+   "path": "file_index/cms-5_file_index.csv",
+   "bytes": 693608,
+   "sha256": "555185e35213d19841bfe25e260f2a99ff90bf0f9b918cee8c0e68c1e1b8d6e3",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t4_cms2010_opendata/file_index/cms-5_file_index.csv"
+  },
+  {
+   "path": "file_index/cms-735_file_index.csv",
+   "bytes": 1287204,
+   "sha256": "a4e985fc716cc34304776fa7c77f124b8bf6e8fb5e2e2118d128e144c6ef2daf",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t4_cms2010_opendata/file_index/cms-735_file_index.csv"
+  },
+  {
+   "path": "file_index/cms-736_file_index.csv",
+   "bytes": 1211391,
+   "sha256": "0a1713a5b088920d1c33b44b55c875e15916887e38421ddb58d386a04a1cff0f",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t4_cms2010_opendata/file_index/cms-736_file_index.csv"
+  },
+  {
+   "path": "file_index/cms-739_file_index.csv",
+   "bytes": 703051,
+   "sha256": "b9a13f54e87af4a0cb1eac545db8d001d7998da589daac13cca6550063df11ee",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t4_cms2010_opendata/file_index/cms-739_file_index.csv"
+  },
+  {
+   "path": "file_index/cms-750_file_index.csv",
+   "bytes": 39189,
+   "sha256": "e210d63b9859f14821e1b198e531958992449e33f4824165e9156223ba8792e7",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t4_cms2010_opendata/file_index/cms-750_file_index.csv"
+  },
+  {
+   "path": "file_index/cms-752_file_index.csv",
+   "bytes": 49070,
+   "sha256": "e4d2f788fcef138e4e4871f86ffeb166c8c24cb42aa5ad0be044d1360e0e8eb5",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t4_cms2010_opendata/file_index/cms-752_file_index.csv"
+  },
+  {
+   "path": "file_index/cms-754_file_index.csv",
+   "bytes": 48341,
+   "sha256": "1fa86d807dafe6dfc120147c1d05c4292b377e80da8e37df9dbb8a87bcc81083",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t4_cms2010_opendata/file_index/cms-754_file_index.csv"
+  },
+  {
+   "path": "file_index/cms-776_file_index.csv",
+   "bytes": 36707,
+   "sha256": "15d294fb37efc4106c47207ed309f6bb3ac17a5b45f0cb5fc3d97502c9a6019a",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t4_cms2010_opendata/file_index/cms-776_file_index.csv"
+  },
+  {
+   "path": "file_index/cms-784_file_index.csv",
+   "bytes": 40522,
+   "sha256": "9e4f3f17166cb3a7de5974b0b9b6e7339b4e512a1ba6e0303de41de4eb28e8e1",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t4_cms2010_opendata/file_index/cms-784_file_index.csv"
+  },
+  {
+   "path": "file_index/cms-789_file_index.csv",
+   "bytes": 38232,
+   "sha256": "6a45852f50ae6cb93818ba87fb052021b1decc68d6fee6bbb89f99bb5255e5e6",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t4_cms2010_opendata/file_index/cms-789_file_index.csv"
+  },
+  {
+   "path": "validated_runs_lumi_ranges.csv",
+   "bytes": 9421,
+   "sha256": "ca0f9731e0b0310a75de7eb2f5a280a8cef1e5bb119c0972186ca295ce02358b",
+   "url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/main/t4_cms2010_opendata/validated_runs_lumi_ranges.csv"
+  }
+ ]
+}

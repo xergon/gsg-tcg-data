@@ -1,0 +1,1630 @@
+{
+ "cms-5": {
+  "_availability_details": {
+   "online": 1664
+  },
+  "abstract": {
+   "description": "<p>Jet primary dataset in AOD format from RunB of 2010</p> <p>The list of validated runs, which must be applied to all analyses, can be found in</p>",
+   "links": [
+    {
+     "recid": "1000"
+    }
+   ]
+  },
+  "accelerator": "CERN-LHC",
+  "availability": "online",
+  "collaboration": {
+   "name": "CMS collaboration",
+   "recid": "450"
+  },
+  "collections": [
+   "CMS-Primary-Datasets"
+  ],
+  "collision_information": {
+   "energy": "7TeV",
+   "type": "pp"
+  },
+  "date_created": [
+   "2010"
+  ],
+  "date_published": "2014",
+  "date_reprocessed": "2011",
+  "distribution": {
+   "formats": [
+    "root",
+    "aod"
+   ],
+   "number_events": 20022826,
+   "number_files": 1664,
+   "size": 2029445136008
+  },
+  "doi": "10.7483/OPENDATA.CMS.3S7F.2E9W",
+  "experiment": [
+   "CMS"
+  ],
+  "license": {
+   "attribution": "CC0-1.0"
+  },
+  "methodology": {
+   "description": "<p>Events stored in this primary dataset were selected because of presence of at least one high-energy jet in the event. </p>    <p><strong>Data taking / HLT</strong>\n        <br/>The collision data were assigned to different RAW datasets using the following <a href=\"/record/1699\">HLT configuration</a>.</p>\n        <p><strong>Data processing / RECO</strong>\n        <br/>This primary AOD dataset was processed from the RAW dataset by the following step:\n        <br/>Step: RECO\n        <br/>Release: CMSSW_4_2_1_patch1\n        <br/>Global tag: FT_R_42_V10A::All\n        <br/>The configuration file for RECO step can be generated with <a href=\"/docs/cms-guide-event-production#the-cmsdriver-tool\">the cmsDriver command line script</a> in the corresponding CMSSW release area:\n  <br><code>cmsDriver.py reco -s RAW2DIGI,L1Reco,RECO --data --conditions FT_R_42_V10A::All --eventcontent AOD --no_exec --python reco_cmsdriver2010.py</code>      </p>   <p><strong>HLT trigger paths</strong>      <br/>The possible <a href=\"/docs/cms-guide-trigger-system#hlt-trigger-path-definitions\">HLT trigger paths</a> in this dataset are:      <br/>HLT_DiJetAve100U      <br/>HLT_DiJetAve140U      <br/>HLT_DiJetAve15U      <br/>HLT_DiJetAve30U      <br/>HLT_DiJetAve50U      <br/>HLT_DiJetAve70U      <br/>HLT_HT120U      <br/>HLT_HT140U      <br/>HLT_Jet100U      <br/>HLT_Jet140U      <br/>HLT_Jet15U      <br/>HLT_Jet15U_HcalNoiseFiltered      <br/>HLT_Jet180U      <br/>HLT_Jet30U      <br/>HLT_Jet50U      <br/>HLT_Jet70U      <br/>HLT_QuadJet20U      <br/>HLT_QuadJet25U</p>"
+  },
+  "pids": {
+   "oai": {
+    "id": "oai:cernopendata.cern:5"
+   }
+  },
+  "publisher": "CERN Open Data Portal",
+  "recid": "5",
+  "relations": [
+   {
+    "title": "/Jet/Run2010B-v1/RAW",
+    "type": "isChildOf"
+   }
+  ],
+  "run_numbers": [
+   "146240",
+   "146242",
+   "146248",
+   "146315",
+   "146317",
+   "146323",
+   "146325",
+   "146329",
+   "146331",
+   "146335",
+   "146337",
+   "146339",
+   "146427",
+   "146428",
+   "146430",
+   "146431",
+   "146436",
+   "146437",
+   "146438",
+   "146440",
+   "146442",
+   "146445",
+   "146506",
+   "146509",
+   "146510",
+   "146511",
+   "146513",
+   "146514",
+   "146517",
+   "146555",
+   "146574",
+   "146588",
+   "146589",
+   "146644",
+   "146674",
+   "146698",
+   "146703",
+   "146709",
+   "146710",
+   "146712",
+   "146713",
+   "146715",
+   "146716",
+   "146717",
+   "146718",
+   "146719",
+   "146721",
+   "146724",
+   "146728",
+   "146729",
+   "146733",
+   "146782",
+   "146804",
+   "146806",
+   "146807",
+   "146815",
+   "146889",
+   "146895",
+   "146898",
+   "146944",
+   "146946",
+   "147043",
+   "147048",
+   "147082",
+   "147111",
+   "147114",
+   "147115",
+   "147116",
+   "147119",
+   "147146",
+   "147191",
+   "147195",
+   "147196",
+   "147205",
+   "147206",
+   "147212",
+   "147214",
+   "147216",
+   "147217",
+   "147218",
+   "147219",
+   "147221",
+   "147222",
+   "147225",
+   "147248",
+   "147283",
+   "147284",
+   "147287",
+   "147289",
+   "147290",
+   "147291",
+   "147370",
+   "147390",
+   "147437",
+   "147439",
+   "147442",
+   "147450",
+   "147451",
+   "147452",
+   "147453",
+   "147454",
+   "147462",
+   "147500",
+   "147589",
+   "147682",
+   "147683",
+   "147685",
+   "147749",
+   "147752",
+   "147753",
+   "147754",
+   "147755",
+   "147756",
+   "147757",
+   "147826",
+   "147827",
+   "147829",
+   "147926",
+   "147927",
+   "147928",
+   "147929",
+   "147935",
+   "147991",
+   "147992",
+   "147993",
+   "148001",
+   "148002",
+   "148029",
+   "148031",
+   "148032",
+   "148052",
+   "148057",
+   "148058",
+   "148062",
+   "148064",
+   "148068",
+   "148108",
+   "148783",
+   "148787",
+   "148789",
+   "148791",
+   "148794",
+   "148795",
+   "148796",
+   "148797",
+   "148798",
+   "148803",
+   "148809",
+   "148816",
+   "148819",
+   "148822",
+   "148828",
+   "148844",
+   "148853",
+   "148858",
+   "148859",
+   "148860",
+   "148861",
+   "148862",
+   "148864",
+   "148873",
+   "148886",
+   "148897",
+   "148911",
+   "148940",
+   "148952",
+   "148953",
+   "149003",
+   "149011",
+   "149058",
+   "149063",
+   "149064",
+   "149067",
+   "149069",
+   "149083",
+   "149085",
+   "149091",
+   "149092",
+   "149175",
+   "149181",
+   "149182",
+   "149272",
+   "149273",
+   "149276",
+   "149283",
+   "149284",
+   "149291",
+   "149293",
+   "149294",
+   "149304",
+   "149372",
+   "149375",
+   "149378",
+   "149379",
+   "149392",
+   "149441",
+   "149442",
+   "149446",
+   "149459",
+   "149461",
+   "149509",
+   "149510",
+   "149709",
+   "149711"
+  ],
+  "run_period": [
+   "Run2010B"
+  ],
+  "system_details": {
+   "container_images": [
+    {
+     "name": "docker.io/cmsopendata/cmssw_4_2_8-slc5_amd64_gcc434:latest",
+     "registry": "dockerhub"
+    },
+    {
+     "name": "gitlab-registry.cern.ch/cms-cloud/cmssw-docker-opendata/cmssw_4_2_8-slc5_amd64_gcc434:latest",
+     "registry": "gitlab"
+    }
+   ],
+   "global_tag": "FT_R_42_V10A::All",
+   "release": "CMSSW_4_2_8"
+  },
+  "title": "/Jet/Run2010B-Apr21ReReco-v1/AOD",
+  "title_additional": "Jet primary dataset in AOD format from RunB of 2010 (/Jet/Run2010B-Apr21ReReco-v1/AOD)",
+  "type": {
+   "primary": "Dataset",
+   "secondary": [
+    "Collision"
+   ]
+  },
+  "usage": {
+   "description": "You can access these data through the CMS Virtual Machine. See the instructions for setting up the Virtual Machine and getting started in",
+   "links": [
+    {
+     "description": "How to install the CMS Virtual Machine",
+     "url": "/docs/cms-virtual-machine-2010"
+    },
+    {
+     "description": "Getting started with CMS open data",
+     "url": "/docs/cms-getting-started-2010"
+    }
+   ]
+  },
+  "validation": {
+   "description": "During data taking all the runs recorded by CMS are certified as good for physics analysis if all subdetectors, trigger, lumi and physics objects (tracking, electron, muon, photon, jet and MET) show the expected performance. Certification is based first on the offline shifters evaluation and later on the feedback provided by detector and Physics Object Group experts. Based on the above information, which is stored in a specific database called Run Registry, the Data Quality Monitoring group verifies the consistency of the certification and prepares a json file of certified runs to be used for physics analysis. For each reprocessing of the raw data, the above mentioned steps are repeated. For more information see:",
+   "links": [
+    {
+     "description": "CMS data quality monitoring: Systems and experiences",
+     "url": "http://iopscience.iop.org/1742-6596/219/7/072020/pdf/1742-6596_219_7_072020.pdf"
+    },
+    {
+     "description": "The CMS Data Quality Monitoring software experience and future improvements",
+     "url": "http://cds.cern.ch/record/1631039/files/CR2013_418.pdf"
+    },
+    {
+     "description": "The CMS data quality monitoring software: experience and future prospects",
+     "url": "http://iopscience.iop.org/1742-6596/513/3/032024/pdf/1742-6596_513_3_032024.pdf"
+    }
+   ]
+  }
+ },
+ "cms-735": {
+  "_availability_details": {
+   "on demand": 1662,
+   "online": 1
+  },
+  "abstract": {
+   "description": "<p>Simulated dataset QCD_HT-250To500_TuneZ2Star_7TeV-madgraph-pythia6 in AODSIM format for 2010 collision data.</p><p>See the description of the simulated dataset names in: <a href=\"/about/CMS-Simulated-Dataset-Names\">About CMS simulated dataset names</a>.</p><p>These simulated datasets correspond to the collision data collected by the CMS experiment in 2010.</p>"
+  },
+  "accelerator": "CERN-LHC",
+  "availability": "partial",
+  "categories": {
+   "primary": "Standard Model Physics",
+   "secondary": [
+    "QCD"
+   ],
+   "source": "CMS Collaboration"
+  },
+  "collaboration": {
+   "name": "CMS Collaboration",
+   "recid": "450"
+  },
+  "collections": [
+   "CMS-Simulated-Datasets"
+  ],
+  "collision_information": {
+   "energy": "7TeV",
+   "type": "pp"
+  },
+  "date_created": [
+   "2010"
+  ],
+  "date_published": "2018",
+  "date_reprocessed": "2010",
+  "distribution": {
+   "formats": [
+    "aodsim",
+    "root"
+   ],
+   "number_events": 5602739,
+   "number_files": 1663,
+   "size": 830354322579
+  },
+  "doi": "10.7483/OPENDATA.CMS.16QN.CYZ2",
+  "experiment": [
+   "CMS"
+  ],
+  "license": {
+   "attribution": "CC0-1.0"
+  },
+  "methodology": {
+   "description": "<p>These data were generated in several steps (see also <a href=\"/docs/cms-mc-production-overview\">CMS Monte Carlo production overview</a>):</p>",
+   "steps": [
+    {
+     "configuration_files": [
+      {
+       "cms_confdb_id": "c4fb56e6014a333c1824013a9a39b594",
+       "process": "LHE",
+       "title": "Configuration file"
+      }
+     ],
+     "global_tag": "START311_V2::All",
+     "note": "To get the exact generator parameters, please see <a href=\"/docs/cms-mc-production-overview#finding-the-generator-parameters\">Finding the generator parameters</a>.",
+     "output_dataset": "/QCD_HT-250To500_TuneZ2Star_7TeV-madgraph/Summer11-START311_V2-v2/GEN",
+     "release": "CMSSW_4_1_8_patch14",
+     "type": "LHE"
+    },
+    {
+     "configuration_files": [
+      {
+       "script": "#!/bin/bash\nsource /cvmfs/cms.cern.ch/cmsset_default.sh\nexport SCRAM_ARCH=slc5_amd64_gcc434\nif [ -r CMSSW_4_2_10/src ] ; then \n echo release CMSSW_4_2_10 already exists\nelse\nscram p CMSSW CMSSW_4_2_10\nfi\ncd CMSSW_4_2_10/src\neval `scram runtime -sh`\ncurl  -s https://raw.githubusercontent.com/cms-sw/genproductions/d45de22e7af5816cb5ee3b90c446eaff93ae187d/python/SevenTeV/Hadronizer_MgmMatchTuneZ2star_7TeV_madgraph_tauola_cff.py --retry 2 --create-dirs -o  Configuration/GenProduction/python/SevenTeV/Hadronizer_MgmMatchTuneZ2star_7TeV_madgraph_tauola_cff.py \n[ -s Configuration/GenProduction/python/SevenTeV/Hadronizer_MgmMatchTuneZ2star_7TeV_madgraph_tauola_cff.py ] || exit $?;\n\ncurl  -s https://raw.githubusercontent.com/cms-sw/genproductions/d45de22e7af5816cb5ee3b90c446eaff93ae187d/python/lowpu2010_customise.py --retry 2 --create-dirs -o  Configuration/GenProduction/python/lowpu2010_customise.py \n[ -s Configuration/GenProduction/python/lowpu2010_customise.py ] || exit $?;\n\n\nscram b\ncd ../../\ncmsDriver.py Configuration/GenProduction/python/SevenTeV/Hadronizer_MgmMatchTuneZ2star_7TeV_madgraph_tauola_cff.py --filein \"dbs:/QCD_HT-250To500_TuneZ2Star_7TeV-madgraph/Summer11-START311_V2-v2/GEN\" --fileout file:FSQ-LowPU2010-00002.root --mc --eventcontent RAWSIM --customise Configuration/GenProduction/lowpu2010_customise.py,Configuration/DataProcessing/Utils.addMonitoring --datatier GEN-SIM --conditions START42_V17B::All --beamspot Realistic7TeVCollision --step GEN,SIM --inline_custom 1 --python_filename FSQ-LowPU2010-00002_1_cfg.py --no_exec --inline_custom 1 -n 288 || exit $? ; \n\n",
+       "title": "Production script"
+      },
+      {
+       "script": "import FWCore.ParameterSet.Config as cms\n\nfrom Configuration.Generator.PythiaUEZ2starSettings_cfi import *\nfrom GeneratorInterface.ExternalDecays.TauolaSettings_cff import *\n\ngenerator = cms.EDFilter(\"Pythia6HadronizerFilter\",\n    pythiaHepMCVerbosity = cms.untracked.bool(True),\n    maxEventsToPrint = cms.untracked.int32(0),\n    pythiaPylistVerbosity = cms.untracked.int32(1),\n    comEnergy = cms.double(7000.0),\n    ExternalDecays = cms.PSet(\n        Tauola = cms.untracked.PSet(\n            TauolaPolar,\n            TauolaDefaultInputCards\n        ),\n        parameterSets = cms.vstring('Tauola')\n    ),\n    UseExternalGenerators = cms.untracked.bool(True),\n    PythiaParameters = cms.PSet(\n        pythiaUESettingsBlock,\n        processParameters = cms.vstring('MSEL=0         ! User defined processes', \n                        'PMAS(5,1)=4.8   ! b quark mass',\n                        'PMAS(6,1)=172.5 ! t quark mass',\n\t\t\t'MSTJ(1)=1       ! Fragmentation/hadronization on or off',\n\t\t\t'MSTP(61)=1      ! Parton showering on or off'),\n        # This is a vector of ParameterSet names to be read, in this order\n        parameterSets = cms.vstring('pythiaUESettings', \n            'processParameters')\n    ),\n    jetMatching = cms.untracked.PSet(\n       scheme = cms.string(\"Madgraph\"),\n       mode = cms.string(\"auto\"),\t# soup, or \"inclusive\" / \"exclusive\"\n       MEMAIN_nqmatch = cms.int32(5),\n       MEMAIN_etaclmax = cms.double(-1),\n       MEMAIN_qcut = cms.double(-1),\n       MEMAIN_minjets = cms.int32(-1),\n       MEMAIN_maxjets = cms.int32(-1),\n       MEMAIN_showerkt = cms.double(0),   \n       MEMAIN_excres = cms.string(\"\"),\n       outTree_flag = cms.int32(0)    \n    )    \n)\n",
+       "title": "Hadronizer parameters",
+       "url": "https://raw.githubusercontent.com/cms-sw/genproductions/d45de22e7af5816cb5ee3b90c446eaff93ae187d/python/SevenTeV/Hadronizer_MgmMatchTuneZ2star_7TeV_madgraph_tauola_cff.py"
+      },
+      {
+       "script": "import FWCore.ParameterSet.Config as cms\n\ndef customise(process): # Using SL instead GFlash AND turn on castor and compensation\n    process.g4SimHits.HCalSD.UseShowerLibrary = cms.bool(True)\n    process.g4SimHits.HCalSD.UseParametrize = cms.bool(False)\n    process.g4SimHits.HCalSD.UsePMTHits = cms.bool(False)\n    process.g4SimHits.HCalSD.UseFibreBundleHits = cms.bool(False)\n    process.g4SimHits.HFShower.UseShowerLibrary = cms.bool(True)\n    process.g4SimHits.HFShower.UseHFGflash = cms.bool(False)\n    process.g4SimHits.HFShower.ApplyFiducialCut = cms.bool(False)\n    process.g4SimHits.Generator.MinEtaCut = cms.double(-7.0)\n    process.g4SimHits.CastorSD.nonCompensationFactor = cms.double(0.77)\n\n    return(process)\n\n\n\n",
+       "title": "Hadronizer parameters",
+       "url": "https://raw.githubusercontent.com/cms-sw/genproductions/d45de22e7af5816cb5ee3b90c446eaff93ae187d/python/lowpu2010_customise.py"
+      },
+      {
+       "cms_confdb_id": "d2a17c4e4130caa32f6c2ea14e919908",
+       "process": "SIM",
+       "title": "Configuration file"
+      }
+     ],
+     "generators": [
+      "MG5v1.5.11"
+     ],
+     "global_tag": "START42_V17B::All",
+     "output_dataset": "/QCD_HT-250To500_TuneZ2Star_7TeV-madgraph-pythia6/LowPU2010-START42_V17B_BS2011-v1/GEN-SIM",
+     "release": "CMSSW_4_2_10",
+     "type": "SIM"
+    },
+    {
+     "configuration_files": [
+      {
+       "script": "#!/bin/bash\nsource /cvmfs/cms.cern.ch/cmsset_default.sh\nexport SCRAM_ARCH=slc5_amd64_gcc434\nif [ -r CMSSW_4_2_8_lowpupatch1/src ] ; then \n echo release CMSSW_4_2_8_lowpupatch1 already exists\nelse\nscram p CMSSW CMSSW_4_2_8_lowpupatch1\nfi\ncd CMSSW_4_2_8_lowpupatch1/src\neval `scram runtime -sh`\n\n\nscram b\ncd ../../\ncmsDriver.py step1 --filein \"dbs:/QCD_HT-250To500_TuneZ2Star_7TeV-madgraph-pythia6/LowPU2010-START42_V17B_BS2011-v1/GEN-SIM\" --fileout file:FSQ-LowPU2010DR42-00004_step1.root --pileup_input \"dbs:/MinBias_Tune4C_7TeV_pythia8/Summer12-LowPU2010-START42_V17B-v1/GEN-SIM\" --mc --eventcontent RAWSIM --pileup E7TeV_ProbDist_2010Data_BX156 --datatier GEN-SIM-RAW --conditions START42_V17B::All --step DIGI,L1,DIGI2RAW --python_filename FSQ-LowPU2010DR42-00004_1_cfg.py --no_exec --customise Configuration/DataProcessing/Utils.addMonitoring -n 1440 || exit $? ; \n\ncmsDriver.py step2 --filein file:FSQ-LowPU2010DR42-00004_step1.root --fileout file:FSQ-LowPU2010DR42-00004.root --mc --eventcontent AODSIM --customise Configuration/GlobalRuns/reco_TLR_42X.customisePPMC,Configuration/DataProcessing/Utils.addMonitoring --datatier AODSIM --conditions START42_V17B::All --step RAW2DIGI,L1Reco,RECO --python_filename FSQ-LowPU2010DR42-00004_2_cfg.py --no_exec -n 1440 || exit $? ; \n\n",
+       "title": "Production script"
+      },
+      {
+       "cms_confdb_id": "c23dc5a1674bfa99196ee5fafc3ca1dd",
+       "process": "DIGI2RAW",
+       "title": "Configuration file"
+      },
+      {
+       "cms_confdb_id": "c23dc5a1674bfa99196ee5fafc3ca615",
+       "process": "RECO",
+       "title": "Configuration file"
+      }
+     ],
+     "global_tag": "START42_V17B::All",
+     "output_dataset": "/QCD_HT-250To500_TuneZ2Star_7TeV-madgraph-pythia6/Summer12-LowPU2010_DR42_BS2011_PU_S0_START42_V17B-v1/AODSIM",
+     "release": "CMSSW_4_2_8_lowpupatch1",
+     "type": "DIGI2RAW RECO"
+    }
+   ]
+  },
+  "pids": {
+   "oai": {
+    "id": "oai:cernopendata.cern:735"
+   }
+  },
+  "publisher": "CERN Open Data Portal",
+  "recid": "735",
+  "run_period": [
+   "Run2010A",
+   "Run2010B"
+  ],
+  "system_details": {
+   "container_images": [
+    {
+     "name": "docker.io/cmsopendata/cmssw_4_2_8-slc5_amd64_gcc434:latest",
+     "registry": "dockerhub"
+    },
+    {
+     "name": "gitlab-registry.cern.ch/cms-cloud/cmssw-docker-opendata/cmssw_4_2_8-slc5_amd64_gcc434:latest",
+     "registry": "gitlab"
+    }
+   ],
+   "global_tag": "START42_V17B::All",
+   "release": "CMSSW_4_2_8"
+  },
+  "title": "/QCD_HT-250To500_TuneZ2Star_7TeV-madgraph-pythia6/Summer12-LowPU2010_DR42_BS2011_PU_S0_START42_V17B-v1/AODSIM",
+  "title_additional": "Simulated dataset QCD_HT-250To500_TuneZ2Star_7TeV-madgraph-pythia6 in AODSIM format for 2010 collision data",
+  "type": {
+   "primary": "Dataset",
+   "secondary": [
+    "Simulated"
+   ]
+  },
+  "usage": {
+   "description": "You can access these data through the CMS Virtual Machine. See the instructions for setting up the Virtual Machine and getting started in",
+   "links": [
+    {
+     "description": "How to install the CMS Virtual Machine",
+     "url": "/docs/cms-virtual-machine-2010"
+    },
+    {
+     "description": "Getting started with CMS open data",
+     "url": "/docs/cms-getting-started-2010"
+    }
+   ]
+  },
+  "validation": {
+   "description": "The generation and simulation of Monte Carlo data has been validated through general CMS validation procedures."
+  }
+ },
+ "cms-736": {
+  "_availability_details": {
+   "on demand": 1558,
+   "online": 1
+  },
+  "abstract": {
+   "description": "<p>Simulated dataset QCD_HT-500To1000_TuneZ2Star_7TeV-madgraph-pythia6 in AODSIM format for 2010 collision data.</p><p>See the description of the simulated dataset names in: <a href=\"/about/CMS-Simulated-Dataset-Names\">About CMS simulated dataset names</a>.</p><p>These simulated datasets correspond to the collision data collected by the CMS experiment in 2010.</p>"
+  },
+  "accelerator": "CERN-LHC",
+  "availability": "partial",
+  "categories": {
+   "primary": "Standard Model Physics",
+   "secondary": [
+    "QCD"
+   ],
+   "source": "CMS Collaboration"
+  },
+  "collaboration": {
+   "name": "CMS Collaboration",
+   "recid": "450"
+  },
+  "collections": [
+   "CMS-Simulated-Datasets"
+  ],
+  "collision_information": {
+   "energy": "7TeV",
+   "type": "pp"
+  },
+  "date_created": [
+   "2010"
+  ],
+  "date_published": "2018",
+  "date_reprocessed": "2010",
+  "distribution": {
+   "formats": [
+    "aodsim",
+    "root"
+   ],
+   "number_events": 4651372,
+   "number_files": 1559,
+   "size": 784867355230
+  },
+  "doi": "10.7483/OPENDATA.CMS.4AMU.8HJ2",
+  "experiment": [
+   "CMS"
+  ],
+  "license": {
+   "attribution": "CC0-1.0"
+  },
+  "methodology": {
+   "description": "<p>These data were generated in several steps (see also <a href=\"/docs/cms-mc-production-overview\">CMS Monte Carlo production overview</a>):</p>",
+   "steps": [
+    {
+     "configuration_files": [
+      {
+       "cms_confdb_id": "c4fb56e6014a333c1824013a9a69fdeb",
+       "process": "LHE",
+       "title": "Configuration file"
+      }
+     ],
+     "global_tag": "START311_V2::All",
+     "note": "To get the exact generator parameters, please see <a href=\"/docs/cms-mc-production-overview#finding-the-generator-parameters\">Finding the generator parameters</a>.",
+     "output_dataset": "/QCD_HT-500To1000_TuneZ2Star_7TeV-madgraph/Summer11-START311_V2-v2/GEN",
+     "release": "CMSSW_4_1_8_patch14",
+     "type": "LHE"
+    },
+    {
+     "configuration_files": [
+      {
+       "script": "#!/bin/bash\nsource /cvmfs/cms.cern.ch/cmsset_default.sh\nexport SCRAM_ARCH=slc5_amd64_gcc434\nif [ -r CMSSW_4_2_10/src ] ; then \n echo release CMSSW_4_2_10 already exists\nelse\nscram p CMSSW CMSSW_4_2_10\nfi\ncd CMSSW_4_2_10/src\neval `scram runtime -sh`\ncurl  -s https://raw.githubusercontent.com/cms-sw/genproductions/d45de22e7af5816cb5ee3b90c446eaff93ae187d/python/SevenTeV/Hadronizer_MgmMatchTuneZ2star_7TeV_madgraph_tauola_cff.py --retry 2 --create-dirs -o  Configuration/GenProduction/python/SevenTeV/Hadronizer_MgmMatchTuneZ2star_7TeV_madgraph_tauola_cff.py \n[ -s Configuration/GenProduction/python/SevenTeV/Hadronizer_MgmMatchTuneZ2star_7TeV_madgraph_tauola_cff.py ] || exit $?;\n\ncurl  -s https://raw.githubusercontent.com/cms-sw/genproductions/d45de22e7af5816cb5ee3b90c446eaff93ae187d/python/lowpu2010_customise.py --retry 2 --create-dirs -o  Configuration/GenProduction/python/lowpu2010_customise.py \n[ -s Configuration/GenProduction/python/lowpu2010_customise.py ] || exit $?;\n\n\nscram b\ncd ../../\ncmsDriver.py Configuration/GenProduction/python/SevenTeV/Hadronizer_MgmMatchTuneZ2star_7TeV_madgraph_tauola_cff.py --filein \"dbs:/QCD_HT-500To1000_TuneZ2Star_7TeV-madgraph/Summer11-START311_V2-v2/GEN\" --fileout file:FSQ-LowPU2010-00003.root --mc --eventcontent RAWSIM --customise Configuration/GenProduction/lowpu2010_customise.py,Configuration/DataProcessing/Utils.addMonitoring --datatier GEN-SIM --conditions START42_V17B::All --beamspot Realistic7TeVCollision --step GEN,SIM --inline_custom 1 --python_filename FSQ-LowPU2010-00003_1_cfg.py --no_exec --inline_custom 1 -n 174 || exit $? ; \n\n",
+       "title": "Production script"
+      },
+      {
+       "script": "import FWCore.ParameterSet.Config as cms\n\nfrom Configuration.Generator.PythiaUEZ2starSettings_cfi import *\nfrom GeneratorInterface.ExternalDecays.TauolaSettings_cff import *\n\ngenerator = cms.EDFilter(\"Pythia6HadronizerFilter\",\n    pythiaHepMCVerbosity = cms.untracked.bool(True),\n    maxEventsToPrint = cms.untracked.int32(0),\n    pythiaPylistVerbosity = cms.untracked.int32(1),\n    comEnergy = cms.double(7000.0),\n    ExternalDecays = cms.PSet(\n        Tauola = cms.untracked.PSet(\n            TauolaPolar,\n            TauolaDefaultInputCards\n        ),\n        parameterSets = cms.vstring('Tauola')\n    ),\n    UseExternalGenerators = cms.untracked.bool(True),\n    PythiaParameters = cms.PSet(\n        pythiaUESettingsBlock,\n        processParameters = cms.vstring('MSEL=0         ! User defined processes', \n                        'PMAS(5,1)=4.8   ! b quark mass',\n                        'PMAS(6,1)=172.5 ! t quark mass',\n\t\t\t'MSTJ(1)=1       ! Fragmentation/hadronization on or off',\n\t\t\t'MSTP(61)=1      ! Parton showering on or off'),\n        # This is a vector of ParameterSet names to be read, in this order\n        parameterSets = cms.vstring('pythiaUESettings', \n            'processParameters')\n    ),\n    jetMatching = cms.untracked.PSet(\n       scheme = cms.string(\"Madgraph\"),\n       mode = cms.string(\"auto\"),\t# soup, or \"inclusive\" / \"exclusive\"\n       MEMAIN_nqmatch = cms.int32(5),\n       MEMAIN_etaclmax = cms.double(-1),\n       MEMAIN_qcut = cms.double(-1),\n       MEMAIN_minjets = cms.int32(-1),\n       MEMAIN_maxjets = cms.int32(-1),\n       MEMAIN_showerkt = cms.double(0),   \n       MEMAIN_excres = cms.string(\"\"),\n       outTree_flag = cms.int32(0)    \n    )    \n)\n",
+       "title": "Hadronizer parameters",
+       "url": "https://raw.githubusercontent.com/cms-sw/genproductions/d45de22e7af5816cb5ee3b90c446eaff93ae187d/python/SevenTeV/Hadronizer_MgmMatchTuneZ2star_7TeV_madgraph_tauola_cff.py"
+      },
+      {
+       "script": "import FWCore.ParameterSet.Config as cms\n\ndef customise(process): # Using SL instead GFlash AND turn on castor and compensation\n    process.g4SimHits.HCalSD.UseShowerLibrary = cms.bool(True)\n    process.g4SimHits.HCalSD.UseParametrize = cms.bool(False)\n    process.g4SimHits.HCalSD.UsePMTHits = cms.bool(False)\n    process.g4SimHits.HCalSD.UseFibreBundleHits = cms.bool(False)\n    process.g4SimHits.HFShower.UseShowerLibrary = cms.bool(True)\n    process.g4SimHits.HFShower.UseHFGflash = cms.bool(False)\n    process.g4SimHits.HFShower.ApplyFiducialCut = cms.bool(False)\n    process.g4SimHits.Generator.MinEtaCut = cms.double(-7.0)\n    process.g4SimHits.CastorSD.nonCompensationFactor = cms.double(0.77)\n\n    return(process)\n\n\n\n",
+       "title": "Hadronizer parameters",
+       "url": "https://raw.githubusercontent.com/cms-sw/genproductions/d45de22e7af5816cb5ee3b90c446eaff93ae187d/python/lowpu2010_customise.py"
+      },
+      {
+       "cms_confdb_id": "d2a17c4e4130caa32f6c2ea14e919908",
+       "process": "SIM",
+       "title": "Configuration file"
+      }
+     ],
+     "generators": [
+      "MG5v1.5.11"
+     ],
+     "global_tag": "START42_V17B::All",
+     "output_dataset": "/QCD_HT-500To1000_TuneZ2Star_7TeV-madgraph-pythia6/LowPU2010-START42_V17B_BS2011-v1/GEN-SIM",
+     "release": "CMSSW_4_2_10",
+     "type": "SIM"
+    },
+    {
+     "configuration_files": [
+      {
+       "script": "#!/bin/bash\nsource /cvmfs/cms.cern.ch/cmsset_default.sh\nexport SCRAM_ARCH=slc5_amd64_gcc434\nif [ -r CMSSW_4_2_8_lowpupatch1/src ] ; then \n echo release CMSSW_4_2_8_lowpupatch1 already exists\nelse\nscram p CMSSW CMSSW_4_2_8_lowpupatch1\nfi\ncd CMSSW_4_2_8_lowpupatch1/src\neval `scram runtime -sh`\n\n\nscram b\ncd ../../\ncmsDriver.py step1 --filein \"dbs:/QCD_HT-500To1000_TuneZ2Star_7TeV-madgraph-pythia6/LowPU2010-START42_V17B_BS2011-v1/GEN-SIM\" --fileout file:FSQ-LowPU2010DR42-00005_step1.root --pileup_input \"dbs:/MinBias_Tune4C_7TeV_pythia8/Summer12-LowPU2010-START42_V17B-v1/GEN-SIM\" --mc --eventcontent RAWSIM --pileup E7TeV_ProbDist_2010Data_BX156 --datatier GEN-SIM-RAW --conditions START42_V17B::All --step DIGI,L1,DIGI2RAW --python_filename FSQ-LowPU2010DR42-00005_1_cfg.py --no_exec --customise Configuration/DataProcessing/Utils.addMonitoring -n 1440 || exit $? ; \n\ncmsDriver.py step2 --filein file:FSQ-LowPU2010DR42-00005_step1.root --fileout file:FSQ-LowPU2010DR42-00005.root --mc --eventcontent AODSIM --customise Configuration/GlobalRuns/reco_TLR_42X.customisePPMC,Configuration/DataProcessing/Utils.addMonitoring --datatier AODSIM --conditions START42_V17B::All --step RAW2DIGI,L1Reco,RECO --python_filename FSQ-LowPU2010DR42-00005_2_cfg.py --no_exec -n 1440 || exit $? ; \n\n",
+       "title": "Production script"
+      },
+      {
+       "cms_confdb_id": "c23dc5a1674bfa99196ee5fafc3ca1dd",
+       "process": "DIGI2RAW",
+       "title": "Configuration file"
+      },
+      {
+       "cms_confdb_id": "c23dc5a1674bfa99196ee5fafc3ca615",
+       "process": "RECO",
+       "title": "Configuration file"
+      }
+     ],
+     "global_tag": "START42_V17B::All",
+     "output_dataset": "/QCD_HT-500To1000_TuneZ2Star_7TeV-madgraph-pythia6/Summer12-LowPU2010_DR42_BS2011_PU_S0_START42_V17B-v1/AODSIM",
+     "release": "CMSSW_4_2_8_lowpupatch1",
+     "type": "DIGI2RAW RECO"
+    }
+   ]
+  },
+  "pids": {
+   "oai": {
+    "id": "oai:cernopendata.cern:736"
+   }
+  },
+  "publisher": "CERN Open Data Portal",
+  "recid": "736",
+  "run_period": [
+   "Run2010A",
+   "Run2010B"
+  ],
+  "system_details": {
+   "container_images": [
+    {
+     "name": "docker.io/cmsopendata/cmssw_4_2_8-slc5_amd64_gcc434:latest",
+     "registry": "dockerhub"
+    },
+    {
+     "name": "gitlab-registry.cern.ch/cms-cloud/cmssw-docker-opendata/cmssw_4_2_8-slc5_amd64_gcc434:latest",
+     "registry": "gitlab"
+    }
+   ],
+   "global_tag": "START42_V17B::All",
+   "release": "CMSSW_4_2_8"
+  },
+  "title": "/QCD_HT-500To1000_TuneZ2Star_7TeV-madgraph-pythia6/Summer12-LowPU2010_DR42_BS2011_PU_S0_START42_V17B-v1/AODSIM",
+  "title_additional": "Simulated dataset QCD_HT-500To1000_TuneZ2Star_7TeV-madgraph-pythia6 in AODSIM format for 2010 collision data",
+  "type": {
+   "primary": "Dataset",
+   "secondary": [
+    "Simulated"
+   ]
+  },
+  "usage": {
+   "description": "You can access these data through the CMS Virtual Machine. See the instructions for setting up the Virtual Machine and getting started in",
+   "links": [
+    {
+     "description": "How to install the CMS Virtual Machine",
+     "url": "/docs/cms-virtual-machine-2010"
+    },
+    {
+     "description": "Getting started with CMS open data",
+     "url": "/docs/cms-getting-started-2010"
+    }
+   ]
+  },
+  "validation": {
+   "description": "The generation and simulation of Monte Carlo data has been validated through general CMS validation procedures."
+  }
+ },
+ "cms-739": {
+  "_availability_details": {
+   "on demand": 932,
+   "online": 1
+  },
+  "abstract": {
+   "description": "<p>Simulated dataset QCD_Pt-15to1000_TuneEE3C_Flat_7TeV_herwigpp in AODSIM format for 2010 collision data.</p><p>See the description of the simulated dataset names in: <a href=\"/about/CMS-Simulated-Dataset-Names\">About CMS simulated dataset names</a>.</p><p>These simulated datasets correspond to the collision data collected by the CMS experiment in 2010.</p>"
+  },
+  "accelerator": "CERN-LHC",
+  "availability": "partial",
+  "categories": {
+   "primary": "Standard Model Physics",
+   "secondary": [
+    "QCD"
+   ],
+   "source": "CMS Collaboration"
+  },
+  "collaboration": {
+   "name": "CMS Collaboration",
+   "recid": "450"
+  },
+  "collections": [
+   "CMS-Simulated-Datasets"
+  ],
+  "collision_information": {
+   "energy": "7TeV",
+   "type": "pp"
+  },
+  "date_created": [
+   "2010"
+  ],
+  "date_published": "2018",
+  "date_reprocessed": "2010",
+  "distribution": {
+   "formats": [
+    "aodsim",
+    "root"
+   ],
+   "number_events": 10804952,
+   "number_files": 933,
+   "size": 1498144344529
+  },
+  "doi": "10.7483/OPENDATA.CMS.0BXP.EATB",
+  "experiment": [
+   "CMS"
+  ],
+  "license": {
+   "attribution": "CC0-1.0"
+  },
+  "methodology": {
+   "description": "<p>These data were generated in several steps (see also <a href=\"/docs/cms-mc-production-overview\">CMS Monte Carlo production overview</a>):</p>",
+   "steps": [
+    {
+     "configuration_files": [
+      {
+       "script": "#!/bin/bash\nsource /cvmfs/cms.cern.ch/cmsset_default.sh\nexport SCRAM_ARCH=slc5_amd64_gcc434\nif [ -r CMSSW_4_2_10/src ] ; then \n echo release CMSSW_4_2_10 already exists\nelse\nscram p CMSSW CMSSW_4_2_10\nfi\ncd CMSSW_4_2_10/src\neval `scram runtime -sh`\n\ncurl -s --insecure https://cms-pdmv.cern.ch/mcm/public/restapi/requests/get_fragment/FSQ-LowPU2010-00006 --retry 2 --create-dirs -o Configuration/GenProduction/python/FSQ-LowPU2010-00006-fragment.py \n[ -s Configuration/GenProduction/python/FSQ-LowPU2010-00006-fragment.py ] || exit $?;\ncurl  -s https://raw.githubusercontent.com/cms-sw/genproductions/d45de22e7af5816cb5ee3b90c446eaff93ae187d/python/lowpu2010_customise.py --retry 2 --create-dirs -o  Configuration/GenProduction/python/lowpu2010_customise.py \n[ -s Configuration/GenProduction/python/lowpu2010_customise.py ] || exit $?;\n\n\nscram b\ncd ../../\ncmsDriver.py Configuration/GenProduction/python/FSQ-LowPU2010-00006-fragment.py --fileout file:FSQ-LowPU2010-00006.root --mc --eventcontent RAWSIM --customise Configuration/GenProduction/lowpu2010_customise.py,Configuration/DataProcessing/Utils.addMonitoring --datatier GEN-SIM --conditions START42_V17B::All --beamspot Realistic7TeVCollision --step GEN,SIM --python_filename FSQ-LowPU2010-00006_1_cfg.py --no_exec -n 65 || exit $? ; \n\n",
+       "title": "Production script"
+      },
+      {
+       "title": "Generator parameters",
+       "url": "https://cms-pdmv.cern.ch/mcm/public/restapi/requests/get_fragment/FSQ-LowPU2010-00006"
+      },
+      {
+       "script": "import FWCore.ParameterSet.Config as cms\n\ndef customise(process): # Using SL instead GFlash AND turn on castor and compensation\n    process.g4SimHits.HCalSD.UseShowerLibrary = cms.bool(True)\n    process.g4SimHits.HCalSD.UseParametrize = cms.bool(False)\n    process.g4SimHits.HCalSD.UsePMTHits = cms.bool(False)\n    process.g4SimHits.HCalSD.UseFibreBundleHits = cms.bool(False)\n    process.g4SimHits.HFShower.UseShowerLibrary = cms.bool(True)\n    process.g4SimHits.HFShower.UseHFGflash = cms.bool(False)\n    process.g4SimHits.HFShower.ApplyFiducialCut = cms.bool(False)\n    process.g4SimHits.Generator.MinEtaCut = cms.double(-7.0)\n    process.g4SimHits.CastorSD.nonCompensationFactor = cms.double(0.77)\n\n    return(process)\n\n\n\n",
+       "title": "Generator parameters",
+       "url": "https://raw.githubusercontent.com/cms-sw/genproductions/d45de22e7af5816cb5ee3b90c446eaff93ae187d/python/lowpu2010_customise.py"
+      },
+      {
+       "cms_confdb_id": "79ed8b3431ee034a30a2ed996e63b0a1",
+       "process": "SIM",
+       "title": "Configuration file"
+      }
+     ],
+     "generators": [
+      "herwigpp"
+     ],
+     "global_tag": "START42_V17B::All",
+     "output_dataset": "/QCD_Pt-15to1000_TuneEE3C_Flat_7TeV_herwigpp/LowPU2010-START42_V17B_BS2011-v2/GEN-SIM",
+     "release": "CMSSW_4_2_10",
+     "type": "SIM"
+    },
+    {
+     "configuration_files": [
+      {
+       "script": "#!/bin/bash\nsource /cvmfs/cms.cern.ch/cmsset_default.sh\nexport SCRAM_ARCH=slc5_amd64_gcc434\nif [ -r CMSSW_4_2_8_lowpupatch1/src ] ; then \n echo release CMSSW_4_2_8_lowpupatch1 already exists\nelse\nscram p CMSSW CMSSW_4_2_8_lowpupatch1\nfi\ncd CMSSW_4_2_8_lowpupatch1/src\neval `scram runtime -sh`\n\n\nscram b\ncd ../../\ncmsDriver.py step1 --filein \"dbs:/QCD_Pt-15to1000_TuneEE3C_Flat_7TeV_herwigpp/LowPU2010-START42_V17B_BS2011-v2/GEN-SIM\" --fileout file:FSQ-LowPU2010DR42-00014_step1.root --pileup_input \"dbs:/MinBias_Tune4C_7TeV_pythia8/Summer12-LowPU2010-START42_V17B-v1/GEN-SIM\" --mc --eventcontent RAWSIM --pileup E7TeV_ProbDist_2010Data_BX156 --datatier GEN-SIM-RAW --conditions START42_V17B::All --step DIGI,L1,DIGI2RAW --python_filename FSQ-LowPU2010DR42-00014_1_cfg.py --no_exec --customise Configuration/DataProcessing/Utils.addMonitoring -n 1440 || exit $? ; \n\ncmsDriver.py step2 --filein file:FSQ-LowPU2010DR42-00014_step1.root --fileout file:FSQ-LowPU2010DR42-00014.root --mc --eventcontent AODSIM --customise Configuration/GlobalRuns/reco_TLR_42X.customisePPMC,Configuration/DataProcessing/Utils.addMonitoring --datatier AODSIM --conditions START42_V17B::All --step RAW2DIGI,L1Reco,RECO --python_filename FSQ-LowPU2010DR42-00014_2_cfg.py --no_exec -n 1440 || exit $? ; \n\n",
+       "title": "Production script"
+      },
+      {
+       "cms_confdb_id": "c23dc5a1674bfa99196ee5fafc3ca1dd",
+       "process": "DIGI2RAW",
+       "title": "Configuration file"
+      },
+      {
+       "cms_confdb_id": "c23dc5a1674bfa99196ee5fafc3ca615",
+       "process": "RECO",
+       "title": "Configuration file"
+      }
+     ],
+     "global_tag": "START42_V17B::All",
+     "output_dataset": "/QCD_Pt-15to1000_TuneEE3C_Flat_7TeV_herwigpp/Summer12-LowPU2010_DR42_BS2011_PU_S0_START42_V17B-v1/AODSIM",
+     "release": "CMSSW_4_2_8_lowpupatch1",
+     "type": "DIGI2RAW RECO"
+    }
+   ]
+  },
+  "pids": {
+   "oai": {
+    "id": "oai:cernopendata.cern:739"
+   }
+  },
+  "publisher": "CERN Open Data Portal",
+  "recid": "739",
+  "run_period": [
+   "Run2010A",
+   "Run2010B"
+  ],
+  "system_details": {
+   "container_images": [
+    {
+     "name": "docker.io/cmsopendata/cmssw_4_2_8-slc5_amd64_gcc434:latest",
+     "registry": "dockerhub"
+    },
+    {
+     "name": "gitlab-registry.cern.ch/cms-cloud/cmssw-docker-opendata/cmssw_4_2_8-slc5_amd64_gcc434:latest",
+     "registry": "gitlab"
+    }
+   ],
+   "global_tag": "START42_V17B::All",
+   "release": "CMSSW_4_2_8"
+  },
+  "title": "/QCD_Pt-15to1000_TuneEE3C_Flat_7TeV_herwigpp/Summer12-LowPU2010_DR42_BS2011_PU_S0_START42_V17B-v1/AODSIM",
+  "title_additional": "Simulated dataset QCD_Pt-15to1000_TuneEE3C_Flat_7TeV_herwigpp in AODSIM format for 2010 collision data",
+  "type": {
+   "primary": "Dataset",
+   "secondary": [
+    "Simulated"
+   ]
+  },
+  "usage": {
+   "description": "You can access these data through the CMS Virtual Machine. See the instructions for setting up the Virtual Machine and getting started in",
+   "links": [
+    {
+     "description": "How to install the CMS Virtual Machine",
+     "url": "/docs/cms-virtual-machine-2010"
+    },
+    {
+     "description": "Getting started with CMS open data",
+     "url": "/docs/cms-getting-started-2010"
+    }
+   ]
+  },
+  "validation": {
+   "description": "The generation and simulation of Monte Carlo data has been validated through general CMS validation procedures."
+  }
+ },
+ "cms-750": {
+  "_availability_details": {
+   "online": 52
+  },
+  "abstract": {
+   "description": "<p>Simulated dataset QCD_Pt-300to470_Tune23_HFshowerLibrary_7TeV_herwigpp in AODSIM format for 2010 collision data.</p><p>See the description of the simulated dataset names in: <a href=\"/about/CMS-Simulated-Dataset-Names\">About CMS simulated dataset names</a>.</p><p>These simulated datasets correspond to the collision data collected by the CMS experiment in 2010.</p>"
+  },
+  "accelerator": "CERN-LHC",
+  "availability": "online",
+  "categories": {
+   "primary": "Standard Model Physics",
+   "secondary": [
+    "QCD"
+   ],
+   "source": "CMS Collaboration"
+  },
+  "collaboration": {
+   "name": "CMS Collaboration",
+   "recid": "450"
+  },
+  "collections": [
+   "CMS-Simulated-Datasets"
+  ],
+  "collision_information": {
+   "energy": "7TeV",
+   "type": "pp"
+  },
+  "date_created": [
+   "2010"
+  ],
+  "date_published": "2018",
+  "date_reprocessed": "2010",
+  "distribution": {
+   "formats": [
+    "aodsim",
+    "root"
+   ],
+   "number_events": 1000000,
+   "number_files": 52,
+   "size": 194943939664
+  },
+  "doi": "10.7483/OPENDATA.CMS.3LQB.XHC8",
+  "experiment": [
+   "CMS"
+  ],
+  "license": {
+   "attribution": "CC0-1.0"
+  },
+  "methodology": {
+   "description": "<p>These data were generated in several steps (see also <a href=\"/docs/cms-mc-production-overview\">CMS Monte Carlo production overview</a>):</p>",
+   "steps": [
+    {
+     "configuration_files": [
+      {
+       "cms_confdb_id": "f04ea603747fd810469d2faca31f7b4f",
+       "process": "SIM",
+       "title": "Configuration file"
+      }
+     ],
+     "global_tag": "START42_V17B::All",
+     "output_dataset": "/QCD_Pt-300to470_Tune23_HFshowerLibrary_7TeV_herwigpp/Summer12-LowPU2010-START42_V17B-v1/GEN-SIM",
+     "release": "CMSSW_4_2_8_lowpupatch1",
+     "type": "SIM"
+    },
+    {
+     "configuration_files": [
+      {
+       "cms_confdb_id": "8bf830006a8493f7e7b1551d16782ade",
+       "process": "DIGI2RAW",
+       "title": "Configuration file"
+      },
+      {
+       "cms_confdb_id": "8bf830006a8493f7e7b1551d16783853",
+       "process": "RECO",
+       "title": "Configuration file"
+      }
+     ],
+     "global_tag": "START42_V17B::All",
+     "output_dataset": "/QCD_Pt-300to470_Tune23_HFshowerLibrary_7TeV_herwigpp/Summer12-LowPU2010_DR42_PU_S0_START42_V17B-v1/AODSIM",
+     "release": "CMSSW_4_2_8_lowpupatch1",
+     "type": "DIGI2RAW RECO"
+    }
+   ]
+  },
+  "pids": {
+   "oai": {
+    "id": "oai:cernopendata.cern:750"
+   }
+  },
+  "publisher": "CERN Open Data Portal",
+  "recid": "750",
+  "run_period": [
+   "Run2010A",
+   "Run2010B"
+  ],
+  "system_details": {
+   "container_images": [
+    {
+     "name": "docker.io/cmsopendata/cmssw_4_2_8-slc5_amd64_gcc434:latest",
+     "registry": "dockerhub"
+    },
+    {
+     "name": "gitlab-registry.cern.ch/cms-cloud/cmssw-docker-opendata/cmssw_4_2_8-slc5_amd64_gcc434:latest",
+     "registry": "gitlab"
+    }
+   ],
+   "global_tag": "START42_V17B::All",
+   "release": "CMSSW_4_2_8"
+  },
+  "title": "/QCD_Pt-300to470_Tune23_HFshowerLibrary_7TeV_herwigpp/Summer12-LowPU2010_DR42_PU_S0_START42_V17B-v1/AODSIM",
+  "title_additional": "Simulated dataset QCD_Pt-300to470_Tune23_HFshowerLibrary_7TeV_herwigpp in AODSIM format for 2010 collision data",
+  "type": {
+   "primary": "Dataset",
+   "secondary": [
+    "Simulated"
+   ]
+  },
+  "usage": {
+   "description": "You can access these data through the CMS Virtual Machine. See the instructions for setting up the Virtual Machine and getting started in",
+   "links": [
+    {
+     "description": "How to install the CMS Virtual Machine",
+     "url": "/docs/cms-virtual-machine-2010"
+    },
+    {
+     "description": "Getting started with CMS open data",
+     "url": "/docs/cms-getting-started-2010"
+    }
+   ]
+  },
+  "validation": {
+   "description": "The generation and simulation of Monte Carlo data has been validated through general CMS validation procedures."
+  }
+ },
+ "cms-752": {
+  "_availability_details": {
+   "on demand": 35,
+   "online": 30
+  },
+  "abstract": {
+   "description": "<p>Simulated dataset QCD_Pt-470to600_Tune23_HFshowerLibrary_7TeV_herwigpp in AODSIM format for 2010 collision data.</p><p>See the description of the simulated dataset names in: <a href=\"/about/CMS-Simulated-Dataset-Names\">About CMS simulated dataset names</a>.</p><p>These simulated datasets correspond to the collision data collected by the CMS experiment in 2010.</p>"
+  },
+  "accelerator": "CERN-LHC",
+  "availability": "partial",
+  "categories": {
+   "primary": "Standard Model Physics",
+   "secondary": [
+    "QCD"
+   ],
+   "source": "CMS Collaboration"
+  },
+  "collaboration": {
+   "name": "CMS Collaboration",
+   "recid": "450"
+  },
+  "collections": [
+   "CMS-Simulated-Datasets"
+  ],
+  "collision_information": {
+   "energy": "7TeV",
+   "type": "pp"
+  },
+  "date_created": [
+   "2010"
+  ],
+  "date_published": "2018",
+  "date_reprocessed": "2010",
+  "distribution": {
+   "formats": [
+    "aodsim",
+    "root"
+   ],
+   "number_events": 1000000,
+   "number_files": 65,
+   "size": 204997782038
+  },
+  "doi": "10.7483/OPENDATA.CMS.SHCL.L4DN",
+  "experiment": [
+   "CMS"
+  ],
+  "license": {
+   "attribution": "CC0-1.0"
+  },
+  "methodology": {
+   "description": "<p>These data were generated in several steps (see also <a href=\"/docs/cms-mc-production-overview\">CMS Monte Carlo production overview</a>):</p>",
+   "steps": [
+    {
+     "configuration_files": [
+      {
+       "cms_confdb_id": "f04ea603747fd810469d2faca31f0f49",
+       "process": "SIM",
+       "title": "Configuration file"
+      }
+     ],
+     "global_tag": "START42_V17B::All",
+     "output_dataset": "/QCD_Pt-470to600_Tune23_HFshowerLibrary_7TeV_herwigpp/Summer12-LowPU2010-START42_V17B-v1/GEN-SIM",
+     "release": "CMSSW_4_2_8_lowpupatch1",
+     "type": "SIM"
+    },
+    {
+     "configuration_files": [
+      {
+       "cms_confdb_id": "8bf830006a8493f7e7b1551d16782ade",
+       "process": "DIGI2RAW",
+       "title": "Configuration file"
+      },
+      {
+       "cms_confdb_id": "8bf830006a8493f7e7b1551d16783853",
+       "process": "RECO",
+       "title": "Configuration file"
+      }
+     ],
+     "global_tag": "START42_V17B::All",
+     "output_dataset": "/QCD_Pt-470to600_Tune23_HFshowerLibrary_7TeV_herwigpp/Summer12-LowPU2010_DR42_PU_S0_START42_V17B-v1/AODSIM",
+     "release": "CMSSW_4_2_8_lowpupatch1",
+     "type": "DIGI2RAW RECO"
+    }
+   ]
+  },
+  "pids": {
+   "oai": {
+    "id": "oai:cernopendata.cern:752"
+   }
+  },
+  "publisher": "CERN Open Data Portal",
+  "recid": "752",
+  "run_period": [
+   "Run2010A",
+   "Run2010B"
+  ],
+  "system_details": {
+   "container_images": [
+    {
+     "name": "docker.io/cmsopendata/cmssw_4_2_8-slc5_amd64_gcc434:latest",
+     "registry": "dockerhub"
+    },
+    {
+     "name": "gitlab-registry.cern.ch/cms-cloud/cmssw-docker-opendata/cmssw_4_2_8-slc5_amd64_gcc434:latest",
+     "registry": "gitlab"
+    }
+   ],
+   "global_tag": "START42_V17B::All",
+   "release": "CMSSW_4_2_8"
+  },
+  "title": "/QCD_Pt-470to600_Tune23_HFshowerLibrary_7TeV_herwigpp/Summer12-LowPU2010_DR42_PU_S0_START42_V17B-v1/AODSIM",
+  "title_additional": "Simulated dataset QCD_Pt-470to600_Tune23_HFshowerLibrary_7TeV_herwigpp in AODSIM format for 2010 collision data",
+  "type": {
+   "primary": "Dataset",
+   "secondary": [
+    "Simulated"
+   ]
+  },
+  "usage": {
+   "description": "You can access these data through the CMS Virtual Machine. See the instructions for setting up the Virtual Machine and getting started in",
+   "links": [
+    {
+     "description": "How to install the CMS Virtual Machine",
+     "url": "/docs/cms-virtual-machine-2010"
+    },
+    {
+     "description": "Getting started with CMS open data",
+     "url": "/docs/cms-getting-started-2010"
+    }
+   ]
+  },
+  "validation": {
+   "description": "The generation and simulation of Monte Carlo data has been validated through general CMS validation procedures."
+  }
+ },
+ "cms-754": {
+  "_availability_details": {
+   "on demand": 43,
+   "online": 21
+  },
+  "abstract": {
+   "description": "<p>Simulated dataset QCD_Pt-600to800_Tune23_HFshowerLibrary_7TeV_herwigpp in AODSIM format for 2010 collision data.</p><p>See the description of the simulated dataset names in: <a href=\"/about/CMS-Simulated-Dataset-Names\">About CMS simulated dataset names</a>.</p><p>These simulated datasets correspond to the collision data collected by the CMS experiment in 2010.</p>"
+  },
+  "accelerator": "CERN-LHC",
+  "availability": "partial",
+  "categories": {
+   "primary": "Standard Model Physics",
+   "secondary": [
+    "QCD"
+   ],
+   "source": "CMS Collaboration"
+  },
+  "collaboration": {
+   "name": "CMS Collaboration",
+   "recid": "450"
+  },
+  "collections": [
+   "CMS-Simulated-Datasets"
+  ],
+  "collision_information": {
+   "energy": "7TeV",
+   "type": "pp"
+  },
+  "date_created": [
+   "2010"
+  ],
+  "date_published": "2018",
+  "date_reprocessed": "2010",
+  "distribution": {
+   "formats": [
+    "aodsim",
+    "root"
+   ],
+   "number_events": 1000000,
+   "number_files": 64,
+   "size": 209178349148
+  },
+  "doi": "10.7483/OPENDATA.CMS.HXIO.IG23",
+  "experiment": [
+   "CMS"
+  ],
+  "license": {
+   "attribution": "CC0-1.0"
+  },
+  "methodology": {
+   "description": "<p>These data were generated in several steps (see also <a href=\"/docs/cms-mc-production-overview\">CMS Monte Carlo production overview</a>):</p>",
+   "steps": [
+    {
+     "configuration_files": [
+      {
+       "cms_confdb_id": "f04ea603747fd810469d2faca31f0830",
+       "process": "SIM",
+       "title": "Configuration file"
+      }
+     ],
+     "global_tag": "START42_V17B::All",
+     "output_dataset": "/QCD_Pt-600to800_Tune23_HFshowerLibrary_7TeV_herwigpp/Summer12-LowPU2010-START42_V17B-v1/GEN-SIM",
+     "release": "CMSSW_4_2_8_lowpupatch1",
+     "type": "SIM"
+    },
+    {
+     "configuration_files": [
+      {
+       "cms_confdb_id": "8bf830006a8493f7e7b1551d16782ade",
+       "process": "DIGI2RAW",
+       "title": "Configuration file"
+      },
+      {
+       "cms_confdb_id": "8bf830006a8493f7e7b1551d16783853",
+       "process": "RECO",
+       "title": "Configuration file"
+      }
+     ],
+     "global_tag": "START42_V17B::All",
+     "output_dataset": "/QCD_Pt-600to800_Tune23_HFshowerLibrary_7TeV_herwigpp/Summer12-LowPU2010_DR42_PU_S0_START42_V17B-v1/AODSIM",
+     "release": "CMSSW_4_2_8_lowpupatch1",
+     "type": "DIGI2RAW RECO"
+    }
+   ]
+  },
+  "pids": {
+   "oai": {
+    "id": "oai:cernopendata.cern:754"
+   }
+  },
+  "publisher": "CERN Open Data Portal",
+  "recid": "754",
+  "run_period": [
+   "Run2010A",
+   "Run2010B"
+  ],
+  "system_details": {
+   "container_images": [
+    {
+     "name": "docker.io/cmsopendata/cmssw_4_2_8-slc5_amd64_gcc434:latest",
+     "registry": "dockerhub"
+    },
+    {
+     "name": "gitlab-registry.cern.ch/cms-cloud/cmssw-docker-opendata/cmssw_4_2_8-slc5_amd64_gcc434:latest",
+     "registry": "gitlab"
+    }
+   ],
+   "global_tag": "START42_V17B::All",
+   "release": "CMSSW_4_2_8"
+  },
+  "title": "/QCD_Pt-600to800_Tune23_HFshowerLibrary_7TeV_herwigpp/Summer12-LowPU2010_DR42_PU_S0_START42_V17B-v1/AODSIM",
+  "title_additional": "Simulated dataset QCD_Pt-600to800_Tune23_HFshowerLibrary_7TeV_herwigpp in AODSIM format for 2010 collision data",
+  "type": {
+   "primary": "Dataset",
+   "secondary": [
+    "Simulated"
+   ]
+  },
+  "usage": {
+   "description": "You can access these data through the CMS Virtual Machine. See the instructions for setting up the Virtual Machine and getting started in",
+   "links": [
+    {
+     "description": "How to install the CMS Virtual Machine",
+     "url": "/docs/cms-virtual-machine-2010"
+    },
+    {
+     "description": "Getting started with CMS open data",
+     "url": "/docs/cms-getting-started-2010"
+    }
+   ]
+  },
+  "validation": {
+   "description": "The generation and simulation of Monte Carlo data has been validated through general CMS validation procedures."
+  }
+ },
+ "cms-776": {
+  "_availability_details": {
+   "on demand": 47,
+   "online": 1
+  },
+  "abstract": {
+   "description": "<p>Simulated dataset QCD_Pt_300to470_TuneZ2star_HFshowerLibrary_7TeV_pythia6 in AODSIM format for 2010 collision data.</p><p>See the description of the simulated dataset names in: <a href=\"/about/CMS-Simulated-Dataset-Names\">About CMS simulated dataset names</a>.</p><p>These simulated datasets correspond to the collision data collected by the CMS experiment in 2010.</p>"
+  },
+  "accelerator": "CERN-LHC",
+  "availability": "partial",
+  "categories": {
+   "primary": "Standard Model Physics",
+   "secondary": [
+    "QCD"
+   ],
+   "source": "CMS Collaboration"
+  },
+  "collaboration": {
+   "name": "CMS Collaboration",
+   "recid": "450"
+  },
+  "collections": [
+   "CMS-Simulated-Datasets"
+  ],
+  "collision_information": {
+   "energy": "7TeV",
+   "type": "pp"
+  },
+  "date_created": [
+   "2010"
+  ],
+  "date_published": "2018",
+  "date_reprocessed": "2010",
+  "distribution": {
+   "formats": [
+    "aodsim",
+    "root"
+   ],
+   "number_events": 1000000,
+   "number_files": 48,
+   "size": 166889613488
+  },
+  "doi": "10.7483/OPENDATA.CMS.M0DU.0ZIS",
+  "experiment": [
+   "CMS"
+  ],
+  "license": {
+   "attribution": "CC0-1.0"
+  },
+  "methodology": {
+   "description": "<p>These data were generated in several steps (see also <a href=\"/docs/cms-mc-production-overview\">CMS Monte Carlo production overview</a>):</p>",
+   "steps": [
+    {
+     "configuration_files": [
+      {
+       "cms_confdb_id": "153fbc65b3d49ee64349d246f4931bfd",
+       "process": "SIM",
+       "title": "Configuration file"
+      }
+     ],
+     "global_tag": "START42_V17B::All",
+     "output_dataset": "/QCD_Pt_300to470_TuneZ2star_HFshowerLibrary_7TeV_pythia6/Summer12-LowPU2010-START42_V17B-v1/GEN-SIM",
+     "release": "CMSSW_4_2_8_lowpupatch1",
+     "type": "SIM"
+    },
+    {
+     "configuration_files": [
+      {
+       "cms_confdb_id": "fa09878571c00c1f0d62c320e484a464",
+       "process": "DIGI2RAW",
+       "title": "Configuration file"
+      },
+      {
+       "cms_confdb_id": "fa09878571c00c1f0d62c320e484c511",
+       "process": "RECO",
+       "title": "Configuration file"
+      }
+     ],
+     "global_tag": "START42_V17B::All",
+     "output_dataset": "/QCD_Pt_300to470_TuneZ2star_HFshowerLibrary_7TeV_pythia6/Summer12-LowPU2010_DR42_PU_S0_START42_V17B-v1/AODSIM",
+     "release": "CMSSW_4_2_8_lowpupatch1",
+     "type": "DIGI2RAW RECO"
+    }
+   ]
+  },
+  "pids": {
+   "oai": {
+    "id": "oai:cernopendata.cern:776"
+   }
+  },
+  "publisher": "CERN Open Data Portal",
+  "recid": "776",
+  "run_period": [
+   "Run2010A",
+   "Run2010B"
+  ],
+  "system_details": {
+   "container_images": [
+    {
+     "name": "docker.io/cmsopendata/cmssw_4_2_8-slc5_amd64_gcc434:latest",
+     "registry": "dockerhub"
+    },
+    {
+     "name": "gitlab-registry.cern.ch/cms-cloud/cmssw-docker-opendata/cmssw_4_2_8-slc5_amd64_gcc434:latest",
+     "registry": "gitlab"
+    }
+   ],
+   "global_tag": "START42_V17B::All",
+   "release": "CMSSW_4_2_8"
+  },
+  "title": "/QCD_Pt_300to470_TuneZ2star_HFshowerLibrary_7TeV_pythia6/Summer12-LowPU2010_DR42_PU_S0_START42_V17B-v1/AODSIM",
+  "title_additional": "Simulated dataset QCD_Pt_300to470_TuneZ2star_HFshowerLibrary_7TeV_pythia6 in AODSIM format for 2010 collision data",
+  "type": {
+   "primary": "Dataset",
+   "secondary": [
+    "Simulated"
+   ]
+  },
+  "usage": {
+   "description": "You can access these data through the CMS Virtual Machine. See the instructions for setting up the Virtual Machine and getting started in",
+   "links": [
+    {
+     "description": "How to install the CMS Virtual Machine",
+     "url": "/docs/cms-virtual-machine-2010"
+    },
+    {
+     "description": "Getting started with CMS open data",
+     "url": "/docs/cms-getting-started-2010"
+    }
+   ]
+  },
+  "validation": {
+   "description": "The generation and simulation of Monte Carlo data has been validated through general CMS validation procedures."
+  }
+ },
+ "cms-784": {
+  "_availability_details": {
+   "on demand": 52,
+   "online": 1
+  },
+  "abstract": {
+   "description": "<p>Simulated dataset QCD_Pt_470to600_TuneZ2star_HFshowerLibrary_7TeV_pythia6 in AODSIM format for 2010 collision data.</p><p>See the description of the simulated dataset names in: <a href=\"/about/CMS-Simulated-Dataset-Names\">About CMS simulated dataset names</a>.</p><p>These simulated datasets correspond to the collision data collected by the CMS experiment in 2010.</p>"
+  },
+  "accelerator": "CERN-LHC",
+  "availability": "partial",
+  "categories": {
+   "primary": "Standard Model Physics",
+   "secondary": [
+    "QCD"
+   ],
+   "source": "CMS Collaboration"
+  },
+  "collaboration": {
+   "name": "CMS Collaboration",
+   "recid": "450"
+  },
+  "collections": [
+   "CMS-Simulated-Datasets"
+  ],
+  "collision_information": {
+   "energy": "7TeV",
+   "type": "pp"
+  },
+  "date_created": [
+   "2010"
+  ],
+  "date_published": "2018",
+  "date_reprocessed": "2010",
+  "distribution": {
+   "formats": [
+    "aodsim",
+    "root"
+   ],
+   "number_events": 995200,
+   "number_files": 53,
+   "size": 172860658093
+  },
+  "doi": "10.7483/OPENDATA.CMS.IUW0.ZE04",
+  "experiment": [
+   "CMS"
+  ],
+  "license": {
+   "attribution": "CC0-1.0"
+  },
+  "methodology": {
+   "description": "<p>These data were generated in several steps (see also <a href=\"/docs/cms-mc-production-overview\">CMS Monte Carlo production overview</a>):</p>",
+   "steps": [
+    {
+     "configuration_files": [
+      {
+       "cms_confdb_id": "153fbc65b3d49ee64349d246f49314b3",
+       "process": "SIM",
+       "title": "Configuration file"
+      }
+     ],
+     "global_tag": "START42_V17B::All",
+     "output_dataset": "/QCD_Pt_470to600_TuneZ2star_HFshowerLibrary_7TeV_pythia6/Summer12-LowPU2010-START42_V17B-v1/GEN-SIM",
+     "release": "CMSSW_4_2_8_lowpupatch1",
+     "type": "SIM"
+    },
+    {
+     "configuration_files": [
+      {
+       "cms_confdb_id": "429e00f769683de0712feb6c5ba663b2",
+       "process": "DIGI2RAW",
+       "title": "Configuration file"
+      },
+      {
+       "cms_confdb_id": "429e00f769683de0712feb6c5ba765ab",
+       "process": "RECO",
+       "title": "Configuration file"
+      }
+     ],
+     "global_tag": "START42_V17B::All",
+     "output_dataset": "/QCD_Pt_470to600_TuneZ2star_HFshowerLibrary_7TeV_pythia6/Summer12-LowPU2010_DR42_PU_S0_START42_V17B-v1/AODSIM",
+     "release": "CMSSW_4_2_8_lowpupatch1",
+     "type": "DIGI2RAW RECO"
+    }
+   ]
+  },
+  "pids": {
+   "oai": {
+    "id": "oai:cernopendata.cern:784"
+   }
+  },
+  "publisher": "CERN Open Data Portal",
+  "recid": "784",
+  "run_period": [
+   "Run2010A",
+   "Run2010B"
+  ],
+  "system_details": {
+   "container_images": [
+    {
+     "name": "docker.io/cmsopendata/cmssw_4_2_8-slc5_amd64_gcc434:latest",
+     "registry": "dockerhub"
+    },
+    {
+     "name": "gitlab-registry.cern.ch/cms-cloud/cmssw-docker-opendata/cmssw_4_2_8-slc5_amd64_gcc434:latest",
+     "registry": "gitlab"
+    }
+   ],
+   "global_tag": "START42_V17B::All",
+   "release": "CMSSW_4_2_8"
+  },
+  "title": "/QCD_Pt_470to600_TuneZ2star_HFshowerLibrary_7TeV_pythia6/Summer12-LowPU2010_DR42_PU_S0_START42_V17B-v1/AODSIM",
+  "title_additional": "Simulated dataset QCD_Pt_470to600_TuneZ2star_HFshowerLibrary_7TeV_pythia6 in AODSIM format for 2010 collision data",
+  "type": {
+   "primary": "Dataset",
+   "secondary": [
+    "Simulated"
+   ]
+  },
+  "usage": {
+   "description": "You can access these data through the CMS Virtual Machine. See the instructions for setting up the Virtual Machine and getting started in",
+   "links": [
+    {
+     "description": "How to install the CMS Virtual Machine",
+     "url": "/docs/cms-virtual-machine-2010"
+    },
+    {
+     "description": "Getting started with CMS open data",
+     "url": "/docs/cms-getting-started-2010"
+    }
+   ]
+  },
+  "validation": {
+   "description": "The generation and simulation of Monte Carlo data has been validated through general CMS validation procedures."
+  }
+ },
+ "cms-789": {
+  "_availability_details": {
+   "on demand": 49,
+   "online": 1
+  },
+  "abstract": {
+   "description": "<p>Simulated dataset QCD_Pt_600to800_TuneZ2star_HFshowerLibrary_7TeV_pythia6 in AODSIM format for 2010 collision data.</p><p>See the description of the simulated dataset names in: <a href=\"/about/CMS-Simulated-Dataset-Names\">About CMS simulated dataset names</a>.</p><p>These simulated datasets correspond to the collision data collected by the CMS experiment in 2010.</p>"
+  },
+  "accelerator": "CERN-LHC",
+  "availability": "partial",
+  "categories": {
+   "primary": "Standard Model Physics",
+   "secondary": [
+    "QCD"
+   ],
+   "source": "CMS Collaboration"
+  },
+  "collaboration": {
+   "name": "CMS Collaboration",
+   "recid": "450"
+  },
+  "collections": [
+   "CMS-Simulated-Datasets"
+  ],
+  "collision_information": {
+   "energy": "7TeV",
+   "type": "pp"
+  },
+  "date_created": [
+   "2010"
+  ],
+  "date_published": "2018",
+  "date_reprocessed": "2010",
+  "distribution": {
+   "formats": [
+    "aodsim",
+    "root"
+   ],
+   "number_events": 984800,
+   "number_files": 50,
+   "size": 173210841006
+  },
+  "doi": "10.7483/OPENDATA.CMS.DMTH.QZAA",
+  "experiment": [
+   "CMS"
+  ],
+  "license": {
+   "attribution": "CC0-1.0"
+  },
+  "methodology": {
+   "description": "<p>These data were generated in several steps (see also <a href=\"/docs/cms-mc-production-overview\">CMS Monte Carlo production overview</a>):</p>",
+   "steps": [
+    {
+     "configuration_files": [
+      {
+       "cms_confdb_id": "153fbc65b3d49ee64349d246f492feca",
+       "process": "SIM",
+       "title": "Configuration file"
+      }
+     ],
+     "global_tag": "START42_V17B::All",
+     "output_dataset": "/QCD_Pt_600to800_TuneZ2star_HFshowerLibrary_7TeV_pythia6/Summer12-LowPU2010-START42_V17B-v1/GEN-SIM",
+     "release": "CMSSW_4_2_8_lowpupatch1",
+     "type": "SIM"
+    },
+    {
+     "configuration_files": [
+      {
+       "cms_confdb_id": "fa09878571c00c1f0d62c320e484a464",
+       "process": "DIGI2RAW",
+       "title": "Configuration file"
+      },
+      {
+       "cms_confdb_id": "fa09878571c00c1f0d62c320e484c511",
+       "process": "RECO",
+       "title": "Configuration file"
+      }
+     ],
+     "global_tag": "START42_V17B::All",
+     "output_dataset": "/QCD_Pt_600to800_TuneZ2star_HFshowerLibrary_7TeV_pythia6/Summer12-LowPU2010_DR42_PU_S0_START42_V17B-v1/AODSIM",
+     "release": "CMSSW_4_2_8_lowpupatch1",
+     "type": "DIGI2RAW RECO"
+    }
+   ]
+  },
+  "pids": {
+   "oai": {
+    "id": "oai:cernopendata.cern:789"
+   }
+  },
+  "publisher": "CERN Open Data Portal",
+  "recid": "789",
+  "run_period": [
+   "Run2010A",
+   "Run2010B"
+  ],
+  "system_details": {
+   "container_images": [
+    {
+     "name": "docker.io/cmsopendata/cmssw_4_2_8-slc5_amd64_gcc434:latest",
+     "registry": "dockerhub"
+    },
+    {
+     "name": "gitlab-registry.cern.ch/cms-cloud/cmssw-docker-opendata/cmssw_4_2_8-slc5_amd64_gcc434:latest",
+     "registry": "gitlab"
+    }
+   ],
+   "global_tag": "START42_V17B::All",
+   "release": "CMSSW_4_2_8"
+  },
+  "title": "/QCD_Pt_600to800_TuneZ2star_HFshowerLibrary_7TeV_pythia6/Summer12-LowPU2010_DR42_PU_S0_START42_V17B-v1/AODSIM",
+  "title_additional": "Simulated dataset QCD_Pt_600to800_TuneZ2star_HFshowerLibrary_7TeV_pythia6 in AODSIM format for 2010 collision data",
+  "type": {
+   "primary": "Dataset",
+   "secondary": [
+    "Simulated"
+   ]
+  },
+  "usage": {
+   "description": "You can access these data through the CMS Virtual Machine. See the instructions for setting up the Virtual Machine and getting started in",
+   "links": [
+    {
+     "description": "How to install the CMS Virtual Machine",
+     "url": "/docs/cms-virtual-machine-2010"
+    },
+    {
+     "description": "Getting started with CMS open data",
+     "url": "/docs/cms-getting-started-2010"
+    }
+   ]
+  },
+  "validation": {
+   "description": "The generation and simulation of Monte Carlo data has been validated through general CMS validation procedures."
+  }
+ }
+}

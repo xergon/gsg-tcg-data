@@ -126,3 +126,21 @@ is wrong. **Which rows are affected cannot be determined from the public repo**:
 the bug only fires on unanimous three-way disagreement. `OM_P_ALMA_QUAL = 3` for NGC 1433 should
 therefore be treated as *possibly* the MUSE-mass max rather than the ALMA modal flag, and cannot
 be disambiguated from public data alone.
+
+## THE MUSE DAP MAPS DO NOT CONTAIN A STELLAR FLUX MAP
+
+`<GAL>_MAPS_native.fits` is a 54-extension file. It carries the stellar **kinematics**
+(`V_STARS`, `FORM_ERR_V_STARS`, `SIGMA_STARS`, `FORM_ERR_SIGMA_STARS`) and full flux / velocity /
+sigma sets for eight emission lines (HB4861, OIII4958, OIII5006, NII6548, HA6562, NII6583,
+SII6716, SII6730), plus `BIN_ID` for the Voronoi binning.
+
+There is **no stellar continuum flux extension**. A Tremaine-Weinberg integral needs a surface-
+brightness weight, so the stellar TW **cannot be run from the MAPS file alone**. The weight comes
+from the separate `IMAGES` product, which is why `phangs_muse_white_images/` is mirrored here:
+white-light mosaics, native and copt, for all three galaxies (`DATA`, `STAT`, `DQ` extensions).
+
+All MUSE products - MAPS and IMAGES, native and copt - are on the same 0.2000 arcsec/pix grid,
+read from `CD2_2`. The copt PSF is **0.91 / 1.05 / 0.96 arcsec** for NGC1433 / NGC3351 / NGC1672,
+and that value appears only in the **filename**; the trio's native PSFs are not equal to each
+other and are not equal to the copt values. Per-galaxy pixel grids differ in size
+(1480x915, 897x896, 1235x711) but not in scale.

@@ -1,0 +1,82 @@
+{
+  "artifact": "transpositions_2014-07_v3.npz",
+  "bytes": 1252278284,
+  "sha256": "d1e302d4d6e0f7b1f2b7ef37634e0d8aaacc6703bf24adf2a211ccc992770dab",
+  "n_arrays": 19,
+  "n_records": 23941814,
+  "n_games": 1048440,
+  "ply_window": {
+    "MIN_PLY": 6,
+    "MAX_PLY": 30,
+    "MAX_PLY_IS_EXCLUSIVE": true,
+    "emitted_ply_values": "6..29 inclusive",
+    "extra_records_if_ply30_included": 938817
+  },
+  "changes_vs_v2": [
+    "player_fold = splitmix64(player_hash) & 1  (v2: player_hash & 1)",
+    "uint64 dtype on all nine 64-bit digest columns  (v2: signed int64, same bytes)"
+  ],
+  "splitmix64_route": "CANONICAL finalizer -- the thread's own source was NOT on disk. Constants 0x9E3779B97F4A7C15 / 0xBF58476D1CE4E5B9 / 0x94D049BB133111EB, shifts 30/27/31. Known-answer seed-0 outputs 0xE220A8397B1DCDAF, 0x6E789E6AA1B965F4 match the published reference vectors.",
+  "full_corpus_byte_identity_vs_v2": true,
+  "full_corpus_byte_identity_vs_v1_13cols_plus_meta": true,
+  "contract_assertions": {
+    "player_fold_equals_splitmix64_player_hash_and_1": true,
+    "checked_on_records": 23941814,
+    "digest_column_dtypes": {
+      "state": "uint64",
+      "state_fen5": "uint64",
+      "repetition_ledger_hash": "uint64",
+      "hist1": "uint64",
+      "hist4": "uint64",
+      "nxt": "uint64",
+      "state_hash128_lo": "uint64",
+      "state_hash128_hi": "uint64",
+      "player_hash": "uint64"
+    },
+    "all_digest_columns_uint64": true,
+    "player_fold_dtype": "uint8",
+    "splitmix64_source": "CANONICAL finalizer (the thread's own i4_repetition_state.py was NOT on disk)"
+  },
+  "collision_audit_64bit": {
+    "distinct_128bit_state_keys": 18744120,
+    "distinct_64bit_state_keys": 18744120,
+    "collided_128bit_keys_lost_to_64bit": 0,
+    "colliding_64bit_groups": 0,
+    "records_in_a_colliding_group": 0,
+    "collision_rate_per_distinct_key": 0.0,
+    "expected_under_random_64bit": 9.523144421215652e-06,
+    "unchanged_from_v2": true
+  },
+  "player_disjoint_split": {
+    "fold_rule": "player_fold = splitmix64(player_hash) & 1  (v2 used player_hash & 1)",
+    "distinct_movers": 30350,
+    "movers_in_fold0": 15217,
+    "movers_in_fold1": 15133,
+    "movers_in_BOTH_folds": 0,
+    "movers_sum_check_equals_total": true,
+    "records_fold0": 12115750,
+    "records_fold1": 11826064,
+    "records_fold1_fraction": 0.49395020778291904,
+    "games_contributing_to_BOTH_folds": 513954,
+    "n_games": 1048440,
+    "records_per_mover_min": 1,
+    "records_per_mover_max": 49867,
+    "records_per_mover_median": 96.0,
+    "movers_with_ge100_records": 15010,
+    "movers_with_ge1000_records": 5982,
+    "v2_for_comparison": {
+      "movers_in_fold0": 15306,
+      "movers_in_fold1": 15044,
+      "movers_in_BOTH_folds": 0,
+      "records_fold0": 11887504,
+      "records_fold1": 12054310
+    }
+  },
+  "records_that_changed_fold": 11848278,
+  "wall_clock_s": {
+    "rebuild": 27.66,
+    "verify": 28.5
+  },
+  "v1_and_v2": "BOTH STILL PUBLISHED AND UNTOUCHED at their own release tags",
+  "not_computed": "no delta_1/2/3/4, no permutation test, no estimator, no verdict"
+}

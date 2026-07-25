@@ -1,0 +1,379 @@
+{
+  "file": "transpositions_2014-07_v3.npz",
+  "supersedes": "transpositions_2014-07_v2.npz (v2) and transpositions_2014-07.npz (v1). BOTH REMAIN PUBLISHED AND UNCHANGED at their own release tags -- nothing was deleted or overwritten, so a read already in flight against v1 or v2 is safe. v3 changes EXACTLY TWO things versus v2 and NOTHING else.",
+  "why_v2": "v1 failed i4's own validate_contract(): it requires state_hash128_lo, state_hash128_hi, player_hash, player_fold, none of which v1 contained, so i4's player-disjoint primary scoring and its 128-bit collision audit were both unrunnable. That was an omission in the extraction brief, not a thread-side change.",
+  "bytes": 1252278284,
+  "sha256": "d1e302d4d6e0f7b1f2b7ef37634e0d8aaacc6703bf24adf2a211ccc992770dab",
+  "format": "numpy .npz (zip, DEFLATE). np.load(path); z['<name>'] -> 1-D array.",
+  "n_records": 23941814,
+  "n_games": 1048440,
+  "all_columns_are_row_aligned_1d_length": 23941814,
+  "source_corpus": {
+    "name": "lichess_db_standard_rated_2014-07.pgn.zst",
+    "url": "https://database.lichess.org/standard/lichess_db_standard_rated_2014-07.pgn.zst",
+    "bytes": 200304103,
+    "sha256": "d73fa278979e3dd36d9af98c7b09c5eb03f8644ec5beccddc191af7b4959cad8",
+    "games_in_file": 1048440,
+    "role": "DISCOVERY period"
+  },
+  "scope": {
+    "MIN_PLY": 6,
+    "MAX_PLY": 30,
+    "MAX_PLY_IS_EXCLUSIVE": true,
+    "PLY_30_IS_NOT_INCLUDED": true,
+    "rule": "one record per ply p with MIN_PLY <= p < MAX_PLY and at least 4 preceding plies; the record describes the position BEFORE the move stored in nxt. Emitted ply values are 6..29 INCLUSIVE. Ply 30 is NOT emitted.",
+    "variant_games_skipped": 0,
+    "ply30_inclusive_would_add": {
+      "current_build": "MAX_PLY=30 EXCLUSIVE -- records at ply 6..29 inclusive; ply 30 IS NOT INCLUDED",
+      "records_now": 23941814,
+      "extra_records_if_ply30_included": 938817,
+      "records_if_ply30_included": 24880631,
+      "pct_increase": 3.9212442298649552,
+      "definition": "exactly the number of games that have a move at 0-based ply index 30 (i.e. mainline length >= 31); each would emit one extra record"
+    }
+  },
+  "hashing": {
+    "digest": "BLAKE2b",
+    "personalization": "b'i4-rep-v1' (repetition_ledger_hash, state, state_hash128_lo/hi, player_hash)",
+    "int64_encoding": "int.from_bytes(digest, 'little') -- UNSIGNED uint64 for every digest column in v3. v2 shipped the identical bytes as signed int64; .view(np.int64) converts back at zero cost.",
+    "unpersonalized_columns": [
+      "state_fen5",
+      "hist1",
+      "hist4",
+      "nxt"
+    ],
+    "note": "state_fen5/hist1/hist4/nxt use blake2b(digest_size=8) with NO personalization, bit-identical to the pass-1 scout extraction and to v1."
+  },
+  "repetition_ledger_spec_as_implemented": {
+    "ledger_key_k": "python-chess Board.epd() = placement / side-to-move / castling / LEGAL en-passant. Library call: chess.Board.epd() with its default en_passant='legal' (verified equal to ' '.join(board.fen().split(' ')[:4])). halfmove and fullmove counters are EXCLUDED.",
+    "segment_reset": "chess.Board.is_irreversible(move) evaluated on the PRE-move board (is_zeroing OR _reduces_castling_rights OR has_legal_en_passant). After an irreversible move the count-map is cleared and re-seeded with the post-move position at count 1.",
+    "count_map": "{k: occurrences} over the current reversible segment, INCLUDING the current position; seeded at the game's initial position with count 1.",
+    "serialization": "'\\n'.join('<k>:<count>') over items in LEXICOGRAPHIC KEY ORDER (python sorted() on the ASCII EPD strings), encoded UTF-8.",
+    "L_t": "repetition_ledger_hash = blake2b(serialization, digest_size=8, person=b'i4-rep-v1')",
+    "X_t": "state = blake2b(fen_fields_1to5.encode('utf-8') || L_t_RAW_8_BYTES, digest_size=8, person=b'i4-rep-v1').  The concatenation uses the 8 RAW digest bytes of L_t (not hex, not decimal). fen_fields_1to5 is the space-joined first five FEN fields."
+  },
+  "V2_NEW_COLUMNS_LITERAL_READINGS": {
+    "STATUS": "Items 2 and 5 are RESOLVED IN v3 (see V3_CHANGES). Items 1, 3 and 4 are still literal readings we chose because your spec was silent -- correct any you dislike; each is a ~6-minute re-extraction.",
+    "1_player_hash_digest_params": {
+      "chosen": "blake2b(name.encode('utf-8'), digest_size=8, person=b'i4-rep-v1'), int.from_bytes(..., 'little', signed=True)",
+      "why": "the same convention the repetition ledger already uses; NOT the unpersonalized h64() used by the pass-1-compatible columns, because player identity is new in this pass and has no pass-1 bench to stay bit-compatible with",
+      "identity_string": "the PGN White/Black tag VERBATIM -- no casefold, no strip, no unicode normalisation. python-chess supplies '?' when the tag is absent.",
+      "which_player": "the MOVER: the side to move in the position the record describes, i.e. the player who plays the move stored in `nxt`. Taken from chess.Board.turn (WHITE -> 'White' tag, BLACK -> 'Black' tag), NOT from ply parity arithmetic.",
+      "recompute_cost": "re-extraction, ~7 min"
+    },
+    "2_player_fold_splitmix64_constants": {
+      "RESOLVED_IN_V3": true,
+      "chosen": "player_fold = splitmix64(player_hash) & 1, canonical splitmix64 constants",
+      "was_in_v2": "player_hash & 1, no mixing",
+      "recompute_cost": "ZERO -- player_hash ships in the file, so any fold rule is one line in your sandbox"
+    },
+    "3_128bit_personalization_and_which_half_is_lo": {
+      "input_bytes": "IDENTICAL to the `state` column: fen_fields_1to5.encode('utf-8') || L_t_RAW_8_BYTES",
+      "chosen": "d16 = blake2b(x_in, digest_size=16, person=b'i4-rep-v1').digest(); state_hash128_lo = int.from_bytes(d16[0:8], 'little', signed=True); state_hash128_hi = int.from_bytes(d16[8:16], 'little', signed=True)",
+      "lo_is": "the FIRST eight digest bytes, little-endian -- matching the existing little-endian int64 encoding used for every other digest column",
+      "READ_THIS": "blake2b folds digest_size into its parameter block, so the 16-byte digest is NOT an extension of the 8-byte one: state != state_hash128_lo on every record. They are two INDEPENDENT hashes of the SAME input bytes. That is exactly what makes the collision audit valid -- equal 128-bit pair => equal input => equal 64-bit state, so any group sharing `state` but not (lo,hi) is a genuine 64-bit collision.",
+      "recompute_cost": "re-extraction, ~7 min"
+    },
+    "4_ply_30_inclusive_or_exclusive": {
+      "chosen": "EXCLUSIVE -- unchanged from v1. Records are emitted at ply 6..29; PLY 30 IS ABSENT.",
+      "why": "changing it would break bit-identity with v1, which was the other hard requirement. Measured instead, exactly.",
+      "measured": {
+        "current_build": "MAX_PLY=30 EXCLUSIVE -- records at ply 6..29 inclusive; ply 30 IS NOT INCLUDED",
+        "records_now": 23941814,
+        "extra_records_if_ply30_included": 938817,
+        "records_if_ply30_included": 24880631,
+        "pct_increase": 3.9212442298649552,
+        "definition": "exactly the number of games that have a move at 0-based ply index 30 (i.e. mainline length >= 31); each would emit one extra record"
+      },
+      "recompute_cost": "re-extraction, ~7 min -- say the word"
+    },
+    "5_dtype_signedness": {
+      "RESOLVED_IN_V3": true,
+      "chosen": "uint64 for all nine digest columns; player_fold stays uint8 {0,1}",
+      "was_in_v2": "signed int64",
+      "recompute_cost": "ZERO -- .view() reinterprets in place, bytes never move"
+    }
+  },
+  "columns": {
+    "state": {
+      "dtype": "uint64",
+      "meaning": "X_t, the RULE-COMPLETE state key (FEN 1-5 + repetition ledger)"
+    },
+    "state_fen5": {
+      "dtype": "uint64",
+      "meaning": "pass-1 scout key: hash of FEN fields 1-5 only, rule-INCOMPLETE; carried so the scout-vs-complete re-partition is measurable in-file"
+    },
+    "repetition_ledger_hash": {
+      "dtype": "uint64",
+      "meaning": "L_t"
+    },
+    "hist1": {
+      "dtype": "uint64",
+      "meaning": "hash of the single preceding move (UCI)"
+    },
+    "hist4": {
+      "dtype": "uint64",
+      "meaning": "hash of the 4 preceding moves, space-joined UCI, oldest first"
+    },
+    "nxt": {
+      "dtype": "uint64",
+      "meaning": "hash of the move actually played from this state (UCI) -- the prediction target"
+    },
+    "gidx": {
+      "dtype": "int32",
+      "meaning": "game index, 0..n_games-1, globally unique and non-decreasing; use for game-disjoint train/held-out splits"
+    },
+    "eband": {
+      "dtype": "int8",
+      "meaning": "mean-Elo band: 0 <1400, 1 <1600, 2 <1800, 3 <2000, 4 <2200, 5 >=2200; -1 unknown"
+    },
+    "tclass": {
+      "dtype": "int8",
+      "meaning": "time control from base+40*inc: 0 bullet <179s, 1 blitz <479s, 2 rapid <1499s, 3 classical; -1 unknown"
+    },
+    "ply": {
+      "dtype": "int8",
+      "meaning": "0-based ply index of the position (MIN_PLY..MAX_PLY-1)"
+    },
+    "current_position_occurrence_count": {
+      "dtype": "uint8",
+      "meaning": "count-map[k_current], >=1, INCLUDES the current occurrence; saturates at 255"
+    },
+    "can_claim_threefold_now": {
+      "dtype": "bool",
+      "meaning": "current position has occurred >=3 times in the segment. NOT python-chess can_claim_threefold_repetition(), which also returns True for the after-one-move case"
+    },
+    "can_claim_threefold_after_one_move": {
+      "dtype": "bool",
+      "meaning": "exists a legal move whose resulting position has occurred 3 times; reported INDEPENDENTLY of can_claim_threefold_now"
+    },
+    "meta": {
+      "dtype": "int64",
+      "shape": 6,
+      "meaning": "[n_games, n_records, MIN_PLY, MAX_PLY, variant_games_skipped, n_legalmove_scans] -- BIT-IDENTICAL to v1"
+    },
+    "state_hash128_lo": {
+      "dtype": "uint64",
+      "meaning": "low 64 bits (first 8 digest bytes, little-endian, signed) of the 128-bit blake2b of the SAME input as `state`"
+    },
+    "state_hash128_hi": {
+      "dtype": "uint64",
+      "meaning": "high 64 bits (last 8 digest bytes, little-endian, signed) of the same 128-bit digest. (lo,hi) together are the collision-audit reference key."
+    },
+    "player_hash": {
+      "dtype": "uint64",
+      "meaning": "blake2b-64(person='i4-rep-v1') of the MOVER's PGN username, verbatim. The mover is the side to move, i.e. whoever plays `nxt`."
+    },
+    "player_fold": {
+      "dtype": "uint8",
+      "meaning": "splitmix64(player_hash) & 1, in {0,1}. Player-disjoint 2-way split: a mover is in exactly one fold BY CONSTRUCTION (splitmix64 is a bijection, so the fold is a pure function of player_hash). NOTE this is NOT game-disjoint -- a game whose two players fold differently contributes to both folds. Use gidx for game-disjoint splits."
+    },
+    "meta2": {
+      "dtype": "int64",
+      "shape": 2,
+      "meaning": "[n_games_with_a_move_at_ply_index_30, -1]. meta2[0] is exactly the number of extra records a ply-30-INCLUSIVE build would emit. meta2[1] is a placeholder (-1): per-chunk distinct-name counts are not globally unique; the global distinct-mover count is in verification.player_disjoint_split."
+    }
+  },
+  "not_computed_here": "No estimator, no delta_1/2/3/4, no verdict, no permutation test. i4 owns the estimator spec and has now shipped its own source; building a second one risks a silently different statistic.",
+  "verification": {
+    "corpus_sha256_matches_staged_and_publisher": true,
+    "corpus_sha256": "d73fa278979e3dd36d9af98c7b09c5eb03f8644ec5beccddc191af7b4959cad8",
+    "decompressed_bytes": 1048308056,
+    "eight_way_split_byte_exact": "chunk bytes sum to 1048308056 == decompressed original; every chunk starts on a '[Event \"' game boundary",
+    "split_count_is_irrelevant_to_output": "v1 used 6 chunks, v2 used 8. The merged arrays are independent of the chunking: chunks partition the game stream in order and gidx offsets accumulate, so the concatenation is identical either way -- as the bit-identity check below confirms on the full corpus.",
+    "PREFLIGHT_bit_identity_20k_games": "on the first 20,000 games (458,108 records) all 13 v1 columns matched the v1 file AND the original pass-2 bench, bit for bit, BEFORE the full run was launched",
+    "FULL_CORPUS_bit_identity_vs_v1": {
+      "columns_checked": [
+        "state",
+        "state_fen5",
+        "repetition_ledger_hash",
+        "hist1",
+        "hist4",
+        "nxt",
+        "gidx",
+        "eband",
+        "tclass",
+        "ply",
+        "current_position_occurrence_count",
+        "can_claim_threefold_now",
+        "can_claim_threefold_after_one_move",
+        "meta"
+      ],
+      "all_identical": true,
+      "differing": [],
+      "scope": "FULL CORPUS, every record"
+    },
+    "collision_audit_64bit": {
+      "distinct_128bit_state_keys": 18744120,
+      "distinct_64bit_state_keys": 18744120,
+      "collided_128bit_keys_lost_to_64bit": 0,
+      "colliding_64bit_groups": 0,
+      "records_in_a_colliding_group": 0,
+      "collision_rate_per_distinct_key": 0.0,
+      "expected_under_random_64bit": 9.523144421215652e-06,
+      "unchanged_from_v2": true,
+      "method": "equal 128-bit pair => equal input => equal 64-bit state, so D128 - D64 is exactly the number of distinct rule-complete states that a 64-bit key merges away",
+      "RE_CONFIRMED_ON_V3": "identical to the v2 audit: 18,744,120 = 18,744,120, zero collisions. Your state-key-aliasing kill (Delta4_64/Delta4_128 < 0.90 or Delta4_64 - Delta4_128 >= 0.005) therefore still CANNOT FIRE on this corpus -- the two keys induce the identical partition, so Delta4_64 == Delta4_128 exactly. A guarantee, not a probability."
+    },
+    "player_disjoint_split": {
+      "fold_rule": "player_fold = splitmix64(player_hash) & 1  (v2 used player_hash & 1)",
+      "distinct_movers": 30350,
+      "movers_in_fold0": 15217,
+      "movers_in_fold1": 15133,
+      "movers_in_BOTH_folds": 0,
+      "movers_sum_check_equals_total": true,
+      "records_fold0": 12115750,
+      "records_fold1": 11826064,
+      "records_fold1_fraction": 0.49395020778291904,
+      "games_contributing_to_BOTH_folds": 513954,
+      "n_games": 1048440,
+      "records_per_mover_min": 1,
+      "records_per_mover_max": 49867,
+      "records_per_mover_median": 96.0,
+      "movers_with_ge100_records": 15010,
+      "movers_with_ge1000_records": 5982,
+      "v2_for_comparison": {
+        "movers_in_fold0": 15306,
+        "movers_in_fold1": 15044,
+        "movers_in_BOTH_folds": 0,
+        "records_fold0": 11887504,
+        "records_fold1": 12054310
+      },
+      "note": "fold is a pure function of player_hash, so a mover is in exactly one fold BY CONSTRUCTION. A GAME however contributes to both folds whenever its two players fold differently -- player-disjointness is at the MOVER level, and it is NOT game-disjoint. Both are available: gidx for game-disjoint, player_fold for player-disjoint.",
+      "records_with_UNKNOWN_mover_tag_question_mark": 0,
+      "READ_THIS": "The mover pool for this whole corpus is only 30,350 distinct usernames across 1,048,440 games -- median 96 records per mover, max 49,867. A 2-way player-disjoint split is therefore coarse: each fold holds ~15,000 movers, and a single heavy user can carry ~0.2% of a fold's records. If your '>=2 movers per history class' eligibility rule is tight, check it against this pool size before scoring.",
+      "FOLD_COUNTS_CHANGED_BY_DESIGN": "splitmix64 rehashes before the parity bit, so the two folds are a DIFFERENT partition of the same 30,350 movers than v2's low-bit fold. 11,848,278 records (49.4878%) switched fold. 0 movers in both folds still holds, by construction."
+    },
+    "identity_string_normalisation": {
+      "distinct_identity_strings_hashed": 30631,
+      "distinct_after_casefold": 30631,
+      "casefold_groups_with_more_than_one_spelling": 0,
+      "extra_identities_created_by_NOT_casefolding": 0,
+      "unknown_player_tag_present": true,
+      "choice": "PGN tag hashed VERBATIM (no casefold / strip / normalise) -- the literal reading",
+      "example_casefold_groups": []
+    },
+    "repartition_full_corpus": {
+      "distinct_fen5_keys": 18575215,
+      "distinct_rule_complete_X_t_keys": 18744120,
+      "added_keys": 168905,
+      "added_pct": 0.9093,
+      "fen5_groups_with_ge2_records": 1013787,
+      "fen5_groups_SPLIT_by_ledger": 141797,
+      "pct_of_multirecord_fen5_groups_split": 13.987,
+      "records_in_a_split_fen5_group": 1253135,
+      "pct_records_in_a_split_group": 5.2341
+    },
+    "transposition_density": {
+      "records_in_an_X_t_group_of_size_ge2": 6190299,
+      "pct": 25.856,
+      "n_such_groups": 992605,
+      "max_group_size": 10227
+    },
+    "repetition_rarity_in_this_ply_window": {
+      "occurrence_count_histogram_1_to_5": [
+        23936849,
+        4782,
+        172,
+        10,
+        1
+      ],
+      "records_with_occurrence_ge2": 4965,
+      "pct": 0.0207,
+      "can_claim_threefold_now": 183,
+      "can_claim_threefold_after_one_move": 528,
+      "READ_THIS": "Within MIN_PLY=6..MAX_PLY=30 actual repetitions are near-absent. The rule-completeness fix therefore bites almost entirely through SEGMENT MEMBERSHIP (which reversible positions preceded this one), not through realised repetitions. The two threefold-claim columns are near-degenerate at this window; to make repetition RIGHTS a live discriminator the ply window must extend well past 30."
+    },
+    "ledger_hand_checks": [
+      "knight-shuffle threefold -> current_position_occurrence_count == 3, agrees with python-chess Board.is_repetition(3)",
+      "an intervening pawn move resets the segment -> count 2, not 3",
+      "a legal en-passant makes every move irreversible (is_irreversible True for a quiet knight move)"
+    ],
+    "run": {
+      "v3_rebuild_wall_clock_s": 27.66,
+      "v3_verification_wall_clock_s": 28.5,
+      "method": "v3 is a member-by-member rewrite of the v2 .npz: each array is decompressed, relabelled (dtype) or recomputed (player_fold), and re-deflated. No re-extraction from the PGN corpus was needed or performed, which is why every other column is provably byte-identical rather than merely re-derived.",
+      "v2_extract_wall_clock_s": 346.32,
+      "v1_extract_wall_clock_s": 443.68
+    },
+    "FULL_CORPUS_byte_identity_vs_v2": {
+      "columns_checked": [
+        "meta",
+        "meta2",
+        "state",
+        "state_fen5",
+        "repetition_ledger_hash",
+        "hist1",
+        "hist4",
+        "nxt",
+        "gidx",
+        "eband",
+        "tclass",
+        "ply",
+        "current_position_occurrence_count",
+        "can_claim_threefold_now",
+        "can_claim_threefold_after_one_move",
+        "state_hash128_lo",
+        "state_hash128_hi",
+        "player_hash"
+      ],
+      "all_identical": true,
+      "differing": [],
+      "scope": "FULL CORPUS, every one of 23,941,814 records (not a slice)",
+      "note": "compared as RAW BYTES, so the int64->uint64 reinterpretation is proved to be a pure dtype relabel: .view(np.int64) on v3 recovers v2 exactly."
+    },
+    "contract_assertions_run_against_v3": {
+      "player_fold_equals_splitmix64_player_hash_and_1": true,
+      "checked_on_records": 23941814,
+      "digest_column_dtypes": {
+        "state": "uint64",
+        "state_fen5": "uint64",
+        "repetition_ledger_hash": "uint64",
+        "hist1": "uint64",
+        "hist4": "uint64",
+        "nxt": "uint64",
+        "state_hash128_lo": "uint64",
+        "state_hash128_hi": "uint64",
+        "player_hash": "uint64"
+      },
+      "all_digest_columns_uint64": true,
+      "player_fold_dtype": "uint8",
+      "splitmix64_source": "CANONICAL finalizer (the thread's own i4_repetition_state.py was NOT on disk)"
+    }
+  },
+  "why_v3": "v2 would have failed your validate_contract() on two points: (1) it asserts player_fold == splitmix64(player_hash) & 1, and v2 shipped player_fold = player_hash & 1 with no mixing step; (2) it asserts uint64 dtypes, and v2 shipped signed int64. Both were flagged in the v2 delivery as ZERO-COST to change. They are now changed. No other column, value, row, or row-order differs from v2.",
+  "V3_CHANGES": {
+    "1_player_fold_now_uses_splitmix64": {
+      "v2": "player_fold = player_hash & 1",
+      "v3": "player_fold = splitmix64(player_hash) & 1",
+      "splitmix64_ROUTE_USED": "CANONICAL FINALIZER -- NOT your shipped source",
+      "READ_THIS": "Your i4_repetition_state.py / i4_transposition_estimator.py were NOT on our disk, so we could not copy your splitmix64 verbatim. We implemented the canonical reference form, spelled out below. CONFIRM IT MATCHES YOURS. If it does not, say so and we republish in minutes -- the fold is a pure function of player_hash, which is in the file, so any fold rule is a one-line recompute in your own sandbox and needs no re-extraction.",
+      "definition_exact": [
+        "z = (x + 0x9E3779B97F4A7C15) mod 2**64",
+        "z = ((z XOR (z >> 30)) * 0xBF58476D1CE4E5B9) mod 2**64",
+        "z = ((z XOR (z >> 27)) * 0x94D049BB133111EB) mod 2**64",
+        "return z XOR (z >> 31)"
+      ],
+      "input_is": "player_hash interpreted as UINT64 (the raw little-endian 8 digest bytes)",
+      "known_answer_check": "driven as a seed-0 generator this implementation emits 0xE220A8397B1DCDAF then 0x6E789E6AA1B965F4, matching the published splitmix64 reference vectors; it was also cross-checked against an independent pure-python implementation",
+      "records_that_changed_fold": 11848278,
+      "pct_records_that_changed_fold": 49.4878,
+      "disjointness_still_by_construction": "splitmix64 is a deterministic bijection, so the fold remains a PURE FUNCTION of player_hash: no mover can be in both folds. Verified on all records."
+    },
+    "2_dtypes_now_uint64": {
+      "v2": "signed int64 for every 64-bit digest column",
+      "v3": "uint64 for all nine digest columns: state, state_fen5, repetition_ledger_hash, hist1, hist4, nxt, state_hash128_lo, state_hash128_hi, player_hash",
+      "bytes_are_untouched": "a pure dtype relabel. The little-endian 8-byte words are BIT-IDENTICAL to v2; v3_col.view(np.int64) reproduces the v2 column exactly. Proved by a raw-byte comparison over ALL 23,941,814 records.",
+      "columns_deliberately_NOT_changed": {
+        "gidx": "int32 (a game counter, not a digest)",
+        "eband/tclass": "int8 -- these carry -1 for unknown and MUST stay signed",
+        "ply": "int8",
+        "current_position_occurrence_count": "uint8",
+        "can_claim_threefold_now / _after_one_move": "bool",
+        "player_fold": "uint8 with values {0,1} -- a 1-bit fold; say the word if your assertion wants it as uint64 and it is a one-line astype on republish",
+        "meta / meta2": "int64 -- meta2[1] is a -1 placeholder and MUST stay signed"
+      }
+    },
+    "3_EVERYTHING_ELSE_IS_UNCHANGED": "record count 23,941,814; games 1,048,440; row order; ply window 6..29 with MAX_PLY=30 EXCLUSIVE; all 19 array names; every other column's bytes. Verified over the FULL corpus."
+  }
+}

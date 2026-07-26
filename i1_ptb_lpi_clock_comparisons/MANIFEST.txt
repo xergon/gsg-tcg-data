@@ -1,0 +1,11 @@
+MANIFEST - i1 PTB LPI clock comparisons - DOI 10.7795/720.20211028
+commit pin: 7b9cbeafffb3be3a0cf892551d78b6751ca6dda1
+
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/7b9cbeafffb3be3a0cf892551d78b6751ca6dda1/i1_ptb_lpi_clock_comparisons/E3_E2_frequency_ratio_measurement.txt
+  bytes=706 sha256=ec9355e4f44c6035a49639e57a49273a8efef72c66c87ad9a2f89c2b8256d219 total_lines=12 data_rows=11
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/7b9cbeafffb3be3a0cf892551d78b6751ca6dda1/i1_ptb_lpi_clock_comparisons/E3_frequency_measurement.txt
+  bytes=3001 sha256=c9684c840e61a8a9ca674746bb6c8fa474e75e84df904853b5edd2c0f0bf92aa total_lines=83 data_rows=82
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/7b9cbeafffb3be3a0cf892551d78b6751ca6dda1/i1_ptb_lpi_clock_comparisons/README_PTB.txt
+  bytes=2778 sha256=472cc03a2130f0e5e75a2d754d5fdc35ab6edfd0303303b4b4c87beb2b4e8613 total_lines=24 data_rows=None
+https://raw.githubusercontent.com/xergon/gsg-tcg-data/7b9cbeafffb3be3a0cf892551d78b6751ca6dda1/i1_ptb_lpi_clock_comparisons/ptb_720_20211028.zip
+  bytes=2881 sha256=3f38135ebfab1375391195c282aa1980a76657ba9125b59e6e1cb85695a400e6 total_lines=None data_rows=None

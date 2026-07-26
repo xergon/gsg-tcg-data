@@ -1,0 +1,104 @@
+{
+  "row": "C-TripleKappa",
+  "catalogue": "VizieR J/A+A/706/A40",
+  "title": "PHANGS-JWST GMC catalog (Bazzi+, 2026)",
+  "bibcode": "2026A&A...706A..40B",
+  "source_root": "https://cdsarc.cds.unistra.fr/ftp/J/A+A/706/A40/",
+  "fetched_utc": "2026-07-26T05:08:00Z",
+  "published_utc": "2026-07-26T05:18:38Z",
+  "files": {
+    "ReadMe": {
+      "bytes": 18784,
+      "sha256": "b760d22b77579cccd5c6d8913cef9800fc06b5c06999d0e67ce488441db5d7aa",
+      "channel": "repo"
+    },
+    "cat30pc.dat": {
+      "bytes": 92087634,
+      "rows": 108466,
+      "record_length": 848,
+      "sha256": "5672e85065dfa98ff1c309239aba941abb16fd88e8125b455992285c79411ea3",
+      "channel": "release",
+      "completeness_proof": "108466 * (848+1) == 92087634; all lines exactly 848 chars"
+    },
+    "catnat.dat": {
+      "bytes": 124426080,
+      "rows": 146040,
+      "record_length": 851,
+      "sha256": "dad63f53976698cbbb6db8c29e86f3377d894546db675d0e909e849078bb14fe",
+      "channel": "release",
+      "completeness_proof": "146040 * (851+1) == 124426080; all lines exactly 851 chars",
+      "note": "118.7 MiB, NOT the ~211 MB stated in the request"
+    },
+    "cat30pc.dat.gz": {
+      "bytes": 40780143,
+      "sha256": "53c344d4038918ae473c985673036e0feddc07aa2385fb0031ee89fe937d7f3c",
+      "channel": "release",
+      "note": "CDS-original bytes, matches server Content-Length"
+    },
+    "catnat.dat.gz": {
+      "bytes": 55294953,
+      "sha256": "f646b845dd65046f7ce58688c52a358bf3514849dd37870beecc4862dc78307b",
+      "channel": "release",
+      "note": "CDS-original bytes, matches server Content-Length"
+    },
+    "reduced/cat30pc_allrows.csv.gz": {
+      "bytes": 19060610,
+      "mib": 18.18,
+      "rows": 108466,
+      "columns": 41,
+      "sha256": "6881209ac3ae0dd14d3857545c5e75e2545a322509ea57f3132efda452b7d244",
+      "channel": "repo"
+    },
+    "reduced/catnat_allrows.csv.gz": {
+      "bytes": 25649204,
+      "mib": 24.46,
+      "rows": 146040,
+      "columns": 41,
+      "sha256": "6199fb0e136aa21d4f54f8cd4b726672951b26da085f09cb122cfa3053367b9b",
+      "channel": "repo"
+    }
+  },
+  "sandbox_reduction": {
+    "why": "consuming sandbox has 0 MB URL ingress; per-file ceiling 32 MiB, 64 MiB total",
+    "selection_rule": "Every row and every column of the source table is kept; the ONLY transformation is that each fixed-width field is cut at its exact ReadMe byte offset, whitespace-trimmed, and re-emitted as CSV with floats rounded to 8 significant figures (%.8g) except RAdeg/DEdeg at 10 significant figures (%.10g), with Galaxy/Env/fall/EdgeClouds copied verbatim as strings, then gzipped.",
+    "rows_dropped": 0,
+    "columns_dropped": 0,
+    "per_file_mib": [24.46, 18.18],
+    "total_mib": 42.64,
+    "ceiling_per_file_mib": 32,
+    "ceiling_total_mib": 64,
+    "byte_exact_alternative_rejected": "xz -9e on catnat.dat extrapolates to ~46.7 MiB, over the 32 MiB per-file ceiling",
+    "fidelity_checks": {
+      "fall_counts_reproduced": true,
+      "sum_MassCST_rel_diff": 2.29e-10,
+      "RAdeg_minmax_agreement_deg": 4e-8,
+      "null_cells_preserved": 5106,
+      "fields_per_row": 41
+    }
+  },
+  "fall_column": {
+    "storage": "A5 string, literal 'True' / 'False' (NOT 0/1)",
+    "readme_is_self_contradictory": true,
+    "reading_A_true_selects": "Description + Note (2): 'Use fall set to 1 to select the subset analyzed in the paper.'",
+    "reading_B_true_excludes": "byte-by-byte Explanations, both tables: 'Flag to exclude clouds according to our method, setting True excludes the clouds (f_all).'",
+    "counts": {
+      "cat30pc": {"True": 77884, "False": 30582, "total": 108466},
+      "catnat": {"True": 108019, "False": 38021, "total": 146040}
+    },
+    "analysed_subset_under_reading_A": {"cat30pc": 77884, "catnat": 108019},
+    "analysed_subset_under_reading_B": {"cat30pc": 30582, "catnat": 38021},
+    "delivered_verbatim": true
+  },
+  "structural_findings": [
+    "catnat.dat covers 65 galaxies, cat30pc.dat covers 66 -- IC5332 is present at 30pc and ABSENT at native resolution, despite both being described as 66 galaxies.",
+    "catnat.dat has Env=0.0 on 3163 rows, a code absent from the ReadMe Note (G1) legend (which defines only 1.0-10.0). cat30pc.dat carries the [1/10] range constraint and has zero Env=0.0 rows.",
+    "CDS publishes these tables ONLY gzipped: .../catnat.dat and .../cat30pc.dat return HTTP 404 (283-byte HTML shell). Only the .gz paths exist.",
+    "EdgeClouds=1 on 3633/108466 (cat30pc) and 4534/146040 (catnat) rows.",
+    "The five Mass* and five SD* columns are the same measurement under five alpha_CO prescriptions -- correlated by construction, not independent evidence.",
+    "Masses derive from PAH 7.7um via a linear PAH->CO conversion, not CO detections; only 41% of PAH clouds have an ALMA CO counterpart."
+  ],
+  "out_of_scope_not_fetched": [
+    "65-galaxy PHANGS cube sets -- explicitly excluded by the thread",
+    "Job A NGC 3627 cube-level profile package -- explicitly out of scope this pass"
+  ]
+}

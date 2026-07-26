@@ -1,0 +1,286 @@
+J/A+A/706/A40          PHANGS-JWST GMC catalog                    (Bazzi+, 2026)
+================================================================================
+PHANGS-JWST: the largest extragalactic molecular cloud catalog traced by
+polycyclic aromatic hydrocarbon emission.
+    Bazzi Z., Colombo D., Bigiel F., Leroy A.K., Rosolowsky E., Sandstrom K.,
+    Duarte-Cabral A., Faustino Vieira H., Kobayashi M.I.N., He H., Meidt S.E.,
+    Barnes A.T., Klessen R.S., Glover S.C.O., Thorp M.D., Pan H.-A., Chown R.,
+    Smith R.J., Dale D.A., Williams T.G., Amiri A., Dlamini S., Chastenet J.,
+    Sarbadhicary S.K., Hughes A., Lee J.C., Hands L., the PHANGS collaboration
+    <Astron. Astrophys. 706, A40 (2026)>
+    =2026A&A...706A..40B        (SIMBAD/NED BibCode)
+================================================================================
+ADC_Keywords: Galaxies, nearby ; Molecular clouds ; Interstellar medium ;
+              Photometry, infrared
+Keywords: ISM: clouds - ISM: molecules - ISN: structure - galaxies: evolution -
+          galaxies: ISM - galaxies: star formation
+
+Abstract:
+    High-resolution JWST images of nearby spiral galaxies reveal
+    polycyclic aromatic hydrocarbon (PAH) structures that potentially
+    trace molecular clouds, even CO-dark regions. In this paper, we
+    identify ISM cloud structures in PHANGS-JWST 7.7 micron polycyclic
+    aromatic hydrocarbon (PAH) emission maps for 66 galaxies smoothed to a
+    common physical resolution of 30 pc and at native resolution. We
+    extracted 108466 cloud structures in the 30pc sample and 146040
+    clouds in the native resolution sample. We then calculated their
+    molecular properties following a linear conversion from PAH to CO.
+    Given the tendency for clouds in galaxy centers to overlap in velocity
+    space, we opted to flag these and omit them from the analysis in this
+    work. The remaining clouds correspond to giant molecular clouds
+    (GMCs), such as those detected in CO(2-1) emission by ALMA, or lower
+    surface density clouds that either fall below the ALMA detection
+    limits of existing maps or genuinely have no molecular counterpart. We
+    specifically used the homogenized sample for our analysis. Upon
+    cross-matching the PAH clouds to ALMA CO clouds at a homogenized
+    resolution of 90pc in 27 galaxies, we find that 41% of the PAH
+    clouds are associated with a CO counterpart. We also show that the
+    converted molecular cloud properties of the PAH clouds do not differ
+    much when compared in different galactic environments. However,
+    outside the central environment, the highest molecular mass surface
+    density clouds are preferentially found in spiral arms. We further
+    apply a lognormal fit to the mass spectra to an unprecedented
+    extragalactic completeness limit of 2 x 10^3 Msun, and find that
+    spiral arms contain the most massive clouds compared to other galactic
+    environments. Our findings support the idea that spiral arm
+    gravitational potentials foster the formation of high surface density
+    clouds, and lower surface density clouds form in the interarm regions.
+    The cloud Sigma_mol values show a decline of a factor of ~1.5-2
+    towards the outer 2-3Re. However, the trend largely varies in
+    individual galaxies, with flat, decreasing, and even no trend as a
+    function of Rgal. Factors like large-scale processes, galaxy types,
+    and morphologies might influence the observed trends. We note that
+    combining homogenized molecular properties of individual galaxies
+    leads to the loss of information about the physical processes that are
+    driving deviations in trends of those properties across different
+    galactic environments. We publish two catalogs online, one at the
+    common resolution of 30 pc and another at the native resolution. We
+    expect them to have broad utility for future PAH clouds, molecular
+    clouds, and star formation studies.
+
+Description:
+    Catalog of molecular clouds identified in 66 PHANGS-JWST mid-IR F770W
+    maps (Table C.1 of the paper). Use fall set to 1 to select the subset
+    analyzed in the paper.
+
+File Summary:
+--------------------------------------------------------------------------------
+ FileName      Lrecl  Records   Explanations
+--------------------------------------------------------------------------------
+ReadMe            80        .   This file
+cat30pc.dat      848   108466   Catalog of molecular clouds identified in 66
+                                 PHANGS-JWST mid-IR F770W maps, 30 pc
+catnat.dat       851   146040   Catalog of molecular clouds identified in 66
+                                 PHANGS-JWST mid-IR F770W maps, native
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: cat30pc.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units        Label        Explanations
+--------------------------------------------------------------------------------
+   1-  5  I5    ---          Cluster      ID of the cloud in a specific galaxy
+                                           (clusts)
+   7- 14  A8    ---          Galaxy       Name of the host galaxy (galaxy)
+  16- 19  F4.1  ---          Env          [1/10] Galactic environment (Env) (G1)
+  21- 40 F20.15 pix          Xpos         x-position of the cloud (pos_x)
+  42- 61 F20.15 pix          Ypos         y-position of the cloud (pos_y)
+  63- 81 F19.15 deg          RAdeg        Right Ascension (J2000) of the cloud
+                                           (pos_ra)
+  83-102 F20.16 deg          DEdeg        Declination (J2000) of the cloud
+                                           (pos_dec)
+ 104-127 F24.15 pc2.MJy/sr   LPAH         PAH luminosity (Lpah)
+ 128-151 F24.15 pc2.K.km/s   LCO          CO-based luminosity (Lco)
+ 152-175 F24.14 Msun         MassCST      Molecular mass using constant MW
+                                           alpha_CO (mass_cst)
+ 176-198 F23.14 Msun         MassSL       Molecular mass using Schinnerer &
+                                           Leroy 2024ARA&A..62..369S alpha_CO
+                                           (mass_sl)
+ 199-222 F24.14 Msun         MassS        Molecular mass using Sun et al.
+                                           2020ApJ...892..148S alpha_CO (mass_s)
+ 223-244 F22.13 Msun         MassB        Molecular mass using Bolatto et al.
+                                           2013ARA&A..51..207B alpha_CO (mass_b)
+ 246-267 F22.13 Msun         MassT        Molecular mass using Teng et al.
+                                           2023atyp.confE..36T alpha_CO (mass_t)
+ 269-288 F20.16 pc           RadEq        Cloud radius based on area (rad_eq)
+ 290-309 F20.16 pc           RadEqDec     ? Beam-deconvolved radius based on
+                                           the area (rad_eq_dec)
+ 311-330 F20.16 pc           Rad          Radius from intensity-weighted second
+                                           moments HWHM times 1.18 (rad)
+ 331-352 F22.16 Msun/pc2     SDCST        Molecular surface density using
+                                           constant MW alpha_CO (SD_cst)
+ 354-375 F22.16 Msun/pc2     SDSL         Molecular surface density using
+                                           Schinnerer & Leroy
+                                           2024ARA&A..62..369S alpha_CO (SD_sl)
+ 377-398 F22.16 Msun/pc2     SDS          Molecular surface density using
+                                           Sun et al. 2020ApJ...892..148S
+                                           alpha_CO (SD_s)
+ 400-422 F23.17 Msun/pc2     SDB          Molecular surface density using
+                                           Bolatto et al. 2013ARA&A..51..207B
+                                           alpha_CO (SD_b)
+ 424-445 F22.16 Msun/pc2     SDT          Molecular surface density using
+                                           Teng et al. 2023atyp.confE..36T
+                                           alpha_CO (SD_t)
+ 447-465 F19.16 kpc          Dist         Galactocentric distance (Distance)
+ 467-484 F18.16 ---          DistRe       Galactocentric distance in Re units
+                                           (Distance_Re)
+ 486-490  A5    ---          fall         Flag to exclude clouds according to
+                                           our method, setting True excludes
+                                           the clouds (f_all) (2)
+ 492-509 F18.16 ---          overRatioAll Percentage overlap in velocity space
+                                           (overlap_ratio_all)
+     511  I1    ---          EdgeClouds   [0/1] Edge clouds flag 1 is edge,
+                                           0 is not edge (edge_clouds)
+ 513-536 F24.16 pc2.MJy/sr e_LPAH         Error on PAH luminosity (err_Lpah)
+ 538-561 F24.16 pc2.K.km/s e_LCO          Error on CO luminosity (err_Lco)
+ 562-581 F20.16 pc         e_RadDeFin     Error on cloud deconvolved-radius
+                                           based on area (rad_dec_err_fin)
+ 582-601 F20.16 pc         e_RadFin       Error on cloud radius based on area
+                                           (rad_err_fin)
+ 602-624 F23.14 Msun       e_MassfinCST   Error on the molecular mass using
+                                           constant MW alpha_CO
+                                           (mass_err_fin_cst)
+ 626-649 F24.15 Msun       e_MassfinSL    Error on the molecular mass using
+                                           Schinnerer & Leroy
+                                           2024ARA&A..62..369S alpha_CO
+                                           (mass_err_fin_sl)
+ 650-672 F23.14 Msun       e_MassfinS     Error on the molecular mass using
+                                           Sun et al. 2020ApJ...892..148S
+                                           alpha_CO (mass_err_fin_s)
+ 674-697 F24.15 Msun       e_MassfinB     Error on the molecular mass using
+                                           Bolatto et al.  2013ARA&A..51..207B
+                                           alpha_CO (mass_err_fin_b)
+ 698-721 F24.15 Msun       e_MassfinT     Error on the molecular mass using
+                                           Teng et al. 2023atyp.confE..36T
+                                           alpha_CO (mass_err_fin_t)
+ 722-745 F24.16 Msun/pc2   e_SDfinCST     Error on SD using constant MW
+                                           alpha_CO (SD_err_fin_cst)
+ 747-771 F25.17 Msun/pc2   e_SDfinSL      Error on SD using Schinnerer & Leroy
+                                           2024ARA&A..62..369S alpha_CO
+                                           (SD_err_fin_sl)
+ 773-796 F24.16 Msun/pc2   e_SDfinS       Error on SD using Sun et al.
+                                           2020ApJ...892..148S alpha_CO
+                                           (SD_err_fin_s)
+ 798-822 F25.17 Msun/pc2   e_SDfinB       Error on SD using Bolatto et al.
+                                           2013ARA&A..51..207B alpha_CO
+                                           (SD_err_fin_b)
+ 824-848 F25.17 Msun/pc2   e_SDfinT       Error on SD using Teng et al.
+                                           2023atyp.confE..36T alpha_CO
+                                           (SD_err_fin_t)
+--------------------------------------------------------------------------------
+Note (2): Use fall=1 to select the subset analyzed in the paper.
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: catnat.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units        Label        Explanations
+--------------------------------------------------------------------------------
+   1-  7  F7.1  ---          Cluster      ID of the cloud in a specific galaxy
+                                           (clusts)
+   9- 16  A8    ---          Galaxy       Name of the host galaxy (galaxy)
+  18- 21  F4.1  ---          Env          Galactic environment (Env) (G1)
+  23- 42 F20.15 pix          Xpos         x-position of the cloud (pos_x)
+  44- 63 F20.15 pix          Ypos         y-position of the cloud (pos_y)
+  65- 83 F19.15 deg          RAdeg        Right Ascension (J2000) of the cloud
+                                           (pos_ra)
+  85-104 F20.16 deg          DEdeg        Declination (J2000) of the cloud
+                                           (pos_dec)
+ 106-130 F25.15 pc2.MJy/sr   LPAH         PAH luminosity (Lpah)
+ 132-156 F25.15 pc2.K.km/s   LCO          CO-based luminosity (Lco)
+ 158-181 F24.14 Msun         MassCST      Molecular mass using constant MW
+                                           alpha_CO (mass_cst)
+ 183-206 F24.14 Msun         MassSL       Molecular mass using
+                                           Schinnerer & Leroy
+                                           2024ARA&A..62..369S alpha_CO
+                                           (mass_sl)
+ 208-231 F24.14 Msun         MassS        Molecular mass using Sun et al.
+                                           2020ApJ...892..148S alpha_CO (mass_s)
+ 233-256 F24.14 Msun         MassB        Molecular mass using Bolatto et al.
+                                           2013ARA&A..51..207B alpha_CO (mass_b)
+ 258-281 F24.14 Msun         MassT        Molecular mass using Teng et al.
+                                           2023atyp.confE..36T alpha_CO (mass_t)
+ 283-302 F20.16 pc           RadEq        Cloud radius based on area (rad_eq)
+ 304-323 F20.16 pc           RadEqDec     Beam-deconvolved radius based on the
+                                           area (rad_eq_dec)
+ 325-344 F20.16 pc           Rad          Radius from intensity-weighted second
+                                           moments HWHM times 1.18 (rad)
+ 346-366 F21.16 Msun/pc2     SDCST        Molecular surface density using
+                                           constant MW alpha_CO (SD_cst)
+ 368-388 F21.16 Msun/pc2     SDSL         Molecular surface density using
+                                           Schinnerer & Leroy
+                                           2024ARA&A..62..369S alpha_CO (SD_sl)
+ 390-410 F21.16 Msun/pc2     SDS          Molecular surface density using
+                                           Sun et al. 2020ApJ...892..148S
+                                           alpha_CO (SD_s)
+ 412-432 F21.17 Msun/pc2     SDB          Molecular surface density using
+                                           Bolatto et al. 2013ARA&A..51..207B
+                                           alpha_CO (SD_b)
+ 434-453 F20.16 Msun/pc2     SDT          Molecular surface density using
+                                           Teng et al. 2023atyp.confE..36T
+                                           alpha_CO (SD_t)
+ 455-473 F19.16 kpc          Dist         Galactocentric distance (Distance)
+ 475-492 F18.16 ---          DistRe       Galactocentric distance in Re units
+                                           (Distance_Re)
+ 494-498  A5    ---          fall         Flag to exclude clouds according to
+                                           our method, setting True excludes the
+                                           clouds (f_all)
+ 500-517 F18.16 ---          overRatioAll Percentage overlap in velocity space
+                                           (overlap_ratio_all)
+     519  I1    ---          EdgeClouds   [0/1] Edge clouds flag 1 is edge,
+                                           0 is not edge (edge_clouds)
+ 521-545 F25.16 pc2.MJy/sr e_LPAH         Error on PAH luminosity (err_Lpah)
+ 547-571 F25.16 pc2.K.km/s e_LCO          Error on CO luminosity (err_Lco)
+ 573-592 F20.16 pc         e_RadDeFin     Error on cloud deconvolved-radius
+                                           based on area (rad_dec_err_fin)
+ 594-613 F20.16 pc         e_RadFin       Error on cloud radius based on area
+                                           (rad_err_fin)
+ 615-638 F24.14 Msun       e_MassfinCST   Error on the molecular mass using
+                                           constant MW alpha_CO
+                                           (mass_err_fin_cst)
+ 640-663 F24.15 Msun       e_MassfinSL    Error on the molecular mass using
+                                           Schinnerer & Leroy
+                                           2024ARA&A..62..369S alpha_CO
+                                           (mass_err_fin_sl)
+ 665-688 F24.14 Msun       e_MassfinS     Error on the molecular mass using
+                                           Sun et al. 2020ApJ...892..148S
+                                           alpha_CO (mass_err_fin_s)
+ 690-713 F24.15 Msun       e_MassfinB     Error on the molecular mass using
+                                           Bolatto et al.  2013ARA&A..51..207B
+                                           alpha_CO (mass_err_fin_b)
+ 715-738 F24.15 Msun       e_MassfinT     Error on the molecular mass using
+                                           Teng et al. 2023atyp.confE..36T
+                                           alpha_CO (mass_err_fin_t)
+ 740-760 F21.16 Msun/pc2   e_SDfinCST     Error on SD using constant MW
+                                           alpha_CO (SD_err_fin_cst)
+ 762-783 F22.17 Msun/pc2   e_SDfinSL      Error on SD using Schinnerer & Leroy
+                                           2024ARA&A..62..369S alpha_CO
+                                           (SD_err_fin_sl)
+ 785-805 F21.16 Msun/pc2   e_SDfinS       Error on SD using Sun et al.
+                                           2020ApJ...892..148S alpha_CO
+                                           (SD_err_fin_s)
+ 807-828 F22.17 Msun/pc2   e_SDfinB       Error on SD using Bolatto et al.
+                                           2013ARA&A..51..207B alpha_CO
+                                           (SD_err_fin_b)
+ 830-851 F22.17 Msun/pc2   e_SDfinT       Error on SD using Teng et al.
+                                           2023atyp.confE..36T alpha_CO
+                                           (SD_err_fin_t)
+--------------------------------------------------------------------------------
+
+Globla notes:
+Note (G1): Galactic environment code as follows:
+            1.0 = Center
+            2.0 = Bar
+            3.0 = Bar
+            5.0 = Spiral Arm
+            6.0 = Spiral Arm
+            4.0 = Interarm
+            7.0 = Interarm
+            8.0 = Interarm
+            9.0 = Disc
+           10.0 = Disc
+--------------------------------------------------------------------------------
+
+Acknowledgements:
+     Zein Bazzi, zbazzi(at)uni-bonn.de
+
+================================================================================
+(End)                                        Patricia Vannier [CDS]  11-Nov-2025

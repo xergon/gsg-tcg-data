@@ -1,0 +1,6 @@
+file,bytes,sha256,rows,note
+T1_NGC1365_ATCA_HI_sector_profile.csv,10121,53b0d3b9a22eb77796e231e55b5184ff6aac811dbe75a4d0d40ca3db7fe6cafb,147,"8 sectors x 30-arcsec annuli, ATCA Fornax mosaic afs_014"
+SCHEMA.md,1550,bbc59555496df677338e5edd599c75f76bcc54c2608722281d73a5fe2a2c80a0,,column definitions + provenance
+FINDINGS.md,4292,ce2671491c6503dd0b890ab34bb792a79ab7856c319a93e035936c9eced21f98,,measured sector coverage 5 of 8 + MFS blocker
+ATCAmom0.fits,8038080,48656ae2c3a9c27da2a4b5be7b231fe6fe02ceab362d6d62eabca71a6b55715c,,NOT uploaded - source FITS held locally at /tmp/t1fetch
+ATCAmom1.fits,8038080,6bacb287cffc19e778948a409073f6ed16451870c6072a5123135d9f3a7af30f,,NOT uploaded - source FITS held locally at /tmp/t1fetch

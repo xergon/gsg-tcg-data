@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "source": "Zenodo 10.5281/zenodo.15307488",
+  "archive": "bgs+lrg_cross_pr4+dr6.tgz",
+  "archive_bytes": 15234007,
+  "archive_md5": "78d3ae824e49a100020b3ff3f53a1bb1",
+  "archive_sha256": "343492841ca67b3859b7fed6f20b59cd9e393161343971227ed73ad7508588be",
+  "source_files_preserved_byte_exact": true,
+  "members": [
+    {
+      "name": "BGSz1_dNdz.txt",
+      "archive_member": "bgs+lrg_cross_pr4+dr6/BGSz1_dNdz.txt",
+      "bytes": 3700,
+      "sha256": "92e3c6b6e6d3c37a4a0dea7111489c4d26a313b44356b6ba17c479777701998f",
+      "byte_exact_archive_match": true
+    },
+    {
+      "name": "BGSz2_dNdz.txt",
+      "archive_member": "bgs+lrg_cross_pr4+dr6/BGSz2_dNdz.txt",
+      "bytes": 3700,
+      "sha256": "9e9719c8613d91910004c8f03a086a4e0f77a9baa09061d6889b2ea304782773",
+      "byte_exact_archive_match": true
+    },
+    {
+      "name": "LRGz1_dNdz.txt",
+      "archive_member": "bgs+lrg_cross_pr4+dr6/LRGz1_dNdz.txt",
+      "bytes": 7660,
+      "sha256": "c17ad947a8b2c5ab5f8c15b7903a055d456c5ebb2133039239c8d4e9e5cf2e2b",
+      "byte_exact_archive_match": true
+    },
+    {
+      "name": "LRGz2_dNdz.txt",
+      "archive_member": "bgs+lrg_cross_pr4+dr6/LRGz2_dNdz.txt",
+      "bytes": 7660,
+      "sha256": "3329e2e9ee756c1a9c7c9d8507a38a7cd12f14a210abd3b6900c639fc9344f58",
+      "byte_exact_archive_match": true
+    },
+    {
+      "name": "LRGz3_dNdz.txt",
+      "archive_member": "bgs+lrg_cross_pr4+dr6/LRGz3_dNdz.txt",
+      "bytes": 7660,
+      "sha256": "9b36bd3926a51d2b86cca13650a56d229ebe859d0441043d9006c36a5e24578d",
+      "byte_exact_archive_match": true
+    },
+    {
+      "name": "LRGz4_dNdz.txt",
+      "archive_member": "bgs+lrg_cross_pr4+dr6/LRGz4_dNdz.txt",
+      "bytes": 7660,
+      "sha256": "8714a32e552d17c8a6cd605a852127b719ae5aa41738e57d64f363d900bc468c",
+      "byte_exact_archive_match": true
+    },
+    {
+      "name": "bgs+lrg_cross_pr4+dr6.json",
+      "archive_member": "bgs+lrg_cross_pr4+dr6/bgs+lrg_cross_pr4+dr6.json",
+      "bytes": 49059059,
+      "sha256": "a1a67c75a226f3f048853a413acd156c66b9ffcb391484920d2aa27546691f14",
+      "byte_exact_archive_match": true
+    }
+  ],
+  "column_interpretation": {
+    "all_dndz_files": [
+      "z",
+      "dN_dz"
+    ],
+    "z_units": "dimensionless",
+    "LRG_normalization": "angular number density per redshift bin, galaxies per square degree; imaging and spectroscopic weights included",
+    "BGS_normalization": "not stated in the two source files; values preserved without inference",
+    "selection_bin_definition": "map names BGSz1, BGSz2, LRGz1, LRGz2, LRGz3, LRGz4; exact redshift cuts are not stated in these seven source members"
+  },
+  "derived_source_state_table": {
+    "status": "BLOCKED_SOURCE_FIELDS_ABSENT",
+    "reason": "The archive members contain spectra/covariance metadata and dN/dz arrays, not object-level colors, masses, SFR, ages, radii, calibration-subset membership, or reweighting weights.",
+    "replacement_action_executed": "Exact seven-member source freeze with byte-level verification.",
+    "next_execution_checkpoint": "Acquire the exact parent imaging and DESI spectroscopic calibration catalogs plus selection and weight definitions before deriving source-state values."
+  }
+}

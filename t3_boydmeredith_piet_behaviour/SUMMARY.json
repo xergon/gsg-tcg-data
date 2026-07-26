@@ -1,0 +1,88 @@
+{
+ "row": "T3",
+ "utc": "2026-07-26T05:11:23Z",
+ "subject_counts": {
+  "figshare_16695592_rats": 5,
+  "figshare_rat_ids": [
+   "H037",
+   "H066",
+   "H084",
+   "H129",
+   "H191"
+  ],
+  "figshare_total_trials": 540629,
+  "figshare_total_sessions": 1116,
+  "dryad_02v6wwq6b_humans_tested": 33,
+  "dryad_humans_in_main_eeg_analysis": 24,
+  "dryad_humans_in_behaviour_file_nS": 28,
+  "dryad_vertical_motion_control_extra": 6,
+  "already_on_disk_brody_zenodo_13352119_rats": 515,
+  "already_on_disk_total_trials": 25562353
+ },
+ "figshare_source": {
+  "article_id": 16695592,
+  "doi": "10.6084/m9.figshare.16695592.v2",
+  "file": "boydmeredith_piet_data.zip",
+  "bytes": 3721017889,
+  "publisher_md5": "24445f41ec41a592bad63e3d53f66d5d",
+  "license": "CC BY 4.0",
+  "zip_entries": 830,
+  "extraction": "HTTP-206 range read of central directory + per-member inflate; CRC-32 verified per member"
+ },
+ "mat_format": "MATLAB 5.0 (v5/v6) for ALL files - NOT HDF5 v7.3. scipy.io.loadmat reads them; h5py does NOT.",
+ "shards": {
+  "H037": {
+   "trials": 92468,
+   "sessions": 252,
+   "parquet_bytes": 19455224,
+   "sha256": "84351894334f1bb36d0546aec927def7f29014c083d04e661c4b51e1db073b28",
+   "uncompressed_bytes": 25506828,
+   "file": "boydmeredith_piet_behaviour_H037.parquet"
+  },
+  "H066": {
+   "trials": 185091,
+   "sessions": 308,
+   "parquet_bytes": 36631399,
+   "sha256": "6038e64e2471ff68fa6aad42d200b3abf65d5cb4fd68b9f5f340e57b4aba75f7",
+   "uncompressed_bytes": 49187241,
+   "file": "boydmeredith_piet_behaviour_H066.parquet"
+  },
+  "H084": {
+   "trials": 121276,
+   "sessions": 249,
+   "parquet_bytes": 24239574,
+   "sha256": "a6dc1cd4505a9aa7554740eeb115de4cd7cc61683b2b9399b559330b4e43105f",
+   "uncompressed_bytes": 32215212,
+   "file": "boydmeredith_piet_behaviour_H084.parquet"
+  },
+  "H129": {
+   "trials": 63494,
+   "sessions": 118,
+   "parquet_bytes": 13567175,
+   "sha256": "0f2c21e4bf1555037d867b8957e0ce797c5924a760fe39c9db82d7202c13889a",
+   "uncompressed_bytes": 17504842,
+   "file": "boydmeredith_piet_behaviour_H129.parquet"
+  },
+  "H191": {
+   "trials": 78300,
+   "sessions": 189,
+   "parquet_bytes": 16423187,
+   "sha256": "388afda54d5464d0fc739c32836519250ce9dec73e310b81daa467d40402039b",
+   "uncompressed_bytes": 21534336,
+   "file": "boydmeredith_piet_behaviour_H191.parquet"
+  }
+ },
+ "combined": {
+  "file": "boydmeredith_piet_behaviour_all5rats.parquet",
+  "rows": 540629,
+  "parquet_bytes": 104820115,
+  "sha256": "5831dda4a943725c2789111daa062c52380a71cb22699d7cc1b6756733d9851a",
+  "uncompressed_bytes": 149715322
+ },
+ "spec_compliance": {
+  "cap_uncompressed_per_shard_MB": 500,
+  "largest_shard_uncompressed_MB": 49.2,
+  "combined_uncompressed_MB": 149.7,
+  "note": "Entire Figshare behaviour corpus is 149.7 MB uncompressed - one shard fits well inside the 500 MB cap, below the 250-400 MB preferred band because the corpus is simply smaller than that band."
+ }
+}

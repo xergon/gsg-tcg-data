@@ -1,0 +1,39 @@
+PROOF THAT data_for_Fig4a ROW ORDER IS THE CHRONOLOGICAL ORDER
+=============================================================
+Source A: Dryad 10.5061/dryad.4xgxd25rg -> data_for_Fig4a.csv, column phaave, 44 rows, NO date column.
+Source B: same archive -> data_for_Fig4b.csv, the PUBLISHED Allan deviation of the same series.
+Test: recompute the NON-OVERLAPPING Allan deviation of phaave IN FILE ORDER, cluster size m=1..10,
+      and compare with the published Fig4b values.
+
+N = 44   mean = -0.11708 rad   sample std = 0.04626 rad  (paper states 0.046 rad)
+
+  m   t_published(d)   adev_published   adev_recomputed   diff      t_pub/m
+   1      6.45455        0.04523         0.04523    -0.00000   6.45455
+   2     12.90910        0.03444         0.03444    +0.00000   6.45455
+   3     19.36365        0.04068         0.04068    +0.00000   6.45455
+   4     25.81820        0.02808         0.02808    -0.00000   6.45455
+   5     32.27275        0.02511         0.02511    +0.00000   6.45455
+   6     38.72730        0.02227         0.02227    -0.00000   6.45455
+   7     45.18185        0.03060         0.03060    +0.00000   6.45455
+   8     51.63640        0.01195         0.01195    +0.00000   6.45455
+   9     58.09095        0.01404         0.01404    -0.00000   6.45455
+  10     64.54550        0.00998         0.00998    +0.00000   6.45455
+
+MAX ABSOLUTE DIFFERENCE = 0.00000  -> all 10 published values reproduced EXACTLY at printed precision.
+
+t_published/m is CONSTANT = 6.45455 d for every m  =>  the per-point effective time step is
+tau = 6.4545454545 d = 284/44 d exactly, i.e. the 44 Fig4a points tile a 284.000 d span.
+Paper (arXiv:2603.22981v1) states: start date 27 August 2024, 280 days of WEP data, 44 averaged points,
+Allan deviation reaches 0.010 rad at 10-point averaging = 64 days effective (10 x 6.4545 = 64.545 d).
+=> 284 d on the Allan grid vs '280 days' in the prose: 4 d discrepancy, flagged, not resolved.
+
+ARBITRARY-INPUT CONTROL (this is the falsification test, not decoration):
+  20,000 random permutations of the same 44 values.
+  max-abs-diff distribution:  min=0.00416  p1=0.00937  p50=0.01800  p99=0.02683
+  permutations reaching the file order's 0.00000 : 0 / 20000
+
+CONCLUSION: the file order reproduces the published Allan deviation exactly; no random order comes close.
+The 44 rows of data_for_Fig4a ARE in time order. A >=3-time-block break test is therefore RUNNABLE
+without any date column: split the 44 ordered rows into contiguous blocks.
+The reconstructed epoch column is the paper's OWN uniform Allan time base - it is NOT the true
+calendar timestamp of each bin (the real campaign had gaps). Use it for labelling, not for gap analysis.

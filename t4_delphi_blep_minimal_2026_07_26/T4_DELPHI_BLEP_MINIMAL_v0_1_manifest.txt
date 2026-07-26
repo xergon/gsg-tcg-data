@@ -1,0 +1,202 @@
+T4_DELPHI_BLEP_MINIMAL_v0_1 — MANIFEST
+Built 2026-07-26 UTC by the GSG-TCG orchestrator (Cat) for row T4.
+Provenance: the per-event DELPHI tables published as
+  xergon/gsg-tcg-data @ commit a4225104a2db0135fe245a1e6ab675ed84945db8
+  directory delphi_perevent_2026_07_26/  (176 CSV shards + MANIFEST/FILES/SCHEMA)
+Same rows, same order, no re-derivation from raw DST.
+
+================================================================================
+1. FILES
+================================================================================
+T4_DELPHI_BLEP_MINIMAL_v0_1.csv.gz
+  gzip(compresslevel=9) over UTF-8 CSV, LF line endings, one header row.
+  compressed bytes    : 6,294,992
+  uncompressed bytes  : 22,178,251   (verified by `gzip -dc | wc -c`, not by the writer)
+  lines               : 453,205      (1 header + 453,204 data rows)
+  SHA-256 (of the .gz): 4dd690be4041738b2ef4b9175b84a6cd6a4edbdd947e35adbdddecb5b2b3664f
+
+T4_DELPHI_PEREVENT_FULL_v0_1.csv.gz   <-- SHIPPED IN ADDITION; SEE SECTION 3
+  gzip(compresslevel=9) over UTF-8 CSV, LF line endings, one header row.
+  compressed bytes    : 40,832,163
+  uncompressed bytes  : 157,293,741
+  lines               : 453,205      (1 header + 453,204 data rows)
+  SHA-256 (of the .gz): d87258f2eee8f256c94d37d3a97f0e9ae292b1dd5577e6a2571c11b99bc2df97
+
+================================================================================
+2. ROW COUNTS  (asserted at build time; build aborts if any differ or any is 0)
+================================================================================
+  data      150,420
+  mc_qqps   153,000
+  mc_kk2f   149,784
+  TOTAL     453,204
+No pooling. No pre-averaging. One row per event, full source precision.
+`sample` takes exactly the literal values data / mc_qqps / mc_kk2f.
+(sample, run, event) is UNIQUE: 453,204 distinct triples, 0 duplicates.
+selection_key_u64 has 453,204 distinct values — 0 collisions.
+
+================================================================================
+3. 🔴 C_evt IS NOT PRESENT. IT CANNOT BE DERIVED. T4 MUST SPECIFY IT.
+================================================================================
+The contract asked for header
+  sample,source_record,run,event,C_evt,event_weight,selection_key_u64
+The delivered file omits C_evt. This is deliberate: a wrong C_evt would produce a
+confident wrong B_LEP, so nothing was invented.
+
+WHY IT CANNOT BE DERIVED — this is a structural fact, not a missing-effort fact.
+T4's stated DELPHI observable is a CHARGE-ORDERED, THRUST-HEMISPHERE CHIRALITY,
+and its own required column list was: run; event; centre-of-mass energy;
+hadronic-event flag; thrust and thrust-axis vector; charged-track momentum
+vectors; charged-track charge; charged-track quality; event weight; generator
+family.
+
+The per-event table at commit a4225104 is an EVENT-LEVEL SUMMARY. It contains:
+  - NO per-track momentum vectors
+  - NO per-track charges
+  - NO per-track quality flags
+  - NO thrust value and NO thrust axis
+It carries only event-scalar sums and two 3-vectors per event:
+  P_charged = (sum_px_ch, sum_py_ch, sum_pz_ch)
+  P_all     = (sum_px_all, sum_py_all, sum_pz_all)
+
+A chirality is a PSEUDOSCALAR: it must be odd under spatial inversion. Building
+one requires a triple product a.(b x c) of three linearly independent vectors
+constructed from the event. Two vectors are available, and they are not even
+independent in practice (P_all = P_charged + neutral sum). No mirror-odd
+quantity can be formed from them. Every other delivered column (nctrk, ecm,
+energies, cluster counts, ...) is a parity-EVEN scalar. Therefore C_evt is
+provably unconstructible from this file — not merely undocumented.
+
+WHAT T4 MUST DO — choose ONE:
+ (a) DEFINE C_evt as an explicit arithmetic expression over the columns listed
+     in section 5 of this manifest (they are all present in
+     T4_DELPHI_PEREVENT_FULL_v0_1.csv.gz, which is mounted alongside). Cat will
+     add the column, or T4 can compute it in-sandbox directly from the FULL
+     file, which needs no further delivery. NOTE: any such C_evt will be
+     parity-EVEN, so it is a generator-discrimination statistic, NOT a
+     chirality. B_LEP would then score generator/detector agreement, and T4
+     must decide whether that still answers its question.
+ (b) DECLARE THE TRACK-LEVEL RE-EXTRACTION. If C_evt must be the true
+     charge-ordered thrust-hemisphere chirality, the DELPHI short-DST must be
+     re-read with the per-track loop retained (VECP momenta + charge + quality,
+     plus a thrust computation). The reader that produced this table already
+     builds, links and runs on the same machine; adding the track loop is a
+     rebuild, not a new dataset. State the exact per-track columns and the
+     exact chirality formula and Cat will re-run it. Do NOT re-request the
+     CERN records — they are already fetched and adler32-verified.
+
+================================================================================
+4. DERIVATION OF EVERY COLUMN THAT IS PRESENT
+================================================================================
+sample
+  Verbatim copy of the `sample` column of the source table (column 38 of 39).
+  Asserted at build time to equal the file's own sample partition on every row.
+
+source_record
+  Constant per sample. The CERN Open Data record id of the source dataset:
+    data     -> 81431   DELPHI_collision_short94_c2
+                DOI 10.7483/OPENDATA.DELPHI.0XNE.G96F   (1994 collision data)
+    mc_qqps  -> 81437   DELPHI_sh_qqps_e91.25_c94_2l_c2
+                DOI 10.7483/OPENDATA.DELPHI.0HML.4DOT   (PYTHIA/JETSET shower, CERN production)
+    mc_kk2f  -> 81344   DELPHI_sh_kk2f4146qqpy_e91.25_l94_2l_c2
+                DOI 10.7483/OPENDATA.DELPHI.P4BN.GFID   (KK2f 4.14.6 + PYTHIA, Lyon production)
+
+run
+  Verbatim copy of the source `run` column (DELPHI IIIRUN), whitespace-stripped.
+  ⚠ mc_kk2f run numbers are NEGATIVE (e.g. -40055). That is the DELPHI
+  simulation convention as it appears in the DST, not a sign error.
+
+event
+  Verbatim copy of the source `evt` column (DELPHI IIIEVT, event number within
+  the run), whitespace-stripped. Renamed evt -> event to match the contract.
+
+event_weight
+  CONSTANT 1.0 on every row, for all three samples.
+  Justification: the source DSTs carry NO per-event generator weight. Both MC
+  records are unweighted production samples and the collision data is unweighted
+  by construction. 1.0 is therefore the correct value, not a placeholder — but
+  it is DECLARED here so T4 can see that no weighting information was lost.
+  Consequences: finite and > 0 on every row (contract requirement satisfied);
+  sum of weights == row count per sample; weighted means degenerate to
+  unweighted means.
+
+selection_key_u64
+  Deterministic 64-bit event key, defined exactly as
+      s   = f"{sample}|{run}|{event}|T4_DELPHI_BLEP_v0_1"
+      key = int(hashlib.sha256(s.encode()).hexdigest()[:16], 16)
+  i.e. the top 16 hex digits (first 8 bytes) of the SHA-256 of that string,
+  read big-endian as an unsigned 64-bit integer, printed in decimal.
+  `run` and `event` are the whitespace-stripped decimal strings as they appear
+  in this file (so the key is reproducible from this file alone).
+  It is a STABLE, UNIFORMLY DISTRIBUTED, SAMPLE-SCOPED EVENT IDENTIFIER, for
+  deduplication and for reproducible size-matched subsampling ("retain the
+  smallest keys within a sample"), matching the construction T4 itself
+  specified for the LHCb lane. It encodes NO selection decision and NO physics.
+  🔴 If T4 intended selection_key_u64 to be a BITMASK OF SELECTION FLAGS rather
+  than a hash key, say so and name the bits — this file's version must then be
+  replaced, not reinterpreted.
+
+  Verified: 453,204 distinct keys over 453,204 rows, no collisions.
+
+================================================================================
+5. C_evt SUMMARY STATS — NOT PROVIDED (no C_evt). event_weight stats:
+================================================================================
+  sample     min   max   sum          count
+  data       1.0   1.0   150420.0     150420
+  mc_qqps    1.0   1.0   153000.0     153000
+  mc_kk2f    1.0   1.0   149784.0     149784
+
+Substitute orientation stats, from T4_DELPHI_PEREVENT_FULL_v0_1.csv.gz, so T4
+can choose a C_evt definition without a round trip:
+
+  sample    ihad4==1        frac    ecm mean    nctrk mean  sum_p_ch mean
+  data      36,400          0.2420  91.271808   8.1995      35.2775
+  mc_qqps   146,352         0.9565  91.250000   29.6248     80.9657
+  mc_kk2f   143,130         0.9556  91.250000   29.5009     78.9880
+
+  🔴 READ THIS BEFORE DEFINING C_evt: the DATA sample is only 24.2% hadronic
+  while both MC samples are ~95.6% hadronic. The MC records are hadronic-Z
+  productions; the data record is an unfiltered short-DST stream. ANY statistic
+  computed over ALL rows will be dominated by this selection difference and
+  will produce a large, entirely spurious data-MC gap. The hadronic cut
+  (ihad4 == 1) is mandatory before any C_evt comparison. Hadronic-selected
+  counts are data 36,400 / mc_qqps 146,352 / mc_kk2f 143,130 — note this is
+  ~36k, not ~150k, for data, which changes T4's SE and power arithmetic
+  (SE scales as 1/sqrt(N); the data-MC SEs grow by ~2.0x).
+
+  ecm is ~91.27 GeV in data and exactly 91.25 GeV in both MC. A C_evt with any
+  ecm dependence will inherit that offset as a fake signal.
+
+  Full column list available in the FULL file (39 columns):
+  run, evt, date, time, dsttype, ecm, nctrk, nntrk, nvecp, ncvecp, nnvecp,
+  sum_px_ch, sum_py_ch, sum_pz_ch, sum_e_ch, sum_p_ch, mean_p_ch,
+  sum_px_all, sum_py_all, sum_pz_all, sum_e_all, echar, emneu, ehneu,
+  nhpc, ehpc_sum, nemf, eemf_sum, nemclu, eemclu_sum, nphot, ephot_sum,
+  ephot_min, ephot_max, nstic, estic_sum, ihad4, sample, file_id
+
+================================================================================
+6. NULL vs 0 — PRESERVED
+================================================================================
+The MINIMAL file has no bank-derived column, so the question does not arise
+there. In the FULL file the source convention is carried through byte-for-byte:
+a missing PA extra-module is the literal string NULL; a present module yielding
+nothing is a numeric 0. Governed columns:
+  EMNC (22): nhpc, ehpc_sum, nemf, eemf_sum
+  PHOT (30): nphot, ephot_sum, ephot_min, ephot_max
+  SSTC (33): nstic, estic_sum
+  (ephot_min/max are additionally NULL when nphot == 0.)
+  nemclu / eemclu_sum are NEVER NULL — SKELANA's PSFECL reconstructs them.
+Rows with nphot == NULL: data 109,657 · mc_qqps 12,296 · mc_kk2f 12,220.
+
+================================================================================
+7. INTEGRITY CHECKS ACTUALLY PERFORMED (not asserted from the writer)
+================================================================================
+  [x] build aborts unless per-sample counts == 150420 / 153000 / 149784
+  [x] build aborts unless total == 453,204 and every per-sample count > 0
+  [x] build aborts on any row not having exactly 39 source fields (0 found)
+  [x] per-row assertion that the source `sample` field matches its partition
+  [x] `gzip -t` passes on both files
+  [x] `gzip -dc | wc -c` reproduces the uncompressed byte counts above
+  [x] `gzip -dc | wc -l` == 453,205 on both files
+  [x] `gzip -dc | cut -d, -f1 | uniq -c` reproduces the three sample counts
+       FROM INSIDE THE GZIP (150420 data / 149784 mc_kk2f / 153000 mc_qqps)
+  [x] SHA-256 computed with shasum -a 256 on the written .gz

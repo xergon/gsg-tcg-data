@@ -1,0 +1,4 @@
+band,freq_ghz,wavelength_m,max_baseline_km,max_baseline_pair,diffraction_limit_lambda_over_B_mas,published_beam_maj_mas,published_beam_min_mas,published_min_over_diffraction_limit,beam_axial_ratio,meets_T7_2mas_threshold_on_minor_axis,meets_T7_2mas_threshold_on_major_axis
+S,2.3,0.130345,8611.585,MK-SC,3.122,7.8,2.9,0.9289,2.69,False,False
+X,8.4,0.03569,8611.585,MK-SC,0.8548,2.0,0.7,0.8189,2.857,True,True
+K,22.0,0.013627,8611.585,MK-SC,0.3264,0.8,0.3,0.9191,2.667,True,True

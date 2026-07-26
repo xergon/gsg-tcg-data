@@ -1,0 +1,123 @@
+{
+  "bundle": "T6 \u2014 NGC 1068 / X-ray-bright Seyfert neutrino extension",
+  "generated_utc": "2026-07-26T02:06:52Z",
+  "repo_path": "t6_seyfert_neutrino/",
+  "repo_files": 166,
+  "repo_bytes": 64510495,
+  "targets": {
+    "1_ngc1068_science2022": {
+      "dataset_doi": "10.21234/03fq-rh11",
+      "publication_doi": "10.1126/science.abg3395",
+      "arxiv": "2211.09972",
+      "status": "DELIVERED (publisher link dead; re-hosted from the Internet Archive capture of the publisher URL)"
+    },
+    "2_icetracks_dr2": {
+      "doi": "10.7910/DVN/MMIIZA",
+      "status": "VERIFIED LIVE, NOT RE-FETCHED",
+      "mirror_bytes": 116163148,
+      "mirror_sha256": "b0c0f2db33c59c3c2a79bb73ddfe290e6a13ea834d20093f3e7be14c2cd81748",
+      "zip_members": 44,
+      "uncompressed_bytes": 2609179705,
+      "publisher_files": 41,
+      "publisher_bytes": 2612528359
+    },
+    "3_icecube_northern_xray_agn": {
+      "doi": "10.3847/2041-8213/ae4aad",
+      "arxiv": "2510.13403",
+      "journal_ref": "ApJL 1000 L26 (2026)",
+      "status": "no data release exists; published tables extracted from the arXiv LaTeX to CSV"
+    },
+    "4_bass_dr2": {
+      "doi": "10.3847/1538-4365/ac6c05",
+      "arxiv": "2207.12432",
+      "status": "DELIVERED (CDS J/ApJS/261/2). NOTE: carries no X-ray luminosity column \u2014 BASS DR1 (Ricci+2017, J/ApJS/233/17) table13 supplied alongside because both IceCube papers weight on its logL2-10int / logL20-50int"
+    },
+    "5_icecube_southern_seyferts_estes": {
+      "arxiv": "2602.10208",
+      "doi": "10.3847/2041-8213/ae4aac",
+      "status": "no data release exists; published tables extracted from the arXiv LaTeX to CSV"
+    },
+    "6_antares_2007_2017": {
+      "status": "BLOCKED \u2014 behind a Contact Form 7 form requiring name, email and intended use. No DOI, no mirror found. A human must submit it.",
+      "url": "https://antares.in2p3.fr/data/data-set-for-the-2007-2017-antares-search-for-cosmic-neutrino-point-sources/"
+    }
+  },
+  "irf_structure": {
+    "detector_configurations": [
+      "IC40",
+      "IC59",
+      "IC79",
+      "IC86"
+    ],
+    "event_seasons": 14,
+    "seasons_sharing_the_IC86_irf": 11,
+    "per_season_irfs_exist": false,
+    "smearing_declination_bins": 30,
+    "effective_area_declination_bins": 50,
+    "declination_grids_agree": false,
+    "smearing_true_energy_bins": 14,
+    "smearing_log10_Enu_GeV_range": [
+      2.0,
+      9.0
+    ],
+    "smearing_subbins_per_cell": 8000,
+    "smearing_subbin_shape_Ereco_PSF_AngErr": [
+      20,
+      20,
+      20
+    ],
+    "smearing_rows_per_config": 3360000,
+    "smearing_rows_per_declination_bin": 112000,
+    "fractional_counts_sum_per_cell": 1.0,
+    "fractional_counts_is_a_density": false,
+    "subgrid_edges_vary_per_cell": true,
+    "angerr_floor_deg": 0.2,
+    "angerr_calibrated_for_spectrum": "E^-2",
+    "ngc1068_fitted_spectral_index": 3.4,
+    "mc_events_behind_smearing": {
+      "IC40": 621843,
+      "IC86": 12097409
+    },
+    "effective_area_log10_Enu_grid": [
+      2.0,
+      10.0
+    ],
+    "effective_area_readme_simulation_range_log10": [
+      2.0,
+      8.0
+    ],
+    "highest_log10_Enu_with_Aeff_gt_0": {
+      "IC40": 10.0,
+      "IC59": 9.0,
+      "IC79": 9.0,
+      "IC86": 8.8
+    },
+    "nonzero_fractional_counts_pct": {
+      "IC40": 8.59,
+      "IC59": 10.68,
+      "IC79": 7.02,
+      "IC86": 9.36
+    }
+  },
+  "row_count_checks": {
+    "2510.13403_gammaray_sources": 110,
+    "2510.13403_xray_agn_in_sample": 47,
+    "2510.13403_xray_table_rows": 48,
+    "2510.13403_xray_table_note": "NGC 1068 is row 1 and is EXCLUDED from the 47; see in_47_source_sample column",
+    "2602.10208_southern_candidates": 14,
+    "bass_dr2_table8_9_11": [
+      1449,
+      858,
+      47
+    ],
+    "bass_dr1_table1_5_12_13_14": [
+      838,
+      836,
+      836,
+      801,
+      56
+    ]
+  },
+  "sources_within_0p25deg_of_a_smearing_decbin_edge": 18,
+  "sources_mapped_to_decbins": 172
+}

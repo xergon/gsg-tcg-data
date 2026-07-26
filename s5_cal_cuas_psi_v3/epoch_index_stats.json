@@ -1,0 +1,18 @@
+{
+ "embedded_header_rows_total": 685,
+ "files_with_multiple_headers": 161,
+ "rows": 109495,
+ "skipped": 0,
+ "variants": {
+  "A9|hdr=False": 4,
+  "A9|hdr=True": 225,
+  "B10|hdr=True": 95,
+  "C16|hdr=True": 118
+ },
+ "epoch_pairs": 42227,
+ "epoch_dev_median": 0.0005,
+ "epoch_dev_max": 0.001,
+ "distinct_run_keys": 846,
+ "time_min": "2018-297T19:06:47",
+ "time_max": "2023-222T23:43:06.720000"
+}

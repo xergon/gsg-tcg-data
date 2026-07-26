@@ -1,0 +1,70 @@
+{
+  "row": "i1",
+  "fetched_utc": "2026-07-26T04:57:59Z",
+  "dataset": "Additional data for the publication \"Improved Limits for Violations of Local Position Invariance from Atomic Clock Comparisons\"",
+  "doi": "10.7795/720.20211028",
+  "landing_page": "https://oar.ptb.de/resources/show/10.7795/720.20211028",
+  "download_url": "https://oar.ptb.de/files/download/681c535c53218de84f08e868",
+  "publisher": "Physikalisch-Technische Bundesanstalt (PTB)",
+  "license": "CC-BY 4.0 International",
+  "related_publication": "https://doi.org/10.1103/PhysRevLett.126.011102",
+  "archive_sha256_publisher_landing_page": "3f38135ebfab1375391195c282aa1980a76657ba9125b59e6e1cb85695a400e6",
+  "archive_sha256_claimed_by_thread": "3f38135ebfab1375391195c282aa1980a76657ba9125b59e6e1cb85695a400e6",
+  "archive_sha256_computed_on_download": "3f38135ebfab1375391195c282aa1980a76657ba9125b59e6e1cb85695a400e6",
+  "archive_md5_publisher": "8afb92dbc4a1123993816790b39f131e",
+  "archive_md5_computed": "8afb92dbc4a1123993816790b39f131e",
+  "checksum_verdict": "MATCH (thread == publisher == computed, SHA256 and MD5)",
+  "archive_bytes": 2881,
+  "files": [
+    {
+      "file": "E3_E2_frequency_ratio_measurement.txt",
+      "bytes": 706,
+      "sha256": "ec9355e4f44c6035a49639e57a49273a8efef72c66c87ad9a2f89c2b8256d219",
+      "md5": "cee82efae248c803f5c3cd4e1c7e588d",
+      "total_lines": 12,
+      "data_rows": 11,
+      "line_endings": "CRLF",
+      "trailing_newline": false,
+      "raw_url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/7b9cbeafffb3be3a0cf892551d78b6751ca6dda1/i1_ptb_lpi_clock_comparisons/E3_E2_frequency_ratio_measurement.txt"
+    },
+    {
+      "file": "E3_frequency_measurement.txt",
+      "bytes": 3001,
+      "sha256": "c9684c840e61a8a9ca674746bb6c8fa474e75e84df904853b5edd2c0f0bf92aa",
+      "md5": "cace2ca90705a6bf63e0ae1601c09b66",
+      "total_lines": 83,
+      "data_rows": 82,
+      "line_endings": "CRLF",
+      "trailing_newline": false,
+      "raw_url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/7b9cbeafffb3be3a0cf892551d78b6751ca6dda1/i1_ptb_lpi_clock_comparisons/E3_frequency_measurement.txt"
+    },
+    {
+      "file": "README_PTB.txt",
+      "bytes": 2778,
+      "sha256": "472cc03a2130f0e5e75a2d754d5fdc35ab6edfd0303303b4b4c87beb2b4e8613",
+      "md5": "3911a03e8abca4107d0310f977b5ab22",
+      "total_lines": 24,
+      "data_rows": null,
+      "line_endings": "CRLF",
+      "trailing_newline": false,
+      "raw_url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/7b9cbeafffb3be3a0cf892551d78b6751ca6dda1/i1_ptb_lpi_clock_comparisons/README_PTB.txt"
+    },
+    {
+      "file": "ptb_720_20211028.zip",
+      "bytes": 2881,
+      "sha256": "3f38135ebfab1375391195c282aa1980a76657ba9125b59e6e1cb85695a400e6",
+      "md5": "8afb92dbc4a1123993816790b39f131e",
+      "total_lines": null,
+      "data_rows": null,
+      "line_endings": "LF",
+      "trailing_newline": false,
+      "raw_url": "https://raw.githubusercontent.com/xergon/gsg-tcg-data/7b9cbeafffb3be3a0cf892551d78b6751ca6dda1/i1_ptb_lpi_clock_comparisons/ptb_720_20211028.zip"
+    }
+  ],
+  "notes": [
+    "Files are byte-identical to the PTB zip contents: original ASCII headers, tab-separated, CRLF line endings, NO trailing newline. Nothing reformatted, re-derived, or dropped.",
+    "The zip stores them under Data/; published flat. The PTB README.txt is published as README_PTB.txt (content unchanged) to avoid shadowing repo READMEs.",
+    "Actual filename is E3_E2_frequency_ratio_measurement.TXT (the dataset description text omits the extension).",
+    "Column 2 of E3_frequency_measurement.txt is a fractional offset in units of 1E-15 from 642121496772645 Hz; column 2 of the ratio file is f(E3)/f(E2) minus 0.932829404530965. Reference-clock column names CSF1/CSF2 of PTB."
+  ]
+}

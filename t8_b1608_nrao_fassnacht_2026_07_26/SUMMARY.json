@@ -1,7 +1,7 @@
 {
   "row": "T8",
   "target": "CLASS B1608+656",
-  "harvested_utc": "2026-07-26T06:55:17Z",
+  "harvested_utc": "2026-07-26T07:00:37Z",
   "season1_vla_project_code": "AF310",
   "season2_vla_project_codes": [
     "AX4",
@@ -37,69 +37,70 @@
     },
     {
       "file": "b1608_af310_season1_nrao_epochs.csv",
-      "bytes": 22902,
-      "sha256": "0b6158d6279e166b4dfe5998e8746f012d7133cc1205fe3842322beb30cd8b6e",
+      "bytes": 22841,
+      "sha256": "a5ef898f04e09cd4ef28187831d20b5c9b6b886c7c52c694e465ed13c546f47f",
       "lines": 61
     },
     {
       "file": "b1608_field_nrao_project_census.csv",
-      "bytes": 153504,
-      "sha256": "613a6c02695d3085155ec5b2f291e0722ed927d093c0e4882a2129b4615b678d",
+      "bytes": 153079,
+      "sha256": "153808f741c3b584d36e1c278729db25df877e4f35b845efe1fbe934c6d8a0b3",
       "lines": 425
     },
     {
       "file": "b1608_field_project_summary.csv",
-      "bytes": 2421,
-      "sha256": "a54dbb9173ac9be062226a3b2dbf4313f472b7078b9fe7cf7f97f5a0c6fb3e86",
+      "bytes": 2396,
+      "sha256": "6ee78d4587e4be3635f1ce7a70235ddbac6abd623633fa041789a1da1eb45333",
       "lines": 25
     },
     {
       "file": "b1608_paperIII_table1_seasons.csv",
-      "bytes": 166,
-      "sha256": "c9e8ea02fbc1c50313f569d4644abf13d7a2bf713650d2d28c973fe314cf5216",
+      "bytes": 162,
+      "sha256": "bb2d72a23bc86af72ac29bca5e8db6c419e058c7de183f878c562a2f0a9af79b",
       "lines": 4
     },
     {
       "file": "b1608_paperIII_table2_positions_meanflux.csv",
-      "bytes": 205,
-      "sha256": "ef56064ddaaee6a579d909eab43789ec0239a0b58d919794a49f581f582ccf38",
+      "bytes": 200,
+      "sha256": "c8024dc5500abbf86d193f057dcb9bb7c06232a8c28a2944b96febadddc63014",
       "lines": 5
     },
     {
       "file": "b1608_paperIII_table3_dispersion_grid.csv",
-      "bytes": 1663,
-      "sha256": "eb8e472b27cb8be83bbd2cf2390bfa2606d79505ba1deab0f0002c48a3523e5d",
+      "bytes": 1643,
+      "sha256": "fb0289183d691c8e52f3e7bf58974f57af254966cd12f5e4b93a397ab6e57785",
       "lines": 20
     },
     {
       "file": "b1608_paperIII_table4_delays_magnifications.csv",
-      "bytes": 136,
-      "sha256": "f57a48fd28483a77240e8855afb2fd62e5660367f5c71bccaf8aadf50ef56aaf",
+      "bytes": 132,
+      "sha256": "67861ccbd6ebf96cb8f91d8ee5586b4e6c13c972b50aa14cc47eddb352c6aa88",
       "lines": 4
     },
     {
       "file": "b1608_paperIII_table5_confidence_intervals.csv",
-      "bytes": 602,
-      "sha256": "6a109a953b9457e7bed097fd9f6067af5c209ca7448a17ffe21b169a4a9e80fa",
+      "bytes": 587,
+      "sha256": "405a09d7d7543c4618f5706dcbd580fe14dbcbcf0db859b8cc09e76fadc24e10",
       "lines": 15
     },
     {
       "file": "b1608_paperI_table3_season1_lightcurve.csv",
-      "bytes": 3561,
-      "sha256": "220d8b82eb7726cd3fe7034f9815da7da68bab38b836027a77e3c395674b6755",
+      "bytes": 3498,
+      "sha256": "3e1370f19c4caaf4a1426653613aeedbc211134e2b6d3de6eff57447bc064918",
       "lines": 63
     },
     {
       "file": "b1608_season1_epoch_calibration_null.csv",
-      "bytes": 14839,
-      "sha256": "d5dc6da27f73598a3f16b7069a1b68f66c6fa5a5f30bd4432d83c2e1b50ce8e9",
+      "bytes": 14776,
+      "sha256": "b12bf843f9d16cb27c01dbafea0509d6944f8bd5894c7f5156dcb8c5b9e25e36",
       "lines": 63
     },
     {
       "file": "b1608_season1_epoch_calibration_null_long.csv",
-      "bytes": 18454,
-      "sha256": "45d4264d3a13633d9590c6315c7b2f1fd37e69cfeb8d765efd7688ca8524edd5",
+      "bytes": 18205,
+      "sha256": "455ef15a20fb90ab4819d45377c636d15471683740985037a10762be1d21fd9a",
       "lines": 249
     }
-  ]
+  ],
+  "line_endings": "LF"
 }

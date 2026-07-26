@@ -1,0 +1,12 @@
+0ef11a22083f5bee9c258db821f1f581d61f34552d272647a7c616c40aec070d      4356  README_T8_B1608.md
+0b6158d6279e166b4dfe5998e8746f012d7133cc1205fe3842322beb30cd8b6e     22902  b1608_af310_season1_nrao_epochs.csv
+613a6c02695d3085155ec5b2f291e0722ed927d093c0e4882a2129b4615b678d    153504  b1608_field_nrao_project_census.csv
+a54dbb9173ac9be062226a3b2dbf4313f472b7078b9fe7cf7f97f5a0c6fb3e86      2421  b1608_field_project_summary.csv
+c9e8ea02fbc1c50313f569d4644abf13d7a2bf713650d2d28c973fe314cf5216       166  b1608_paperIII_table1_seasons.csv
+ef56064ddaaee6a579d909eab43789ec0239a0b58d919794a49f581f582ccf38       205  b1608_paperIII_table2_positions_meanflux.csv
+eb8e472b27cb8be83bbd2cf2390bfa2606d79505ba1deab0f0002c48a3523e5d      1663  b1608_paperIII_table3_dispersion_grid.csv
+f57a48fd28483a77240e8855afb2fd62e5660367f5c71bccaf8aadf50ef56aaf       136  b1608_paperIII_table4_delays_magnifications.csv
+6a109a953b9457e7bed097fd9f6067af5c209ca7448a17ffe21b169a4a9e80fa       602  b1608_paperIII_table5_confidence_intervals.csv
+220d8b82eb7726cd3fe7034f9815da7da68bab38b836027a77e3c395674b6755      3561  b1608_paperI_table3_season1_lightcurve.csv
+d5dc6da27f73598a3f16b7069a1b68f66c6fa5a5f30bd4432d83c2e1b50ce8e9     14839  b1608_season1_epoch_calibration_null.csv
+45d4264d3a13633d9590c6315c7b2f1fd37e69cfeb8d765efd7688ca8524edd5     18454  b1608_season1_epoch_calibration_null_long.csv

@@ -1,0 +1,105 @@
+{
+  "row": "T8",
+  "target": "CLASS B1608+656",
+  "harvested_utc": "2026-07-26T06:55:17Z",
+  "season1_vla_project_code": "AF310",
+  "season2_vla_project_codes": [
+    "AX4",
+    "AF340"
+  ],
+  "season3_vla_project_code": "AB922",
+  "additional_seasons_in_archive": {
+    "AF377": "2000-10-13/2001-05-29 C. Fassnacht",
+    "AW576": "2002-01-24/2002-08-01 J. Winn"
+  },
+  "code_source": "LaTeX figure labels in arXiv e-print astro-ph/0208420 (fig_compos_af310/af340/ab922); confirmed against NRAO archive REST search",
+  "archive_endpoint": "https://data.nrao.edu/archive-service/restapi_get_paged_exec_blocks",
+  "delays_days": {
+    "tau_BA": 31.5,
+    "tau_BC": 36.0,
+    "tau_BD": 77.0
+  },
+  "covariance_matrix_published": false,
+  "covariance_note": "Paper III Table 5 gives marginal asymmetric 68/95% CIs only, from 1000 MC realizations; no covariance, no MC chain published",
+  "paperIII_recalibrated_season1_lightcurve_published": false,
+  "epoch_counts": {
+    "paperI_table3": 62,
+    "paperIII_season1_Nobs": 66,
+    "paperIII_season1_Ngood": 64,
+    "nrao_AF310_exec_blocks": 60
+  },
+  "files": [
+    {
+      "file": "README_T8_B1608.md",
+      "bytes": 4356,
+      "sha256": "0ef11a22083f5bee9c258db821f1f581d61f34552d272647a7c616c40aec070d",
+      "lines": 53
+    },
+    {
+      "file": "b1608_af310_season1_nrao_epochs.csv",
+      "bytes": 22902,
+      "sha256": "0b6158d6279e166b4dfe5998e8746f012d7133cc1205fe3842322beb30cd8b6e",
+      "lines": 61
+    },
+    {
+      "file": "b1608_field_nrao_project_census.csv",
+      "bytes": 153504,
+      "sha256": "613a6c02695d3085155ec5b2f291e0722ed927d093c0e4882a2129b4615b678d",
+      "lines": 425
+    },
+    {
+      "file": "b1608_field_project_summary.csv",
+      "bytes": 2421,
+      "sha256": "a54dbb9173ac9be062226a3b2dbf4313f472b7078b9fe7cf7f97f5a0c6fb3e86",
+      "lines": 25
+    },
+    {
+      "file": "b1608_paperIII_table1_seasons.csv",
+      "bytes": 166,
+      "sha256": "c9e8ea02fbc1c50313f569d4644abf13d7a2bf713650d2d28c973fe314cf5216",
+      "lines": 4
+    },
+    {
+      "file": "b1608_paperIII_table2_positions_meanflux.csv",
+      "bytes": 205,
+      "sha256": "ef56064ddaaee6a579d909eab43789ec0239a0b58d919794a49f581f582ccf38",
+      "lines": 5
+    },
+    {
+      "file": "b1608_paperIII_table3_dispersion_grid.csv",
+      "bytes": 1663,
+      "sha256": "eb8e472b27cb8be83bbd2cf2390bfa2606d79505ba1deab0f0002c48a3523e5d",
+      "lines": 20
+    },
+    {
+      "file": "b1608_paperIII_table4_delays_magnifications.csv",
+      "bytes": 136,
+      "sha256": "f57a48fd28483a77240e8855afb2fd62e5660367f5c71bccaf8aadf50ef56aaf",
+      "lines": 4
+    },
+    {
+      "file": "b1608_paperIII_table5_confidence_intervals.csv",
+      "bytes": 602,
+      "sha256": "6a109a953b9457e7bed097fd9f6067af5c209ca7448a17ffe21b169a4a9e80fa",
+      "lines": 15
+    },
+    {
+      "file": "b1608_paperI_table3_season1_lightcurve.csv",
+      "bytes": 3561,
+      "sha256": "220d8b82eb7726cd3fe7034f9815da7da68bab38b836027a77e3c395674b6755",
+      "lines": 63
+    },
+    {
+      "file": "b1608_season1_epoch_calibration_null.csv",
+      "bytes": 14839,
+      "sha256": "d5dc6da27f73598a3f16b7069a1b68f66c6fa5a5f30bd4432d83c2e1b50ce8e9",
+      "lines": 63
+    },
+    {
+      "file": "b1608_season1_epoch_calibration_null_long.csv",
+      "bytes": 18454,
+      "sha256": "45d4264d3a13633d9590c6315c7b2f1fd37e69cfeb8d765efd7688ca8524edd5",
+      "lines": 249
+    }
+  ]
+}

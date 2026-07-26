@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-07-26T15:23:38.902747+00:00",
+  "source_files": {
+    "/Users/resorb/Documents/Claude Sessions/Transaction Calculus/data/sparc/SPARC_Lelli2016c.mrt": {
+      "sha256": "5aa0501f6b0d881fa579030e315e7b5b6ef561a5bd3a07472f9929c7e5728243",
+      "skipped_header_lines": 98
+    },
+    "/Users/resorb/Documents/Claude Sessions/Transaction Calculus/data/sparc/MassModels_Lelli2016c.mrt": {
+      "sha256": "9108994b12cc401b94a1768beca61c53ec354779385c9c9cc571049f3043244c",
+      "skipped_header_lines": 25
+    }
+  },
+  "row_count": 3271,
+  "galaxy_count": 163,
+  "quality_values": [
+    1,
+    2
+  ],
+  "output_sha256": "35fcfdfc00d4d874fc8b1cdf255bf9f98abb5c67059e949e09f1e2b4c11e1586",
+  "transform_boundary": "Q<=2 membership join only; signed velocities preserved; no accelerations or residuals computed"
+}

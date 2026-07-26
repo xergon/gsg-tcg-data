@@ -1,0 +1,8 @@
+Alternative thinner spiral masks for PHANGS galaxies
+----------------------------------------------------
+
+This set of thin spiral masks builds on the log-spiral masks presented in Querejeta et al. (2021), in which a constant width was assigned to each spiral segment. This thinner alternative was presented in Querejeta et al. (2024), and a brief summary is included next.
+
+Along the log-spiral curve that defines the backbone of the spiral masks from Querejeta et al. (2021), we determine the line perpendicular to the log-spiral function at each point, and identify the position of the maximum CO or H$\alpha$ intensity along this perpendicular line within the boundaries of the original spiral mask. This process is repeated for all the pixels along the log-spiral curve, resulting in a distribution of pixels of peak intensity from each of these cuts perpendicular to the spiral arm. The corresponding set of pixels are assigned a value of 1, while the rest is set to zero, and the image is smoothed with an empirically chosen Gaussian kernel of FWHM}=7.5", on which we impose a threshold of 0.01. This is essentially equivalent to dilating the ridge of peak emission, ignoring isolated outliers.
+
+This process is applied independently to the CO and Halpha maps, resulting in two narrow masks that are very similar, but not identical. We take the union of the two masks to yield a final narrow mask. By construction, the narrow mask is always a subset of the original spiral mask, as we force the dilated mask to be within the original mask. The narrow mask typically covers ~50% of the area of the original mask.

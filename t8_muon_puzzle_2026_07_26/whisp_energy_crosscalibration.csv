@@ -1,0 +1,10 @@
+experiment,energy_scale_factor_Edata_over_Eref,sec_zenith_median_low,sec_zenith_median_high,muon_production_threshold_GeV_low,muon_production_threshold_GeV_high,source_doi,source_table
+EAS-MSU,,1.1,,11.9,,10.22323/1.358.0214,"Table 1 (LaTeX source, arXiv:2001.07508)"
+IceCube Neutrino Observatory,1.19,1.0,,0.7,,10.22323/1.358.0214,"Table 1 (LaTeX source, arXiv:2001.07508)"
+KASCADE-Grande,,1.0,1.3,1.5,2.1,10.22323/1.358.0214,"Table 1 (LaTeX source, arXiv:2001.07508)"
+NEVOD-DECOR,1.08,2.3,4.8,8.4,18.6,10.22323/1.358.0214,"Table 1 (LaTeX source, arXiv:2001.07508)"
+Pierre Auger Observatory,0.948,1.3,2.4,1.8,4.0,10.22323/1.358.0214,"Table 1 (LaTeX source, arXiv:2001.07508)"
+AMIGA,0.948,1.2,,2.4,,10.22323/1.358.0214,"Table 1 (LaTeX source, arXiv:2001.07508)"
+SUGAR,0.948,1.0,,1.9,,10.22323/1.358.0214,"Table 1 (LaTeX source, arXiv:2001.07508)"
+Telescope Array,1.052,1.3,,1.4,,10.22323/1.358.0214,"Table 1 (LaTeX source, arXiv:2001.07508)"
+Yakutsk EAS Array,1.24,1.1,,2.6,,10.22323/1.358.0214,"Table 1 (LaTeX source, arXiv:2001.07508)"

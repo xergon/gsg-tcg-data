@@ -1,0 +1,39 @@
+{
+ "row": "T8",
+ "date": "2026-07-26",
+ "files": {
+  "alice_strange_to_pion_vs_multiplicity.csv": {
+   "bytes": 36104,
+   "md5": "c4e87d04aeb188c5049ff314e0d253c1",
+   "rows": 80
+  },
+  "icetop_gev_muon_density.csv": {
+   "bytes": 120982,
+   "md5": "b25f19f7988f0717a7b3ccaaabdd168b",
+   "rows": 850
+  },
+  "lhcf_forward_neutrons_13tev.csv": {
+   "bytes": 40465,
+   "md5": "f0513bcde594f131976e3eac65eb55e7",
+   "rows": 170
+  },
+  "whisp_energy_crosscalibration.csv": {
+   "bytes": 1048,
+   "md5": "e39bbaa0133e0d25c22eb4ad99e479fc",
+   "rows": 9
+  },
+  "whisp_muon_meta_points.csv": {
+   "bytes": 67191,
+   "md5": "9de737025bcb2befbf10b202651959f3",
+   "rows": 360
+  }
+ },
+ "notes": [
+  "ALICE: T8's named table t5 is a K0S pT spectrum, NOT strange/pion vs multiplicity. Correct tables are t36-t39 (+76743-76747). Delivered those.",
+  "LHCf: t1 is one eta bin only. All nine tables t1-t9 delivered.",
+  "hepdata.net /download/table CSV export is Cloudflare-403; used the public JSON data API instead.",
+  "IceTop: the official icecube.wisc.edu zip URL for DOI 10.21234/sszj-qv50 now returns HTTP 404 (153,393 B HTML shell). Recovered intact from the Wayback Machine (226,880 B zip, md5 2a89bfde24a23eecfdf1506094e6cd59).",
+  "WHISP meta points are VECTOR-DIGITISED from arXiv:2001.07508 main.pdf (no numeric table exists in the e-print or any public repo). Axis calibration linear from tick labels; positional accuracy ~0.01 dex in log10E and ~0.01 in z.",
+  "whisp_source_measurements.csv (item 3) NOT delivered."
+ ]
+}

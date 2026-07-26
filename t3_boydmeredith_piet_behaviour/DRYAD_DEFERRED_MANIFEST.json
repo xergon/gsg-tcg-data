@@ -1,0 +1,72 @@
+{
+ "dataset_doi": "10.5061/dryad.02v6wwq6b",
+ "dryad_dataset_id": 96067,
+ "version_id": 257980,
+ "version_number": 5,
+ "total_bytes": 58241888056,
+ "related_publication": {
+  "journal": "eLife",
+  "doi": "10.7554/eLife.82823",
+  "title": "Quantifying decision-making in dynamic, continuously evolving environments"
+ },
+ "STATUS": "BLOCKED - not fetched. All three documented routes are walled (see access_routes).",
+ "access_routes": [
+  {
+   "route": "https://datadryad.org/api/v2/files/<file_id>/download",
+   "result": "HTTP 401",
+   "body": "{\"error\":\"Unauthorized, must have current bearer token\"} (56 bytes)"
+  },
+  {
+   "route": "https://datadryad.org/api/v2/versions/257980/download",
+   "result": "HTTP 405",
+   "body": "The dataset is too large for zip file generation. Please download each file individually. (89 bytes)"
+  },
+  {
+   "route": "https://datadryad.org/downloads/file_stream/<file_id>",
+   "result": "HTTP 200 but NOT the file",
+   "body": "4,340 bytes of Anubis proof-of-work HTML, <title>Validating...</title>"
+  },
+  {
+   "route": "https://datadryad.org/api/v2/datasets/doi%3A10.5061%2Fdryad.02v6wwq6b/download",
+   "result": "HTTP 401"
+  }
+ ],
+ "note": "Metadata API endpoints are NOT walled - sizes and sha-256 digests below are the publisher's own, read from the Dryad API.",
+ "files": [
+  {
+   "path": "conventionalEEGAnalysis.zip",
+   "bytes": 25816675748,
+   "sha256_publisher": "80f3938c96a98f8b4067e2a455996e439556bfde529cf602891fe4f10a318215",
+   "file_id": 2619289,
+   "url": "https://datadryad.org/api/v2/files/2619289/download"
+  },
+  {
+   "path": "convGLM.zip",
+   "bytes": 26080285545,
+   "sha256_publisher": "b46644595d199dce1d9c6e9c289af5bf109ae2662a558f89c7aa58a421ddbcd1",
+   "file_id": 2619290,
+   "url": "https://datadryad.org/api/v2/files/2619290/download"
+  },
+  {
+   "path": "participantInfo.xlsx",
+   "bytes": 10952,
+   "sha256_publisher": "429d8493076d719525736bddec56d4dd8a2e9b4f2e6f5197848180d226f360d6",
+   "file_id": 2619288,
+   "url": "https://datadryad.org/api/v2/files/2619288/download"
+  },
+  {
+   "path": "preprocessedData.zip",
+   "bytes": 6344650009,
+   "sha256_publisher": "5572f972a44efcd004186b06355b7571cbd2cf996cdf3a1e5cea393b887c9cb4",
+   "file_id": 2619291,
+   "url": "https://datadryad.org/api/v2/files/2619291/download"
+  },
+  {
+   "path": "README.md",
+   "bytes": 12091,
+   "sha256_publisher": "c89d2a4e483ef431299a3822015690e4df6553b4d627083e62258cf9a219ee22",
+   "file_id": 2627322,
+   "url": "https://datadryad.org/api/v2/files/2627322/download"
+  }
+ ]
+}

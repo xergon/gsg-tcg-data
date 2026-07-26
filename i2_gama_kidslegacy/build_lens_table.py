@@ -210,10 +210,32 @@ df["Re_circ_kpc_r"]          = Re_cir * kpc_per_arcsec
 df["R90_maj_kpc_r"]          = df["GALR90_r"].to_numpy() * kpc_per_arcsec
 
 # ---- A_IPR : the two admissible conventions, BOTH built (ambiguity documented)
+# 🔴 SUPERSEDED 2026-07-26 — the next four columns are HALF-LIGHT AREAS, not participation areas:
+#    they carry NO Sersic K(n) factor. Retained verbatim so pre-2026-07-26 numbers stay
+#    reproducible; the corrected columns are added below. See REPAIR_A_IPR_Kn_2026_07_26.md.
 df["A_IPR_kpc2_ellip"]  = np.pi * (df["Re_maj_kpc_r"] ** 2) * q      # = pi*a*b = pi*Re_circ^2
 df["A_IPR_kpc2_major"]  = np.pi * (df["Re_maj_kpc_r"] ** 2)          # no inclination deprojection
 df["log10_A_IPR_ellip"] = np.log10(df["A_IPR_kpc2_ellip"])
 df["log10_A_IPR_major"] = np.log10(df["A_IPR_kpc2_major"])
+
+# ---- REPAIR 2026-07-26: the Sersic participation-area factor K(n).
+#   A_IPR = (int I dA)^2 / int I^2 dA = pi * q * Re_maj^2 * K(n),
+#   K(n)  = 2 n Gamma(2n) 4^n b_n^(-2n),   b_n exact = gammaincinv(2n, 1/2).
+#   Evaluated in log space: Gamma(40) ~ 2e46 overflows a naive product.
+from scipy.special import gammaincinv, gammaln          # noqa: E402
+_n  = df["GALINDEX_r"].to_numpy(dtype=np.float64)
+_bn = gammaincinv(2.0 * _n, 0.5)
+df["sersic_bn_r"]          = _bn
+df["K_IPR_sersic_r"]       = np.exp(np.log(2.0 * _n) + gammaln(2.0 * _n)
+                                    + _n * np.log(4.0) - 2.0 * _n * np.log(_bn))
+df["K_totlight_sersic_r"]  = np.exp(np.log(2.0 * _n) + gammaln(2.0 * _n)
+                                    + _bn - 2.0 * _n * np.log(_bn))   # L_tot/I_e convention
+df["A_IPR_kpc2_ellip_Kn"]  = df["A_IPR_kpc2_ellip"] * df["K_IPR_sersic_r"]
+df["A_IPR_kpc2_major_Kn"]  = df["A_IPR_kpc2_major"] * df["K_IPR_sersic_r"]
+df["log10_A_IPR_ellip_Kn"] = np.log10(df["A_IPR_kpc2_ellip_Kn"])
+df["log10_A_IPR_major_Kn"] = np.log10(df["A_IPR_kpc2_major_Kn"])
+df["R_IPR_kpc_ellip_Kn"]   = np.sqrt(df["A_IPR_kpc2_ellip_Kn"] / np.pi)
+df["X_A_ellip_Kn"]         = np.log10(df["R_IPR_kpc_ellip_Kn"])
 df["log10_Re_circ_kpc"] = np.log10(df["Re_circ_kpc_r"])
 df["log10_Re_maj_kpc"]  = np.log10(df["Re_maj_kpc_r"])
 

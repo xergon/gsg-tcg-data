@@ -1,5 +1,24 @@
 # i2 — `gama_kidslegacy_ipr_rar_inputs_v1.parquet`
 
+> # 🔴 REPAIRED 2026-07-26T04:16:03Z — USE **v2**, NOT v1, FOR ANY PARTICIPATION AREA
+>
+> **Defect (found by thread i2, reproduced independently on disk):** `build_lens_table.py:213-214`
+> computed `A_IPR_kpc2_ellip` and `A_IPR_kpc2_major` as `π q Re²` and `π Re²` — **half-light areas
+> with no Sérsic `K(n)` factor.** They are named `A_IPR_*` but are not participation areas.
+>
+> **Repair:** `A_IPR = π q Re_maj² · K(n)`, `K(n) = 2 n Γ(2n) 4ⁿ b_n^(−2n)`, `b_n` solved exactly.
+> Added **additively** as `A_IPR_kpc2_ellip_Kn`, `A_IPR_kpc2_major_Kn`, `log10_A_IPR_*_Kn`,
+> `X_A_ellip_Kn`, `R_IPR_kpc_ellip_Kn`, `K_IPR_sersic_r`, `K_totlight_sersic_r`, `sersic_bn_r`
+> in **`gama_kidslegacy_ipr_rar_inputs_v2.parquet`** (181,608 × 94).
+> Median correction ×2.25; the v1 columns are carried through **bit-identically** and are retained,
+> **superseded**, as valid half-light areas so that pre-2026-07-26 numbers stay reproducible.
+>
+> **⛔ SUPERSEDED as participation areas:** `A_IPR_kpc2_ellip`, `A_IPR_kpc2_major`,
+> `log10_A_IPR_ellip`, `log10_A_IPR_major`.
+> **Full derivation, verification, sibling sweep and the four science consequences (including a
+> newly first-order Sérsic-index-ceiling threat): `REPAIR_A_IPR_Kn_2026_07_26.md`. Read it before
+> fitting `β_A`.**
+
 GAMA DR4 lens sample × KiDS-Legacy (KiDS DR5) shear catalogue, assembled for the
 kinematics–lensing transfer test on `log10(A_IPR / kpc²)`.
 
@@ -46,9 +65,15 @@ correct for lensing but means no per-object provenance link exists.
 | `Re_maj_arcsec_r` | `GALRE_r`, the **semi-major-axis** half-light radius |
 | `Re_circ_arcsec_r` | `GALRE_r · sqrt(q)` |
 | `Re_maj_kpc_r`, `Re_circ_kpc_r` | the above × `kpc_per_arcsec` (from `DA_Mpc`) |
-| **`A_IPR_kpc2_ellip`** | `π · Re_maj_kpc² · q` = `π · Re_circ_kpc²` — half-light **ellipse** area |
-| **`A_IPR_kpc2_major`** | `π · Re_maj_kpc²` — no inclination deprojection |
-| `log10_A_IPR_ellip`, `log10_A_IPR_major` | log10 of the above — **the regressor X** |
+| ⛔ `A_IPR_kpc2_ellip` | `π · Re_maj_kpc² · q` = `π · Re_circ_kpc²` — half-light **ellipse** area. **SUPERSEDED as a participation area (no K(n)) — use `A_IPR_kpc2_ellip_Kn` (v2).** |
+| ⛔ `A_IPR_kpc2_major` | `π · Re_maj_kpc²` — no inclination deprojection. **SUPERSEDED — use `A_IPR_kpc2_major_Kn` (v2).** |
+| ⛔ `log10_A_IPR_ellip`, `log10_A_IPR_major` | log10 of the above. **SUPERSEDED as the regressor X — use `log10_A_IPR_ellip_Kn` / `log10_A_IPR_major_Kn` (v2).** |
+| **`K_IPR_sersic_r`** (v2) | `K(n) = 2 n Γ(2n) 4ⁿ b_n^(−2n)` from `GALINDEX_r`; `b_n` exact via `gammaincinv(2n,½)` |
+| **`sersic_bn_r`** (v2) | `b_n` |
+| `K_totlight_sersic_r` (v2) | alternative convention `L_tot/I_e = π Re² K_tot(n)`; **not** used for `A_IPR_*_Kn` |
+| **`A_IPR_kpc2_ellip_Kn`, `A_IPR_kpc2_major_Kn`** (v2) | the v1 areas × `K(n)` — **the corrected participation areas** |
+| **`log10_A_IPR_ellip_Kn`, `log10_A_IPR_major_Kn`** (v2) | **the corrected regressor X** |
+| `R_IPR_kpc_ellip_Kn`, `X_A_ellip_Kn` (v2) | `sqrt(A/π)` and `log10` of it — the canonical `X_A` |
 | `log10_Re_circ_kpc`, `log10_Re_maj_kpc` | for the β_R = 2·β_A consistency check |
 | `R_isol_Mpc_h70` | 3D comoving distance to nearest neighbour with ≥10% of the lens M* (Brouwer 2021 / Mistele 2024 criterion) |
 | `R_isol_proj_Mpc_h70` | projected analogue |

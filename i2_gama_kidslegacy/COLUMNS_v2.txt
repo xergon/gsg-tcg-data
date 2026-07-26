@@ -1,0 +1,97 @@
+gama_kidslegacy_ipr_rar_inputs_v2.parquet  rows=181,608  cols=94
+  (v1 = the same table WITHOUT the last 9 columns; v1 columns are bit-identical)
+
+  CATAID                             int64
+  RA                                 double
+  DEC                                double
+  R_PETRO                            float
+  SURVEY_CLASS                       int16
+  NQ                                 int16
+  Z_TILING                           double
+  VIS_CLASS                          int16
+  MASK_IC_12                         float
+  Z_HELIO                            double
+  Z_CMB                              double
+  Z_TONRY                            double
+  DM_70_30_70                        double
+  GALRE_r                            double
+  GALREERR_r                         double
+  GALINDEX_r                         double
+  GALINDEXERR_r                      double
+  GALELLIP_r                         double
+  GALELLIPERR_r                      double
+  GALMAG_r                           double
+  GALMUE_r                           double
+  GALR90_r                           double
+  GALPA_r                            double
+  GALCHI2_r                          double
+  logmstar                           double
+  dellogmstar                        double
+  logage                             double
+  logtau                             double
+  absmag_r                           double
+  gminusi                            double
+  logmoverl_i                        double
+  logmintsfh                         double
+  logmremnants                       double
+  GroupID                            int64
+  RankIterCen                        double
+  RankBCG                            double
+  SepIterCen                         double
+  Nfof                               int32
+  Rad100                             double
+  MassA                              double
+  VelDisp                            double
+  SurfaceDensity                     double
+  SurfaceDensityFlag                 double
+  CountInCyl                         double
+  CountInCylFlag                     double
+  AGEDenPar                          double
+  AGEScale                           double
+  AGEDenParFlag                      double
+  DistanceToEdge                     double
+  Completeness                       double
+  DA_Mpc                             double
+  DL_Mpc                             double
+  kpc_per_arcsec                     double
+  axis_ratio_q_r                     double
+  Re_maj_arcsec_r                    double
+  Re_circ_arcsec_r                   double
+  Re_maj_kpc_r                       double
+  Re_circ_kpc_r                      double
+  R90_maj_kpc_r                      double
+  A_IPR_kpc2_ellip                   double   <-- SUPERSEDED (no K(n); half-light area only)
+  A_IPR_kpc2_major                   double   <-- SUPERSEDED (no K(n); half-light area only)
+  log10_A_IPR_ellip                  double   <-- SUPERSEDED (no K(n); half-light area only)
+  log10_A_IPR_major                  double   <-- SUPERSEDED (no K(n); half-light area only)
+  log10_Re_circ_kpc                  double
+  log10_Re_maj_kpc                   double
+  h70                                double
+  R_isol_Mpc_h70                     double
+  R_isol_neighbour_CATAID            int64
+  R_isol_proj_Mpc_h70                double
+  GAMA_FIELD                         string
+  d_edge_deg                         double
+  sigma_crit_inv_bin1                double
+  sigma_crit_inv_bin2                double
+  sigma_crit_inv_bin3                double
+  sigma_crit_inv_bin4                double
+  sigma_crit_inv_bin5                double
+  sigma_crit_inv_bin6                double
+  sigma_crit_inv_neff_weighted       double
+  lensing_efficiency_sum_neff_scinv2 double
+  sigma_crit_inv_pc2_Msun            double
+  sigma_crit_Msun_pc2                double
+  n_src_100_300kpc                   int32
+  n_src_300_1000kpc                  int32
+  n_src_30_1400kpc                   int32
+  inside_kids_legacy                 bool
+  sersic_bn_r                        double   <-- NEW 2026-07-26 (K(n) repair)
+  K_IPR_sersic_r                     double   <-- NEW 2026-07-26 (K(n) repair)
+  K_totlight_sersic_r                double   <-- NEW 2026-07-26 (K(n) repair)
+  A_IPR_kpc2_ellip_Kn                double   <-- NEW 2026-07-26 (K(n) repair)
+  A_IPR_kpc2_major_Kn                double   <-- NEW 2026-07-26 (K(n) repair)
+  log10_A_IPR_ellip_Kn               double   <-- NEW 2026-07-26 (K(n) repair)
+  log10_A_IPR_major_Kn               double   <-- NEW 2026-07-26 (K(n) repair)
+  R_IPR_kpc_ellip_Kn                 double   <-- NEW 2026-07-26 (K(n) repair)
+  X_A_ellip_Kn                       double   <-- NEW 2026-07-26 (K(n) repair)
